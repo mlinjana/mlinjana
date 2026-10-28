@@ -1,6 +1,6 @@
 {
   "api_base": "https://mrunxptxavtompcnegkr.supabase.co/functions/v1",
-  "site_base": "https://commerce-network.vercel.app",
+  "site_base": "https://commerce-network.mlinjanachuma.workers.dev",
   "mode": "staging",
   "legal": {
     "operator": "Mlinjana (sole proprietor \u2014 trading name and registration details to be confirmed by the owner)",
@@ -475,5 +475,9 @@
       "line": "#E2D5C5",
       "prefix": "HSP"
     }
-  ]
+  ],
+  "hosting": {
+    "live": "Cloudflare Workers static assets (worker 'commerce-network'), deployed with wrangler",
+    "legacy": "https://commerce-network.vercel.app \u2014 redirects everything to site_base"
+  }
 }

@@ -171,6 +171,8 @@ def main():
            "frame-ancestors 'none'; base-uri 'self'")
     redirects = [{"source": f"/{old}/:rest*", "destination": f"/{st['path']}/:rest*", "permanent": True}
                  for st in cfg["stores"] for old in st.get("former_paths", [])]
+    if "vercel.app" not in cfg["site_base"]:  # the Vercel copy is retired: send every request to the live host
+        redirects = [{"source": "/:path*", "destination": cfg["site_base"] + "/:path*", "permanent": True}]
     json.dump({"cleanUrls": False, "trailingSlash": False, "redirects": redirects,
                "headers": [{"source": "/(.*)", "headers": [
                    {"key": "Content-Security-Policy", "value": csp}, {"key": "X-Content-Type-Options", "value": "nosniff"},

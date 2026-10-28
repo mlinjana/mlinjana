@@ -3,8 +3,8 @@
  "trailingSlash": false,
  "redirects": [
   {
-   "source": "/pacebook/:rest*",
-   "destination": "/steadyrep/:rest*",
+   "source": "/:path*",
+   "destination": "https://commerce-network.mlinjanachuma.workers.dev/:path*",
    "permanent": true
   }
  ],
