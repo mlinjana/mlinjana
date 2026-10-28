@@ -1,0 +1,6 @@
+-- Applied 2026-10-28 to project mrunxptxavtompcnegkr (commerce-network). See README for the full list.
+-- Tables: stores, products, listings, orders, download_tokens, payment_events, events, job_runs, costs,
+-- daily_reports, config, work_log, contact_messages. RLS enabled on all; no anon/authenticated policies
+-- (public access only through edge functions using the service role). Private buckets: products, backups.
+-- The exact applied DDL is recorded in Supabase's migration history (list_migrations): core_schema,
+-- contact_and_helpers, cron_jobs.

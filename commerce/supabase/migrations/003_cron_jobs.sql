@@ -1,0 +1,6 @@
+-- pg_cron schedule (UTC). 16:00 UTC = 18:00 Africa/Johannesburg (no DST).
+--   daily-owner-report  0 16 * * *            -> ops-api /cron/daily-report
+--   ops-health          45 3,9,15,21 * * *    -> ops-api /cron/health  (expire stale checkouts, delivery check,
+--                                                storefront + listing URL checks, weekly budget / kill switch)
+--   net-cleanup         30 2 * * *            -> prune pg_net responses older than 3 days
+-- public.call_ops(path) posts to the function with the cron secret read from public.config (never leaves the DB).

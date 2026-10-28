@@ -1,0 +1,13 @@
+category,store,products,demand_evidence_1to5,competition_1to5_high_is_crowded,differentiation_1to5,production_cost,price_range_usd,marketplace_fit,customer_value_1to5,ip_risk,basis,notes
+Daily & weekly planners,plainday,3,4,5,2,very low (template),4.5-7,Etsy/Payhip/Gumroad,3,low,estimate,"Very crowded on marketplaces; compete on calm design, A4+Letter in one file and bundles"
+Budget & savings printables,plainday,2,4,5,2,very low,5-7.5,Etsy,3,low,estimate,"High search interest assumed from category size; not measured"
+Journals (guided prompts),plainday,4,3,4,3,low (original prompts),4.5-6,Etsy/Payhip,3,low,estimate,"Original prompt sets are the differentiator"
+Study & exam planners,plainday,2,3,3,3,very low,6-7,Etsy,3,low,estimate,"Seasonal around exam periods"
+Home organisation,plainday,4,3,4,2,very low,4.5-7,Etsy,3,low,estimate,
+Business plan & planning,bizwright,4,3,4,3,low,5-14,Etsy/Gumroad/own store,4,low,estimate,"Projections workbook adds value over Word-only plans"
+Invoicing & admin,bizwright,3,4,4,3,low,6-7,Etsy/own store,4,low,estimate,"Auto-calculating with tax toggle; not tax advice"
+Marketing & social planners,bizwright,3,3,4,2,low,6.5-7,Etsy/Gumroad,3,low,estimate,
+Operations/HR/sales templates,bizwright,8,3,3,3,low,5-9,Gumroad/own store,4,low (legal templates carry advice risk; disclaimers added),estimate,
+Personal finance spreadsheets,abacus,8,4,4,3,low,4.5-9,Etsy/Gumroad,4,medium (must avoid financial advice claims),estimate,"Calculators regression-tested against independent Python simulation"
+Inventory & operations tools,abacus,7,2,2,4,low,7-29,Gumroad/own store/LinkedIn audiences,4,low,estimate,"Less crowded niche; buyers are businesses"
+Business finance (cash flow / break-even),abacus,2,3,3,3,low,6-8,Gumroad/own store,4,medium,estimate,
