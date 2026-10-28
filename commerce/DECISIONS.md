@@ -7,7 +7,7 @@
 5. **Order is paid only on a verified ITN:** signature (MD5 + passphrase) ✓, PayFast server validation = `VALID` ✓, merchant & mode match ✓, amount matches ✓. Idempotent `pending → paid` update.
 6. **Vercel Hobby for staging only.** Its terms prohibit commercial use; live sales need Cloudflare Pages (free) or Vercel Pro (paid).
 7. **Supabase pg_cron for scheduling** (runs without your computer or a Claude session). Jobs are capped per day; 5 consecutive errors or a budget breach flips a kill switch that pauses automation and checkout.
-8. **Own-store prices are local ZAR prices**, lower than marketplace USD prices (marketplace fees are higher). Prices are estimates, not tested demand.
+8. **Prices are evidence-based (2026-10-28) but untested by real sales.** `engine/pricing.py` places each product inside the typical band of observed competitor list prices (Etsy/Gumroad/Payhip/Flevy) — mid-market because the shops have no reviews; 52 of 60 benchmarked, 8 estimated by analogy (flagged). Own-store ZAR = USD × 16.4 × 0.75, rounded to R..9 (min R39). Full table with evidence: `research/pricing.csv`.
 9. **Admin auth = owner key** (SHA-256 hash stored server-side, constant-time compare). Supabase Auth email links would need dashboard config not available to the connector.
 10. **No cookies / no IP logging** in analytics: page path, product, referrer host only.
 11. **Brand names:** Plainday Studio, Bizwright, Abacus Lane (domains available at check time; no conflicting brand found in web search; formal trademark search still required).

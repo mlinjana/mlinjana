@@ -1,0 +1,61 @@
+product_id,slug,store,old_usd,old_zar,new_usd,new_zar,basis,market_evidence,rationale
+PLD-001,undated-daily-planner,plainday,6.50,79,6.00,69,benchmark,"RankHero 'undated digital planner': median $7.48, range $2–21 (n=58)",95 pages; below the $7.48 median for a new shop
+PLD-002,undated-weekly-planner,plainday,7.00,89,6.50,79,benchmark,"RankHero 'undated digital planner': median $7.48, range $2–21 (n=58)",119 pages incl. 52 reviews; near median
+PLD-003,monthly-budget-planner,plainday,7.50,99,7.00,89,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)","44-page complete system → 'system' band $7–12, low end"
+PLD-004,savings-challenge-pack,plainday,5.00,69,4.00,49,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",single-purpose band $3–6
+PLD-005,guided-gratitude-journal,plainday,6.00,79,5.00,59,benchmark,"Gratitude journals: Etsy $0.60 sale (from $2.40), Payhip $2.99–$3, Gumroad $15, Payhip $19",90 original prompts; between $3 Payhip and $15 Gumroad
+PLD-006,weekly-reflection-journal,plainday,6.00,79,5.00,59,benchmark,"Gratitude journals: Etsy $0.60 sale (from $2.40), Payhip $2.99–$3, Gumroad $15, Payhip $19",52 prompts + annual review
+PLD-007,goal-setting-workbook,plainday,8.00,109,7.00,89,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)","workbook system band $7–12, low end"
+PLD-008,student-study-planner,plainday,7.00,89,5.00,59,benchmark,Etsy meal & student planners mostly $1–4; 40-page undated student planner $7,25 pages; between $1–4 basics and $7 40-page planner
+PLD-009,exam-revision-planner,plainday,6.00,79,4.00,49,benchmark,Etsy meal & student planners mostly $1–4; 40-page undated student planner $7,focused 15-page toolkit
+PLD-010,habit-tracker-set,plainday,4.50,59,3.50,39,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",single-purpose band
+PLD-011,home-cleaning-schedule,plainday,4.50,59,3.00,39,benchmark,Etsy meal & student planners mostly $1–4; 40-page undated student planner $7,7 pages; low band
+PLD-012,meal-planner-grocery-list,plainday,5.00,69,3.50,39,benchmark,Etsy meal & student planners mostly $1–4; 40-page undated student planner $7,24 pages; top of $1–4 band
+PLD-013,home-organisation-binder,plainday,7.00,89,6.00,69,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)","binder system, lower 'system' band"
+PLD-014,productivity-planner,plainday,6.50,85,6.00,69,benchmark,"RankHero 'undated digital planner': median $7.48, range $2–21 (n=58)",51 pages time-blocking + matrix
+PLD-015,personal-project-planner,plainday,5.00,69,4.00,49,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",single-purpose band
+PLD-016,wellness-mood-tracker,plainday,5.50,75,4.00,49,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",single-purpose band
+PLD-017,reading-journal,plainday,4.50,59,3.50,39,benchmark,"Gratitude journals: Etsy $0.60 sale (from $2.40), Payhip $2.99–$3, Gumroad $15, Payhip $19",low band
+PLD-018,yearly-planner-annual-review,plainday,5.00,69,4.50,59,benchmark,"RankHero 'undated digital planner': median $7.48, range $2–21 (n=58)",below median
+PLD-019,travel-planner,plainday,4.50,59,3.50,39,benchmark,Etsy meal & student planners mostly $1–4; 40-page undated student planner $7,low band
+PLD-020,productivity-planner-bundle,plainday,16.00,199,14.00,169,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",bundles observed $7–15
+BZW-001,business-plan-template,bizwright,14.00,189,19.00,229,benchmark,"Gumroad business plan + financial model: $5+ pack, $45 kit (Word + Excel model), $50 template; €39 pack",Word plan + 36-month model; below $45–50 kits
+BZW-002,lean-canvas-one-page-plan,bizwright,5.00,69,4.00,49,benchmark,"Gumroad business plan + financial model: $5+ pack, $45 kit (Word + Excel model), $50 template; €39 pack",low-content; near $5 entry packs
+BZW-003,invoice-template-excel,bizwright,6.00,79,5.00,59,benchmark,Gumroad Excel/Sheets invoice templates free–$10; $3 bundle,mid of free–$10; adds register + overdue tracking
+BZW-004,quotation-estimate-template,bizwright,6.00,79,5.00,59,benchmark,Gumroad Excel/Sheets invoice templates free–$10; $3 bundle,same band as invoices
+BZW-005,income-expense-tracker,bizwright,7.00,89,7.00,89,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band $5–10
+BZW-006,marketing-calendar,bizwright,7.00,89,7.00,89,benchmark,"Etsy social content planners: $2–5 basic, $5–11 mid, $15–30 all-in-one",mid band $5–11
+BZW-007,social-media-content-planner,bizwright,6.50,85,8.00,99,benchmark,"Etsy social content planners: $2–5 basic, $5–11 mid, $15–30 all-in-one",mid band with analytics
+BZW-008,sop-template-kit,bizwright,9.00,119,12.00,149,benchmark,Gumroad SOP templates $5 (Word) to £9–£17 (kits with guide),5 worked examples; between $5 and £17 kits
+BZW-009,project-management-tracker,bizwright,9.00,119,14.00,169,benchmark,"Etsy/Gumroad Gantt/project trackers: basic $3–8, dashboard packages $12–25, up to $39",Gantt + dashboard + RACI + risks → $12–25 band
+BZW-010,client-crm-sales-pipeline,bizwright,8.00,109,12.00,149,benchmark,Etsy/Gumroad CRM & pipeline sheets $4.67–$20 (typical $7.95–$12.90),weighted forecast; typical $8–13
+BZW-011,employee-onboarding-kit,bizwright,8.00,109,9.00,109,estimate,No direct comparable found in research — estimate by analogy,analogy: SOP/CRM kits $8–17
+BZW-012,meeting-agenda-minutes-kit,bizwright,5.00,69,5.00,59,estimate,No direct comparable found in research — estimate by analogy,analogy: simple Word templates ~$5
+BZW-013,hiring-kit,bizwright,8.00,109,9.00,109,estimate,No direct comparable found in research — estimate by analogy,analogy: multi-document HR kits
+BZW-014,customer-feedback-complaints-log,bizwright,6.00,79,6.00,69,estimate,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band $5–10
+BZW-015,pricing-calculator,bizwright,6.00,79,7.00,89,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band $5–10
+BZW-016,brand-style-guide-template,bizwright,7.00,89,8.00,99,estimate,No direct comparable found in research — estimate by analogy,analogy: Word kits $5–17
+BZW-017,small-business-kpi-dashboard,bizwright,8.00,109,15.00,179,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,below complex dashboards ($40–75); simpler scope
+BZW-018,purchase-order-supplier-kit,bizwright,6.00,79,5.00,59,benchmark,Gumroad Excel/Sheets invoice templates free–$10; $3 bundle,same band as invoices
+BZW-019,ceo-weekly-business-planner,bizwright,6.50,85,7.00,89,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",printable system band
+BZW-020,business-admin-bundle,bizwright,18.00,239,16.00,199,benchmark,Gumroad Excel/Sheets invoice templates free–$10; $3 bundle,bundle of 4 below component sum
+ABL-001,personal-budget-dashboard,abacus,9.00,119,9.00,109,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,"dashboard + 2,000-row log; upper simple band"
+ABL-002,debt-snowball-avalanche-calculator,abacus,8.00,109,9.00,109,benchmark,Etsy debt snowball/avalanche spreadsheets $2–14.99; full-feature examples $7–9.99,full-feature listings $7–10; tested 30-year engine
+ABL-003,savings-goal-tracker,abacus,6.00,79,5.00,59,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band
+ABL-004,emergency-fund-calculator,abacus,5.00,69,4.00,49,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,single-purpose
+ABL-005,net-worth-tracker,abacus,6.00,79,6.00,69,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band
+ABL-006,annual-personal-finance-workbook,abacus,8.00,109,8.00,99,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,multi-tab workbook
+ABL-007,loan-amortisation-calculator,abacus,6.00,79,7.00,89,benchmark,Gumroad amortisation templates $3; extra-payment mortgage calculator $19.99,between $3 basic and $19.99 calculator
+ABL-008,home-loan-calculator,abacus,7.00,89,9.00,109,benchmark,Gumroad amortisation templates $3; extra-payment mortgage calculator $19.99,4 tools in one; below $19.99
+ABL-009,inventory-management-spreadsheet,abacus,9.00,119,12.00,149,benchmark,"Etsy/Payhip inventory spreadsheets: basic $1–5, fuller $6–15, systems $25–100+",fuller templates $6–15
+ABL-010,stock-control-reorder-point,abacus,9.00,119,19.00,229,benchmark,"Etsy/Payhip inventory spreadsheets: basic $1–5, fuller $6–15, systems $25–100+",safety stock + EOQ; between fuller ($15) and systems ($25+)
+ABL-011,warehouse-productivity-dashboard,abacus,9.00,119,29.00,359,benchmark,"Warehouse/logistics KPI templates: Flevy $29–45, SCMDOJO $59, Gumroad A$47–$100; Etsy inventory system $10.25 sale",low end of $29–59 warehouse KPI band
+ABL-012,supply-chain-kpi-toolkit,abacus,9.00,119,29.00,359,benchmark,"Warehouse/logistics KPI templates: Flevy $29–45, SCMDOJO $59, Gumroad A$47–$100; Etsy inventory system $10.25 sale",low end of $29–59 band
+ABL-013,abc-inventory-analysis,abacus,7.00,99,12.00,149,estimate,"Etsy/Payhip inventory spreadsheets: basic $1–5, fuller $6–15, systems $25–100+",analogy: fuller inventory templates
+ABL-014,13-week-cash-flow-forecast,abacus,8.00,109,12.00,149,estimate,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,between simple ($10) and complex ($40+)
+ABL-015,break-even-profit-calculator,abacus,6.00,79,6.00,69,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple tracker band
+ABL-016,sinking-funds-bill-tracker,abacus,6.00,79,5.00,59,benchmark,"Etsy budget planner listings $1.12–$14.06; seller guide: single printables $3–6, systems $7–12 (promptlesspress.com)",single-purpose band
+ABL-017,compound-interest-retirement-projector,abacus,6.00,79,6.00,69,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,simple calculator band
+ABL-018,shared-expense-splitter,abacus,4.50,59,4.00,49,benchmark,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,single-purpose
+ABL-019,demand-forecasting-template,abacus,8.00,109,15.00,179,estimate,TheBricks guide: simple trackers $5–10; complex multi-tab dashboards $40–75,4 methods + accuracy; below complex dashboards
+ABL-020,operations-toolkit-bundle,abacus,29.00,379,65.00,799,benchmark,"Warehouse/logistics KPI templates: Flevy $29–45, SCMDOJO $59, Gumroad A$47–$100; Etsy inventory system $10.25 sale",5 tools (sum $101) at ~35% off

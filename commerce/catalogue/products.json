@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-10-28T06:39:59Z",
+ "generated_at": "2026-10-28T07:52:02Z",
  "products": [
   {
    "id": "PLD-001",
@@ -30,8 +30,8 @@
     "minimal planner",
     "pdf planner"
    ],
-   "price_zar": 79,
-   "price_usd": 6.5,
+   "price_zar": 69,
+   "price_usd": 6,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -46,8 +46,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-001/undated-daily-planner.zip",
-    "bytes": 172272,
-    "sha256": "0cb3c589bc495dd2263835cbde64ea0750a556fc893039fc00776cc378cd8292",
+    "bytes": 172273,
+    "sha256": "ab124ee88ed03bbb5b09923a5f6ea05d3687a013f8acc7ca8ca958ce8fb5130c",
     "contents": [
      "Undated Daily Planner \u2014 90 Days - A4.pdf",
      "Undated Daily Planner \u2014 90 Days - Letter.pdf",
@@ -112,8 +112,8 @@
     "productivity",
     "pdf planner"
    ],
-   "price_zar": 89,
-   "price_usd": 7,
+   "price_zar": 79,
+   "price_usd": 6.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -128,8 +128,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-002/undated-weekly-planner.zip",
-    "bytes": 185580,
-    "sha256": "d8540f4f7e42372a719ea1a34fa5ffa7cb6c75526b82f386ad23b8775329bc4c",
+    "bytes": 185579,
+    "sha256": "a6c04e5bbb72eb9082a7c439a35578b89ef2c836c36c485101027d828d382262",
     "contents": [
      "Undated Weekly Planner \u2014 52 Weeks - A4.pdf",
      "Undated Weekly Planner \u2014 52 Weeks - Letter.pdf",
@@ -195,8 +195,8 @@
     "budget binder",
     "pdf planner"
    ],
-   "price_zar": 99,
-   "price_usd": 7.5,
+   "price_zar": 89,
+   "price_usd": 7,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -213,7 +213,7 @@
    "file": {
     "key": "PLD-003/monthly-budget-planner.zip",
     "bytes": 176437,
-    "sha256": "e68344f30faf57fd0ecccff374f8535a34165dc2d2c7edf5a4aebaab0c685945",
+    "sha256": "9ee8dca2d86bbc441dc29de78f9a26289d130a2b9514b6205ec7de7a168b753c",
     "contents": [
      "Monthly Budget Planner - A4.pdf",
      "Monthly Budget Planner - Letter.pdf",
@@ -278,8 +278,8 @@
     "debt free",
     "pdf printable"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -294,8 +294,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-004/savings-challenge-pack.zip",
-    "bytes": 194166,
-    "sha256": "0efa89b39e60753ff381cfdb0158ab60acbdb41b5da212a97d73e53594b6ba10",
+    "bytes": 194165,
+    "sha256": "f9ec2679d4eb9ad4a6e0ef2436b57dbdef2b3cbee8746e8d3dc541c15bfc24a7",
     "contents": [
      "Savings Challenge Pack - A4.pdf",
      "Savings Challenge Pack - Letter.pdf",
@@ -360,8 +360,8 @@
     "a4 journal",
     "pdf journal"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -376,8 +376,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-005/guided-gratitude-journal.zip",
-    "bytes": 227096,
-    "sha256": "d6efc6b2ba7d3f4845082de4d6163f5075210b6a5ce42d587fb958889e3178cc",
+    "bytes": 227094,
+    "sha256": "560f1ccfdbecbfdb2b928295b5564019b800c7e23127478c5504fc4f37707160",
     "contents": [
      "Guided Gratitude Journal \u2014 90 Days - A4.pdf",
      "Guided Gratitude Journal \u2014 90 Days - Letter.pdf",
@@ -442,8 +442,8 @@
     "self improvement",
     "pdf journal"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -458,8 +458,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-006/weekly-reflection-journal.zip",
-    "bytes": 236845,
-    "sha256": "7be7f6ec27dafebf452fd2974fcb56619b07695e3d673db431da78dc6d4fc48a",
+    "bytes": 236844,
+    "sha256": "9f79e76542d68b9c414c7df8c17b275a50b4dc784c63aa62a054564f5b99cdd9",
     "contents": [
      "Weekly Self-Reflection Journal \u2014 52 Prompts - A4.pdf",
      "Weekly Self-Reflection Journal \u2014 52 Prompts - Letter.pdf",
@@ -525,8 +525,8 @@
     "productivity",
     "pdf workbook"
    ],
-   "price_zar": 109,
-   "price_usd": 8,
+   "price_zar": 89,
+   "price_usd": 7,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -542,8 +542,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-007/goal-setting-workbook.zip",
-    "bytes": 178629,
-    "sha256": "9b8a3f0de38ad8ef2a538d93d759dbde67caa48737193fb8d0a358821d6bc9be",
+    "bytes": 178628,
+    "sha256": "7d3285e01a3b283187edb3e7e51a2df01322064964b628a03407eb331fcffe84",
     "contents": [
      "Goal-Setting Workbook - A4.pdf",
      "Goal-Setting Workbook - Letter.pdf",
@@ -609,8 +609,8 @@
     "study schedule",
     "pdf planner"
    ],
-   "price_zar": 89,
-   "price_usd": 7,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -625,8 +625,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-008/student-study-planner.zip",
-    "bytes": 172362,
-    "sha256": "ebe2fddec5a20dd8a5dbff7e1a2161e5b4bd336afcce816c9372a913aff4f551",
+    "bytes": 172361,
+    "sha256": "2d4e795db6e8f656bd816267cac2ea131d4c471ddaf330b5e080bdc8752622de",
     "contents": [
      "Student Study Planner - A4.pdf",
      "Student Study Planner - Letter.pdf",
@@ -692,8 +692,8 @@
     "test prep",
     "pdf planner"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -708,8 +708,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-009/exam-revision-planner.zip",
-    "bytes": 174097,
-    "sha256": "cb999383d37ab3b856a840417c867d9e6714ffc467fc900ed867d0a0932d1954",
+    "bytes": 174096,
+    "sha256": "ecc2f891954ad5bb01a6e4fa1244a1c2cec27bcedd5bc500ffbc6a1c095e264d",
     "contents": [
      "Exam Revision Planner - A4.pdf",
      "Exam Revision Planner - Letter.pdf",
@@ -774,8 +774,8 @@
     "a4 tracker",
     "pdf printable"
    ],
-   "price_zar": 59,
-   "price_usd": 4.5,
+   "price_zar": 39,
+   "price_usd": 3.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -790,8 +790,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-010/habit-tracker-set.zip",
-    "bytes": 178035,
-    "sha256": "d119864750fa63b1bdbb23970d76a04f4f67dc3d9e770cf4a04521b226b69e6e",
+    "bytes": 178033,
+    "sha256": "470377833df9b96acce2751ce3cfa4896ec70e7ff2e23288f795d19dae2987bb",
     "contents": [
      "Habit Tracker Set - A4.pdf",
      "Habit Tracker Set - Letter.pdf",
@@ -856,8 +856,8 @@
     "mom planner",
     "pdf printable"
    ],
-   "price_zar": 59,
-   "price_usd": 4.5,
+   "price_zar": 39,
+   "price_usd": 3,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -872,8 +872,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-011/home-cleaning-schedule.zip",
-    "bytes": 173935,
-    "sha256": "c93736fdef9ac62a42968a2e6752bf6f2a338791631e77a671488012ec23a840",
+    "bytes": 173936,
+    "sha256": "541d5688eab89027c5784ebf747198012d192db6946e7a41820df3e58c750748",
     "contents": [
      "Home Cleaning Schedule & Declutter Challenge - A4.pdf",
      "Home Cleaning Schedule & Declutter Challenge - Letter.pdf",
@@ -938,8 +938,8 @@
     "budget meals",
     "pdf printable"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 39,
+   "price_usd": 3.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -954,8 +954,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-012/meal-planner-grocery-list.zip",
-    "bytes": 172030,
-    "sha256": "8de74c6be198a1993bfdb8145bfad6042fe98a6492ab12ca2b83442e3f6fda09",
+    "bytes": 172029,
+    "sha256": "f4452556e59d12f2b76927f1528ad2754b8948a056cc2913bc388359475608ce",
     "contents": [
      "Meal Planner & Grocery List Kit - A4.pdf",
      "Meal Planner & Grocery List Kit - Letter.pdf",
@@ -1021,8 +1021,8 @@
     "life admin",
     "pdf printable"
    ],
-   "price_zar": 89,
-   "price_usd": 7,
+   "price_zar": 69,
+   "price_usd": 6,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1037,8 +1037,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-013/home-organisation-binder.zip",
-    "bytes": 170267,
-    "sha256": "e951eb09f808e2a6374785cbb9027ae1fe5a1e54064e358df1047d8413814982",
+    "bytes": 170269,
+    "sha256": "407ba9081359f9ed34cfece4ea9547bb736792409f808ed3129555ec18a20a9d",
     "contents": [
      "Home Organisation Binder - A4.pdf",
      "Home Organisation Binder - Letter.pdf",
@@ -1104,8 +1104,8 @@
     "to do list",
     "pdf planner"
    ],
-   "price_zar": 85,
-   "price_usd": 6.5,
+   "price_zar": 69,
+   "price_usd": 6,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1120,8 +1120,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-014/productivity-planner.zip",
-    "bytes": 356582,
-    "sha256": "1567efc05e96ba087272d2127d0012e08432fac2ba3aa56fba99c8fec2e844aa",
+    "bytes": 356580,
+    "sha256": "1c302cc246be4d77de64c9c77788ca3eeac578077c04391245e10439f5aedbad",
     "contents": [
      "Productivity Planner \u2014 Priority Matrix & Time Blocking - A4.pdf",
      "Productivity Planner \u2014 Priority Matrix & Time Blocking - Letter.pdf",
@@ -1187,8 +1187,8 @@
     "timeline",
     "pdf planner"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1204,7 +1204,7 @@
    "file": {
     "key": "PLD-015/personal-project-planner.zip",
     "bytes": 169646,
-    "sha256": "c073a11072cd8067fe12957d97ee0f581d27168bd69b718f69bf72885c526549",
+    "sha256": "c9b07b0c8b00151c5e5a3aca1c9a403e72087e3d18c73855d830e794bbdf86e9",
     "contents": [
      "Personal Project Planner - A4.pdf",
      "Personal Project Planner - Letter.pdf",
@@ -1270,8 +1270,8 @@
     "symptom tracker",
     "pdf planner"
    ],
-   "price_zar": 75,
-   "price_usd": 5.5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1287,7 +1287,7 @@
    "file": {
     "key": "PLD-016/wellness-mood-tracker.zip",
     "bytes": 172202,
-    "sha256": "a7d2f3b0481f9f7fbbfe94aaeb7a2523d29924c1524dca2666501599d7c85457",
+    "sha256": "16dcf321bd8da407c1c977ad590dc059b637e52474260fd9c21fb5bf41b95487",
     "contents": [
      "Wellness & Mood Tracker - A4.pdf",
      "Wellness & Mood Tracker - Letter.pdf",
@@ -1352,8 +1352,8 @@
     "reading planner",
     "pdf printable"
    ],
-   "price_zar": 59,
-   "price_usd": 4.5,
+   "price_zar": 39,
+   "price_usd": 3.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1368,8 +1368,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-017/reading-journal.zip",
-    "bytes": 173300,
-    "sha256": "4082446bad0557bafa286f6578571d7a01159cb4e51fad21f6e098572321bb37",
+    "bytes": 173298,
+    "sha256": "42d4a99bcb91820da99d0a05a5ab35868d10ca1d22816beffc0ce97b05503a34",
     "contents": [
      "Reading Journal & Book Log - A4.pdf",
      "Reading Journal & Book Log - Letter.pdf",
@@ -1435,8 +1435,8 @@
     "reflection",
     "pdf planner"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 59,
+   "price_usd": 4.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1451,8 +1451,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-018/yearly-planner-annual-review.zip",
-    "bytes": 183885,
-    "sha256": "62de61efcbe1402608e228d5269c8db5afb4331805eb12e529b8b6cef3af5aa4",
+    "bytes": 183884,
+    "sha256": "6c9bd1327bbd3c90dd5cc5a030043e10db4ef7bc90020f0f4543efb2700e1f8f",
     "contents": [
      "Yearly Planner & Annual Review - A4.pdf",
      "Yearly Planner & Annual Review - Letter.pdf",
@@ -1517,8 +1517,8 @@
     "travel journal",
     "pdf printable"
    ],
-   "price_zar": 59,
-   "price_usd": 4.5,
+   "price_zar": 39,
+   "price_usd": 3.5,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1533,8 +1533,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-019/travel-planner.zip",
-    "bytes": 172926,
-    "sha256": "04cba197cea86ae40b092ca5710c0cb734526903bc047f80fb57ae7d76c496dc",
+    "bytes": 172925,
+    "sha256": "8662c8e50c67db6873703bf0bdf3ea203576edbade4e30de7d430e69d5f38e11",
     "contents": [
      "Travel Planner - A4.pdf",
      "Travel Planner - Letter.pdf",
@@ -1584,7 +1584,7 @@
     "Habit Tracker Set",
     "Productivity Planner (priority matrix & time blocking)",
     "Bundle-only bonus: Sunday weekly reset checklist (4 pages)",
-    "Saves about 35% versus buying the four planners separately"
+    "Saves about 34% versus buying the products separately"
    ],
    "tags": [
     "planner bundle",
@@ -1601,8 +1601,8 @@
     "organization",
     "pdf bundle"
    ],
-   "price_zar": 199,
-   "price_usd": 16,
+   "price_zar": 169,
+   "price_usd": 14,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -1613,7 +1613,7 @@
     "Start with the bonus file in the main folder.",
     "Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions."
    ],
-   "description": "Four best-fitting Plainday planners in one download \u2014 daily, weekly, habit and productivity \u2014 plus an exclusive weekly reset routine.\n\nWHAT'S INCLUDED\n\u2022 Undated Daily Planner (90 days)\n\u2022 Undated Weekly Planner (52 weeks)\n\u2022 Habit Tracker Set\n\u2022 Productivity Planner (priority matrix & time blocking)\n\u2022 Bundle-only bonus: Sunday weekly reset checklist (4 pages)\n\u2022 Saves about 35% versus buying the four planners separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: PDF (A4), PDF (US Letter) (delivered as one ZIP download)\n\u2022 Any PDF reader; print at home or at a print shop. Also usable in note-taking apps that import PDFs (e.g. GoodNotes, Notability) without hyperlinks.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 Printed colours can vary slightly between screens and printers.",
+   "description": "Four best-fitting Plainday planners in one download \u2014 daily, weekly, habit and productivity \u2014 plus an exclusive weekly reset routine.\n\nWHAT'S INCLUDED\n\u2022 Undated Daily Planner (90 days)\n\u2022 Undated Weekly Planner (52 weeks)\n\u2022 Habit Tracker Set\n\u2022 Productivity Planner (priority matrix & time blocking)\n\u2022 Bundle-only bonus: Sunday weekly reset checklist (4 pages)\n\u2022 Saves about 34% versus buying the products separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: PDF (A4), PDF (US Letter) (delivered as one ZIP download)\n\u2022 Any PDF reader; print at home or at a print shop. Also usable in note-taking apps that import PDFs (e.g. GoodNotes, Notability) without hyperlinks.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 Printed colours can vary slightly between screens and printers.",
    "bundle_of": [
     "undated-daily-planner",
     "undated-weekly-planner",
@@ -1623,8 +1623,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PLD-020/productivity-planner-bundle.zip",
-    "bytes": 1050181,
-    "sha256": "f03badf4b55df03a1f71de8cf32e84a0fc2e5953c2c4228b8f6cf7f72d3fe70e",
+    "bytes": 1050175,
+    "sha256": "24f6ecd5be535d52119467ea92ad6b8c6159254713bb9fb41b8d31bba088be2f",
     "contents": [
      "The Plainday Productivity Bundle - A4.pdf",
      "The Plainday Productivity Bundle - Letter.pdf",
@@ -1697,8 +1697,8 @@
     "startup plan",
     "business tools"
    ],
-   "price_zar": 189,
-   "price_usd": 14,
+   "price_zar": 229,
+   "price_usd": 19,
    "formats": [
     "DOCX",
     "XLSX"
@@ -1718,8 +1718,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-001/business-plan-template.zip",
-    "bytes": 51016,
-    "sha256": "85ce8455eb10a0812b5b33e33abd1715283c549465ebf336dcf3f5f7da2d6ba3",
+    "bytes": 51015,
+    "sha256": "424d9c0339d25424c86ed61d318e3de534924bd4ba71d74e774dab0d3bda4a8a",
     "contents": [
      "3-Year Financial Projections.xlsx",
      "Business Plan Template.docx",
@@ -1797,8 +1797,8 @@
     "business canvas",
     "startup tools"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "DOCX"
    ],
@@ -1814,7 +1814,7 @@
    "file": {
     "key": "BZW-002/lean-canvas-one-page-plan.zip",
     "bytes": 37521,
-    "sha256": "67bd434a876599b0d000fef304bacbf1de6f4ac6b12a794bd47a4633530e2eb1",
+    "sha256": "5cd4292a645912fc1d91c214e7a05b1602cd782153f7e2d661636c3cba170a61",
     "contents": [
      "Lean Canvas & One-Page Plan.docx",
      "READ ME FIRST.txt",
@@ -1874,8 +1874,8 @@
     "google sheets",
     "self employed"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "XLSX"
    ],
@@ -1892,8 +1892,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-003/invoice-template-excel.zip",
-    "bytes": 19868,
-    "sha256": "0f9b4a6323348f74d0712b0239de2f08c977cc457a1b73ec4f37c7b20c223f18",
+    "bytes": 19870,
+    "sha256": "9a253fb42103fda21e8760830e5e8127f54535187ea81acf83dc50323eb2752a",
     "contents": [
      "Invoice Template.xlsx",
      "READ ME FIRST.txt",
@@ -1971,8 +1971,8 @@
     "google sheets",
     "proposal"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "XLSX"
    ],
@@ -1989,8 +1989,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-004/quotation-estimate-template.zip",
-    "bytes": 19903,
-    "sha256": "ce3fa877e400ce60aa0d836d65216408d46a9b690cf7f0e1bedaead7d29fb8f4",
+    "bytes": 19907,
+    "sha256": "d4aa562743a98a4eaf6b69d004c9d4ba30f6efd0436e0db39331a7591ce08500",
     "contents": [
      "Quotation Template.xlsx",
      "READ ME FIRST.txt",
@@ -2080,8 +2080,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-005/income-expense-tracker.zip",
-    "bytes": 21853,
-    "sha256": "4a0cd5bebcd475a49b7da011004a40cabcd24c88d5b916ae7f90c02734dd2e87",
+    "bytes": 21849,
+    "sha256": "1ef614114d858a84be643001df0d93fe29512cfbffe76c3c37206034c802e750",
     "contents": [
      "Income & Expense Tracker.xlsx",
      "READ ME FIRST.txt",
@@ -2174,8 +2174,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-006/marketing-calendar.zip",
-    "bytes": 18483,
-    "sha256": "3caa9350c860ec4b821cba41132d10f52970bb7bed8c807b68f9bc6755518ae6",
+    "bytes": 18484,
+    "sha256": "e2a7ff00310be86f314987938d991b8262db1c0eefdd00b127e871c98f52bfb2",
     "contents": [
      "Marketing Calendar.xlsx",
      "READ ME FIRST.txt",
@@ -2247,8 +2247,8 @@
     "post planner",
     "smm template"
    ],
-   "price_zar": 85,
-   "price_usd": 6.5,
+   "price_zar": 99,
+   "price_usd": 8,
    "formats": [
     "XLSX"
    ],
@@ -2265,8 +2265,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-007/social-media-content-planner.zip",
-    "bytes": 25038,
-    "sha256": "6e50bd5619f7eb8f0b83ebcb67f2c155594236b1ab85324169c4d38844aef37b",
+    "bytes": 25039,
+    "sha256": "0f36fa4acd6d5b5e0c3b9e417dc76b6b0ef269dba8513b6af2b8055e96389659",
     "contents": [
      "Social Media Content Planner.xlsx",
      "READ ME FIRST.txt",
@@ -2341,8 +2341,8 @@
     "workflow",
     "business tools"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 149,
+   "price_usd": 12,
    "formats": [
     "DOCX"
    ],
@@ -2358,7 +2358,7 @@
    "file": {
     "key": "BZW-008/sop-template-kit.zip",
     "bytes": 39080,
-    "sha256": "d289286212e71534445d8c764af71d82a4fce05e7e1d99adc2c801368280c5ec",
+    "sha256": "e259907f57b37c20ec972ad18af524ac86fa117f9a3bea3d55a7a0ad6edd5028",
     "contents": [
      "SOP Template Kit.docx",
      "READ ME FIRST.txt",
@@ -2419,8 +2419,8 @@
     "project timeline",
     "work planner"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 169,
+   "price_usd": 14,
    "formats": [
     "XLSX"
    ],
@@ -2436,8 +2436,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-009/project-management-tracker.zip",
-    "bytes": 25268,
-    "sha256": "35ee58f55c692c7233be410c80168830e21d98e1904efa9a94c17359522f3212",
+    "bytes": 25270,
+    "sha256": "0a33d12c274fd3534e7f2ad5aad12bea4ffdc166f14e8771ddd111e50cc8b148",
     "contents": [
      "Project Management Tracker.xlsx",
      "READ ME FIRST.txt",
@@ -2513,8 +2513,8 @@
     "business tools",
     "client management"
    ],
-   "price_zar": 109,
-   "price_usd": 8,
+   "price_zar": 149,
+   "price_usd": 12,
    "formats": [
     "XLSX"
    ],
@@ -2531,7 +2531,7 @@
    "file": {
     "key": "BZW-010/client-crm-sales-pipeline.zip",
     "bytes": 22061,
-    "sha256": "54411fcff5b789246bee068b9dca677f4c549a62dec2c8dd8d686a5d415715c4",
+    "sha256": "7198fefa48be65e30132613378b9a6ea1e6aef844726c0eeddb2c5d38b84bfd5",
     "contents": [
      "Client CRM & Sales Pipeline.xlsx",
      "READ ME FIRST.txt",
@@ -2606,7 +2606,7 @@
     "business tools"
    ],
    "price_zar": 109,
-   "price_usd": 8,
+   "price_usd": 9,
    "formats": [
     "DOCX",
     "XLSX"
@@ -2625,8 +2625,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-011/employee-onboarding-kit.zip",
-    "bytes": 46063,
-    "sha256": "f92dc46e5f2a37989ae32f39dfc09c52993d9ed50b7fe65281896cd7dff69e7b",
+    "bytes": 46071,
+    "sha256": "f4882807594e4ca436ccf4e3b5b48229dc43cd3ed84cfe337dac7364b333f8f9",
     "contents": [
      "Onboarding Checklist.xlsx",
      "Onboarding Kit.docx",
@@ -2701,7 +2701,7 @@
     "office template",
     "business tools"
    ],
-   "price_zar": 69,
+   "price_zar": 59,
    "price_usd": 5,
    "formats": [
     "DOCX",
@@ -2721,8 +2721,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-012/meeting-agenda-minutes-kit.zip",
-    "bytes": 51424,
-    "sha256": "f620b564b3af9674c60d4957ca19561a68e00e46b698fe7ee4e4a137933e45fa",
+    "bytes": 51426,
+    "sha256": "870d932c295731a4ced4f7ca9cbb99492ee3b2e357e5da9a35d84a9948827b3d",
     "contents": [
      "Action Log.xlsx",
      "Meeting Agenda & Minutes.docx",
@@ -2801,7 +2801,7 @@
     "business tools"
    ],
    "price_zar": 109,
-   "price_usd": 8,
+   "price_usd": 9,
    "formats": [
     "DOCX"
    ],
@@ -2817,7 +2817,7 @@
    "file": {
     "key": "BZW-013/hiring-kit.zip",
     "bytes": 38147,
-    "sha256": "18c72c1b884aa9bd626b54a581172b398f8bfbbb598a5f1c0265dd1f6b928e6a",
+    "sha256": "48706066c1533559b12ee80df4b4506f66ec44bc926b3ebcaa2f1142559e974d",
     "contents": [
      "Hiring Kit.docx",
      "READ ME FIRST.txt",
@@ -2878,7 +2878,7 @@
     "net promoter",
     "customer care"
    ],
-   "price_zar": 79,
+   "price_zar": 69,
    "price_usd": 6,
    "formats": [
     "XLSX"
@@ -2894,8 +2894,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-014/customer-feedback-complaints-log.zip",
-    "bytes": 25220,
-    "sha256": "62a0bb2c3e68775a942eb0f69eeb38ae7159ea5625079a67fa8510c43a346f0e",
+    "bytes": 25217,
+    "sha256": "f398ee7a7d6030fde328a8801df02782890d4b122ee61e9381be1a743c9e4edd",
     "contents": [
      "Customer Feedback & Complaints Log.xlsx",
      "READ ME FIRST.txt",
@@ -2969,8 +2969,8 @@
     "business tools",
     "pricing template"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 89,
+   "price_usd": 7,
    "formats": [
     "XLSX"
    ],
@@ -2985,8 +2985,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-015/pricing-calculator.zip",
-    "bytes": 12476,
-    "sha256": "a9d8fb4ddf33759a5cda93bc11af2cd364c58e509bbbb2b880959d10ae4a3175",
+    "bytes": 12473,
+    "sha256": "6068c973adb757e75e7c40bee7798cad08a824c8fda18376b3b0bff8a0b17208",
     "contents": [
      "Pricing Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -3059,8 +3059,8 @@
     "business tools",
     "brand template"
    ],
-   "price_zar": 89,
-   "price_usd": 7,
+   "price_zar": 99,
+   "price_usd": 8,
    "formats": [
     "DOCX"
    ],
@@ -3076,7 +3076,7 @@
    "file": {
     "key": "BZW-016/brand-style-guide-template.zip",
     "bytes": 37453,
-    "sha256": "f25f1fa375351fce94a648ee7307f2f13f0271217a83792b141848316e5991f4",
+    "sha256": "12554c2bd7e3004ca4fad4a4b590d29b2fdc3d7608b2251ed23d839b364b5aeb",
     "contents": [
      "Brand Style Guide Template.docx",
      "READ ME FIRST.txt",
@@ -3135,8 +3135,8 @@
     "business tools",
     "excel template"
    ],
-   "price_zar": 109,
-   "price_usd": 8,
+   "price_zar": 179,
+   "price_usd": 15,
    "formats": [
     "XLSX"
    ],
@@ -3151,8 +3151,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-017/small-business-kpi-dashboard.zip",
-    "bytes": 13153,
-    "sha256": "9c28eed3e03c4c754d34fe35e0b666c9c4a715460efda632c3d9a5a871a6dd1b",
+    "bytes": 13156,
+    "sha256": "638c3f55dcd8c5b487343f7facd296ecd0f0775e65a43904e42a93b6d2bb2727",
     "contents": [
      "Small Business KPI Dashboard.xlsx",
      "READ ME FIRST.txt",
@@ -3222,8 +3222,8 @@
     "order form",
     "business tools"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "XLSX"
    ],
@@ -3238,8 +3238,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-018/purchase-order-supplier-kit.zip",
-    "bytes": 16720,
-    "sha256": "9e59f5e9a111bb0ed37c77ea1f9c02c1dad6a8f3ca20208a7b148f9ab4ffa4b3",
+    "bytes": 16719,
+    "sha256": "6cc504cad29d8afa3adb0b0acb64af042c5996c4273f1fb107453c763e1d04e4",
     "contents": [
      "Purchase Order & Supplier Kit.xlsx",
      "READ ME FIRST.txt",
@@ -3311,8 +3311,8 @@
     "planner pdf",
     "boss planner"
    ],
-   "price_zar": 85,
-   "price_usd": 6.5,
+   "price_zar": 89,
+   "price_usd": 7,
    "formats": [
     "PDF (A4)",
     "PDF (US Letter)"
@@ -3325,7 +3325,7 @@
    "file": {
     "key": "BZW-019/ceo-weekly-business-planner.zip",
     "bytes": 123446,
-    "sha256": "4e399a0b69fbae66d5890e189272318a49e47bf148820e962bcd8c88b76c6b4c",
+    "sha256": "9cb67c9db7ed42686c8015f6c6c15242465b50ff7e244cf170f0178cc9b54558",
     "contents": [
      "CEO Weekly Planner - A4.pdf",
      "CEO Weekly Planner - Letter.pdf",
@@ -3373,7 +3373,7 @@
     "Income & Expense Tracker",
     "Meeting Agenda, Minutes & Action Log Kit",
     "Bundle-only bonus: Monthly Business Admin Checklist (Word)",
-    "Saves about 25% versus buying separately"
+    "Saves about 25% versus buying the products separately"
    ],
    "tags": [
     "business bundle",
@@ -3390,8 +3390,8 @@
     "word template",
     "business tools"
    ],
-   "price_zar": 239,
-   "price_usd": 18,
+   "price_zar": 199,
+   "price_usd": 16,
    "formats": [
     "XLSX",
     "DOCX"
@@ -3402,7 +3402,7 @@
     "Start with the bonus file in the main folder.",
     "Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions."
    ],
-   "description": "The four admin templates most small businesses use every week, plus a bundle-only monthly admin checklist.\n\nWHAT'S INCLUDED\n\u2022 Invoice Template & Register\n\u2022 Quotation & Estimate Template\n\u2022 Income & Expense Tracker\n\u2022 Meeting Agenda, Minutes & Action Log Kit\n\u2022 Bundle-only bonus: Monthly Business Admin Checklist (Word)\n\u2022 Saves about 25% versus buying separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX, DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import). Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "The four admin templates most small businesses use every week, plus a bundle-only monthly admin checklist.\n\nWHAT'S INCLUDED\n\u2022 Invoice Template & Register\n\u2022 Quotation & Estimate Template\n\u2022 Income & Expense Tracker\n\u2022 Meeting Agenda, Minutes & Action Log Kit\n\u2022 Bundle-only bonus: Monthly Business Admin Checklist (Word)\n\u2022 Saves about 25% versus buying the products separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX, DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import). Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [
     "invoice-template-excel",
     "quotation-estimate-template",
@@ -3412,8 +3412,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-020/business-admin-bundle.zip",
-    "bytes": 144724,
-    "sha256": "02eb783ada466798981c41a055eae2c1d9e8f4a11755b274bd19985318600645",
+    "bytes": 144728,
+    "sha256": "ca71ed05c2e861279eafc68f1e2f44da52cad2e0e2dec0e72f105db12420940c",
     "contents": [
      "Monthly Admin Checklist.docx",
      "Invoice Template & Invoice Register/Invoice Template.xlsx",
@@ -3481,7 +3481,7 @@
     "savings tracker",
     "budget excel"
    ],
-   "price_zar": 119,
+   "price_zar": 109,
    "price_usd": 9,
    "formats": [
     "XLSX"
@@ -3498,8 +3498,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-001/personal-budget-dashboard.zip",
-    "bytes": 30904,
-    "sha256": "fb2698889400638567a6eee6af105da290b33155bd9f8f4e49a5dc3f9d6a5adc",
+    "bytes": 30902,
+    "sha256": "899170abb390b03f8e5093aaf7d599d843eea9195c16916c2f6d840fb6f62e00",
     "contents": [
      "Personal Budget Dashboard.xlsx",
      "READ ME FIRST.txt",
@@ -3576,7 +3576,7 @@
     "money planner"
    ],
    "price_zar": 109,
-   "price_usd": 8,
+   "price_usd": 9,
    "formats": [
     "XLSX"
    ],
@@ -3592,8 +3592,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-002/debt-snowball-avalanche-calculator.zip",
-    "bytes": 105727,
-    "sha256": "312a1d941e0e58d108c18de02a4d762e11208e68e25887e590565cefe8314fad",
+    "bytes": 105728,
+    "sha256": "6e3e49b1e70b96dee298a3ba7c64385f6105484ee044ae28caae39c4a7627068",
     "contents": [
      "Debt Snowball & Avalanche Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -3672,8 +3672,8 @@
     "progress tracker",
     "money tracker"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "XLSX"
    ],
@@ -3689,7 +3689,7 @@
    "file": {
     "key": "ABL-003/savings-goal-tracker.zip",
     "bytes": 17835,
-    "sha256": "1660df264176612c6bd2e03c8439620118a232b8cc7fbc1c7d1502e2c382b6fd",
+    "sha256": "0f782fb3bbdb301eb37982285e58ab24515fdac77a0437a74f215e278c723bc0",
     "contents": [
      "Savings Goal Tracker.xlsx",
      "READ ME FIRST.txt",
@@ -3759,8 +3759,8 @@
     "savings plan",
     "finance tracker"
    ],
-   "price_zar": 69,
-   "price_usd": 5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "XLSX"
    ],
@@ -3776,8 +3776,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-004/emergency-fund-calculator.zip",
-    "bytes": 15260,
-    "sha256": "21ebc8064e29fe8896760bee5d42ceea15fe2f017f51e9e940a5d5f23c448a17",
+    "bytes": 15259,
+    "sha256": "85db0cefc10d659b2e32439147874651f31b2202fc555cc67873472807fdc9cc",
     "contents": [
      "Emergency Fund Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -3847,7 +3847,7 @@
     "investment tracker",
     "finance dashboard"
    ],
-   "price_zar": 79,
+   "price_zar": 69,
    "price_usd": 6,
    "formats": [
     "XLSX"
@@ -3863,8 +3863,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-005/net-worth-tracker.zip",
-    "bytes": 14412,
-    "sha256": "c77804f9fca2e4f9e1b53c035c83239c6bbeeba0ecea785e602efee5807945e8",
+    "bytes": 14413,
+    "sha256": "c4a4c319642f89d058725e8f03f5268155c5134e695052fd595d4bdfa968cc37",
     "contents": [
      "Net Worth Tracker.xlsx",
      "READ ME FIRST.txt",
@@ -3935,7 +3935,7 @@
     "financial planner",
     "budget excel"
    ],
-   "price_zar": 109,
+   "price_zar": 99,
    "price_usd": 8,
    "formats": [
     "XLSX"
@@ -3951,8 +3951,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-006/annual-personal-finance-workbook.zip",
-    "bytes": 16289,
-    "sha256": "1c87f0d918adecff0099a5be79550ad3b5b7f7a0d54952d876e401572788a9e6",
+    "bytes": 16290,
+    "sha256": "3a28e3056a775532e84d1b634d3e8955d163e670dbe504099b4ccf4d46c1ff36",
     "contents": [
      "Annual Personal Finance Workbook.xlsx",
      "READ ME FIRST.txt",
@@ -4027,8 +4027,8 @@
     "debt payoff",
     "finance tools"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 89,
+   "price_usd": 7,
    "formats": [
     "XLSX"
    ],
@@ -4043,8 +4043,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-007/loan-amortisation-calculator.zip",
-    "bytes": 23806,
-    "sha256": "f46d4b092b329206d0e250c23c0239c0ac6705dafc8d7adbbdd72418eef8e5fb",
+    "bytes": 23809,
+    "sha256": "75639c65b230c0860ac434ec23b21cb918dce5550111108ab034cc8a3b5ce4bb",
     "contents": [
      "Loan Amortisation Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -4126,8 +4126,8 @@
     "extra payments",
     "finance tools"
    ],
-   "price_zar": 89,
-   "price_usd": 7,
+   "price_zar": 109,
+   "price_usd": 9,
    "formats": [
     "XLSX"
    ],
@@ -4143,8 +4143,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-008/home-loan-calculator.zip",
-    "bytes": 13472,
-    "sha256": "e937340eb9fc4e8951280b56b3e63d8dba6f1b9b28bf236c88f2d713cc459eba",
+    "bytes": 13473,
+    "sha256": "40504772893e2f9070622caf7ae7819df3ed1b49d747827021c053a462040e34",
     "contents": [
      "Home Loan Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -4218,8 +4218,8 @@
     "stock list",
     "business tools"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 149,
+   "price_usd": 12,
    "formats": [
     "XLSX"
    ],
@@ -4235,8 +4235,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-009/inventory-management-spreadsheet.zip",
-    "bytes": 43914,
-    "sha256": "04143e19f2d140735991072a7fa017ebdd7b39fbbb14ddc863f3a0d8fa20ab59",
+    "bytes": 43915,
+    "sha256": "e4ff9245d2d1e69984361b148437f8cbaacd322d6fd73bb38366e75ed8c8dca2",
     "contents": [
      "Inventory Management Spreadsheet.xlsx",
      "READ ME FIRST.txt",
@@ -4310,8 +4310,8 @@
     "operations",
     "inventory planning"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 229,
+   "price_usd": 19,
    "formats": [
     "XLSX"
    ],
@@ -4327,7 +4327,7 @@
    "file": {
     "key": "ABL-010/stock-control-reorder-point.zip",
     "bytes": 18354,
-    "sha256": "e819c602c2ce8fecab262edc181ce1aa6614ff9f71307eeb28d89c8fcc02cca3",
+    "sha256": "343aeb2c2b7114789457a947c43958b29f132ef547f63bea1b458663bca9b8fb",
     "contents": [
      "Stock Control & Reorder Point Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -4397,8 +4397,8 @@
     "distribution",
     "warehouse tools"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 359,
+   "price_usd": 29,
    "formats": [
     "XLSX"
    ],
@@ -4413,8 +4413,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-011/warehouse-productivity-dashboard.zip",
-    "bytes": 43927,
-    "sha256": "c89e5bd92557d8cd63f6361bce8080c07a2dcd4a39f34710cdfafb481d23c96d",
+    "bytes": 43928,
+    "sha256": "5367016f9acef6820a69edf89923ab901dd4557e02eff3915b6c9b245a0ce498",
     "contents": [
      "Warehouse Productivity Dashboard.xlsx",
      "READ ME FIRST.txt",
@@ -4488,8 +4488,8 @@
     "fill rate",
     "warehouse"
    ],
-   "price_zar": 119,
-   "price_usd": 9,
+   "price_zar": 359,
+   "price_usd": 29,
    "formats": [
     "XLSX"
    ],
@@ -4505,8 +4505,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-012/supply-chain-kpi-toolkit.zip",
-    "bytes": 42927,
-    "sha256": "f8830bb67990be0dad52055ccbd13e1a926cb224c542536f00c06750230a014f",
+    "bytes": 42925,
+    "sha256": "fa652a240c888404c64cd82223c93c1c391c90edf31bd0203ff67b6bc3fa0a4f",
     "contents": [
      "Supply Chain KPI Toolkit.xlsx",
      "READ ME FIRST.txt",
@@ -4580,8 +4580,8 @@
     "80 20 rule",
     "business tools"
    ],
-   "price_zar": 99,
-   "price_usd": 7,
+   "price_zar": 149,
+   "price_usd": 12,
    "formats": [
     "XLSX"
    ],
@@ -4596,8 +4596,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-013/abc-inventory-analysis.zip",
-    "bytes": 44955,
-    "sha256": "ef68c0de9229703b0646806b70b962391d363212de67464271812a56302563f4",
+    "bytes": 44958,
+    "sha256": "5f15963679534985cb6a77ee1c3d22ee436426f443b1e26b5a5a2520a008af0f",
     "contents": [
      "ABC Inventory Analysis.xlsx",
      "READ ME FIRST.txt",
@@ -4667,8 +4667,8 @@
     "forecast template",
     "business finance"
    ],
-   "price_zar": 109,
-   "price_usd": 8,
+   "price_zar": 149,
+   "price_usd": 12,
    "formats": [
     "XLSX"
    ],
@@ -4684,8 +4684,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-014/13-week-cash-flow-forecast.zip",
-    "bytes": 11857,
-    "sha256": "9667b1cb14665718eda63cd6f4a4130e7c928d1d256d998c1feee292e24a3928",
+    "bytes": 11861,
+    "sha256": "115598a322efa05cb03b6d3fd3ad1511e7d517686365a440af0f73fb723abd7e",
     "contents": [
      "13-Week Cash Flow Forecast.xlsx",
      "READ ME FIRST.txt",
@@ -4752,7 +4752,7 @@
     "cost analysis",
     "business finance"
    ],
-   "price_zar": 79,
+   "price_zar": 69,
    "price_usd": 6,
    "formats": [
     "XLSX"
@@ -4768,8 +4768,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-015/break-even-profit-calculator.zip",
-    "bytes": 12941,
-    "sha256": "ba65ddd5f3d4647d93e02b853fb626a27bf22bcce24a1ce3bffaf53aa1da534f",
+    "bytes": 12945,
+    "sha256": "30678314f29ae52a269a7d861553cd6a3c565a95fd0564b6320ada56fb7bd1db",
     "contents": [
      "Break-Even & Profit Calculator.xlsx",
      "READ ME FIRST.txt",
@@ -4842,8 +4842,8 @@
     "expense tracker",
     "finance tracker"
    ],
-   "price_zar": 79,
-   "price_usd": 6,
+   "price_zar": 59,
+   "price_usd": 5,
    "formats": [
     "XLSX"
    ],
@@ -4859,8 +4859,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-016/sinking-funds-bill-tracker.zip",
-    "bytes": 20229,
-    "sha256": "11f5573e1b91ce817d4e03adb0d24986e830f289815398b2405be7cfb392a740",
+    "bytes": 20230,
+    "sha256": "b8dc1210196e58d3aeccb65ebdd18a04c1c97032f8dc358106a97db576c50ac3",
     "contents": [
      "Sinking Funds & Bill Tracker.xlsx",
      "READ ME FIRST.txt",
@@ -4934,7 +4934,7 @@
     "inflation",
     "finance tools"
    ],
-   "price_zar": 79,
+   "price_zar": 69,
    "price_usd": 6,
    "formats": [
     "XLSX"
@@ -4951,8 +4951,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-017/compound-interest-retirement-projector.zip",
-    "bytes": 15487,
-    "sha256": "dc672c0e006874dd0815db9edcd1f36d177196553dfb15c2ae4e2f4761a9c75b",
+    "bytes": 15486,
+    "sha256": "8cb6680c4cb8e71f6c66807403d59234ebef3318778f42f609e40d502aebd093",
     "contents": [
      "Compound Interest & Retirement Savings Projector.xlsx",
      "READ ME FIRST.txt",
@@ -5025,8 +5025,8 @@
     "money tracker",
     "personal finance"
    ],
-   "price_zar": 59,
-   "price_usd": 4.5,
+   "price_zar": 49,
+   "price_usd": 4,
    "formats": [
     "XLSX"
    ],
@@ -5041,8 +5041,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-018/shared-expense-splitter.zip",
-    "bytes": 15554,
-    "sha256": "4242419dc7777862cee516ed4224a3839d6a23421104a807a633bf85ab9a563c",
+    "bytes": 15552,
+    "sha256": "b91fa61f1653ee004fe1914d2014bee8db517bad80e1f6ab81860358ef1c0faf",
     "contents": [
      "Shared Expense Splitter.xlsx",
      "READ ME FIRST.txt",
@@ -5115,8 +5115,8 @@
     "planning",
     "business tools"
    ],
-   "price_zar": 109,
-   "price_usd": 8,
+   "price_zar": 179,
+   "price_usd": 15,
    "formats": [
     "XLSX"
    ],
@@ -5132,8 +5132,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-019/demand-forecasting-template.zip",
-    "bytes": 15421,
-    "sha256": "75f4462a7966a55e687827f086949df006163e9ea547af7283f6b7b3ac543eff",
+    "bytes": 15420,
+    "sha256": "2441d8687d4141dcaadf164e93bc37def7be1eb27d604ed9ab9940a79207d8b5",
     "contents": [
      "Demand Forecasting Template.xlsx",
      "READ ME FIRST.txt",
@@ -5189,7 +5189,7 @@
     "Supply Chain KPI Toolkit",
     "ABC Inventory Analysis Tool",
     "Bundle-only bonus: Cycle Count Planner",
-    "Saves about 33% versus buying separately"
+    "Saves about 36% versus buying the products separately"
    ],
    "tags": [
     "operations bundle",
@@ -5206,8 +5206,8 @@
     "cycle count",
     "business tools"
    ],
-   "price_zar": 379,
-   "price_usd": 29,
+   "price_zar": 799,
+   "price_usd": 65,
    "formats": [
     "XLSX"
    ],
@@ -5217,7 +5217,7 @@
     "Start with the bonus file in the main folder.",
     "Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions."
    ],
-   "description": "Five Abacus Lane operations tools in one download plus an exclusive cycle count planner built on ABC classes.\n\nWHAT'S INCLUDED\n\u2022 Inventory Management Spreadsheet\n\u2022 Stock Control & Reorder Point Calculator\n\u2022 Warehouse Productivity Dashboard\n\u2022 Supply Chain KPI Toolkit\n\u2022 ABC Inventory Analysis Tool\n\u2022 Bundle-only bonus: Cycle Count Planner\n\u2022 Saves about 33% versus buying separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "Five Abacus Lane operations tools in one download plus an exclusive cycle count planner built on ABC classes.\n\nWHAT'S INCLUDED\n\u2022 Inventory Management Spreadsheet\n\u2022 Stock Control & Reorder Point Calculator\n\u2022 Warehouse Productivity Dashboard\n\u2022 Supply Chain KPI Toolkit\n\u2022 ABC Inventory Analysis Tool\n\u2022 Bundle-only bonus: Cycle Count Planner\n\u2022 Saves about 36% versus buying the products separately\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Unzip the download \u2014 each product is in its own folder with its own instructions.\n2. Start with the bonus file in the main folder.\n3. Open each product's READ ME or 'Start Here' sheet/page for step-by-step instructions.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [
     "inventory-management-spreadsheet",
     "stock-control-reorder-point",
@@ -5228,8 +5228,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-020/operations-toolkit-bundle.zip",
-    "bytes": 266316,
-    "sha256": "7f05c4362a27cc4f65adfc80ff278e2a3dbbd08d417fd59c30558f7c3802383e",
+    "bytes": 266319,
+    "sha256": "1ac39c686fae59059b1bfb934f10d86e44438ee8238b30aeaca70b0413db47fb",
     "contents": [
      "Cycle Count Planner.xlsx",
      "Inventory Management Spreadsheet/Inventory Management Spreadsheet.xlsx",

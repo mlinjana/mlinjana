@@ -1,0 +1,313 @@
+{
+ "fx_usd_zar": 16.4,
+ "local_factor": 0.75,
+ "researched_on": "2026-10-28",
+ "prices": {
+  "undated-daily-planner": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "undated-weekly-planner": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "benchmark"
+  },
+  "monthly-budget-planner": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "savings-challenge-pack": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "guided-gratitude-journal": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "weekly-reflection-journal": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "goal-setting-workbook": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "student-study-planner": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "exam-revision-planner": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "habit-tracker-set": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "benchmark"
+  },
+  "home-cleaning-schedule": {
+   "price_usd": 3,
+   "price_zar": 39,
+   "basis": "benchmark"
+  },
+  "meal-planner-grocery-list": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "benchmark"
+  },
+  "home-organisation-binder": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "productivity-planner": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "personal-project-planner": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "wellness-mood-tracker": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "reading-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "benchmark"
+  },
+  "yearly-planner-annual-review": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "travel-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "benchmark"
+  },
+  "productivity-planner-bundle": {
+   "price_usd": 14,
+   "price_zar": 169,
+   "basis": "benchmark",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 34
+  },
+  "business-plan-template": {
+   "price_usd": 19,
+   "price_zar": 229,
+   "basis": "benchmark"
+  },
+  "lean-canvas-one-page-plan": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "invoice-template-excel": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "quotation-estimate-template": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "income-expense-tracker": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "marketing-calendar": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "social-media-content-planner": {
+   "price_usd": 8,
+   "price_zar": 99,
+   "basis": "benchmark"
+  },
+  "sop-template-kit": {
+   "price_usd": 12,
+   "price_zar": 149,
+   "basis": "benchmark"
+  },
+  "project-management-tracker": {
+   "price_usd": 14,
+   "price_zar": 169,
+   "basis": "benchmark"
+  },
+  "client-crm-sales-pipeline": {
+   "price_usd": 12,
+   "price_zar": 149,
+   "basis": "benchmark"
+  },
+  "employee-onboarding-kit": {
+   "price_usd": 9,
+   "price_zar": 109,
+   "basis": "estimate"
+  },
+  "meeting-agenda-minutes-kit": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "estimate"
+  },
+  "hiring-kit": {
+   "price_usd": 9,
+   "price_zar": 109,
+   "basis": "estimate"
+  },
+  "customer-feedback-complaints-log": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "estimate"
+  },
+  "pricing-calculator": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "brand-style-guide-template": {
+   "price_usd": 8,
+   "price_zar": 99,
+   "basis": "estimate"
+  },
+  "small-business-kpi-dashboard": {
+   "price_usd": 15,
+   "price_zar": 179,
+   "basis": "benchmark"
+  },
+  "purchase-order-supplier-kit": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "ceo-weekly-business-planner": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "business-admin-bundle": {
+   "price_usd": 16,
+   "price_zar": 199,
+   "basis": "benchmark",
+   "saving_pct_usd": 27,
+   "saving_pct_zar": 25
+  },
+  "personal-budget-dashboard": {
+   "price_usd": 9,
+   "price_zar": 109,
+   "basis": "benchmark"
+  },
+  "debt-snowball-avalanche-calculator": {
+   "price_usd": 9,
+   "price_zar": 109,
+   "basis": "benchmark"
+  },
+  "savings-goal-tracker": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "emergency-fund-calculator": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "net-worth-tracker": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "annual-personal-finance-workbook": {
+   "price_usd": 8,
+   "price_zar": 99,
+   "basis": "benchmark"
+  },
+  "loan-amortisation-calculator": {
+   "price_usd": 7,
+   "price_zar": 89,
+   "basis": "benchmark"
+  },
+  "home-loan-calculator": {
+   "price_usd": 9,
+   "price_zar": 109,
+   "basis": "benchmark"
+  },
+  "inventory-management-spreadsheet": {
+   "price_usd": 12,
+   "price_zar": 149,
+   "basis": "benchmark"
+  },
+  "stock-control-reorder-point": {
+   "price_usd": 19,
+   "price_zar": 229,
+   "basis": "benchmark"
+  },
+  "warehouse-productivity-dashboard": {
+   "price_usd": 29,
+   "price_zar": 359,
+   "basis": "benchmark"
+  },
+  "supply-chain-kpi-toolkit": {
+   "price_usd": 29,
+   "price_zar": 359,
+   "basis": "benchmark"
+  },
+  "abc-inventory-analysis": {
+   "price_usd": 12,
+   "price_zar": 149,
+   "basis": "estimate"
+  },
+  "13-week-cash-flow-forecast": {
+   "price_usd": 12,
+   "price_zar": 149,
+   "basis": "estimate"
+  },
+  "break-even-profit-calculator": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "sinking-funds-bill-tracker": {
+   "price_usd": 5,
+   "price_zar": 59,
+   "basis": "benchmark"
+  },
+  "compound-interest-retirement-projector": {
+   "price_usd": 6,
+   "price_zar": 69,
+   "basis": "benchmark"
+  },
+  "shared-expense-splitter": {
+   "price_usd": 4,
+   "price_zar": 49,
+   "basis": "benchmark"
+  },
+  "demand-forecasting-template": {
+   "price_usd": 15,
+   "price_zar": 179,
+   "basis": "estimate"
+  },
+  "operations-toolkit-bundle": {
+   "price_usd": 65,
+   "price_zar": 799,
+   "basis": "benchmark",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 36
+  }
+ }
+}
