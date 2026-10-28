@@ -2,7 +2,7 @@
 
 ## Owner (you) — needed to go live
 - [x] Approve Vercel team access.
-- [ ] Install the Vercel GitHub app on `mlinjana/mlinjana` (https://github.com/apps/vercel/installations/new) → lets Vercel deploy on every push.
+- [x] Install the Vercel GitHub app on `mlinjana/mlinjana` (https://github.com/apps/vercel/installations/new) → lets Vercel deploy on every push.
 - [ ] Choose live hosting: **Cloudflare Pages** (free; share an API token) or **Vercel Pro** (~US$20/month — paid, needs your OK).
 - [ ] PayFast: open/verify a merchant account; add `PAYFAST_MERCHANT_ID`, `PAYFAST_MERCHANT_KEY`, `PAYFAST_PASSPHRASE` as Supabase Edge Function secrets, then set `config.payment.mode = "live"`.
 - [ ] Email: create a free Resend account + verify a sender domain; add `RESEND_API_KEY` secret and set `config.email.from` (until then the report is on the dashboard only).
@@ -13,7 +13,8 @@
 - [ ] Decide whether to move the project to a **private** repo (current branch is in the public `mlinjana/mlinjana`).
 
 ## Claude / automation — next
-- [ ] Deploy staging site, set `site_base`, rebuild, verify all 60 product URLs → own-store listings `live`.
+- [x] Deploy staging site and verify all 60 product URLs (2026-10-28).
+- [ ] Make pushes deploy to production automatically: merge this branch into `main` (production branch) or change Vercel's production branch.
 - [x] Full sandbox purchase test — passed 2026-10-28 (see STATUS.md).
 - [ ] Delete pre-deployment test page-view events (needs your confirmation in Supabase).
 - [ ] After first real sales data: re-score opportunities; expand catalogue only where there is demand.

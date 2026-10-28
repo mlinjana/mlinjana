@@ -6,7 +6,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "undated-daily-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -56,7 +56,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "undated-weekly-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -106,7 +106,7 @@
   "price_cents": 9900,
   "currency": "ZAR",
   "external_id": "monthly-budget-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -156,7 +156,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "savings-challenge-pack",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -206,7 +206,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "guided-gratitude-journal",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -256,7 +256,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "weekly-reflection-journal",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -306,7 +306,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "goal-setting-workbook",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -356,7 +356,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "student-study-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -406,7 +406,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "exam-revision-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -456,7 +456,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "habit-tracker-set",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -506,7 +506,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "home-cleaning-schedule",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -556,7 +556,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "meal-planner-grocery-list",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -606,7 +606,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "home-organisation-binder",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -656,7 +656,7 @@
   "price_cents": 8500,
   "currency": "ZAR",
   "external_id": "productivity-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -706,7 +706,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "personal-project-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -756,7 +756,7 @@
   "price_cents": 7500,
   "currency": "ZAR",
   "external_id": "wellness-mood-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -806,7 +806,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "reading-journal",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -856,7 +856,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "yearly-planner-annual-review",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -906,7 +906,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "travel-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -956,7 +956,7 @@
   "price_cents": 19900,
   "currency": "ZAR",
   "external_id": "productivity-planner-bundle",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1006,7 +1006,7 @@
   "price_cents": 18900,
   "currency": "ZAR",
   "external_id": "business-plan-template",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1056,7 +1056,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "lean-canvas-one-page-plan",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1106,7 +1106,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "invoice-template-excel",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1156,7 +1156,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "quotation-estimate-template",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1206,7 +1206,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "income-expense-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1256,7 +1256,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "marketing-calendar",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1306,7 +1306,7 @@
   "price_cents": 8500,
   "currency": "ZAR",
   "external_id": "social-media-content-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1356,7 +1356,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "sop-template-kit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1406,7 +1406,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "project-management-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1456,7 +1456,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "client-crm-sales-pipeline",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1506,7 +1506,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "employee-onboarding-kit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1556,7 +1556,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "meeting-agenda-minutes-kit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1606,7 +1606,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "hiring-kit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1656,7 +1656,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "customer-feedback-complaints-log",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1706,7 +1706,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "pricing-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1756,7 +1756,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "brand-style-guide-template",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1806,7 +1806,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "small-business-kpi-dashboard",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1856,7 +1856,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "purchase-order-supplier-kit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1906,7 +1906,7 @@
   "price_cents": 8500,
   "currency": "ZAR",
   "external_id": "ceo-weekly-business-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -1956,7 +1956,7 @@
   "price_cents": 23900,
   "currency": "ZAR",
   "external_id": "business-admin-bundle",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2006,7 +2006,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "personal-budget-dashboard",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2056,7 +2056,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "debt-snowball-avalanche-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2106,7 +2106,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "savings-goal-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2156,7 +2156,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "emergency-fund-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2206,7 +2206,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "net-worth-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2256,7 +2256,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "annual-personal-finance-workbook",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2306,7 +2306,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "loan-amortisation-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2356,7 +2356,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "home-loan-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2406,7 +2406,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "inventory-management-spreadsheet",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2456,7 +2456,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "stock-control-reorder-point",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2506,7 +2506,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "warehouse-productivity-dashboard",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2556,7 +2556,7 @@
   "price_cents": 11900,
   "currency": "ZAR",
   "external_id": "supply-chain-kpi-toolkit",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2606,7 +2606,7 @@
   "price_cents": 9900,
   "currency": "ZAR",
   "external_id": "abc-inventory-analysis",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2656,7 +2656,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "13-week-cash-flow-forecast",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2706,7 +2706,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "break-even-profit-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2756,7 +2756,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "sinking-funds-bill-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2806,7 +2806,7 @@
   "price_cents": 7900,
   "currency": "ZAR",
   "external_id": "compound-interest-retirement-projector",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2856,7 +2856,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "shared-expense-splitter",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2906,7 +2906,7 @@
   "price_cents": 10900,
   "currency": "ZAR",
   "external_id": "demand-forecasting-template",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -2956,7 +2956,7 @@
   "price_cents": 37900,
   "currency": "ZAR",
   "external_id": "operations-toolkit-bundle",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
