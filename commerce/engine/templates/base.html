@@ -20,6 +20,7 @@
 <main>{% block main %}{% endblock %}</main>
 <footer class="foot"><div class="wrap">
   <div><strong>{{ store.name }}</strong><br><span class="muted">{{ store.tagline }}</span></div>
+  {% if legal %}<p class="muted small">{{ store.name }} is a trading name of {{ legal.operator }} (reg. {{ legal.registration.split(' ')[0] }}), {{ legal.address }}.</p>{% endif %}
   <div class="links"><a href="{{ base }}/refunds.html">Refunds &amp; support</a><a href="{{ base }}/privacy.html">Privacy</a><a href="{{ base }}/terms.html">Terms</a><a href="{{ base }}/licence.html">Licence</a><a href="{{ base }}/contact.html">Contact</a></div>
   <div class="muted small">Secure payments by PayFast. We never see or store your card details. Prices in South African rand (ZAR); international cards are converted by your bank.</div>
 </div></footer>

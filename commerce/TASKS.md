@@ -3,7 +3,7 @@
 ## Owner (you) — the only steps I can't do for you (legal identity, accounts, money)
 - [x] Approve Vercel team access · install Vercel GitHub app · delete test events (done 2026-10-28).
 - [x] Store names delegated to Claude → decided (DECISIONS #23).
-- [ ] **1. Legal details (needed before any real sale; PayFast also checks them):** your full legal or trading name, physical address, and registration number (or "sole proprietor, not registered"). Send them in chat and I'll fill in the Terms and Privacy pages.
+- [x] **1. Legal details** — done 2026-10-28: seller is Mlinjana Capital Holdings (Pty) Ltd, reg. 2026/067820/07, 1000 Lewerik Crescent, Rabie Ridge. Shown in every store footer and on the Terms and Privacy pages. Optional: send the postal code and city to complete the address.
 - [ ] **2. PayFast live account:** register at payfast.io and complete the identity and bank checks (FICA). Then, in Supabase → Edge Functions → Secrets, add `PAYFAST_MERCHANT_ID`, `PAYFAST_MERCHANT_KEY` and `PAYFAST_PASSPHRASE`, and tell me. I'll switch to live mode and run a R39 live test purchase for you to approve and refund.
 - [x] **3. Cloudflare** — done 2026-10-28. Claude deploys with `engine/deploy_cloudflare.sh` using your API token (stored only in the git-ignored `commerce/.env`). Optional: delete the leftover "mlinjana" Hello-world Worker in the dashboard (it's harmless). Roll the API token if you ever want to cut my access; I'll need a new one for future deploys.
 - [ ] **4. Resend (daily report email):** create a free account and either connect the Resend connector in claude.ai, or add a `RESEND_API_KEY` secret in Supabase. I'll set the sender and test it.

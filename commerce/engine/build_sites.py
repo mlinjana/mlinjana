@@ -61,7 +61,7 @@ def policies(store, legal):
         "terms": ("Terms of sale", f"""
 <p>These terms apply when you buy from {n}.</p>
 <h2>Seller</h2>
-<p>{html.escape(legal['operator'])}, {html.escape(legal['country'])}. Registration: {html.escape(legal['registration'])}. Address: {html.escape(legal['address'])}. Contact: via the <a href="contact.html">contact form</a>.</p>
+<p>{n} is a trading name of {html.escape(legal['operator'])}, {html.escape(legal['country'])}. Registration: {html.escape(legal['registration'])}. Address: {html.escape(legal['address'])}. Contact: via the <a href="contact.html">contact form</a>.</p>
 <h2>Products and prices</h2>
 <p>All products are digital files described on their product pages, including format and compatibility. Prices are in South African rand (ZAR) and include any applicable taxes we're required to charge. Your bank sets the exchange rate for non-ZAR cards.</p>
 <h2>Payment and delivery</h2>
@@ -70,7 +70,7 @@ def policies(store, legal):
 <p>Your purchase gives you a licence to use the files, not ownership of the copyright. See the <a href="licence.html">licence</a>.</p>
 <h2>Liability</h2>
 <p>Templates and calculators are tools. Check results before relying on them; nothing we sell is legal, tax or financial advice. To the extent the law allows, our liability is limited to the price you paid.</p>
-<p class="muted small">Draft terms prepared for pre-launch testing — to be reviewed by the owner before live sales.</p>"""),
+<p class="muted small">Last updated 28 October 2026.</p>"""),
         "licence": ("Licence", f"""
 <h2>You may</h2><ul><li>Use the product yourself or in your household.</li><li>Use it in one business you own or work for, including to serve your own customers (for example, sending invoices made with an invoice template).</li><li>Print it as often as you need for that use and edit it for yourself.</li></ul>
 <h2>You may not</h2><ul><li>Resell, share, give away or upload the files — original or edited — where others can download them.</li><li>Sell printed copies or include the files in a product you sell.</li><li>Claim the design or content as your own.</li></ul>
@@ -122,7 +122,7 @@ def main():
             p["file_mb"] = f"{(p['file']['bytes'] or 0) / 1e6:.1f}"
             p["bundle_items"] = [by_slug[s] for s in p.get("bundle_of", [])]
             p["bundle_sum"] = sum(b["price_zar"] for b in p["bundle_items"])
-        ctx = dict(store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"])}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
+        ctx = dict(legal=cfg["legal"], store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"])}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
         out = os.path.join(SITE, st["path"])
         os.makedirs(os.path.join(out, "p"), exist_ok=True)
         cats = [c for c in st["categories"] if any(p["category"] == c for p in prods)]

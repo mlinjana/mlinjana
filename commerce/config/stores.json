@@ -3,10 +3,11 @@
   "site_base": "https://commerce-network.mlinjanachuma.workers.dev",
   "mode": "staging",
   "legal": {
-    "operator": "Mlinjana (sole proprietor \u2014 trading name and registration details to be confirmed by the owner)",
+    "operator": "Mlinjana Capital Holdings (Pty) Ltd",
     "country": "South Africa",
-    "address": "To be provided by the owner before live sales (required disclosure)",
-    "registration": "To be provided by the owner before live sales"
+    "registration": "2026/067820/07 (private company, CIPC)",
+    "address": "1000 Lewerik Crescent, Rabie Ridge, South Africa",
+    "confirmed_by_owner": "2026-10-28"
   },
   "stores": [
     {
