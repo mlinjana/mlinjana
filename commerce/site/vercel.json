@@ -1,6 +1,13 @@
 {
  "cleanUrls": false,
  "trailingSlash": false,
+ "redirects": [
+  {
+   "source": "/pacebook/:rest*",
+   "destination": "/steadyrep/:rest*",
+   "permanent": true
+  }
+ ],
  "headers": [
   {
    "source": "/(.*)",

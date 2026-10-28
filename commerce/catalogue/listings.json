@@ -7502,11 +7502,11 @@
  {
   "product_id": "PCB-001",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/strength-training-log.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/strength-training-log.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "strength-training-log",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7552,11 +7552,11 @@
  {
   "product_id": "PCB-002",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/running-log-mileage-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/running-log-mileage-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "running-log-mileage-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7602,11 +7602,11 @@
  {
   "product_id": "PCB-003",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/body-measurements-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/body-measurements-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "body-measurements-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7652,11 +7652,11 @@
  {
   "product_id": "PCB-004",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/calorie-macro-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/calorie-macro-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "calorie-macro-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7702,11 +7702,11 @@
  {
   "product_id": "PCB-005",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/cycling-training-log.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/cycling-training-log.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "cycling-training-log",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7752,11 +7752,11 @@
  {
   "product_id": "PCB-006",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/swimming-training-log.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/swimming-training-log.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "swimming-training-log",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7802,11 +7802,11 @@
  {
   "product_id": "PCB-007",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/habit-workout-consistency-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/habit-workout-consistency-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "habit-workout-consistency-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7852,11 +7852,11 @@
  {
   "product_id": "PCB-008",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/personal-trainer-client-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/personal-trainer-client-tracker.html",
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "personal-trainer-client-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7902,11 +7902,11 @@
  {
   "product_id": "PCB-009",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/race-calendar-results-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/race-calendar-results-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "race-calendar-results-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -7952,11 +7952,11 @@
  {
   "product_id": "PCB-010",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/home-gym-equipment-budget-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/home-gym-equipment-budget-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "home-gym-equipment-budget-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8002,11 +8002,11 @@
  {
   "product_id": "PCB-011",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/12-week-strength-program-planner.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/12-week-strength-program-planner.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "12-week-strength-program-planner",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8052,11 +8052,11 @@
  {
   "product_id": "PCB-012",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/couch-to-5k-training-plan.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/couch-to-5k-training-plan.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "couch-to-5k-training-plan",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8102,11 +8102,11 @@
  {
   "product_id": "PCB-013",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/fitness-planner-workout-journal.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/fitness-planner-workout-journal.html",
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "fitness-planner-workout-journal",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8152,11 +8152,11 @@
  {
   "product_id": "PCB-014",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/meal-prep-planner-for-fitness.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/meal-prep-planner-for-fitness.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "meal-prep-planner-for-fitness",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8202,11 +8202,11 @@
  {
   "product_id": "PCB-015",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/marathon-training-plan-16-weeks.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/marathon-training-plan-16-weeks.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "marathon-training-plan-16-weeks",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8252,11 +8252,11 @@
  {
   "product_id": "PCB-016",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/yoga-mobility-practice-journal.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/yoga-mobility-practice-journal.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "yoga-mobility-practice-journal",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8302,11 +8302,11 @@
  {
   "product_id": "PCB-017",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/water-steps-daily-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/water-steps-daily-tracker.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "water-steps-daily-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8352,11 +8352,11 @@
  {
   "product_id": "PCB-018",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/fitness-goal-setting-workbook.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/fitness-goal-setting-workbook.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "fitness-goal-setting-workbook",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8402,11 +8402,11 @@
  {
   "product_id": "PCB-019",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/hiit-workout-cards.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/hiit-workout-cards.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "hiit-workout-cards",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8452,11 +8452,11 @@
  {
   "product_id": "PCB-020",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/injury-recovery-log.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/injury-recovery-log.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "injury-recovery-log",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8502,11 +8502,11 @@
  {
   "product_id": "PCB-021",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/sports-season-planner-for-young-athletes.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/sports-season-planner-for-young-athletes.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "sports-season-planner-for-young-athletes",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8552,11 +8552,11 @@
  {
   "product_id": "PCB-022",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/gym-membership-par-q-health-form.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/gym-membership-par-q-health-form.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "gym-membership-par-q-health-form",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8602,11 +8602,11 @@
  {
   "product_id": "PCB-023",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/personal-training-package-price-sheet.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/personal-training-package-price-sheet.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "personal-training-package-price-sheet",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8652,11 +8652,11 @@
  {
   "product_id": "PCB-024",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/running-pace-race-time-calculator.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/running-pace-race-time-calculator.html",
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "running-pace-race-time-calculator",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8702,11 +8702,11 @@
  {
   "product_id": "PCB-025",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/daily-calorie-needs-calculator.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/daily-calorie-needs-calculator.html",
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "daily-calorie-needs-calculator",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8752,11 +8752,11 @@
  {
   "product_id": "PCB-026",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/runners-training-bundle.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/runners-training-bundle.html",
   "price_cents": 9900,
   "currency": "ZAR",
   "external_id": "runners-training-bundle",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8802,11 +8802,11 @@
  {
   "product_id": "PCB-027",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/weekly-fitness-wellness-check-in.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/weekly-fitness-wellness-check-in.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "weekly-fitness-wellness-check-in",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8852,11 +8852,11 @@
  {
   "product_id": "PCB-028",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/team-player-stats-tracker.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/team-player-stats-tracker.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "team-player-stats-tracker",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8902,11 +8902,11 @@
  {
   "product_id": "PCB-029",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/stretching-mobility-routine-cards.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/stretching-mobility-routine-cards.html",
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "stretching-mobility-routine-cards",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {
@@ -8952,11 +8952,11 @@
  {
   "product_id": "PCB-030",
   "channel": "own_store",
-  "url": "https://commerce-network.vercel.app/pacebook/p/fitness-studio-timetable-policies-template.html",
+  "url": "https://commerce-network.vercel.app/steadyrep/p/fitness-studio-timetable-policies-template.html",
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "fitness-studio-timetable-policies-template",
-  "status": "live",
+  "status": "pending_verification",
   "last_error": null
  },
  {

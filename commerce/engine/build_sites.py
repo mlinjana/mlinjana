@@ -141,7 +141,7 @@ def main():
         for key, (title, body) in policies(st, cfg["legal"]).items():
             open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(title=title, body=body, **ctx))
             pages += 1
-        built.append({"id": st["id"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"], "accent": st["accent"]})
+        built.append({"id": st["id"], "path": st["path"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"], "accent": st["accent"]})
     # network index (staging helper) + dashboard shell
     idx = ["<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>",
            "<meta name=robots content='noindex,nofollow'><title>Commerce network</title>",
@@ -150,7 +150,7 @@ def main():
            "@media (prefers-color-scheme:dark){body{background:#111;color:#eee}a.s{background:#1b1b1b;border-color:#333;color:#eee}}</style><main>",
            "<h1>Storefronts (staging)</h1><p>Pre-launch test environment. Payments use the PayFast sandbox.</p>"]
     for b in built:
-        idx.append(f"<a class=s style='--c:{b['accent']}' href='/{b['id']}/'><strong>{html.escape(b['name'])}</strong> — {html.escape(b['tagline'])}<br><small>{b['products']} products</small></a>")
+        idx.append(f"<a class=s style='--c:{b['accent']}' href='/{b['path']}/'><strong>{html.escape(b['name'])}</strong> — {html.escape(b['tagline'])}<br><small>{b['products']} products</small></a>")
     idx.append("<p><a href='/dashboard/'>Owner dashboard</a></p></main>")
     open(os.path.join(SITE, "index.html"), "w").write("\n".join(idx))
     dash_t = env.get_template("dashboard.html")
@@ -169,13 +169,23 @@ def main():
     csp = ("default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; "
            f"connect-src 'self' {cfg['api_base'].split('/functions')[0]}; form-action 'self' https://sandbox.payfast.co.za https://www.payfast.co.za; "
            "frame-ancestors 'none'; base-uri 'self'")
-    json.dump({"cleanUrls": False, "trailingSlash": False,
+    redirects = [{"source": f"/{old}/:rest*", "destination": f"/{st['path']}/:rest*", "permanent": True}
+                 for st in cfg["stores"] for old in st.get("former_paths", [])]
+    json.dump({"cleanUrls": False, "trailingSlash": False, "redirects": redirects,
                "headers": [{"source": "/(.*)", "headers": [
                    {"key": "Content-Security-Policy", "value": csp}, {"key": "X-Content-Type-Options", "value": "nosniff"},
                    {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"}, {"key": "X-Frame-Options", "value": "DENY"},
                    {"key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()"}]},
                    {"source": "/assets/p/(.*)", "headers": [{"key": "Cache-Control", "value": "public, max-age=604800"}]}]},
               open(os.path.join(SITE, "vercel.json"), "w"), indent=1)
+    # Cloudflare Pages equivalents of vercel.json (same headers and redirects), so the site can move hosts unchanged
+    open(os.path.join(SITE, "_headers"), "w").write(
+        "/*\n" + "".join(f"  {k}: {v}\n" for k, v in [
+            ("Content-Security-Policy", csp), ("X-Content-Type-Options", "nosniff"), ("Referrer-Policy", "strict-origin-when-cross-origin"),
+            ("X-Frame-Options", "DENY"), ("Permissions-Policy", "camera=(), microphone=(), geolocation=()")]) +
+        "/assets/p/*\n  Cache-Control: public, max-age=604800\n")
+    open(os.path.join(SITE, "_redirects"), "w").write(
+        "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])))
     print(f"built {pages} store pages for {len(built)} stores:", ", ".join(f"{b['name']} ({b['products']})" for b in built))
 
 

@@ -166,16 +166,16 @@
     },
     {
       "id": "pacebook",
-      "name": "Pacebook Fitness",
-      "path": "pacebook",
+      "name": "Steady Rep Studio",
+      "path": "steadyrep",
       "tagline": "Training logs and trackers that show your progress",
       "proposition": "Workout logs, running and cycling trackers, training plans and calculators for people who train and the coaches who help them.",
       "audience": "Runners, gym-goers, coaches and personal trainers",
       "domain_plan": {
-        "primary": "pacebookfitness.com",
-        "alt": "trainwellsheets.com",
+        "primary": "steadyrepstudio.com",
+        "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed. Renamed from 'Pacebook Fitness' (too close to Facebook)."
       },
       "categories": [],
       "font": "sans",
@@ -184,7 +184,10 @@
       "accent2": "#17BEBB",
       "light": "#F3F6F8",
       "line": "#CBD2D9",
-      "prefix": "PCB"
+      "prefix": "PCB",
+      "former_paths": [
+        "pacebook"
+      ]
     },
     {
       "id": "doorpost",
