@@ -5,7 +5,7 @@
 | Phase | State | Verified evidence |
 |---|---|---|
 | 1 Foundation | ✅ Done | Supabase project `commerce-network` (free tier): RLS on all tables; private buckets `products` (600 files, 54 MB, 0 missing) and `backups` |
-| 2 Stores | ✅ Deployed (staging) | https://commerce-network.vercel.app — 20 storefronts, 742 pages, dashboard. Pages checked in a headless browser at 390 px and 1280 px: no overflow, no broken images, no script errors. Button colours computed for WCAG AA contrast |
+| 2 Stores | ✅ Deployed (staging) | https://commerce-network.vercel.app — 20 storefronts (Pacebook renamed Steady Rep Studio; old links redirect), 742 pages, dashboard. Pages checked in a headless browser at 390 px and 1280 px: no overflow, no broken images, no script errors. Button colours computed for WCAG AA contrast |
 | 3 Product factory | ✅ 600/600 validated | 5,350 PDF pages (A4 + Letter); 109,935 formulas with 0 error cells after LibreOffice recalculation; original regression tests pass; 13 calculator outputs cross-checked against independent calculations (this caught 1 sign error, now fixed) |
 | 4 Publishing | ✅ Own store 600/600 URL-verified · ⏳ marketplaces awaiting your accounts | 600 own-store listings `live` (HTTP 200, test mode); 2,400 marketplace listings `awaiting_authorisation` |
 | 5 Transactions | ✅ Sandbox end-to-end verified on a new store | Public site, Kindkeep KDK-013: checkout → PayFast sandbox → payment → verified ITN → order `paid` (R39.00 gross, R0.90 fee) → download; ZIP SHA-256 identical to the built file |
@@ -21,6 +21,6 @@
 - Resend key (email)
 - Legal disclosures
 - Hosting choice for live sales
-- Domains and trademark checks for the 17 new brands
+- Cloudflare account (free live hosting)
 
 See TASKS.md.

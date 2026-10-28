@@ -7506,7 +7506,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "strength-training-log",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7556,7 +7556,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "running-log-mileage-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7606,7 +7606,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "body-measurements-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7656,7 +7656,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "calorie-macro-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7706,7 +7706,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "cycling-training-log",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7756,7 +7756,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "swimming-training-log",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7806,7 +7806,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "habit-workout-consistency-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7856,7 +7856,7 @@
   "price_cents": 8900,
   "currency": "ZAR",
   "external_id": "personal-trainer-client-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7906,7 +7906,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "race-calendar-results-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -7956,7 +7956,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "home-gym-equipment-budget-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8006,7 +8006,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "12-week-strength-program-planner",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8056,7 +8056,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "couch-to-5k-training-plan",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8106,7 +8106,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "fitness-planner-workout-journal",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8156,7 +8156,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "meal-prep-planner-for-fitness",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8206,7 +8206,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "marathon-training-plan-16-weeks",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8256,7 +8256,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "yoga-mobility-practice-journal",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8306,7 +8306,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "water-steps-daily-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8356,7 +8356,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "fitness-goal-setting-workbook",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8406,7 +8406,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "hiit-workout-cards",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8456,7 +8456,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "injury-recovery-log",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8506,7 +8506,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "sports-season-planner-for-young-athletes",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8556,7 +8556,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "gym-membership-par-q-health-form",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8606,7 +8606,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "personal-training-package-price-sheet",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8656,7 +8656,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "running-pace-race-time-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8706,7 +8706,7 @@
   "price_cents": 5900,
   "currency": "ZAR",
   "external_id": "daily-calorie-needs-calculator",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8756,7 +8756,7 @@
   "price_cents": 9900,
   "currency": "ZAR",
   "external_id": "runners-training-bundle",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8806,7 +8806,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "weekly-fitness-wellness-check-in",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8856,7 +8856,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "team-player-stats-tracker",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8906,7 +8906,7 @@
   "price_cents": 3900,
   "currency": "ZAR",
   "external_id": "stretching-mobility-routine-cards",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
@@ -8956,7 +8956,7 @@
   "price_cents": 6900,
   "currency": "ZAR",
   "external_id": "fitness-studio-timetable-policies-template",
-  "status": "pending_verification",
+  "status": "live",
   "last_error": null
  },
  {
