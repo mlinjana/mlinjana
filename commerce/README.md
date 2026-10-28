@@ -12,7 +12,7 @@ Twenty independently branded digital-product stores (30 products each, 600 total
 ```
 factory/ (private, gitignored) ──► build/ (private) ──► Supabase Storage (private bucket)
    specs + templates → PDF/XLSX/DOCX → validate (LibreOffice recalc, regression tests) → covers/previews
-catalogue/products.json ──► engine/build_sites.py ──► site/ (static: 20 stores + dashboard) ──► Vercel/Cloudflare
+catalogue/products.json ──► engine/build_sites.py ──► site/ (static: 20 stores + dashboard) ──► Cloudflare Workers (engine/deploy_cloudflare.sh)
 engine/publish.py ──► catalogue/listings.json + exports/marketplace_listings.csv
 engine/sync.py ──► ops-api /admin/upload + /admin/sync ──► Postgres (products, listings, stores)
 Browser ──► store-api /checkout ──► PayFast ──► store-api /payfast-itn (verified) ──► download token ──► signed URL
