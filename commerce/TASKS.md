@@ -16,7 +16,9 @@
 - [x] Deploy staging site and verify all 60 product URLs (2026-10-28).
 - [ ] Make pushes deploy to production automatically: merge this branch into `main` (production branch) or change Vercel's production branch.
 - [x] Full sandbox purchase test — passed 2026-10-28 (see STATUS.md).
-- [ ] Delete pre-deployment test page-view events (needs your confirmation in Supabase).
+- [ ] Delete test analytics events (Supabase asks you to confirm deletes — approve when prompted). New automated/bot visits are already excluded.
+- [x] Research-based prices for all 60 products (research/PRICING.md).
+- [x] Daily report now includes pricing signals (rule fires at ≥200 product views per product).
 - [ ] After first real sales data: re-score opportunities; expand catalogue only where there is demand.
 - [ ] Optional: Paystack adapter (lower card fees than PayFast per published rates).
 
