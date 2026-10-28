@@ -5,6 +5,7 @@
 
   // privacy-light analytics: no cookies, no IPs stored — page type, path, product and referrer host only
   try {
+    if (navigator.webdriver) throw 0; // skip automated browsers (tests, most bots) so analytics reflect people
     const type = PID ? "product_view" : "page_view";
     const data = JSON.stringify({ store: STORE, type, path: location.pathname, product_id: PID, ref: document.referrer || null });
     navigator.sendBeacon ? navigator.sendBeacon(API + "/store-api/track", data) : fetch(API + "/store-api/track", { method: "POST", body: data, keepalive: true });
@@ -48,7 +49,7 @@
       msg.className = "msg";
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = "Please enter a valid email address."; msg.className = "msg err"; return; }
       btn.disabled = true; msg.textContent = "Starting secure checkout…";
-      try { navigator.sendBeacon(API + "/store-api/track", JSON.stringify({ store: STORE, type: "checkout_start", product_id: PID, path: location.pathname })); } catch (_) {}
+      try { if (!navigator.webdriver) navigator.sendBeacon(API + "/store-api/track", JSON.stringify({ store: STORE, type: "checkout_start", product_id: PID, path: location.pathname })); } catch (_) {}
       try {
         const r = await fetch(API + "/store-api/checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ product_id: PID, email, store: STORE }) });
         const d = await r.json();

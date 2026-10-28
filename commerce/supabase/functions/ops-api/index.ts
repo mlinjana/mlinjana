@@ -181,6 +181,7 @@ async function buildReport(day: string) {
     ...J.filter((j: any) => j.status === "error").slice(0, 5).map((j: any) => `- ⚠ ${j.job}: ${j.error}`));
   const kill = await cfg("kill_switch");
   if (kill?.automation || kill?.checkout) lines.push(`- ⚠ Kill switch active: ${kill.reason}`);
+  lines.push("", ...(await pricingSignals()));
   lines.push("", "## Costs (last 7 days, recorded entries)", "");
   const C = costs ?? [];
   if (!C.length) lines.push("- No cost entries recorded.");
@@ -190,13 +191,39 @@ async function buildReport(day: string) {
   return { md: lines.join("\n"), summary: sum };
 }
 
+// Re-pricing rule (research/PRICING.md): only with ≥200 product views in 30 days; real (live) orders only; advice, never automatic.
+async function pricingSignals() {
+  const since = new Date(Date.now() - 30 * 86400_000).toISOString();
+  const [{ data: ev }, { data: od }, { data: pr }] = await Promise.all([
+    db.from("events").select("product_id").eq("type", "product_view").gte("ts", since).not("product_id", "is", null).limit(50000),
+    db.from("orders").select("product_id").eq("status", "paid").eq("provider_mode", "live").gte("paid_at", since),
+    db.from("products").select("id,title,price_zar_cents"),
+  ]);
+  const views: Record<string, number> = {}, sales: Record<string, number> = {};
+  for (const e of ev ?? []) views[e.product_id] = (views[e.product_id] ?? 0) + 1;
+  for (const o of od ?? []) sales[o.product_id] = (sales[o.product_id] ?? 0) + 1;
+  const out = ["## Pricing signals (last 30 days, real orders only)", ""];
+  const ranked = Object.entries(views).sort((a, b) => b[1] - a[1]);
+  const ready = ranked.filter(([, v]) => v >= 200);
+  if (!ready.length) {
+    out.push(`- Not enough traffic for price changes yet (rule needs ≥200 product views). Most viewed: ${ranked.slice(0, 3).map(([id, v]) => `${id} (${v})`).join(", ") || "none"}.`);
+    return out;
+  }
+  for (const [id, v] of ready) {
+    const s = sales[id] ?? 0, conv = s / v, p = (pr ?? []).find((x: any) => x.id === id);
+    const advice = conv > 0.03 ? "consider raising the price 10–15%" : conv < 0.005 ? "consider a 15% sale test before changing list price" : "hold price";
+    out.push(`- ${id} ${p?.title ?? ""} — ${v} views, ${s} sales, conversion ${(conv * 100).toFixed(1)}% at ${money(p?.price_zar_cents ?? 0)} → ${advice}`);
+  }
+  return out;
+}
+
 async function dailyReport(force = false) {
   const id = await jobStart("daily_report");
   if (!id) return { skipped: true };
   try {
     const day = today();
     const { md, summary } = await buildReport(day);
-    await db.from("daily_reports").upsert({ report_date: day, body_md: md, summary, created_at: new Date().toISOString() });
+    await db.from("daily_reports").upsert({ report_date: day, body_md: md, summary, created_at: new Date().toISOString(), email_status: "not_configured" });
     let email = "not_configured";
     const key = Deno.env.get("RESEND_API_KEY"), e = await cfg("email"), owner = await cfg("owner_email");
     if (key && e?.from && owner) {
