@@ -1,7 +1,7 @@
 // Cloudflare Workers static-assets config for the storefront site (no server code).
 // Used when the repo is imported as a Worker: root directory = commerce, deploy command = npx wrangler deploy.
 {
-  "name": "commerce-network",
+  "name": "mlinjana",
   "compatibility_date": "2026-10-28",
   "assets": {
     "directory": "./site",
