@@ -1,6 +1,6 @@
 // Public storefront API: checkout, PayFast ITN, order status, secure download, analytics beacon, contact form.
 // Payment state changes ONLY on a verified ITN (signature + PayFast server validation + amount + merchant check).
-import { createClient } from "jsr:@supabase/supabase-js@2";
+import { createClient } from "npm:@supabase/supabase-js@2";
 import { createHash } from "node:crypto";
 
 const db = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, {
@@ -88,9 +88,13 @@ async function checkout(req: Request) {
     ["item_name", p.title.slice(0, 100)], ["item_description", `Digital download ${p.id}`],
     ["custom_str1", p.id],
   ];
-  let sigStr = fields.filter(([, v]) => v !== "").map(([k, v]) => `${k}=${phpEncode(v.trim())}`).join("&");
-  if (pf.passphrase) sigStr += `&passphrase=${phpEncode(pf.passphrase.trim())}`;
-  fields.push(["signature", md5(sigStr)]);
+  // Live: always signed with the owner's passphrase. Sandbox without a configured passphrase (PayFast's shared
+  // test merchant): PayFast accepts unsigned forms; the ITN is then trusted only after server-side validation.
+  if (pf.mode === "live" || pf.passphrase) {
+    let sigStr = fields.filter(([, v]) => v !== "").map(([k, v]) => `${k}=${phpEncode(v.trim())}`).join("&");
+    if (pf.passphrase) sigStr += `&passphrase=${phpEncode(pf.passphrase.trim())}`;
+    fields.push(["signature", md5(sigStr)]);
+  }
   return json({ action: `https://${pf.host}/eng/process`, fields: Object.fromEntries(fields), ref, mode: pf.mode });
 }
 
@@ -108,7 +112,8 @@ async function itn(req: Request) {
   // 1. signature over posted fields (in received order, excluding signature)
   const paramStr = pairs.filter(([k]) => k !== "signature").map(([k, v]) => `${k}=${phpEncode(v.trim())}`).join("&");
   const expected = md5(pf.passphrase ? `${paramStr}&passphrase=${phpEncode(pf.passphrase.trim())}` : paramStr);
-  if (expected !== data.signature) {
+  const sigRequired = pf.mode === "live" || !!pf.passphrase;
+  if (sigRequired && expected !== data.signature) {
     await logPaymentEvent(ref, false, "bad_signature", data);
     return new Response("bad signature", { status: 400 });
   }

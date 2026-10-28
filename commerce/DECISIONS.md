@@ -11,3 +11,6 @@
 9. **Admin auth = owner key** (SHA-256 hash stored server-side, constant-time compare). Supabase Auth email links would need dashboard config not available to the connector.
 10. **No cookies / no IP logging** in analytics: page path, product, referrer host only.
 11. **Brand names:** Plainday Studio, Bizwright, Abacus Lane (domains available at check time; no conflicting brand found in web search; formal trademark search still required).
+12. **Sandbox signing.** PayFast's shared sandbox merchant (10000100) rejected signatures made with the passphrase published in third-party docs, but accepts unsigned forms. In sandbox mode without a configured passphrase the form is unsigned and the ITN is trusted only after PayFast server validation (`VALID`) + merchant + amount checks. **Live mode always requires the signature** with your passphrase.
+13. **Supabase client imported via `npm:` specifier** — the bundler timed out fetching from JSR twice.
+14. **Deploy via Git integration, not file upload** — uploading the site through Claude would cost ~760 KB of text per update; Git deploys cost nothing.

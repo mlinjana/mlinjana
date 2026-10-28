@@ -1,6 +1,6 @@
 // Operations API: scheduled jobs (pg_cron → here), daily owner report, admin dashboard data, catalogue sync & file upload.
 // Auth: cron/sync/upload use secrets stored in the private config table; admin uses an owner key (SHA-256 hash in config).
-import { createClient } from "jsr:@supabase/supabase-js@2";
+import { createClient } from "npm:@supabase/supabase-js@2";
 
 const db = createClient(Deno.env.get("SUPABASE_URL")!, Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!, { auth: { persistSession: false } });
 const CORS = { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers": "content-type, x-admin-key", "Access-Control-Allow-Methods": "GET, POST, PUT, OPTIONS" };
