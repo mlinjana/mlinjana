@@ -39,22 +39,32 @@ def call(path, body, ctype="application/json", method="POST"):
 
 
 def upload_files(products):
+    """Upload changed ZIPs (4 in parallel); each upload is checked against the server-side SHA-256."""
+    from concurrent.futures import ThreadPoolExecutor
+    import threading
     done = json.load(open(STATE)) if os.path.exists(STATE) else {}
-    n = 0
+    lock = threading.Lock()
+    todo = []
     for p in products:
         if not p["validation"].get("ok"):
             continue
         local = os.path.join(ROOT, "build", "products", p["id"], p["slug"] + ".zip")
         sha = hashlib.sha256(open(local, "rb").read()).hexdigest()
-        if done.get(p["file"]["key"]) == sha:
-            continue
+        if done.get(p["file"]["key"]) != sha:
+            todo.append((p, local, sha))
+
+    def up(item):
+        p, local, sha = item
         r = call(f"/admin/upload?key={p['file']['key']}", open(local, "rb").read(), "application/zip")
         if r.get("sha256") != sha:
             raise RuntimeError(f"upload checksum mismatch for {p['id']}")
-        done[p["file"]["key"]] = sha
-        json.dump(done, open(STATE, "w"), indent=1)
-        n += 1
-    return n
+        with lock:
+            done[p["file"]["key"]] = sha
+            json.dump(done, open(STATE, "w"), indent=1)
+
+    with ThreadPoolExecutor(4) as ex:
+        list(ex.map(up, todo))
+    return len(todo)
 
 
 def main():

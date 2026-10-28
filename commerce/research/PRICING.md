@@ -66,3 +66,14 @@ Method: competitor list prices observed on Etsy, Gumroad, Payhip and Flevy (sear
 | ABL-020 | operations-toolkit-bundle | $29.00 / R379 | **$65.00 / R799** | benchmark | Warehouse/logistics KPI templates: Flevy $29–45, SCMDOJO $59, Gumroad A$47–$100; Etsy inventory |
 
 **Re-pricing rule (automatable):** after ≥200 product views, raise 10–15% if conversion > 3%; if conversion < 0.5%, test a 15% sale before changing list price. One change per product per 30 days.
+
+
+## Products added in the 20-store expansion (2026-10-28)
+The 540 new products were **not** individually benchmarked. They are priced by `engine/pricing.py → band_rule()` inside the same researched bands:
+- printables $3–5.50 by page count;
+- spreadsheet trackers $6–8 by number of logs, and calculators $5;
+- Word templates $6–8 by length;
+- ×1.2–1.3 for business-use stores, capped at $12;
+- bundles at about 65% of the sum of their parts.
+
+Each row is marked `estimate (category band)` in `research/pricing.csv`. Treat these as starting prices and revisit them under the re-pricing rule once real traffic exists.

@@ -109,15 +109,52 @@ def zar(usd):
     return max(MIN_ZAR, int(v))
 
 
+# Niche stores whose buyers use the product to run a business (higher willingness to pay in the same bands).
+B2B = {"bizwright", "doorpost", "gigsmith", "goodledger", "mise", "shopkeeper", "trowel", "chairbook", "fleetwise"}
+
+
+def half(x):
+    return round(x * 2) / 2
+
+
+def band_rule(p):
+    """Category-band estimate for products without an individual benchmark (all niche products, 2026-10-28).
+    Bands come from the same research snapshots as PLAN: single printables $3–6, printable systems $7–12 (etsy_budget);
+    simple trackers $5–10 (guide); Word templates $5 to ~$12 for kits (sop). Business-use products sit ~30% higher in band."""
+    info = p.get("validation", {}).get("info", {})
+    biz = p["store"] in B2B
+    fmt = p["formats"][0]
+    if fmt.startswith("PDF"):
+        pages = max(info.get("pdf_pages", {"": 0}).values()) if info.get("pdf_pages") else 0
+        usd = 3 if pages <= 8 else 3.5 if pages <= 20 else 4.5 if pages <= 45 else 5.5
+        return half(min(usd * (1.2 if biz else 1), 7)), "etsy_budget", f"{pages}-page printable → single-printable band $3–6"
+    if fmt == "DOCX":
+        pages = max(info.get("docx_pages", {"": 1}).values()) if info.get("docx_pages") else 1
+        usd = 6 if pages <= 2 else 7 if pages <= 4 else 8
+        return half(usd * (1.25 if biz else 1)), "sop", f"{pages}-page editable Word template → Word template band $5–12"
+    calc = any(str(f).startswith("Inputs:") for f in p["features"])
+    sheets = sum(1 for f in p["features"] if str(f).startswith("'"))
+    usd = 5 if calc else 6 + min(2, max(0, sheets - 1))
+    return half(min(usd * (1.3 if biz else 1), 12)), "guide", ("calculator" if calc else f"{sheets}-log tracker") + " → simple-tracker band $5–10"
+
+
 def main():
     cat = json.load(open(os.path.join(ROOT, "catalogue", "products.json")))["products"]
     by_slug = {p["slug"]: p for p in cat}
-    missing = [p["slug"] for p in cat if p["slug"] not in PLAN]
+    plan = dict(PLAN)
+    for p in cat:  # products without an individual benchmark get the category-band rule (bundles below)
+        if p["slug"] not in plan and not p.get("bundle_of"):
+            usd, src, why = band_rule(p)
+            plan[p["slug"]] = (usd, src, "estimate (category band)", why)
+    for p in cat:
+        if p["slug"] not in plan and p.get("bundle_of"):
+            parts = sum(plan[c][0] for c in p["bundle_of"])
+            plan[p["slug"]] = (half(parts * 0.65), "none", "estimate (bundle ≈65% of parts)", f"{len(p['bundle_of'])} products (sum ${parts:g}) + bonus at ~35% off")
+    missing = [p["slug"] for p in cat if p["slug"] not in plan]
     if missing:
         raise SystemExit(f"no price plan for: {missing}")
     out, rows = {}, []
-    for slug, (usd, src, basis, why) in PLAN.items():
-        p = by_slug[slug]
+    for slug, (usd, src, basis, why) in plan.items():
         out[slug] = {"price_usd": usd, "price_zar": zar(usd), "basis": basis}
     for slug, p in by_slug.items():  # bundle savings, computed
         if p.get("bundle_of"):
@@ -127,7 +164,7 @@ def main():
             out[slug]["saving_pct_zar"] = round(100 * (1 - out[slug]["price_zar"] / sz))
             if out[slug]["price_usd"] >= su or out[slug]["price_zar"] >= sz:
                 raise SystemExit(f"bundle {slug} is not cheaper than its parts")
-    for slug, (usd, src, basis, why) in PLAN.items():
+    for slug, (usd, src, basis, why) in plan.items():
         p = by_slug[slug]
         rows.append([p["id"], slug, p["store"], f"{p['price_usd']:.2f}", p["price_zar"], f"{usd:.2f}", out[slug]["price_zar"], basis, S[src], why])
     json.dump({"fx_usd_zar": FX, "local_factor": LOCAL_FACTOR, "researched_on": "2026-10-28", "prices": out},
@@ -136,7 +173,7 @@ def main():
         w = csv.writer(f)
         w.writerow(["product_id", "slug", "store", "old_usd", "old_zar", "new_usd", "new_zar", "basis", "market_evidence", "rationale"])
         w.writerows(rows)
-    n_est = sum(1 for v in PLAN.values() if v[2] == "estimate")
+    n_est = sum(1 for v in plan.values() if v[2].startswith("estimate"))
     print(f"priced {len(out)} products ({len(out) - n_est} benchmarked, {n_est} estimates); FX {FX}, local factor {LOCAL_FACTOR}")
     for slug in ("productivity-planner-bundle", "business-admin-bundle", "operations-toolkit-bundle"):
         print(" ", slug, out[slug])

@@ -1,4 +1,4 @@
-"""Build the three storefronts, the network index and the owner dashboard from catalogue/products.json.
+"""Build every storefront in config/stores.json, the network index and the owner dashboard from catalogue/products.json.
 
 Deterministic: same catalogue + config → same site. No AI calls.
 Usage: python3 engine/build_sites.py
@@ -8,7 +8,24 @@ from jinja2 import Environment, FileSystemLoader, select_autoescape
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = os.path.join(ROOT, "site")
-BTN = {"plainday": "#4E7360", "bizwright": "#1D2B3A", "abacus": "#1E7A67"}
+BTN = {"plainday": "#4E7360", "bizwright": "#1D2B3A", "abacus": "#1E7A67"}  # hand-picked; other stores computed by btn_colour()
+
+
+def _lum(hexc):
+    c = [int(hexc[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    c = [x / 12.92 if x <= 0.03928 else ((x + 0.055) / 1.055) ** 2.4 for x in c]
+    return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]
+
+
+def btn_colour(accent):
+    """Darken the accent until white text on it meets WCAG AA contrast (4.5:1)."""
+    r, g, b = (int(accent[i:i + 2], 16) for i in (1, 3, 5))
+    for _ in range(40):
+        h = f"#{r:02X}{g:02X}{b:02X}"
+        if 1.05 / (_lum(h) + 0.05) >= 4.5:
+            return h
+        r, g, b = int(r * 0.93), int(g * 0.93), int(b * 0.93)
+    return "#222222"
 
 env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "engine", "templates")), autoescape=select_autoescape(["html"]))
 
@@ -105,10 +122,15 @@ def main():
             p["file_mb"] = f"{(p['file']['bytes'] or 0) / 1e6:.1f}"
             p["bundle_items"] = [by_slug[s] for s in p.get("bundle_of", [])]
             p["bundle_sum"] = sum(b["price_zar"] for b in p["bundle_items"])
-        ctx = dict(store={**st, "accent_btn": BTN[st["id"]]}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
+        ctx = dict(store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"])}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
         out = os.path.join(SITE, st["path"])
         os.makedirs(os.path.join(out, "p"), exist_ok=True)
         cats = [c for c in st["categories"] if any(p["category"] == c for p in prods)]
+        for p in prods:  # categories not listed in config appear in product order, bundles last
+            if p["category"] not in cats and p["category"] != "Bundles":
+                cats.append(p["category"])
+        if any(p["category"] == "Bundles" for p in prods) and "Bundles" not in cats:
+            cats.append("Bundles")
         open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(products=prods, categories=cats, **ctx))
         pages += 1
         for p in prods:

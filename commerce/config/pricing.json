@@ -308,6 +308,2740 @@
    "basis": "benchmark",
    "saving_pct_usd": 36,
    "saving_pct_zar": 36
+  },
+  "family-chore-points-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "kids-pocket-money-savings-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "screen-time-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "family-activities-budget": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "kids-reading-minutes-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "baby-feeding-sleep-nappy-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "family-birthday-gift-planner": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "school-costs-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "morning-bedtime-routine-charts": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-chore-charts-by-age": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "reward-sticker-charts": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-gratitude-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "summer-holiday-activity-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "feelings-check-in-journal-for-kids": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "family-meeting-kit": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-homework-school-week-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "lunchbox-planner-ideas": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "potty-training-chart": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "babys-first-year-memory-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-achievement-certificates": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "road-trip-activity-pack-for-kids": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "toddler-daily-log-for-carers": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "family-calendar-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-money-lessons-workbook": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pocket-money-jobs-board": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "babysitter-information-pack": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "family-emergency-plan": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "cost-of-raising-a-child-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "kids-weekly-planner-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "teacher-gradebook": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "class-attendance-register": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "parent-communication-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "behaviour-merit-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "classroom-library-tracker": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "classroom-budget-resources-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homework-submission-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "learner-reading-levels-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "duty-extra-mural-roster": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "exam-results-analysis": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "weekly-lesson-planner": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "detailed-lesson-plan-template": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "unit-term-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "seating-plan-templates": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "substitute-teacher-folder": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "classroom-observation-notes": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "teacher-year-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "exit-tickets-self-assessment-cards": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "parent-teacher-meeting-forms": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "classroom-jobs-chart": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "reading-comprehension-response-sheets": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "learner-goal-setting-sheets": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "lesson-observation-feedback-form": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "learner-report-comment-bank": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "individual-support-plan-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "classroom-rules-procedures-handbook": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "marks-weighting-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "teacher-to-do-marking-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "teacher-professional-development-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-budget-planner": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-guest-list-rsvp-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-vendor-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-gift-thank-you-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "event-budget-expense-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "party-guest-list-catering-counter": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "baby-shower-planner": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "event-run-of-show-timeline": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "honeymoon-travel-budget": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-seating-chart-planner": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "12-month-wedding-planning-checklist": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "wedding-day-timeline-contacts": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "wedding-planner-workbook": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "bridal-party-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "wedding-speech-vow-writing-workbook": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "party-planner-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-birthday-party-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "bridal-shower-bachelorette-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "anniversary-memory-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "event-day-emergency-kit-checklist": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "thank-you-note-templates-tracker": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "wedding-vendor-questions-contract-checklist": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-welcome-letter-itinerary-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "event-proposal-template-for-planners": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-cost-per-guest-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "event-planner-client-intake-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "event-staff-volunteer-roster": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "wedding-menu-tasting-notes": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "event-feedback-survey-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "strength-training-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "running-log-mileage-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "body-measurements-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "calorie-macro-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "cycling-training-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "swimming-training-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "habit-workout-consistency-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "personal-trainer-client-tracker": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "race-calendar-results-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "home-gym-equipment-budget-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "12-week-strength-program-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "couch-to-5k-training-plan": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "fitness-planner-workout-journal": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "meal-prep-planner-for-fitness": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "marathon-training-plan-16-weeks": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "yoga-mobility-practice-journal": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "water-steps-daily-tracker": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "fitness-goal-setting-workbook": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "hiit-workout-cards": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "injury-recovery-log": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "sports-season-planner-for-young-athletes": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "gym-membership-par-q-health-form": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "personal-training-package-price-sheet": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "running-pace-race-time-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "daily-calorie-needs-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "weekly-fitness-wellness-check-in": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "team-player-stats-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "stretching-mobility-routine-cards": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "fitness-studio-timetable-policies-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "rental-income-expense-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "rent-roll-arrears-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "maintenance-request-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "tenant-directory-lease-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "deposit-ledger": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "short-term-rental-income-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "property-portfolio-overview": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "utility-meter-readings-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "rental-viewing-applicant-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "property-insurance-compliance-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "move-in-move-out-inspection-checklist": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "property-maintenance-calendar": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "tenant-welcome-pack-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "rent-receipt-book": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "property-viewing-notes": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "contractor-supplier-directory": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "rental-property-annual-review-workbook": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "residential-lease-agreement-checklist": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "landlord-letter-templates-pack": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "rental-listing-advert-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "rental-yield-cash-flow-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "rent-increase-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "short-term-vs-long-term-rental-comparison": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "landlord-planner-rent-calendar": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "property-purchase-cost-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "vacancy-turnover-cost-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "key-access-register": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "routine-rental-inspection-report": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "tenant-application-form-screening-criteria": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "freelance-time-tracker-billing": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "freelance-income-tax-set-aside-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "client-project-pipeline": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "content-calendar-for-creators": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "youtube-channel-analytics-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "brand-deal-sponsorship-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "freelance-retainer-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "podcast-episode-planner": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "home-office-cost-share-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "creator-income-streams-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "freelance-proposal-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "client-onboarding-questionnaire": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "scope-of-work-change-request-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "creator-media-kit-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "brand-pitch-email-templates": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "freelance-service-contract-checklist": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "freelancer-weekly-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "youtube-video-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "content-idea-bank": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "freelance-goals-annual-review": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "client-meeting-notes": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "social-media-content-planner-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "portfolio-case-study-worksheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "freelance-rate-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "project-quote-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "sponsorship-rate-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "newsletter-growth-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "creator-batch-production-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "testimonial-referral-request-templates": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "donation-donor-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "nonprofit-income-expense-ledger": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "volunteer-hours-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "grant-application-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "programme-beneficiary-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "fundraising-event-budget": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "membership-subscriptions-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "in-kind-donations-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "petty-cash-book-for-organisations": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "board-committee-action-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "annual-budget-for-small-nonprofits": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "fundraising-goal-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "programme-cost-per-beneficiary-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "board-meeting-agenda-minutes-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "volunteer-sign-in-sheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "fundraising-thermometer-charts": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "community-event-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "donor-thank-you-card-pack": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "food-bank-distribution-log": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "volunteer-training-induction-checklist": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "nonprofit-strategic-planning-workbook": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "grant-proposal-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "volunteer-handbook-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "nonprofit-annual-impact-report-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "board-roles-code-of-conduct-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "fundraising-appeal-letter-templates": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "volunteer-application-consent-form": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "tithes-offerings-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "nonprofit-campaign-social-media-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "recipe-costing-calculator": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "food-business-sales-expenses-tracker": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "stock-inventory-count-sheet": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "food-waste-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "supplier-price-comparison": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "catering-quote-event-order-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "staff-rota-labour-cost-planner": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "bakery-order-book": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "market-stall-sales-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "equipment-maintenance-cleaning-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "menu-price-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "break-even-calculator-for-food-businesses": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "recipe-scaling-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "fridge-freezer-temperature-log": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kitchen-cleaning-schedule": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "food-safety-opening-closing-checklists": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "allergen-matrix-chart": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "prep-list-par-sheets": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "delivery-goods-in-check-log": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "food-truck-event-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "new-staff-kitchen-induction-pack": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "food-business-plan-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "catering-menu-quote-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "food-safety-plan-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "weekly-menu-specials-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "delivery-app-commission-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "food-prep-use-by-labels": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "cooking-cooling-reheating-temperature-log": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "recipe-specification-card-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "online-shop-sales-profit-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "multi-channel-stock-sync-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "product-listing-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "shipping-fulfilment-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "returns-refunds-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "customer-list-repeat-buyer-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "product-launch-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "supplier-purchase-order-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "marketing-spend-roas-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "craft-handmade-materials-cost-tracker": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "free-shipping-price-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "marketplace-fee-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "wholesale-price-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "small-shop-business-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "product-photography-shot-list": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "order-packing-slips-labels": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "craft-market-checklist-tracker": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "social-media-planner-for-shops": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "shop-policies-template-pack": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "customer-service-email-templates": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "wholesale-line-sheet-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "product-description-writing-templates": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "inventory-count-sheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "seller-goals-quarterly-review": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "daily-cash-up-sheet-for-small-retail": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "marketplace-payout-reconciliation": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "subscription-box-subscriber-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "product-development-worksheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "packaging-unboxing-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "job-application-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "resume-cv-template-classic": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "cover-letter-templates": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "networking-contact-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "interview-preparation-tracker": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "salary-job-offer-comparison": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "skills-development-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "work-achievements-log-brag-sheet": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "freelance-side-job-pipeline-for-job-seekers": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "job-search-weekly-activity-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "salary-negotiation-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "take-home-vs-contract-rate-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "job-search-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "interview-notes-question-sheets": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "career-development-plan-workbook": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "first-90-days-in-a-new-job-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "performance-review-prep-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "career-change-exploration-workbook": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "linkedin-profile-workbook": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "resume-cv-template-modern-two-section": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "reference-list-request-templates": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "resignation-letter-templates": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "salary-negotiation-script-pack": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "job-search-vision-affirmation-cards": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "graduate-job-hunt-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "weekly-career-growth-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "certifications-licence-renewal-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "mock-interview-practice-pack": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "portfolio-personal-website-content-planner": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "job-costing-tracker-for-trades": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "quote-estimate-template-for-trades": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "materials-estimator-order-list": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "trade-invoice-payment-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "vehicle-tool-expense-log": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "tool-equipment-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "subcontractor-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "job-scheduling-calendar-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "leads-enquiries-tracker-for-trades": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "snag-list-defects-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "hourly-day-rate-calculator-for-trades": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "paint-quantity-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "tile-flooring-quantity-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "concrete-volume-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "daily-job-sheet-pad": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "site-safety-checklist": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "site-visit-measure-up-sheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "variation-change-order-forms": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "contractor-weekly-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "terms-conditions-template-for-trades": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "job-completion-handover-certificate": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "trade-business-marketing-plan": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "bathroom-kitchen-renovation-checklists": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "plumbing-electrical-service-report-forms": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "crew-timesheet-wages-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "retention-warranty-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "toolbox-talk-topic-cards": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "equipment-pre-use-inspection-sheets": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "method-statement-risk-assessment-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "medication-schedule-log": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "caregiving-expense-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "symptom-health-diary": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "blood-pressure-glucose-log": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "medical-appointments-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "care-team-rota": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "care-home-service-comparison": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "daily-care-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "equipment-supplies-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "caregiver-self-care-respite-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "home-care-cost-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "family-care-cost-sharing-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "caregiver-binder-printables": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "weekly-medication-chart": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "hospital-stay-discharge-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "dementia-daily-routine-cards": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "care-handover-notes": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "end-of-life-wishes-planning-workbook": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "fall-prevention-home-safety-checklist": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "care-plan-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "caregiver-agreement-template-family": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "emergency-medical-information-sheet": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "letters-for-caregivers-template-pack": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "caregiver-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "visitor-activity-log": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "care-recipient-life-story-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "nutrition-fluid-intake-chart": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "medical-aid-insurance-claims-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "pain-sleep-mood-daily-tracker": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "vegetable-garden-planting-harvest-log": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "seed-inventory-viability-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "egg-production-flock-tracker": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "livestock-health-treatment-records": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "smallholding-income-expense-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "beekeeping-hive-inspection-log": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "rainfall-weather-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "market-garden-sales-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "orchard-fruit-tree-register": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "compost-soil-amendment-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "garden-bed-soil-mulch-volume-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "chicken-keeping-cost-per-egg-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "garden-planner-printables": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "crop-rotation-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "garden-pest-disease-diary": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "homestead-chore-charts": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "preserving-canning-log": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "herb-garden-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "seed-starting-tracker": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "farm-animal-feeding-charts": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "smallholding-business-plan-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "veg-box-csa-member-agreement-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "farm-stall-price-list-signage-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "weekly-garden-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "plant-watering-feeding-schedule": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "irrigation-water-use-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "greenhouse-tunnel-log": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "seed-swap-garden-club-kit": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "farm-visitor-biosecurity-log": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-health-vet-records": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "pet-expense-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "dog-walking-business-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "pet-sitting-boarding-bookings": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "dog-training-progress-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "pet-food-feeding-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "grooming-salon-client-appointment-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "breeder-litter-records": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "horse-care-stable-records": {
+   "price_usd": 7.0,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "aquarium-water-quality-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "cost-of-owning-a-pet-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "pet-food-portion-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "pet-care-binder-printables": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-sitter-instructions-sheet": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "new-puppy-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "new-cat-kitten-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-memory-book": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "dog-walking-log-route-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-medication-symptom-chart": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-sitting-service-agreement-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "pet-adoption-application-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "pet-business-price-list-policies": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "lost-pet-poster-action-plan": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-grooming-record-cards": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "rescue-foster-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "dog-training-session-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-insurance-claims-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "senior-pet-care-tracker": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "pet-first-aid-kit-checklist-emergency-contacts": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "salon-client-record-service-history": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "salon-income-expense-tracker": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "appointment-book-no-show-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "retail-product-stock-tracker-for-salons": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "stylist-commission-chair-rental-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "nail-technician-service-supplies-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "lash-brow-client-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "barber-shop-daily-sheet": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "beauty-business-marketing-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "salon-equipment-hygiene-sterilisation-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "service-price-calculator-for-beauty-pros": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "chair-rental-vs-commission-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "client-consultation-forms": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "salon-appointment-book-pages": {
+   "price_usd": 5.5,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "patch-test-consent-records": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "aftercare-instruction-cards": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "salon-opening-closing-checklists": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "beauty-business-planner": {
+   "price_usd": 5.5,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "loyalty-referral-cards": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "salon-policies-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "chair-rental-agreement-checklist": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "salon-staff-handbook-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "beauty-price-list-service-menu-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "hair-colour-formula-cards": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "bridal-hair-makeup-booking-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "beauty-training-certificates-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "gift-voucher-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "waxing-skin-treatment-record-cards": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "photo-social-media-consent-form": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "vehicle-mileage-logbook": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "fleet-fuel-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "vehicle-maintenance-service-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "delivery-driver-earnings-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "courier-delivery-log-proof-of-delivery-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "fleet-vehicle-register-compliance": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "driver-hours-rest-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "traffic-fines-incident-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "transport-job-invoicing-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "tyre-management-log": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "cost-per-kilometre-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "delivery-pricing-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "fuel-cost-trip-calculator": {
+   "price_usd": 6.5,
+   "price_zar": 79,
+   "basis": "estimate (category band)"
+  },
+  "pre-trip-vehicle-inspection-checklist": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "driver-logbook-printable": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "fleet-maintenance-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "accident-report-form-glovebox-kit": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "delivery-route-planner-sheets": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "driver-daily-report-pad": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "driver-policy-code-of-conduct-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "transport-rate-card-quote-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "vehicle-handover-checkout-form": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "moving-company-job-planner": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "load-cargo-securing-checklist": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "school-transport-lift-club-planner": {
+   "price_usd": 4.0,
+   "price_zar": 49,
+   "basis": "estimate (category band)"
+  },
+  "fuel-card-reconciliation": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "vehicle-finance-lease-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "new-driver-induction-checklist": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "delivery-instructions-proof-of-delivery-form": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-attendance-hours-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-grades-assessment-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-curriculum-budget-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "reading-list-book-log-for-homeschool": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "field-trip-activity-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-lesson-plan-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "co-op-extracurricular-schedule": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "spelling-vocabulary-mastery-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "math-facts-practice-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "portfolio-evidence-log": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-year-cost-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "school-days-hours-planner-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-planner-printables": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-record-keeping-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "morning-basket-circle-time-planner": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "nature-study-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "unit-study-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "kids-independent-work-checklists": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "copywork-handwriting-practice-pages": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "science-experiment-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "history-timeline-notebook-pages": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-year-end-report-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-philosophy-vision-statement-workbook": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-co-op-planning-kit": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "homeschool-mom-weekly-planner": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "learning-games-flash-cards-pack": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "life-skills-mastery-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "weekly-homeschool-review-pages": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "high-school-homeschool-transcript-template": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "sleep-diary-evening-routine-planner": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "calm-mind-journal-60-prompts": {
+   "price_usd": 4.5,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "moving-house-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "holiday-season-planner": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "dot-grid-bullet-journal-pages": {
+   "price_usd": 5.5,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "perpetual-birthday-anniversary-calendar": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "30-day-digital-detox-challenge": {
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "morning-pages-journal": {
+   "price_usd": 5.5,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "personal-time-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "bucket-list-journal": {
+   "price_usd": 3.5,
+   "price_zar": 39,
+   "basis": "estimate (category band)"
+  },
+  "employee-performance-review-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "business-continuity-plan-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "monthly-management-report-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "okr-goal-tracker": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "staff-leave-absence-tracker": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "business-risk-register": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "company-profile-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "press-release-template-pack": {
+   "price_usd": 9.0,
+   "price_zar": 109,
+   "basis": "estimate (category band)"
+  },
+  "staff-skills-training-matrix": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (category band)"
+  },
+  "request-for-proposal-rfp-template": {
+   "price_usd": 7.5,
+   "price_zar": 89,
+   "basis": "estimate (category band)"
+  },
+  "rent-vs-buy-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "subscription-recurring-payments-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "inflation-impact-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "investment-portfolio-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "50-30-20-budget-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "insurance-policy-register": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "credit-card-payoff-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "accounts-payable-ageing-tracker": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (category band)"
+  },
+  "customer-lifetime-value-acquisition-cost-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "car-affordability-total-cost-calculator": {
+   "price_usd": 5.0,
+   "price_zar": 59,
+   "basis": "estimate (category band)"
+  },
+  "calm-family-routines-bundle": {
+   "price_usd": 6.0,
+   "price_zar": 69,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 33,
+   "saving_pct_zar": 41
+  },
+  "teacher-planning-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 37
+  },
+  "wedding-planning-essentials-bundle": {
+   "price_usd": 11.5,
+   "price_zar": 139,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 36
+  },
+  "runners-training-bundle": {
+   "price_usd": 8.0,
+   "price_zar": 99,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 33
+  },
+  "landlord-starter-bundle": {
+   "price_usd": 15.0,
+   "price_zar": 179,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 35
+  },
+  "freelancer-business-bundle": {
+   "price_usd": 23.0,
+   "price_zar": 279,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 34,
+   "saving_pct_zar": 34
+  },
+  "small-nonprofit-admin-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 37
+  },
+  "cafe-starter-bundle": {
+   "price_usd": 16.0,
+   "price_zar": 199,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 33
+  },
+  "online-seller-starter-bundle": {
+   "price_usd": 14.5,
+   "price_zar": 179,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 35
+  },
+  "job-search-essentials-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 34,
+   "saving_pct_zar": 34
+  },
+  "tradie-business-starter-bundle": {
+   "price_usd": 16.0,
+   "price_zar": 199,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 33
+  },
+  "family-caregiver-organiser-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 37
+  },
+  "growers-record-keeping-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 37
+  },
+  "pet-parent-organiser-bundle": {
+   "price_usd": 13.0,
+   "price_zar": 159,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 35
+  },
+  "salon-owner-starter-bundle": {
+   "price_usd": 17.5,
+   "price_zar": 219,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 33
+  },
+  "small-fleet-control-bundle": {
+   "price_usd": 15.5,
+   "price_zar": 189,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 35,
+   "saving_pct_zar": 36
+  },
+  "homeschool-organiser-bundle": {
+   "price_usd": 12.5,
+   "price_zar": 149,
+   "basis": "estimate (bundle \u224865% of parts)",
+   "saving_pct_usd": 36,
+   "saving_pct_zar": 37
   }
  }
 }

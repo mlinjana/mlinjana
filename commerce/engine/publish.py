@@ -46,10 +46,10 @@ def build_records(products):
 
 
 def verify(records):
-    """Fetch each URL we hold; mark live only on HTTP 2xx/3xx."""
-    for r in records:
-        if not r.get("url"):
-            continue
+    """Fetch each URL we hold (12 at a time); mark live only on HTTP 2xx/3xx."""
+    from concurrent.futures import ThreadPoolExecutor
+
+    def check(r):
         try:
             req = urllib.request.Request(r["url"], headers={"User-Agent": "commerce-network-verify/1"})
             code = urllib.request.urlopen(req, timeout=20).status
@@ -57,6 +57,9 @@ def verify(records):
             code = getattr(e, "code", 0)
         r["status"] = "live" if 200 <= code < 400 else "failed"
         r["last_error"] = None if r["status"] == "live" else f"HTTP {code}"
+
+    with ThreadPoolExecutor(12) as ex:
+        list(ex.map(check, [r for r in records if r.get("url")]))
     return records
 
 

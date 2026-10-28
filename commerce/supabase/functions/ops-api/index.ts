@@ -30,6 +30,16 @@ async function adminOk(req: Request) {
   const k = req.headers.get("x-admin-key") ?? "";
   return !!h && k.length >= 24 && safeEq(await sha256(k), h);
 }
+// PostgREST returns at most 1000 rows per request: page through larger tables.
+async function fetchAll(build: () => any, page = 1000): Promise<any[]> {
+  const out: any[] = [];
+  for (let from = 0; ; from += page) {
+    const { data, error } = await build().range(from, from + page - 1);
+    if (error) throw new Error(error.message);
+    out.push(...(data ?? []));
+    if (!data || data.length < page) return out;
+  }
+}
 function today() {
   return new Intl.DateTimeFormat("en-CA", { timeZone: TZ }).format(new Date()); // YYYY-MM-DD
 }
@@ -82,18 +92,35 @@ async function health() {
     out.paid_without_delivery = missing;
     // storefront + listing link checks (own store pages and any marketplace URLs we hold)
     const { data: stores } = await db.from("stores").select("id,url");
-    const storeRes: Record<string, number> = {};
-    for (const s of stores ?? []) if (s.url) storeRes[s.id] = await fetch(s.url, { redirect: "follow" }).then((r) => r.status).catch(() => 0);
-    out.stores = storeRes;
-    const { data: lst } = await db.from("listings").select("id,url,status,channel").not("url", "is", null).in("status", ["live", "pending_verification", "failed"]);
-    let ok = 0, bad = 0;
-    for (const l of lst ?? []) {
-      const code = await fetch(l.url, { method: "GET", redirect: "follow" }).then((r) => r.status).catch(() => 0);
-      const good = code >= 200 && code < 400;
-      good ? ok++ : bad++;
-      await db.from("listings").update({ status: good ? "live" : "failed", last_checked_at: new Date().toISOString(), last_error: good ? null : `HTTP ${code}` }).eq("id", l.id);
+    const status = async (u: string) => {
+      const r = await fetch(u, { method: "GET", redirect: "follow" }).catch(() => null);
+      if (!r) return 0;
+      await r.body?.cancel().catch(() => {});
+      return r.status;
+    };
+    const pool = async <T, R>(items: T[], n: number, fn: (x: T) => Promise<R>): Promise<R[]> => {
+      const res: R[] = new Array(items.length);
+      let i = 0;
+      await Promise.all(Array.from({ length: Math.min(n, items.length) }, async () => {
+        while (i < items.length) { const k = i++; res[k] = await fn(items[k]); }
+      }));
+      return res;
+    };
+    const storeList = (stores ?? []).filter((s) => s.url);
+    const storeCodes = await pool(storeList, 10, (s) => status(s.url));
+    out.stores = Object.fromEntries(storeList.map((s, k) => [s.id, storeCodes[k]]));
+    const all = await fetchAll(() => db.from("listings").select("id,url,status,channel").not("url", "is", null).in("status", ["live", "pending_verification", "failed"]).order("id"));
+    const codes = await pool(all, 20, (l) => status(l.url));
+    const now = new Date().toISOString();
+    const goodIds = all.filter((_, k) => codes[k] >= 200 && codes[k] < 400).map((l) => l.id);
+    for (let k = 0; k < goodIds.length; k += 200) {
+      await db.from("listings").update({ status: "live", last_checked_at: now, last_error: null }).in("id", goodIds.slice(k, k + 200));
     }
-    out.listings_checked = { ok, bad };
+    const badOnes = all.map((l, k) => ({ l, c: codes[k] })).filter(({ c }) => !(c >= 200 && c < 400));
+    for (const { l, c } of badOnes) {
+      await db.from("listings").update({ status: "failed", last_checked_at: now, last_error: `HTTP ${c}` }).eq("id", l.id);
+    }
+    out.listings_checked = { ok: goodIds.length, bad: badOnes.length, failed: badOnes.slice(0, 20).map(({ l, c }) => `${l.url} → ${c}`) };
     // weekly budget check
     const b = await cfg("budgets");
     const { data: wk } = await db.rpc("weekly_costs_usd");
@@ -117,10 +144,10 @@ async function buildReport(day: string) {
   const [{ data: stores }, { data: products }, { data: listings }, { data: orders }, { data: events }, { data: jobs }, { data: work }, { data: costs }, { data: msgs }] =
     await Promise.all([
       db.from("stores").select("*").order("id"),
-      db.from("products").select("id,store_id,status,active"),
-      db.from("listings").select("product_id,channel,status,url,last_error"),
-      db.from("orders").select("store_id,status,gross_cents,fee_cents,net_cents,refunded_cents,paid_at,provider_mode,created_at"),
-      db.from("events").select("store_id,type,product_id").gte("ts", start).lt("ts", end),
+      fetchAll(() => db.from("products").select("id,store_id,status,active").order("id")).then((data) => ({ data })),
+      fetchAll(() => db.from("listings").select("product_id,channel,status,url,last_error").order("id")).then((data) => ({ data })),
+      fetchAll(() => db.from("orders").select("store_id,status,gross_cents,fee_cents,net_cents,refunded_cents,paid_at,provider_mode,created_at").order("id")).then((data) => ({ data })),
+      fetchAll(() => db.from("events").select("store_id,type,product_id").gte("ts", start).lt("ts", end).order("id")).then((data) => ({ data })),
       db.from("job_runs").select("job,status,error,started_at").gte("started_at", new Date(Date.now() - 86400_000).toISOString()),
       db.from("work_log").select("kind,text,logged_on,resolved").or(`logged_on.eq.${day},and(kind.in.(decision_needed,blocker),resolved.eq.false)`),
       db.from("costs").select("incurred_on,category,description,amount_cents,currency,basis").gte("incurred_on", new Date(Date.now() - 7 * 86400_000).toISOString().slice(0, 10)),
@@ -195,9 +222,9 @@ async function buildReport(day: string) {
 async function pricingSignals() {
   const since = new Date(Date.now() - 30 * 86400_000).toISOString();
   const [{ data: ev }, { data: od }, { data: pr }] = await Promise.all([
-    db.from("events").select("product_id").eq("type", "product_view").gte("ts", since).not("product_id", "is", null).limit(50000),
-    db.from("orders").select("product_id").eq("status", "paid").eq("provider_mode", "live").gte("paid_at", since),
-    db.from("products").select("id,title,price_zar_cents"),
+    fetchAll(() => db.from("events").select("product_id").eq("type", "product_view").gte("ts", since).not("product_id", "is", null).order("id")).then((data) => ({ data })),
+    fetchAll(() => db.from("orders").select("product_id").eq("status", "paid").eq("provider_mode", "live").gte("paid_at", since).order("id")).then((data) => ({ data })),
+    fetchAll(() => db.from("products").select("id,title,price_zar_cents").order("id")).then((data) => ({ data })),
   ]);
   const views: Record<string, number> = {}, sales: Record<string, number> = {};
   for (const e of ev ?? []) views[e.product_id] = (views[e.product_id] ?? 0) + 1;
@@ -244,8 +271,8 @@ async function dailyReport(force = false) {
 async function adminSummary() {
   const [stores, products, listings, orders, jobs, reports, costs, msgs, work, kill] = await Promise.all([
     db.from("stores").select("*").order("id"),
-    db.from("products").select("id,store_id,title,status,active,price_zar_cents"),
-    db.from("listings").select("product_id,channel,status,url,last_checked_at,last_error"),
+    fetchAll(() => db.from("products").select("id,store_id,title,status,active,price_zar_cents").order("id")).then((data) => ({ data })),
+    fetchAll(() => db.from("listings").select("product_id,channel,status,url,last_checked_at,last_error").order("id")).then((data) => ({ data })),
     db.from("orders").select("ref,store_id,product_id,email,amount_cents,status,provider_mode,created_at,paid_at,gross_cents,fee_cents,net_cents,refunded_cents,notes").order("created_at", { ascending: false }).limit(200),
     db.from("job_runs").select("job,status,started_at,finished_at,error,detail").order("started_at", { ascending: false }).limit(50),
     db.from("daily_reports").select("report_date,body_md,email_status,emailed_at").order("report_date", { ascending: false }).limit(14),
@@ -278,11 +305,19 @@ async function adminOrder(req: Request) {
 // ------------------------------------------------------------------ sync & upload (local factory → backend)
 async function sync(req: Request) {
   const b = await req.json();
-  if (b.stores?.length) await db.from("stores").upsert(b.stores.map((s: any) => ({ ...s, updated_at: new Date().toISOString() })));
-  if (b.products?.length) await db.from("products").upsert(b.products.map((p: any) => ({ ...p, updated_at: new Date().toISOString() })));
+  if (b.stores?.length) {
+    const { error } = await db.from("stores").upsert(b.stores.map((s: any) => ({ ...s, updated_at: new Date().toISOString() })));
+    if (error) return json({ error: `stores: ${error.message}` }, 400);
+  }
+  for (let k = 0; k < (b.products?.length ?? 0); k += 200) {
+    const { error } = await db.from("products").upsert(b.products.slice(k, k + 200).map((p: any) => ({ ...p, updated_at: new Date().toISOString() })));
+    if (error) return json({ error: `products: ${error.message}` }, 400);
+  }
   if (b.listings?.length) {
-    const { error } = await db.from("listings").upsert(b.listings.map((l: any) => ({ ...l, updated_at: new Date().toISOString() })), { onConflict: "product_id,channel" });
-    if (error) return json({ error: error.message }, 400);
+    for (let k = 0; k < b.listings.length; k += 500) {
+      const { error } = await db.from("listings").upsert(b.listings.slice(k, k + 500).map((l: any) => ({ ...l, updated_at: new Date().toISOString() })), { onConflict: "product_id,channel" });
+      if (error) return json({ error: `listings: ${error.message}` }, 400);
+    }
   }
   if (b.work?.length) await db.from("work_log").insert(b.work);
   if (b.costs?.length) await db.from("costs").insert(b.costs);

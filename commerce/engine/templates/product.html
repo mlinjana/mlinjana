@@ -43,7 +43,8 @@
     <li>This is a digital product — nothing physical is shipped.</li>
     <li>Download links are valid for 7 days and 5 downloads. Keep a copy of your files.</li>
     {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
-    {% if p.store == 'abacus' %}<li>The spreadsheet calculates from the numbers you enter. It is not financial advice.</li>{% endif %}
+    {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter — check results before relying on them. It is not financial, tax or legal advice.</li>{% endif %}
+    {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice. Adapt them to the rules where you live and work.</li>{% endif %}
     <li>Problems with a file? See our <a href="{{ base }}/refunds.html">refund &amp; support policy</a>.</li>
   </ul></section>
 </div>
