@@ -10,6 +10,11 @@
 - [ ] **5. Spending (optional, needs an amount from you):** one network domain (approx. US$10–15/year; price not checked). Etsy listing fees are US$0.20 per listing, and I'd only list the top sellers.
 - [ ] **6. Marketplaces (when you're ready):** Gumroad first (no listing fees): create an account and an access token. Etsy only after there is sales data.
 
+## Store Manager automation (set up 2026-10-28)
+- Scheduled tasks created: **Store Manager — daily** (18:40 SAST) and **Store Manager — weekly growth** (Tuesdays 10:17 SAST). Playbook: `OPERATIONS.md`.
+- [ ] **Owner, one-time:** add the **Supabase** and **Gmail** connectors to both scheduled tasks in claude.ai (scheduled tasks → open each task → connectors). Until then the runs can't read the database or email you.
+- [ ] **Owner, one-time:** in the cloud environment settings (session title bar → environment → Edit), add the secret `CLOUDFLARE_API_TOKEN` (the Workers token). The weekly run needs it to publish site changes.
+
 ## Claude / automation — next
 - [x] Deploy staging site and verify all 60 product URLs (2026-10-28).
 - [ ] Auto-deploys: Cloudflare Pages (owner step 3) deploys this branch on every push; staging on Vercel is deployed manually through the Vercel connector.
