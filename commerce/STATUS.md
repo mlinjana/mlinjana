@@ -1,17 +1,26 @@
 # STATUS — 2026-10-28
 
-**Overall:** built, validated and **deployed as a public test site**. Payments run in the PayFast **sandbox** — no real sales are possible yet.
+**Overall:** 20 stores with 30 products each (600 products) are built, validated and **deployed as a public test site**. Payments run in the PayFast **sandbox**, so no real sales are possible yet.
 
 | Phase | State | Verified evidence |
 |---|---|---|
-| 1 Foundation | ✅ Done | Supabase project `commerce-network` (free tier): 13 tables with RLS, private buckets `products`, `backups` |
-| 2 Stores | ✅ Deployed (staging) | https://commerce-network.vercel.app — 3 storefronts, 81 pages, dashboard; security headers (CSP, X-Frame-Options, nosniff) verified; mobile 390 px no overflow |
-| 3 Product factory | ✅ 60/60 validated | 1,394 PDF pages; 82,863 formulas, 0 error cells after LibreOffice recalculation; 4 numeric regression tests pass |
-| 4 Publishing | ✅ Own store 60/60 URL-verified · ⏳ marketplaces awaiting your accounts | 60 own-store listings `live` (HTTP 200 verified, test mode); 240 `awaiting_authorisation` |
-| 5 Transactions | ✅ Sandbox end-to-end verified (2026-10-28) | Browser test: checkout → PayFast sandbox → wallet payment → return → verified ITN → order `paid` (gross R59.00, fee R1.36, net R57.64 from PayFast) → download; ZIP SHA-256 identical to original. Forged ITN, fake token, wrong order secret and unknown product all rejected |
-| 6 Operations | ✅ Scheduled & verified | pg_cron report 18:00 SAST + health 4×/day; health run: 3/3 stores 200, 60/60 listings OK; report includes pricing signals; automated browsers excluded from analytics (verified: 0 beacons) |
-| 7 Verification | ⏳ Partial | Report generation verified; email delivery via Gmail verified; sandbox purchase verified locally **and on the public site** (BZW-015, ZIP checksum identical); admin API rejects missing/wrong keys |
+| 1 Foundation | ✅ Done | Supabase project `commerce-network` (free tier): RLS on all tables; private buckets `products` (600 files, 54 MB, 0 missing) and `backups` |
+| 2 Stores | ✅ Deployed (staging) | https://commerce-network.vercel.app — 20 storefronts, 742 pages, dashboard. Pages checked in a headless browser at 390 px and 1280 px: no overflow, no broken images, no script errors. Button colours computed for WCAG AA contrast |
+| 3 Product factory | ✅ 600/600 validated | 5,350 PDF pages (A4 + Letter); 109,935 formulas with 0 error cells after LibreOffice recalculation; original regression tests pass; 13 calculator outputs cross-checked against independent calculations (this caught 1 sign error, now fixed) |
+| 4 Publishing | ✅ Own store 600/600 URL-verified · ⏳ marketplaces awaiting your accounts | 600 own-store listings `live` (HTTP 200, test mode); 2,400 marketplace listings `awaiting_authorisation` |
+| 5 Transactions | ✅ Sandbox end-to-end verified on a new store | Public site, Kindkeep KDK-013: checkout → PayFast sandbox → payment → verified ITN → order `paid` (R39.00 gross, R0.90 fee) → download; ZIP SHA-256 identical to the built file |
+| 6 Operations | ✅ Scheduled & verified at 600-product scale | Health job: 20/20 stores HTTP 200, 600/600 listings OK, 6.5 s. Daily report counts all 3,000 listings (paginated reads) |
+| 7 Verification | ⏳ Partial | Report generation verified; email via Gmail verified earlier; live prices on all 600 pages match the catalogue and the database (R44,450 total across the 600 products) |
 
-**Live URLs (test mode, sandbox payments):** https://commerce-network.vercel.app/plainday/ · /bizwright/ · /abacus/ · owner dashboard /dashboard/
+**Prices:** 52 products are priced from individual market benchmarks. The other 548 use researched category bands and are marked as estimates (`research/pricing.csv`). Single products cost R39–R279.
 
-**Blocked on owner:** PayFast live account · Resend key (email) · legal disclosures · hosting choice for live sales. See TASKS.md.
+**Not yet proven:** real demand. No product has had real traffic or sales.
+
+**Blocked on owner:**
+- PayFast live account
+- Resend key (email)
+- Legal disclosures
+- Hosting choice for live sales
+- Domains and trademark checks for the 17 new brands
+
+See TASKS.md.
