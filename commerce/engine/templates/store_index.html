@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}{{ store.name }} — {{ store.tagline }}{% endblock %}
+{% block main %}
+<section class="hero"><div class="wrap">
+  <h1>{{ store.tagline }}</h1>
+  <p class="lead">{{ store.proposition }}</p>
+  <ul class="ticks"><li>Instant download after payment</li><li>{{ products|length }} original products</li><li>Personal &amp; single-business licence</li></ul>
+</div></section>
+<section id="shop" class="wrap shop">
+  <div class="filters">
+    <input id="q" type="search" placeholder="Search {{ products|length }} products…" aria-label="Search products">
+    <div class="chips" role="group" aria-label="Categories">
+      <button class="chip on" data-cat="">All</button>
+      {% for c in categories %}<button class="chip" data-cat="{{ c }}">{{ c }}</button>{% endfor %}
+    </div>
+  </div>
+  <div class="grid" id="grid">
+  {% for p in products %}
+    <a class="card" href="{{ base }}/p/{{ p.slug }}.html" data-cat="{{ p.category }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.tags|join(' '))|lower }}">
+      <img src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }} cover" loading="lazy" width="600" height="450">
+      <div class="body">
+        <div class="cat">{{ p.category }}</div>
+        <h3>{{ p.name }}</h3>
+        <div class="row"><span class="price">R{{ p.price_zar }}</span><span class="fmt">{{ p.formats|join(' · ') }}</span></div>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+  <p id="empty" class="muted" hidden>No products match your search.</p>
+</section>
+{% endblock %}

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Owner dashboard</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#111827;--muted:#5b6470;--line:#e3e6ea;--ok:#067647;--warn:#b54708;--bad:#b42318;--acc:#1d4ed8}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a20;--ink:#e8eaed;--muted:#9aa3ad;--line:#2a2f37;--ok:#4ade80;--warn:#fbbf24;--bad:#f87171;--acc:#7aa2ff}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+main{max-width:1200px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:24px;margin:4px 0}h2{font-size:18px;margin:28px 0 10px}
+.muted{color:var(--muted)}.small{font-size:13px}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px}
+.kpi{font-size:26px;font-weight:800}
+.ok{color:var(--ok)}.warn{color:var(--warn)}.bad{color:var(--bad)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px;overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.pill{display:inline-block;padding:1px 8px;border-radius:999px;font-size:12px;border:1px solid var(--line);white-space:nowrap}
+.pill.live{color:var(--ok);border-color:var(--ok)}.pill.failed{color:var(--bad);border-color:var(--bad)}.pill.awaiting_authorisation,.pill.pending_verification{color:var(--warn);border-color:var(--warn)}
+.attn li{margin:6px 0}
+input,select,button{font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button{cursor:pointer;background:var(--acc);color:#fff;border-color:var(--acc)}
+.login{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.report{white-space:normal}.report table{margin:8px 0}
+nav.tabs{display:flex;gap:6px;flex-wrap:wrap;margin:16px 0 0}nav.tabs a{padding:6px 12px;border-radius:999px;border:1px solid var(--line);text-decoration:none;color:var(--ink);font-size:14px}
+</style>
+</head>
+<body>
+<main>
+<h1>Commerce network — owner dashboard</h1>
+<p class="muted small">Plain-language status of all stores. Catalogue and publishing status are always shown; sales, orders, messages and reports load after you enter your owner key.</p>
+<div class="login" id="login">
+  <input id="key" type="password" placeholder="Owner key" autocomplete="current-password" aria-label="Owner key">
+  <button id="go">Load live data</button><span id="lstatus" class="small muted"></span>
+</div>
+<nav class="tabs"><a href="#attention">Needs attention</a><a href="#stores">Stores</a><a href="#sales">Sales</a><a href="#queue">Publication queue</a><a href="#catalogue">Catalogue</a><a href="#automation">Automation</a><a href="#costs">Costs</a><a href="#reports">Daily reports</a><a href="#messages">Messages</a></nav>
+
+<h2 id="attention">Needs your attention</h2><div class="panel"><ul class="attn" id="attn"><li class="muted">Load live data to see everything; static checks below.</li></ul></div>
+<h2 id="stores">Stores</h2><div class="cards" id="storecards"></div>
+<h2 id="sales">Sales overview</h2><div class="cards" id="salescards"><div class="card muted">Enter your owner key to load sales.</div></div>
+<div class="panel" style="margin-top:12px"><table id="orders"><thead><tr><th>Order</th><th>Store</th><th>Product</th><th>Status</th><th>Mode</th><th>Gross</th><th>Fee</th><th>Net</th><th>Date</th></tr></thead><tbody></tbody></table></div>
+<h2 id="queue">Publication queue</h2><div class="panel"><table id="queue-t"><thead><tr><th>Channel</th><th>Live</th><th>Pending verification</th><th>Awaiting authorisation</th><th>Failed</th><th>What's needed</th></tr></thead><tbody></tbody></table></div>
+<h2 id="catalogue">Product catalogue</h2><div class="panel"><table id="cat"><thead><tr><th>ID</th><th>Product</th><th>Price</th><th>Validated</th><th>Own store</th><th>Etsy</th><th>Gumroad</th><th>Payhip</th><th>Shopify</th></tr></thead><tbody></tbody></table></div>
+<h2 id="automation">Automation health</h2><div class="panel"><table id="jobs"><thead><tr><th>Job</th><th>Status</th><th>Started</th><th>Detail / error</th></tr></thead><tbody><tr><td colspan=4 class="muted">Enter your owner key.</td></tr></tbody></table></div>
+<h2 id="costs">Revenue, expenses &amp; costs</h2><div class="panel"><table id="costs-t"><thead><tr><th>Date</th><th>Category</th><th>Description</th><th>Amount</th><th>Basis</th></tr></thead><tbody><tr><td colspan=5 class="muted">Enter your owner key.</td></tr></tbody></table></div>
+<h2 id="reports">Daily reports</h2><div class="panel report" id="report"><p class="muted">Enter your owner key.</p></div>
+<h2 id="messages">Customer messages</h2><div class="panel"><table id="msgs"><thead><tr><th>Received</th><th>Store</th><th>Email</th><th>Order</th><th>Message</th><th>Status</th></tr></thead><tbody><tr><td colspan=6 class="muted">Enter your owner key.</td></tr></tbody></table></div>
+</main>
+<script>
+window.DASH = {api: {{ api|tojson }}, stores: {{ stores|safe }}, catalogue: {{ catalogue|safe }}, listings: {{ listings|safe }}};
+</script>
+<script src="/assets/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+# private: product generators, built deliverables, secrets
+commerce/factory/
+commerce/build/
+commerce/.env
+__pycache__/
+*.pyc

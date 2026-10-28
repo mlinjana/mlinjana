@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{{ p.name }} | {{ store.name }}{% endblock %}
+{% block desc %}{{ p.summary }}{% endblock %}
+{% block pid %}{{ p.id }}{% endblock %}
+{% block head %}
+<script type="application/ld+json">{{ jsonld|safe }}</script>
+{% endblock %}
+{% block main %}
+<div class="wrap product">
+  <div class="gallery">
+    <img id="main-img" src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }}" width="1200" height="900">
+    <div class="thumbs">
+      {% for im in [p.images.cover] + p.images.previews %}<button data-src="{{ root }}{{ im }}" aria-label="Show image {{ loop.index }}"><img src="{{ root }}{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
+    </div>
+  </div>
+  <div class="info">
+    <div class="cat">{{ p.category }} · {{ p.id }}</div>
+    <h1>{{ p.name }}</h1>
+    <p class="lead">{{ p.summary }}</p>
+    <div class="price big">R{{ p.price_zar }}</div>
+    <form id="buy" class="buy" novalidate>
+      <label for="email">Email for your download link</label>
+      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+      <button type="submit" class="btn">Buy &amp; download</button>
+      <p class="small muted">You'll pay securely on PayFast, then return here to download. {{ p.file_mb }} MB ZIP · {{ p.formats|join(', ') }}</p>
+      <p id="buy-msg" class="msg" role="status"></p>
+    </form>
+    {% if p.cancelled_note %}{% endif %}
+    <ul class="facts">
+      <li><strong>Formats:</strong> {{ p.formats|join(', ') }}</li>
+      <li><strong>Works with:</strong> {{ p.compat }}</li>
+      <li><strong>Licence:</strong> personal use + one business. <a href="{{ base }}/licence.html">Details</a></li>
+    </ul>
+  </div>
+</div>
+<div class="wrap details">
+  <section><h2>What's included</h2><ul>{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul></section>
+  {% if p.bundle_items %}<section><h2>Products in this bundle</h2><ul>{% for b in p.bundle_items %}<li><a href="{{ base }}/p/{{ b.slug }}.html">{{ b.name }}</a> (R{{ b.price_zar }} on its own)</li>{% endfor %}</ul>
+    <p class="muted">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}.</p></section>{% endif %}
+  <section><h2>How to use</h2><ol>{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol></section>
+  <section><h2>Files in the download</h2><ul class="files">{% for f in p.file.contents %}<li>{{ f }}</li>{% endfor %}</ul></section>
+  <section><h2>Please note</h2><ul>
+    <li>This is a digital product — nothing physical is shipped.</li>
+    <li>Download links are valid for 7 days and 5 downloads. Keep a copy of your files.</li>
+    {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
+    {% if p.store == 'abacus' %}<li>The spreadsheet calculates from the numbers you enter. It is not financial advice.</li>{% endif %}
+    <li>Problems with a file? See our <a href="{{ base }}/refunds.html">refund &amp; support policy</a>.</li>
+  </ul></section>
+</div>
+{% if related %}<div class="wrap"><h2>You might also like</h2><div class="grid small">
+{% for r in related %}<a class="card" href="{{ base }}/p/{{ r.slug }}.html"><img src="{{ root }}{{ r.images.cover }}" alt="" loading="lazy" width="600" height="450"><div class="body"><h3>{{ r.name }}</h3><span class="price">R{{ r.price_zar }}</span></div></a>{% endfor %}
+</div></div>{% endif %}
+{% endblock %}

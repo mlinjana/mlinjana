@@ -1,0 +1,3002 @@
+[
+ {
+  "product_id": "PLD-001",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/undated-daily-planner.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "undated-daily-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-001",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-001",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-001",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-001",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-002",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/undated-weekly-planner.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "undated-weekly-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-002",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-002",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-002",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-002",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-003",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/monthly-budget-planner.html",
+  "price_cents": 9900,
+  "currency": "ZAR",
+  "external_id": "monthly-budget-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-003",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 750,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-003",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 750,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-003",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 750,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-003",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 750,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-004",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/savings-challenge-pack.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "savings-challenge-pack",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-004",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-004",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-004",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-004",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-005",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/guided-gratitude-journal.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "guided-gratitude-journal",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-005",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-005",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-005",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-005",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-006",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/weekly-reflection-journal.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "weekly-reflection-journal",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-006",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-006",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-006",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-006",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-007",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/goal-setting-workbook.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "goal-setting-workbook",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-007",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-007",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-007",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-007",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-008",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/student-study-planner.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "student-study-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-008",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-008",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-008",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-008",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-009",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/exam-revision-planner.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "exam-revision-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-009",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-009",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-009",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-009",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-010",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/habit-tracker-set.html",
+  "price_cents": 5900,
+  "currency": "ZAR",
+  "external_id": "habit-tracker-set",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-010",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-010",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-010",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-010",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-011",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/home-cleaning-schedule.html",
+  "price_cents": 5900,
+  "currency": "ZAR",
+  "external_id": "home-cleaning-schedule",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-011",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-011",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-011",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-011",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-012",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/meal-planner-grocery-list.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "meal-planner-grocery-list",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-012",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-012",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-012",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-012",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-013",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/home-organisation-binder.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "home-organisation-binder",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-013",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-013",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-013",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-013",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-014",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/productivity-planner.html",
+  "price_cents": 8500,
+  "currency": "ZAR",
+  "external_id": "productivity-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-014",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-014",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-014",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-014",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-015",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/personal-project-planner.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "personal-project-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-015",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-015",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-015",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-015",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-016",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/wellness-mood-tracker.html",
+  "price_cents": 7500,
+  "currency": "ZAR",
+  "external_id": "wellness-mood-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-016",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 550,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-016",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 550,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-016",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 550,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-016",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 550,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-017",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/reading-journal.html",
+  "price_cents": 5900,
+  "currency": "ZAR",
+  "external_id": "reading-journal",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-017",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-017",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-017",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-017",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-018",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/yearly-planner-annual-review.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "yearly-planner-annual-review",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-018",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-018",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-018",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-018",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-019",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/travel-planner.html",
+  "price_cents": 5900,
+  "currency": "ZAR",
+  "external_id": "travel-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-019",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-019",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-019",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-019",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "PLD-020",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/plainday/p/productivity-planner-bundle.html",
+  "price_cents": 19900,
+  "currency": "ZAR",
+  "external_id": "productivity-planner-bundle",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "PLD-020",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 1600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "PLD-020",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 1600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "PLD-020",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 1600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "PLD-020",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 1600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-001",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/business-plan-template.html",
+  "price_cents": 18900,
+  "currency": "ZAR",
+  "external_id": "business-plan-template",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-001",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 1400,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-001",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 1400,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-001",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 1400,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-001",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 1400,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-002",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/lean-canvas-one-page-plan.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "lean-canvas-one-page-plan",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-002",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-002",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-002",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-002",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-003",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/invoice-template-excel.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "invoice-template-excel",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-003",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-003",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-003",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-003",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-004",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/quotation-estimate-template.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "quotation-estimate-template",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-004",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-004",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-004",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-004",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-005",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/income-expense-tracker.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "income-expense-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-005",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-005",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-005",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-005",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-006",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/marketing-calendar.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "marketing-calendar",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-006",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-006",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-006",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-006",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-007",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/social-media-content-planner.html",
+  "price_cents": 8500,
+  "currency": "ZAR",
+  "external_id": "social-media-content-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-007",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-007",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-007",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-007",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-008",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/sop-template-kit.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "sop-template-kit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-008",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-008",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-008",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-008",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-009",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/project-management-tracker.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "project-management-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-009",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-009",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-009",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-009",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-010",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/client-crm-sales-pipeline.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "client-crm-sales-pipeline",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-010",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-010",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-010",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-010",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-011",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/employee-onboarding-kit.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "employee-onboarding-kit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-011",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-011",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-011",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-011",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-012",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/meeting-agenda-minutes-kit.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "meeting-agenda-minutes-kit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-012",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-012",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-012",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-012",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-013",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/hiring-kit.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "hiring-kit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-013",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-013",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-013",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-013",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-014",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/customer-feedback-complaints-log.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "customer-feedback-complaints-log",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-014",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-014",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-014",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-014",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-015",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/pricing-calculator.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "pricing-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-015",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-015",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-015",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-015",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-016",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/brand-style-guide-template.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "brand-style-guide-template",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-016",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-016",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-016",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-016",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-017",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/small-business-kpi-dashboard.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "small-business-kpi-dashboard",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-017",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-017",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-017",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-017",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-018",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/purchase-order-supplier-kit.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "purchase-order-supplier-kit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-018",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-018",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-018",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-018",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-019",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/ceo-weekly-business-planner.html",
+  "price_cents": 8500,
+  "currency": "ZAR",
+  "external_id": "ceo-weekly-business-planner",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-019",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-019",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-019",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-019",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 650,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "BZW-020",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/bizwright/p/business-admin-bundle.html",
+  "price_cents": 23900,
+  "currency": "ZAR",
+  "external_id": "business-admin-bundle",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "BZW-020",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 1800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "BZW-020",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 1800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "BZW-020",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 1800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "BZW-020",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 1800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-001",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/personal-budget-dashboard.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "personal-budget-dashboard",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-001",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-001",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-001",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-001",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-002",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/debt-snowball-avalanche-calculator.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "debt-snowball-avalanche-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-002",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-002",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-002",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-002",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-003",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/savings-goal-tracker.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "savings-goal-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-003",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-003",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-003",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-003",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-004",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/emergency-fund-calculator.html",
+  "price_cents": 6900,
+  "currency": "ZAR",
+  "external_id": "emergency-fund-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-004",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-004",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-004",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-004",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 500,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-005",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/net-worth-tracker.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "net-worth-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-005",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-005",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-005",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-005",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-006",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/annual-personal-finance-workbook.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "annual-personal-finance-workbook",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-006",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-006",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-006",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-006",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-007",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/loan-amortisation-calculator.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "loan-amortisation-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-007",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-007",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-007",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-007",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-008",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/home-loan-calculator.html",
+  "price_cents": 8900,
+  "currency": "ZAR",
+  "external_id": "home-loan-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-008",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-008",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-008",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-008",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-009",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/inventory-management-spreadsheet.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "inventory-management-spreadsheet",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-009",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-009",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-009",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-009",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-010",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/stock-control-reorder-point.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "stock-control-reorder-point",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-010",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-010",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-010",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-010",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-011",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/warehouse-productivity-dashboard.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "warehouse-productivity-dashboard",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-011",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-011",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-011",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-011",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-012",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/supply-chain-kpi-toolkit.html",
+  "price_cents": 11900,
+  "currency": "ZAR",
+  "external_id": "supply-chain-kpi-toolkit",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-012",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-012",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-012",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-012",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-013",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/abc-inventory-analysis.html",
+  "price_cents": 9900,
+  "currency": "ZAR",
+  "external_id": "abc-inventory-analysis",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-013",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-013",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-013",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-013",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 700,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-014",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/13-week-cash-flow-forecast.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "13-week-cash-flow-forecast",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-014",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-014",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-014",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-014",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-015",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/break-even-profit-calculator.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "break-even-profit-calculator",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-015",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-015",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-015",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-015",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-016",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/sinking-funds-bill-tracker.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "sinking-funds-bill-tracker",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-016",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-016",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-016",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-016",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-017",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/compound-interest-retirement-projector.html",
+  "price_cents": 7900,
+  "currency": "ZAR",
+  "external_id": "compound-interest-retirement-projector",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-017",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-017",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-017",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-017",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 600,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-018",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/shared-expense-splitter.html",
+  "price_cents": 5900,
+  "currency": "ZAR",
+  "external_id": "shared-expense-splitter",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-018",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-018",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-018",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-018",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 450,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-019",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/demand-forecasting-template.html",
+  "price_cents": 10900,
+  "currency": "ZAR",
+  "external_id": "demand-forecasting-template",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-019",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-019",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-019",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-019",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 800,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ },
+ {
+  "product_id": "ABL-020",
+  "channel": "own_store",
+  "url": "https://commerce-network.vercel.app/abacus/p/operations-toolkit-bundle.html",
+  "price_cents": 37900,
+  "currency": "ZAR",
+  "external_id": "operations-toolkit-bundle",
+  "status": "pending_verification",
+  "last_error": null
+ },
+ {
+  "product_id": "ABL-020",
+  "channel": "etsy",
+  "url": null,
+  "price_cents": 2900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must open an Etsy shop (identity & bank verification) and register an Etsy API app with listings_w scope; Etsy charges a listing fee per listing (needs your authorisation)."
+ },
+ {
+  "product_id": "ABL-020",
+  "channel": "gumroad",
+  "url": null,
+  "price_cents": 2900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Gumroad account, connect payouts, and provide an access token (GUMROAD_ACCESS_TOKEN)."
+ },
+ {
+  "product_id": "ABL-020",
+  "channel": "payhip",
+  "url": null,
+  "price_cents": 2900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Owner must create a Payhip account and connect PayPal for payouts. No public listing API was found, so listings use the export CSV."
+ },
+ {
+  "product_id": "ABL-020",
+  "channel": "shopify",
+  "url": null,
+  "price_cents": 2900,
+  "currency": "USD",
+  "external_id": null,
+  "status": "awaiting_authorisation",
+  "last_error": "Connected Shopify store is on a trial plan \u2014 selling requires a paid plan (your authorisation) and a digital-downloads app."
+ }
+]

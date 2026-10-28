@@ -1,0 +1,102 @@
+{
+  "api_base": "https://mrunxptxavtompcnegkr.supabase.co/functions/v1",
+  "site_base": "https://commerce-network.vercel.app",
+  "mode": "staging",
+  "legal": {
+    "operator": "Mlinjana (sole proprietor \u2014 trading name and registration details to be confirmed by the owner)",
+    "country": "South Africa",
+    "address": "To be provided by the owner before live sales (required disclosure)",
+    "registration": "To be provided by the owner before live sales"
+  },
+  "stores": [
+    {
+      "id": "plainday",
+      "name": "Plainday Studio",
+      "path": "plainday",
+      "tagline": "Calm, printable planners for ordinary days",
+      "proposition": "Simple, uncluttered printable planners and journals that you can start any day. Every planner comes in A4 and US Letter, with original prompts and no fluff.",
+      "audience": "Students, parents and busy professionals who prefer paper planning",
+      "domain_plan": {
+        "primary": "plaindaystudio.com",
+        "alt": "plainday.co",
+        "checked_on": "2026-10-28",
+        "status": "available at check time \u2014 not purchased"
+      },
+      "categories": [
+        "Daily & weekly planners",
+        "Budget & savings",
+        "Journals",
+        "Goals & productivity",
+        "Study",
+        "Home organisation",
+        "Bundles"
+      ],
+      "font": "serif",
+      "ink": "#2F3A34",
+      "accent": "#7A9E87",
+      "accent2": "#D9A38C",
+      "light": "#F3EFE7",
+      "line": "#C9C2B5",
+      "prefix": "PLD"
+    },
+    {
+      "id": "bizwright",
+      "name": "Bizwright",
+      "path": "bizwright",
+      "tagline": "Ready-to-use business templates for small teams",
+      "proposition": "Practical, editable Excel and Word templates for running a small business \u2014 invoicing, planning, marketing, operations and people. Built with formulas that work in Excel and Google Sheets.",
+      "audience": "Founders, freelancers and small business owners",
+      "domain_plan": {
+        "primary": "bizwright.co",
+        "alt": "bizwrighttemplates.com",
+        "checked_on": "2026-10-28",
+        "status": "available at check time \u2014 not purchased (bizwright.com is taken)"
+      },
+      "categories": [
+        "Business planning",
+        "Invoicing & finance admin",
+        "Marketing",
+        "Sales",
+        "Operations",
+        "HR & people",
+        "Bundles"
+      ],
+      "font": "sans",
+      "ink": "#1D2B3A",
+      "accent": "#E0A33A",
+      "accent2": "#4F7CAC",
+      "light": "#F2F4F7",
+      "line": "#C5CCD6",
+      "prefix": "BZW"
+    },
+    {
+      "id": "abacus",
+      "name": "Abacus Lane",
+      "path": "abacus",
+      "tagline": "Spreadsheet tools for money, stock and operations",
+      "proposition": "Formula-driven spreadsheet tools for personal finance, small-business cash and inventory, and warehouse operations. No macros, tested calculations, works in Excel and Google Sheets.",
+      "audience": "Households managing money; small businesses and operations teams managing stock",
+      "domain_plan": {
+        "primary": "abacuslane.com",
+        "alt": null,
+        "checked_on": "2026-10-28",
+        "status": "available at check time \u2014 not purchased"
+      },
+      "categories": [
+        "Personal finance",
+        "Loans & debt",
+        "Business finance",
+        "Inventory & stock",
+        "Operations",
+        "Bundles"
+      ],
+      "font": "mono",
+      "ink": "#0F3D3E",
+      "accent": "#2BA58C",
+      "accent2": "#F2C14E",
+      "light": "#EEF6F3",
+      "line": "#BFD6CF",
+      "prefix": "ABL"
+    }
+  ]
+}

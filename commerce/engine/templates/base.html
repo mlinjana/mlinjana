@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% block title %}{{ store.name }}{% endblock %}</title>
+<meta name="description" content="{% block desc %}{{ store.tagline }}{% endblock %}">
+{% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<link rel="stylesheet" href="{{ root }}assets/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='{{ store.accent|urlencode }}'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif'>{{ store.name[0] }}</text></svg>">
+<style>:root{--ink:{{ store.ink }};--accent:{{ store.accent }};--accent2:{{ store.accent2 }};--light:{{ store.light }};--line:{{ store.line }};--btn:{{ store.accent_btn }}}</style>
+{% block head %}{% endblock %}
+</head>
+<body data-store="{{ store.id }}" data-font="{{ store.font }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
+{% if staging %}<div class="banner">Test mode — this store is in pre-launch testing. Checkout uses the PayFast <strong>sandbox</strong>: no real money is taken.</div>{% endif %}
+<header class="top"><div class="wrap">
+  <a class="brand" href="{{ base }}/">{{ store.name }}</a>
+  <nav><a href="{{ base }}/#shop">Shop</a><a href="{{ base }}/licence.html">Licence</a><a href="{{ base }}/contact.html">Help</a></nav>
+</div></header>
+<main>{% block main %}{% endblock %}</main>
+<footer class="foot"><div class="wrap">
+  <div><strong>{{ store.name }}</strong><br><span class="muted">{{ store.tagline }}</span></div>
+  <div class="links"><a href="{{ base }}/refunds.html">Refunds &amp; support</a><a href="{{ base }}/privacy.html">Privacy</a><a href="{{ base }}/terms.html">Terms</a><a href="{{ base }}/licence.html">Licence</a><a href="{{ base }}/contact.html">Contact</a></div>
+  <div class="muted small">Secure payments by PayFast. We never see or store your card details. Prices in South African rand (ZAR); international cards are converted by your bank.</div>
+</div></footer>
+<script src="{{ root }}assets/site.js" defer></script>
+</body>
+</html>
