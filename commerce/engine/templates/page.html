@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block title %}{{ title }} | {{ store.name }}{% endblock %}
 {% block main %}
+<section class="page-hero">
+  {{ store.motif|safe }}
+  <div class="wrap"><h1>{{ title }}</h1></div>
+</section>
 <div class="wrap prose">
-<h1>{{ title }}</h1>
 {{ body|safe }}
 </div>
 {% endblock %}

@@ -1,0 +1,82 @@
+{
+ "plainday": {
+  "display": "fraunces",
+  "motif": "soft"
+ },
+ "bizwright": {
+  "display": "spacegrotesk",
+  "motif": "grid"
+ },
+ "abacus": {
+  "display": "spacegrotesk",
+  "motif": "bars"
+ },
+ "littlerhythm": {
+  "display": "bricolage",
+  "motif": "confetti"
+ },
+ "chalkline": {
+  "display": "outfit",
+  "motif": "dots"
+ },
+ "ivorylane": {
+  "display": "dmserif",
+  "motif": "arcs"
+ },
+ "pacebook": {
+  "display": "outfit",
+  "motif": "stripes"
+ },
+ "doorpost": {
+  "display": "spacegrotesk",
+  "motif": "grid"
+ },
+ "gigsmith": {
+  "display": "bricolage",
+  "motif": "confetti"
+ },
+ "goodledger": {
+  "display": "fraunces",
+  "motif": "soft"
+ },
+ "mise": {
+  "display": "dmserif",
+  "motif": "dots"
+ },
+ "shopkeeper": {
+  "display": "bricolage",
+  "motif": "arcs"
+ },
+ "careerladder": {
+  "display": "fraunces",
+  "motif": "stripes"
+ },
+ "trowel": {
+  "display": "spacegrotesk",
+  "motif": "bars"
+ },
+ "kindkeep": {
+  "display": "fraunces",
+  "motif": "soft"
+ },
+ "furrowbook": {
+  "display": "fraunces",
+  "motif": "arcs"
+ },
+ "petkeep": {
+  "display": "bricolage",
+  "motif": "dots"
+ },
+ "chairbook": {
+  "display": "dmserif",
+  "motif": "soft"
+ },
+ "fleetwise": {
+  "display": "outfit",
+  "motif": "stripes"
+ },
+ "hearthschool": {
+  "display": "fraunces",
+  "motif": "confetti"
+ }
+}

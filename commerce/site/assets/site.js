@@ -35,8 +35,71 @@
     }));
   }
 
-  // product gallery
-  document.querySelectorAll(".thumbs button").forEach((b) => b.addEventListener("click", () => { $("#main-img").src = b.dataset.src; }));
+  // ---- motion & 3D (skipped entirely when the visitor prefers reduced motion) ----
+  window.__rv = 1;
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
+  const rv = document.querySelectorAll(".rv");
+  if (calm || !("IntersectionObserver" in window)) rv.forEach((e) => e.classList.add("in"));
+  else {
+    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    rv.forEach((e) => io.observe(e));
+  }
+  const tilt = (el, max, scene) => {
+    let raf = 0;
+    el.addEventListener("pointermove", (ev) => {
+      const r = el.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width, y = (ev.clientY - r.top) / r.height;
+      cancelAnimationFrame(raf);
+      raf = requestAnimationFrame(() => {
+        el.style.setProperty("--ry", `${(x - 0.5) * max * 2 + (scene ? -10 : 0)}deg`);
+        el.style.setProperty("--rx", `${(0.5 - y) * max * 2 + (scene ? 6 : 0)}deg`);
+        el.querySelectorAll(".glare,.shine").forEach((g) => { g.style.setProperty("--gx", `${x * 100}%`); g.style.setProperty("--gy", `${y * 100}%`); });
+      });
+    });
+    el.addEventListener("pointerleave", () => { el.style.removeProperty("--rx"); el.style.removeProperty("--ry"); });
+  };
+  if (!calm && fine) {
+    document.querySelectorAll("[data-tilt]").forEach((el) => tilt(el, 6, false));
+    document.querySelectorAll("[data-tilt-scene]").forEach((el) => tilt(el, 10, true));
+  }
+
+  // ---- product gallery + lightbox ----
+  const thumbs = [...document.querySelectorAll(".thumbs button")];
+  const srcs = thumbs.map((b) => b.dataset.src);
+  let cur = 0;
+  const show = (i) => {
+    if (!srcs.length) return;
+    cur = (i + srcs.length) % srcs.length;
+    const m = $("#main-img");
+    m.style.opacity = 0.3;
+    m.onload = () => { m.style.opacity = 1; };
+    m.src = srcs[cur];
+    thumbs.forEach((b, k) => b.classList.toggle("on", k === cur));
+    const lb = $("#lb-img");
+    if (lb) { lb.src = srcs[cur]; $("#lb-count").textContent = `${cur + 1} / ${srcs.length}`; }
+  };
+  thumbs.forEach((b, k) => b.addEventListener("click", () => show(k)));
+  const dlg = $("#lightbox");
+  if (dlg && dlg.showModal) {
+    document.querySelectorAll("[data-open-lightbox]").forEach((b) => b.addEventListener("click", () => { show(cur); dlg.showModal(); }));
+    dlg.querySelector("[data-lb-close]").addEventListener("click", () => dlg.close());
+    dlg.querySelector("[data-lb-prev]").addEventListener("click", () => show(cur - 1));
+    dlg.querySelector("[data-lb-next]").addEventListener("click", () => show(cur + 1));
+    dlg.addEventListener("click", (e) => { if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener("keydown", (e) => { if (e.key === "ArrowLeft") show(cur - 1); if (e.key === "ArrowRight") show(cur + 1); });
+    let sx = 0;
+    dlg.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    dlg.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1)); });
+  }
+
+  // ---- sticky buy bar on phones: visible while the buy box is off screen ----
+  const bar = $("#buybar"), buyBox = $("#buy");
+  if (bar && buyBox && "IntersectionObserver" in window) {
+    bar.hidden = false;
+    let seen = false;
+    new IntersectionObserver(([e]) => { if (e.isIntersecting) seen = true; bar.classList.toggle("show", !e.isIntersecting && seen); }).observe(buyBox);
+    bar.querySelector("[data-goto-buy]").addEventListener("click", () => { buyBox.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" }); setTimeout(() => $("#email").focus({ preventScroll: true }), calm ? 0 : 450); });
+  }
 
   // checkout → PayFast hosted payment page (we never handle card details)
   const buy = $("#buy");

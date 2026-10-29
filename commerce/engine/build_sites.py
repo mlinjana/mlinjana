@@ -27,6 +27,60 @@ def btn_colour(accent):
         r, g, b = int(r * 0.93), int(g * 0.93), int(b * 0.93)
     return "#222222"
 
+# Per-store personality: display typeface + backdrop motif (deterministic, generated from the store's own colours).
+STYLE = {k: (v["display"], v["motif"]) for k, v in json.load(open(os.path.join(ROOT, "config", "style.json"))).items()}
+
+
+def motif_svg(store):
+    """A layered, slowly drifting backdrop for the hero, unique per store (seeded by its id)."""
+    import random
+    rnd = random.Random(store["id"])
+    kind = STYLE.get(store["id"], ("outfit", "soft"))[1]
+    a, b = store["accent"], store["accent2"]
+    out = []
+    def g(inner, i):
+        return f'<g class="fl" style="--d:{rnd.uniform(0, 6):.1f}s;--t:{rnd.uniform(14, 26):.0f}s;--x:{rnd.uniform(-30, 30):.0f}px;--y:{rnd.uniform(-24, 24):.0f}px">{inner}</g>'
+    if kind == "soft":
+        for i in range(6):
+            cx, cy, r = rnd.uniform(0, 1200), rnd.uniform(0, 700), rnd.uniform(90, 260)
+            out.append(g(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="{(a, b)[i % 2]}" opacity="{rnd.uniform(.10, .22):.2f}"/>', i))
+    elif kind == "grid":
+        out.append('<g opacity=".14">' + "".join(f'<path d="M{x} 0V700" stroke="{a}" stroke-width="1"/>' for x in range(0, 1201, 60)) +
+                   "".join(f'<path d="M0 {y}H1200" stroke="{a}" stroke-width="1"/>' for y in range(0, 701, 60)) + '</g>')
+        for i in range(5):
+            x, y, s = rnd.randrange(0, 1140, 60), rnd.randrange(0, 640, 60), rnd.choice([60, 120, 180])
+            out.append(g(f'<rect x="{x}" y="{y}" width="{s}" height="{s}" rx="10" fill="{(a, b)[i % 2]}" opacity="{rnd.uniform(.12, .24):.2f}"/>', i))
+    elif kind == "bars":
+        for i in range(9):
+            x, h = 80 + i * 125, rnd.uniform(120, 520)
+            out.append(g(f'<rect x="{x:.0f}" y="{700 - h:.0f}" width="70" height="{h:.0f}" rx="12" fill="{(a, b)[i % 2]}" opacity="{rnd.uniform(.10, .2):.2f}"/>', i))
+    elif kind == "confetti":
+        for i in range(26):
+            x, y, s, rot = rnd.uniform(0, 1200), rnd.uniform(0, 700), rnd.uniform(10, 34), rnd.uniform(0, 90)
+            shape = rnd.choice(["rect", "circle", "tri"])
+            col = (a, b)[i % 2]
+            if shape == "rect":
+                el = f'<rect x="{x:.0f}" y="{y:.0f}" width="{s:.0f}" height="{s * .45:.0f}" rx="3" fill="{col}" transform="rotate({rot:.0f} {x:.0f} {y:.0f})"/>'
+            elif shape == "circle":
+                el = f'<circle cx="{x:.0f}" cy="{y:.0f}" r="{s / 2:.0f}" fill="{col}"/>'
+            else:
+                el = f'<path d="M{x:.0f} {y:.0f}l{s:.0f} 0l{-s / 2:.0f} {-s:.0f}z" fill="{col}"/>'
+            out.append(g(f'<g opacity="{rnd.uniform(.22, .45):.2f}">{el}</g>', i))
+    elif kind == "dots":
+        out.append('<g opacity=".18">' + "".join(f'<circle cx="{x}" cy="{y}" r="2.4" fill="{a}"/>' for x in range(20, 1200, 40) for y in range(20, 700, 40)) + '</g>')
+        for i in range(4):
+            out.append(g(f'<circle cx="{rnd.uniform(0, 1200):.0f}" cy="{rnd.uniform(0, 700):.0f}" r="{rnd.uniform(70, 180):.0f}" fill="{(b, a)[i % 2]}" opacity=".16"/>', i))
+    elif kind == "arcs":
+        for i in range(7):
+            cx, cy, r = rnd.uniform(0, 1200), rnd.uniform(200, 900), rnd.uniform(140, 420)
+            out.append(g(f'<circle cx="{cx:.0f}" cy="{cy:.0f}" r="{r:.0f}" fill="none" stroke="{(a, b)[i % 2]}" stroke-width="{rnd.uniform(10, 34):.0f}" opacity="{rnd.uniform(.12, .24):.2f}"/>', i))
+    else:  # stripes
+        for i in range(8):
+            y = rnd.uniform(-100, 700)
+            out.append(g(f'<rect x="-200" y="{y:.0f}" width="1700" height="{rnd.uniform(18, 60):.0f}" fill="{(a, b)[i % 2]}" opacity="{rnd.uniform(.10, .2):.2f}" transform="rotate(-14 600 350)"/>', i))
+    return ('<svg class="motif" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">' + "".join(out) + "</svg>")
+
+
 env = Environment(loader=FileSystemLoader(os.path.join(ROOT, "engine", "templates")), autoescape=select_autoescape(["html"]))
 
 
@@ -112,6 +166,9 @@ def main():
         src = os.path.join(ROOT, "engine", "static", f)
         if os.path.exists(src):
             shutil.copy(src, os.path.join(SITE, "assets", f))
+    fdst = os.path.join(SITE, "assets", "fonts")
+    shutil.rmtree(fdst, ignore_errors=True)
+    shutil.copytree(os.path.join(ROOT, "engine", "static", "fonts"), fdst)
     by_slug = {p["slug"]: p for p in cat}
     built, pages = [], 0
     for st in cfg["stores"]:
@@ -119,10 +176,26 @@ def main():
         base_url = f"{cfg['site_base']}/{st['path']}"
         prods = [p for p in cat if p["store"] == st["id"] and p["validation"].get("ok") and p["images"].get("cover")]
         for p in prods:
-            p["file_mb"] = f"{(p['file']['bytes'] or 0) / 1e6:.1f}"
+            n = p["file"]["bytes"] or 0
+            p["file_mb"] = f"{n / 1e6:.1f} MB" if n >= 1e6 else f"{max(1, round(n / 1e3))} KB"
             p["bundle_items"] = [by_slug[s] for s in p.get("bundle_of", [])]
             p["bundle_sum"] = sum(b["price_zar"] for b in p["bundle_items"])
-        ctx = dict(legal=cfg["legal"], store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"])}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
+        for p in prods:
+            if p["bundle_items"] and p["bundle_sum"]:
+                p["saving_pct"] = round(100 * (1 - p["price_zar"] / p["bundle_sum"]))
+        singles = [p for p in prods if not p["bundle_items"]]
+        hero = []
+        for p in singles:  # three covers from different categories for the 3D fan
+            if p["category"] not in [h["category"] for h in hero]:
+                hero.append(p)
+            if len(hero) == 3:
+                break
+        font, motif = STYLE.get(st["id"], ("outfit", "soft"))
+        fmts = sorted({f.split(" ")[0] for p in prods for f in p["formats"]})
+        bundle = next((p for p in prods if p["bundle_items"]), None)
+        ctx = dict(legal=cfg["legal"], hero=hero, bundle=bundle, formats_all=fmts,
+                   store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"]), "display": font, "motif": motif_svg(st),
+                          "n_products": len(prods)}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
         out = os.path.join(SITE, st["path"])
         os.makedirs(os.path.join(out, "p"), exist_ok=True)
         cats = [c for c in st["categories"] if any(p["category"] == c for p in prods)]
@@ -141,18 +214,12 @@ def main():
         for key, (title, body) in policies(st, cfg["legal"]).items():
             open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(title=title, body=body, **ctx))
             pages += 1
-        built.append({"id": st["id"], "path": st["path"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"], "accent": st["accent"]})
-    # network index (staging helper) + dashboard shell
-    idx = ["<!doctype html><html lang=en><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'>",
-           "<meta name=robots content='noindex,nofollow'><title>Commerce network</title>",
-           "<style>body{font:16px/1.5 system-ui,sans-serif;margin:0;background:#f6f7f9;color:#111}main{max-width:900px;margin:0 auto;padding:32px 16px}"
-           "a.s{display:block;background:#fff;border:1px solid #ddd;border-left:6px solid var(--c);border-radius:10px;padding:16px;margin:12px 0;text-decoration:none;color:#111}"
-           "@media (prefers-color-scheme:dark){body{background:#111;color:#eee}a.s{background:#1b1b1b;border-color:#333;color:#eee}}</style><main>",
-           "<h1>Storefronts (staging)</h1><p>Pre-launch test environment. Payments use the PayFast sandbox.</p>"]
-    for b in built:
-        idx.append(f"<a class=s style='--c:{b['accent']}' href='/{b['path']}/'><strong>{html.escape(b['name'])}</strong> — {html.escape(b['tagline'])}<br><small>{b['products']} products</small></a>")
-    idx.append("<p><a href='/dashboard/'>Owner dashboard</a></p></main>")
-    open(os.path.join(SITE, "index.html"), "w").write("\n".join(idx))
+        built.append({"id": st["id"], "path": st["path"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"],
+                      "accent": st["accent"], "accent2": st["accent2"], "ink": st["ink"], "light": st["light"],
+                      "cover": (hero[0]["images"]["cover"] if hero else None)})
+    # network home: a showcase of every studio
+    open(os.path.join(SITE, "index.html"), "w").write(env.get_template("network.html").render(
+        stores=built, total=sum(b["products"] for b in built), staging=staging, legal=cfg["legal"], api=cfg["api_base"]))
     dash_t = env.get_template("dashboard.html")
     os.makedirs(os.path.join(SITE, "dashboard"), exist_ok=True)
     catalogue_public = [{k: p[k] for k in ("id", "store", "slug", "name", "category", "price_zar", "price_usd", "formats")} |

@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mlinjana Capital Studios: 20 independent template studios</title>
+<meta name="description" content="Twenty small studios making printable planners, spreadsheets and templates for families, teachers, trades, food businesses, landlords and more.">
+{% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
+<link rel="preload" href="/assets/fonts/bricolagegrotesque.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<style>:root{--ink:#16141f;--accent:#e4572e;--accent2:#f2b880;--light:#f7f4ef;--line:#e5ded3;--btn:#16141f}</style>
+<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__rv)document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})},2500)</script>
+</head>
+<body data-display="bricolage" data-api="{{ api }}" data-store="network">
+{% if staging %}<div class="banner"><span class="pulse" aria-hidden="true"></span>Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% endif %}
+<main id="main">
+<section class="hero net-hero">
+  <div class="wrap">
+    <p class="eyebrow rv"><span class="dot" aria-hidden="true"></span>{{ stores|length }} studios · {{ total }} original products</p>
+    <h1 class="split">{% for w in "Tools for the work of everyday life.".split(' ') %}<span class="w" style="--i:{{ loop.index0 }}">{{ w }}</span> {% endfor %}</h1>
+    <p class="lead rv" style="--d:.25s">Each studio makes printable planners, spreadsheets and templates for one kind of person: parents, teachers, landlords, chefs, tradespeople, caregivers and more. Pick yours.</p>
+  </div>
+</section>
+<section class="wrap shop">
+  <div class="net-grid">
+  {% for s in stores %}
+    <a class="net-card rv" data-tilt href="/{{ s.path }}/" style="--d:{{ (loop.index0 % 3) * 0.06 }}s;--c1:{{ s.accent }};--c2:{{ s.accent2 }};--ci:{{ s.ink }};--cl:{{ s.light }}">
+      <div class="net-media">{% if s.cover %}<img src="/{{ s.cover }}" alt="" loading="lazy" width="600" height="450">{% endif %}<span class="glare" aria-hidden="true"></span></div>
+      <div class="net-body">
+        <span class="net-mark" aria-hidden="true">{{ s.name[0] }}</span>
+        <div><h2>{{ s.name }}</h2><p>{{ s.tagline }}</p><span class="net-count">{{ s.products }} products →</span></div>
+      </div>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+</main>
+<footer class="foot"><div class="wrap foot-legal" style="border:0;margin:0">
+  {% if legal %}<p>All studios are trading names of {{ legal.operator }} (reg. {{ legal.registration.split(' ')[0] }}), {{ legal.address }}.</p>{% endif %}
+  <p><a href="/dashboard/">Owner dashboard</a></p>
+</div></footer>
+<script src="/assets/site.js" defer></script>
+</body>
+</html>

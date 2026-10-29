@@ -6,49 +6,109 @@
 <script type="application/ld+json">{{ jsonld|safe }}</script>
 {% endblock %}
 {% block main %}
-<div class="wrap product">
-  <div class="gallery">
-    <img id="main-img" src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }}" width="1200" height="900">
-    <div class="thumbs">
-      {% for im in [p.images.cover] + p.images.previews %}<button data-src="{{ root }}{{ im }}" aria-label="Show image {{ loop.index }}"><img src="{{ root }}{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
+<section class="p-hero">
+  {{ store.motif|safe }}
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb"><a href="{{ base }}/">{{ store.name }}</a><span aria-hidden="true">/</span><a href="{{ base }}/#shop">{{ p.category }}</a></nav>
+  </div>
+  <div class="wrap product">
+    <div class="gallery">
+      <button class="doc3d" type="button" data-tilt-scene data-open-lightbox aria-label="Open large preview of {{ p.name }}">
+        <span class="doc-pages" aria-hidden="true"></span>
+        <img id="main-img" src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }}: cover and preview" width="1200" height="900">
+        <span class="shine" aria-hidden="true"></span>
+        <span class="zoom-hint" aria-hidden="true">Tap to zoom</span>
+      </button>
+      <div class="thumbs" role="group" aria-label="Preview images">
+        {% for im in [p.images.cover] + p.images.previews %}<button type="button" class="{% if loop.first %}on{% endif %}" data-src="{{ root }}{{ im }}" data-index="{{ loop.index0 }}" aria-label="Show preview {{ loop.index }}"><img src="{{ root }}{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
+      </div>
+    </div>
+    <div class="info">
+      <div class="info-card">
+        <div class="cat">{{ p.category }}</div>
+        <h1>{{ p.name }}</h1>
+        <p class="lead">{{ p.summary }}</p>
+        <div class="price-row">
+          <span class="price big">R{{ p.price_zar }}</span>
+          {% if p.saving_pct %}<span class="badge badge-save">Save {{ p.saving_pct }}% vs R{{ p.bundle_sum }}</span>{% endif %}
+        </div>
+        <div class="fmts">{% for f in p.formats %}<span class="fmt-chip fmt-{{ f.split(' ')[0]|lower }}">{{ f }}</span>{% endfor %}</div>
+        <form id="buy" class="buy" novalidate>
+          <label for="email">Email for your download link</label>
+          <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
+          <button type="submit" class="btn btn-lg btn-buy">Buy &amp; download · R{{ p.price_zar }}</button>
+          <p id="buy-msg" class="msg" role="status"></p>
+        </form>
+        <ul class="trust">
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Instant download · {{ p.file_mb }} ZIP</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>Secure checkout on PayFast</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Help within 14 days if a file doesn't work</li>
+          <li><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Use for yourself and one business · <a href="{{ base }}/licence.html">licence</a></li>
+        </ul>
+      </div>
     </div>
   </div>
-  <div class="info">
-    <div class="cat">{{ p.category }} · {{ p.id }}</div>
-    <h1>{{ p.name }}</h1>
-    <p class="lead">{{ p.summary }}</p>
-    <div class="price big">R{{ p.price_zar }}</div>
-    <form id="buy" class="buy" novalidate>
-      <label for="email">Email for your download link</label>
-      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
-      <button type="submit" class="btn">Buy &amp; download</button>
-      <p class="small muted">You'll pay securely on PayFast, then return here to download. {{ p.file_mb }} MB ZIP · {{ p.formats|join(', ') }}</p>
-      <p id="buy-msg" class="msg" role="status"></p>
-    </form>
-    {% if p.cancelled_note %}{% endif %}
-    <ul class="facts">
-      <li><strong>Formats:</strong> {{ p.formats|join(', ') }}</li>
-      <li><strong>Works with:</strong> {{ p.compat }}</li>
-      <li><strong>Licence:</strong> personal use + one business. <a href="{{ base }}/licence.html">Details</a></li>
+</section>
+
+<div class="wrap p-body">
+  <section class="block rv">
+    <h2>What's inside</h2>
+    <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
+  </section>
+  {% if p.bundle_items %}
+  <section class="block rv">
+    <h2>In this bundle</h2>
+    <div class="mini-grid">
+    {% for b in p.bundle_items %}<a class="mini" href="{{ base }}/p/{{ b.slug }}.html" data-tilt><img src="{{ root }}{{ b.images.cover }}" alt="" loading="lazy" width="600" height="450"><span>{{ b.name }}</span><em>R{{ b.price_zar }} on its own</em></a>{% endfor %}
+    </div>
+    <p class="muted">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}, including a bundle-only bonus.</p>
+  </section>
+  {% endif %}
+  <section class="block rv">
+    <h2>How to use it</h2>
+    <ol class="numbered">{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol>
+  </section>
+  <section class="block two rv">
+    <div>
+      <h2>Works with</h2>
+      <p>{{ p.compat }}</p>
+    </div>
+    <div>
+      <h2>Files in the download</h2>
+      <ul class="files">{% for f in p.file.contents %}<li>{{ f }}</li>{% endfor %}</ul>
+    </div>
+  </section>
+  <section class="block rv">
+    <h2>Good to know</h2>
+    <ul class="notes">
+      <li>This is a digital product. Nothing physical is shipped.</li>
+      <li>Download links work 5 times over 7 days. Keep a copy of your files.</li>
+      {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
+      {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter. Check the results before relying on them; it isn't financial, tax or legal advice.</li>{% endif %}
+      {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice. Adapt them to the rules where you live and work.</li>{% endif %}
+      <li>Problems with a file? See <a href="{{ base }}/refunds.html">refunds &amp; support</a>.</li>
     </ul>
+  </section>
+</div>
+
+{% if related %}
+<section class="wrap related">
+  <div class="section-head rv"><h2>You might also like</h2></div>
+  <div class="grid small">
+  {% for r in related %}<a class="card rv" style="--d:{{ loop.index0 * 0.06 }}s" href="{{ base }}/p/{{ r.slug }}.html" data-tilt><div class="card-media"><img src="{{ root }}{{ r.images.cover }}" alt="" loading="lazy" width="600" height="450"><span class="glare" aria-hidden="true"></span></div><div class="body"><div class="cat">{{ r.category }}</div><h3>{{ r.name }}</h3><div class="row"><span class="price">R{{ r.price_zar }}</span></div></div></a>{% endfor %}
   </div>
+</section>
+{% endif %}
+
+<div class="buybar" id="buybar" hidden>
+  <div class="buybar-in"><div><strong>{{ p.name }}</strong><span>R{{ p.price_zar }} · instant download</span></div><button type="button" class="btn" data-goto-buy>Buy now</button></div>
 </div>
-<div class="wrap details">
-  <section><h2>What's included</h2><ul>{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul></section>
-  {% if p.bundle_items %}<section><h2>Products in this bundle</h2><ul>{% for b in p.bundle_items %}<li><a href="{{ base }}/p/{{ b.slug }}.html">{{ b.name }}</a> (R{{ b.price_zar }} on its own)</li>{% endfor %}</ul>
-    <p class="muted">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}.</p></section>{% endif %}
-  <section><h2>How to use</h2><ol>{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol></section>
-  <section><h2>Files in the download</h2><ul class="files">{% for f in p.file.contents %}<li>{{ f }}</li>{% endfor %}</ul></section>
-  <section><h2>Please note</h2><ul>
-    <li>This is a digital product — nothing physical is shipped.</li>
-    <li>Download links are valid for 7 days and 5 downloads. Keep a copy of your files.</li>
-    {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
-    {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter — check results before relying on them. It is not financial, tax or legal advice.</li>{% endif %}
-    {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice. Adapt them to the rules where you live and work.</li>{% endif %}
-    <li>Problems with a file? See our <a href="{{ base }}/refunds.html">refund &amp; support policy</a>.</li>
-  </ul></section>
-</div>
-{% if related %}<div class="wrap"><h2>You might also like</h2><div class="grid small">
-{% for r in related %}<a class="card" href="{{ base }}/p/{{ r.slug }}.html"><img src="{{ root }}{{ r.images.cover }}" alt="" loading="lazy" width="600" height="450"><div class="body"><h3>{{ r.name }}</h3><span class="price">R{{ r.price_zar }}</span></div></a>{% endfor %}
-</div></div>{% endif %}
+
+<dialog class="lightbox" id="lightbox" aria-label="Product previews">
+  <button type="button" class="lb-close" data-lb-close aria-label="Close">×</button>
+  <button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Previous image">‹</button>
+  <img id="lb-img" src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }} preview" width="1200" height="900">
+  <button type="button" class="lb-nav lb-next" data-lb-next aria-label="Next image">›</button>
+  <p class="lb-count" id="lb-count"></p>
+</dialog>
 {% endblock %}

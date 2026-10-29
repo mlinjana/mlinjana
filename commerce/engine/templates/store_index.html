@@ -1,14 +1,48 @@
 {% extends "base.html" %}
-{% block title %}{{ store.name }} — {{ store.tagline }}{% endblock %}
+{% block title %}{{ store.name }}: {{ store.tagline }}{% endblock %}
 {% block main %}
-<section class="hero"><div class="wrap">
-  <h1>{{ store.tagline }}</h1>
-  <p class="lead">{{ store.proposition }}</p>
-  <ul class="ticks"><li>Instant download after payment</li><li>{{ products|length }} original products</li><li>Personal &amp; single-business licence</li></ul>
-</div></section>
+<section class="hero">
+  {{ store.motif|safe }}
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow rv"><span class="dot" aria-hidden="true"></span>{{ store.n_products }} original products · instant download</p>
+      <h1 class="split">{% for w in store.tagline.split(' ') %}<span class="w" style="--i:{{ loop.index0 }}">{{ w }}</span> {% endfor %}</h1>
+      <p class="lead rv" style="--d:.25s">{{ store.proposition }}</p>
+      <div class="cta-row rv" style="--d:.35s">
+        <a class="btn btn-lg" href="#shop">Shop the collection <span aria-hidden="true">→</span></a>
+        {% if bundle %}<a class="btn btn-ghost btn-lg" href="{{ base }}/p/{{ bundle.slug }}.html">Bundle: save {{ bundle.saving_pct }}%</a>{% endif %}
+      </div>
+      <ul class="fmt-row rv" style="--d:.45s" aria-label="File formats">
+        {% for f in formats_all %}<li class="fmt-chip fmt-{{ f|lower }}">{{ f }}</li>{% endfor %}
+        {% set apps = [] %}{% if 'XLSX' in formats_all %}{% set _ = apps.append('Excel & Google Sheets') %}{% endif %}{% if 'DOCX' in formats_all %}{% set _ = apps.append('Word & Google Docs') %}{% endif %}{% if 'PDF' in formats_all %}{% set _ = apps.append('print at home') %}{% endif %}
+        <li class="fmt-note">{{ apps|join(' · ') }}</li>
+      </ul>
+    </div>
+    {% if hero %}
+    <div class="fan-wrap" aria-hidden="true">
+      <div class="fan" data-tilt-scene>
+        {% for h in hero %}<a class="sheet s{{ loop.index }}" href="{{ base }}/p/{{ h.slug }}.html" tabindex="-1"><img src="{{ root }}{{ h.images.cover }}" alt="" width="600" height="450" {% if loop.index > 1 %}loading="lazy"{% endif %}><span class="shine"></span></a>{% endfor %}
+        <div class="fan-shadow"></div>
+      </div>
+    </div>
+    {% endif %}
+  </div>
+</section>
+
+<div class="ticker" aria-hidden="true"><div class="ticker-track">
+  {% for _ in range(2) %}{% for c in categories %}<span>{{ c }}</span><span class="star">✦</span>{% endfor %}{% endfor %}
+</div></div>
+
 <section id="shop" class="wrap shop">
-  <div class="filters">
-    <input id="q" type="search" placeholder="Search {{ products|length }} products…" aria-label="Search products">
+  <div class="section-head rv">
+    <h2>The collection</h2>
+    <p class="muted">{{ store.n_products }} products, each made for one job and made to be used.</p>
+  </div>
+  <div class="filters rv">
+    <label class="search"><span class="visually-hidden">Search products</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Search {{ store.n_products }} products…">
+    </label>
     <div class="chips" role="group" aria-label="Categories">
       <button class="chip on" data-cat="">All</button>
       {% for c in categories %}<button class="chip" data-cat="{{ c }}">{{ c }}</button>{% endfor %}
@@ -16,16 +50,59 @@
   </div>
   <div class="grid" id="grid">
   {% for p in products %}
-    <a class="card" href="{{ base }}/p/{{ p.slug }}.html" data-cat="{{ p.category }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.tags|join(' '))|lower }}">
-      <img src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }} cover" loading="lazy" width="600" height="450">
+    <a class="card rv" style="--d:{{ (loop.index0 % 4) * 0.06 }}s" href="{{ base }}/p/{{ p.slug }}.html" data-tilt data-cat="{{ p.category }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.tags|join(' '))|lower }}">
+      <div class="card-media">
+        <img src="{{ root }}{{ p.images.cover }}" alt="{{ p.name }}: cover and preview" loading="lazy" width="600" height="450">
+        {% if p.saving_pct %}<span class="badge badge-save">Bundle · save {{ p.saving_pct }}%</span>{% endif %}
+        <span class="glare" aria-hidden="true"></span>
+      </div>
       <div class="body">
         <div class="cat">{{ p.category }}</div>
         <h3>{{ p.name }}</h3>
-        <div class="row"><span class="price">R{{ p.price_zar }}</span><span class="fmt">{{ p.formats|join(' · ') }}</span></div>
+        <p class="card-sum">{{ p.summary }}</p>
+        <div class="row"><span class="price">R{{ p.price_zar }}</span><span class="fmts">{% for f in p.formats %}{% set k = f.split(' ')[0] %}{% if loop.first or k != p.formats[loop.index0 - 1].split(' ')[0] %}<span class="fmt-chip sm fmt-{{ k|lower }}">{{ k }}</span>{% endif %}{% endfor %}</span></div>
       </div>
     </a>
   {% endfor %}
   </div>
-  <p id="empty" class="muted" hidden>No products match your search.</p>
+  <p id="empty" class="muted empty" hidden>No products match your search. Try a shorter word.</p>
+</section>
+
+<section class="how">
+  <div class="wrap">
+    <div class="section-head rv"><h2>How it works</h2><p class="muted">From checkout to your files in about a minute.</p></div>
+    <ol class="steps">
+      <li class="step rv"><span class="step-n">1</span><h3>Choose a product</h3><p>Every page shows the real pages and sheets inside, the formats and what it works with.</p></li>
+      <li class="step rv" style="--d:.08s"><span class="step-n">2</span><h3>Pay securely</h3><p>Checkout runs on PayFast's secure payment page. We never see or store your card details.</p></li>
+      <li class="step rv" style="--d:.16s"><span class="step-n">3</span><h3>Download instantly</h3><p>Your download appears as soon as payment is confirmed: 5 downloads, valid for 7 days.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section class="maker wrap">
+  <div class="maker-card rv">
+    <div class="maker-mark" aria-hidden="true">{{ store.name[0] }}</div>
+    <div>
+      <h2>Who makes {{ store.name }}</h2>
+      <p>{{ store.name }} is a small studio of {{ legal.operator if legal else 'its owner' }}, based in South Africa. Made for {{ store.audience|lower }}.</p>
+      <ul class="checks">
+        {% if 'XLSX' in formats_all %}<li>Every spreadsheet is recalculated and checked for formula errors before release</li>{% endif %}
+        {% if 'PDF' in formats_all %}<li>Printables come in both A4 and US Letter</li>{% endif %}
+        {% if 'DOCX' in formats_all %}<li>Word templates open in Word, Google Docs and LibreOffice</li>{% endif %}
+        <li>Help within 14 days if a file doesn't work for you</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="wrap faq">
+  <div class="section-head rv"><h2>Questions</h2></div>
+  <div class="faq-list">
+    <details class="rv"><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, the download button appears on the confirmation page. The link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
+    <details class="rv"><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each product page lists exactly what it works with.</p></details>
+    <details class="rv"><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="{{ base }}/licence.html">licence</a>.</p></details>
+    <details class="rv"><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="{{ base }}/refunds.html">refunds &amp; support</a>.</p></details>
+    <details class="rv"><summary>Is paying safe?</summary><p>Payment happens on PayFast's secure page. We only receive confirmation that you paid, never your card or bank details.</p></details>
+  </div>
 </section>
 {% endblock %}
