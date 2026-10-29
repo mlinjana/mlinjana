@@ -2,13 +2,8 @@
  "cleanUrls": false,
  "redirects": [
   {
-   "source": "/",
-   "destination": "https://mlinjanastudios.com/",
-   "permanent": true
-  },
-  {
-   "source": "/:path*",
-   "destination": "https://mlinjanastudios.com/:path*",
+   "source": "/(.*)",
+   "destination": "https://mlinjanastudios.com/$1",
    "permanent": true
   }
  ],
