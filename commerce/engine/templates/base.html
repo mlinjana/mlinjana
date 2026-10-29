@@ -8,6 +8,7 @@
 <meta name="theme-color" content="{{ store.ink }}">
 {% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="preload" href="{{ root }}assets/fonts/{{ store.display or 'outfit' }}.woff2" as="font" type="font/woff2" crossorigin>
+{% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
 <link rel="stylesheet" href="{{ root }}assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='{{ store.accent|urlencode }}'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>{{ store.name[0] }}</text></svg>">
 <style>:root{--ink:{{ store.ink }};--accent:{{ store.accent }};--accent2:{{ store.accent2 }};--light:{{ store.light }};--line:{{ store.line }};--btn:{{ store.accent_btn }}}</style>

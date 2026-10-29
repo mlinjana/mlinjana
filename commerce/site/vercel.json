@@ -4,7 +4,7 @@
  "redirects": [
   {
    "source": "/:path*",
-   "destination": "https://commerce-network.mlinjanachuma.workers.dev/:path*",
+   "destination": "https://mlinjanastudios.com/:path*",
    "permanent": true
   }
  ],

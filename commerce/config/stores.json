@@ -1,6 +1,6 @@
 {
   "api_base": "https://mrunxptxavtompcnegkr.supabase.co/functions/v1",
-  "site_base": "https://commerce-network.mlinjanachuma.workers.dev",
+  "site_base": "https://mlinjanastudios.com",
   "mode": "staging",
   "legal": {
     "operator": "Mlinjana Capital Holdings (Pty) Ltd",
@@ -21,7 +21,8 @@
         "primary": "plaindaystudio.com",
         "alt": "plainday.co",
         "checked_on": "2026-10-28",
-        "status": "available at check time \u2014 not purchased"
+        "status": "available at check time \u2014 not purchased",
+        "network_domain": "mlinjanastudios.com/plainday/"
       },
       "categories": [
         "Daily & weekly planners",
@@ -51,7 +52,8 @@
         "primary": "bizwright.co",
         "alt": "bizwrighttemplates.com",
         "checked_on": "2026-10-28",
-        "status": "available at check time \u2014 not purchased (bizwright.com is taken)"
+        "status": "available at check time \u2014 not purchased (bizwright.com is taken)",
+        "network_domain": "mlinjanastudios.com/bizwright/"
       },
       "categories": [
         "Business planning",
@@ -81,7 +83,8 @@
         "primary": "abacuslane.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time \u2014 not purchased"
+        "status": "available at check time \u2014 not purchased",
+        "network_domain": "mlinjanastudios.com/abacus/"
       },
       "categories": [
         "Personal finance",
@@ -110,7 +113,8 @@
         "primary": "littlerhythmprintables.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/littlerhythm/"
       },
       "categories": [],
       "font": "serif",
@@ -132,7 +136,8 @@
         "primary": "chalklineteacher.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/chalkline/"
       },
       "categories": [],
       "font": "sans",
@@ -154,7 +159,8 @@
         "primary": "ivorylaneplanning.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/ivorylane/"
       },
       "categories": [],
       "font": "serif",
@@ -176,7 +182,8 @@
         "primary": "steadyrepstudio.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed. Renamed from 'Pacebook Fitness' (too close to Facebook)."
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed. Renamed from 'Pacebook Fitness' (too close to Facebook).",
+        "network_domain": "mlinjanastudios.com/steadyrep/"
       },
       "categories": [],
       "font": "sans",
@@ -201,7 +208,8 @@
         "primary": "doorpostlandlord.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/doorpost/"
       },
       "categories": [],
       "font": "sans",
@@ -223,7 +231,8 @@
         "primary": "gigsmithtools.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/gigsmith/"
       },
       "categories": [],
       "font": "sans",
@@ -245,7 +254,8 @@
         "primary": "goodledgertools.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/goodledger/"
       },
       "categories": [],
       "font": "sans",
@@ -267,7 +277,8 @@
         "primary": "misesheets.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/mise/"
       },
       "categories": [],
       "font": "serif",
@@ -289,7 +300,8 @@
         "primary": "shopkeepersdesk.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/shopkeeper/"
       },
       "categories": [],
       "font": "sans",
@@ -311,7 +323,8 @@
         "primary": "careerladderkit.com",
         "alt": "jobtrailkit.com",
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/careerladder/"
       },
       "categories": [],
       "font": "serif",
@@ -333,7 +346,8 @@
         "primary": "trowelandtally.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/trowel/"
       },
       "categories": [],
       "font": "sans",
@@ -355,7 +369,8 @@
         "primary": "kindkeepcare.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/kindkeep/"
       },
       "categories": [],
       "font": "serif",
@@ -377,7 +392,8 @@
         "primary": "furrowbook.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/furrowbook/"
       },
       "categories": [],
       "font": "serif",
@@ -399,7 +415,8 @@
         "primary": "petkeepbook.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/petkeep/"
       },
       "categories": [],
       "font": "serif",
@@ -421,7 +438,8 @@
         "primary": "chairbookstudio.com",
         "alt": "brushandbookings.com",
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/chairbook/"
       },
       "categories": [],
       "font": "sans",
@@ -443,7 +461,8 @@
         "primary": "fleetwisetools.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/fleetwise/"
       },
       "categories": [],
       "font": "sans",
@@ -465,7 +484,8 @@
         "primary": "hearthschoolplanner.com",
         "alt": null,
         "checked_on": "2026-10-28",
-        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed"
+        "status": "available at check time (.com availability check only) \u2014 not purchased; trademark search still needed",
+        "network_domain": "mlinjanastudios.com/hearthschool/"
       },
       "categories": [],
       "font": "serif",
@@ -478,7 +498,7 @@
     }
   ],
   "hosting": {
-    "live": "Cloudflare Workers static assets (worker 'commerce-network'), deployed with wrangler",
-    "legacy": "https://commerce-network.vercel.app \u2014 redirects everything to site_base"
+    "live": "Cloudflare Worker 'commerce-network' with custom domains mlinjanastudios.com and www.mlinjanastudios.com (registered 2026-10-29 at Cloudflare Registrar)",
+    "legacy": "https://commerce-network.mlinjanachuma.workers.dev still serves the same site (canonical tags point to the domain); https://commerce-network.vercel.app redirects to site_base"
   }
 }

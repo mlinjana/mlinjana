@@ -204,22 +204,22 @@ def main():
                 cats.append(p["category"])
         if any(p["category"] == "Bundles" for p in prods) and "Bundles" not in cats:
             cats.append("Bundles")
-        open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(products=prods, categories=cats, **ctx))
+        open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(products=prods, categories=cats, canonical=base_url + "/", **ctx))
         pages += 1
         for p in prods:
             related = [r for r in prods if r["category"] == p["category"] and r["id"] != p["id"]][:4]
             open(os.path.join(out, "p", p["slug"] + ".html"), "w").write(env.get_template("product.html").render(
-                p=p, related=related, jsonld=jsonld(p, st, f"{base_url}/p/{p['slug']}.html"), **ctx))
+                p=p, related=related, jsonld=jsonld(p, st, f"{base_url}/p/{p['slug']}.html"), canonical=f"{base_url}/p/{p['slug']}.html", **ctx))
             pages += 1
         for key, (title, body) in policies(st, cfg["legal"]).items():
-            open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(title=title, body=body, **ctx))
+            open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(title=title, body=body, canonical=f"{base_url}/{key}.html", **ctx))
             pages += 1
         built.append({"id": st["id"], "path": st["path"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"],
                       "accent": st["accent"], "accent2": st["accent2"], "ink": st["ink"], "light": st["light"],
                       "cover": (hero[0]["images"]["cover"] if hero else None)})
     # network home: a showcase of every studio
     open(os.path.join(SITE, "index.html"), "w").write(env.get_template("network.html").render(
-        stores=built, total=sum(b["products"] for b in built), staging=staging, legal=cfg["legal"], api=cfg["api_base"]))
+        stores=built, total=sum(b["products"] for b in built), staging=staging, legal=cfg["legal"], api=cfg["api_base"], canonical=cfg["site_base"] + "/"))
     dash_t = env.get_template("dashboard.html")
     os.makedirs(os.path.join(SITE, "dashboard"), exist_ok=True)
     catalogue_public = [{k: p[k] for k in ("id", "store", "slug", "name", "category", "price_zar", "price_usd", "formats")} |

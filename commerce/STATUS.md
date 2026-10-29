@@ -1,6 +1,6 @@
 # STATUS — 2026-10-28
 
-**Overall:** 20 stores with 30 products each (600 products) are built, validated and **deployed on Cloudflare** at https://commerce-network.mlinjanachuma.workers.dev. The old Vercel address redirects there. Payments run in the PayFast **sandbox**, so no real sales are possible yet.
+**Overall:** 20 stores with 30 products each (600 products) are built, validated and **deployed on Cloudflare** at **https://mlinjanastudios.com** (own domain since 29 Oct). The old Vercel address redirects there. Payments run in the PayFast **sandbox**, so no real sales are possible yet.
 
 | Phase | State | Verified evidence |
 |---|---|---|

@@ -3,6 +3,11 @@
 {
   "name": "commerce-network",
   "compatibility_date": "2026-10-28",
+  "workers_dev": true,
+  "routes": [
+    { "pattern": "mlinjanastudios.com", "custom_domain": true },
+    { "pattern": "www.mlinjanastudios.com", "custom_domain": true }
+  ],
   "assets": {
     "directory": "./site",
     "not_found_handling": "404-page"
