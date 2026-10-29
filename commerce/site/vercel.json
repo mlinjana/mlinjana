@@ -1,7 +1,11 @@
 {
  "cleanUrls": false,
- "trailingSlash": false,
  "redirects": [
+  {
+   "source": "/",
+   "destination": "https://mlinjanastudios.com/",
+   "permanent": true
+  },
   {
    "source": "/:path*",
    "destination": "https://mlinjanastudios.com/:path*",

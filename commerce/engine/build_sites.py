@@ -239,8 +239,11 @@ def main():
     redirects = [{"source": f"/{old}/:rest*", "destination": f"/{st['path']}/:rest*", "permanent": True}
                  for st in cfg["stores"] for old in st.get("former_paths", [])]
     if "vercel.app" not in cfg["site_base"]:  # the Vercel copy is retired: send every request to the live host
-        redirects = [{"source": "/:path*", "destination": cfg["site_base"] + "/:path*", "permanent": True}]
-    json.dump({"cleanUrls": False, "trailingSlash": False, "redirects": redirects,
+        # "/" needs its own rule: ":path*" doesn't match the bare root, which Vercel then serves from cache
+        redirects = [{"source": "/", "destination": cfg["site_base"] + "/", "permanent": True},
+                     {"source": "/:path*", "destination": cfg["site_base"] + "/:path*", "permanent": True}]
+    retired = "vercel.app" not in cfg["site_base"]
+    json.dump({"cleanUrls": False, **({} if retired else {"trailingSlash": False}), "redirects": redirects,
                "headers": [{"source": "/(.*)", "headers": [
                    {"key": "Content-Security-Policy", "value": csp}, {"key": "X-Content-Type-Options", "value": "nosniff"},
                    {"key": "Referrer-Policy", "value": "strict-origin-when-cross-origin"}, {"key": "X-Frame-Options", "value": "DENY"},
