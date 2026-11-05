@@ -1,0 +1,16 @@
+{
+  "_note": "Marketplace departments (the top category bar). Each store belongs to exactly one; order here is the order on the site.",
+  "departments": [
+    {"slug": "planners-home", "name": "Planners & Home", "stores": ["plainday", "littlerhythm", "kindkeep"]},
+    {"slug": "small-business", "name": "Small Business", "stores": ["bizwright", "shopkeeper", "gigsmith", "mise", "chairbook", "trowel", "fleetwise"]},
+    {"slug": "money", "name": "Money & Budgeting", "stores": ["abacus"]},
+    {"slug": "teaching", "name": "Teaching & Homeschool", "stores": ["chalkline", "hearthschool"]},
+    {"slug": "weddings-events", "name": "Weddings & Events", "stores": ["ivorylane"]},
+    {"slug": "fitness", "name": "Fitness & Training", "stores": ["pacebook"]},
+    {"slug": "property", "name": "Landlords & Property", "stores": ["doorpost"]},
+    {"slug": "careers", "name": "Careers & Jobs", "stores": ["careerladder"]},
+    {"slug": "garden-farm", "name": "Garden & Farm", "stores": ["furrowbook"]},
+    {"slug": "pets", "name": "Pets", "stores": ["petkeep"]},
+    {"slug": "community", "name": "Nonprofits & Clubs", "stores": ["goodledger"]}
+  ]
+}

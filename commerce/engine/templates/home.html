@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% from "_macros.html" import grid, steps %}
+{% block title %}{{ market.name }}: printable planners, templates and spreadsheets{% endblock %}
+{% block main %}
+<section class="home-hero">
+  <div class="wrap">
+    <h1>Templates, planners and spreadsheets for the jobs of everyday life</h1>
+    <p class="lead">{{ market.total }} instant downloads from {{ shops_list|length }} specialist studios, made by one small South African company. Ready to print or fill in.</p>
+    <ul class="circles">
+      {% for d in depts %}<li><a href="/c/{{ d.slug }}/"><span class="circle"><img src="/{{ d.cover }}" alt="" loading="{{ 'eager' if loop.index < 7 else 'lazy' }}" width="600" height="450"></span><span class="circle-lbl">{{ d.name }}</span></a></li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+<section class="wrap rowsec">
+  <div class="sec-head"><h2>Picks from every studio</h2><a href="/search.html">See all {{ market.total }}</a></div>
+  {{ grid(picks, shops) }}
+</section>
+
+<section class="wrap rowsec">
+  <div class="sec-head"><h2>Bundles: save up to {{ best_saving }}%</h2><a href="/search.html?bundles=1">All bundles</a></div>
+  <p class="sec-sub">Each bundle is several of a studio's downloads together, plus a bundle-only bonus file.</p>
+  {{ grid(bundles, shops) }}
+</section>
+
+<section class="wrap rowsec">
+  <div class="sec-head"><h2>Under R50</h2><a href="/search.html?max=50">See {{ under50_total }} items</a></div>
+  {{ grid(under50, shops) }}
+</section>
+
+<section class="wrap rowsec" id="studios">
+  <div class="sec-head"><h2>Shop the studios</h2></div>
+  <p class="sec-sub">Each studio focuses on one kind of work, from salons and building sites to classrooms and family life.</p>
+  <div class="shops">
+  {% for s in shops_list %}
+    <a class="shop-card" href="/{{ s.path }}/" style="--s-accent:{{ s.accent }};--s-accent2:{{ s.accent2 }};--s-ink:{{ s.ink }};--s-light:{{ s.light }}">
+      <span class="shop-strip">{% for c in s.covers %}<img src="/{{ c }}" alt="" loading="lazy" width="600" height="450">{% endfor %}</span>
+      <span class="shop-id"><span class="avatar" data-display="{{ s.display }}" aria-hidden="true">{{ s.name[0] }}</span><span><strong>{{ s.name }}</strong><em>{{ s.tagline }}</em><small>{{ s.products }} items</small></span></span>
+    </a>
+  {% endfor %}
+  </div>
+</section>
+
+<section class="how" id="how">
+  <div class="wrap">
+    <div class="sec-head"><h2>How buying works</h2></div>
+    {{ steps() }}
+  </div>
+</section>
+{% endblock %}

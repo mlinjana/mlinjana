@@ -3,50 +3,63 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>{% block title %}{{ store.name }}{% endblock %}</title>
-<meta name="description" content="{% block desc %}{{ store.tagline }}{% endblock %}">
-<meta name="theme-color" content="{{ store.ink }}">
+<title>{% block title %}{{ market.name }}{% endblock %}</title>
+<meta name="description" content="{% block desc %}{{ market.tagline }}{% endblock %}">
+<meta name="theme-color" content="#ffffff">
 {% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
-<link rel="preload" href="{{ root }}assets/fonts/{{ store.display or 'outfit' }}.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
-<link rel="stylesheet" href="{{ root }}assets/site.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='{{ store.accent|urlencode }}'/><text x='16' y='22' font-size='16' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='700'>{{ store.name[0] }}</text></svg>">
-<style>:root{--ink:{{ store.ink }};--accent:{{ store.accent }};--accent2:{{ store.accent2 }};--light:{{ store.light }};--line:{{ store.line }};--btn:{{ store.accent_btn }}}</style>
-<script>document.documentElement.classList.add("js");setTimeout(function(){if(!window.__rv)document.querySelectorAll(".rv").forEach(function(e){e.classList.add("in")})},2500)</script>
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%231f5f4a'/><text x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='700'>M</text></svg>">
+{% if store %}<style>:root{--s-ink:{{ store.ink }};--s-accent:{{ store.accent }};--s-accent2:{{ store.accent2 }};--s-light:{{ store.light }}}</style>{% endif %}
 {% block head %}{% endblock %}
 </head>
-<body data-store="{{ store.id }}" data-display="{{ store.display or 'outfit' }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
+<body data-store="{{ store.id if store else 'network' }}" data-display="{{ store.display if store else 'fraunces' }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
 <a class="skip" href="#main">Skip to content</a>
-{% if staging %}<div class="banner"><span class="pulse" aria-hidden="true"></span>Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% endif %}
-<header class="top"><div class="wrap">
-  <a class="brand" href="{{ base }}/"><span class="mark" aria-hidden="true">{{ store.name[0] }}</span><span>{{ store.name }}</span></a>
-  <nav aria-label="Main"><a href="{{ base }}/#shop">Shop</a><a href="{{ base }}/#faq">FAQ</a><a class="nav-cta" href="{{ base }}/contact.html">Help</a></nav>
-</div></header>
+{% if staging %}<div class="banner">Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% endif %}
+<header class="top">
+  <div class="wrap top-row">
+    <a class="logo" href="/" aria-label="{{ market.name }} home">Mlinjana<span>Studios</span></a>
+    <form class="hsearch" action="/search.html" method="get" role="search">
+      <label class="visually-hidden" for="hq">Search all downloads</label>
+      <input id="hq" name="q" type="search" placeholder="What are you looking for?" autocomplete="off">
+      <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
+    </form>
+    <nav class="hnav" aria-label="Your account">
+      <a class="icon-link" href="/favourites.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span class="lbl">Favourites</span><b class="fav-count" hidden></b></a>
+      <a class="icon-link" href="/help/contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg><span class="lbl">Help</span></a>
+    </nav>
+  </div>
+  <nav class="depts" aria-label="Departments"><div class="wrap">
+    {% for d in depts %}<a href="/c/{{ d.slug }}/"{% if dept and dept.slug == d.slug %} aria-current="page"{% endif %}>{{ d.name }}</a>{% endfor %}
+  </div></nav>
+</header>
 <main id="main">{% block main %}{% endblock %}</main>
 <footer class="foot">
+  <div class="foot-trust"><div class="wrap">
+    <p><strong>Instant downloads.</strong> Files appear straight after payment.</p>
+    <p><strong>Secure checkout.</strong> Payments run on PayFast.</p>
+    <p><strong>Real help.</strong> A file doesn't work? We fix it or refund you within 14 days.</p>
+  </div></div>
   <div class="wrap foot-grid">
     <div class="foot-brand">
-      <a class="brand" href="{{ base }}/"><span class="mark" aria-hidden="true">{{ store.name[0] }}</span><span>{{ store.name }}</span></a>
-      <p class="muted">{{ store.tagline }}</p>
+      <a class="logo light" href="/">Mlinjana<span>Studios</span></a>
+      <p>{{ market.tagline }}</p>
     </div>
     <div>
-      <h2 class="foot-h">Shop with confidence</h2>
-      <ul class="foot-list">
-        <li>Instant download after payment</li>
-        <li>Secure checkout with PayFast. We never see your card</li>
-        <li>Help within 14 days if a file doesn't work</li>
-      </ul>
+      <h2 class="foot-h">Shop</h2>
+      <ul class="foot-list">{% for d in depts %}<li><a href="/c/{{ d.slug }}/">{{ d.name }}</a></li>{% endfor %}</ul>
     </div>
     <div>
-      <h2 class="foot-h">Information</h2>
-      <ul class="foot-list"><li><a href="{{ base }}/refunds.html">Refunds &amp; support</a></li><li><a href="{{ base }}/licence.html">Licence</a></li><li><a href="{{ base }}/terms.html">Terms</a></li><li><a href="{{ base }}/privacy.html">Privacy</a></li><li><a href="{{ base }}/contact.html">Contact</a></li></ul>
+      <h2 class="foot-h">Help</h2>
+      <ul class="foot-list"><li><a href="/#how">How buying works</a></li><li><a href="/help/refunds.html">Refunds &amp; support</a></li><li><a href="/help/licence.html">Licence</a></li><li><a href="/help/terms.html">Terms</a></li><li><a href="/help/privacy.html">Privacy</a></li><li><a href="/help/contact.html">Contact us</a></li></ul>
     </div>
   </div>
   <div class="wrap foot-legal">
-    {% if legal %}<p>{{ store.name }} is a trading name of {{ legal.operator }} (reg. {{ legal.registration.split(' ')[0] }}), {{ legal.address }}.</p>{% endif %}
+    {% if legal %}<p>{% if store %}{{ store.name }} and {% endif %}{{ market.name }} are trading names of {{ legal.operator }} (reg. {{ legal.registration.split(' ')[0] }}), {{ legal.address }}.</p>{% endif %}
     <p>Prices in South African rand (ZAR). International cards are converted by your bank.</p>
   </div>
 </footer>
-<script src="{{ root }}assets/site.js" defer></script>
+<script src="/assets/site.js" defer></script>
 </body>
 </html>

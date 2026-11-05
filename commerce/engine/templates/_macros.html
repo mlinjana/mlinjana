@@ -1,0 +1,45 @@
+{# Product card, Etsy-style: image, favourite heart, title, shop, price. site.js renders the same markup for search and favourites. #}
+{% macro card(p, shop, show_shop=True) -%}
+<article class="card" data-id="{{ p.id }}" data-cat="{{ p.category }}" data-price="{{ p.price_zar }}" data-fmt="{{ p.fmt_keys|join(' ') }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.category ~ ' ' ~ p.tags|join(' '))|lower }}">
+  <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}.html">
+    <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="tag-save">Bundle · save {{ p.saving_pct }}%</span>{% endif %}</div>
+    <h3 class="card-title">{{ p.name }}</h3>
+  </a>
+  {% if show_shop %}<p class="card-shop"><a href="/{{ shop.path }}/">{{ shop.name }}</a></p>{% endif %}
+  <p class="card-price"><strong>R{{ p.price_zar }}</strong>{% if p.saving_pct %} <s>R{{ p.bundle_sum }}</s> <span class="off">({{ p.saving_pct }}% off)</span>{% endif %}</p>
+  <p class="card-meta">Digital download · {{ p.fmt_keys|join(', ') }}</p>
+  <button type="button" class="fav" data-fav="{{ p.id }}" aria-pressed="false" aria-label="Save {{ p.name }} to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+</article>
+{%- endmacro %}
+
+{% macro grid(items, shops, show_shop=True, cls="") -%}
+<div class="grid {{ cls }}">{% for p in items %}{{ card(p, shops[p.store], show_shop) }}{% endfor %}</div>
+{%- endmacro %}
+
+{# Filter bar for shop and department pages: category chips, format, price and sort. Works on #grid. #}
+{% macro filters(categories, total, placeholder) -%}
+<div class="filters">
+  <label class="search in-page"><span class="visually-hidden">Search these items</span>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+    <input id="q" type="search" placeholder="{{ placeholder }}" autocomplete="off">
+  </label>
+  <div class="chips" role="group" aria-label="Categories">
+    <button type="button" class="chip on" data-cat="">All <span>{{ total }}</span></button>
+    {% for c, n in categories %}<button type="button" class="chip" data-cat="{{ c }}">{{ c }} <span>{{ n }}</span></button>{% endfor %}
+  </div>
+  <div class="selects">
+    <label><span class="visually-hidden">File type</span><select id="f-fmt"><option value="">Any file type</option><option value="PDF">PDF printable</option><option value="XLSX">Spreadsheet (XLSX)</option><option value="DOCX">Word (DOCX)</option></select></label>
+    <label><span class="visually-hidden">Price</span><select id="f-price"><option value="">Any price</option><option value="50">Under R50</option><option value="100">Under R100</option><option value="200">Under R200</option></select></label>
+    <label><span class="visually-hidden">Sort by</span><select id="f-sort"><option value="">Sort: Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
+    <span class="count" id="count" aria-live="polite"></span>
+  </div>
+</div>
+{%- endmacro %}
+
+{% macro steps() -%}
+<ol class="steps">
+  <li><span class="step-n">1</span><div><h3>Choose a download</h3><p>Every listing shows the real pages inside, the file types and what it works with.</p></div></li>
+  <li><span class="step-n">2</span><div><h3>Pay on PayFast</h3><p>Checkout happens on PayFast's secure payment page. We never see your card or bank details.</p></div></li>
+  <li><span class="step-n">3</span><div><h3>Download straight away</h3><p>Your files appear as soon as payment is confirmed: 5 downloads over 7 days.</p></div></li>
+</ol>
+{%- endmacro %}

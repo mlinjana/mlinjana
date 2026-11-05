@@ -153,10 +153,27 @@ def jsonld(p, store, url):
                                   "availability": "https://schema.org/InStock", "url": url}}).replace("</", "<\\/")
 
 
+MARKET = {"name": "Mlinjana Studios",
+          "tagline": "Printable planners, templates and spreadsheets for the jobs of everyday life, from specialist studios in South Africa."}
+FMT_ORDER = ["PDF", "XLSX", "DOCX"]
+
+
+def rotate(items, key, n):
+    """A deterministic, page-specific selection (so neighbouring pages don't all show the same picks)."""
+    if not items:
+        return []
+    k = sum(map(ord, key)) % len(items)
+    return (items[k:] + items[:k])[:n]
+
+
 def main():
     cfg = json.load(open(os.path.join(ROOT, "config", "stores.json")))
     cat = json.load(open(os.path.join(ROOT, "catalogue", "products.json")))["products"]
+    depts = json.load(open(os.path.join(ROOT, "config", "departments.json")))["departments"]
     staging = cfg["mode"] != "live"
+    dept_of = {sid: d for d in depts for sid in d["stores"]}
+    missing = [st["id"] for st in cfg["stores"] if st["id"] not in dept_of]
+    assert not missing, f"stores without a department in config/departments.json: {missing}"
     for d in os.listdir(SITE) if os.path.isdir(SITE) else []:
         if d not in ("assets",):
             p = os.path.join(SITE, d)
@@ -170,56 +187,121 @@ def main():
     shutil.rmtree(fdst, ignore_errors=True)
     shutil.copytree(os.path.join(ROOT, "engine", "static", "fonts"), fdst)
     by_slug = {p["slug"]: p for p in cat}
-    built, pages = [], 0
+
+    # ---- pass 1: prepare every store and product (pages link across stores, so all data comes first) ----
+    shops, prods_of = {}, {}
     for st in cfg["stores"]:
-        st = dict(st)
-        base_url = f"{cfg['site_base']}/{st['path']}"
         prods = [p for p in cat if p["store"] == st["id"] and p["validation"].get("ok") and p["images"].get("cover")]
         for p in prods:
             n = p["file"]["bytes"] or 0
             p["file_mb"] = f"{n / 1e6:.1f} MB" if n >= 1e6 else f"{max(1, round(n / 1e3))} KB"
             p["bundle_items"] = [by_slug[s] for s in p.get("bundle_of", [])]
             p["bundle_sum"] = sum(b["price_zar"] for b in p["bundle_items"])
+            p["fmt_keys"] = [k for k in FMT_ORDER if any(f.split(" ")[0] == k for f in p["formats"])]
+            p["free"] = bool(p.get("free"))
+            if p["free"]:
+                p["free_url"] = f"/free/{p['slug']}.zip"
         for p in prods:
             if p["bundle_items"] and p["bundle_sum"]:
                 p["saving_pct"] = round(100 * (1 - p["price_zar"] / p["bundle_sum"]))
         singles = [p for p in prods if not p["bundle_items"]]
         hero = []
-        for p in singles:  # three covers from different categories for the 3D fan
+        for p in singles:  # covers from different categories, for the shop strip and department circles
             if p["category"] not in [h["category"] for h in hero]:
                 hero.append(p)
             if len(hero) == 3:
                 break
         font, motif = STYLE.get(st["id"], ("outfit", "soft"))
-        fmts = sorted({f.split(" ")[0] for p in prods for f in p["formats"]})
+        prods_of[st["id"]] = prods
+        shops[st["id"]] = {**st, "display": font, "motif": motif_svg(st), "n_products": len(prods), "products": len(prods),
+                           "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"]), "hero": hero,
+                           "covers": [h["images"]["cover"] for h in hero], "url": f"{cfg['site_base']}/{st['path']}",
+                           "dept": dept_of[st["id"]]}
+    allp = [p for st in cfg["stores"] for p in prods_of[st["id"]]]
+    total = len(allp)
+    for d in depts:
+        d["cover"] = shops[d["stores"][0]]["covers"][0]
+        d["count"] = sum(len(prods_of[s]) for s in d["stores"])
+    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, depts=depts, shops=shops,
+                  market={**MARKET, "total": total})
+
+    def cat_counts(items, order=None):
+        counts = {}
+        for p in items:
+            counts[p["category"]] = counts.get(p["category"], 0) + 1
+        keys = [c for c in (order or []) if c in counts] + [c for c in counts if c not in (order or []) and c != "Bundles"]
+        if "Bundles" in counts and "Bundles" not in keys:
+            keys.append("Bundles")
+        return [(c, counts[c]) for c in keys]
+
+    # ---- pass 2: shop, product and policy pages ----
+    pages = 0
+    for st in cfg["stores"]:
+        shop, prods = shops[st["id"]], prods_of[st["id"]]
+        base_url = shop["url"]
         bundle = next((p for p in prods if p["bundle_items"]), None)
-        ctx = dict(legal=cfg["legal"], hero=hero, bundle=bundle, formats_all=fmts,
-                   store={**st, "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"]), "display": font, "motif": motif_svg(st),
-                          "n_products": len(prods)}, api=cfg["api_base"], staging=staging, base=f"/{st['path']}", root="/")
+        fmts = sorted({f.split(" ")[0] for p in prods for f in p["formats"]})
+        ctx = dict(common, store=shop, dept=shop["dept"], bundle=bundle, formats_all=fmts, base=f"/{st['path']}", root="/")
         out = os.path.join(SITE, st["path"])
         os.makedirs(os.path.join(out, "p"), exist_ok=True)
-        cats = [c for c in st["categories"] if any(p["category"] == c for p in prods)]
-        for p in prods:  # categories not listed in config appear in product order, bundles last
-            if p["category"] not in cats and p["category"] != "Bundles":
-                cats.append(p["category"])
-        if any(p["category"] == "Bundles" for p in prods) and "Bundles" not in cats:
-            cats.append("Bundles")
-        open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(products=prods, categories=cats, canonical=base_url + "/", **ctx))
+        open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(
+            products=prods, categories=cat_counts(prods, st["categories"]), canonical=base_url + "/", **ctx))
         pages += 1
+        same_dept = [q for q in allp if shops[q["store"]]["dept"] is shop["dept"] and q["store"] != st["id"]]
         for p in prods:
-            related = [r for r in prods if r["category"] == p["category"] and r["id"] != p["id"]][:4]
+            others = [r for r in prods if r["id"] != p["id"]]
+            more = [r for r in others if r["category"] == p["category"]][:4]
+            more += rotate([r for r in others if r not in more], p["id"], 8 - len(more))
+            alike = rotate(same_dept or [q for q in allp if q["store"] != st["id"]], p["id"], 8)
             open(os.path.join(out, "p", p["slug"] + ".html"), "w").write(env.get_template("product.html").render(
-                p=p, related=related, jsonld=jsonld(p, st, f"{base_url}/p/{p['slug']}.html"), canonical=f"{base_url}/p/{p['slug']}.html", **ctx))
+                p=p, more=more, alike=alike, jsonld=jsonld(p, st, f"{base_url}/p/{p['slug']}.html"),
+                canonical=f"{base_url}/p/{p['slug']}.html", **ctx))
             pages += 1
         for key, (title, body) in policies(st, cfg["legal"]).items():
-            open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(title=title, body=body, canonical=f"{base_url}/{key}.html", **ctx))
+            open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(
+                title=title, body=body, canonical=f"{base_url}/{key}.html", **ctx))
             pages += 1
-        built.append({"id": st["id"], "path": st["path"], "name": st["name"], "url": base_url, "products": len(prods), "tagline": st["tagline"],
-                      "accent": st["accent"], "accent2": st["accent2"], "ink": st["ink"], "light": st["light"],
-                      "cover": (hero[0]["images"]["cover"] if hero else None)})
-    # network home: a showcase of every studio
-    open(os.path.join(SITE, "index.html"), "w").write(env.get_template("network.html").render(
-        stores=built, total=sum(b["products"] for b in built), staging=staging, legal=cfg["legal"], api=cfg["api_base"], canonical=cfg["site_base"] + "/"))
+
+    # ---- marketplace pages: home, departments, search, favourites, help ----
+    first_single = [next((p for p in prods_of[s] if not p["bundle_items"]), None) for d in depts for s in d["stores"]]
+    picks = [p for p in first_single if p][:10]
+    bundles = sorted([p for p in allp if p.get("saving_pct")], key=lambda p: -p["saving_pct"])
+    under50 = [p for p in allp if p["price_zar"] < 50]
+    under50_pick, seen = [], set()
+    for p in under50:  # one per shop, so the row shows the range
+        if p["store"] not in seen:
+            under50_pick.append(p); seen.add(p["store"])
+    shops_list = [shops[s] for d in depts for s in d["stores"]]
+    open(os.path.join(SITE, "index.html"), "w").write(env.get_template("home.html").render(
+        store=None, picks=picks, bundles=bundles[:10], best_saving=bundles[0]["saving_pct"] if bundles else 0,
+        under50=under50_pick[:10], under50_total=len(under50), shops_list=shops_list, canonical=cfg["site_base"] + "/", **common))
+    for d in depts:
+        items = [p for s in d["stores"] for p in prods_of[s]]
+        out = os.path.join(SITE, "c", d["slug"])
+        os.makedirs(out, exist_ok=True)
+        open(os.path.join(out, "index.html"), "w").write(env.get_template("department.html").render(
+            store=None, dept=d, products=items, dept_count=len(items), dept_shops=[shops[s] for s in d["stores"]],
+            categories=cat_counts(items), canonical=f"{cfg['site_base']}/c/{d['slug']}/", **common))
+    for name in ("search", "favourites"):
+        open(os.path.join(SITE, name + ".html"), "w").write(env.get_template(name + ".html").render(
+            store=None, canonical=f"{cfg['site_base']}/{name}.html", **common))
+    os.makedirs(os.path.join(SITE, "help"), exist_ok=True)
+    for key, (title, body) in policies({"name": MARKET["name"]}, cfg["legal"]).items():
+        if key != "thanks":
+            open(os.path.join(SITE, "help", key + ".html"), "w").write(env.get_template("page.html").render(
+                store=None, title=title, body=body, canonical=f"{cfg['site_base']}/help/{key}.html", **common))
+    # search index for /search.html and /favourites.html (short keys keep it small)
+    json.dump({"shops": {s["id"]: {"n": s["name"], "p": s["path"]} for s in shops.values()},
+               "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}.html",
+                          "img": "/" + p["images"]["cover"], "c": p["category"], "d": shops[p["store"]]["dept"]["slug"],
+                          "p": p["price_zar"], "b": p["bundle_sum"] if p.get("saving_pct") else 0, "o": p.get("saving_pct", 0),
+                          "f": p["fmt_keys"], "fr": 1 if p["free"] else 0,
+                          "t": " ".join([p["name"], p["category"], p["summary"], " ".join(p["tags"]), shops[p["store"]]["name"]]).lower()}
+                         for p in allp]},
+              open(os.path.join(SITE, "assets", "catalogue.json"), "w"), separators=(",", ":"))
+    built = [{"id": s["id"], "path": s["path"], "name": s["name"], "url": s["url"], "products": s["products"], "tagline": s["tagline"],
+              "accent": s["accent"], "accent2": s["accent2"], "ink": s["ink"], "light": s["light"],
+              "cover": s["covers"][0] if s["covers"] else None} for s in shops.values()]
     dash_t = env.get_template("dashboard.html")
     os.makedirs(os.path.join(SITE, "dashboard"), exist_ok=True)
     catalogue_public = [{k: p[k] for k in ("id", "store", "slug", "name", "category", "price_zar", "price_usd", "formats")} |
@@ -230,7 +312,8 @@ def main():
     open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n" if staging else
                                                       "User-agent: *\nAllow: /\nDisallow: /dashboard/\nSitemap: " + cfg["site_base"] + "/sitemap.xml\n")
     if not staging:
-        urls = [f"{cfg['site_base']}/{st['path']}/p/{p['slug']}.html" for st in cfg["stores"] for p in cat if p["store"] == st["id"]]
+        urls = ([cfg["site_base"] + "/"] + [f"{cfg['site_base']}/c/{d['slug']}/" for d in depts] + [s["url"] + "/" for s in shops.values()] +
+                [f"{cfg['site_base']}/{shops[p['store']]['path']}/p/{p['slug']}.html" for p in allp])
         open(os.path.join(SITE, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
                                                           "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
     csp = ("default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; "
@@ -257,7 +340,7 @@ def main():
         "/assets/p/*\n  Cache-Control: public, max-age=604800\n")
     open(os.path.join(SITE, "_redirects"), "w").write(
         "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])))
-    print(f"built {pages} store pages for {len(built)} stores:", ", ".join(f"{b['name']} ({b['products']})" for b in built))
+    print(f"built {pages} shop pages for {len(built)} shops in {len(depts)} departments ({total} products):", ", ".join(f"{b['name']} ({b['products']})" for b in built))
 
 
 if __name__ == "__main__":

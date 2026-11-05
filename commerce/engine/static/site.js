@@ -2,6 +2,9 @@
   const body = document.body;
   const API = body.dataset.api, STORE = body.dataset.store, PID = body.dataset.product || null;
   const $ = (s) => document.querySelector(s);
+  const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
 
   // privacy-light analytics: no cookies, no IPs stored — page type, path, product and referrer host only
   try {
@@ -11,67 +14,157 @@
     navigator.sendBeacon ? navigator.sendBeacon(API + "/store-api/track", data) : fetch(API + "/store-api/track", { method: "POST", body: data, keepalive: true });
   } catch (e) {}
 
-  // catalogue search + category filter
-  const grid = $("#grid");
-  if (grid) {
+  // ---- favourites: kept in this browser only (localStorage), never sent anywhere ----
+  const FKEY = "mls:favs";
+  const getFavs = () => { try { return JSON.parse(localStorage.getItem(FKEY) || "[]"); } catch (e) { return []; } };
+  const setFavs = (a) => { try { localStorage.setItem(FKEY, JSON.stringify(a)); } catch (e) {} };
+  const syncFavs = () => {
+    const f = new Set(getFavs());
+    $$("[data-fav]").forEach((b) => {
+      const on = f.has(b.dataset.fav);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+      const t = b.querySelector("span");
+      if (t) t.textContent = on ? "Saved to favourites" : "Add to favourites";
+    });
+    $$(".fav-count").forEach((c) => { c.hidden = !f.size; c.textContent = f.size; });
+  };
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("[data-fav]");
+    if (!b) return;
+    e.preventDefault();
+    const id = b.dataset.fav, f = getFavs(), i = f.indexOf(id);
+    i >= 0 ? f.splice(i, 1) : f.unshift(id);
+    setFavs(f.slice(0, 500));
+    syncFavs();
+    if (!calm) { b.classList.remove("pop"); void b.offsetWidth; b.classList.add("pop"); }
+    if ($("#fav-page") && i >= 0) renderFavs();
+  });
+  syncFavs();
+
+  // ---- card markup for search results and favourites (same as the server-rendered cards) ----
+  const heart = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>';
+  const cardHTML = (p, shops) => {
+    const s = shops[p.s] || { n: "", p: "" };
+    return `<article class="card" data-id="${esc(p.i)}"><a class="card-link" href="${esc(p.u)}"><div class="card-media"><img src="${esc(p.img)}" alt="${esc(p.n)}" loading="lazy" width="600" height="450">` +
+      (p.o ? `<span class="tag-save">Bundle · save ${p.o}%</span>` : "") + `</div><h3 class="card-title">${esc(p.n)}</h3></a>` +
+      `<p class="card-shop"><a href="/${esc(s.p)}/">${esc(s.n)}</a></p>` +
+      `<p class="card-price">${p.fr ? "<strong>Free</strong>" : `<strong>R${p.p}</strong>` + (p.o ? ` <s>R${p.b}</s> <span class="off">(${p.o}% off)</span>` : "")}</p>` +
+      `<p class="card-meta">Digital download · ${esc(p.f.join(", "))}</p>` +
+      `<button type="button" class="fav" data-fav="${esc(p.i)}" aria-pressed="false" aria-label="Save ${esc(p.n)} to favourites">${heart}</button></article>`;
+  };
+  let catalogue = null;
+  const loadCatalogue = async () => catalogue || (catalogue = await fetch("/assets/catalogue.json").then((r) => r.json()));
+
+  // ---- filters on shop and department pages (server-rendered #grid) ----
+  const grid = $("#shop .grid");
+  if (grid && $("#q")) {
+    const cards = $$(".card", grid);
+    cards.forEach((c, k) => { c.dataset.k = k; });
     let cat = "";
-    const q = $("#q");
     const apply = () => {
-      const t = (q.value || "").toLowerCase().trim();
+      const t = ($("#q").value || "").toLowerCase().trim().split(/\s+/).filter(Boolean);
+      const fmt = $("#f-fmt").value, max = +$("#f-price").value || 0, sort = $("#f-sort").value;
       let n = 0;
-      grid.querySelectorAll(".card").forEach((c) => {
-        const show = (!cat || c.dataset.cat === cat) && (!t || t.split(/\s+/).every((w) => c.dataset.text.includes(w)));
+      cards.forEach((c) => {
+        const show = (!cat || c.dataset.cat === cat) && (!fmt || c.dataset.fmt.split(" ").includes(fmt)) &&
+          (!max || +c.dataset.price < max) && t.every((w) => c.dataset.text.includes(w));
         c.hidden = !show;
         if (show) n++;
       });
+      const order = [...cards].sort((a, b) => sort === "lo" ? a.dataset.price - b.dataset.price : sort === "hi" ? b.dataset.price - a.dataset.price : a.dataset.k - b.dataset.k);
+      order.forEach((c) => grid.appendChild(c));
       $("#empty").hidden = n > 0;
+      $("#count").textContent = `${n} ${n === 1 ? "item" : "items"}`;
     };
-    q.addEventListener("input", apply);
-    document.querySelectorAll(".chip").forEach((b) => b.addEventListener("click", () => {
-      document.querySelectorAll(".chip").forEach((x) => x.classList.remove("on"));
+    $("#q").addEventListener("input", apply);
+    ["#f-fmt", "#f-price", "#f-sort"].forEach((s) => $(s).addEventListener("change", apply));
+    $$(".chip").forEach((b) => b.addEventListener("click", () => {
+      $$(".chip").forEach((x) => x.classList.remove("on"));
       b.classList.add("on");
       cat = b.dataset.cat;
       apply();
     }));
+    apply();
   }
 
-  // ---- motion & 3D (skipped entirely when the visitor prefers reduced motion) ----
-  window.__rv = 1;
-  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const fine = matchMedia("(hover: hover) and (pointer: fine)").matches;
-  const rv = document.querySelectorAll(".rv");
-  if (calm || !("IntersectionObserver" in window)) rv.forEach((e) => e.classList.add("in"));
-  else {
-    const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target); } }), { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
-    rv.forEach((e) => io.observe(e));
-  }
-  const tilt = (el, max, scene) => {
-    let raf = 0;
-    el.addEventListener("pointermove", (ev) => {
-      const r = el.getBoundingClientRect(), x = (ev.clientX - r.left) / r.width, y = (ev.clientY - r.top) / r.height;
-      cancelAnimationFrame(raf);
-      raf = requestAnimationFrame(() => {
-        el.style.setProperty("--ry", `${(x - 0.5) * max * 2 + (scene ? -10 : 0)}deg`);
-        el.style.setProperty("--rx", `${(0.5 - y) * max * 2 + (scene ? 6 : 0)}deg`);
-        el.querySelectorAll(".glare,.shine").forEach((g) => { g.style.setProperty("--gx", `${x * 100}%`); g.style.setProperty("--gy", `${y * 100}%`); });
-      });
+  // ---- site-wide search page ----
+  const sp = $("#search-page");
+  if (sp) {
+    const params = new URLSearchParams(location.search);
+    const state = { q: (params.get("q") || "").trim(), dept: params.get("dept") || "", max: params.get("max") || "", fmt: params.get("fmt") || "",
+      bundles: params.get("bundles") === "1", free: params.get("free") === "1", sort: params.get("sort") || "", shown: 48 };
+    $("#hq").value = state.q;
+    const setRadio = (name, v) => { const el = sp.querySelector(`input[name=${name}][value="${v}"]`); if (el) el.checked = true; };
+    setRadio("dept", state.dept); setRadio("max", state.max); setRadio("fmt", state.fmt);
+    sp.querySelector("input[name=bundles]").checked = state.bundles;
+    sp.querySelector("input[name=free]").checked = state.free;
+    $("#s-sort").value = state.sort;
+    const stem = (w) => (w.length > 3 && w.endsWith("s") ? w.slice(0, -1) : w);
+    const render = async () => {
+      const { items, shops } = await loadCatalogue();
+      const words = state.q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 1).map(stem);
+      let res = items.filter((p) => (!state.dept || p.d === state.dept) && (!state.max || p.p < +state.max) && (!state.fmt || p.f.includes(state.fmt)) &&
+        (!state.bundles || p.o) && (!state.free || p.fr));
+      let loose = false;
+      if (words.length) {
+        const score = (p) => { const n = p.n.toLowerCase(); let s = 0; for (const w of words) { if (n.includes(w)) s += 3; else if (p.t.includes(w)) s += 1; else return -1; } return s; };
+        let hit = res.map((p) => [score(p), p]).filter(([s]) => s >= 0);
+        if (!hit.length) { // no item has every word: show items matching any of them
+          loose = true;
+          hit = res.map((p) => [words.filter((w) => p.t.includes(w)).length, p]).filter(([s]) => s > 0);
+        }
+        res = hit.sort((a, b) => b[0] - a[0]).map(([, p]) => p);
+      }
+      if (state.sort === "lo") res.sort((a, b) => a.p - b.p);
+      if (state.sort === "hi") res.sort((a, b) => b.p - a.p);
+      $("#s-title").textContent = state.q ? `Results for “${state.q}”` : "All downloads";
+      $("#s-count").textContent = `${res.length} ${res.length === 1 ? "item" : "items"}` + (loose ? " matching some of your words" : "");
+      $("#results").innerHTML = res.slice(0, state.shown).map((p) => cardHTML(p, shops)).join("");
+      $("#s-empty").hidden = res.length > 0;
+      $("#s-more").hidden = res.length <= state.shown;
+      syncFavs();
+    };
+    const push = () => {
+      const u = new URLSearchParams();
+      if (state.q) u.set("q", state.q);
+      ["dept", "max", "fmt", "sort"].forEach((k) => state[k] && u.set(k, state[k]));
+      if (state.bundles) u.set("bundles", "1");
+      if (state.free) u.set("free", "1");
+      history.replaceState(null, "", "?" + u.toString());
+      state.shown = 48;
+      render();
+    };
+    sp.addEventListener("change", (e) => {
+      const t = e.target;
+      if (t.type === "radio") state[t.name] = t.value;
+      else if (t.type === "checkbox") state[t.name] = t.checked;
+      else if (t.id === "s-sort") state.sort = t.value;
+      push();
     });
-    el.addEventListener("pointerleave", () => { el.style.removeProperty("--rx"); el.style.removeProperty("--ry"); });
-  };
-  if (!calm && fine) {
-    document.querySelectorAll("[data-tilt]").forEach((el) => tilt(el, 6, false));
-    document.querySelectorAll("[data-tilt-scene]").forEach((el) => tilt(el, 10, true));
+    $("#s-more").addEventListener("click", () => { state.shown += 48; render(); });
+    render().catch(() => { $("#s-count").textContent = "Search couldn't load. Please refresh the page."; });
   }
+
+  // ---- favourites page ----
+  async function renderFavs() {
+    const { items, shops } = await loadCatalogue();
+    const ids = getFavs(), by = new Map(items.map((p) => [p.i, p]));
+    const res = ids.map((i) => by.get(i)).filter(Boolean);
+    $("#results").innerHTML = res.map((p) => cardHTML(p, shops)).join("");
+    $("#s-empty").hidden = res.length > 0;
+    syncFavs();
+  }
+  if ($("#fav-page")) renderFavs();
 
   // ---- product gallery + lightbox ----
-  const thumbs = [...document.querySelectorAll(".thumbs button")];
+  const thumbs = $$(".thumbs button");
   const srcs = thumbs.map((b) => b.dataset.src);
   let cur = 0;
   const show = (i) => {
     if (!srcs.length) return;
     cur = (i + srcs.length) % srcs.length;
     const m = $("#main-img");
-    m.style.opacity = 0.3;
+    m.style.opacity = 0.35;
     m.onload = () => { m.style.opacity = 1; };
     m.src = srcs[cur];
     thumbs.forEach((b, k) => b.classList.toggle("on", k === cur));
@@ -79,9 +172,17 @@
     if (lb) { lb.src = srcs[cur]; $("#lb-count").textContent = `${cur + 1} / ${srcs.length}`; }
   };
   thumbs.forEach((b, k) => b.addEventListener("click", () => show(k)));
+  $$("[data-g-prev]").forEach((b) => b.addEventListener("click", () => show(cur - 1)));
+  $$("[data-g-next]").forEach((b) => b.addEventListener("click", () => show(cur + 1)));
+  const stage = $(".stage");
+  if (stage) {
+    let sx = 0;
+    stage.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) show(cur + (dx < 0 ? 1 : -1)); });
+  }
   const dlg = $("#lightbox");
   if (dlg && dlg.showModal) {
-    document.querySelectorAll("[data-open-lightbox]").forEach((b) => b.addEventListener("click", () => { show(cur); dlg.showModal(); }));
+    $$("[data-open-lightbox]").forEach((b) => b.addEventListener("click", () => { show(cur); dlg.showModal(); }));
     dlg.querySelector("[data-lb-close]").addEventListener("click", () => dlg.close());
     dlg.querySelector("[data-lb-prev]").addEventListener("click", () => show(cur - 1));
     dlg.querySelector("[data-lb-next]").addEventListener("click", () => show(cur + 1));
@@ -93,12 +194,16 @@
   }
 
   // ---- sticky buy bar on phones: visible while the buy box is off screen ----
-  const bar = $("#buybar"), buyBox = $("#buy");
+  const bar = $("#buybar"), buyBox = $("#buy") || $("#free-dl");
   if (bar && buyBox && "IntersectionObserver" in window) {
     bar.hidden = false;
     let seen = false;
     new IntersectionObserver(([e]) => { if (e.isIntersecting) seen = true; bar.classList.toggle("show", !e.isIntersecting && seen); }).observe(buyBox);
-    bar.querySelector("[data-goto-buy]").addEventListener("click", () => { buyBox.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" }); setTimeout(() => $("#email").focus({ preventScroll: true }), calm ? 0 : 450); });
+    bar.querySelector("[data-goto-buy]").addEventListener("click", () => {
+      buyBox.scrollIntoView({ behavior: calm ? "auto" : "smooth", block: "center" });
+      const em = $("#email");
+      if (em) setTimeout(() => em.focus({ preventScroll: true }), calm ? 0 : 450);
+    });
   }
 
   // checkout → PayFast hosted payment page (we never handle card details)
