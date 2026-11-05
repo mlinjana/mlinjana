@@ -3,9 +3,9 @@
 {% block main %}
 <div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a>{% if store %}<span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.name }}</a>{% endif %}<span aria-hidden="true">›</span><span>{{ title }}</span></nav>
-</div>
-<div class="wrap prose">
-<h1>{{ title }}</h1>
-{{ body|safe }}
+  <article class="panel prose">
+    <h1>{{ title }}</h1>
+    {{ body|safe }}
+  </article>
 </div>
 {% endblock %}

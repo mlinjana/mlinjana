@@ -146,6 +146,28 @@ def policies(store, legal):
     }
 
 
+def about_page(legal, n_shops, n_products, depts):
+    e = html.escape
+    return f"""
+<p><strong>Mlinjana Studios</strong> is the online shop of {e(legal['operator'])}, a registered South African company
+(registration {e(legal['registration'].split(' ')[0])}), at {e(legal['address'])}.</p>
+<p>We make practical digital tools: printable planners, spreadsheets and document templates. They're sold through
+{n_shops} specialist studios, each focused on one kind of work or one part of life, from {e(depts[0]['name'].lower())}
+to {e(depts[-1]['name'].lower())}. Today that's {n_products} products.</p>
+<h2>How we make and check our products</h2>
+<ul><li>Every product is built from the ground up for its job, not resold from somewhere else.</li>
+<li>Spreadsheets are recalculated and checked for formula errors before release.</li>
+<li>Printables come in A4 and US Letter; Word templates are checked in Word-compatible software.</li>
+<li>Each listing shows the real pages inside, the file types and what it works with.</li></ul>
+<h2>Our promises</h2>
+<ul><li>No fake reviews, countdown timers or made-up discounts. Bundle savings are calculated against the real prices of the items inside.</li>
+<li>Secure payment on PayFast's page: we never see or store your card details.</li>
+<li>If a file doesn't work as described, contact us within 14 days and we'll fix it or refund you.</li>
+<li>We collect as little personal information as possible. See our <a href="/help/privacy.html">privacy notice</a>.</li></ul>
+<h2>Get in touch</h2>
+<p>Use the <a href="/help/contact.html">contact form</a>. Quote your order number if your message is about an order.</p>"""
+
+
 def jsonld(p, store, url):
     return json.dumps({"@context": "https://schema.org", "@type": "Product", "name": p["name"], "description": p["summary"],
                        "sku": p["id"], "brand": {"@type": "Brand", "name": store["name"]},
@@ -222,8 +244,11 @@ def main():
     for d in depts:
         d["cover"] = shops[d["stores"][0]]["covers"][0]
         d["count"] = sum(len(prods_of[s]) for s in d["stores"])
-    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, depts=depts, shops=shops,
-                  market={**MARKET, "total": total})
+        d["shop_list"] = [{"name": shops[s]["name"], "path": shops[s]["path"]} for s in d["stores"]]
+    import hashlib
+    asset_v = hashlib.sha256(b"".join(open(os.path.join(ROOT, "engine", "static", f), "rb").read() for f in ("site.css", "site.js"))).hexdigest()[:10]
+    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, depts=depts, shops=shops, asset_v=asset_v,
+                  site_base=cfg["site_base"], market={**MARKET, "total": total})
 
     def cat_counts(items, order=None):
         counts = {}
@@ -263,8 +288,16 @@ def main():
             pages += 1
 
     # ---- marketplace pages: home, departments, search, favourites, help ----
+    def mix_shops(store_ids, n):
+        """Round-robin across a department's shops, so a row shows the range rather than one shop."""
+        pools = [[p for p in prods_of[s] if not p["bundle_items"]] for s in store_ids]
+        out = []
+        for k in range(max(map(len, pools)) if pools else 0):
+            out += [pl[k] for pl in pools if k < len(pl)]
+        return out[:n]
+    dept_by = {d["slug"]: d for d in depts}
     first_single = [next((p for p in prods_of[s] if not p["bundle_items"]), None) for d in depts for s in d["stores"]]
-    picks = [p for p in first_single if p][:10]
+    picks = [p for p in first_single if p][:12]
     bundles = sorted([p for p in allp if p.get("saving_pct")], key=lambda p: -p["saving_pct"])
     under50 = [p for p in allp if p["price_zar"] < 50]
     under50_pick, seen = [], set()
@@ -272,24 +305,59 @@ def main():
         if p["store"] not in seen:
             under50_pick.append(p); seen.add(p["store"])
     shops_list = [shops[s] for d in depts for s in d["stores"]]
+    cov = lambda sid, k=0: shops[sid]["covers"][min(k, len(shops[sid]["covers"]) - 1)]
+    sb_min = min(p["price_zar"] for s in dept_by["small-business"]["stores"] for p in prods_of[s])
+    slides = [
+        {"kicker": "Small Business", "title": "Run your business like a pro",
+         "sub": f"Invoices, quotes, cash-flow trackers and business plans, ready in minutes. From R{sb_min}.",
+         "cta": "Shop Small Business", "href": "/c/small-business/", "c1": "#064e3b", "c2": "#0b6b57",
+         "covers": [cov("bizwright", 2), cov("bizwright"), cov("shopkeeper")]},
+        {"kicker": "Bundle deals", "title": f"Save up to {bundles[0]['saving_pct']}% with bundles",
+         "sub": "Several of a studio's best tools plus a bundle-only bonus file, for one price.",
+         "cta": "Shop bundles", "href": "/search.html?bundles=1", "c1": "#111827", "c2": "#334155",
+         "covers": [b["images"]["cover"] for b in bundles[:3]]},
+        {"kicker": "Planners & Home", "title": "Plan a calmer week at home",
+         "sub": "Planners, chore charts, budgets and family organisers to print or fill in.",
+         "cta": "Shop Planners & Home", "href": "/c/planners-home/", "c1": "#7c2d12", "c2": "#b45309",
+         "covers": [cov("plainday"), cov("littlerhythm"), cov("kindkeep")]},
+        {"kicker": "Teaching & Homeschool", "title": "Less admin, more teaching",
+         "sub": "Lesson plans, registers, mark books and homeschool records that save hours every term.",
+         "cta": "Shop Teaching", "href": "/c/teaching/", "c1": "#1e3a8a", "c2": "#2563eb",
+         "covers": [cov("chalkline"), cov("hearthschool"), cov("chalkline", 1)]},
+    ]
+    promos = [
+        {"kicker": "Money & Budgeting", "title": "Take control of your money", "cta": "Shop budgeting tools",
+         "href": "/c/money/", "c1": "#0f766e", "c2": "#115e59", "cover": cov("abacus")},
+        {"kicker": "Weddings & Events", "title": "Plan the big day without the stress", "cta": "Shop wedding planners",
+         "href": "/c/weddings-events/", "c1": "#6b21a8", "c2": "#9d174d", "cover": cov("ivorylane")},
+    ]
+    dept_rows = [{"title": t, "name": dept_by[k]["name"], "href": f"/c/{k}/", "products": mix_shops(dept_by[k]["stores"], 12)}
+                 for k, t in [("small-business", "Small business essentials"), ("planners-home", "Planners & Home"),
+                              ("teaching", "Teaching & Homeschool"), ("money", "Money & Budgeting")]]
     open(os.path.join(SITE, "index.html"), "w").write(env.get_template("home.html").render(
-        store=None, picks=picks, bundles=bundles[:10], best_saving=bundles[0]["saving_pct"] if bundles else 0,
-        under50=under50_pick[:10], under50_total=len(under50), shops_list=shops_list, canonical=cfg["site_base"] + "/", **common))
+        store=None, picks=picks, bundles=bundles[:12], best_saving=bundles[0]["saving_pct"] if bundles else 0,
+        under50=under50_pick[:12], under50_total=len(under50), min_price=min(p["price_zar"] for p in allp),
+        shops_list=shops_list, slides=slides, promos=promos, dept_rows=dept_rows,
+        tile_a=under50_pick[1]["images"]["cover"], tile_b=bundles[1]["images"]["cover"],
+        canonical=cfg["site_base"] + "/", **common))
     for d in depts:
         items = [p for s in d["stores"] for p in prods_of[s]]
         out = os.path.join(SITE, "c", d["slug"])
         os.makedirs(out, exist_ok=True)
         open(os.path.join(out, "index.html"), "w").write(env.get_template("department.html").render(
             store=None, dept=d, products=items, dept_count=len(items), dept_shops=[shops[s] for s in d["stores"]],
+            dept_covers=[shops[s]["covers"][0] for s in d["stores"]][:2] if len(d["stores"]) > 1 else shops[d["stores"][0]]["covers"][:2],
             categories=cat_counts(items), canonical=f"{cfg['site_base']}/c/{d['slug']}/", **common))
     for name in ("search", "favourites"):
         open(os.path.join(SITE, name + ".html"), "w").write(env.get_template(name + ".html").render(
             store=None, canonical=f"{cfg['site_base']}/{name}.html", **common))
     os.makedirs(os.path.join(SITE, "help"), exist_ok=True)
-    for key, (title, body) in policies({"name": MARKET["name"]}, cfg["legal"]).items():
-        if key != "thanks":
-            open(os.path.join(SITE, "help", key + ".html"), "w").write(env.get_template("page.html").render(
-                store=None, title=title, body=body, canonical=f"{cfg['site_base']}/help/{key}.html", **common))
+    pages_global = policies({"name": MARKET["name"]}, cfg["legal"])
+    pages_global["about"] = ("About us", about_page(cfg["legal"], len(shops), total, depts))
+    for key, (title, body) in pages_global.items():
+        out = os.path.join(SITE, "thanks.html") if key == "thanks" else os.path.join(SITE, "help", key + ".html")
+        open(out, "w").write(env.get_template("page.html").render(
+            store=None, title=title, body=body, canonical=f"{cfg['site_base']}/help/{key}.html", **common))
     # search index for /search.html and /favourites.html (short keys keep it small)
     json.dump({"shops": {s["id"]: {"n": s["name"], "p": s["path"]} for s in shops.values()},
                "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}.html",

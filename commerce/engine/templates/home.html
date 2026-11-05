@@ -1,50 +1,82 @@
 {% extends "base.html" %}
-{% from "_macros.html" import grid, steps %}
+{% from "_macros.html" import rail, usps, steps, icon %}
 {% block title %}{{ market.name }}: printable planners, templates and spreadsheets{% endblock %}
 {% block main %}
-<section class="home-hero">
-  <div class="wrap">
-    <h1>Templates, planners and spreadsheets for the jobs of everyday life</h1>
-    <p class="lead">{{ market.total }} instant downloads from {{ shops_list|length }} specialist studios, made by one small South African company. Ready to print or fill in.</p>
-    <ul class="circles">
-      {% for d in depts %}<li><a href="/c/{{ d.slug }}/"><span class="circle"><img src="/{{ d.cover }}" alt="" loading="{{ 'eager' if loop.index < 7 else 'lazy' }}" width="600" height="450"></span><span class="circle-lbl">{{ d.name }}</span></a></li>{% endfor %}
+<div class="wrap home">
+  <section class="hero" aria-label="Featured">
+    <div class="carousel" data-carousel aria-roledescription="carousel">
+      <div class="slides">
+        {% for s in slides %}
+        <a class="slide{% if loop.first %} on{% endif %}" href="{{ s.href }}" style="--c1:{{ s.c1 }};--c2:{{ s.c2 }}" aria-roledescription="slide" aria-label="{{ loop.index }} of {{ slides|length }}: {{ s.title }}"{% if not loop.first %} aria-hidden="true" tabindex="-1"{% endif %}>
+          <div class="slide-copy">
+            <span class="kicker">{{ s.kicker }}</span>
+            <h2>{{ s.title }}</h2>
+            <p>{{ s.sub }}</p>
+            <span class="btn btn-light">{{ s.cta }} <span aria-hidden="true">→</span></span>
+          </div>
+          {% set first_slide = loop.first %}<div class="slide-art" aria-hidden="true">{% for c in s.covers %}<img class="a{{ loop.index }}" src="/{{ c }}" alt="" width="600" height="450"{% if not first_slide %} loading="lazy"{% endif %}>{% endfor %}</div>
+        </a>
+        {% endfor %}
+      </div>
+      <button type="button" class="car-btn prev" aria-label="Previous slide">‹</button>
+      <button type="button" class="car-btn next" aria-label="Next slide">›</button>
+      <div class="dots" role="group" aria-label="Choose a slide">{% for s in slides %}<button type="button" class="{% if loop.first %}on{% endif %}" aria-label="Show slide {{ loop.index }}: {{ s.title }}"></button>{% endfor %}</div>
+    </div>
+    <div class="hero-side">
+      <a class="tile" href="/search.html?max=50">
+        <span class="tile-k">Deals</span><strong>Under R50</strong><span class="tile-s">{{ under50_total }} downloads from R{{ min_price }}</span>
+        <img src="/{{ tile_a }}" alt="" width="600" height="450">
+      </a>
+      <a class="tile tile-dark" href="/search.html?bundles=1">
+        <span class="tile-k">Save up to {{ best_saving }}%</span><strong>Bundle deals</strong><span class="tile-s">Several tools plus a bonus, one price</span>
+        <img src="/{{ tile_b }}" alt="" width="600" height="450">
+      </a>
+    </div>
+  </section>
+
+  {{ usps(legal) }}
+
+  <section class="panel">
+    <div class="panel-head"><h2>Shop by department</h2><a href="/search.html">All {{ market.total }} items <span aria-hidden="true">›</span></a></div>
+    <ul class="dept-tiles">
+      {% for d in depts %}<li><a href="/c/{{ d.slug }}/"><span class="dimg"><img src="/{{ d.cover }}" alt="" loading="lazy" width="600" height="450"></span><strong>{{ d.name }}</strong><small>{{ d.count }} items</small></a></li>{% endfor %}
     </ul>
-  </div>
-</section>
+  </section>
 
-<section class="wrap rowsec">
-  <div class="sec-head"><h2>Picks from every studio</h2><a href="/search.html">See all {{ market.total }}</a></div>
-  {{ grid(picks, shops) }}
-</section>
+  {{ rail("Top picks from every studio", picks, shops, "/search.html", "View all") }}
+  {{ rail("Bundle deals", bundles, shops, "/search.html?bundles=1", "All bundles", "Real savings against buying each item separately") }}
 
-<section class="wrap rowsec">
-  <div class="sec-head"><h2>Bundles: save up to {{ best_saving }}%</h2><a href="/search.html?bundles=1">All bundles</a></div>
-  <p class="sec-sub">Each bundle is several of a studio's downloads together, plus a bundle-only bonus file.</p>
-  {{ grid(bundles, shops) }}
-</section>
+  <section class="promo-duo">
+    {% for b in promos %}<a class="promo" href="{{ b.href }}" style="--c1:{{ b.c1 }};--c2:{{ b.c2 }}"><div><span class="kicker">{{ b.kicker }}</span><strong>{{ b.title }}</strong><span class="promo-cta">{{ b.cta }} →</span></div><img src="/{{ b.cover }}" alt="" loading="lazy" width="600" height="450"></a>{% endfor %}
+  </section>
 
-<section class="wrap rowsec">
-  <div class="sec-head"><h2>Under R50</h2><a href="/search.html?max=50">See {{ under50_total }} items</a></div>
-  {{ grid(under50, shops) }}
-</section>
+  {{ rail("Under R50", under50, shops, "/search.html?max=50", "See all " ~ under50_total) }}
+  {% for r in dept_rows %}{{ rail(r.title, r.products, shops, r.href, "Shop " ~ r.name) }}{% endfor %}
 
-<section class="wrap rowsec" id="studios">
-  <div class="sec-head"><h2>Shop the studios</h2></div>
-  <p class="sec-sub">Each studio focuses on one kind of work, from salons and building sites to classrooms and family life.</p>
-  <div class="shops">
-  {% for s in shops_list %}
-    <a class="shop-card" href="/{{ s.path }}/" style="--s-accent:{{ s.accent }};--s-accent2:{{ s.accent2 }};--s-ink:{{ s.ink }};--s-light:{{ s.light }}">
-      <span class="shop-strip">{% for c in s.covers %}<img src="/{{ c }}" alt="" loading="lazy" width="600" height="450">{% endfor %}</span>
-      <span class="shop-id"><span class="avatar" data-display="{{ s.display }}" aria-hidden="true">{{ s.name[0] }}</span><span><strong>{{ s.name }}</strong><em>{{ s.tagline }}</em><small>{{ s.products }} items</small></span></span>
-    </a>
-  {% endfor %}
-  </div>
-</section>
+  <section class="panel" id="studios">
+    <div class="panel-head"><div><h2>Shop the studios</h2><p>Each studio focuses on one kind of work, from salons and building sites to classrooms and family life.</p></div></div>
+    <ul class="studios">
+      {% for s in shops_list %}<li><a href="/{{ s.path }}/" style="--s-accent:{{ s.accent }};--s-accent2:{{ s.accent2 }}"><span class="avatar" data-display="{{ s.display }}" aria-hidden="true">{{ s.name[0] }}</span><span><strong>{{ s.name }}</strong><small>{{ s.tagline }}</small></span></a></li>{% endfor %}
+    </ul>
+  </section>
 
-<section class="how" id="how">
-  <div class="wrap">
-    <div class="sec-head"><h2>How buying works</h2></div>
-    {{ steps() }}
-  </div>
-</section>
+  <section class="panel why" id="how">
+    <div class="why-grid">
+      <div>
+        <h2>How buying works</h2>
+        {{ steps() }}
+      </div>
+      <div class="why-box">
+        <h2>Why shop with us</h2>
+        <ul class="checks">
+          <li><strong>Real products, shown honestly.</strong> Every listing shows the actual pages inside. No fake reviews, countdowns or made-up discounts.</li>
+          <li><strong>Checked before release.</strong> Spreadsheets are recalculated with zero formula errors; printables come in A4 and US Letter.</li>
+          <li><strong>A real company.</strong> {{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}, {{ legal.address }}.</li>
+          <li><strong>Help when you need it.</strong> A file doesn't work? We fix it or refund you within 14 days.</li>
+        </ul>
+        <a class="btn btn-outline" href="/help/about.html">About us</a>
+      </div>
+    </div>
+  </section>
+</div>
 {% endblock %}

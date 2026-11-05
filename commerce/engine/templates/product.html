@@ -1,64 +1,77 @@
 {% extends "base.html" %}
-{% from "_macros.html" import grid %}
+{% from "_macros.html" import rail, icon %}
 {% block title %}{{ p.name }} | {{ store.name }}{% endblock %}
 {% block desc %}{{ p.summary }}{% endblock %}
 {% block pid %}{{ p.id }}{% endblock %}
+{% block og %}<meta property="og:type" content="product"><meta property="og:image" content="{{ site_base }}/{{ p.images.cover }}">{% endblock %}
 {% block head %}
 <script type="application/ld+json">{{ jsonld|safe }}</script>
 {% endblock %}
 {% block main %}
 <div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.name }}</a><span aria-hidden="true">›</span><span>{{ p.category }}</span></nav>
-</div>
-<section class="wrap pp">
-  <div class="pp-gallery">
-    <div class="thumbs" role="group" aria-label="Preview images">
-      {% for im in [p.images.cover] + p.images.previews %}<button type="button" class="{% if loop.first %}on{% endif %}" data-src="/{{ im }}" data-index="{{ loop.index0 }}" aria-label="Show image {{ loop.index }}"><img src="/{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
-    </div>
-    <div class="stage">
-      <button class="stage-img" type="button" data-open-lightbox aria-label="Open large preview of {{ p.name }}"><img id="main-img" src="/{{ p.images.cover }}" alt="{{ p.name }}: cover and preview" width="1200" height="900"></button>
-      <button type="button" class="g-nav g-prev" data-g-prev aria-label="Previous image">‹</button>
-      <button type="button" class="g-nav g-next" data-g-next aria-label="Next image">›</button>
-      <button type="button" class="fav fav-stage" data-fav="{{ p.id }}" aria-pressed="false" aria-label="Save {{ p.name }} to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-    </div>
+
+  <div class="pp">
+    <section class="panel pp-media" aria-label="Images">
+      <div class="stage">
+        <button class="stage-img" type="button" data-open-lightbox aria-label="Open large preview of {{ p.name }}"><img id="main-img" src="/{{ p.images.cover }}" alt="{{ p.name }}: preview" width="1200" height="900"></button>
+        <button type="button" class="g-nav g-prev" data-g-prev aria-label="Previous image">‹</button>
+        <button type="button" class="g-nav g-next" data-g-next aria-label="Next image">›</button>
+        {% if p.saving_pct %}<span class="badge-off lg">-{{ p.saving_pct }}%</span>{% endif %}
+      </div>
+      <div class="thumbs" role="group" aria-label="Preview images">
+        {% for im in [p.images.cover] + p.images.previews %}<button type="button" class="{% if loop.first %}on{% endif %}" data-src="/{{ im }}" aria-label="Show image {{ loop.index }}"><img src="/{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
+      </div>
+    </section>
+
+    <section class="panel pp-main">
+      <p class="pp-by">By <a href="{{ base }}/">{{ store.name }}</a> <span aria-hidden="true">·</span> <a href="/c/{{ dept.slug }}/">{{ dept.name }}</a></p>
+      <h1>{{ p.name }}</h1>
+      <p class="pp-sum">{{ p.summary }}</p>
+      <ul class="pp-chips">{% for f in p.formats %}<li class="fmt fmt-{{ f.split(' ')[0]|lower }}">{{ f }}</li>{% endfor %}</ul>
+      <h2 class="pp-h">What's inside</h2>
+      <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
+    </section>
+
+    <aside class="panel pp-buy" aria-label="Buy">
+      <p class="pp-price">{% if p.free %}<strong>Free</strong>{% else %}<strong>R{{ p.price_zar }}</strong>{% endif %}</p>
+      {% if p.saving_pct %}<p class="pp-save"><s>R{{ p.bundle_sum }}</s> <span class="save-pill">You save R{{ p.bundle_sum - p.price_zar }} ({{ p.saving_pct }}%)</span></p>{% endif %}
+      <p class="stock">{{ icon("bolt") }}<span><strong>Instant download</strong> · {{ p.file_mb }} ZIP</span></p>
+      {% if p.free %}
+      <a id="free-dl" class="btn btn-primary btn-block btn-lg" href="{{ p.free_url }}" download>{{ icon("download") }}<span>Download free</span></a>
+      <p class="muted small center">No account or email needed.</p>
+      {% else %}
+      <button type="button" id="buy" class="btn btn-primary btn-block btn-lg" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>
+      {% endif %}
+      <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="{{ p.id }}" aria-pressed="false">{{ icon("heart") }}<span>Save to favourites</span></button>
+      <ul class="buy-trust">
+        <li>{{ icon("lock") }}<span>Secure checkout on PayFast. We never see your card.</span></li>
+        <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Download 5 times over 7 days{% endif %}</span></li>
+        <li>{{ icon("refresh") }}<span>File won't work? Fixed or refunded within 14 days</span></li>
+        <li>{{ icon("building") }}<span>Sold by {{ store.name }}, a studio of {{ legal.operator }}</span></li>
+      </ul>
+    </aside>
   </div>
 
-  <div class="pp-info">
-    <p class="pp-price">{% if p.free %}<strong>Free</strong>{% else %}<strong>R{{ p.price_zar }}</strong>{% if p.saving_pct %} <s>R{{ p.bundle_sum }}</s> <span class="off">Save {{ p.saving_pct }}% vs buying separately</span>{% endif %}{% endif %}</p>
-    <h1>{{ p.name }}</h1>
-    <p class="pp-shop"><a href="{{ base }}/"><span class="avatar sm" data-display="{{ store.display }}" aria-hidden="true">{{ store.name[0] }}</span>{{ store.name }}</a></p>
-    <p class="pp-sum">{{ p.summary }}</p>
-    <ul class="pp-facts">
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>Digital download · {{ p.file_mb }} ZIP</li>
-      <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h4"/></svg>{% for f in p.formats %}{{ f }}{% if not loop.last %} · {% endif %}{% endfor %}</li>
-    </ul>
-    {% if p.free %}
-    <a id="free-dl" class="btn btn-buy" href="{{ p.free_url }}" download>Download free</a>
-    <p class="msg">No account or email needed.</p>
-    {% else %}
-    <form id="buy" class="buy" novalidate>
-      <label for="email">Email for your download link</label>
-      <input id="email" name="email" type="email" required autocomplete="email" placeholder="you@example.com">
-      <button type="submit" class="btn btn-buy">Buy now · R{{ p.price_zar }}</button>
-      <p id="buy-msg" class="msg" role="status"></p>
-    </form>
-    {% endif %}
-    <button type="button" class="btn btn-outline btn-wide fav-wide" data-fav="{{ p.id }}" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span>Add to favourites</span></button>
-    <div class="pp-note"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><p><strong>Instant download.</strong> {% if p.free %}The ZIP downloads straight away.{% else %}Your files appear as soon as PayFast confirms payment. Checkout runs on PayFast's secure page.{% endif %}</p></div>
-
-    <div class="acc">
-      <details open><summary>Item details</summary>
-        <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
-      </details>
+  <div class="pp-more">
+    <div class="pp-detail">
       {% if p.bundle_items %}
-      <details open><summary>In this bundle</summary>
+      <section class="panel">
+        <h2>In this bundle</h2>
         <ul class="bundle-list">{% for b in p.bundle_items %}<li><a href="{{ base }}/p/{{ b.slug }}.html"><img src="/{{ b.images.cover }}" alt="" loading="lazy" width="600" height="450"><span>{{ b.name }}</span><em>R{{ b.price_zar }}</em></a></li>{% endfor %}</ul>
-        <p class="muted small">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}, including a bundle-only bonus.</p>
-      </details>
+        <p class="muted small">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}, including a bundle-only bonus file.</p>
+      </section>
       {% endif %}
-      <details><summary>How to use it</summary><ol class="numbered">{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol></details>
-      <details><summary>Files and compatibility</summary><p>{{ p.compat }}</p><ul class="files">{% for f in p.file.contents %}<li>{{ f }}</li>{% endfor %}</ul></details>
-      <details><summary>Delivery, licence and refunds</summary>
+      <section class="panel">
+        <h2>How to use it</h2>
+        <ol class="numbered">{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol>
+      </section>
+      <section class="panel two">
+        <div><h2>Works with</h2><p>{{ p.compat }}</p></div>
+        <div><h2>Files in the download</h2><ul class="files">{% for f in p.file.contents %}<li>{{ icon("file") }}{{ f }}</li>{% endfor %}</ul></div>
+      </section>
+      <section class="panel">
+        <h2>Delivery, licence and refunds</h2>
         <ul class="notes">
           <li>This is a digital product. Nothing physical is shipped.</li>
           {% if not p.free %}<li>Download links work 5 times over 7 days. Keep a copy of your files.</li>{% endif %}
@@ -68,32 +81,23 @@
           <li>For yourself and one business you own or work for. No reselling or sharing. <a href="{{ base }}/licence.html">Licence</a></li>
           <li>File not working? We fix it or refund you within 14 days. <a href="{{ base }}/refunds.html">Refunds &amp; support</a></li>
         </ul>
-      </details>
+      </section>
     </div>
-
-    <div class="seller">
-      <span class="avatar lg" data-display="{{ store.display }}" style="--s-accent:{{ store.accent }};--s-accent2:{{ store.accent2 }}" aria-hidden="true">{{ store.name[0] }}</span>
-      <div><p class="seller-k">Meet the shop</p><h2>{{ store.name }}</h2><p>{{ store.tagline }}. {{ store.n_products }} items for {{ store.audience|lower }}.</p>
-        <p><a class="btn btn-outline btn-sm" href="{{ base }}/">Visit shop</a> <a class="btn btn-outline btn-sm" href="{{ base }}/contact.html">Message the shop</a></p></div>
-    </div>
+    <aside class="panel seller">
+      <p class="seller-k">Meet the studio</p>
+      <div class="seller-id"><span class="avatar lg" data-display="{{ store.display }}" style="--s-accent:{{ store.accent }};--s-accent2:{{ store.accent2 }}" aria-hidden="true">{{ store.name[0] }}</span><div><h2>{{ store.name }}</h2><p>{{ store.tagline }}</p></div></div>
+      <p class="muted small">{{ store.n_products }} items for {{ store.audience|lower }}.</p>
+      <a class="btn btn-outline btn-block" href="{{ base }}/">Visit the studio</a>
+      <a class="btn btn-ghost btn-block" href="{{ base }}/contact.html">Ask a question</a>
+    </aside>
   </div>
-</section>
 
-{% if more %}
-<section class="wrap rowsec">
-  <div class="sec-head"><h2>More from {{ store.name }}</h2><a href="{{ base }}/">See all {{ store.n_products }}</a></div>
-  {{ grid(more, shops, show_shop=False) }}
-</section>
-{% endif %}
-{% if alike %}
-<section class="wrap rowsec">
-  <div class="sec-head"><h2>You may also like</h2><a href="/c/{{ dept.slug }}/">More in {{ dept.name }}</a></div>
-  {{ grid(alike, shops) }}
-</section>
-{% endif %}
+  {% if more %}{{ rail("More from " ~ store.name, more, shops, base ~ "/", "See all " ~ store.n_products) }}{% endif %}
+  {% if alike %}{{ rail("You may also like", alike, shops, "/c/" ~ dept.slug ~ "/", "More in " ~ dept.name) }}{% endif %}
+</div>
 
 <div class="buybar" id="buybar" hidden>
-  <div class="buybar-in"><div><strong>{{ p.name }}</strong><span>{% if p.free %}Free{% else %}R{{ p.price_zar }}{% endif %} · instant download</span></div><button type="button" class="btn" data-goto-buy>{% if p.free %}Download{% else %}Buy now{% endif %}</button></div>
+  <div class="buybar-in"><div><strong>{{ p.name }}</strong><span>{% if p.free %}Free{% else %}R{{ p.price_zar }}{% endif %} · instant download</span></div>{% if p.free %}<a class="btn btn-primary" href="{{ p.free_url }}" download>Download</a>{% else %}<button type="button" class="btn btn-primary" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>{% endif %}</div>
 </div>
 
 <dialog class="lightbox" id="lightbox" aria-label="Product previews">

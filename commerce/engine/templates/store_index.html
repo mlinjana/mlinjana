@@ -1,54 +1,58 @@
 {% extends "base.html" %}
-{% from "_macros.html" import grid, filters %}
+{% from "_macros.html" import grid, filters, icon %}
 {% block title %}{{ store.name }}: {{ store.tagline }} | {{ market.name }}{% endblock %}
 {% block main %}
-<section class="shop-banner">{{ store.motif|safe }}</section>
-<div class="wrap shop-head">
-  <span class="avatar xl" data-display="{{ store.display }}" aria-hidden="true">{{ store.name[0] }}</span>
-  <div class="shop-title">
-    <h1 data-display="{{ store.display }}">{{ store.name }}</h1>
-    <p>{{ store.tagline }}</p>
-    <p class="shop-facts"><span>South Africa</span><span>{{ store.n_products }} items</span><span>Instant downloads</span><span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a></span></p>
-  </div>
-  {% if bundle %}<a class="btn btn-outline" href="{{ base }}/p/{{ bundle.slug }}.html">Shop bundle: save {{ bundle.saving_pct }}%</a>{% endif %}
-</div>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span><span>{{ store.name }}</span></nav>
+  <section class="panel shop-hero">
+    <div class="shop-banner">{{ store.motif|safe }}</div>
+    <div class="shop-head">
+      <span class="avatar xl" data-display="{{ store.display }}" aria-hidden="true">{{ store.name[0] }}</span>
+      <div class="shop-title">
+        <h1 data-display="{{ store.display }}">{{ store.name }}</h1>
+        <p>{{ store.tagline }}</p>
+        <ul class="shop-facts"><li>{{ icon("building") }}South Africa</li><li>{{ icon("file") }}{{ store.n_products }} items</li><li>{{ icon("bolt") }}Instant downloads</li></ul>
+      </div>
+      {% if bundle %}<a class="btn btn-primary" href="{{ base }}/p/{{ bundle.slug }}.html">Bundle: save {{ bundle.saving_pct }}%</a>{% endif %}
+    </div>
+  </section>
 
-<div class="wrap shop-body">
-  <section id="shop" class="shop-items">
+  <section id="shop" class="panel">
     <h2 class="visually-hidden">Items</h2>
-    {{ filters(categories, store.n_products, "Search all " ~ store.n_products ~ " items in this shop") }}
-    {{ grid(products, shops, show_shop=False) }}
+    {{ filters(categories, store.n_products, "Search " ~ store.n_products ~ " items in " ~ store.name) }}
+    {{ grid(products, shops) }}
     <p id="empty" class="muted empty" hidden>No items match. Try a shorter word or another category.</p>
   </section>
+
+  <section class="panel about-shop" id="about">
+    <div class="about-grid">
+      <div>
+        <h2>About {{ store.name }}</h2>
+        <p>{{ store.proposition }}</p>
+        <p class="muted">Made for {{ store.audience|lower }}. {{ store.name }} is a studio of {{ legal.operator }}.</p>
+      </div>
+      <div>
+        <h3>What you can expect</h3>
+        <ul class="checks">
+          {% if 'XLSX' in formats_all %}<li>Every spreadsheet is recalculated and checked for formula errors before release</li>{% endif %}
+          {% if 'PDF' in formats_all %}<li>Printables come in A4 and US Letter</li>{% endif %}
+          {% if 'DOCX' in formats_all %}<li>Word templates open in Word, Google Docs and LibreOffice</li>{% endif %}
+          <li>Help within 14 days if a file doesn't work for you</li>
+        </ul>
+        <p class="shop-policies">Studio policies: <a href="{{ base }}/refunds.html">Refunds</a> · <a href="{{ base }}/licence.html">Licence</a> · <a href="{{ base }}/terms.html">Terms</a> · <a href="{{ base }}/privacy.html">Privacy</a> · <a href="{{ base }}/contact.html">Contact</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="panel faq">
+    <h2>Questions</h2>
+    <div class="faq-list">
+      <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, your download buttons appear on the confirmation page. Each link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
+      <details><summary>Can I buy several items at once?</summary><p>Yes. Add them to your basket and pay once. Every item gets its own download link.</p></details>
+      <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
+      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="{{ base }}/licence.html">licence</a>.</p></details>
+      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="{{ base }}/refunds.html">refunds &amp; support</a>.</p></details>
+    </div>
+  </section>
 </div>
-
-<section class="wrap about-shop" id="about">
-  <div class="about-grid">
-    <div>
-      <h2>About {{ store.name }}</h2>
-      <p>{{ store.proposition }}</p>
-      <p class="muted">Made for {{ store.audience|lower }}.</p>
-    </div>
-    <div>
-      <h3>What you can expect</h3>
-      <ul class="checks">
-        {% if 'XLSX' in formats_all %}<li>Every spreadsheet is recalculated and checked for formula errors before release</li>{% endif %}
-        {% if 'PDF' in formats_all %}<li>Printables come in A4 and US Letter</li>{% endif %}
-        {% if 'DOCX' in formats_all %}<li>Word templates open in Word, Google Docs and LibreOffice</li>{% endif %}
-        <li>Help within 14 days if a file doesn't work for you</li>
-      </ul>
-      <p class="shop-policies">Shop policies: <a href="{{ base }}/refunds.html">Refunds</a> · <a href="{{ base }}/licence.html">Licence</a> · <a href="{{ base }}/terms.html">Terms</a> · <a href="{{ base }}/privacy.html">Privacy</a> · <a href="{{ base }}/contact.html">Contact the shop</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="wrap faq">
-  <h2>Questions</h2>
-  <div class="faq-list">
-    <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, the download button appears on the confirmation page. The link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
-    <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
-    <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="{{ base }}/licence.html">licence</a>.</p></details>
-    <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="{{ base }}/refunds.html">refunds &amp; support</a>.</p></details>
-  </div>
-</section>
 {% endblock %}

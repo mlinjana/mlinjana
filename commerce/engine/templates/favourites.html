@@ -1,9 +1,12 @@
 {% extends "base.html" %}
 {% block title %}Favourites | {{ market.name }}{% endblock %}
 {% block main %}
-<div class="wrap search-page" id="fav-page">
-  <header class="search-head"><h1>Your favourites</h1><p class="muted">Saved on this device only. We don't store them anywhere else.</p></header>
-  <div class="grid" id="results"></div>
-  <p class="muted empty" id="s-empty" hidden>No favourites yet. Tap the heart on any item to save it here.</p>
+<div class="wrap" id="fav-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Favourites</span></nav>
+  <section class="panel">
+    <header class="search-head"><div><h1>Your favourites</h1><p class="muted">Saved on this device only. We don't store them anywhere else.</p></div></header>
+    <div class="grid" id="results"></div>
+    <p class="muted empty" id="s-empty" hidden>No favourites yet. Tap the heart on any item to save it here.</p>
+  </section>
 </div>
 {% endblock %}

@@ -1,44 +1,84 @@
-{# Product card, Etsy-style: image, favourite heart, title, shop, price. site.js renders the same markup for search and favourites. #}
-{% macro card(p, shop, show_shop=True) -%}
+{# Shared UI pieces. site.js renders the same card markup (cardHTML) for search, favourites and the basket. #}
+{% macro icon(name) -%}
+{%- if name == "heart" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg>
+{%- elif name == "bag" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg>
+{%- elif name == "bolt" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>
+{%- elif name == "lock" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+{%- elif name == "shield" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.6 8 9 4.6-.4 8-4 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>
+{%- elif name == "download" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg>
+{%- elif name == "refresh" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>
+{%- elif name == "building" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5M8 8h2M14 8h2M8 12h2M14 12h2"/></svg>
+{%- elif name == "check" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+{%- elif name == "search" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+{%- elif name == "menu" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+{%- elif name == "file" -%}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>
+{%- endif -%}
+{%- endmacro %}
+
+{% macro card(p, shop) -%}
 <article class="card" data-id="{{ p.id }}" data-cat="{{ p.category }}" data-price="{{ p.price_zar }}" data-fmt="{{ p.fmt_keys|join(' ') }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.category ~ ' ' ~ p.tags|join(' '))|lower }}">
   <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}.html">
-    <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="tag-save">Bundle · save {{ p.saving_pct }}%</span>{% endif %}</div>
-    <h3 class="card-title">{{ p.name }}</h3>
+    <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="badge-off">-{{ p.saving_pct }}%</span>{% endif %}{% if p.free %}<span class="badge-free">Free</span>{% endif %}</div>
+    <div class="card-body">
+      <p class="card-shop">{{ shop.name }}</p>
+      <h3 class="card-title">{{ p.name }}</h3>
+      <p class="card-meta">{{ icon("bolt") }}Instant download · {{ p.fmt_keys|join(', ') }}</p>
+    </div>
   </a>
-  {% if show_shop %}<p class="card-shop"><a href="/{{ shop.path }}/">{{ shop.name }}</a></p>{% endif %}
-  <p class="card-price"><strong>R{{ p.price_zar }}</strong>{% if p.saving_pct %} <s>R{{ p.bundle_sum }}</s> <span class="off">({{ p.saving_pct }}% off)</span>{% endif %}</p>
-  <p class="card-meta">Digital download · {{ p.fmt_keys|join(', ') }}</p>
-  <button type="button" class="fav" data-fav="{{ p.id }}" aria-pressed="false" aria-label="Save {{ p.name }} to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+  <div class="card-foot">
+    <p class="card-price">{% if p.free %}<strong>Free</strong>{% else %}<strong>R{{ p.price_zar }}</strong>{% if p.saving_pct %}<s>R{{ p.bundle_sum }}</s>{% endif %}{% endif %}</p>
+    {% if not p.free %}<button type="button" class="add" data-add="{{ p.id }}" aria-label="Add {{ p.name }} to basket">{{ icon("bag") }}<span>Add</span></button>{% endif %}
+  </div>
+  <button type="button" class="fav" data-fav="{{ p.id }}" aria-pressed="false" aria-label="Save {{ p.name }} to favourites">{{ icon("heart") }}</button>
 </article>
 {%- endmacro %}
 
-{% macro grid(items, shops, show_shop=True, cls="") -%}
-<div class="grid {{ cls }}">{% for p in items %}{{ card(p, shops[p.store], show_shop) }}{% endfor %}</div>
+{% macro grid(items, shops) -%}
+<div class="grid">{% for p in items %}{{ card(p, shops[p.store]) }}{% endfor %}</div>
 {%- endmacro %}
 
-{# Filter bar for shop and department pages: category chips, format, price and sort. Works on #grid. #}
+{% macro rail(title, items, shops, href=None, link="View all", sub=None) -%}
+<section class="panel rail-sec">
+  <div class="panel-head"><div><h2>{{ title }}</h2>{% if sub %}<p>{{ sub }}</p>{% endif %}</div>{% if href %}<a href="{{ href }}">{{ link }} <span aria-hidden="true">›</span></a>{% endif %}</div>
+  <div class="rail" data-rail>
+    <button type="button" class="rail-btn prev" aria-label="Scroll left" hidden>‹</button>
+    <div class="rail-track">{% for p in items %}{{ card(p, shops[p.store]) }}{% endfor %}</div>
+    <button type="button" class="rail-btn next" aria-label="Scroll right" hidden>›</button>
+  </div>
+</section>
+{%- endmacro %}
+
+{# Filter bar for shop and department pages: category chips, format, price and sort. Works on #shop .grid. #}
 {% macro filters(categories, total, placeholder) -%}
 <div class="filters">
-  <label class="search in-page"><span class="visually-hidden">Search these items</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="q" type="search" placeholder="{{ placeholder }}" autocomplete="off">
-  </label>
+  <div class="filters-top">
+    <label class="fsearch"><span class="visually-hidden">Search these items</span>{{ icon("search") }}<input id="q" type="search" placeholder="{{ placeholder }}" autocomplete="off"></label>
+    <div class="selects">
+      <label><span class="visually-hidden">File type</span><select id="f-fmt"><option value="">All file types</option><option value="PDF">PDF printable</option><option value="XLSX">Spreadsheet (XLSX)</option><option value="DOCX">Word (DOCX)</option></select></label>
+      <label><span class="visually-hidden">Price</span><select id="f-price"><option value="">Any price</option><option value="50">Under R50</option><option value="100">Under R100</option><option value="200">Under R200</option></select></label>
+      <label><span class="visually-hidden">Sort by</span><select id="f-sort"><option value="">Sort: Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
+    </div>
+  </div>
   <div class="chips" role="group" aria-label="Categories">
     <button type="button" class="chip on" data-cat="">All <span>{{ total }}</span></button>
     {% for c, n in categories %}<button type="button" class="chip" data-cat="{{ c }}">{{ c }} <span>{{ n }}</span></button>{% endfor %}
   </div>
-  <div class="selects">
-    <label><span class="visually-hidden">File type</span><select id="f-fmt"><option value="">Any file type</option><option value="PDF">PDF printable</option><option value="XLSX">Spreadsheet (XLSX)</option><option value="DOCX">Word (DOCX)</option></select></label>
-    <label><span class="visually-hidden">Price</span><select id="f-price"><option value="">Any price</option><option value="50">Under R50</option><option value="100">Under R100</option><option value="200">Under R200</option></select></label>
-    <label><span class="visually-hidden">Sort by</span><select id="f-sort"><option value="">Sort: Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
-    <span class="count" id="count" aria-live="polite"></span>
-  </div>
+  <p class="count" id="count" aria-live="polite"></p>
 </div>
+{%- endmacro %}
+
+{% macro usps(legal) -%}
+<ul class="usp">
+  <li>{{ icon("bolt") }}<div><strong>Instant download</strong><span>Files appear straight after payment</span></div></li>
+  <li>{{ icon("lock") }}<div><strong>Secure checkout</strong><span>Pay on PayFast's protected page</span></div></li>
+  <li>{{ icon("refresh") }}<div><strong>14-day file guarantee</strong><span>Fixed or refunded if a file won't work</span></div></li>
+  <li>{{ icon("building") }}<div><strong>Registered SA company</strong><span>{{ legal.operator if legal else '' }}</span></div></li>
+</ul>
 {%- endmacro %}
 
 {% macro steps() -%}
 <ol class="steps">
-  <li><span class="step-n">1</span><div><h3>Choose a download</h3><p>Every listing shows the real pages inside, the file types and what it works with.</p></div></li>
+  <li><span class="step-n">1</span><div><h3>Add to basket</h3><p>Every listing shows the real pages inside, the file types and what it works with.</p></div></li>
   <li><span class="step-n">2</span><div><h3>Pay on PayFast</h3><p>Checkout happens on PayFast's secure payment page. We never see your card or bank details.</p></div></li>
   <li><span class="step-n">3</span><div><h3>Download straight away</h3><p>Your files appear as soon as payment is confirmed: 5 downloads over 7 days.</p></div></li>
 </ol>

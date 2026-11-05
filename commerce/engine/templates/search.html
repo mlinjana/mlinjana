@@ -2,15 +2,12 @@
 {% block title %}Search | {{ market.name }}{% endblock %}
 {% block main %}
 <div class="wrap search-page" id="search-page">
-  <header class="search-head">
-    <h1 id="s-title">All downloads</h1>
-    <p class="muted" id="s-count">{{ market.total }} items</p>
-  </header>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Search</span></nav>
   <div class="search-layout">
-    <aside class="facets" aria-label="Filters">
+    <aside class="panel facets" aria-label="Filters">
       <div class="facet"><h2>Department</h2>
         <label><input type="radio" name="dept" value="" checked> All departments</label>
-        {% for d in depts %}<label><input type="radio" name="dept" value="{{ d.slug }}"> {{ d.name }}</label>{% endfor %}
+        {% for d in depts %}<label><input type="radio" name="dept" value="{{ d.slug }}"> {{ d.name }} <span class="muted">{{ d.count }}</span></label>{% endfor %}
       </div>
       <div class="facet"><h2>Price</h2>
         <label><input type="radio" name="max" value="" checked> Any price</label>
@@ -24,18 +21,21 @@
         <label><input type="radio" name="fmt" value="XLSX"> Spreadsheet (XLSX)</label>
         <label><input type="radio" name="fmt" value="DOCX"> Word (DOCX)</label>
       </div>
-      <div class="facet"><h2>Type</h2>
-        <label><input type="checkbox" name="bundles" value="1"> Bundles only</label>
+      <div class="facet"><h2>Offers</h2>
+        <label><input type="checkbox" name="bundles" value="1"> Bundle deals</label>
         <label><input type="checkbox" name="free" value="1"> Free downloads</label>
       </div>
     </aside>
-    <div>
-      <div class="sortbar"><label for="s-sort">Sort by</label><select id="s-sort"><option value="">Most relevant</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></div>
+    <section class="panel">
+      <header class="search-head">
+        <div><h1 id="s-title">All downloads</h1><p class="muted" id="s-count">{{ market.total }} items</p></div>
+        <div class="sortbar"><label for="s-sort">Sort by</label><select id="s-sort"><option value="">Most relevant</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></div>
+      </header>
       <div class="grid" id="results" aria-live="polite"></div>
       <p class="muted empty" id="s-empty" hidden>Nothing matches yet. Try fewer or different words, or <a href="/search.html">browse everything</a>.</p>
       <p class="more-wrap"><button type="button" class="btn btn-outline" id="s-more" hidden>Show more</button></p>
       <noscript><p>Search needs JavaScript. You can still browse by department using the links at the top of the page.</p></noscript>
-    </div>
+    </section>
   </div>
 </div>
 {% endblock %}

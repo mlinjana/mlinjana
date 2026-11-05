@@ -1,4 +1,4 @@
-// Public storefront API: checkout, PayFast ITN, order status, secure download, analytics beacon, contact form.
+// Public storefront API: checkout (single product or basket), PayFast ITN, order status, secure download, analytics beacon, contact form.
 // Payment state changes ONLY on a verified ITN (signature + PayFast server validation + amount + merchant check).
 import { createClient } from "npm:@supabase/supabase-js@2";
 import { createHash } from "node:crypto";
@@ -88,6 +88,10 @@ async function checkout(req: Request) {
     ["item_name", p.title.slice(0, 100)], ["item_description", `Digital download ${p.id}`],
     ["custom_str1", p.id],
   ];
+  return json(payfastForm(fields, pf, ref));
+}
+
+function payfastForm(fields: [string, string][], pf: Record<string, string>, ref: string) {
   // Live: always signed with the owner's passphrase. Sandbox without a configured passphrase (PayFast's shared
   // test merchant): PayFast accepts unsigned forms; the ITN is then trusted only after server-side validation.
   if (pf.mode === "live" || pf.passphrase) {
@@ -95,7 +99,60 @@ async function checkout(req: Request) {
     if (pf.passphrase) sigStr += `&passphrase=${phpEncode(pf.passphrase.trim())}`;
     fields.push(["signature", md5(sigStr)]);
   }
-  return json({ action: `https://${pf.host}/eng/process`, fields: Object.fromEntries(fields), ref, mode: pf.mode });
+  return { action: `https://${pf.host}/eng/process`, fields: Object.fromEntries(fields), ref, mode: pf.mode };
+}
+
+// Basket: several products, one PayFast payment. Each product gets its own order row (same delivery path as a
+// single purchase); the basket row carries the payment and is what PayFast's ITN refers to (m_payment_id BSK-…).
+async function basketCheckout(req: Request) {
+  const kill = await cfg("kill_switch");
+  if (kill?.checkout) return json({ error: "Checkout is temporarily paused. Please try again later." }, 503);
+  const body = await req.json().catch(() => ({}));
+  const email = String(body.email ?? "").trim().toLowerCase();
+  if (!EMAIL_RE.test(email)) return json({ error: "Please enter a valid email address." }, 400);
+  const ids = [...new Set((Array.isArray(body.items) ? body.items : []).map((x: unknown) => String(x)))]
+    .filter((x) => /^[A-Z]{2,5}-\d{3,4}$/.test(x)).slice(0, 25);
+  if (!ids.length) return json({ error: "Your basket is empty." }, 400);
+  const { data: ps } = await db.from("products").select("id,store_id,title,slug,price_zar_cents,active,status,file_key").in("id", ids);
+  const ok = (ps ?? []).filter((p) => p.active && p.status === "validated" && p.file_key);
+  if (ok.length !== ids.length) {
+    return json({ error: "Some items in your basket are no longer available. Please remove them and try again.",
+      unavailable: ids.filter((i) => !ok.some((p) => p.id === i)) }, 409);
+  }
+  const budgets = await cfg("budgets");
+  const since = new Date(Date.now() - 3600_000).toISOString();
+  const { count } = await db.from("baskets").select("id", { count: "exact", head: true }).eq("email", email).gte("created_at", since);
+  if ((count ?? 0) >= (budgets?.max_pending_orders_per_email_per_hour ?? 10)) return json({ error: "Too many attempts. Please wait a while." }, 429);
+  const site = await cfg("site");
+  const base = site?.base_url;
+  if (!base) return json({ error: "Store URL not configured." }, 500);
+  const pf = await payfastCreds();
+  const ref = "BSK-" + randHex(6).toUpperCase();
+  const secret = randHex(16);
+  const total = ok.reduce((a, p) => a + p.price_zar_cents, 0);
+  const { data: bk, error } = await db.from("baskets").insert({ ref, secret, email, amount_cents: total, provider: "payfast", provider_mode: pf.mode })
+    .select("id").single();
+  if (error || !bk) return json({ error: "Could not start checkout." }, 500);
+  const rows = ids.map((i) => ok.find((p) => p.id === i)!).map((p) => ({
+    ref: "ORD-" + randHex(6).toUpperCase(), secret: randHex(16), product_id: p.id, store_id: p.store_id, email,
+    amount_cents: p.price_zar_cents, currency: "ZAR", provider: "payfast", provider_mode: pf.mode, basket_id: bk.id,
+  }));
+  const { error: e2 } = await db.from("orders").insert(rows);
+  if (e2) {
+    await db.from("baskets").update({ status: "failed", notes: "order rows not created" }).eq("id", bk.id);
+    return json({ error: "Could not start checkout." }, 500);
+  }
+  const fields: [string, string][] = [
+    ["merchant_id", pf.merchant_id], ["merchant_key", pf.merchant_key],
+    ["return_url", `${base}/thanks.html?ref=${ref}&k=${secret}`],
+    ["cancel_url", `${base}/?basket=cancelled`],
+    ["notify_url", `${FN_URL}/payfast-itn`],
+    ["email_address", email], ["m_payment_id", ref], ["amount", (total / 100).toFixed(2)],
+    ["item_name", `${rows.length} digital downloads from Mlinjana Studios`],
+    ["item_description", ids.join(" ").slice(0, 255)],
+    ["custom_str1", "basket"],
+  ];
+  return json(payfastForm(fields, pf, ref));
 }
 
 async function itn(req: Request) {
@@ -125,6 +182,7 @@ async function itn(req: Request) {
     await logPaymentEvent(ref, false, "server_validation_failed:" + v.slice(0, 60), data);
     return new Response("not valid", { status: 400 });
   }
+  if (ref?.startsWith("BSK-")) return await itnBasket(ref, data, pf);
   // 3. order, merchant and amount checks
   const { data: order } = await db.from("orders").select("*").eq("ref", ref).maybeSingle();
   if (!order) { await logPaymentEvent(ref, true, "unknown_order", data); return new Response("ok"); }
@@ -172,16 +230,22 @@ async function sendReceipt(order: Record<string, any>, token: string) {
     await db.from("orders").update({ notes: "receipt email not sent: email provider not configured" }).eq("id", order.id);
     return;
   }
-  const site = await cfg("site");
+  const site = await cfg("site"), legal = await cfg("legal");
   const link = `${FN_URL}/download?t=${token}`;
+  const storeUrl = site?.stores?.[order.store_id] ?? "";
   const { data: p } = await db.from("products").select("title").eq("id", order.product_id).single();
+  const { data: st } = await db.from("stores").select("name").eq("id", order.store_id).maybeSingle();
+  // Company signature: only details already published on the Terms page (config/stores.json → legal), never invented.
+  const signature = ["-- ", st?.name, legal?.operator && `A store of ${legal.operator}`,
+    legal?.registration && `Reg. no. ${String(legal.registration).split(" (")[0]}`, legal?.address, storeUrl]
+    .filter(Boolean).join("\n");
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
     body: JSON.stringify({
       from: e.from, to: [order.email], reply_to: e.reply_to ?? undefined,
       subject: `Your download: ${p?.title ?? order.product_id} (order ${order.ref})`,
       text: `Thank you for your order ${order.ref}.\n\nDownload your file here (valid 7 days, up to 5 downloads):\n${link}\n\n` +
-        `Need help? Use the contact page: ${site?.stores?.[order.store_id] ?? ""}/contact.html and quote ${order.ref}.`,
+        `Need help? Use the contact page: ${storeUrl}/contact.html and quote ${order.ref}.\n\n${signature}`,
     }),
   });
   await db.from("orders").update({ notes: r.ok ? "receipt emailed" : `receipt email failed: ${r.status}` }).eq("id", order.id);
@@ -213,6 +277,111 @@ async function download(url: URL) {
   return Response.redirect(s.signedUrl, 302);
 }
 
+async function itnBasket(ref: string, data: Record<string, string>, pf: Record<string, string>) {
+  const { data: bk } = await db.from("baskets").select("*").eq("ref", ref).maybeSingle();
+  if (!bk) { await logPaymentEvent(ref, true, "unknown_basket", data); return new Response("ok"); }
+  if (data.merchant_id !== pf.merchant_id || bk.provider_mode !== pf.mode) {
+    await logPaymentEvent(ref, true, "merchant_or_mode_mismatch", data);
+    return new Response("ok");
+  }
+  const gross = Math.round(parseFloat(data.amount_gross) * 100);
+  if (Math.abs(gross - bk.amount_cents) > 1) {
+    await logPaymentEvent(ref, true, "amount_mismatch", data);
+    return new Response("ok");
+  }
+  const status = data.payment_status;
+  if (status === "COMPLETE") {
+    const fee = Math.round(Math.abs(parseFloat(data.amount_fee ?? "0")) * 100);
+    const net = Math.round(parseFloat(data.amount_net ?? String(gross / 100)) * 100);
+    const now = new Date().toISOString();
+    // idempotent: only pending → paid
+    const { data: upd } = await db.from("baskets").update({
+      status: "paid", paid_at: now, provider_payment_id: data.pf_payment_id, gross_cents: gross, fee_cents: fee, net_cents: net,
+    }).eq("id", bk.id).eq("status", "pending").select("id");
+    if (upd && upd.length) {
+      const { data: kids } = await db.from("orders").select("*").eq("basket_id", bk.id).order("created_at");
+      const b = await cfg("budgets");
+      const items: { order: Record<string, any>; token: string }[] = [];
+      let feeLeft = fee;
+      (kids ?? []).forEach((o, i, a) => { // split PayFast's fee across the items in proportion to price
+        const f = i === a.length - 1 ? feeLeft : Math.round(fee * o.amount_cents / Math.max(1, bk.amount_cents));
+        feeLeft -= f;
+        o._fee = f;
+      });
+      for (const o of kids ?? []) {
+        // a paid basket delivers every item, even if the 6-hour abandoned-checkout job already marked it expired
+        const { data: ou } = await db.from("orders").update({
+          status: "paid", paid_at: now, provider_payment_id: data.pf_payment_id,
+          gross_cents: o.amount_cents, fee_cents: o._fee, net_cents: o.amount_cents - o._fee,
+        }).eq("id", o.id).in("status", ["pending", "expired"]).select("id");
+        if (ou && ou.length) {
+          const token = randHex(24);
+          await db.from("download_tokens").insert({
+            token, order_id: o.id, max_downloads: b?.downloads_per_order ?? 5,
+            expires_at: new Date(Date.now() + (b?.download_days ?? 7) * 86400_000).toISOString(),
+          });
+          items.push({ order: o, token });
+        }
+      }
+      await sendBasketReceipt(bk, items).catch(() => {});
+    }
+    await logPaymentEvent(ref, true, upd?.length ? "paid" : "duplicate_complete", data);
+  } else if (status === "CANCELLED" || status === "FAILED") {
+    const st = status === "CANCELLED" ? "cancelled" : "failed";
+    await db.from("baskets").update({ status: st }).eq("id", bk.id).eq("status", "pending");
+    await db.from("orders").update({ status: st }).eq("basket_id", bk.id).eq("status", "pending");
+    await logPaymentEvent(ref, true, status.toLowerCase(), data);
+  } else {
+    await logPaymentEvent(ref, true, "status_" + status, data);
+  }
+  return new Response("ok");
+}
+
+async function sendBasketReceipt(bk: Record<string, any>, items: { order: Record<string, any>; token: string }[]) {
+  const key = Deno.env.get("RESEND_API_KEY");
+  const e = await cfg("email");
+  if (!key || !e?.from) {
+    await db.from("baskets").update({ notes: "receipt email not sent: email provider not configured" }).eq("id", bk.id);
+    return;
+  }
+  const site = await cfg("site"), legal = await cfg("legal");
+  const ids = items.map((x) => x.order.product_id);
+  const { data: ps } = await db.from("products").select("id,title").in("id", ids.length ? ids : ["-"]);
+  const name = (id: string) => ps?.find((p) => p.id === id)?.title ?? id;
+  const lines = items.map((x, i) => `${i + 1}. ${name(x.order.product_id)} (order ${x.order.ref})\n   ${FN_URL}/download?t=${x.token}`);
+  const signature = ["-- ", "Mlinjana Studios", legal?.operator && `A store of ${legal.operator}`,
+    legal?.registration && `Reg. no. ${String(legal.registration).split(" (")[0]}`, legal?.address, site?.base_url]
+    .filter(Boolean).join("\n");
+  const r = await fetch("https://api.resend.com/emails", {
+    method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+    body: JSON.stringify({
+      from: e.from, to: [bk.email], reply_to: e.reply_to ?? undefined,
+      subject: `Your ${items.length} downloads (order ${bk.ref})`,
+      text: `Thank you for your order ${bk.ref}.\n\nYour downloads (each link is valid for 7 days, up to 5 downloads):\n\n${lines.join("\n\n")}\n\n` +
+        `Need help? Use the contact page: ${site?.base_url ?? ""}/help/contact.html and quote ${bk.ref}.\n\n${signature}`,
+    }),
+  });
+  await db.from("baskets").update({ notes: r.ok ? "receipt emailed" : `receipt email failed: ${r.status}` }).eq("id", bk.id);
+}
+
+async function basketStatus(url: URL) {
+  const ref = url.searchParams.get("ref") ?? "", k = url.searchParams.get("k") ?? "";
+  const { data: bk } = await db.from("baskets").select("id,ref,secret,status,provider_mode").eq("ref", ref).maybeSingle();
+  if (!bk || bk.secret !== k) return json({ error: "Order not found" }, 404);
+  if (bk.status !== "paid") return json({ ref: bk.ref, status: bk.status, mode: bk.provider_mode });
+  const { data: kids } = await db.from("orders").select("id,ref,product_id,status").eq("basket_id", bk.id).order("created_at");
+  const { data: ps } = await db.from("products").select("id,title").in("id", (kids ?? []).map((o) => o.product_id));
+  const items = [];
+  for (const o of kids ?? []) {
+    const { data: t } = await db.from("download_tokens").select("token,expires_at,downloads,max_downloads,revoked")
+      .eq("order_id", o.id).order("created_at", { ascending: false }).limit(1).maybeSingle();
+    items.push({ ref: o.ref, name: ps?.find((p) => p.id === o.product_id)?.title ?? o.product_id,
+      download: o.status === "paid" && t && !t.revoked ? `${FN_URL}/download?t=${t.token}` : null,
+      expires_at: t?.expires_at, downloads_left: t ? t.max_downloads - t.downloads : 0 });
+  }
+  return json({ ref: bk.ref, status: bk.status, mode: bk.provider_mode, items });
+}
+
 async function track(req: Request) {
   const b = await req.json().catch(() => ({}));
   const type = ["page_view", "product_view", "checkout_start"].includes(b.type) ? b.type : null;
@@ -241,6 +410,8 @@ Deno.serve(async (req) => {
   const route = url.pathname.replace(/^.*\/store-api/, "") || "/";
   try {
     if (req.method === "POST" && route === "/checkout") return await checkout(req);
+    if (req.method === "POST" && route === "/basket-checkout") return await basketCheckout(req);
+    if (req.method === "GET" && route === "/basket") return await basketStatus(url);
     if (req.method === "POST" && route === "/payfast-itn") return await itn(req);
     if (req.method === "GET" && route === "/order") return await orderStatus(url);
     if (req.method === "GET" && route === "/download") return await download(url);

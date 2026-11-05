@@ -1,400 +1,587 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Gigsmith: Business tools for freelancers and content creators | Mlinjana Studios</title>
 <meta name="description" content="Printable planners, templates and spreadsheets for the jobs of everyday life, from specialist studios in South Africa.">
-<meta name="theme-color" content="#ffffff">
+<meta name="theme-color" content="#0b6b57">
 <meta name="robots" content="noindex, nofollow">
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://mlinjanastudios.com/gigsmith/">
-<link rel="stylesheet" href="/assets/site.css">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='9' fill='%231f5f4a'/><text x='16' y='22' font-size='17' text-anchor='middle' fill='white' font-family='Georgia,serif' font-weight='700'>M</text></svg>">
+<link rel="stylesheet" href="/assets/site.css?v=3891745ce2">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b6b57'/><path d='M8 23V10l8 8 8-8v13' fill='none' stroke='white' stroke-width='3.2' stroke-linejoin='round' stroke-linecap='round'/></svg>">
+<meta property="og:site_name" content="Mlinjana Studios">
+<meta property="og:title" content="Gigsmith: Business tools for freelancers and content creators | Mlinjana Studios">
+<meta property="og:description" content="Printable planners, templates and spreadsheets for the jobs of everyday life, from specialist studios in South Africa.">
+
 <style>:root{--s-ink:#1E1B2E;--s-accent:#7B5EA7;--s-accent2:#F7B32B;--s-light:#F5F2FA}</style>
 
 </head>
-<body data-store="gigsmith" data-display="bricolage" data-api="https://mrunxptxavtompcnegkr.supabase.co/functions/v1" data-product="">
+<body data-store="gigsmith" data-api="https://mrunxptxavtompcnegkr.supabase.co/functions/v1" data-product="">
 <a class="skip" href="#main">Skip to content</a>
 <div class="banner">Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>
-<header class="top">
-  <div class="wrap top-row">
-    <a class="logo" href="/" aria-label="Mlinjana Studios home">Mlinjana<span>Studios</span></a>
+<div class="util"><div class="wrap util-in">
+  <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.6 8 9 4.6-.4 8-4 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Registered South African company<span class="x-m"> · Instant digital downloads</span></span></p>
+  <nav aria-label="Help"><a href="/help/about.html">About us</a><a href="/#how">How it works</a><a href="/help/contact.html">Help &amp; contact</a></nav>
+</div></div>
+<header class="hdr">
+  <div class="wrap hdr-in">
+    <a class="logo" href="/" aria-label="Mlinjana Studios home">
+      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><path d="M10 29V13l10 10 10-10v16"/><circle cx="31.5" cy="8.5" r="3.5"/></svg>
+      <span class="logo-text"><b>Mlinjana</b><span>Studios</span></span>
+    </a>
     <form class="hsearch" action="/search.html" method="get" role="search">
+      <label class="visually-hidden" for="hdept">Department</label>
+      <select id="hdept" name="dept"><option value="">All</option><option value="planners-home">Planners &amp; Home</option><option value="small-business">Small Business</option><option value="money">Money &amp; Budgeting</option><option value="teaching">Teaching &amp; Homeschool</option><option value="weddings-events">Weddings &amp; Events</option><option value="fitness">Fitness &amp; Training</option><option value="property">Landlords &amp; Property</option><option value="careers">Careers &amp; Jobs</option><option value="garden-farm">Garden &amp; Farm</option><option value="pets">Pets</option><option value="community">Nonprofits &amp; Clubs</option></select>
       <label class="visually-hidden" for="hq">Search all downloads</label>
-      <input id="hq" name="q" type="search" placeholder="What are you looking for?" autocomplete="off">
+      <input id="hq" name="q" type="search" placeholder="Search planners, templates, spreadsheets…" autocomplete="off">
       <button type="submit" aria-label="Search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
     </form>
-    <nav class="hnav" aria-label="Your account">
-      <a class="icon-link" href="/favourites.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span class="lbl">Favourites</span><b class="fav-count" hidden></b></a>
-      <a class="icon-link" href="/help/contact.html"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.6.3-1 .9-1 1.6v.6M12 17h.01"/></svg><span class="lbl">Help</span></a>
+    <nav class="hact" aria-label="Your basket and favourites">
+      <a class="hbtn" href="/favourites.html"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span class="lbl">Favourites</span><b class="fav-count" hidden></b></a>
+      <button type="button" class="hbtn" data-open-basket aria-haspopup="dialog"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span class="lbl">Basket</span><b class="bk-count" hidden></b></button>
     </nav>
   </div>
-  <nav class="depts" aria-label="Departments"><div class="wrap">
+  <nav class="catbar" aria-label="Departments"><div class="wrap catbar-in">
+    <div class="mega">
+      <button type="button" class="mega-btn" aria-expanded="false" aria-controls="mega-panel"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Shop by department</span></button>
+      <div class="mega-panel" id="mega-panel" hidden>
+        <div class="mega-col"><a class="mega-d" href="/c/planners-home/">Planners &amp; Home <span>90</span></a><a class="mega-s" href="/plainday/">Plainday Studio</a><a class="mega-s" href="/littlerhythm/">Little Rhythm</a><a class="mega-s" href="/kindkeep/">Kindkeep</a></div><div class="mega-col"><a class="mega-d" href="/c/small-business/">Small Business <span>210</span></a><a class="mega-s" href="/bizwright/">Bizwright</a><a class="mega-s" href="/shopkeeper/">Shopkeeper&#39;s Desk</a><a class="mega-s" href="/gigsmith/">Gigsmith</a><a class="mega-s" href="/mise/">Mise Sheets</a><a class="mega-s" href="/chairbook/">Chairbook Studio</a><a class="mega-s" href="/trowel/">Trowel &amp; Tally</a><a class="mega-s" href="/fleetwise/">Fleetwise Tools</a></div><div class="mega-col"><a class="mega-d" href="/c/money/">Money &amp; Budgeting <span>30</span></a><a class="mega-s" href="/abacus/">Abacus Lane</a></div><div class="mega-col"><a class="mega-d" href="/c/teaching/">Teaching &amp; Homeschool <span>60</span></a><a class="mega-s" href="/chalkline/">Chalkline</a><a class="mega-s" href="/hearthschool/">Hearthschool Planner</a></div><div class="mega-col"><a class="mega-d" href="/c/weddings-events/">Weddings &amp; Events <span>30</span></a><a class="mega-s" href="/ivorylane/">Ivory Lane Planning</a></div><div class="mega-col"><a class="mega-d" href="/c/fitness/">Fitness &amp; Training <span>30</span></a><a class="mega-s" href="/steadyrep/">Steady Rep Studio</a></div><div class="mega-col"><a class="mega-d" href="/c/property/">Landlords &amp; Property <span>30</span></a><a class="mega-s" href="/doorpost/">Doorpost</a></div><div class="mega-col"><a class="mega-d" href="/c/careers/">Careers &amp; Jobs <span>30</span></a><a class="mega-s" href="/careerladder/">Career Ladder Kit</a></div><div class="mega-col"><a class="mega-d" href="/c/garden-farm/">Garden &amp; Farm <span>30</span></a><a class="mega-s" href="/furrowbook/">Furrowbook</a></div><div class="mega-col"><a class="mega-d" href="/c/pets/">Pets <span>30</span></a><a class="mega-s" href="/petkeep/">Petkeep Book</a></div><div class="mega-col"><a class="mega-d" href="/c/community/">Nonprofits &amp; Clubs <span>30</span></a><a class="mega-s" href="/goodledger/">Goodledger</a></div>
+      </div>
+    </div>
+    <a class="hot" href="/search.html?bundles=1">Bundle deals</a>
+    <a href="/search.html?max=50">Under R50</a>
     <a href="/c/planners-home/">Planners &amp; Home</a><a href="/c/small-business/" aria-current="page">Small Business</a><a href="/c/money/">Money &amp; Budgeting</a><a href="/c/teaching/">Teaching &amp; Homeschool</a><a href="/c/weddings-events/">Weddings &amp; Events</a><a href="/c/fitness/">Fitness &amp; Training</a><a href="/c/property/">Landlords &amp; Property</a><a href="/c/careers/">Careers &amp; Jobs</a><a href="/c/garden-farm/">Garden &amp; Farm</a><a href="/c/pets/">Pets</a><a href="/c/community/">Nonprofits &amp; Clubs</a>
   </div></nav>
 </header>
 <main id="main">
-<section class="shop-banner"><svg class="motif" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g class="fl" style="--d:2.3s;--t:20s;--x:-22px;--y:14px"><g opacity="0.44"><circle cx="584" cy="648" r="5" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.3s;--t:15s;--x:4px;--y:10px"><g opacity="0.26"><circle cx="266" cy="585" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:2.2s;--t:15s;--x:-23px;--y:-8px"><g opacity="0.44"><circle cx="8" cy="74" r="16" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.5s;--t:25s;--x:-15px;--y:-17px"><g opacity="0.24"><path d="M280 268l16 0l-8 -16z" fill="#F7B32B"/></g></g><g class="fl" style="--d:6.0s;--t:26s;--x:2px;--y:18px"><g opacity="0.33"><circle cx="954" cy="506" r="10" fill="#7B5EA7"/></g></g><g class="fl" style="--d:1.6s;--t:15s;--x:-28px;--y:6px"><g opacity="0.31"><rect x="140" y="540" width="30" height="13" rx="3" fill="#F7B32B" transform="rotate(51 140 540)"/></g></g><g class="fl" style="--d:6.0s;--t:16s;--x:-26px;--y:-12px"><g opacity="0.36"><path d="M743 138l11 0l-5 -11z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:2.7s;--t:22s;--x:3px;--y:0px"><g opacity="0.35"><path d="M180 642l30 0l-15 -30z" fill="#F7B32B"/></g></g><g class="fl" style="--d:2.0s;--t:21s;--x:24px;--y:14px"><g opacity="0.43"><rect x="235" y="241" width="32" height="15" rx="3" fill="#7B5EA7" transform="rotate(3 235 241)"/></g></g><g class="fl" style="--d:2.1s;--t:25s;--x:15px;--y:-11px"><g opacity="0.29"><path d="M654 282l18 0l-9 -18z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.9s;--t:23s;--x:-10px;--y:-21px"><g opacity="0.41"><circle cx="945" cy="661" r="12" fill="#7B5EA7"/></g></g><g class="fl" style="--d:3.2s;--t:23s;--x:10px;--y:6px"><g opacity="0.36"><circle cx="757" cy="472" r="15" fill="#F7B32B"/></g></g><g class="fl" style="--d:4.7s;--t:17s;--x:-18px;--y:-3px"><g opacity="0.38"><circle cx="377" cy="278" r="12" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.5s;--t:22s;--x:22px;--y:9px"><g opacity="0.24"><circle cx="596" cy="333" r="10" fill="#F7B32B"/></g></g><g class="fl" style="--d:6.0s;--t:18s;--x:16px;--y:1px"><g opacity="0.22"><path d="M698 447l27 0l-13 -27z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:1.9s;--t:25s;--x:-12px;--y:-13px"><g opacity="0.35"><circle cx="146" cy="8" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:3.3s;--t:21s;--x:12px;--y:10px"><g opacity="0.30"><path d="M704 358l28 0l-14 -28z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:4.2s;--t:26s;--x:2px;--y:2px"><g opacity="0.40"><circle cx="808" cy="682" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:5.3s;--t:16s;--x:25px;--y:11px"><g opacity="0.35"><rect x="600" y="52" width="16" height="7" rx="3" fill="#7B5EA7" transform="rotate(25 600 52)"/></g></g><g class="fl" style="--d:3.3s;--t:24s;--x:30px;--y:3px"><g opacity="0.38"><path d="M1011 666l17 0l-9 -17z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.2s;--t:18s;--x:0px;--y:3px"><g opacity="0.37"><circle cx="729" cy="269" r="10" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.9s;--t:23s;--x:17px;--y:11px"><g opacity="0.34"><path d="M171 69l15 0l-7 -15z" fill="#F7B32B"/></g></g><g class="fl" style="--d:3.1s;--t:20s;--x:-1px;--y:-5px"><g opacity="0.27"><path d="M836 642l23 0l-11 -23z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.3s;--t:19s;--x:-22px;--y:-9px"><g opacity="0.27"><path d="M888 609l17 0l-8 -17z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.5s;--t:20s;--x:-8px;--y:-0px"><g opacity="0.26"><circle cx="784" cy="381" r="7" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.0s;--t:22s;--x:-23px;--y:6px"><g opacity="0.30"><circle cx="1188" cy="554" r="16" fill="#F7B32B"/></g></g></svg></section>
-<div class="wrap shop-head">
-  <span class="avatar xl" data-display="bricolage" aria-hidden="true">G</span>
-  <div class="shop-title">
-    <h1 data-display="bricolage">Gigsmith</h1>
-    <p>Business tools for freelancers and content creators</p>
-    <p class="shop-facts"><span>South Africa</span><span>30 items</span><span>Instant downloads</span><span><a href="/c/small-business/">Small Business</a></span></p>
-  </div>
-  <a class="btn btn-outline" href="/gigsmith/p/freelancer-business-bundle.html">Shop bundle: save 34%</a>
-</div>
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/small-business/">Small Business</a><span aria-hidden="true">›</span><span>Gigsmith</span></nav>
+  <section class="panel shop-hero">
+    <div class="shop-banner"><svg class="motif" viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><g class="fl" style="--d:2.3s;--t:20s;--x:-22px;--y:14px"><g opacity="0.44"><circle cx="584" cy="648" r="5" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.3s;--t:15s;--x:4px;--y:10px"><g opacity="0.26"><circle cx="266" cy="585" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:2.2s;--t:15s;--x:-23px;--y:-8px"><g opacity="0.44"><circle cx="8" cy="74" r="16" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.5s;--t:25s;--x:-15px;--y:-17px"><g opacity="0.24"><path d="M280 268l16 0l-8 -16z" fill="#F7B32B"/></g></g><g class="fl" style="--d:6.0s;--t:26s;--x:2px;--y:18px"><g opacity="0.33"><circle cx="954" cy="506" r="10" fill="#7B5EA7"/></g></g><g class="fl" style="--d:1.6s;--t:15s;--x:-28px;--y:6px"><g opacity="0.31"><rect x="140" y="540" width="30" height="13" rx="3" fill="#F7B32B" transform="rotate(51 140 540)"/></g></g><g class="fl" style="--d:6.0s;--t:16s;--x:-26px;--y:-12px"><g opacity="0.36"><path d="M743 138l11 0l-5 -11z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:2.7s;--t:22s;--x:3px;--y:0px"><g opacity="0.35"><path d="M180 642l30 0l-15 -30z" fill="#F7B32B"/></g></g><g class="fl" style="--d:2.0s;--t:21s;--x:24px;--y:14px"><g opacity="0.43"><rect x="235" y="241" width="32" height="15" rx="3" fill="#7B5EA7" transform="rotate(3 235 241)"/></g></g><g class="fl" style="--d:2.1s;--t:25s;--x:15px;--y:-11px"><g opacity="0.29"><path d="M654 282l18 0l-9 -18z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.9s;--t:23s;--x:-10px;--y:-21px"><g opacity="0.41"><circle cx="945" cy="661" r="12" fill="#7B5EA7"/></g></g><g class="fl" style="--d:3.2s;--t:23s;--x:10px;--y:6px"><g opacity="0.36"><circle cx="757" cy="472" r="15" fill="#F7B32B"/></g></g><g class="fl" style="--d:4.7s;--t:17s;--x:-18px;--y:-3px"><g opacity="0.38"><circle cx="377" cy="278" r="12" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.5s;--t:22s;--x:22px;--y:9px"><g opacity="0.24"><circle cx="596" cy="333" r="10" fill="#F7B32B"/></g></g><g class="fl" style="--d:6.0s;--t:18s;--x:16px;--y:1px"><g opacity="0.22"><path d="M698 447l27 0l-13 -27z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:1.9s;--t:25s;--x:-12px;--y:-13px"><g opacity="0.35"><circle cx="146" cy="8" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:3.3s;--t:21s;--x:12px;--y:10px"><g opacity="0.30"><path d="M704 358l28 0l-14 -28z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:4.2s;--t:26s;--x:2px;--y:2px"><g opacity="0.40"><circle cx="808" cy="682" r="7" fill="#F7B32B"/></g></g><g class="fl" style="--d:5.3s;--t:16s;--x:25px;--y:11px"><g opacity="0.35"><rect x="600" y="52" width="16" height="7" rx="3" fill="#7B5EA7" transform="rotate(25 600 52)"/></g></g><g class="fl" style="--d:3.3s;--t:24s;--x:30px;--y:3px"><g opacity="0.38"><path d="M1011 666l17 0l-9 -17z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.2s;--t:18s;--x:0px;--y:3px"><g opacity="0.37"><circle cx="729" cy="269" r="10" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.9s;--t:23s;--x:17px;--y:11px"><g opacity="0.34"><path d="M171 69l15 0l-7 -15z" fill="#F7B32B"/></g></g><g class="fl" style="--d:3.1s;--t:20s;--x:-1px;--y:-5px"><g opacity="0.27"><path d="M836 642l23 0l-11 -23z" fill="#7B5EA7"/></g></g><g class="fl" style="--d:5.3s;--t:19s;--x:-22px;--y:-9px"><g opacity="0.27"><path d="M888 609l17 0l-8 -17z" fill="#F7B32B"/></g></g><g class="fl" style="--d:0.5s;--t:20s;--x:-8px;--y:-0px"><g opacity="0.26"><circle cx="784" cy="381" r="7" fill="#7B5EA7"/></g></g><g class="fl" style="--d:0.0s;--t:22s;--x:-23px;--y:6px"><g opacity="0.30"><circle cx="1188" cy="554" r="16" fill="#F7B32B"/></g></g></svg></div>
+    <div class="shop-head">
+      <span class="avatar xl" data-display="bricolage" aria-hidden="true">G</span>
+      <div class="shop-title">
+        <h1 data-display="bricolage">Gigsmith</h1>
+        <p>Business tools for freelancers and content creators</p>
+        <ul class="shop-facts"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5M8 8h2M14 8h2M8 12h2M14 12h2"/></svg>South Africa</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>30 items</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant downloads</li></ul>
+      </div>
+      <a class="btn btn-primary" href="/gigsmith/p/freelancer-business-bundle.html">Bundle: save 34%</a>
+    </div>
+  </section>
 
-<div class="wrap shop-body">
-  <section id="shop" class="shop-items">
+  <section id="shop" class="panel">
     <h2 class="visually-hidden">Items</h2>
     <div class="filters">
-  <label class="search in-page"><span class="visually-hidden">Search these items</span>
-    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
-    <input id="q" type="search" placeholder="Search all 30 items in this shop" autocomplete="off">
-  </label>
+  <div class="filters-top">
+    <label class="fsearch"><span class="visually-hidden">Search these items</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><input id="q" type="search" placeholder="Search 30 items in Gigsmith" autocomplete="off"></label>
+    <div class="selects">
+      <label><span class="visually-hidden">File type</span><select id="f-fmt"><option value="">All file types</option><option value="PDF">PDF printable</option><option value="XLSX">Spreadsheet (XLSX)</option><option value="DOCX">Word (DOCX)</option></select></label>
+      <label><span class="visually-hidden">Price</span><select id="f-price"><option value="">Any price</option><option value="50">Under R50</option><option value="100">Under R100</option><option value="200">Under R200</option></select></label>
+      <label><span class="visually-hidden">Sort by</span><select id="f-sort"><option value="">Sort: Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
+    </div>
+  </div>
   <div class="chips" role="group" aria-label="Categories">
     <button type="button" class="chip on" data-cat="">All <span>30</span></button>
     <button type="button" class="chip" data-cat="Freelance admin">Freelance admin <span>7</span></button><button type="button" class="chip" data-cat="Clients &amp; projects">Clients &amp; projects <span>9</span></button><button type="button" class="chip" data-cat="Content creation">Content creation <span>13</span></button><button type="button" class="chip" data-cat="Bundles">Bundles <span>1</span></button>
   </div>
-  <div class="selects">
-    <label><span class="visually-hidden">File type</span><select id="f-fmt"><option value="">Any file type</option><option value="PDF">PDF printable</option><option value="XLSX">Spreadsheet (XLSX)</option><option value="DOCX">Word (DOCX)</option></select></label>
-    <label><span class="visually-hidden">Price</span><select id="f-price"><option value="">Any price</option><option value="50">Under R50</option><option value="100">Under R100</option><option value="200">Under R200</option></select></label>
-    <label><span class="visually-hidden">Sort by</span><select id="f-sort"><option value="">Sort: Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option></select></label>
-    <span class="count" id="count" aria-live="polite"></span>
-  </div>
+  <p class="count" id="count" aria-live="polite"></p>
 </div>
-    <div class="grid "><article class="card" data-id="GSM-001" data-cat="Freelance admin" data-price="99" data-fmt="XLSX" data-text="freelance time tracker &amp; billing log hours per client and project and see billable amounts automatically. freelance admin time tracker freelance hours billable hours timesheet excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
+    <div class="grid"><article class="card" data-id="GSM-001" data-cat="Freelance admin" data-price="99" data-fmt="XLSX" data-text="freelance time tracker &amp; billing log hours per client and project and see billable amounts automatically. freelance admin time tracker freelance hours billable hours timesheet excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/freelance-time-tracker-billing.html">
     <div class="card-media"><img src="/assets/p/GSM-001/cover.webp" alt="Freelance Time Tracker &amp; Billing" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Time Tracker &amp; Billing</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Time Tracker &amp; Billing</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-001" aria-label="Add Freelance Time Tracker &amp; Billing to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-001" aria-pressed="false" aria-label="Save Freelance Time Tracker &amp; Billing to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-002" data-cat="Freelance admin" data-price="99" data-fmt="XLSX" data-text="freelance income &amp; tax set-aside tracker track income by client, expenses, and how much to set aside for tax. freelance admin freelance income self employed tax savings income tracker excel template google sheets freelancer freelance content creator small business side hustle creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/freelance-income-tax-set-aside-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-002/cover.webp" alt="Freelance Income &amp; Tax Set-Aside Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Income &amp; Tax Set-Aside Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Income &amp; Tax Set-Aside Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-002" aria-label="Add Freelance Income &amp; Tax Set-Aside Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-002" aria-pressed="false" aria-label="Save Freelance Income &amp; Tax Set-Aside Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-003" data-cat="Clients &amp; projects" data-price="99" data-fmt="XLSX" data-text="client project pipeline track leads, proposals, active projects and expected value by stage. clients &amp; projects client pipeline project tracker freelance crm lead tracker excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/client-project-pipeline.html">
     <div class="card-media"><img src="/assets/p/GSM-003/cover.webp" alt="Client Project Pipeline" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Client Project Pipeline</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Client Project Pipeline</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-003" aria-label="Add Client Project Pipeline to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-003" aria-pressed="false" aria-label="Save Client Project Pipeline to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-004" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="content calendar for creators plan videos, posts and newsletters by platform with status and publish dates. content creation content calendar creator planner youtube planner content planner excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/content-calendar-for-creators.html">
     <div class="card-media"><img src="/assets/p/GSM-004/cover.webp" alt="Content Calendar for Creators" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Content Calendar for Creators</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Content Calendar for Creators</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-004" aria-label="Add Content Calendar for Creators to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-004" aria-pressed="false" aria-label="Save Content Calendar for Creators to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-005" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="youtube channel analytics tracker log each video&#39;s views, watch time, ctr and subscribers gained. content creation youtube analytics youtube tracker channel growth video stats excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/youtube-channel-analytics-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-005/cover.webp" alt="YouTube Channel Analytics Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">YouTube Channel Analytics Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">YouTube Channel Analytics Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-005" aria-label="Add YouTube Channel Analytics Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-005" aria-pressed="false" aria-label="Save YouTube Channel Analytics Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-006" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="brand deal &amp; sponsorship tracker track sponsor pitches, deliverables, fees and payment status. content creation brand deals sponsorship tracker influencer creator business excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/brand-deal-sponsorship-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-006/cover.webp" alt="Brand Deal &amp; Sponsorship Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Brand Deal &amp; Sponsorship Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Brand Deal &amp; Sponsorship Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-006" aria-label="Add Brand Deal &amp; Sponsorship Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-006" aria-pressed="false" aria-label="Save Brand Deal &amp; Sponsorship Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-007" data-cat="Clients &amp; projects" data-price="99" data-fmt="XLSX" data-text="freelance retainer tracker track monthly retainer hours used per client, rollovers and overage to bill. clients &amp; projects retainer tracker monthly retainer client hours overage excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/freelance-retainer-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-007/cover.webp" alt="Freelance Retainer Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Retainer Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Retainer Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-007" aria-label="Add Freelance Retainer Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-007" aria-pressed="false" aria-label="Save Freelance Retainer Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-008" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="podcast episode planner plan episodes, guests, recording dates and publishing with downloads. content creation podcast planner podcast tracker episode planner podcaster excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/podcast-episode-planner.html">
     <div class="card-media"><img src="/assets/p/GSM-008/cover.webp" alt="Podcast Episode Planner" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Podcast Episode Planner</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Podcast Episode Planner</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-008" aria-label="Add Podcast Episode Planner to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-008" aria-pressed="false" aria-label="Save Podcast Episode Planner to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-009" data-cat="Freelance admin" data-price="79" data-fmt="XLSX" data-text="home office cost share calculator estimate the business share of home costs from the area your office uses. freelance admin home office work from home home office expenses freelancer tax excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/home-office-cost-share-calculator.html">
     <div class="card-media"><img src="/assets/p/GSM-009/cover.webp" alt="Home Office Cost Share Calculator" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Home Office Cost Share Calculator</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Home Office Cost Share Calculator</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R79</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R79</strong></p>
+    <button type="button" class="add" data-add="GSM-009" aria-label="Add Home Office Cost Share Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-009" aria-pressed="false" aria-label="Save Home Office Cost Share Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-010" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="creator income streams tracker track income from ads, sponsors, affiliates, products and memberships. content creation creator income income streams creator business side hustle excel template google sheets freelancer freelance self employed content creator small business creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/creator-income-streams-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-010/cover.webp" alt="Creator Income Streams Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Creator Income Streams Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Creator Income Streams Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-010" aria-label="Add Creator Income Streams Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-010" aria-pressed="false" aria-label="Save Creator Income Streams Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-011" data-cat="Clients &amp; projects" data-price="89" data-fmt="DOCX" data-text="freelance proposal template a persuasive proposal: problem, approach, deliverables, timeline, investment and next steps. clients &amp; projects proposal template freelance proposal project proposal client proposal word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/freelance-proposal-template.html">
     <div class="card-media"><img src="/assets/p/GSM-011/cover.webp" alt="Freelance Proposal Template" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Proposal Template</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Proposal Template</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-011" aria-label="Add Freelance Proposal Template to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-011" aria-pressed="false" aria-label="Save Freelance Proposal Template to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-012" data-cat="Clients &amp; projects" data-price="89" data-fmt="DOCX" data-text="client onboarding questionnaire gather everything you need at project start: goals, audience, brand, access and approvals. clients &amp; projects client questionnaire onboarding form design brief client intake word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/client-onboarding-questionnaire.html">
     <div class="card-media"><img src="/assets/p/GSM-012/cover.webp" alt="Client Onboarding Questionnaire" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Client Onboarding Questionnaire</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Client Onboarding Questionnaire</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-012" aria-label="Add Client Onboarding Questionnaire to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-012" aria-pressed="false" aria-label="Save Client Onboarding Questionnaire to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-013" data-cat="Clients &amp; projects" data-price="89" data-fmt="DOCX" data-text="scope of work &amp; change request template define exactly what&#39;s included and handle extra requests without awkwardness. clients &amp; projects scope of work change request project scope freelance contract word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/scope-of-work-change-request-template.html">
     <div class="card-media"><img src="/assets/p/GSM-013/cover.webp" alt="Scope of Work &amp; Change Request Template" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Scope of Work &amp; Change Request Template</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Scope of Work &amp; Change Request Template</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-013" aria-label="Add Scope of Work &amp; Change Request Template to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-013" aria-pressed="false" aria-label="Save Scope of Work &amp; Change Request Template to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-014" data-cat="Content creation" data-price="89" data-fmt="DOCX" data-text="creator media kit template a media kit for pitching brands: audience, stats, packages and past partners. content creation media kit influencer media kit rate card creator pitch word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/creator-media-kit-template.html">
     <div class="card-media"><img src="/assets/p/GSM-014/cover.webp" alt="Creator Media Kit Template" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Creator Media Kit Template</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Creator Media Kit Template</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-014" aria-label="Add Creator Media Kit Template to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-014" aria-pressed="false" aria-label="Save Creator Media Kit Template to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-015" data-cat="Content creation" data-price="89" data-fmt="DOCX" data-text="brand pitch email templates six editable pitch and follow-up emails for creators approaching brands. content creation pitch email brand pitch sponsorship email influencer outreach word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/brand-pitch-email-templates.html">
     <div class="card-media"><img src="/assets/p/GSM-015/cover.webp" alt="Brand Pitch Email Templates" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Brand Pitch Email Templates</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Brand Pitch Email Templates</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-015" aria-label="Add Brand Pitch Email Templates to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-015" aria-pressed="false" aria-label="Save Brand Pitch Email Templates to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-016" data-cat="Freelance admin" data-price="89" data-fmt="DOCX" data-text="freelance service contract checklist clauses to include in a freelance agreement — use with a contract reviewed for your country. freelance admin freelance contract contract checklist service agreement freelancer word template editable template freelance self employed content creator small business side hustle creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/freelance-service-contract-checklist.html">
     <div class="card-media"><img src="/assets/p/GSM-016/cover.webp" alt="Freelance Service Contract Checklist" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Service Contract Checklist</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Service Contract Checklist</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-016" aria-label="Add Freelance Service Contract Checklist to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-016" aria-pressed="false" aria-label="Save Freelance Service Contract Checklist to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-017" data-cat="Freelance admin" data-price="49" data-fmt="PDF" data-text="freelancer weekly planner plan client work, admin and marketing each week with a focus on billable hours. freelance admin freelancer planner weekly planner work planner self employed printable pdf download freelancer freelance content creator small business side hustle creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/freelancer-weekly-planner.html">
     <div class="card-media"><img src="/assets/p/GSM-017/cover.webp" alt="Freelancer Weekly Planner" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelancer Weekly Planner</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelancer Weekly Planner</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R49</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="GSM-017" aria-label="Add Freelancer Weekly Planner to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-017" aria-pressed="false" aria-label="Save Freelancer Weekly Planner to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-018" data-cat="Content creation" data-price="49" data-fmt="PDF" data-text="youtube video planner plan each video: idea, hook, outline, b-roll, thumbnail and publishing checklist. content creation youtube planner video planner youtuber content creator printable pdf download freelancer freelance self employed small business side hustle creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/youtube-video-planner.html">
     <div class="card-media"><img src="/assets/p/GSM-018/cover.webp" alt="YouTube Video Planner" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">YouTube Video Planner</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">YouTube Video Planner</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R49</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="GSM-018" aria-label="Add YouTube Video Planner to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-018" aria-pressed="false" aria-label="Save YouTube Video Planner to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-019" data-cat="Content creation" data-price="39" data-fmt="PDF" data-text="content idea bank never run out of ideas: idea capture pages sorted by pillar and format. content creation content ideas idea bank creator planner social media ideas printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/content-idea-bank.html">
     <div class="card-media"><img src="/assets/p/GSM-019/cover.webp" alt="Content Idea Bank" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Content Idea Bank</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Content Idea Bank</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R39</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R39</strong></p>
+    <button type="button" class="add" data-add="GSM-019" aria-label="Add Content Idea Bank to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-019" aria-pressed="false" aria-label="Save Content Idea Bank to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-020" data-cat="Freelance admin" data-price="49" data-fmt="PDF" data-text="freelance goals &amp; annual review review your freelance year and set income, client and skills goals. freelance admin freelance goals annual review business goals freelancer printable pdf download freelance self employed content creator small business side hustle creator tools solopreneur">
   <a class="card-link" href="/gigsmith/p/freelance-goals-annual-review.html">
     <div class="card-media"><img src="/assets/p/GSM-020/cover.webp" alt="Freelance Goals &amp; Annual Review" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Goals &amp; Annual Review</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Goals &amp; Annual Review</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R49</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="GSM-020" aria-label="Add Freelance Goals &amp; Annual Review to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-020" aria-pressed="false" aria-label="Save Freelance Goals &amp; Annual Review to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-021" data-cat="Clients &amp; projects" data-price="49" data-fmt="PDF" data-text="client meeting notes structured notes for discovery calls, check-ins and feedback sessions. clients &amp; projects meeting notes client call discovery call project notes printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/client-meeting-notes.html">
     <div class="card-media"><img src="/assets/p/GSM-021/cover.webp" alt="Client Meeting Notes" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Client Meeting Notes</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Client Meeting Notes</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R49</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="GSM-021" aria-label="Add Client Meeting Notes to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-021" aria-pressed="false" aria-label="Save Client Meeting Notes to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-022" data-cat="Content creation" data-price="39" data-fmt="PDF" data-text="social media content planner pages monthly content grids, post planning pages and an analytics check-in. content creation social media planner instagram planner content grid post planner printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/social-media-content-planner-pages.html">
     <div class="card-media"><img src="/assets/p/GSM-022/cover.webp" alt="Social Media Content Planner Pages" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Social Media Content Planner Pages</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Social Media Content Planner Pages</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R39</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R39</strong></p>
+    <button type="button" class="add" data-add="GSM-022" aria-label="Add Social Media Content Planner Pages to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-022" aria-pressed="false" aria-label="Save Social Media Content Planner Pages to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-023" data-cat="Clients &amp; projects" data-price="39" data-fmt="PDF" data-text="portfolio case study worksheets turn finished projects into case studies that win new clients. clients &amp; projects case study portfolio freelance portfolio client results printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/portfolio-case-study-worksheets.html">
     <div class="card-media"><img src="/assets/p/GSM-023/cover.webp" alt="Portfolio Case Study Worksheets" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Portfolio Case Study Worksheets</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Portfolio Case Study Worksheets</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R39</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R39</strong></p>
+    <button type="button" class="add" data-add="GSM-023" aria-label="Add Portfolio Case Study Worksheets to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-023" aria-pressed="false" aria-label="Save Portfolio Case Study Worksheets to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-024" data-cat="Freelance admin" data-price="79" data-fmt="XLSX" data-text="freelance rate calculator work out the hourly and day rate you need from income goals and billable time. freelance admin freelance rate hourly rate day rate pricing calculator excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/freelance-rate-calculator.html">
     <div class="card-media"><img src="/assets/p/GSM-024/cover.webp" alt="Freelance Rate Calculator" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Freelance Rate Calculator</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelance Rate Calculator</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R79</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R79</strong></p>
+    <button type="button" class="add" data-add="GSM-024" aria-label="Add Freelance Rate Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-024" aria-pressed="false" aria-label="Save Freelance Rate Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-025" data-cat="Clients &amp; projects" data-price="79" data-fmt="XLSX" data-text="project quote calculator build a project price from estimated hours, rate, expenses and a contingency. clients &amp; projects project quote pricing estimate calculator freelance pricing excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/project-quote-calculator.html">
     <div class="card-media"><img src="/assets/p/GSM-025/cover.webp" alt="Project Quote Calculator" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Project Quote Calculator</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Project Quote Calculator</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R79</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R79</strong></p>
+    <button type="button" class="add" data-add="GSM-025" aria-label="Add Project Quote Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-025" aria-pressed="false" aria-label="Save Project Quote Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-026" data-cat="Content creation" data-price="79" data-fmt="XLSX" data-text="sponsorship rate calculator estimate a starting sponsorship fee from average views and a cpm range. content creation sponsorship rate creator rates influencer pricing cpm calculator excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/sponsorship-rate-calculator.html">
     <div class="card-media"><img src="/assets/p/GSM-026/cover.webp" alt="Sponsorship Rate Calculator" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Sponsorship Rate Calculator</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Sponsorship Rate Calculator</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R79</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R79</strong></p>
+    <button type="button" class="add" data-add="GSM-026" aria-label="Add Sponsorship Rate Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-026" aria-pressed="false" aria-label="Save Sponsorship Rate Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-027" data-cat="Bundles" data-price="279" data-fmt="PDF XLSX DOCX" data-text="freelancer business bundle time tracker &amp; billing, income &amp; tax tracker, proposal template, onboarding questionnaire and weekly planner, plus a bundle-only client offboarding checklist. bundles freelancer bundle freelance templates small business kit self employed kit printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/freelancer-business-bundle.html">
-    <div class="card-media"><img src="/assets/p/GSM-027/cover.webp" alt="Freelancer Business Bundle" loading="lazy" width="600" height="450"><span class="tag-save">Bundle · save 34%</span></div>
-    <h3 class="card-title">Freelancer Business Bundle</h3>
+    <div class="card-media"><img src="/assets/p/GSM-027/cover.webp" alt="Freelancer Business Bundle" loading="lazy" width="600" height="450"><span class="badge-off">-34%</span></div>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Freelancer Business Bundle</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF, XLSX, DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R279</strong> <s>R425</s> <span class="off">(34% off)</span></p>
-  <p class="card-meta">Digital download · PDF, XLSX, DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R279</strong><s>R425</s></p>
+    <button type="button" class="add" data-add="GSM-027" aria-label="Add Freelancer Business Bundle to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-027" aria-pressed="false" aria-label="Save Freelancer Business Bundle to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-028" data-cat="Content creation" data-price="99" data-fmt="XLSX" data-text="newsletter growth tracker track subscribers, open rates and clicks for every issue of your newsletter. content creation newsletter tracker email list growth substack newsletter stats excel template google sheets freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/newsletter-growth-tracker.html">
     <div class="card-media"><img src="/assets/p/GSM-028/cover.webp" alt="Newsletter Growth Tracker" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Newsletter Growth Tracker</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Newsletter Growth Tracker</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R99</strong></p>
-  <p class="card-meta">Digital download · XLSX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R99</strong></p>
+    <button type="button" class="add" data-add="GSM-028" aria-label="Add Newsletter Growth Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-028" aria-pressed="false" aria-label="Save Newsletter Growth Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-029" data-cat="Content creation" data-price="49" data-fmt="PDF" data-text="creator batch production planner batch a week of content in one sitting: ideas, scripts, filming, editing and scheduling. content creation batch content content batching creator workflow content production printable pdf download freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/creator-batch-production-planner.html">
     <div class="card-media"><img src="/assets/p/GSM-029/cover.webp" alt="Creator Batch Production Planner" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Creator Batch Production Planner</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Creator Batch Production Planner</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R49</strong></p>
-  <p class="card-meta">Digital download · PDF</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="GSM-029" aria-label="Add Creator Batch Production Planner to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-029" aria-pressed="false" aria-label="Save Creator Batch Production Planner to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article><article class="card" data-id="GSM-030" data-cat="Clients &amp; projects" data-price="89" data-fmt="DOCX" data-text="testimonial &amp; referral request templates polite emails and a short form to collect genuine testimonials and referrals. clients &amp; projects testimonial request referral email client feedback freelance marketing word template editable template freelancer freelance self employed content creator small business side hustle creator tools">
   <a class="card-link" href="/gigsmith/p/testimonial-referral-request-templates.html">
     <div class="card-media"><img src="/assets/p/GSM-030/cover.webp" alt="Testimonial &amp; Referral Request Templates" loading="lazy" width="600" height="450"></div>
-    <h3 class="card-title">Testimonial &amp; Referral Request Templates</h3>
+    <div class="card-body">
+      <p class="card-shop">Gigsmith</p>
+      <h3 class="card-title">Testimonial &amp; Referral Request Templates</h3>
+      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · DOCX</p>
+    </div>
   </a>
-  
-  <p class="card-price"><strong>R89</strong></p>
-  <p class="card-meta">Digital download · DOCX</p>
+  <div class="card-foot">
+    <p class="card-price"><strong>R89</strong></p>
+    <button type="button" class="add" data-add="GSM-030" aria-label="Add Testimonial &amp; Referral Request Templates to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+  </div>
   <button type="button" class="fav" data-fav="GSM-030" aria-pressed="false" aria-label="Save Testimonial &amp; Referral Request Templates to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article></div>
     <p id="empty" class="muted empty" hidden>No items match. Try a shorter word or another category.</p>
   </section>
+
+  <section class="panel about-shop" id="about">
+    <div class="about-grid">
+      <div>
+        <h2>About Gigsmith</h2>
+        <p>Time and billing trackers, proposals, client kits and creator planners for people who work for themselves.</p>
+        <p class="muted">Made for freelancers, consultants and content creators. Gigsmith is a studio of Mlinjana Capital Holdings (Pty) Ltd.</p>
+      </div>
+      <div>
+        <h3>What you can expect</h3>
+        <ul class="checks">
+          <li>Every spreadsheet is recalculated and checked for formula errors before release</li>
+          <li>Printables come in A4 and US Letter</li>
+          <li>Word templates open in Word, Google Docs and LibreOffice</li>
+          <li>Help within 14 days if a file doesn't work for you</li>
+        </ul>
+        <p class="shop-policies">Studio policies: <a href="/gigsmith/refunds.html">Refunds</a> · <a href="/gigsmith/licence.html">Licence</a> · <a href="/gigsmith/terms.html">Terms</a> · <a href="/gigsmith/privacy.html">Privacy</a> · <a href="/gigsmith/contact.html">Contact</a></p>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="panel faq">
+    <h2>Questions</h2>
+    <div class="faq-list">
+      <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, your download buttons appear on the confirmation page. Each link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
+      <details><summary>Can I buy several items at once?</summary><p>Yes. Add them to your basket and pay once. Every item gets its own download link.</p></details>
+      <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
+      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="/gigsmith/licence.html">licence</a>.</p></details>
+      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="/gigsmith/refunds.html">refunds &amp; support</a>.</p></details>
+    </div>
+  </section>
 </div>
-
-<section class="wrap about-shop" id="about">
-  <div class="about-grid">
-    <div>
-      <h2>About Gigsmith</h2>
-      <p>Time and billing trackers, proposals, client kits and creator planners for people who work for themselves.</p>
-      <p class="muted">Made for freelancers, consultants and content creators.</p>
-    </div>
-    <div>
-      <h3>What you can expect</h3>
-      <ul class="checks">
-        <li>Every spreadsheet is recalculated and checked for formula errors before release</li>
-        <li>Printables come in A4 and US Letter</li>
-        <li>Word templates open in Word, Google Docs and LibreOffice</li>
-        <li>Help within 14 days if a file doesn't work for you</li>
-      </ul>
-      <p class="shop-policies">Shop policies: <a href="/gigsmith/refunds.html">Refunds</a> · <a href="/gigsmith/licence.html">Licence</a> · <a href="/gigsmith/terms.html">Terms</a> · <a href="/gigsmith/privacy.html">Privacy</a> · <a href="/gigsmith/contact.html">Contact the shop</a></p>
-    </div>
-  </div>
-</section>
-
-<section id="faq" class="wrap faq">
-  <h2>Questions</h2>
-  <div class="faq-list">
-    <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, the download button appears on the confirmation page. The link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
-    <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
-    <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="/gigsmith/licence.html">licence</a>.</p></details>
-    <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="/gigsmith/refunds.html">refunds &amp; support</a>.</p></details>
-  </div>
-</section>
 </main>
-<footer class="foot">
-  <div class="foot-trust"><div class="wrap">
-    <p><strong>Instant downloads.</strong> Files appear straight after payment.</p>
-    <p><strong>Secure checkout.</strong> Payments run on PayFast.</p>
-    <p><strong>Real help.</strong> A file doesn't work? We fix it or refund you within 14 days.</p>
+<footer class="ft">
+  <div class="ft-help"><div class="wrap ft-help-in">
+    <div><strong>Need help with an order?</strong><p>Send us a message with your order number. We reply by email, usually within two working days.</p></div>
+    <a class="btn btn-light" href="/help/contact.html">Contact us</a>
   </div></div>
-  <div class="wrap foot-grid">
-    <div class="foot-brand">
-      <a class="logo light" href="/">Mlinjana<span>Studios</span></a>
+  <div class="wrap ft-grid">
+    <div class="ft-brand">
+      <a class="logo light" href="/"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><path d="M10 29V13l10 10 10-10v16"/><circle cx="31.5" cy="8.5" r="3.5"/></svg><span class="logo-text"><b>Mlinjana</b><span>Studios</span></span></a>
       <p>Printable planners, templates and spreadsheets for the jobs of everyday life, from specialist studios in South Africa.</p>
     </div>
-    <div>
-      <h2 class="foot-h">Shop</h2>
-      <ul class="foot-list"><li><a href="/c/planners-home/">Planners &amp; Home</a></li><li><a href="/c/small-business/">Small Business</a></li><li><a href="/c/money/">Money &amp; Budgeting</a></li><li><a href="/c/teaching/">Teaching &amp; Homeschool</a></li><li><a href="/c/weddings-events/">Weddings &amp; Events</a></li><li><a href="/c/fitness/">Fitness &amp; Training</a></li><li><a href="/c/property/">Landlords &amp; Property</a></li><li><a href="/c/careers/">Careers &amp; Jobs</a></li><li><a href="/c/garden-farm/">Garden &amp; Farm</a></li><li><a href="/c/pets/">Pets</a></li><li><a href="/c/community/">Nonprofits &amp; Clubs</a></li></ul>
-    </div>
-    <div>
-      <h2 class="foot-h">Help</h2>
-      <ul class="foot-list"><li><a href="/#how">How buying works</a></li><li><a href="/help/refunds.html">Refunds &amp; support</a></li><li><a href="/help/licence.html">Licence</a></li><li><a href="/help/terms.html">Terms</a></li><li><a href="/help/privacy.html">Privacy</a></li><li><a href="/help/contact.html">Contact us</a></li></ul>
-    </div>
+    <div><h2 class="ft-h">Shop</h2><ul class="ft-list"><li><a href="/c/planners-home/">Planners &amp; Home</a></li><li><a href="/c/small-business/">Small Business</a></li><li><a href="/c/money/">Money &amp; Budgeting</a></li><li><a href="/c/teaching/">Teaching &amp; Homeschool</a></li><li><a href="/c/weddings-events/">Weddings &amp; Events</a></li><li><a href="/c/fitness/">Fitness &amp; Training</a></li><li><a href="/c/property/">Landlords &amp; Property</a></li><li><a href="/c/careers/">Careers &amp; Jobs</a></li><li><a href="/c/garden-farm/">Garden &amp; Farm</a></li><li><a href="/c/pets/">Pets</a></li><li><a href="/c/community/">Nonprofits &amp; Clubs</a></li></ul></div>
+    <div><h2 class="ft-h">Customer care</h2><ul class="ft-list"><li><a href="/#how">How buying works</a></li><li><a href="/help/contact.html">Lost a download?</a></li><li><a href="/help/refunds.html">Refunds &amp; support</a></li><li><a href="/help/licence.html">Licence</a></li><li><a href="/help/contact.html">Contact us</a></li></ul></div>
+    <div><h2 class="ft-h">Company</h2><ul class="ft-list"><li><a href="/help/about.html">About us</a></li><li><a href="/help/terms.html">Terms of sale</a></li><li><a href="/help/privacy.html">Privacy</a></li><li><a href="/favourites.html">Your favourites</a></li></ul></div>
   </div>
-  <div class="wrap foot-legal">
-    <p>Gigsmith and Mlinjana Studios are trading names of Mlinjana Capital Holdings (Pty) Ltd (reg. 2026/067820/07), 1000 Lewerik Crescent, Rabie Ridge, South Africa.</p>
-    <p>Prices in South African rand (ZAR). International cards are converted by your bank.</p>
+  <div class="wrap ft-legal">
+    <p>© 2026 Mlinjana Capital Holdings (Pty) Ltd · Reg. 2026/067820/07 · 1000 Lewerik Crescent, Rabie Ridge, South Africa. Gigsmith is a trading name of Mlinjana Capital Holdings (Pty) Ltd.</p>
+    <p>Payments are processed securely by PayFast. Prices in South African rand (ZAR); international cards are converted by your bank.</p>
   </div>
 </footer>
-<script src="/assets/site.js" defer></script>
+
+<dialog class="drawer" id="basket" aria-labelledby="bk-title">
+  <div class="drawer-in">
+    <header class="drawer-head"><h2 id="bk-title">Your basket</h2><button type="button" class="x" data-close-basket aria-label="Close basket">×</button></header>
+    <div class="bk-items" id="bk-items"></div>
+    <div class="bk-empty" id="bk-empty"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><p>Your basket is empty.</p><a class="btn btn-primary" href="/search.html">Start shopping</a></div>
+    <footer class="bk-foot" id="bk-foot" hidden>
+      <div class="bk-total"><span>Total</span><strong id="bk-total">R0</strong></div>
+      <form id="bk-form" novalidate>
+        <label for="bk-email">Email for your download links</label>
+        <input id="bk-email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <button class="btn btn-primary btn-block btn-lg" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Checkout securely</span></button>
+        <p class="msg" id="bk-msg" role="status"></p>
+      </form>
+      <p class="bk-note">You'll pay on PayFast's secure page. Your downloads appear straight after payment.</p>
+    </footer>
+  </div>
+</dialog>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<script src="/assets/site.js?v=3891745ce2" defer></script>
 </body>
 </html>
