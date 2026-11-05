@@ -10,11 +10,15 @@
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
 <link rel="stylesheet" href="/assets/site.css?v={{ asset_v }}">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%230b6b57'/><path d='M8 23V10l8 8 8-8v13' fill='none' stroke='white' stroke-width='3.2' stroke-linejoin='round' stroke-linecap='round'/></svg>">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
 <meta property="og:site_name" content="{{ market.name }}">
 <meta property="og:title" content="{{ self.title() }}">
 <meta property="og:description" content="{{ self.desc() }}">
-{% block og %}{% endblock %}
+{% block og %}<meta property="og:type" content="website"><meta property="og:image" content="{{ site_base }}/assets/brand/og.png">{% endblock %}
+<meta name="twitter:card" content="summary_large_image">
 {% if store %}<style>:root{--s-ink:{{ store.ink }};--s-accent:{{ store.accent }};--s-accent2:{{ store.accent2 }};--s-light:{{ store.light }}}</style>{% endif %}
 {% block head %}{% endblock %}
 </head>
@@ -27,10 +31,7 @@
 </div></div>
 <header class="hdr">
   <div class="wrap hdr-in">
-    <a class="logo" href="/" aria-label="{{ market.name }} home">
-      <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><path d="M10 29V13l10 10 10-10v16"/><circle cx="31.5" cy="8.5" r="3.5"/></svg>
-      <span class="logo-text"><b>Mlinjana</b><span>Studios</span></span>
-    </a>
+    <a class="logo" href="/"><img src="/assets/brand/logo.svg" alt="{{ market.name }}" width="158" height="42"></a>
     <form class="hsearch" action="/search.html" method="get" role="search">
       <label class="visually-hidden" for="hdept">Department</label>
       <select id="hdept" name="dept"><option value="">All</option>{% for d in depts %}<option value="{{ d.slug }}">{{ d.name }}</option>{% endfor %}</select>
@@ -63,7 +64,7 @@
   </div></div>
   <div class="wrap ft-grid">
     <div class="ft-brand">
-      <a class="logo light" href="/"><svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="10"/><path d="M10 29V13l10 10 10-10v16"/><circle cx="31.5" cy="8.5" r="3.5"/></svg><span class="logo-text"><b>Mlinjana</b><span>Studios</span></span></a>
+      <a class="logo" href="/"><img src="/assets/brand/logo-reversed.svg" alt="{{ market.name }}" width="158" height="42"></a>
       <p>{{ market.tagline }}</p>
     </div>
     <div><h2 class="ft-h">Shop</h2><ul class="ft-list">{% for d in depts %}<li><a href="/c/{{ d.slug }}/">{{ d.name }}</a></li>{% endfor %}</ul></div>

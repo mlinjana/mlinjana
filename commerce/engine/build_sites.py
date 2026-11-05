@@ -208,6 +208,17 @@ def main():
     fdst = os.path.join(SITE, "assets", "fonts")
     shutil.rmtree(fdst, ignore_errors=True)
     shutil.copytree(os.path.join(ROOT, "engine", "static", "fonts"), fdst)
+    # brand: logo (brand/make_logo.py, concept D), favicons, social card, web app manifest
+    bdst = os.path.join(SITE, "assets", "brand")
+    shutil.rmtree(bdst, ignore_errors=True)
+    shutil.copytree(os.path.join(ROOT, "engine", "static", "brand"), bdst)
+    shutil.copy(os.path.join(bdst, "favicon.ico"), os.path.join(SITE, "favicon.ico"))
+    json.dump({"name": "Mlinjana Studios", "short_name": "Mlinjana", "start_url": "/", "display": "browser",
+               "background_color": "#f1f3f6", "theme_color": "#0b6b57",
+               "icons": [{"src": "/assets/brand/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                         {"src": "/assets/brand/icon-512.png", "sizes": "512x512", "type": "image/png"},
+                         {"src": "/assets/brand/icon.svg", "sizes": "any", "type": "image/svg+xml"}]},
+              open(os.path.join(SITE, "site.webmanifest"), "w"), indent=1)
     by_slug = {p["slug"]: p for p in cat}
 
     # ---- pass 1: prepare every store and product (pages link across stores, so all data comes first) ----
