@@ -5,7 +5,7 @@ The owner (Chuma Afika Mlinjana) has delegated day-to-day running of the 20 stor
 ## Facts
 - Seller: Mlinjana Capital Holdings (Pty) Ltd, reg. 2026/067820/07. Owner email: mlinjanachuma@gmail.com.
 - Live site: **https://mlinjanastudios.com** (domain registered at Cloudflare Registrar, 29 Oct 2026; also served at www. and at commerce-network.mlinjanachuma.workers.dev, with canonical tags pointing at the domain). Cloudflare Worker `commerce-network`; account `da113ab5ce60706d4edf410a243e9b5f`. The old Vercel address only redirects.
-- Backend: Supabase project `mrunxptxavtompcnegkr`. Edge functions `store-api` and `ops-api`. pg_cron runs health checks 4×/day and the daily report at 18:00 SAST (`public.daily_reports`).
+- Backend: Supabase project `mrunxptxavtompcnegkr`. Edge functions `store-api` (v7+: single and basket checkout) and `ops-api`. Basket orders: one `baskets` row (ref `BSK-…`) holds the PayFast payment; each item is a normal `orders` row with `basket_id`, its own download token and its share of the fee. Never redeploy store-api from an older copy: it would remove basket checkout. pg_cron runs health checks 4×/day and the daily report at 18:00 SAST (`public.daily_reports`).
 - Code: public repo `mlinjana/mlinjana`, branch `claude/autonomous-ecommerce-network-a0q82x`, folder `commerce/`. Status docs: STATUS.md, TASKS.md, DECISIONS.md, COSTS.md.
 - The product factory (`commerce/factory/`) is private and not in git. A backup is in the Supabase `backups` bucket (`factory/…zip`). Scheduled runs don't need it unless creating new products.
 
