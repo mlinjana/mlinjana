@@ -43,7 +43,7 @@
     </ul>
   </section>
 
-  {{ rail("Top picks from every studio", picks, shops, "/search.html", "View all") }}
+  {{ rail("Top picks", picks, shops, "/search.html", "View all") }}
   {{ rail("Bundle deals", bundles, shops, "/search.html?bundles=1", "All bundles", "Real savings against buying each item separately") }}
 
   <section class="promo-duo">
@@ -53,10 +53,10 @@
   {{ rail("Under R50", under50, shops, "/search.html?max=50", "See all " ~ under50_total) }}
   {% for r in dept_rows %}{{ rail(r.title, r.products, shops, r.href, "Shop " ~ r.name) }}{% endfor %}
 
-  <section class="panel" id="studios">
-    <div class="panel-head"><div><h2>Shop the studios</h2><p>Each studio focuses on one kind of work, from salons and building sites to classrooms and family life.</p></div></div>
-    <ul class="studios">
-      {% for s in shops_list %}<li><a href="/{{ s.path }}/" style="--s-accent:{{ s.accent }};--s-accent2:{{ s.accent2 }}"><span class="avatar" data-display="{{ s.display }}" aria-hidden="true">{{ s.name[0] }}</span><span><strong>{{ s.name }}</strong><small>{{ s.tagline }}</small></span></a></li>{% endfor %}
+  <section class="panel" id="categories">
+    <div class="panel-head"><div><h2>Shop by category</h2><p>From salons and building sites to classrooms and family life: find tools made for exactly what you do.</p></div></div>
+    <ul class="cat-tiles">
+      {% for s in shops_list %}<li><a href="/{{ s.path }}/"><span class="cimg"><img src="/{{ s.covers[0] }}" alt="" loading="lazy" width="600" height="450"></span><span><strong>{{ s.coll }}</strong><small>{{ s.n_products }} items</small></span></a></li>{% endfor %}
     </ul>
   </section>
 

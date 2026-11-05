@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% from "_macros.html" import rail, icon %}
-{% block title %}{{ p.name }} | {{ store.name }}{% endblock %}
+{% block title %}{{ p.name }} | {{ market.name }}{% endblock %}
 {% block desc %}{{ p.summary }}{% endblock %}
 {% block pid %}{{ p.id }}{% endblock %}
 {% block og %}<meta property="og:type" content="product"><meta property="og:image" content="{{ site_base }}/{{ p.images.cover }}">{% endblock %}
@@ -9,7 +9,7 @@
 {% endblock %}
 {% block main %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.name }}</a><span aria-hidden="true">›</span><span>{{ p.category }}</span></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a>{% if store.coll != dept.name %}<span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.coll }}</a>{% endif %}<span aria-hidden="true">›</span><span>{{ p.category }}</span></nav>
 
   <div class="pp">
     <section class="panel pp-media" aria-label="Images">
@@ -25,7 +25,7 @@
     </section>
 
     <section class="panel pp-main">
-      <p class="pp-by">By <a href="{{ base }}/">{{ store.name }}</a> <span aria-hidden="true">·</span> <a href="/c/{{ dept.slug }}/">{{ dept.name }}</a></p>
+      <p class="pp-by"><a href="{{ base }}/">{{ store.coll }}</a> <span aria-hidden="true">·</span> {{ p.category }}</p>
       <h1>{{ p.name }}</h1>
       <p class="pp-sum">{{ p.summary }}</p>
       <ul class="pp-chips">{% for f in p.formats %}<li class="fmt fmt-{{ f.split(' ')[0]|lower }}">{{ f }}</li>{% endfor %}</ul>
@@ -48,7 +48,7 @@
         <li>{{ icon("lock") }}<span>Secure checkout on PayFast. We never see your card.</span></li>
         <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Download 5 times over 7 days{% endif %}</span></li>
         <li>{{ icon("refresh") }}<span>File won't work? Fixed or refunded within 14 days</span></li>
-        <li>{{ icon("building") }}<span>Sold by {{ store.name }}, a studio of {{ legal.operator }}</span></li>
+        <li>{{ icon("building") }}<span>Sold and supported by {{ market.name }}</span></li>
       </ul>
     </aside>
   </div>
@@ -84,15 +84,19 @@
       </section>
     </div>
     <aside class="panel seller">
-      <p class="seller-k">Meet the studio</p>
-      <div class="seller-id"><span class="avatar lg" data-display="{{ store.display }}" style="--s-accent:{{ store.accent }};--s-accent2:{{ store.accent2 }}" aria-hidden="true">{{ store.name[0] }}</span><div><h2>{{ store.name }}</h2><p>{{ store.tagline }}</p></div></div>
-      <p class="muted small">{{ store.n_products }} items for {{ store.audience|lower }}.</p>
-      <a class="btn btn-outline btn-block" href="{{ base }}/">Visit the studio</a>
-      <a class="btn btn-ghost btn-block" href="{{ base }}/contact.html">Ask a question</a>
+      <p class="seller-k">Sold by</p>
+      <div class="seller-id"><img class="seller-logo" src="/assets/brand/icon.svg" alt="" width="56" height="56"><div><h2>{{ market.name }}</h2><p>A registered South African company</p></div></div>
+      <ul class="checks small-checks">
+        <li>Made, sold and supported by us: one place for help with any order</li>
+        <li>File doesn't work as described? Fixed or refunded within 14 days</li>
+        <li>{{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}</li>
+      </ul>
+      <a class="btn btn-outline btn-block" href="/help/about.html">About us</a>
+      <a class="btn btn-ghost btn-block" href="/help/contact.html">Ask a question</a>
     </aside>
   </div>
 
-  {% if more %}{{ rail("More from " ~ store.name, more, shops, base ~ "/", "See all " ~ store.n_products) }}{% endif %}
+  {% if more %}{{ rail("More in " ~ store.coll, more, shops, base ~ "/", "See all " ~ store.n_products) }}{% endif %}
   {% if alike %}{{ rail("You may also like", alike, shops, "/c/" ~ dept.slug ~ "/", "More in " ~ dept.name) }}{% endif %}
 </div>
 

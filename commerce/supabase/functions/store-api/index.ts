@@ -52,6 +52,74 @@ async function logPaymentEvent(order_ref: string | null, verified: boolean, outc
   await db.from("payment_events").insert({ provider: "payfast", order_ref, verified, outcome, payload: safe });
 }
 
+// ---- receipt emails: one branded design for single and basket orders (HTML + plain-text alternative) ----
+const escH = (s: string) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
+const rand = (cents: number) => "R" + (cents / 100).toFixed(2).replace(/\.00$/, "");
+
+type ReceiptItem = { name: string; ref: string; cents: number; link: string };
+
+async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: boolean) {
+  const site = await cfg("site"), legal = await cfg("legal");
+  const base = site?.base_url ?? "https://mlinjanastudios.com";
+  const total = items.reduce((a, x) => a + x.cents, 0);
+  const date = new Date().toLocaleDateString("en-ZA", { day: "numeric", month: "long", year: "numeric", timeZone: "Africa/Johannesburg" });
+  const reg = legal?.registration ? String(legal.registration).split(" (")[0] : "";
+  const company = [legal?.operator && `Mlinjana Studios is a trading name of ${legal.operator}`, reg && `Reg. ${reg}`, legal?.address].filter(Boolean).join(" · ");
+  const help = `${base}/help/contact.html`;
+  const rows = items.map((x) => `
+<tr><td style="padding:14px 0;border-bottom:1px solid #e2e8f0">
+  <div style="font-size:15px;font-weight:700;color:#0f172a;line-height:1.35">${escH(x.name)}</div>
+  <div style="font-size:12.5px;color:#64748b;margin-top:2px">Item ${escH(x.ref)} · ${rand(x.cents)}</div>
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td style="border-radius:10px;background:#0b6b57">
+    <a href="${escH(x.link)}" style="display:inline-block;padding:11px 20px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:10px">Download ZIP</a>
+  </td></tr></table>
+</td></tr>`).join("");
+  const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your Mlinjana Studios order</title></head>
+<body style="margin:0;padding:0;background:#f1f3f6;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1e293b">
+<div style="display:none;max-height:0;overflow:hidden">Payment received. Your ${items.length > 1 ? "downloads are" : "download is"} ready.</div>
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f3f6;padding:24px 12px"><tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
+  <tr><td style="padding:4px 4px 18px"><a href="${base}"><img src="${base}/assets/brand/logo-email.png" width="158" height="42" alt="Mlinjana Studios" style="display:block;border:0"></a></td></tr>
+  <tr><td style="background:#ffffff;border-radius:16px;padding:28px 28px 8px">
+    ${sandbox ? `<div style="background:#fff4d6;color:#7a4d00;border-radius:8px;padding:8px 12px;font-size:12.5px;margin-bottom:16px">Test order (PayFast sandbox): no real payment was taken.</div>` : ""}
+    <div style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#0b6b57">Payment received</div>
+    <h1 style="margin:6px 0 6px;font-size:24px;line-height:1.25;color:#0f172a">Thank you for your order</h1>
+    <p style="margin:0 0 18px;font-size:15px;color:#475569;line-height:1.5">Your ${items.length > 1 ? "files are" : "file is"} ready. Tap the button to download${items.length > 1 ? " each one" : ""}.</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border-radius:10px;padding:12px 16px;font-size:13.5px;color:#334155">
+      <tr><td>Order number</td><td align="right" style="font-weight:700;color:#0f172a">${escH(orderRef)}</td></tr>
+      <tr><td style="padding-top:4px">Date</td><td align="right" style="padding-top:4px">${date}</td></tr>
+      <tr><td style="padding-top:4px">Total paid</td><td align="right" style="padding-top:4px;font-weight:700;color:#0f172a">${rand(total)}</td></tr>
+    </table>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px">${rows}</table>
+    <p style="margin:16px 0 0;font-size:13px;color:#64748b;line-height:1.5">Each link works 5 times over 7 days, so save your files somewhere safe. Open <b>Start Here.pdf</b> in each download for instructions and your licence.</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0 20px;background:#e7f3ee;border-radius:10px"><tr><td style="padding:14px 16px;font-size:13.5px;color:#08503f;line-height:1.5">
+      <b>Need help?</b> Reply to this email or <a href="${help}" style="color:#0b6b57;font-weight:700">contact us</a> and quote order ${escH(orderRef)}. If a file doesn't work as described, we'll fix it or refund you within 14 days.
+    </td></tr></table>
+  </td></tr>
+  <tr><td style="padding:18px 8px;font-size:11.5px;line-height:1.6;color:#64748b;text-align:center">
+    You're receiving this email because you bought from <a href="${base}" style="color:#64748b">mlinjanastudios.com</a>.<br>${escH(company)}<br>Payments are processed securely by PayFast.
+  </td></tr>
+</table></td></tr></table></body></html>`;
+  const text = [`Thank you for your order ${orderRef}`, sandbox ? "(Test order, PayFast sandbox: no real payment was taken.)" : "", "",
+    `Date: ${date}`, `Total paid: ${rand(total)}`, "", items.length > 1 ? "Your downloads:" : "Your download:",
+    ...items.map((x, i) => `${i + 1}. ${x.name} (${rand(x.cents)})\n   ${x.link}`), "",
+    "Each link works 5 times over 7 days. Open Start Here.pdf in each download for instructions and your licence.", "",
+    `Need help? Reply to this email or visit ${help} and quote order ${orderRef}.`, "", "Mlinjana Studios", company, base]
+    .filter((l, i, a) => !(l === "" && a[i - 1] === "")).join("\n");
+  return { html, text };
+}
+
+async function sendEmail(to: string, subject: string, body: { html: string; text: string }) {
+  const key = Deno.env.get("RESEND_API_KEY");
+  const e = await cfg("email");
+  if (!key || !e?.from) return { ok: false, note: "receipt email not sent: email provider not configured" };
+  const r = await fetch("https://api.resend.com/emails", {
+    method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+    body: JSON.stringify({ from: e.from, to: [to], reply_to: e.reply_to ?? undefined, subject, html: body.html, text: body.text }),
+  });
+  return { ok: r.ok, note: r.ok ? "receipt emailed" : `receipt email failed: ${r.status}` };
+}
+
 async function checkout(req: Request) {
   const kill = await cfg("kill_switch");
   if (kill?.checkout) return json({ error: "Checkout is temporarily paused. Please try again later." }, 503);
@@ -224,31 +292,12 @@ async function itn(req: Request) {
 }
 
 async function sendReceipt(order: Record<string, any>, token: string) {
-  const key = Deno.env.get("RESEND_API_KEY");
-  const e = await cfg("email");
-  if (!key || !e?.from) {
-    await db.from("orders").update({ notes: "receipt email not sent: email provider not configured" }).eq("id", order.id);
-    return;
-  }
-  const site = await cfg("site"), legal = await cfg("legal");
-  const link = `${FN_URL}/download?t=${token}`;
-  const storeUrl = site?.stores?.[order.store_id] ?? "";
   const { data: p } = await db.from("products").select("title").eq("id", order.product_id).single();
-  const { data: st } = await db.from("stores").select("name").eq("id", order.store_id).maybeSingle();
-  // Company signature: only details already published on the Terms page (config/stores.json → legal), never invented.
-  const signature = ["-- ", st?.name, legal?.operator && `A store of ${legal.operator}`,
-    legal?.registration && `Reg. no. ${String(legal.registration).split(" (")[0]}`, legal?.address, storeUrl]
-    .filter(Boolean).join("\n");
-  const r = await fetch("https://api.resend.com/emails", {
-    method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: e.from, to: [order.email], reply_to: e.reply_to ?? undefined,
-      subject: `Your download: ${p?.title ?? order.product_id} (order ${order.ref})`,
-      text: `Thank you for your order ${order.ref}.\n\nDownload your file here (valid 7 days, up to 5 downloads):\n${link}\n\n` +
-        `Need help? Use the contact page: ${storeUrl}/contact.html and quote ${order.ref}.\n\n${signature}`,
-    }),
-  });
-  await db.from("orders").update({ notes: r.ok ? "receipt emailed" : `receipt email failed: ${r.status}` }).eq("id", order.id);
+  const name = p?.title ?? order.product_id;
+  const body = await renderReceipt(order.ref, [{ name, ref: order.ref, cents: order.amount_cents, link: `${FN_URL}/download?t=${token}` }],
+    order.provider_mode === "sandbox");
+  const r = await sendEmail(order.email, `Your download is ready: ${name} (order ${order.ref})`, body);
+  await db.from("orders").update({ notes: r.note }).eq("id", order.id);
 }
 
 async function orderStatus(url: URL) {
@@ -338,30 +387,13 @@ async function itnBasket(ref: string, data: Record<string, string>, pf: Record<s
 }
 
 async function sendBasketReceipt(bk: Record<string, any>, items: { order: Record<string, any>; token: string }[]) {
-  const key = Deno.env.get("RESEND_API_KEY");
-  const e = await cfg("email");
-  if (!key || !e?.from) {
-    await db.from("baskets").update({ notes: "receipt email not sent: email provider not configured" }).eq("id", bk.id);
-    return;
-  }
-  const site = await cfg("site"), legal = await cfg("legal");
   const ids = items.map((x) => x.order.product_id);
   const { data: ps } = await db.from("products").select("id,title").in("id", ids.length ? ids : ["-"]);
   const name = (id: string) => ps?.find((p) => p.id === id)?.title ?? id;
-  const lines = items.map((x, i) => `${i + 1}. ${name(x.order.product_id)} (order ${x.order.ref})\n   ${FN_URL}/download?t=${x.token}`);
-  const signature = ["-- ", "Mlinjana Studios", legal?.operator && `A store of ${legal.operator}`,
-    legal?.registration && `Reg. no. ${String(legal.registration).split(" (")[0]}`, legal?.address, site?.base_url]
-    .filter(Boolean).join("\n");
-  const r = await fetch("https://api.resend.com/emails", {
-    method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
-    body: JSON.stringify({
-      from: e.from, to: [bk.email], reply_to: e.reply_to ?? undefined,
-      subject: `Your ${items.length} downloads (order ${bk.ref})`,
-      text: `Thank you for your order ${bk.ref}.\n\nYour downloads (each link is valid for 7 days, up to 5 downloads):\n\n${lines.join("\n\n")}\n\n` +
-        `Need help? Use the contact page: ${site?.base_url ?? ""}/help/contact.html and quote ${bk.ref}.\n\n${signature}`,
-    }),
-  });
-  await db.from("baskets").update({ notes: r.ok ? "receipt emailed" : `receipt email failed: ${r.status}` }).eq("id", bk.id);
+  const body = await renderReceipt(bk.ref, items.map((x) => ({ name: name(x.order.product_id), ref: x.order.ref, cents: x.order.amount_cents,
+    link: `${FN_URL}/download?t=${x.token}` })), bk.provider_mode === "sandbox");
+  const r = await sendEmail(bk.email, `Your ${items.length} downloads are ready (order ${bk.ref})`, body);
+  await db.from("baskets").update({ notes: r.note }).eq("id", bk.id);
 }
 
 async function basketStatus(url: URL) {

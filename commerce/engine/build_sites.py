@@ -151,9 +151,9 @@ def about_page(legal, n_shops, n_products, depts):
     return f"""
 <p><strong>Mlinjana Studios</strong> is the online shop of {e(legal['operator'])}, a registered South African company
 (registration {e(legal['registration'].split(' ')[0])}), at {e(legal['address'])}.</p>
-<p>We make practical digital tools: printable planners, spreadsheets and document templates. They're sold through
-{n_shops} specialist studios, each focused on one kind of work or one part of life, from {e(depts[0]['name'].lower())}
-to {e(depts[-1]['name'].lower())}. Today that's {n_products} products.</p>
+<p>We make practical digital tools: printable planners, spreadsheets and document templates, organised into
+{len(depts)} departments, from {e(depts[0]['name'].lower())} to {e(depts[-1]['name'].lower())}. Today that's {n_products} products,
+all made, sold and supported by us.</p>
 <h2>How we make and check our products</h2>
 <ul><li>Every product is built from the ground up for its job, not resold from somewhere else.</li>
 <li>Spreadsheets are recalculated and checked for formula errors before release.</li>
@@ -176,7 +176,7 @@ def jsonld(p, store, url):
 
 
 MARKET = {"name": "Mlinjana Studios",
-          "tagline": "Printable planners, templates and spreadsheets for the jobs of everyday life, from specialist studios in South Africa."}
+          "tagline": "Printable planners, templates and spreadsheets for the jobs of everyday life. Made, sold and supported in South Africa."}
 FMT_ORDER = ["PDF", "XLSX", "DOCX"]
 
 
@@ -191,7 +191,8 @@ def rotate(items, key, n):
 def main():
     cfg = json.load(open(os.path.join(ROOT, "config", "stores.json")))
     cat = json.load(open(os.path.join(ROOT, "catalogue", "products.json")))["products"]
-    depts = json.load(open(os.path.join(ROOT, "config", "departments.json")))["departments"]
+    dcfg = json.load(open(os.path.join(ROOT, "config", "departments.json")))
+    depts, colls = dcfg["departments"], dcfg["collections"]
     staging = cfg["mode"] != "live"
     dept_of = {sid: d for d in depts for sid in d["stores"]}
     missing = [st["id"] for st in cfg["stores"] if st["id"] not in dept_of]
@@ -249,13 +250,13 @@ def main():
         shops[st["id"]] = {**st, "display": font, "motif": motif_svg(st), "n_products": len(prods), "products": len(prods),
                            "accent_btn": BTN.get(st["id"]) or btn_colour(st["accent"]), "hero": hero,
                            "covers": [h["images"]["cover"] for h in hero], "url": f"{cfg['site_base']}/{st['path']}",
-                           "dept": dept_of[st["id"]]}
+                           "dept": dept_of[st["id"]], "coll": colls[st["id"]]}
     allp = [p for st in cfg["stores"] for p in prods_of[st["id"]]]
     total = len(allp)
     for d in depts:
         d["cover"] = shops[d["stores"][0]]["covers"][0]
         d["count"] = sum(len(prods_of[s]) for s in d["stores"])
-        d["shop_list"] = [{"name": shops[s]["name"], "path": shops[s]["path"]} for s in d["stores"]]
+        d["shop_list"] = [{"name": shops[s]["coll"], "path": shops[s]["path"], "count": shops[s]["n_products"]} for s in d["stores"]]
     import hashlib
     asset_v = hashlib.sha256(b"".join(open(os.path.join(ROOT, "engine", "static", f), "rb").read() for f in ("site.css", "site.js"))).hexdigest()[:10]
     common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, depts=depts, shops=shops, asset_v=asset_v,
@@ -280,8 +281,10 @@ def main():
         ctx = dict(common, store=shop, dept=shop["dept"], bundle=bundle, formats_all=fmts, base=f"/{st['path']}", root="/")
         out = os.path.join(SITE, st["path"])
         os.makedirs(os.path.join(out, "p"), exist_ok=True)
+        single = len(shop["dept"]["stores"]) == 1
         open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(
-            products=prods, categories=cat_counts(prods, st["categories"]), canonical=base_url + "/", **ctx))
+            products=prods, categories=cat_counts(prods, st["categories"]),
+            canonical=f"{cfg['site_base']}/c/{shop['dept']['slug']}/" if single else base_url + "/", **ctx))
         pages += 1
         same_dept = [q for q in allp if shops[q["store"]]["dept"] is shop["dept"] and q["store"] != st["id"]]
         for p in prods:
@@ -290,10 +293,10 @@ def main():
             more += rotate([r for r in others if r not in more], p["id"], 8 - len(more))
             alike = rotate(same_dept or [q for q in allp if q["store"] != st["id"]], p["id"], 8)
             open(os.path.join(out, "p", p["slug"] + ".html"), "w").write(env.get_template("product.html").render(
-                p=p, more=more, alike=alike, jsonld=jsonld(p, st, f"{base_url}/p/{p['slug']}.html"),
+                p=p, more=more, alike=alike, jsonld=jsonld(p, {"name": MARKET["name"]}, f"{base_url}/p/{p['slug']}.html"),
                 canonical=f"{base_url}/p/{p['slug']}.html", **ctx))
             pages += 1
-        for key, (title, body) in policies(st, cfg["legal"]).items():
+        for key, (title, body) in policies({"name": MARKET["name"]}, cfg["legal"]).items():
             open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(
                 title=title, body=body, canonical=f"{base_url}/{key}.html", **ctx))
             pages += 1
@@ -315,7 +318,7 @@ def main():
     for p in under50:  # one per shop, so the row shows the range
         if p["store"] not in seen:
             under50_pick.append(p); seen.add(p["store"])
-    shops_list = [shops[s] for d in depts for s in d["stores"]]
+    shops_list = [shops[s] for d in depts for s in d["stores"]]  # each shown as a category ("coll"), never as a studio
     cov = lambda sid, k=0: shops[sid]["covers"][min(k, len(shops[sid]["covers"]) - 1)]
     sb_min = min(p["price_zar"] for s in dept_by["small-business"]["stores"] for p in prods_of[s])
     slides = [
@@ -324,7 +327,7 @@ def main():
          "cta": "Shop Small Business", "href": "/c/small-business/", "c1": "#064e3b", "c2": "#0b6b57",
          "covers": [cov("bizwright", 2), cov("bizwright"), cov("shopkeeper")]},
         {"kicker": "Bundle deals", "title": f"Save up to {bundles[0]['saving_pct']}% with bundles",
-         "sub": "Several of a studio's best tools plus a bundle-only bonus file, for one price.",
+         "sub": "Several related tools plus a bundle-only bonus file, for one price.",
          "cta": "Shop bundles", "href": "/search.html?bundles=1", "c1": "#111827", "c2": "#334155",
          "covers": [b["images"]["cover"] for b in bundles[:3]]},
         {"kicker": "Planners & Home", "title": "Plan a calmer week at home",
@@ -370,12 +373,12 @@ def main():
         open(out, "w").write(env.get_template("page.html").render(
             store=None, title=title, body=body, canonical=f"{cfg['site_base']}/help/{key}.html", **common))
     # search index for /search.html and /favourites.html (short keys keep it small)
-    json.dump({"shops": {s["id"]: {"n": s["name"], "p": s["path"]} for s in shops.values()},
+    json.dump({"shops": {s["id"]: {"n": s["coll"], "p": s["path"]} for s in shops.values()},
                "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}.html",
                           "img": "/" + p["images"]["cover"], "c": p["category"], "d": shops[p["store"]]["dept"]["slug"],
                           "p": p["price_zar"], "b": p["bundle_sum"] if p.get("saving_pct") else 0, "o": p.get("saving_pct", 0),
                           "f": p["fmt_keys"], "fr": 1 if p["free"] else 0,
-                          "t": " ".join([p["name"], p["category"], p["summary"], " ".join(p["tags"]), shops[p["store"]]["name"]]).lower()}
+                          "t": " ".join([p["name"], p["category"], p["summary"], " ".join(p["tags"]), shops[p["store"]]["coll"]]).lower()}
                          for p in allp]},
               open(os.path.join(SITE, "assets", "catalogue.json"), "w"), separators=(",", ":"))
     built = [{"id": s["id"], "path": s["path"], "name": s["name"], "url": s["url"], "products": s["products"], "tagline": s["tagline"],

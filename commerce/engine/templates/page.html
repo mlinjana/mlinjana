@@ -1,8 +1,8 @@
 {% extends "base.html" %}
-{% block title %}{{ title }} | {{ store.name if store else market.name }}{% endblock %}
+{% block title %}{{ title }} | {{ market.name }}{% endblock %}
 {% block main %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a>{% if store %}<span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.name }}</a>{% endif %}<span aria-hidden="true">›</span><span>{{ title }}</span></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>{{ title }}</span></nav>
   <article class="panel prose">
     <h1>{{ title }}</h1>
     {{ body|safe }}

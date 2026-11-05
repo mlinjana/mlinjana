@@ -1,25 +1,23 @@
 {% extends "base.html" %}
 {% from "_macros.html" import grid, filters, icon %}
-{% block title %}{{ store.name }}: {{ store.tagline }} | {{ market.name }}{% endblock %}
+{% block title %}{{ store.coll }}: {{ store.tagline }} | {{ market.name }}{% endblock %}
+{% block desc %}{{ store.proposition }}{% endblock %}
 {% block main %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span><span>{{ store.name }}</span></nav>
-  <section class="panel shop-hero">
-    <div class="shop-banner">{{ store.motif|safe }}</div>
-    <div class="shop-head">
-      <span class="avatar xl" data-display="{{ store.display }}" aria-hidden="true">{{ store.name[0] }}</span>
-      <div class="shop-title">
-        <h1 data-display="{{ store.display }}">{{ store.name }}</h1>
-        <p>{{ store.tagline }}</p>
-        <ul class="shop-facts"><li>{{ icon("building") }}South Africa</li><li>{{ icon("file") }}{{ store.n_products }} items</li><li>{{ icon("bolt") }}Instant downloads</li></ul>
-      </div>
-      {% if bundle %}<a class="btn btn-primary" href="{{ base }}/p/{{ bundle.slug }}.html">Bundle: save {{ bundle.saving_pct }}%</a>{% endif %}
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>{% if store.coll != dept.name %}<a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span>{% endif %}<span>{{ store.coll }}</span></nav>
+  <section class="panel dept-hero">
+    <div class="dept-copy">
+      <h1>{{ store.coll }}</h1>
+      <p class="lede">{{ store.proposition }}</p>
+      <ul class="shop-facts"><li>{{ icon("file") }}{{ store.n_products }} items</li><li>{{ icon("bolt") }}Instant downloads</li><li>{{ icon("refresh") }}14-day file guarantee</li></ul>
+      {% if bundle %}<p><a class="btn btn-primary" href="{{ base }}/p/{{ bundle.slug }}.html">Bundle deal: save {{ bundle.saving_pct }}%</a></p>{% endif %}
     </div>
+    <div class="dept-art" aria-hidden="true">{% for c in store.covers[:2] %}<img src="/{{ c }}" alt="" width="600" height="450">{% endfor %}</div>
   </section>
 
   <section id="shop" class="panel">
     <h2 class="visually-hidden">Items</h2>
-    {{ filters(categories, store.n_products, "Search " ~ store.n_products ~ " items in " ~ store.name) }}
+    {{ filters(categories, store.n_products, "Search " ~ store.n_products ~ " items in " ~ store.coll) }}
     {{ grid(products, shops) }}
     <p id="empty" class="muted empty" hidden>No items match. Try a shorter word or another category.</p>
   </section>
@@ -27,9 +25,9 @@
   <section class="panel about-shop" id="about">
     <div class="about-grid">
       <div>
-        <h2>About {{ store.name }}</h2>
-        <p>{{ store.proposition }}</p>
-        <p class="muted">Made for {{ store.audience|lower }}. {{ store.name }} is a studio of {{ legal.operator }}.</p>
+        <h2>Made for</h2>
+        <p>{{ store.audience }}.</p>
+        <p class="muted">Every item in {{ store.coll|lower }} is made, sold and supported by {{ market.name }}.</p>
       </div>
       <div>
         <h3>What you can expect</h3>
@@ -39,7 +37,6 @@
           {% if 'DOCX' in formats_all %}<li>Word templates open in Word, Google Docs and LibreOffice</li>{% endif %}
           <li>Help within 14 days if a file doesn't work for you</li>
         </ul>
-        <p class="shop-policies">Studio policies: <a href="{{ base }}/refunds.html">Refunds</a> · <a href="{{ base }}/licence.html">Licence</a> · <a href="{{ base }}/terms.html">Terms</a> · <a href="{{ base }}/privacy.html">Privacy</a> · <a href="{{ base }}/contact.html">Contact</a></p>
       </div>
     </div>
   </section>
@@ -50,8 +47,8 @@
       <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, your download buttons appear on the confirmation page. Each link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
       <details><summary>Can I buy several items at once?</summary><p>Yes. Add them to your basket and pay once. Every item gets its own download link.</p></details>
       <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
-      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="{{ base }}/licence.html">licence</a>.</p></details>
-      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="{{ base }}/refunds.html">refunds &amp; support</a>.</p></details>
+      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="/help/licence.html">licence</a>.</p></details>
+      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="/help/refunds.html">refunds &amp; support</a>.</p></details>
     </div>
   </section>
 </div>

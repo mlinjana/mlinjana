@@ -26,7 +26,7 @@
     const s = shops[p.s] || { n: "", p: "" };
     return `<article class="card" data-id="${esc(p.i)}"><a class="card-link" href="${esc(p.u)}"><div class="card-media"><img src="${esc(p.img)}" alt="${esc(p.n)}" loading="lazy" width="600" height="450">` +
       (p.o ? `<span class="badge-off">-${p.o}%</span>` : "") + (p.fr ? `<span class="badge-free">Free</span>` : "") + `</div><div class="card-body">` +
-      `<p class="card-shop">${esc(s.n)}</p><h3 class="card-title">${esc(p.n)}</h3>` +
+      `<p class="card-shop">${esc(p.c)}</p><h3 class="card-title">${esc(p.n)}</h3>` +
       `<p class="card-meta">${icon.bolt}Instant download · ${esc(p.f.join(", "))}</p></div></a>` +
       `<div class="card-foot"><p class="card-price">${p.fr ? "<strong>Free</strong>" : `<strong>R${p.p}</strong>` + (p.o ? `<s>R${p.b}</s>` : "")}</p>` +
       (p.fr ? "" : `<button type="button" class="add" data-add="${esc(p.i)}" aria-label="Add ${esc(p.n)} to basket">${icon.bag}<span>Add</span></button>`) + `</div>` +

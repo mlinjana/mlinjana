@@ -72,7 +72,7 @@
     <div><h2 class="ft-h">Company</h2><ul class="ft-list"><li><a href="/help/about.html">About us</a></li><li><a href="/help/terms.html">Terms of sale</a></li><li><a href="/help/privacy.html">Privacy</a></li><li><a href="/favourites.html">Your favourites</a></li></ul></div>
   </div>
   <div class="wrap ft-legal">
-    {% if legal %}<p>© 2026 {{ legal.operator }} · Reg. {{ legal.registration.split(' ')[0] }} · {{ legal.address }}.{% if store %} {{ store.name }} is a trading name of {{ legal.operator }}.{% endif %}</p>{% endif %}
+    {% if legal %}<p>© 2026 {{ legal.operator }} · Reg. {{ legal.registration.split(' ')[0] }} · {{ legal.address }}. {{ market.name }} is a trading name of {{ legal.operator }}.</p>{% endif %}
     <p>Payments are processed securely by PayFast. Prices in South African rand (ZAR); international cards are converted by your bank.</p>
   </div>
 </footer>

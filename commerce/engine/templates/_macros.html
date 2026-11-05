@@ -20,7 +20,7 @@
   <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}.html">
     <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="badge-off">-{{ p.saving_pct }}%</span>{% endif %}{% if p.free %}<span class="badge-free">Free</span>{% endif %}</div>
     <div class="card-body">
-      <p class="card-shop">{{ shop.name }}</p>
+      <p class="card-shop">{{ p.category }}</p>
       <h3 class="card-title">{{ p.name }}</h3>
       <p class="card-meta">{{ icon("bolt") }}Instant download · {{ p.fmt_keys|join(', ') }}</p>
     </div>

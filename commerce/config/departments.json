@@ -1,16 +1,113 @@
 {
-  "_note": "Marketplace departments (the top category bar). Each store belongs to exactly one; order here is the order on the site.",
-  "departments": [
-    {"slug": "planners-home", "name": "Planners & Home", "stores": ["plainday", "littlerhythm", "kindkeep"]},
-    {"slug": "small-business", "name": "Small Business", "stores": ["bizwright", "shopkeeper", "gigsmith", "mise", "chairbook", "trowel", "fleetwise"]},
-    {"slug": "money", "name": "Money & Budgeting", "stores": ["abacus"]},
-    {"slug": "teaching", "name": "Teaching & Homeschool", "stores": ["chalkline", "hearthschool"]},
-    {"slug": "weddings-events", "name": "Weddings & Events", "stores": ["ivorylane"]},
-    {"slug": "fitness", "name": "Fitness & Training", "stores": ["pacebook"]},
-    {"slug": "property", "name": "Landlords & Property", "stores": ["doorpost"]},
-    {"slug": "careers", "name": "Careers & Jobs", "stores": ["careerladder"]},
-    {"slug": "garden-farm", "name": "Garden & Farm", "stores": ["furrowbook"]},
-    {"slug": "pets", "name": "Pets", "stores": ["petkeep"]},
-    {"slug": "community", "name": "Nonprofits & Clubs", "stores": ["goodledger"]}
-  ]
+ "_note": "Marketplace departments (the top category bar). Each store belongs to exactly one. Stores are internal product lines: customers only ever see the 'collections' names below (category labels), never studio brands (owner, 5 Nov 2026).",
+ "departments": [
+  {
+   "slug": "planners-home",
+   "name": "Planners & Home",
+   "stores": [
+    "plainday",
+    "littlerhythm",
+    "kindkeep"
+   ]
+  },
+  {
+   "slug": "small-business",
+   "name": "Small Business",
+   "stores": [
+    "bizwright",
+    "shopkeeper",
+    "gigsmith",
+    "mise",
+    "chairbook",
+    "trowel",
+    "fleetwise"
+   ]
+  },
+  {
+   "slug": "money",
+   "name": "Money & Budgeting",
+   "stores": [
+    "abacus"
+   ]
+  },
+  {
+   "slug": "teaching",
+   "name": "Teaching & Homeschool",
+   "stores": [
+    "chalkline",
+    "hearthschool"
+   ]
+  },
+  {
+   "slug": "weddings-events",
+   "name": "Weddings & Events",
+   "stores": [
+    "ivorylane"
+   ]
+  },
+  {
+   "slug": "fitness",
+   "name": "Fitness & Training",
+   "stores": [
+    "pacebook"
+   ]
+  },
+  {
+   "slug": "property",
+   "name": "Landlords & Property",
+   "stores": [
+    "doorpost"
+   ]
+  },
+  {
+   "slug": "careers",
+   "name": "Careers & Jobs",
+   "stores": [
+    "careerladder"
+   ]
+  },
+  {
+   "slug": "garden-farm",
+   "name": "Garden & Farm",
+   "stores": [
+    "furrowbook"
+   ]
+  },
+  {
+   "slug": "pets",
+   "name": "Pets",
+   "stores": [
+    "petkeep"
+   ]
+  },
+  {
+   "slug": "community",
+   "name": "Nonprofits & Clubs",
+   "stores": [
+    "goodledger"
+   ]
+  }
+ ],
+ "collections": {
+  "plainday": "Planners & Journals",
+  "littlerhythm": "Kids & Family Routines",
+  "kindkeep": "Caregiving & Health Records",
+  "bizwright": "Business Essentials",
+  "shopkeeper": "Online & Retail Sellers",
+  "gigsmith": "Freelancers & Creators",
+  "mise": "Food & Catering Business",
+  "chairbook": "Salon & Beauty Business",
+  "trowel": "Trades & Construction",
+  "fleetwise": "Transport & Fleet",
+  "abacus": "Money & Budgeting",
+  "chalkline": "Classroom & Teachers",
+  "hearthschool": "Homeschool",
+  "ivorylane": "Weddings & Events",
+  "pacebook": "Fitness & Training",
+  "doorpost": "Landlords & Property",
+  "careerladder": "Careers & Jobs",
+  "furrowbook": "Garden & Farm",
+  "petkeep": "Pets",
+  "goodledger": "Nonprofits & Clubs"
+ }
 }
