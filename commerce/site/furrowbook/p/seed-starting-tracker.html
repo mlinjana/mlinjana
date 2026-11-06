@@ -9,7 +9,7 @@
 <meta name="robots" content="noindex, nofollow">
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://mlinjanastudios.com/furrowbook/p/seed-starting-tracker">
-<link rel="stylesheet" href="/assets/site.css?v=0a243e2498">
+<link rel="stylesheet" href="/assets/site.css?v=acc7395d5d">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -85,10 +85,16 @@
     </section>
 
     <aside class="panel pp-buy" aria-label="Buy">
-      <p class="pp-price"><strong>R39</strong></p>
+      <p class="pp-price"><strong id="pp-amount">R39</strong></p>
       
       <p class="stock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg><span><strong>Instant download</strong> · 267 KB ZIP</span></p>
       
+      <fieldset class="lic">
+        <legend>Choose your licence</legend>
+        <label class="lic-opt"><input type="radio" name="licence" value="standard" data-price="39" checked><span><strong>Standard</strong><small>You and one business you own or work for</small></span><b>R39</b></label>
+        <label class="lic-opt"><input type="radio" name="licence" value="team" data-price="98"><span><strong>Team</strong><small>Up to 10 people in one organisation</small></span><b>R98</b></label>
+        <p class="lic-more">Using it in products you sell, or for more people? <a href="/help/contact?product=FRB-019&amp;topic=licence">Ask for a commercial quote</a> · <a href="/help/licence">Compare licences</a></p>
+      </fieldset>
       <button type="button" id="buy" class="btn btn-primary btn-block btn-lg" data-add="FRB-019" data-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add to basket</span></button>
       
       <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="FRB-019" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span>Save to favourites</span></button>
@@ -120,7 +126,7 @@
           <li>Printed colours can vary slightly between screens and printers.</li>
           
           
-          <li>For yourself and one business you own or work for. No reselling or sharing. <a href="/help/licence">Licence</a></li>
+          <li>Standard licence: for yourself and one business you own or work for. Team licence: up to 10 people in one organisation. No reselling or sharing. <a href="/help/licence">Licence</a></li>
           <li>File not working? We fix it or refund you within 14 days. <a href="/help/refunds">Refunds &amp; support</a></li>
         </ul>
       </section>
@@ -353,7 +359,7 @@
 </div>
 
 <div class="buybar" id="buybar" hidden>
-  <div class="buybar-in"><div><strong>Seed Starting Tracker</strong><span>R39 · instant download</span></div><button type="button" class="btn btn-primary" data-add="FRB-019" data-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add to basket</span></button></div>
+  <div class="buybar-in"><div><strong>Seed Starting Tracker</strong><span><span class="bb-amount">R39</span> · instant download</span></div><button type="button" class="btn btn-primary" data-add="FRB-019" data-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add to basket</span></button></div>
 </div>
 
 <dialog class="lightbox" id="lightbox" aria-label="Product previews">
@@ -402,6 +408,6 @@
   </div>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="/assets/site.js?v=0a243e2498" defer></script>
+<script src="/assets/site.js?v=acc7395d5d" defer></script>
 </body>
 </html>

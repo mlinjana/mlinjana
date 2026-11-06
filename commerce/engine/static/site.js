@@ -59,12 +59,23 @@
     $$(".fav-count").forEach((c) => { c.hidden = !f.size; c.textContent = f.size; });
   };
 
-  // ---- basket: product ids in this browser; prices always come from the server at checkout ----
+  // ---- basket: entries "ID" (Standard licence) or "ID:team" (Team licence) in this browser; one entry per product.
+  // Prices shown here use the same rule as store-api (Team = 2.5x, nearest whole rand); only the server's price is charged.
   const BKEY = "mls:basket";
-  const getBasket = () => store.get(BKEY, []).filter((x) => typeof x === "string").slice(0, 25);
-  const setBasket = (a) => { store.set(BKEY, [...new Set(a)].slice(0, 25)); syncBasket(); };
+  const idOf = (e) => e.split(":")[0];
+  const licOf = (e) => (e.endsWith(":team") ? "team" : "standard");
+  const entry = (id, lic) => (lic === "team" ? `${id}:team` : id);
+  const tierPrice = (price, lic) => (lic === "team" ? Math.round(price * 2.5) : price);
+  const LIC_LABEL = { standard: "Standard licence", team: "Team licence (up to 10 people)" };
+  const chosenLicence = () => { const r = document.querySelector("input[name=licence]:checked"); return r && r.value === "team" ? "team" : "standard"; };
+  const getBasket = () => store.get(BKEY, []).filter((x) => typeof x === "string" && /^[A-Z]{2,5}-\d{3,4}(:team)?$/.test(x)).slice(0, 25);
+  const setBasket = (a) => {
+    const m = new Map();
+    a.forEach((e) => { m.delete(idOf(e)); m.set(idOf(e), e); }); // the latest licence choice for a product wins
+    store.set(BKEY, [...m.values()].slice(0, 25)); syncBasket();
+  };
   const syncBasket = () => {
-    const b = getBasket();
+    const b = getBasket().map(idOf);
     $$(".bk-count").forEach((c) => { c.hidden = !b.length; c.textContent = b.length; });
     $$("[data-add]").forEach((el) => { if (el.classList.contains("add")) el.classList.toggle("in", b.includes(el.dataset.add)); });
   };
@@ -76,12 +87,15 @@
     if (!ids.length) { $("#bk-items").innerHTML = ""; return; }
     const { items, shops } = await loadCatalogue();
     const by = new Map(items.map((p) => [p.i, p]));
-    const rows = ids.map((i) => by.get(i)).filter(Boolean);
-    if (rows.length !== ids.length) setBasket(rows.map((p) => p.i)); // drop items that no longer exist
-    $("#bk-items").innerHTML = rows.map((p) => `<div class="bk-item"><img src="${esc(p.img)}" alt="" width="600" height="450"><div><a href="${esc(p.u)}">${esc(p.n)}</a><small>${esc((shops[p.s] || {}).n || "")} · ${esc(p.f.join(", "))}</small></div>` +
-      `<div class="bk-p">R${p.p}<button type="button" class="bk-rm" data-rm="${esc(p.i)}">Remove</button></div></div>`).join("");
-    $("#bk-total").textContent = "R" + rows.reduce((a, p) => a + p.p, 0);
-    $("#bk-form button").querySelector("span").textContent = `Checkout securely · R${rows.reduce((a, p) => a + p.p, 0)}`;
+    const rows = ids.map((e) => ({ e, lic: licOf(e), p: by.get(idOf(e)) })).filter((r) => r.p);
+    if (rows.length !== ids.length) setBasket(rows.map((r) => r.e)); // drop items that no longer exist
+    rows.forEach((r) => { r.price = tierPrice(r.p.p, r.lic); });
+    $("#bk-items").innerHTML = rows.map(({ e, lic, p, price }) => `<div class="bk-item"><img src="${esc(p.img)}" alt="" width="600" height="450"><div><a href="${esc(p.u)}">${esc(p.n)}</a>` +
+      `<small>${esc(LIC_LABEL[lic])} · ${esc(p.f.join(", "))}</small></div>` +
+      `<div class="bk-p">R${price}<button type="button" class="bk-rm" data-rm="${esc(e)}" aria-label="Remove ${esc(p.n)}">Remove</button></div></div>`).join("");
+    const total = rows.reduce((a, r) => a + r.price, 0);
+    $("#bk-total").textContent = "R" + total;
+    $("#bk-form button").querySelector("span").textContent = `Checkout securely · R${total}`;
   };
   const openBasket = async (focusEmail) => {
     if (!dlg) return;
@@ -101,14 +115,14 @@
       msg.className = "msg";
       if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)) { msg.textContent = "Please enter a valid email address."; msg.className = "msg err"; return; }
       btn.disabled = true; msg.textContent = "Starting secure checkout…";
-      ids.forEach((i) => beacon({ store: STORE, type: "checkout_start", product_id: i, path: location.pathname }));
+      ids.forEach((i) => beacon({ store: STORE, type: "checkout_start", product_id: idOf(i), path: location.pathname }));
       try {
         const one = ids.length === 1;
         const r = await fetch(API + (one ? "/store-api/checkout" : "/store-api/basket-checkout"), { method: "POST", headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(one ? { product_id: ids[0], email } : { items: ids, email }) });
+          body: JSON.stringify(one ? { product_id: idOf(ids[0]), licence: licOf(ids[0]), email } : { items: ids, email }) });
         const d = await r.json();
         if (!r.ok) {
-          if (d.unavailable) { setBasket(ids.filter((i) => !d.unavailable.includes(i))); renderBasket(); }
+          if (d.unavailable) { setBasket(ids.filter((i) => !d.unavailable.includes(idOf(i)))); renderBasket(); }
           throw new Error(d.error || "Checkout failed");
         }
         const f = document.createElement("form");
@@ -137,8 +151,9 @@
     const a = e.target.closest("[data-add]");
     if (a) {
       e.preventDefault();
-      const id = a.dataset.add, b = getBasket(), had = b.includes(id);
-      if (!had) setBasket([...b, id]);
+      const id = a.dataset.add, b = getBasket();
+      const e2 = entry(id, id === PID ? chosenLicence() : "standard"), had = b.includes(e2);
+      if (!had) setBasket([...b, e2]); // replaces the same product with another licence
       if (!calm) { a.classList.remove("pop"); void a.offsetWidth; a.classList.add("pop"); }
       bump(".bk-count");
       if (a.hasAttribute("data-open")) openBasket(true);
@@ -149,7 +164,7 @@
   syncBasket();
   const qs = new URLSearchParams(location.search);
   if (qs.get("basket") === "cancelled" || qs.get("cancelled")) {
-    if (qs.get("cancelled") && PID && !getBasket().includes(PID)) setBasket([...getBasket(), PID]);
+    if (qs.get("cancelled") && PID && !getBasket().map(idOf).includes(PID)) setBasket([...getBasket(), entry(PID, qs.get("licence"))]);
     toast("Payment cancelled. You haven't been charged, and your basket is saved.", ["View basket", () => openBasket(true)]);
   }
 
@@ -161,6 +176,20 @@
     document.addEventListener("click", (e) => { if (!mp.hidden && !e.target.closest(".mega")) set(false); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !mp.hidden) { set(false); mb.focus(); } });
   }
+  // ---- licence choice on the product page (Standard / Team); the price shown follows the choice ----
+  const licRadios = $$("input[name=licence]");
+  if (licRadios.length) {
+    if (qs.get("licence") === "team") licRadios.forEach((r) => { r.checked = r.value === "team"; });
+    const showPrice = () => {
+      const r = licRadios.find((x) => x.checked);
+      if (!r) return;
+      const amt = $("#pp-amount"); if (amt) amt.textContent = "R" + r.dataset.price;
+      $$(".bb-amount").forEach((x) => { x.textContent = "R" + r.dataset.price; });
+    };
+    licRadios.forEach((r) => r.addEventListener("change", showPrice));
+    showPrice();
+  }
+
   // keep the header "Search in" picker in step with the search page
   const hd = $("#hdiv");
   if (hd && qs.get("div")) hd.value = qs.get("div");
@@ -333,11 +362,11 @@
       try {
         const r = await fetch(`${API}/store-api/${isBasket ? "basket" : "order"}?ref=${encodeURIComponent(ref)}&k=${encodeURIComponent(k)}`);
         const d = await r.json();
-        const items = isBasket ? (d.items || []) : (d.download ? [{ name: "Your files", download: d.download, expires_at: d.expires_at, downloads_left: d.downloads_left }] : []);
+        const items = isBasket ? (d.items || []) : (d.download ? [{ name: "Your files", licence: d.licence, download: d.download, expires_at: d.expires_at, downloads_left: d.downloads_left }] : []);
         if (d.status === "paid" && items.length && items.every((x) => x.download)) {
           setBasket([]);
           st.innerHTML = `<p><strong>Payment confirmed.</strong> ${items.length > 1 ? "Your downloads are" : "Your download is"} ready.</p><ul class="dl-list">` +
-            items.map((x) => `<li><span>${esc(x.name)}</span><a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a></li>`).join("") + `</ul>` +
+            items.map((x) => `<li><span>${esc(x.name)}<small>${esc(LIC_LABEL[x.licence === "team" ? "team" : "standard"])}</small></span><a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a></li>`).join("") + `</ul>` +
             `<p class="small muted">Links valid until ${new Date(items[0].expires_at).toLocaleDateString()} · ${items[0].downloads_left} downloads left each. Bookmark this page to download again.</p>` +
             (d.mode === "sandbox" ? `<p class="small muted">Test-mode order (PayFast sandbox): no real payment was taken.</p>` : "");
           return;
@@ -353,6 +382,12 @@
 
   // ---- contact form ----
   const cf = $("#contact");
+  if (cf && qs.get("topic") === "licence" && !$("#c-msg").value) {
+    const pid = (qs.get("product") || "").replace(/[^A-Z0-9-]/g, "").slice(0, 12);
+    const ask = (name) => { $("#c-msg").value = `I'd like a quote for a commercial or enterprise licence${name ? ` for ${name} (${pid})` : ""}.\n\nHow we plan to use it (how many people, which organisations, or which products we'd sell):\n`; };
+    ask("");
+    if (pid) loadCatalogue().then(({ items }) => { const p = items.find((x) => x.i === pid); if (p) ask(p.n); }).catch(() => {});
+  }
   if (cf) cf.addEventListener("submit", async (e) => {
     e.preventDefault();
     const m = $("#contact-msg");

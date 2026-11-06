@@ -16,6 +16,14 @@ const json = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), { status, headers: { ...CORS, "Content-Type": "application/json" } });
 const EMAIL_RE = /^[^\s@]{1,64}@[^\s@]{1,190}\.[^\s@]{2,24}$/;
 
+// Licence tiers (owner decision #39): Standard = list price; Team (up to 10 people in one organisation) = 2.5x list
+// price rounded to the nearest whole rand. Commercial/Enterprise is quoted by hand and never reaches checkout.
+// The browser shows the same prices, but only these server-side values are charged.
+type Licence = "standard" | "team";
+const licenceOf = (x: unknown): Licence => (x === "team" ? "team" : "standard");
+const tierCents = (listCents: number, lic: Licence) => (lic === "team" ? Math.round((listCents * 2.5) / 100) * 100 : listCents);
+const LICENCE_LABEL: Record<Licence, string> = { standard: "Standard licence", team: "Team licence (up to 10 people)" };
+
 async function cfg(key: string) {
   const { data } = await db.from("config").select("value").eq("key", key).maybeSingle();
   return data?.value;
@@ -56,7 +64,7 @@ async function logPaymentEvent(order_ref: string | null, verified: boolean, outc
 const escH = (s: string) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
 const rand = (cents: number) => "R" + (cents / 100).toFixed(2).replace(/\.00$/, "");
 
-type ReceiptItem = { name: string; ref: string; cents: number; link: string };
+type ReceiptItem = { name: string; ref: string; cents: number; link: string; licence: Licence };
 
 async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: boolean) {
   const site = await cfg("site"), legal = await cfg("legal");
@@ -69,7 +77,7 @@ async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: bo
   const rows = items.map((x) => `
 <tr><td style="padding:14px 0;border-bottom:1px solid #e7e2d7">
   <div style="font-size:15px;font-weight:700;color:#17243b;line-height:1.35">${escH(x.name)}</div>
-  <div style="font-size:12.5px;color:#5c6370;margin-top:2px">Item ${escH(x.ref)} · ${rand(x.cents)}</div>
+  <div style="font-size:12.5px;color:#5c6370;margin-top:2px">Item ${escH(x.ref)} · ${LICENCE_LABEL[x.licence]} · ${rand(x.cents)}</div>
   <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td style="border-radius:10px;background:#17243b">
     <a href="${escH(x.link)}" style="display:inline-block;padding:11px 20px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:10px">Download ZIP</a>
   </td></tr></table>
@@ -91,7 +99,7 @@ async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: bo
       <tr><td style="padding-top:4px">Total paid</td><td align="right" style="padding-top:4px;font-weight:700;color:#17243b">${rand(total)}</td></tr>
     </table>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px">${rows}</table>
-    <p style="margin:16px 0 0;font-size:13px;color:#5c6370;line-height:1.5">Each link works 5 times over 7 days, so save your files somewhere safe. Open <b>Start Here.pdf</b> in each download for instructions and your licence.</p>
+    <p style="margin:16px 0 0;font-size:13px;color:#5c6370;line-height:1.5">Each link works 5 times over 7 days, so save your files somewhere safe. Open <b>Start Here.pdf</b> in each download for instructions and your licence. This receipt is your proof of licence: keep it.</p>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0 20px;background:#f6eedc;border-radius:10px"><tr><td style="padding:14px 16px;font-size:13.5px;color:#4b3608;line-height:1.5">
       <b>Need help?</b> Reply to this email or <a href="${help}" style="color:#17243b;font-weight:700">contact us</a> and quote order ${escH(orderRef)}. If a file doesn't work as described, we'll fix it or refund you within 14 days.
     </td></tr></table>
@@ -102,8 +110,9 @@ async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: bo
 </table></td></tr></table></body></html>`;
   const text = [`Thank you for your order ${orderRef}`, sandbox ? "(Test order, PayFast sandbox: no real payment was taken.)" : "", "",
     `Date: ${date}`, `Total paid: ${rand(total)}`, "", items.length > 1 ? "Your downloads:" : "Your download:",
-    ...items.map((x, i) => `${i + 1}. ${x.name} (${rand(x.cents)})\n   ${x.link}`), "",
-    "Each link works 5 times over 7 days. Open Start Here.pdf in each download for instructions and your licence.", "",
+    ...items.map((x, i) => `${i + 1}. ${x.name} (${LICENCE_LABEL[x.licence]}, ${rand(x.cents)})\n   ${x.link}`), "",
+    "Each link works 5 times over 7 days. Open Start Here.pdf in each download for instructions and your licence.",
+    "This receipt is your proof of licence: keep it.", "",
     `Need help? Reply to this email or visit ${help} and quote order ${orderRef}.`, "", "Mlinjana Studios", company, base]
     .filter((l, i, a) => !(l === "" && a[i - 1] === "")).join("\n");
   return { html, text };
@@ -126,6 +135,7 @@ async function checkout(req: Request) {
   const body = await req.json().catch(() => ({}));
   const email = String(body.email ?? "").trim().toLowerCase();
   const productId = String(body.product_id ?? "");
+  const licence = licenceOf(body.licence);
   if (!EMAIL_RE.test(email)) return json({ error: "Please enter a valid email address." }, 400);
   const { data: p } = await db.from("products").select("id,store_id,title,slug,price_zar_cents,active,status,file_key")
     .eq("id", productId).maybeSingle();
@@ -140,20 +150,22 @@ async function checkout(req: Request) {
   const pf = await payfastCreds();
   const ref = "ORD-" + randHex(6).toUpperCase();
   const secret = randHex(16);
-  const amount = (p.price_zar_cents / 100).toFixed(2);
+  const cents = tierCents(p.price_zar_cents, licence);
+  const amount = (cents / 100).toFixed(2);
   const { error } = await db.from("orders").insert({
-    ref, secret, product_id: p.id, store_id: p.store_id, email, amount_cents: p.price_zar_cents, currency: "ZAR",
-    provider: "payfast", provider_mode: pf.mode,
+    ref, secret, product_id: p.id, store_id: p.store_id, email, amount_cents: cents, currency: "ZAR",
+    provider: "payfast", provider_mode: pf.mode, licence,
   });
   if (error) return json({ error: "Could not start checkout." }, 500);
   // Field order matters for the signature (PayFast documented order).
   const fields: [string, string][] = [
     ["merchant_id", pf.merchant_id], ["merchant_key", pf.merchant_key],
     ["return_url", `${base}/thanks?ref=${ref}&k=${secret}`],
-    ["cancel_url", `${base}/p/${p.slug}?cancelled=1`],
+    ["cancel_url", `${base}/p/${p.slug}?cancelled=1${licence === "team" ? "&licence=team" : ""}`],
     ["notify_url", `${FN_URL}/payfast-itn`],
     ["email_address", email], ["m_payment_id", ref], ["amount", amount],
-    ["item_name", p.title.slice(0, 100)], ["item_description", `Digital download ${p.id}`],
+    ["item_name", (licence === "team" ? `${p.title.slice(0, 84)} (Team licence)` : p.title.slice(0, 100))],
+    ["item_description", `Digital download ${p.id}, ${LICENCE_LABEL[licence]}`],
     ["custom_str1", p.id],
   ];
   return json(payfastForm(fields, pf, ref));
@@ -178,8 +190,12 @@ async function basketCheckout(req: Request) {
   const body = await req.json().catch(() => ({}));
   const email = String(body.email ?? "").trim().toLowerCase();
   if (!EMAIL_RE.test(email)) return json({ error: "Please enter a valid email address." }, 400);
-  const ids = [...new Set((Array.isArray(body.items) ? body.items : []).map((x: unknown) => String(x)))]
-    .filter((x) => /^[A-Z]{2,5}-\d{3,4}$/.test(x)).slice(0, 25);
+  const lic = new Map<string, Licence>();
+  for (const x of (Array.isArray(body.items) ? body.items : []).slice(0, 50)) {
+    const m = /^([A-Z]{2,5}-\d{3,4})(?::(standard|team))?$/.exec(String(x));
+    if (m) { lic.delete(m[1]); lic.set(m[1], licenceOf(m[2])); }
+  }
+  const ids = [...lic.keys()].slice(0, 25);
   if (!ids.length) return json({ error: "Your basket is empty." }, 400);
   const { data: ps } = await db.from("products").select("id,store_id,title,slug,price_zar_cents,active,status,file_key").in("id", ids);
   const ok = (ps ?? []).filter((p) => p.active && p.status === "validated" && p.file_key);
@@ -197,13 +213,14 @@ async function basketCheckout(req: Request) {
   const pf = await payfastCreds();
   const ref = "BSK-" + randHex(6).toUpperCase();
   const secret = randHex(16);
-  const total = ok.reduce((a, p) => a + p.price_zar_cents, 0);
+  const total = ids.reduce((a, i) => a + tierCents(ok.find((p) => p.id === i)!.price_zar_cents, lic.get(i)!), 0);
   const { data: bk, error } = await db.from("baskets").insert({ ref, secret, email, amount_cents: total, provider: "payfast", provider_mode: pf.mode })
     .select("id").single();
   if (error || !bk) return json({ error: "Could not start checkout." }, 500);
   const rows = ids.map((i) => ok.find((p) => p.id === i)!).map((p) => ({
     ref: "ORD-" + randHex(6).toUpperCase(), secret: randHex(16), product_id: p.id, store_id: p.store_id, email,
-    amount_cents: p.price_zar_cents, currency: "ZAR", provider: "payfast", provider_mode: pf.mode, basket_id: bk.id,
+    amount_cents: tierCents(p.price_zar_cents, lic.get(p.id)!), currency: "ZAR", provider: "payfast", provider_mode: pf.mode,
+    basket_id: bk.id, licence: lic.get(p.id)!,
   }));
   const { error: e2 } = await db.from("orders").insert(rows);
   if (e2) {
@@ -217,7 +234,7 @@ async function basketCheckout(req: Request) {
     ["notify_url", `${FN_URL}/payfast-itn`],
     ["email_address", email], ["m_payment_id", ref], ["amount", (total / 100).toFixed(2)],
     ["item_name", `${rows.length} digital downloads from Mlinjana Studios`],
-    ["item_description", ids.join(" ").slice(0, 255)],
+    ["item_description", ids.map((i) => (lic.get(i) === "team" ? `${i}:team` : i)).join(" ").slice(0, 255)],
     ["custom_str1", "basket"],
   ];
   return json(payfastForm(fields, pf, ref));
@@ -294,7 +311,8 @@ async function itn(req: Request) {
 async function sendReceipt(order: Record<string, any>, token: string) {
   const { data: p } = await db.from("products").select("title").eq("id", order.product_id).single();
   const name = p?.title ?? order.product_id;
-  const body = await renderReceipt(order.ref, [{ name, ref: order.ref, cents: order.amount_cents, link: `${FN_URL}/download?t=${token}` }],
+  const body = await renderReceipt(order.ref, [{ name, ref: order.ref, cents: order.amount_cents, link: `${FN_URL}/download?t=${token}`,
+    licence: licenceOf(order.licence) }],
     order.provider_mode === "sandbox");
   const r = await sendEmail(order.email, `Your download is ready: ${name} (order ${order.ref})`, body);
   await db.from("orders").update({ notes: r.note }).eq("id", order.id);
@@ -302,12 +320,12 @@ async function sendReceipt(order: Record<string, any>, token: string) {
 
 async function orderStatus(url: URL) {
   const ref = url.searchParams.get("ref") ?? "", k = url.searchParams.get("k") ?? "";
-  const { data: o } = await db.from("orders").select("id,ref,secret,status,product_id,provider_mode").eq("ref", ref).maybeSingle();
+  const { data: o } = await db.from("orders").select("id,ref,secret,status,product_id,provider_mode,licence").eq("ref", ref).maybeSingle();
   if (!o || o.secret !== k) return json({ error: "Order not found" }, 404);
   if (o.status !== "paid") return json({ ref: o.ref, status: o.status, mode: o.provider_mode });
   const { data: t } = await db.from("download_tokens").select("token,expires_at,downloads,max_downloads,revoked")
     .eq("order_id", o.id).order("created_at", { ascending: false }).limit(1).maybeSingle();
-  return json({ ref: o.ref, status: o.status, mode: o.provider_mode, download: t && !t.revoked ? `${FN_URL}/download?t=${t.token}` : null,
+  return json({ ref: o.ref, status: o.status, mode: o.provider_mode, licence: o.licence, download: t && !t.revoked ? `${FN_URL}/download?t=${t.token}` : null,
     expires_at: t?.expires_at, downloads_left: t ? t.max_downloads - t.downloads : 0 });
 }
 
@@ -391,7 +409,7 @@ async function sendBasketReceipt(bk: Record<string, any>, items: { order: Record
   const { data: ps } = await db.from("products").select("id,title").in("id", ids.length ? ids : ["-"]);
   const name = (id: string) => ps?.find((p) => p.id === id)?.title ?? id;
   const body = await renderReceipt(bk.ref, items.map((x) => ({ name: name(x.order.product_id), ref: x.order.ref, cents: x.order.amount_cents,
-    link: `${FN_URL}/download?t=${x.token}` })), bk.provider_mode === "sandbox");
+    link: `${FN_URL}/download?t=${x.token}`, licence: licenceOf(x.order.licence) })), bk.provider_mode === "sandbox");
   const r = await sendEmail(bk.email, `Your ${items.length} downloads are ready (order ${bk.ref})`, body);
   await db.from("baskets").update({ notes: r.note }).eq("id", bk.id);
 }
@@ -401,13 +419,13 @@ async function basketStatus(url: URL) {
   const { data: bk } = await db.from("baskets").select("id,ref,secret,status,provider_mode").eq("ref", ref).maybeSingle();
   if (!bk || bk.secret !== k) return json({ error: "Order not found" }, 404);
   if (bk.status !== "paid") return json({ ref: bk.ref, status: bk.status, mode: bk.provider_mode });
-  const { data: kids } = await db.from("orders").select("id,ref,product_id,status").eq("basket_id", bk.id).order("created_at");
+  const { data: kids } = await db.from("orders").select("id,ref,product_id,status,licence").eq("basket_id", bk.id).order("created_at");
   const { data: ps } = await db.from("products").select("id,title").in("id", (kids ?? []).map((o) => o.product_id));
   const items = [];
   for (const o of kids ?? []) {
     const { data: t } = await db.from("download_tokens").select("token,expires_at,downloads,max_downloads,revoked")
       .eq("order_id", o.id).order("created_at", { ascending: false }).limit(1).maybeSingle();
-    items.push({ ref: o.ref, name: ps?.find((p) => p.id === o.product_id)?.title ?? o.product_id,
+    items.push({ ref: o.ref, name: ps?.find((p) => p.id === o.product_id)?.title ?? o.product_id, licence: o.licence,
       download: o.status === "paid" && t && !t.revoked ? `${FN_URL}/download?t=${t.token}` : null,
       expires_at: t?.expires_at, downloads_left: t ? t.max_downloads - t.downloads : 0 });
   }

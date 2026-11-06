@@ -127,9 +127,16 @@ def policies(store, legal):
 <p>Templates and calculators are tools. Check results before relying on them; nothing we sell is legal, tax or financial advice. To the extent the law allows, our liability is limited to the price you paid.</p>
 <p class="muted small">Last updated 28 October 2026.</p>"""),
         "licence": ("Licence", f"""
-<h2>You may</h2><ul><li>Use the product yourself or in your household.</li><li>Use it in one business you own or work for, including to serve your own customers (for example, sending invoices made with an invoice template).</li><li>Print it as often as you need for that use and edit it for yourself.</li></ul>
-<h2>You may not</h2><ul><li>Resell, share, give away or upload the files — original or edited — where others can download them.</li><li>Sell printed copies or include the files in a product you sell.</li><li>Claim the design or content as your own.</li></ul>
-<p>Need a licence for several businesses or a team? <a href="/help/contact">Ask us</a> before using it that way.</p>"""),
+<p>Every product comes with a licence to use the files, not ownership of the copyright. Choose the licence that fits how you'll use it when you add the product to your basket. Your receipt shows which licence you bought: keep it as proof.</p>
+<table class="lic-table"><thead><tr><th scope="col">Licence</th><th scope="col">Who can use it</th><th scope="col">Price</th></tr></thead><tbody>
+<tr><th scope="row">Standard</th><td>You, your household and one business you own or work for</td><td>The listed price</td></tr>
+<tr><th scope="row">Team</th><td>Up to 10 people in one organisation (one company, school, church or non-profit)</td><td>2.5 times the listed price</td></tr>
+<tr><th scope="row">Commercial or enterprise</th><td>More than 10 people, several organisations, or the files inside products you sell</td><td>By quote: <a href="/help/contact?topic=licence">ask us</a></td></tr>
+</tbody></table>
+<h2>With every licence you may</h2><ul><li>Use the product for the people your licence covers, including to serve your own customers (for example, sending invoices made with an invoice template).</li><li>Print it as often as you need for that use and edit it for yourselves.</li></ul>
+<h2>With a Team licence you may also</h2><ul><li>Keep the files on your organisation's shared drive, as long as only the people the licence covers (up to 10) can open them.</li></ul>
+<h2>You may not</h2><ul><li>Resell, share, give away or upload the files, original or edited, where people outside your licence can download them.</li><li>Sell printed copies or include the files in a product you sell, unless we agreed a commercial licence with you in writing.</li><li>Claim the design or content as your own.</li></ul>
+<p>Not sure which licence you need? <a href="/help/contact?topic=licence">Ask us</a> before using a product that way.</p>"""),
         "contact": ("Contact & help", """
 <p>Questions about a product or an order? Send us a message — we reply by email, usually within two working days.</p>
 <form id="contact" novalidate>
@@ -271,6 +278,7 @@ def main():
             p["bundle_sum"] = sum(b["price_zar"] for b in p["bundle_items"])
             p["fmt_keys"] = [k for k in FMT_ORDER if any(f.split(" ")[0] == k for f in p["formats"])]
             p["free"] = bool(p.get("free"))
+            p["price_team"] = (p["price_zar"] * 5 + 1) // 2  # Team licence: 2.5x, nearest whole rand (same rule as store-api)
             if p["free"]:
                 p["free_url"] = f"/free/{p['slug']}.zip"
         for p in prods:

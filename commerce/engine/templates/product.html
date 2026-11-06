@@ -31,13 +31,19 @@
     </section>
 
     <aside class="panel pp-buy" aria-label="Buy">
-      <p class="pp-price">{% if p.free %}<strong>Free</strong>{% else %}<strong>R{{ p.price_zar }}</strong>{% endif %}</p>
+      <p class="pp-price">{% if p.free %}<strong>Free</strong>{% else %}<strong id="pp-amount">R{{ p.price_zar }}</strong>{% endif %}</p>
       {% if p.saving_pct %}<p class="pp-save"><s>R{{ p.bundle_sum }}</s> <span class="save-pill">You save R{{ p.bundle_sum - p.price_zar }} ({{ p.saving_pct }}%)</span></p>{% endif %}
       <p class="stock">{{ icon("bolt") }}<span><strong>Instant download</strong> · {{ p.file_mb }} ZIP</span></p>
       {% if p.free %}
       <a id="free-dl" class="btn btn-primary btn-block btn-lg" href="{{ p.free_url }}" download>{{ icon("download") }}<span>Download free</span></a>
       <p class="muted small center">No account or email needed.</p>
       {% else %}
+      <fieldset class="lic">
+        <legend>Choose your licence</legend>
+        <label class="lic-opt"><input type="radio" name="licence" value="standard" data-price="{{ p.price_zar }}" checked><span><strong>Standard</strong><small>You and one business you own or work for</small></span><b>R{{ p.price_zar }}</b></label>
+        <label class="lic-opt"><input type="radio" name="licence" value="team" data-price="{{ p.price_team }}"><span><strong>Team</strong><small>Up to 10 people in one organisation</small></span><b>R{{ p.price_team }}</b></label>
+        <p class="lic-more">Using it in products you sell, or for more people? <a href="/help/contact?product={{ p.id }}&amp;topic=licence">Ask for a commercial quote</a> · <a href="/help/licence">Compare licences</a></p>
+      </fieldset>
       <button type="button" id="buy" class="btn btn-primary btn-block btn-lg" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>
       {% endif %}
       <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="{{ p.id }}" aria-pressed="false">{{ icon("heart") }}<span>Save to favourites</span></button>
@@ -75,7 +81,7 @@
           {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
           {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter. Check results before relying on them; it isn't financial, tax or legal advice.</li>{% endif %}
           {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice.</li>{% endif %}
-          <li>For yourself and one business you own or work for. No reselling or sharing. <a href="/help/licence">Licence</a></li>
+          <li>Standard licence: for yourself and one business you own or work for. Team licence: up to 10 people in one organisation. No reselling or sharing. <a href="/help/licence">Licence</a></li>
           <li>File not working? We fix it or refund you within 14 days. <a href="/help/refunds">Refunds &amp; support</a></li>
         </ul>
       </section>
@@ -98,7 +104,7 @@
 </div>
 
 <div class="buybar" id="buybar" hidden>
-  <div class="buybar-in"><div><strong>{{ p.name }}</strong><span>{% if p.free %}Free{% else %}R{{ p.price_zar }}{% endif %} · instant download</span></div>{% if p.free %}<a class="btn btn-primary" href="{{ p.free_url }}" download>Download</a>{% else %}<button type="button" class="btn btn-primary" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>{% endif %}</div>
+  <div class="buybar-in"><div><strong>{{ p.name }}</strong><span>{% if p.free %}Free{% else %}<span class="bb-amount">R{{ p.price_zar }}</span>{% endif %} · instant download</span></div>{% if p.free %}<a class="btn btn-primary" href="{{ p.free_url }}" download>Download</a>{% else %}<button type="button" class="btn btn-primary" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>{% endif %}</div>
 </div>
 
 <dialog class="lightbox" id="lightbox" aria-label="Product previews">
