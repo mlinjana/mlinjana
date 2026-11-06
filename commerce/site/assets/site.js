@@ -130,7 +130,7 @@
       store.set(FKEY, list.slice(0, 500));
       syncFavs();
       if (!calm) { f.classList.remove("pop"); void f.offsetWidth; f.classList.add("pop"); }
-      if (i < 0) { bump(".fav-count"); toast("Saved to favourites.", ["View", () => { location.href = "/favourites.html"; }]); }
+      if (i < 0) { bump(".fav-count"); toast("Saved to favourites.", ["View", () => { location.href = "/favourites"; }]); }
       if ($("#fav-page") && i >= 0) renderFavs();
       return;
     }
@@ -192,8 +192,8 @@
   $$("[data-rail]").forEach((r) => {
     const t = $(".rail-track", r), prev = $(".rail-btn.prev", r), next = $(".rail-btn.next", r);
     const upd = () => { prev.hidden = t.scrollLeft < 8; next.hidden = t.scrollLeft + t.clientWidth >= t.scrollWidth - 8; };
-    prev.addEventListener("click", () => t.scrollBy({ left: -t.clientWidth * 0.9 }));
-    next.addEventListener("click", () => t.scrollBy({ left: t.clientWidth * 0.9 }));
+    prev.addEventListener("click", () => t.scrollBy({ left: -t.clientWidth * 0.9, behavior: calm ? "auto" : "smooth" }));
+    next.addEventListener("click", () => t.scrollBy({ left: t.clientWidth * 0.9, behavior: calm ? "auto" : "smooth" }));
     t.addEventListener("scroll", upd, { passive: true });
     addEventListener("resize", upd);
     upd();
