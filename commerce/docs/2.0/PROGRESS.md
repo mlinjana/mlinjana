@@ -3,7 +3,7 @@
 Owner brief: "Master project prompt: Mlinjana Studios 2.0" (6 Nov 2026). Full discovery report (shared doc):
 https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 
-**Current stage:** 2 Design. Approved by the owner and ready to go live (DECISIONS.md #41). The production deploy waits for the owner's explicit confirmation, because the session's permission system blocks production deploys. Until then mlinjanastudios.com runs the Stage 3.1 build (commit 34ce523).
+**Current stage:** 2.0 design and navigation are **live** on mlinjanastudios.com (6 Nov 2026, Cloudflare version 53c256f4, DECISIONS.md #41). The site is still in staging mode (noindex, PayFast sandbox) until PayFast confirms the live account. Next: licence tiers, currency display.
 
 ## Completed
 | Date | Work | Evidence |
@@ -21,6 +21,7 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | store-api v9: navy/gold receipt email; PayFast return/cancel URLs without .html | Sandbox: ORD-983B275A536D (single, returned to /chairbook/thanks) and BSK-47B08AB33489 (2 items, fee 136 + 135 cents) paid on verified ITNs; 3/3 ZIPs downloaded. Receipt delivery not tested (Resend 422 for a non-owner address); design checked by local render |
 | 2026-11-06 | All 600 downloads rebuilt: navy Start Here.pdf, navy logo on PDF covers; preview images re-rendered | 600/600 validated; listing/price differences vs previous catalogue: 0; 600 files uploaded; DB SHA fingerprint e409e0cc… matches catalogue; 97,646,388 bytes stored, 0 missing; 8 random Start Here.pdf pages: navy present, 0 emerald pixels |
 | 2026-11-06 | Old /c/ department pages replaced by 301 redirects to 2.0 categories/divisions | `_redirects` (11 departments × 2 forms); link check 783 pages, 0 broken, 0 redirecting |
+| 2026-11-06 | **2.0 live** on mlinjanastudios.com (owner confirmed the deploy) | Live checks: 9 key pages 200 with the navy theme; /c/money/ → 301 /life/personal-finance/; /c/small-business → 301 /business/; old .html → 307 short URL; /pacebook/ → 301 /steadyrep/; search (Business, "invoice") 10 results; category filter 15; basket R69; 0 console errors. Lighthouse mobile (lab): home 99/100/100 LCP 1.6 s; Business division 92/100/100 LCP 2.4 s (TBT 240 ms, the heaviest page: 12 rows of products); category 100/100/100 LCP 1.6 s; product 100/100/100 LCP 1.6 s; search 98/100/100 LCP 2.3 s; CLS 0 on all |
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
@@ -35,15 +36,14 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 4. Search Console: add the property once the site leaves staging (it is `noindex` now, by design, until PayFast is live).
 
 ## Open technical issues
-- Per-shop policy copies still exist (duplicate titles) but now canonicalise to /help/. Removing them waits until store-api no longer links to them.
-- store-api return/cancel URLs still use `.html`; they work via Cloudflare's 307, and the query string is kept. Change only with a sandbox end-to-end test.
+- Per-shop policy copies still exist (duplicate titles) but canonicalise to /help/. Single-item checkout returns to /<line>/thanks, so that copy must stay; the other per-shop copies could be removed with 301s to /help/.
 - PayFast live payments refused on 30 Oct (account not yet enabled).
 - Lighthouse SEO 69 on every page: only the deliberate staging `noindex`.
 - Lab data only: real-user Core Web Vitals (including INP) need Cloudflare Web Analytics data over time.
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Owner confirms the production deploy; then deploy, and run the live checks (pages, redirects, search, basket, Lighthouse).
+1. Lighten the division pages (Business: 12 rows of 12 products; LCP 2.4 s, TBT 240 ms), e.g. fewer rows above the fold.
 2. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
 3. Currency display (approximate, labelled) once the PayFast answer is in.
 
