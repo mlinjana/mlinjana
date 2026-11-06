@@ -89,7 +89,7 @@ svg{flex:0 0 auto}
   .hdr-in{grid-template-columns:1fr auto;gap:10px 12px;padding-top:10px;padding-bottom:10px;min-height:0}
   .hsearch{grid-column:1/-1;grid-row:2;max-width:none;height:44px}
   .hsearch select{display:none}
-  .hbtn .lbl{display:none}
+  .hbtn .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
   .logo img{height:36px}
 }
 .catbar{background:#fff;border-top:1px solid var(--line)}
@@ -122,7 +122,7 @@ svg{flex:0 0 auto}
 .panel-head>a{font-weight:700;font-size:14px;color:var(--brand);text-decoration:none;white-space:nowrap}
 .panel-head>a:hover{text-decoration:underline}
 @media (max-width:480px){.panel-head>a{white-space:normal;text-align:right;max-width:42%;font-size:13px}}
-.crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:var(--muted);padding:14px 0 0}
+.crumbs{display:flex;gap:8px;flex-wrap:wrap;font-size:13px;color:#475569;padding:14px 0 0}
 .crumbs a{text-decoration:none}.crumbs a:hover{color:var(--brand);text-decoration:underline}
 .crumbs span:last-child{color:var(--text)}
 .kicker{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
@@ -512,3 +512,6 @@ details>p{margin:0 0 16px;color:#334155}
 .dept-copy .btn{margin-top:14px}
 .seller-logo{width:56px;height:56px;border-radius:12px}
 .small-checks{font-size:13.5px;margin:12px 0 4px}
+
+/* Closed <dialog>s must not take part in layout: with them, Chrome reported no LCP at all on pages with product rails (found 6 Nov 2026). */
+dialog:not([open]){display:none!important}
