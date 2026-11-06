@@ -411,16 +411,17 @@ def main():
                 canonical=f"{sb}{c['href']}",
                 jsonld=crumbs_jsonld(sb, [("Home", sb + "/"), (d["name"], sb + d["href"]), (c["name"], sb + c["href"])]), **common))
             pages += 1
+    # Retired department pages (/c/<dept>/, 5 Nov design): a 301 to the 2.0 category holding at least 60% of the
+    # department's products, else to the division holding most of them (DECISIONS.md #40). Written to _redirects below.
+    dept_redirects = []
     for d in depts:
         items = [p for s in d["stores"] for p in prods_of[s]]
-        out = os.path.join(SITE, "c", d["slug"])
-        os.makedirs(out, exist_ok=True)
-        open(os.path.join(out, "index.html"), "w").write(env.get_template("department.html").render(
-            store=None, dept=d, products=items, dept_count=len(items), dept_shops=[shops[s] for s in d["stores"]],
-            dept_covers=[shops[s]["covers"][0] for s in d["stores"]][:2] if len(d["stores"]) > 1 else shops[d["stores"][0]]["covers"][:2],
-            categories=cat_counts(items),
-            canonical=shops[d["stores"][0]]["url"] + "/" if len(d["stores"]) == 1 else f"{cfg['site_base']}/c/{d['slug']}/",
-            jsonld=crumbs_jsonld(cfg["site_base"], [("Home", cfg["site_base"] + "/"), (d["name"], f"{cfg['site_base']}/c/{d['slug']}/")]), **common))
+        (dv, cname), k = collections.Counter((p["division"], p["cat2"]) for p in items).most_common(1)[0]
+        if k / len(items) >= 0.6:
+            target = next(c["href"] for c in div_by[dv]["categories"] if c["name"] == cname)
+        else:
+            target = div_by[collections.Counter(p["division"] for p in items).most_common(1)[0][0]]["href"]
+        dept_redirects.append((f"/c/{d['slug']}", target))
     for name in ("search", "favourites"):
         open(os.path.join(SITE, name + ".html"), "w").write(env.get_template(name + ".html").render(
             store=None, canonical=f"{cfg['site_base']}/{name}", **common))
@@ -484,7 +485,8 @@ def main():
             ("X-Frame-Options", "DENY"), ("Permissions-Policy", "camera=(), microphone=(), geolocation=()")]) +
         "/assets/p/*\n  Cache-Control: public, max-age=604800\n")
     open(os.path.join(SITE, "_redirects"), "w").write(
-        "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])))
+        "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])) +
+        "".join(f"{src}/ {dst} 301\n{src} {dst} 301\n" for src, dst in dept_redirects))
     print(f"built {pages} shop pages for {len(built)} shops in {len(divisions)} divisions ({total} products):", ", ".join(f"{b['name']} ({b['products']})" for b in built))
 
 

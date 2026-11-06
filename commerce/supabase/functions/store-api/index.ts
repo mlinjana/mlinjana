@@ -65,39 +65,39 @@ async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: bo
   const date = new Date().toLocaleDateString("en-ZA", { day: "numeric", month: "long", year: "numeric", timeZone: "Africa/Johannesburg" });
   const reg = legal?.registration ? String(legal.registration).split(" (")[0] : "";
   const company = [legal?.operator && `Mlinjana Studios is a trading name of ${legal.operator}`, reg && `Reg. ${reg}`, legal?.address].filter(Boolean).join(" · ");
-  const help = `${base}/help/contact.html`;
+  const help = `${base}/help/contact`;
   const rows = items.map((x) => `
-<tr><td style="padding:14px 0;border-bottom:1px solid #e2e8f0">
-  <div style="font-size:15px;font-weight:700;color:#0f172a;line-height:1.35">${escH(x.name)}</div>
-  <div style="font-size:12.5px;color:#64748b;margin-top:2px">Item ${escH(x.ref)} · ${rand(x.cents)}</div>
-  <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td style="border-radius:10px;background:#0b6b57">
+<tr><td style="padding:14px 0;border-bottom:1px solid #e7e2d7">
+  <div style="font-size:15px;font-weight:700;color:#17243b;line-height:1.35">${escH(x.name)}</div>
+  <div style="font-size:12.5px;color:#5c6370;margin-top:2px">Item ${escH(x.ref)} · ${rand(x.cents)}</div>
+  <table role="presentation" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td style="border-radius:10px;background:#17243b">
     <a href="${escH(x.link)}" style="display:inline-block;padding:11px 20px;font-size:14px;font-weight:700;color:#ffffff;text-decoration:none;border-radius:10px">Download ZIP</a>
   </td></tr></table>
 </td></tr>`).join("");
   const html = `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Your Mlinjana Studios order</title></head>
-<body style="margin:0;padding:0;background:#f1f3f6;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1e293b">
+<body style="margin:0;padding:0;background:#f8f6f0;font-family:-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#252a32">
 <div style="display:none;max-height:0;overflow:hidden">Payment received. Your ${items.length > 1 ? "downloads are" : "download is"} ready.</div>
-<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f1f3f6;padding:24px 12px"><tr><td align="center">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f8f6f0;padding:24px 12px"><tr><td align="center">
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="max-width:560px">
   <tr><td style="padding:4px 4px 18px"><a href="${base}"><img src="${base}/assets/brand/logo-email.png" width="158" height="42" alt="Mlinjana Studios" style="display:block;border:0"></a></td></tr>
   <tr><td style="background:#ffffff;border-radius:16px;padding:28px 28px 8px">
-    ${sandbox ? `<div style="background:#fff4d6;color:#7a4d00;border-radius:8px;padding:8px 12px;font-size:12.5px;margin-bottom:16px">Test order (PayFast sandbox): no real payment was taken.</div>` : ""}
-    <div style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#0b6b57">Payment received</div>
-    <h1 style="margin:6px 0 6px;font-size:24px;line-height:1.25;color:#0f172a">Thank you for your order</h1>
-    <p style="margin:0 0 18px;font-size:15px;color:#475569;line-height:1.5">Your ${items.length > 1 ? "files are" : "file is"} ready. Tap the button to download${items.length > 1 ? " each one" : ""}.</p>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#f8fafc;border-radius:10px;padding:12px 16px;font-size:13.5px;color:#334155">
-      <tr><td>Order number</td><td align="right" style="font-weight:700;color:#0f172a">${escH(orderRef)}</td></tr>
+    ${sandbox ? `<div style="background:#f6eedc;color:#6b4c10;border-radius:8px;padding:8px 12px;font-size:12.5px;margin-bottom:16px">Test order (PayFast sandbox): no real payment was taken.</div>` : ""}
+    <div style="font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#8a6418">Payment received</div>
+    <h1 style="margin:6px 0 6px;font-size:24px;line-height:1.25;color:#17243b">Thank you for your order</h1>
+    <p style="margin:0 0 18px;font-size:15px;color:#4b515c;line-height:1.5">Your ${items.length > 1 ? "files are" : "file is"} ready. Tap the button to download${items.length > 1 ? " each one" : ""}.</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#fbfaf6;border-radius:10px;padding:12px 16px;font-size:13.5px;color:#3a404a">
+      <tr><td>Order number</td><td align="right" style="font-weight:700;color:#17243b">${escH(orderRef)}</td></tr>
       <tr><td style="padding-top:4px">Date</td><td align="right" style="padding-top:4px">${date}</td></tr>
-      <tr><td style="padding-top:4px">Total paid</td><td align="right" style="padding-top:4px;font-weight:700;color:#0f172a">${rand(total)}</td></tr>
+      <tr><td style="padding-top:4px">Total paid</td><td align="right" style="padding-top:4px;font-weight:700;color:#17243b">${rand(total)}</td></tr>
     </table>
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:8px">${rows}</table>
-    <p style="margin:16px 0 0;font-size:13px;color:#64748b;line-height:1.5">Each link works 5 times over 7 days, so save your files somewhere safe. Open <b>Start Here.pdf</b> in each download for instructions and your licence.</p>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0 20px;background:#e7f3ee;border-radius:10px"><tr><td style="padding:14px 16px;font-size:13.5px;color:#08503f;line-height:1.5">
-      <b>Need help?</b> Reply to this email or <a href="${help}" style="color:#0b6b57;font-weight:700">contact us</a> and quote order ${escH(orderRef)}. If a file doesn't work as described, we'll fix it or refund you within 14 days.
+    <p style="margin:16px 0 0;font-size:13px;color:#5c6370;line-height:1.5">Each link works 5 times over 7 days, so save your files somewhere safe. Open <b>Start Here.pdf</b> in each download for instructions and your licence.</p>
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin:20px 0 20px;background:#f6eedc;border-radius:10px"><tr><td style="padding:14px 16px;font-size:13.5px;color:#4b3608;line-height:1.5">
+      <b>Need help?</b> Reply to this email or <a href="${help}" style="color:#17243b;font-weight:700">contact us</a> and quote order ${escH(orderRef)}. If a file doesn't work as described, we'll fix it or refund you within 14 days.
     </td></tr></table>
   </td></tr>
-  <tr><td style="padding:18px 8px;font-size:11.5px;line-height:1.6;color:#64748b;text-align:center">
-    You're receiving this email because you bought from <a href="${base}" style="color:#64748b">mlinjanastudios.com</a>.<br>${escH(company)}<br>Payments are processed securely by PayFast.
+  <tr><td style="padding:18px 8px;font-size:11.5px;line-height:1.6;color:#5c6370;text-align:center">
+    You're receiving this email because you bought from <a href="${base}" style="color:#5c6370">mlinjanastudios.com</a>.<br>${escH(company)}<br>Payments are processed securely by PayFast.
   </td></tr>
 </table></td></tr></table></body></html>`;
   const text = [`Thank you for your order ${orderRef}`, sandbox ? "(Test order, PayFast sandbox: no real payment was taken.)" : "", "",
@@ -149,8 +149,8 @@ async function checkout(req: Request) {
   // Field order matters for the signature (PayFast documented order).
   const fields: [string, string][] = [
     ["merchant_id", pf.merchant_id], ["merchant_key", pf.merchant_key],
-    ["return_url", `${base}/thanks.html?ref=${ref}&k=${secret}`],
-    ["cancel_url", `${base}/p/${p.slug}.html?cancelled=1`],
+    ["return_url", `${base}/thanks?ref=${ref}&k=${secret}`],
+    ["cancel_url", `${base}/p/${p.slug}?cancelled=1`],
     ["notify_url", `${FN_URL}/payfast-itn`],
     ["email_address", email], ["m_payment_id", ref], ["amount", amount],
     ["item_name", p.title.slice(0, 100)], ["item_description", `Digital download ${p.id}`],
@@ -212,7 +212,7 @@ async function basketCheckout(req: Request) {
   }
   const fields: [string, string][] = [
     ["merchant_id", pf.merchant_id], ["merchant_key", pf.merchant_key],
-    ["return_url", `${base}/thanks.html?ref=${ref}&k=${secret}`],
+    ["return_url", `${base}/thanks?ref=${ref}&k=${secret}`],
     ["cancel_url", `${base}/?basket=cancelled`],
     ["notify_url", `${FN_URL}/payfast-itn`],
     ["email_address", email], ["m_payment_id", ref], ["amount", (total / 100).toFixed(2)],
