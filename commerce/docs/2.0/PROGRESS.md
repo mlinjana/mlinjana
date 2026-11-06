@@ -3,7 +3,7 @@
 Owner brief: "Master project prompt: Mlinjana Studios 2.0" (6 Nov 2026). Full discovery report (shared doc):
 https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 
-**Current stage:** 2 Design. The preview is up for owner approval: https://mlinjana-preview.mlinjanachuma.workers.dev (6 Nov). Stage 3.1 quick fixes are live. Live deploys are blocked by `.preview-only` until the owner approves (DECISIONS.md #40).
+**Current stage:** 2 Design. Approved by the owner and ready to go live (DECISIONS.md #41). The production deploy waits for the owner's explicit confirmation, because the session's permission system blocks production deploys. Until then mlinjanastudios.com runs the Stage 3.1 build (commit 34ce523).
 
 ## Completed
 | Date | Work | Evidence |
@@ -18,6 +18,9 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | Cloudflare Web Analytics allowed in CSP; privacy notice names it | Live browser test: beacon script 200, report POST /cdn-cgi/rum 204, no console errors |
 | 2026-11-06 | Missing LCP fixed: carousels combined scroll snapping with CSS smooth scrolling, which ended LCP measurement | commit 34ce523; before: 3/8 product loads and 0/8 home loads recorded LCP; after: 8/8 on home, product, shop, search, category. Live Lighthouse mobile (lab): home perf 99 LCP 1.9 s, product 100 LCP 1.6 s, shop 100 LCP 1.6 s, search 100 LCP 1.3 s; CLS 0 on all |
 | 2026-11-06 | Stage 2 preview: logo recoloured (navy/gold); palette tokens; Business / Life / Education divisions + 29 category pages from config/taxonomy.json; new header, mega-menu, footer and search filter; static hero "Make Better Things Happen." | commit 7caf20d; preview Worker version 2c06769f; link check 794 pages, 0 broken, 0 redirecting; preview browser test: Life-filtered search (164 results for "planner"), category chip filter (66 → 3), 2-item basket R118, checkout reached sandbox.payfast.co.za (no payment made). Lighthouse mobile, preview: home perf 97 / a11y 100 / LCP 1.9 s; division 98 / 100 / 2.0 s; category 99 / 100 / 1.6 s; product 100 / 100 / 1.3 s; search 100 / 100 / 1.8 s; CLS 0 on all |
+| 2026-11-06 | store-api v9: navy/gold receipt email; PayFast return/cancel URLs without .html | Sandbox: ORD-983B275A536D (single, returned to /chairbook/thanks) and BSK-47B08AB33489 (2 items, fee 136 + 135 cents) paid on verified ITNs; 3/3 ZIPs downloaded. Receipt delivery not tested (Resend 422 for a non-owner address); design checked by local render |
+| 2026-11-06 | All 600 downloads rebuilt: navy Start Here.pdf, navy logo on PDF covers; preview images re-rendered | 600/600 validated; listing/price differences vs previous catalogue: 0; 600 files uploaded; DB SHA fingerprint e409e0cc… matches catalogue; 97,646,388 bytes stored, 0 missing; 8 random Start Here.pdf pages: navy present, 0 emerald pixels |
+| 2026-11-06 | Old /c/ department pages replaced by 301 redirects to 2.0 categories/divisions | `_redirects` (11 departments × 2 forms); link check 783 pages, 0 broken, 0 redirecting |
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
@@ -40,10 +43,9 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Owner reviews the preview (look, wording, the 29 category names) and approves or asks for changes.
-2. Go-live (after approval): recolour the receipt email (store-api, sandbox end-to-end test) and Start Here.pdf in all 600 downloads; 301s for the old /c/ department pages; remove `.preview-only`; deploy; live link check + Lighthouse.
-3. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
-4. Currency display (approximate, labelled) once the PayFast answer is in.
+1. Owner confirms the production deploy; then deploy, and run the live checks (pages, redirects, search, basket, Lighthouse).
+2. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
+3. Currency display (approximate, labelled) once the PayFast answer is in.
 
 ## Rules for every session
 - Never claim a test passed unless it ran. Record evidence (commit, order ref, Lighthouse score) here.
