@@ -302,6 +302,69 @@ async function adminOrder(req: Request) {
   return json({ ok: true });
 }
 
+// ------------------------------------------------------------------ backups and restore drill (migration 006)
+// The Free plan has no automatic backups, so every business table is exported nightly to the private 'backups' bucket.
+const BACKUP_TABLES: Record<string, string> = { // table → primary key (stable order for paging)
+  config: "key", stores: "id", products: "id", listings: "id", orders: "id", baskets: "id", download_tokens: "token",
+  payment_events: "id", contact_messages: "id", events: "id", work_log: "id", costs: "id", job_runs: "id", daily_reports: "report_date",
+};
+const BACKUP_DAYS = 30;
+const gzip = async (s: string) => new Uint8Array(await new Response(new Blob([s]).stream().pipeThrough(new CompressionStream("gzip"))).arrayBuffer());
+const gunzip = async (b: Blob) => await new Response(b.stream().pipeThrough(new DecompressionStream("gzip"))).text();
+
+async function backup() {
+  const id = await jobStart("backup");
+  if (!id) return { skipped: true };
+  const out: Record<string, unknown> = {};
+  try {
+    const tables: Record<string, unknown[]> = {}, counts: Record<string, number> = {};
+    for (const [t, pk] of Object.entries(BACKUP_TABLES)) {
+      tables[t] = await fetchAll(() => db.from(t).select("*").order(pk));
+      counts[t] = tables[t].length;
+    }
+    const key = `db/${today()}.json.gz`;
+    const body = await gzip(JSON.stringify({ format: 1, created_at: new Date().toISOString(), counts, tables }));
+    const { error } = await db.storage.from("backups").upload(key, body, { upsert: true, contentType: "application/gzip" });
+    if (error) throw new Error(`upload: ${error.message}`);
+    // keep BACKUP_DAYS days of nightly files
+    const cutoff = new Date(Date.now() - BACKUP_DAYS * 86400_000).toISOString().slice(0, 10);
+    const { data: files } = await db.storage.from("backups").list("db", { limit: 1000 });
+    const old = (files ?? []).map((f) => f.name).filter((n) => /^\d{4}-\d{2}-\d{2}\.json\.gz$/.test(n) && n.slice(0, 10) < cutoff);
+    if (old.length) await db.storage.from("backups").remove(old.map((n) => `db/${n}`));
+    Object.assign(out, { key, bytes: body.length, counts, removed: old });
+    await jobEnd(id, "ok", out);
+  } catch (e) {
+    await jobEnd(id, "error", out, String(e));
+  }
+  return out;
+}
+
+async function restoreDrill() {
+  const id = await jobStart("restore_drill");
+  if (!id) return { skipped: true };
+  const out: Record<string, unknown> = {};
+  try {
+    const { data: files } = await db.storage.from("backups").list("db", { limit: 1000 });
+    const latest = (files ?? []).map((f) => f.name).filter((n) => /^\d{4}-\d{2}-\d{2}\.json\.gz$/.test(n)).sort().pop();
+    if (!latest) throw new Error("no backup file found in backups/db/");
+    const { data: blob, error } = await db.storage.from("backups").download(`db/${latest}`);
+    if (error || !blob) throw new Error(`download: ${error?.message}`);
+    const dump = JSON.parse(await gunzip(blob));
+    const results: Record<string, unknown>[] = [];
+    for (const t of Object.keys(BACKUP_TABLES)) {
+      const { data, error: e2 } = await db.rpc("restore_drill_table", { tbl: t, rows: dump.tables[t] ?? [] });
+      if (e2) throw new Error(`${t}: ${e2.message}`);
+      results.push({ ...data, expected: dump.counts[t] });
+    }
+    const ok = results.every((r) => r.restored === r.expected && r.checksum_match === true);
+    Object.assign(out, { backup: latest, created_at: dump.created_at, ok, results });
+    await jobEnd(id, ok ? "ok" : "error", out, ok ? undefined : "restore drill: counts or checksums differ");
+  } catch (e) {
+    await jobEnd(id, "error", out, String(e));
+  }
+  return out;
+}
+
 // ------------------------------------------------------------------ sync & upload (local factory → backend)
 async function sync(req: Request) {
   const b = await req.json();
@@ -345,6 +408,8 @@ Deno.serve(async (req) => {
       if (!(await secretOk(req, "cron_secret"))) return json({ error: "unauthorised" }, 401);
       if (route === "/cron/health") return json(await health());
       if (route === "/cron/daily-report") return json(await dailyReport());
+      if (route === "/cron/backup") return json(await backup());
+      if (route === "/cron/restore-drill") return json(await restoreDrill());
     }
     if (route.startsWith("/admin/")) {
       if (route === "/admin/sync" || route === "/admin/upload") {
