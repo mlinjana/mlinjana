@@ -43,7 +43,7 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Lighten the division pages (Business: 12 rows of 12 products; LCP 2.4 s, TBT 240 ms), e.g. fewer rows above the fold.
+1. Ship the lighter division pages (built, on the preview; waiting for the next live deploy). The earlier Business result (perf 92, LCP 2.4 s) was a noisy single run: two repeat runs on 6 Nov gave perf 99, LCP 1.7–1.9 s. The trimmed page (6 rows of 8 instead of 12 rows of 12) scored 98–99, LCP 1.5–1.7 s, total weight 1,043 KiB vs 1,306 KiB.
 2. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
 3. Currency display (approximate, labelled) once the PayFast answer is in.
 

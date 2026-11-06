@@ -396,7 +396,9 @@ def main():
     for d in divisions:
         out = os.path.join(SITE, d["slug"])
         os.makedirs(out, exist_ok=True)
-        rows = [{"title": c["name"], "href": c["href"], "count": c["count"], "products": c["items"][:12]} for c in d["categories"]]
+        # rows for the 6 largest categories, 8 products each (every category is still one click away in the tiles above);
+        # 12 full rows made the Business page ~220 KB with 115 cards (LCP 2.4 s, TBT 240 ms on 6 Nov)
+        rows = [{"title": c["name"], "href": c["href"], "count": c["count"], "products": c["items"][:8]} for c in d["categories"][:6]]
         open(os.path.join(out, "index.html"), "w").write(env.get_template("division.html").render(
             store=None, division=d, category=None, rows=rows, page_div=d["slug"], art=[c["cover"] for c in d["categories"][:3]],
             canonical=f"{sb}{d['href']}",
