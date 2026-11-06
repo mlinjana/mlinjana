@@ -1,0 +1,12 @@
+// Preview Worker for design changes awaiting the owner's approval (Mlinjana Studios 2.0, Stage 2).
+// workers.dev only: no custom domain, and the build is in staging mode (noindex, robots Disallow, PayFast sandbox).
+// Deployed with: bash engine/deploy_preview.sh
+{
+  "name": "mlinjana-preview",
+  "compatibility_date": "2026-10-28",
+  "workers_dev": true,
+  "assets": {
+    "directory": "./site",
+    "not_found_handling": "404-page"
+  }
+}

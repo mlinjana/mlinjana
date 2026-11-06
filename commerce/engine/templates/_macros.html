@@ -16,7 +16,7 @@
 {%- endmacro %}
 
 {% macro card(p, shop) -%}
-<article class="card" data-id="{{ p.id }}" data-cat="{{ p.category }}" data-price="{{ p.price_zar }}" data-fmt="{{ p.fmt_keys|join(' ') }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.category ~ ' ' ~ p.tags|join(' '))|lower }}">
+<article class="card" data-id="{{ p.id }}" data-cat="{{ p.category }}" data-cat2="{{ p.cat2 }}" data-price="{{ p.price_zar }}" data-fmt="{{ p.fmt_keys|join(' ') }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.category ~ ' ' ~ p.tags|join(' '))|lower }}">
   <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}">
     <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="badge-off">-{{ p.saving_pct }}%</span>{% endif %}{% if p.free %}<span class="badge-free">Free</span>{% endif %}</div>
     <div class="card-body">
@@ -48,9 +48,10 @@
 </section>
 {%- endmacro %}
 
-{# Filter bar for shop and department pages: category chips, format, price and sort. Works on #shop .grid. #}
-{% macro filters(categories, total, placeholder) -%}
-<div class="filters">
+{# Filter bar for shop, category and department pages: chips, format, price and sort. Works on #shop .grid.
+   facet = the card attribute the chips filter on: "cat" (product type) or "cat2" (2.0 category). #}
+{% macro filters(categories, total, placeholder, facet="cat") -%}
+<div class="filters" data-facet="{{ facet }}">
   <div class="filters-top">
     <label class="fsearch"><span class="visually-hidden">Search these items</span>{{ icon("search") }}<input id="q" type="search" placeholder="{{ placeholder }}" autocomplete="off"></label>
     <div class="selects">

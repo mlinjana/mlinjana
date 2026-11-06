@@ -161,32 +161,9 @@
     document.addEventListener("click", (e) => { if (!mp.hidden && !e.target.closest(".mega")) set(false); });
     document.addEventListener("keydown", (e) => { if (e.key === "Escape" && !mp.hidden) { set(false); mb.focus(); } });
   }
-  // keep the header department picker in step with the search page
-  const hd = $("#hdept");
-  if (hd && qs.get("dept")) hd.value = qs.get("dept");
-
-  // ---- hero carousel: auto-advances unless the visitor prefers reduced motion; pauses on hover/focus ----
-  const car = $("[data-carousel]");
-  if (car) {
-    const slides = $$(".slide", car), dots = $$(".dots button", car);
-    let cur = 0, timer = 0;
-    const go = (i) => {
-      cur = (i + slides.length) % slides.length;
-      slides.forEach((s, k) => { const on = k === cur; s.classList.toggle("on", on); s.setAttribute("aria-hidden", on ? "false" : "true"); s.tabIndex = on ? 0 : -1; });
-      dots.forEach((d, k) => d.classList.toggle("on", k === cur));
-    };
-    const play = () => { if (!calm && slides.length > 1) { clearInterval(timer); timer = setInterval(() => go(cur + 1), 6000); } };
-    $(".car-btn.prev", car).addEventListener("click", () => { go(cur - 1); play(); });
-    $(".car-btn.next", car).addEventListener("click", () => { go(cur + 1); play(); });
-    dots.forEach((d, k) => d.addEventListener("click", () => { go(k); play(); }));
-    car.addEventListener("mouseenter", () => clearInterval(timer));
-    car.addEventListener("mouseleave", play);
-    car.addEventListener("focusin", () => clearInterval(timer));
-    let sx = 0;
-    car.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; clearInterval(timer); }, { passive: true });
-    car.addEventListener("touchend", (e) => { const dx = e.changedTouches[0].clientX - sx; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); play(); });
-    play();
-  }
+  // keep the header "Search in" picker in step with the search page
+  const hd = $("#hdiv");
+  if (hd && qs.get("div")) hd.value = qs.get("div");
 
   // ---- product rails: arrow buttons appear only when there is more to scroll ----
   $$("[data-rail]").forEach((r) => {
@@ -204,13 +181,14 @@
   if (grid && $("#q")) {
     const cards = $$(".card", grid);
     cards.forEach((c, k) => { c.dataset.k = k; });
+    const facet = ($(".filters") || {}).dataset?.facet || "cat"; // chips filter on data-cat or data-cat2
     let cat = "";
     const apply = () => {
       const t = ($("#q").value || "").toLowerCase().trim().split(/\s+/).filter(Boolean);
       const fmt = $("#f-fmt").value, max = +$("#f-price").value || 0, sort = $("#f-sort").value;
       let n = 0;
       cards.forEach((c) => {
-        const show = (!cat || c.dataset.cat === cat) && (!fmt || c.dataset.fmt.split(" ").includes(fmt)) &&
+        const show = (!cat || c.dataset[facet] === cat) && (!fmt || c.dataset.fmt.split(" ").includes(fmt)) &&
           (!max || +c.dataset.price < max) && t.every((w) => c.dataset.text.includes(w));
         c.hidden = !show;
         if (show) n++;
@@ -234,11 +212,11 @@
   // ---- site-wide search page ----
   const sp = $("#search-page");
   if (sp) {
-    const state = { q: (qs.get("q") || "").trim(), dept: qs.get("dept") || "", max: qs.get("max") || "", fmt: qs.get("fmt") || "",
+    const state = { q: (qs.get("q") || "").trim(), div: qs.get("div") || "", dept: qs.get("dept") || "", max: qs.get("max") || "", fmt: qs.get("fmt") || "",
       bundles: qs.get("bundles") === "1", free: qs.get("free") === "1", sort: qs.get("sort") || "", shown: 48 };
     $("#hq").value = state.q;
     const setRadio = (name, v) => { const el = sp.querySelector(`input[name=${name}][value="${v}"]`); if (el) el.checked = true; };
-    setRadio("dept", state.dept); setRadio("max", state.max); setRadio("fmt", state.fmt);
+    setRadio("div", state.div); setRadio("max", state.max); setRadio("fmt", state.fmt);
     sp.querySelector("input[name=bundles]").checked = state.bundles;
     sp.querySelector("input[name=free]").checked = state.free;
     $("#s-sort").value = state.sort;
@@ -246,7 +224,7 @@
     const render = async () => {
       const { items, shops } = await loadCatalogue();
       const words = state.q.toLowerCase().split(/[^a-z0-9]+/).filter((w) => w.length > 1).map(stem);
-      let res = items.filter((p) => (!state.dept || p.d === state.dept) && (!state.max || p.p < +state.max) && (!state.fmt || p.f.includes(state.fmt)) &&
+      let res = items.filter((p) => (!state.div || p.v === state.div) && (!state.dept || p.d === state.dept) && (!state.max || p.p < +state.max) && (!state.fmt || p.f.includes(state.fmt)) &&
         (!state.bundles || p.o) && (!state.free || p.fr));
       let loose = false;
       if (words.length) {
@@ -270,7 +248,7 @@
     const push = () => {
       const u = new URLSearchParams();
       if (state.q) u.set("q", state.q);
-      ["dept", "max", "fmt", "sort"].forEach((k) => state[k] && u.set(k, state[k]));
+      ["div", "dept", "max", "fmt", "sort"].forEach((k) => state[k] && u.set(k, state[k]));
       if (state.bundles) u.set("bundles", "1");
       if (state.free) u.set("free", "1");
       history.replaceState(null, "", "?" + u.toString());

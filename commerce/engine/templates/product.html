@@ -6,7 +6,7 @@
 {% block og %}<meta property="og:type" content="product"><meta property="og:image" content="{{ site_base }}/{{ p.images.cover }}">{% endblock %}
 {% block main %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a>{% if store.coll != dept.name %}<span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.coll }}</a>{% endif %}<span aria-hidden="true">›</span><span>{{ p.category }}</span></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="{{ division.href }}">{{ division.name }}</a><span aria-hidden="true">›</span><a href="{{ p.cat2_href }}">{{ p.cat2 }}</a></nav>
 
   <div class="pp">
     <section class="panel pp-media" aria-label="Images">
@@ -94,7 +94,7 @@
   </div>
 
   {% if more %}{{ rail("More in " ~ store.coll, more, shops, base ~ "/", "See all " ~ store.n_products) }}{% endif %}
-  {% if alike %}{{ rail("You may also like", alike, shops, "/c/" ~ dept.slug ~ "/", "More in " ~ dept.name) }}{% endif %}
+  {% if alike %}{{ rail("You may also like", alike, shops, p.cat2_href, "More in " ~ p.cat2) }}{% endif %}
 </div>
 
 <div class="buybar" id="buybar" hidden>

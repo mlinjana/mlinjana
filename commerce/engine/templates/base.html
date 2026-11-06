@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>{% block title %}{{ market.name }}{% endblock %}</title>
 <meta name="description" content="{% block desc %}{{ market.tagline }}{% endblock %}">
-<meta name="theme-color" content="#0b6b57">
+<meta name="theme-color" content="#17243b">
 {% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
@@ -34,8 +34,8 @@
   <div class="wrap hdr-in">
     <a class="logo" href="/"><img src="/assets/brand/logo.svg" alt="{{ market.name }}" width="158" height="42"></a>
     <form class="hsearch" action="/search" method="get" role="search">
-      <label class="visually-hidden" for="hdept">Department</label>
-      <select id="hdept" name="dept"><option value="">All</option>{% for d in depts %}<option value="{{ d.slug }}">{{ d.name }}</option>{% endfor %}</select>
+      <label class="visually-hidden" for="hdiv">Search in</label>
+      <select id="hdiv" name="div"><option value="">All</option>{% for d in divisions %}<option value="{{ d.slug }}">{{ d.name }}</option>{% endfor %}</select>
       <label class="visually-hidden" for="hq">Search all downloads</label>
       <input id="hq" name="q" type="search" placeholder="Search planners, templates, spreadsheets…" autocomplete="off">
       <button type="submit" aria-label="Search">{{ icon("search") }}</button>
@@ -45,16 +45,17 @@
       <button type="button" class="hbtn" data-open-basket aria-haspopup="dialog">{{ icon("bag") }}<span class="lbl">Basket</span><b class="bk-count" hidden></b></button>
     </nav>
   </div>
-  <nav class="catbar" aria-label="Departments"><div class="wrap catbar-in">
+  <nav class="catbar" aria-label="Shop"><div class="wrap catbar-in">
     <div class="mega">
-      <button type="button" class="mega-btn" aria-expanded="false" aria-controls="mega-panel">{{ icon("menu") }}<span>Shop by department</span></button>
+      <button type="button" class="mega-btn" aria-expanded="false" aria-controls="mega-panel">{{ icon("menu") }}<span>All categories</span></button>
       <div class="mega-panel" id="mega-panel" hidden>
-        {% for d in depts %}<div class="mega-col"><a class="mega-d" href="/c/{{ d.slug }}/">{{ d.name }} <span>{{ d.count }}</span></a>{% for s in d.shop_list %}<a class="mega-s" href="/{{ s.path }}/">{{ s.name }}</a>{% endfor %}</div>{% endfor %}
+        {% for d in divisions %}<div class="mega-col"><a class="mega-d" href="{{ d.href }}">{{ d.name }} <span>{{ d.count }}</span></a>{% for c in d.categories %}<a class="mega-s" href="{{ c.href }}">{{ c.name }} <span>{{ c.count }}</span></a>{% endfor %}</div>{% endfor %}
       </div>
     </div>
+    {% for d in divisions %}<a class="cb-div{% if division and division.slug == d.slug %} on{% endif %}" href="{{ d.href }}"{% if page_div == d.slug %} aria-current="page"{% endif %}>{{ d.name }}</a>{% endfor %}
+    <span class="cb-sep" aria-hidden="true"></span>
     <a class="hot" href="/search?bundles=1">Bundle deals</a>
     <a href="/search?max=50">Under R50</a>
-    {% for d in depts %}<a href="/c/{{ d.slug }}/"{% if dept and dept.slug == d.slug %} aria-current="page"{% endif %}>{{ d.name }}</a>{% endfor %}
   </div></nav>
 </header>
 <main id="main">{% block main %}{% endblock %}</main>
@@ -68,7 +69,7 @@
       <a class="logo" href="/"><img src="/assets/brand/logo-reversed.svg" alt="{{ market.name }}" width="158" height="42"></a>
       <p>{{ market.tagline }}</p>
     </div>
-    <div><h2 class="ft-h">Shop</h2><ul class="ft-list">{% for d in depts %}<li><a href="/c/{{ d.slug }}/">{{ d.name }}</a></li>{% endfor %}</ul></div>
+    <div><h2 class="ft-h">Shop</h2><ul class="ft-list">{% for d in divisions %}<li><a href="{{ d.href }}">{{ d.name }}</a></li>{% endfor %}<li><a href="/search?bundles=1">Bundle deals</a></li><li><a href="/search?max=50">Under R50</a></li><li><a href="/search">All {{ market.total }} items</a></li></ul></div>
     <div><h2 class="ft-h">Customer care</h2><ul class="ft-list"><li><a href="/#how">How buying works</a></li><li><a href="/help/contact">Lost a download?</a></li><li><a href="/help/refunds">Refunds &amp; support</a></li><li><a href="/help/licence">Licence</a></li><li><a href="/help/contact">Contact us</a></li></ul></div>
     <div><h2 class="ft-h">Company</h2><ul class="ft-list"><li><a href="/help/about">About us</a></li><li><a href="/help/terms">Terms of sale</a></li><li><a href="/help/privacy">Privacy</a></li><li><a href="/favourites">Your favourites</a></li></ul></div>
   </div>

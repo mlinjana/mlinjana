@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% from "_macros.html" import grid, filters, rail, icon %}
+{# One template for a division (Business, Life, Education: category tiles + a row per category)
+   and for a category inside it (every item, with filters). #}
+{% block title %}{% if category %}{{ category.name }}: {{ division.name|lower }} templates and downloads{% else %}{{ division.name }}: templates, planners and spreadsheets{% endif %} | {{ market.name }}{% endblock %}
+{% block desc %}{% if category %}{{ category.count }} {{ category.name|lower }} downloads in {{ division.name }}{% if lines %}, including tools for {{ lines[:4]|join(', ') }}{% endif %}. Instant download from {{ market.name }}.{% else %}{{ division.blurb }} {{ division.count }} instant downloads from {{ market.name }}.{% endif %}{% endblock %}
+{% block main %}
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>{% if category %}<a href="{{ division.href }}">{{ division.name }}</a><span aria-hidden="true">›</span><span>{{ category.name }}</span>{% else %}<span>{{ division.name }}</span>{% endif %}</nav>
+
+  <section class="panel div-hero div-{{ division.slug }}">
+    <div class="div-copy">
+      <p class="eyebrow">{% if category %}{{ division.name }}{% else %}Shop by area{% endif %}</p>
+      <h1>{{ category.name if category else division.name }}</h1>
+      <p class="lede">{% if category %}{{ category.count }} instant downloads{% if lines %}, including tools for {% for l in lines[:4] %}{{ l }}{% if not loop.last %}{{ " and " if loop.revindex == 2 else ", " }}{% endif %}{% endfor %}{% endif %}.{% else %}{{ division.blurb }}{% endif %}</p>
+      {% if not category %}<p class="div-count">{{ icon("file") }}{{ division.count }} instant downloads in {{ division.categories|length }} categories</p>{% endif %}
+    </div>
+    <div class="div-art" aria-hidden="true">{% for src in art %}<img src="/{{ src }}" alt="" width="600" height="450"{% if loop.first %} fetchpriority="high"{% endif %}>{% endfor %}</div>
+  </section>
+
+  {% if not category %}
+  <section class="panel">
+    <div class="panel-head"><h2>Categories in {{ division.name }}</h2></div>
+    <ul class="cat-tiles">
+      {% for c in division.categories %}<li><a href="{{ c.href }}"><span class="cimg"><img src="/{{ c.cover }}" alt="" loading="lazy" width="600" height="450"></span><span><strong>{{ c.name }}</strong><small>{{ c.count }} items</small></span></a></li>{% endfor %}
+    </ul>
+  </section>
+  {% for r in rows %}{{ rail(r.title, r.products, shops, r.href, "See all " ~ r.count) }}{% endfor %}
+  {% else %}
+  <nav class="subcats" aria-label="Other categories in {{ division.name }}">
+    {% for c in division.categories %}<a href="{{ c.href }}"{% if c.slug == category.slug %} aria-current="page"{% endif %}>{{ c.name }} <span>{{ c.count }}</span></a>{% endfor %}
+  </nav>
+  <section id="shop" class="panel">
+    <h2 class="visually-hidden">Items</h2>
+    {{ filters(categories, category.count, "Search " ~ category.count ~ " items in " ~ category.name) }}
+    {{ grid(products, shops) }}
+    <p id="empty" class="muted empty" hidden>No items match. Try a shorter word or another filter.</p>
+  </section>
+  {% endif %}
+</div>
+{% endblock %}

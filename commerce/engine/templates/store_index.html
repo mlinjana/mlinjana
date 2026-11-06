@@ -4,7 +4,7 @@
 {% block desc %}{{ store.proposition }}{% endblock %}
 {% block main %}
 <div class="wrap">
-  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span>{% if store.coll != dept.name %}<a href="/c/{{ dept.slug }}/">{{ dept.name }}</a><span aria-hidden="true">›</span>{% endif %}<span>{{ store.coll }}</span></nav>
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="{{ store.division.href }}">{{ store.division.name }}</a><span aria-hidden="true">›</span><span>{{ store.coll }}</span></nav>
   <section class="panel dept-hero">
     <div class="dept-copy">
       <h1>{{ store.coll }}</h1>

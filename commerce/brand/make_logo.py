@@ -14,7 +14,10 @@ from fontTools.pens.transformPen import TransformPen
 HERE = os.path.dirname(os.path.abspath(__file__))
 FONT = os.path.join(HERE, "..", "engine", "static", "fonts", "plusjakartasans.woff2")
 OUT = os.path.join(HERE, "logo", "concepts")
-GREEN, DEEP, GOLD, INK, MUTED = "#0b6b57", "#08503f", "#f5b301", "#0f172a", "#64748b"
+# Brand palette (owner decision #39, 6 Nov 2026): Midnight Navy, Champagne Gold, Charcoal; Warm Ivory backgrounds.
+# Earlier palette (5 Nov): emerald #0b6b57 / marigold #f5b301.
+PRIMARY, DEEP, GOLD, INK, MUTED = "#17243b", "#0e1626", "#c9952a", "#17243b", "#5c6370"
+SUB_DARK = "#cbd2dd"  # "STUDIOS" on navy (10.2:1)
 
 
 def font_at(weight):
@@ -95,7 +98,7 @@ def reflect(p, a, b):
 
 def sym_folio(dark=False):
     """Two pages side by side; their inner top corners are folded down, and the folds draw the M."""
-    bg = f'<rect width="100" height="100" rx="24" fill="{GREEN}"/>'
+    bg = f'<rect width="100" height="100" rx="24" fill="{PRIMARY}"/>'
     paper = "#ffffff"
     L = [(22, 78), (22, 22), (37, 22), (48.5, 47), (48.5, 78)]
     R = [(100 - x, y) for x, y in L][::-1]
@@ -118,14 +121,14 @@ def sym_grid(dark=False):
     for r, row in enumerate(GRID):
         for c, v in enumerate(row):
             x, y = m + c * (cell + gap), m + r * (cell + gap)
-            fill = {"X": "#ffffff" if dark else GREEN, "G": GOLD, ".": "rgba(255,255,255,.12)" if dark else "#dcefe7"}[v]
+            fill = {"X": "#ffffff" if dark else PRIMARY, "G": GOLD, ".": "rgba(255,255,255,.12)" if dark else "#dcefe7"}[v]
             out.append(f'<rect x="{x:.2f}" y="{y:.2f}" width="{cell}" height="{cell}" rx="3.6" fill="{fill}"/>')
     return "".join(out)
 
 
 def sym_seal(dark=False):
     """A round studio seal: the M with a gold diamond, ringed by the name, the country and the year."""
-    out = [f'<circle cx="50" cy="50" r="49" fill="{GREEN}"/>',
+    out = [f'<circle cx="50" cy="50" r="49" fill="{PRIMARY}"/>',
            f'<circle cx="50" cy="50" r="39" fill="none" stroke="{GOLD}" stroke-width="1.6"/>']
     out.append(arc_text("MLINJANA STUDIOS", 50, 50, 43.4, top=True, size=7.4, fill="#ffffff", tracking=60))
     out.append(arc_text("SOUTH AFRICA · 2026", 50, 50, 43.4, top=False, size=6.6, fill="#d1fae5", tracking=60))
@@ -169,7 +172,7 @@ SYMBOLS = {"folio": (sym_folio, "fold"), "grid": (sym_grid, "square"), "seal": (
 
 
 def wordmark(shape, dark=False, x=0, y=0, size=64):
-    ink, sub = ("#ffffff", "#a7b4c6") if dark else (INK, MUTED)
+    ink, sub = ("#ffffff", SUB_DARK) if dark else (INK, MUTED)
     d, w, tits = text_outline(F800, "Mlinjana", size, x, y + size * .74, tracking=-12)
     d2, w2, _ = text_outline(F700, "STUDIOS", size * .26, x + size * .03, y + size * 1.12, tracking=420, strip_dots="")
     svg = f'<path d="{d}" fill="{ink}"/>' + "".join(tittle(shape, cx, cy, r) for cx, cy, r in tits) + f'<path d="{d2}" fill="{sub}"/>'
@@ -204,7 +207,7 @@ def sym_corner(dark=False):
             f"V{r}A{r} {r} 0 0 1 {r} 0Z")
     flap = f"M{100 - c} 0V{c - 4}A4 4 0 0 0 {100 - c + 4} {c}H100Z"
     shadow = f"M{100 - c} {c}H100L{100 - c + 5} {c + 7}Z"
-    tile, ink = ("#ffffff", GREEN) if dark else (GREEN, "#ffffff")
+    tile, ink = ("#ffffff", PRIMARY) if dark else (PRIMARY, "#ffffff")
     return (f'<path d="{page}" fill="{tile}"/><path d="{shadow}" fill="{DEEP}" opacity="{.25 if dark else .55}"/><path d="{flap}" fill="{GOLD}"/>'
             + glyph_path(F800, "M", 64, 46, 76, ink))
 
@@ -213,7 +216,7 @@ def sym_layers(dark=False):
     """Three stacked pages; the front page carries the M and a gold folded corner."""
     def page(x, y, rot, fill):
         return f'<rect x="{x}" y="{y}" width="54" height="70" rx="10" fill="{fill}" transform="rotate({rot} {x + 27} {y + 35})"/>'
-    tile, ink, p1, p2 = ("#ffffff", GREEN, "rgba(255,255,255,.35)", "rgba(255,255,255,.6)") if dark else (GREEN, "#ffffff", "#a7dccb", "#2f9a7e")
+    tile, ink, p1, p2 = ("#ffffff", PRIMARY, "rgba(255,255,255,.35)", "rgba(255,255,255,.6)") if dark else (PRIMARY, "#ffffff", "#a7dccb", "#2f9a7e")
     front = (f'<path d="M20 15H52L64 27V75A10 10 0 0 1 54 85H20A10 10 0 0 1 10 75V25A10 10 0 0 1 20 15Z" fill="{tile}"/>'
              f'<path d="M52 15V23A4 4 0 0 0 56 27H64Z" fill="{GOLD}"/>')
     return (page(38, 8, 14, p1) + page(26, 12, 7, p2) + front + glyph_path(F800, "M", 38, 37, 63, ink))
@@ -222,14 +225,14 @@ def sym_layers(dark=False):
 def sym_lower_m(dark=False):
     """Wordmark-led brand: a lowercase m with its gold diamond, in a circle."""
     d, w, _ = text_outline(F800, "m", 66, 0, 0, strip_dots="")
-    tile, ink = ("#ffffff", GREEN) if dark else (GREEN, "#ffffff")
+    tile, ink = ("#ffffff", PRIMARY) if dark else (PRIMARY, "#ffffff")
     return (f'<circle cx="50" cy="50" r="50" fill="{tile}"/>'
             f'<g transform="translate({50 - w / 2:.2f} 70)"><path d="{d}" fill="{ink}"/></g>' + tittle("diamond", 74, 28, 5.2))
 
 
 def sym_check(dark=False):
     """An M whose middle stroke is a gold tick: planners, lists and jobs done."""
-    tile, ink = ("#ffffff", GREEN) if dark else (GREEN, "#ffffff")
+    tile, ink = ("#ffffff", PRIMARY) if dark else (PRIMARY, "#ffffff")
     return (f'<rect width="100" height="100" rx="24" fill="{tile}"/>'
             f'<path d="M25 74V27" stroke="{ink}" stroke-width="12" stroke-linecap="round" fill="none"/>'
             f'<path d="M75 74V27" stroke="{ink}" stroke-width="12" stroke-linecap="round" fill="none"/>'
@@ -241,7 +244,7 @@ SYMBOLS.update({"corner": (sym_corner, "square"), "layers": (sym_layers, "circle
 
 
 def wordmark_lower(dark=False, x=0, y=0, size=64):
-    ink, sub = ("#ffffff", "#cbd5e1") if dark else (GREEN, INK)
+    ink, sub = ("#ffffff", "#cbd5e1") if dark else (PRIMARY, INK)
     d, w, tits = text_outline(F800, "mlinjana", size, x, y + size * .74, tracking=-14)
     d2, w2, _ = text_outline(F700, "STUDIOS", size * .2, 0, 0, tracking=380, strip_dots="")
     sx = x + w - w2
@@ -403,9 +406,9 @@ def export_final(key="corner"):
     rev = lockup(key, True)
     open(os.path.join(FINAL, "og.html"), "w").write(
         '<!doctype html><meta charset="utf-8"><style>*{margin:0;box-sizing:border-box}body{width:1200px;height:630px;'
-        'background:radial-gradient(900px 500px at 85% 0%,#118a6f,transparent 60%),#0b6b57;display:flex;flex-direction:column;'
+        'background:radial-gradient(900px 500px at 85% 0%,#2b3d5e,transparent 60%),#17243b;display:flex;flex-direction:column;'
         'justify-content:center;padding:0 110px;font-family:system-ui,Arial;color:#fff}svg{height:150px;width:auto}'
         'p{font-size:38px;font-weight:700;margin-top:46px;max-width:900px;line-height:1.25}span{display:block;margin-top:22px;'
-        f'font-size:24px;color:#cdeee2;font-weight:600}}</style>{rev}<p>Printable planners, templates and spreadsheets, '
-        'ready in minutes.</p><span>mlinjanastudios.com · Instant digital downloads</span>')
+        f'font-size:24px;color:#e9ddbf;font-weight:600}}</style>{rev}<p>Make better things happen. Planners, templates '
+        'and spreadsheets, ready in minutes.</p><span>mlinjanastudios.com · Instant digital downloads</span>')
     return list(files) + ["og.html"]

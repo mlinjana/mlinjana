@@ -15,7 +15,7 @@ const dir = path.join(__dirname, "logo", "final");
   for (const [name, w] of [["logo", 1200], ["logo-reversed", 1200]]) {
     const svg = fs.readFileSync(path.join(dir, name + ".svg"), "utf8");
     const p = await b.newPage({ viewport: { width: w, height: 400 } });
-    await p.setContent(`<style>*{margin:0}body{background:${name.includes("reversed") ? "#0b6b57" : "transparent"}}svg{width:${w}px;height:auto;display:block}</style>${svg}`);
+    await p.setContent(`<style>*{margin:0}body{background:${name.includes("reversed") ? "#17243b" : "transparent"}}svg{width:${w}px;height:auto;display:block}</style>${svg}`);
     const el = await p.$("svg");
     await el.screenshot({ path: path.join(dir, name + ".png"), omitBackground: !name.includes("reversed") });
     await p.close();
