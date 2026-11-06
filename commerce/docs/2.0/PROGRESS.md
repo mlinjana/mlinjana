@@ -22,6 +22,7 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | All 600 downloads rebuilt: navy Start Here.pdf, navy logo on PDF covers; preview images re-rendered | 600/600 validated; listing/price differences vs previous catalogue: 0; 600 files uploaded; DB SHA fingerprint e409e0cc… matches catalogue; 97,646,388 bytes stored, 0 missing; 8 random Start Here.pdf pages: navy present, 0 emerald pixels |
 | 2026-11-06 | Old /c/ department pages replaced by 301 redirects to 2.0 categories/divisions | `_redirects` (11 departments × 2 forms); link check 783 pages, 0 broken, 0 redirecting |
 | 2026-11-06 | **2.0 live** on mlinjanastudios.com (owner confirmed the deploy) | Live checks: 9 key pages 200 with the navy theme; /c/money/ → 301 /life/personal-finance/; /c/small-business → 301 /business/; old .html → 307 short URL; /pacebook/ → 301 /steadyrep/; search (Business, "invoice") 10 results; category filter 15; basket R69; 0 console errors. Lighthouse mobile (lab): home 99/100/100 LCP 1.6 s; Business division 92/100/100 LCP 2.4 s (TBT 240 ms, the heaviest page: 12 rows of products); category 100/100/100 LCP 1.6 s; product 100/100/100 LCP 1.6 s; search 98/100/100 LCP 2.3 s; CLS 0 on all |
+| 2026-11-06 | Licence tiers: Standard, Team (2.5×, whole rand), Commercial by quote; migration 005; store-api v10; picker, basket, thanks page, /help/licence, Start Here.pdf | commit 784d834. API checks: no licence → R39; team → R98; mixed basket → R612; invalid IDs ignored; unknown licence → Standard. Sandbox through the preview: ORD-873362D6C88B (Team) paid R98; BSK-F78F8722C9D2 paid R305 (Team R98 + Team R148 + Standard R59), licence and amount stored per item, delivered. Front end on the preview, waiting for a live deploy |
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
@@ -43,9 +44,10 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Ship the lighter division pages (built, on the preview; waiting for the next live deploy). The earlier Business result (perf 92, LCP 2.4 s) was a noisy single run: two repeat runs on 6 Nov gave perf 99, LCP 1.7–1.9 s. The trimmed page (6 rows of 8 instead of 12 rows of 12) scored 98–99, LCP 1.5–1.7 s, total weight 1,043 KiB vs 1,306 KiB.
-2. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
+1. Owner confirms a live deploy of the lighter division pages + licence tiers (both on the preview, sandbox-tested).
+2. Lawyer review of the licence wording (/help/licence, Start Here.pdf) before real sales.
 3. Currency display (approximate, labelled) once the PayFast answer is in.
+4. Receipt plain-text version: "(Team licence (up to 10 people), R148)" has nested brackets; tidy it with the next store-api change.
 
 ## Rules for every session
 - Never claim a test passed unless it ran. Record evidence (commit, order ref, Lighthouse score) here.
