@@ -130,7 +130,7 @@
       store.set(FKEY, list.slice(0, 500));
       syncFavs();
       if (!calm) { f.classList.remove("pop"); void f.offsetWidth; f.classList.add("pop"); }
-      if (i < 0) { bump(".fav-count"); toast("Saved to favourites.", ["View", () => { location.href = "/favourites.html"; }]); }
+      if (i < 0) { bump(".fav-count"); toast("Saved to favourites.", ["View", () => { location.href = "/favourites"; }]); }
       if ($("#fav-page") && i >= 0) renderFavs();
       return;
     }

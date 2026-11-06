@@ -4,9 +4,6 @@
 {% block desc %}{{ p.summary }}{% endblock %}
 {% block pid %}{{ p.id }}{% endblock %}
 {% block og %}<meta property="og:type" content="product"><meta property="og:image" content="{{ site_base }}/{{ p.images.cover }}">{% endblock %}
-{% block head %}
-<script type="application/ld+json">{{ jsonld|safe }}</script>
-{% endblock %}
 {% block main %}
 <div class="wrap">
   <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><a href="/c/{{ dept.slug }}/">{{ dept.name }}</a>{% if store.coll != dept.name %}<span aria-hidden="true">›</span><a href="{{ base }}/">{{ store.coll }}</a>{% endif %}<span aria-hidden="true">›</span><span>{{ p.category }}</span></nav>
@@ -58,7 +55,7 @@
       {% if p.bundle_items %}
       <section class="panel">
         <h2>In this bundle</h2>
-        <ul class="bundle-list">{% for b in p.bundle_items %}<li><a href="{{ base }}/p/{{ b.slug }}.html"><img src="/{{ b.images.cover }}" alt="" loading="lazy" width="600" height="450"><span>{{ b.name }}</span><em>R{{ b.price_zar }}</em></a></li>{% endfor %}</ul>
+        <ul class="bundle-list">{% for b in p.bundle_items %}<li><a href="{{ base }}/p/{{ b.slug }}"><img src="/{{ b.images.cover }}" alt="" loading="lazy" width="600" height="450"><span>{{ b.name }}</span><em>R{{ b.price_zar }}</em></a></li>{% endfor %}</ul>
         <p class="muted small">Bought separately: R{{ p.bundle_sum }}. Bundle price: R{{ p.price_zar }}, including a bundle-only bonus file.</p>
       </section>
       {% endif %}
@@ -78,8 +75,8 @@
           {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
           {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter. Check results before relying on them; it isn't financial, tax or legal advice.</li>{% endif %}
           {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice.</li>{% endif %}
-          <li>For yourself and one business you own or work for. No reselling or sharing. <a href="{{ base }}/licence.html">Licence</a></li>
-          <li>File not working? We fix it or refund you within 14 days. <a href="{{ base }}/refunds.html">Refunds &amp; support</a></li>
+          <li>For yourself and one business you own or work for. No reselling or sharing. <a href="/help/licence">Licence</a></li>
+          <li>File not working? We fix it or refund you within 14 days. <a href="/help/refunds">Refunds &amp; support</a></li>
         </ul>
       </section>
     </div>
@@ -91,8 +88,8 @@
         <li>File doesn't work as described? Fixed or refunded within 14 days</li>
         <li>{{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}</li>
       </ul>
-      <a class="btn btn-outline btn-block" href="/help/about.html">About us</a>
-      <a class="btn btn-ghost btn-block" href="/help/contact.html">Ask a question</a>
+      <a class="btn btn-outline btn-block" href="/help/about">About us</a>
+      <a class="btn btn-ghost btn-block" href="/help/contact">Ask a question</a>
     </aside>
   </div>
 

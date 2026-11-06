@@ -17,7 +17,7 @@
 
 {% macro card(p, shop) -%}
 <article class="card" data-id="{{ p.id }}" data-cat="{{ p.category }}" data-price="{{ p.price_zar }}" data-fmt="{{ p.fmt_keys|join(' ') }}" data-text="{{ (p.name ~ ' ' ~ p.summary ~ ' ' ~ p.category ~ ' ' ~ p.tags|join(' '))|lower }}">
-  <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}.html">
+  <a class="card-link" href="/{{ shop.path }}/p/{{ p.slug }}">
     <div class="card-media"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" loading="lazy" width="600" height="450">{% if p.saving_pct %}<span class="badge-off">-{{ p.saving_pct }}%</span>{% endif %}{% if p.free %}<span class="badge-free">Free</span>{% endif %}</div>
     <div class="card-body">
       <p class="card-shop">{{ p.category }}</p>

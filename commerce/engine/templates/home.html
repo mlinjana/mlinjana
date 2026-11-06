@@ -23,11 +23,11 @@
       <div class="dots" role="group" aria-label="Choose a slide">{% for s in slides %}<button type="button" class="{% if loop.first %}on{% endif %}" aria-label="Show slide {{ loop.index }}: {{ s.title }}"></button>{% endfor %}</div>
     </div>
     <div class="hero-side">
-      <a class="tile" href="/search.html?max=50">
+      <a class="tile" href="/search?max=50">
         <span class="tile-k">Deals</span><strong>Under R50</strong><span class="tile-s">{{ under50_total }} downloads from R{{ min_price }}</span>
         <img src="/{{ tile_a }}" alt="" width="600" height="450">
       </a>
-      <a class="tile tile-dark" href="/search.html?bundles=1">
+      <a class="tile tile-dark" href="/search?bundles=1">
         <span class="tile-k">Save up to {{ best_saving }}%</span><strong>Bundle deals</strong><span class="tile-s">Several tools plus a bonus, one price</span>
         <img src="/{{ tile_b }}" alt="" width="600" height="450">
       </a>
@@ -37,20 +37,20 @@
   {{ usps(legal) }}
 
   <section class="panel">
-    <div class="panel-head"><h2>Shop by department</h2><a href="/search.html">All {{ market.total }} items <span aria-hidden="true">›</span></a></div>
+    <div class="panel-head"><h2>Shop by department</h2><a href="/search">All {{ market.total }} items <span aria-hidden="true">›</span></a></div>
     <ul class="dept-tiles">
       {% for d in depts %}<li><a href="/c/{{ d.slug }}/"><span class="dimg"><img src="/{{ d.cover }}" alt="" loading="lazy" width="600" height="450"></span><strong>{{ d.name }}</strong><small>{{ d.count }} items</small></a></li>{% endfor %}
     </ul>
   </section>
 
-  {{ rail("Top picks", picks, shops, "/search.html", "View all") }}
-  {{ rail("Bundle deals", bundles, shops, "/search.html?bundles=1", "All bundles", "Real savings against buying each item separately") }}
+  {{ rail("Top picks", picks, shops, "/search", "View all") }}
+  {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Real savings against buying each item separately") }}
 
   <section class="promo-duo">
     {% for b in promos %}<a class="promo" href="{{ b.href }}" style="--c1:{{ b.c1 }};--c2:{{ b.c2 }}"><div><span class="kicker">{{ b.kicker }}</span><strong>{{ b.title }}</strong><span class="promo-cta">{{ b.cta }} →</span></div><img src="/{{ b.cover }}" alt="" loading="lazy" width="600" height="450"></a>{% endfor %}
   </section>
 
-  {{ rail("Under R50", under50, shops, "/search.html?max=50", "See all " ~ under50_total) }}
+  {{ rail("Under R50", under50, shops, "/search?max=50", "See all " ~ under50_total) }}
   {% for r in dept_rows %}{{ rail(r.title, r.products, shops, r.href, "Shop " ~ r.name) }}{% endfor %}
 
   <section class="panel" id="categories">
@@ -74,7 +74,7 @@
           <li><strong>A real company.</strong> {{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}, {{ legal.address }}.</li>
           <li><strong>Help when you need it.</strong> A file doesn't work? We fix it or refund you within 14 days.</li>
         </ul>
-        <a class="btn btn-outline" href="/help/about.html">About us</a>
+        <a class="btn btn-outline" href="/help/about">About us</a>
       </div>
     </div>
   </section>

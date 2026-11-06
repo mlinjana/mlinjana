@@ -10,7 +10,7 @@
       <h1>{{ store.coll }}</h1>
       <p class="lede">{{ store.proposition }}</p>
       <ul class="shop-facts"><li>{{ icon("file") }}{{ store.n_products }} items</li><li>{{ icon("bolt") }}Instant downloads</li><li>{{ icon("refresh") }}14-day file guarantee</li></ul>
-      {% if bundle %}<p><a class="btn btn-primary" href="{{ base }}/p/{{ bundle.slug }}.html">Bundle deal: save {{ bundle.saving_pct }}%</a></p>{% endif %}
+      {% if bundle %}<p><a class="btn btn-primary" href="{{ base }}/p/{{ bundle.slug }}">Bundle deal: save {{ bundle.saving_pct }}%</a></p>{% endif %}
     </div>
     <div class="dept-art" aria-hidden="true">{% for c in store.covers[:2] %}<img src="/{{ c }}" alt="" width="600" height="450">{% endfor %}</div>
   </section>
@@ -47,8 +47,8 @@
       <details><summary>How do I get my files?</summary><p>Once PayFast confirms your payment, your download buttons appear on the confirmation page. Each link works 5 times over 7 days. Save the ZIP somewhere safe.</p></details>
       <details><summary>Can I buy several items at once?</summary><p>Yes. Add them to your basket and pay once. Every item gets its own download link.</p></details>
       <details><summary>Will it work on my computer or phone?</summary><p>Spreadsheets work in Microsoft Excel (2010 or later), Excel for the web, Google Sheets and LibreOffice. Word templates open in Word, Google Docs and LibreOffice. PDFs open in any PDF reader. Each listing says exactly what it works with.</p></details>
-      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="/help/licence.html">licence</a>.</p></details>
-      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="/help/refunds.html">refunds &amp; support</a>.</p></details>
+      <details><summary>Can I use it for my business?</summary><p>Yes, for yourself and for one business you own or work for. You can't resell or share the files. See the <a href="/help/licence">licence</a>.</p></details>
+      <details><summary>What if a file doesn't work?</summary><p>Contact us within 14 days with your order number. We'll help, send a fixed file or refund you. See <a href="/help/refunds">refunds &amp; support</a>.</p></details>
     </div>
   </section>
 </div>

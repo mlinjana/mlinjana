@@ -96,7 +96,7 @@ def policies(store, legal):
 <h2>How refunds are paid</h2>
 <p>Approved refunds are made to the original payment method through PayFast. Your bank may take several working days to show it.</p>
 <h2>Lost download link</h2>
-<p>Links last 7 days and 5 downloads. If yours has expired, use the <a href="contact.html">contact form</a> with your order number and we'll send a new one.</p>
+<p>Links last 7 days and 5 downloads. If yours has expired, use the <a href="/help/contact">contact form</a> with your order number and we'll send a new one.</p>
 <p class="muted small">This policy does not limit any rights you have under the law of your country, including the South African Consumer Protection Act and Electronic Communications and Transactions Act where they apply.</p>"""),
         "privacy": ("Privacy", f"""
 <p>We collect as little personal information as possible.</p>
@@ -104,31 +104,32 @@ def policies(store, legal):
 <ul><li><strong>Orders:</strong> your email address, the product, amount, date and payment status. We need these to deliver your files and keep tax records.</li>
 <li><strong>Payments:</strong> handled entirely by PayFast. We never see or store your card or bank details. PayFast's own privacy policy applies to the payment step.</li>
 <li><strong>Messages:</strong> what you send through the contact form.</li>
-<li><strong>Visit statistics:</strong> page path, product viewed, and the website that referred you. No cookies, no IP addresses, no advertising trackers.</li></ul>
+<li><strong>Visit statistics:</strong> page path, product viewed, and the website that referred you. We store no cookies and no IP addresses for this, and use no advertising trackers.</li>
+<li><strong>Site speed and visits (Cloudflare Web Analytics):</strong> Cloudflare hosts this site and counts page views and page loading times for us. Cloudflare states that this service doesn't use cookies or track you across other websites. Like any web host, Cloudflare handles technical details of each request, such as your IP address, to deliver and protect the site.</li></ul>
 <h2>How we use it</h2>
 <p>Only to deliver your order, provide support, keep business records and understand which products are useful. We don't sell or share your information for marketing, and we don't send newsletters unless you ask to join one.</p>
 <h2>Where it's stored</h2>
 <p>Order data is stored with our hosting provider (Supabase, EU data centre) with access restricted to the store owner.</p>
 <h2>Your rights</h2>
-<p>You can ask us what information we hold about you, ask us to correct it, or ask us to delete it (we may need to keep order records for tax law). Use the <a href="contact.html">contact form</a>. South African customers may also contact the Information Regulator.</p>
+<p>You can ask us what information we hold about you, ask us to correct it, or ask us to delete it (we may need to keep order records for tax law). Use the <a href="/help/contact">contact form</a>. South African customers may also contact the Information Regulator.</p>
 <p class="muted small">Responsible party: {html.escape(legal['operator'])}. Address: {html.escape(legal['address'])}.</p>"""),
         "terms": ("Terms of sale", f"""
 <p>These terms apply when you buy from {n}.</p>
 <h2>Seller</h2>
-<p>{n} is a trading name of {html.escape(legal['operator'])}, {html.escape(legal['country'])}. Registration: {html.escape(legal['registration'])}. Address: {html.escape(legal['address'])}. Contact: via the <a href="contact.html">contact form</a>.</p>
+<p>{n} is a trading name of {html.escape(legal['operator'])}, {html.escape(legal['country'])}. Registration: {html.escape(legal['registration'])}. Address: {html.escape(legal['address'])}. Contact: via the <a href="/help/contact">contact form</a>.</p>
 <h2>Products and prices</h2>
 <p>All products are digital files described on their product pages, including format and compatibility. Prices are in South African rand (ZAR) and include any applicable taxes we're required to charge. Your bank sets the exchange rate for non-ZAR cards.</p>
 <h2>Payment and delivery</h2>
 <p>Payment is processed by PayFast. An order is only confirmed once PayFast notifies us that payment is complete; your download link then appears on the confirmation page.</p>
 <h2>Licence</h2>
-<p>Your purchase gives you a licence to use the files, not ownership of the copyright. See the <a href="licence.html">licence</a>.</p>
+<p>Your purchase gives you a licence to use the files, not ownership of the copyright. See the <a href="/help/licence">licence</a>.</p>
 <h2>Liability</h2>
 <p>Templates and calculators are tools. Check results before relying on them; nothing we sell is legal, tax or financial advice. To the extent the law allows, our liability is limited to the price you paid.</p>
 <p class="muted small">Last updated 28 October 2026.</p>"""),
         "licence": ("Licence", f"""
 <h2>You may</h2><ul><li>Use the product yourself or in your household.</li><li>Use it in one business you own or work for, including to serve your own customers (for example, sending invoices made with an invoice template).</li><li>Print it as often as you need for that use and edit it for yourself.</li></ul>
 <h2>You may not</h2><ul><li>Resell, share, give away or upload the files — original or edited — where others can download them.</li><li>Sell printed copies or include the files in a product you sell.</li><li>Claim the design or content as your own.</li></ul>
-<p>Need a licence for several businesses or a team? <a href="contact.html">Ask us</a> before using it that way.</p>"""),
+<p>Need a licence for several businesses or a team? <a href="/help/contact">Ask us</a> before using it that way.</p>"""),
         "contact": ("Contact & help", """
 <p>Questions about a product or an order? Send us a message — we reply by email, usually within two working days.</p>
 <form id="contact" novalidate>
@@ -163,16 +164,50 @@ all made, sold and supported by us.</p>
 <ul><li>No fake reviews, countdown timers or made-up discounts. Bundle savings are calculated against the real prices of the items inside.</li>
 <li>Secure payment on PayFast's page: we never see or store your card details.</li>
 <li>If a file doesn't work as described, contact us within 14 days and we'll fix it or refund you.</li>
-<li>We collect as little personal information as possible. See our <a href="/help/privacy.html">privacy notice</a>.</li></ul>
+<li>We collect as little personal information as possible. See our <a href="/help/privacy">privacy notice</a>.</li></ul>
 <h2>Get in touch</h2>
-<p>Use the <a href="/help/contact.html">contact form</a>. Quote your order number if your message is about an order.</p>"""
+<p>Use the <a href="/help/contact">contact form</a>. Quote your order number if your message is about an order.</p>"""
 
 
-def jsonld(p, store, url):
-    return json.dumps({"@context": "https://schema.org", "@type": "Product", "name": p["name"], "description": p["summary"],
-                       "sku": p["id"], "brand": {"@type": "Brand", "name": store["name"]},
-                       "offers": {"@type": "Offer", "price": f"{p['price_zar']:.2f}", "priceCurrency": "ZAR",
-                                  "availability": "https://schema.org/InStock", "url": url}}).replace("</", "<\\/")
+def ld(obj):
+    """Serialise structured data for a <script type="application/ld+json"> block (no "</" can close the tag)."""
+    return json.dumps(obj, ensure_ascii=False).replace("</", "<\\/")
+
+
+def jsonld(p, store, url, shop, site_base):
+    """Product + BreadcrumbList for a product page. Only facts we hold: no ratings or reviews."""
+    crumbs = [("Home", site_base + "/"), (shop["dept"]["name"], f"{site_base}/c/{shop['dept']['slug']}/")]
+    if shop["coll"] != shop["dept"]["name"]:
+        crumbs.append((shop["coll"], shop["url"] + "/"))
+    crumbs.append((p["name"], url))
+    return ld({"@context": "https://schema.org", "@graph": [
+        {"@type": "Product", "name": p["name"], "description": p["summary"], "sku": p["id"],
+         "image": f"{site_base}/{p['images']['cover']}", "category": p["category"],
+         "brand": {"@type": "Brand", "name": store["name"]},
+         "offers": {"@type": "Offer", "price": f"{p['price_zar']:.2f}", "priceCurrency": "ZAR",
+                    "availability": "https://schema.org/InStock", "url": url,
+                    "seller": {"@type": "Organization", "name": store["name"]}}},
+        {"@type": "BreadcrumbList", "itemListElement": [
+            {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(crumbs)]}]})
+
+
+def site_jsonld(site_base, legal):
+    """Organization + WebSite (with the site search) for the home page."""
+    return ld({"@context": "https://schema.org", "@graph": [
+        {"@type": "Organization", "@id": site_base + "/#org", "name": MARKET["name"], "url": site_base + "/",
+         "logo": site_base + "/assets/brand/icon-512.png", "legalName": legal["operator"],
+         "description": MARKET["tagline"]},
+        {"@type": "WebSite", "@id": site_base + "/#website", "name": MARKET["name"], "url": site_base + "/",
+         "publisher": {"@id": site_base + "/#org"},
+         "potentialAction": {"@type": "SearchAction",
+                             "target": {"@type": "EntryPoint", "urlTemplate": site_base + "/search?q={search_term_string}"},
+                             "query-input": "required name=search_term_string"}}]})
+
+
+def crumbs_jsonld(site_base, trail):
+    """BreadcrumbList for category pages: trail is [(name, absolute url), ...]."""
+    return ld({"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
+        {"@type": "ListItem", "position": i + 1, "name": n, "item": u} for i, (n, u) in enumerate(trail)]})
 
 
 MARKET = {"name": "Mlinjana Studios",
@@ -284,7 +319,9 @@ def main():
         single = len(shop["dept"]["stores"]) == 1
         open(os.path.join(out, "index.html"), "w").write(env.get_template("store_index.html").render(
             products=prods, categories=cat_counts(prods, st["categories"]),
-            canonical=f"{cfg['site_base']}/c/{shop['dept']['slug']}/" if single else base_url + "/", **ctx))
+            canonical=f"{cfg['site_base']}/c/{shop['dept']['slug']}/" if single else base_url + "/",
+            jsonld=crumbs_jsonld(cfg["site_base"], [("Home", cfg["site_base"] + "/"), (shop["dept"]["name"], f"{cfg['site_base']}/c/{shop['dept']['slug']}/")] +
+                                 ([] if single else [(shop["coll"], base_url + "/")])), **ctx))
         pages += 1
         same_dept = [q for q in allp if shops[q["store"]]["dept"] is shop["dept"] and q["store"] != st["id"]]
         for p in prods:
@@ -293,12 +330,12 @@ def main():
             more += rotate([r for r in others if r not in more], p["id"], 8 - len(more))
             alike = rotate(same_dept or [q for q in allp if q["store"] != st["id"]], p["id"], 8)
             open(os.path.join(out, "p", p["slug"] + ".html"), "w").write(env.get_template("product.html").render(
-                p=p, more=more, alike=alike, jsonld=jsonld(p, {"name": MARKET["name"]}, f"{base_url}/p/{p['slug']}.html"),
-                canonical=f"{base_url}/p/{p['slug']}.html", **ctx))
+                p=p, more=more, alike=alike, jsonld=jsonld(p, {"name": MARKET["name"]}, f"{base_url}/p/{p['slug']}", shop, cfg["site_base"]),
+                canonical=f"{base_url}/p/{p['slug']}", **ctx))
             pages += 1
         for key, (title, body) in policies({"name": MARKET["name"]}, cfg["legal"]).items():
             open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(
-                title=title, body=body, canonical=f"{base_url}/{key}.html", **ctx))
+                title=title, body=body, canonical=f"{cfg['site_base']}/" + ("thanks" if key == "thanks" else f"help/{key}"), **ctx))
             pages += 1
 
     # ---- marketplace pages: home, departments, search, favourites, help ----
@@ -328,7 +365,7 @@ def main():
          "covers": [cov("bizwright", 2), cov("bizwright"), cov("shopkeeper")]},
         {"kicker": "Bundle deals", "title": f"Save up to {bundles[0]['saving_pct']}% with bundles",
          "sub": "Several related tools plus a bundle-only bonus file, for one price.",
-         "cta": "Shop bundles", "href": "/search.html?bundles=1", "c1": "#111827", "c2": "#334155",
+         "cta": "Shop bundles", "href": "/search?bundles=1", "c1": "#111827", "c2": "#334155",
          "covers": [b["images"]["cover"] for b in bundles[:3]]},
         {"kicker": "Planners & Home", "title": "Plan a calmer week at home",
          "sub": "Planners, chore charts, budgets and family organisers to print or fill in.",
@@ -353,7 +390,7 @@ def main():
         under50=under50_pick[:12], under50_total=len(under50), min_price=min(p["price_zar"] for p in allp),
         shops_list=shops_list, slides=slides, promos=promos, dept_rows=dept_rows,
         tile_a=under50_pick[1]["images"]["cover"], tile_b=bundles[1]["images"]["cover"],
-        canonical=cfg["site_base"] + "/", **common))
+        canonical=cfg["site_base"] + "/", jsonld=site_jsonld(cfg["site_base"], cfg["legal"]), **common))
     for d in depts:
         items = [p for s in d["stores"] for p in prods_of[s]]
         out = os.path.join(SITE, "c", d["slug"])
@@ -361,20 +398,21 @@ def main():
         open(os.path.join(out, "index.html"), "w").write(env.get_template("department.html").render(
             store=None, dept=d, products=items, dept_count=len(items), dept_shops=[shops[s] for s in d["stores"]],
             dept_covers=[shops[s]["covers"][0] for s in d["stores"]][:2] if len(d["stores"]) > 1 else shops[d["stores"][0]]["covers"][:2],
-            categories=cat_counts(items), canonical=f"{cfg['site_base']}/c/{d['slug']}/", **common))
+            categories=cat_counts(items), canonical=f"{cfg['site_base']}/c/{d['slug']}/",
+            jsonld=crumbs_jsonld(cfg["site_base"], [("Home", cfg["site_base"] + "/"), (d["name"], f"{cfg['site_base']}/c/{d['slug']}/")]), **common))
     for name in ("search", "favourites"):
         open(os.path.join(SITE, name + ".html"), "w").write(env.get_template(name + ".html").render(
-            store=None, canonical=f"{cfg['site_base']}/{name}.html", **common))
+            store=None, canonical=f"{cfg['site_base']}/{name}", **common))
     os.makedirs(os.path.join(SITE, "help"), exist_ok=True)
     pages_global = policies({"name": MARKET["name"]}, cfg["legal"])
     pages_global["about"] = ("About us", about_page(cfg["legal"], len(shops), total, depts))
     for key, (title, body) in pages_global.items():
         out = os.path.join(SITE, "thanks.html") if key == "thanks" else os.path.join(SITE, "help", key + ".html")
         open(out, "w").write(env.get_template("page.html").render(
-            store=None, title=title, body=body, canonical=f"{cfg['site_base']}/help/{key}.html", **common))
-    # search index for /search.html and /favourites.html (short keys keep it small)
+            store=None, title=title, body=body, canonical=f"{cfg['site_base']}/" + ("thanks" if key == "thanks" else f"help/{key}"), **common))
+    # search index for /search and /favourites (short keys keep it small)
     json.dump({"shops": {s["id"]: {"n": s["coll"], "p": s["path"]} for s in shops.values()},
-               "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}.html",
+               "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}",
                           "img": "/" + p["images"]["cover"], "c": p["category"], "d": shops[p["store"]]["dept"]["slug"],
                           "p": p["price_zar"], "b": p["bundle_sum"] if p.get("saving_pct") else 0, "o": p.get("saving_pct", 0),
                           "f": p["fmt_keys"], "fr": 1 if p["free"] else 0,
@@ -394,12 +432,14 @@ def main():
     open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n" if staging else
                                                       "User-agent: *\nAllow: /\nDisallow: /dashboard/\nSitemap: " + cfg["site_base"] + "/sitemap.xml\n")
     if not staging:
-        urls = ([cfg["site_base"] + "/"] + [f"{cfg['site_base']}/c/{d['slug']}/" for d in depts] + [s["url"] + "/" for s in shops.values()] +
-                [f"{cfg['site_base']}/{shops[p['store']]['path']}/p/{p['slug']}.html" for p in allp])
+        urls = ([cfg["site_base"] + "/"] + [f"{cfg['site_base']}/c/{d['slug']}/" for d in depts] + [s["url"] + "/" for s in shops.values() if len(s["dept"]["stores"]) > 1] +
+                [f"{cfg['site_base']}/{shops[p['store']]['path']}/p/{p['slug']}" for p in allp] +
+                [f"{cfg['site_base']}/help/{k}" for k in pages_global if k != "thanks"])
         open(os.path.join(SITE, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
                                                           "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
-    csp = ("default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; "
-           f"connect-src 'self' {cfg['api_base'].split('/functions')[0]}; form-action 'self' https://sandbox.payfast.co.za https://www.payfast.co.za; "
+    # Cloudflare Web Analytics (owner decision #39): beacon script from static.cloudflareinsights.com, reports to cloudflareinsights.com
+    csp = ("default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; "
+           f"connect-src 'self' {cfg['api_base'].split('/functions')[0]} https://cloudflareinsights.com; form-action 'self' https://sandbox.payfast.co.za https://www.payfast.co.za; "
            "frame-ancestors 'none'; base-uri 'self'")
     redirects = [{"source": f"/{old}/:rest*", "destination": f"/{st['path']}/:rest*", "permanent": True}
                  for st in cfg["stores"] for old in st.get("former_paths", [])]
