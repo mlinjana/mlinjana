@@ -3,7 +3,7 @@
 Owner brief: "Master project prompt: Mlinjana Studios 2.0" (6 Nov 2026). Full discovery report (shared doc):
 https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 
-**Current stage:** 3.1 quick technical fixes — done and live (6 Nov). Next: Stage 2 design preview (navy/ivory/gold), on a separate address.
+**Current stage:** 2 Design. The preview is up for owner approval: https://mlinjana-preview.mlinjanachuma.workers.dev (6 Nov). Stage 3.1 quick fixes are live. Live deploys are blocked by `.preview-only` until the owner approves (DECISIONS.md #40).
 
 ## Completed
 | Date | Work | Evidence |
@@ -17,6 +17,7 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | Structured data: Organization + WebSite (SearchAction) on home; BreadcrumbList on department, shop and product pages; Product gains image, category and seller | JSON parsed and checked for home, department, shop and product pages. Not yet run through Google's Rich Results Test (needs the site indexable) |
 | 2026-11-06 | Cloudflare Web Analytics allowed in CSP; privacy notice names it | Live browser test: beacon script 200, report POST /cdn-cgi/rum 204, no console errors |
 | 2026-11-06 | Missing LCP fixed: carousels combined scroll snapping with CSS smooth scrolling, which ended LCP measurement | commit 34ce523; before: 3/8 product loads and 0/8 home loads recorded LCP; after: 8/8 on home, product, shop, search, category. Live Lighthouse mobile (lab): home perf 99 LCP 1.9 s, product 100 LCP 1.6 s, shop 100 LCP 1.6 s, search 100 LCP 1.3 s; CLS 0 on all |
+| 2026-11-06 | Stage 2 preview: logo recoloured (navy/gold); palette tokens; Business / Life / Education divisions + 29 category pages from config/taxonomy.json; new header, mega-menu, footer and search filter; static hero "Make Better Things Happen." | commit 7caf20d; preview Worker version 2c06769f; link check 794 pages, 0 broken, 0 redirecting; preview browser test: Life-filtered search (164 results for "planner"), category chip filter (66 → 3), 2-item basket R118, checkout reached sandbox.payfast.co.za (no payment made). Lighthouse mobile, preview: home perf 97 / a11y 100 / LCP 1.9 s; division 98 / 100 / 2.0 s; category 99 / 100 / 1.6 s; product 100 / 100 / 1.3 s; search 100 / 100 / 1.8 s; CLS 0 on all |
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
@@ -39,9 +40,10 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Stage 2: recolour the logo to navy/ivory/gold; apply the palette; build the Business / Life / Education navigation from `taxonomy-proposal.json`; new static hero "Make Better Things Happen."; deploy to a separate preview Worker for owner approval.
-2. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
-3. Currency display (approximate, labelled) once the PayFast answer is in.
+1. Owner reviews the preview (look, wording, the 29 category names) and approves or asks for changes.
+2. Go-live (after approval): recolour the receipt email (store-api, sandbox end-to-end test) and Start Here.pdf in all 600 downloads; 301s for the old /c/ department pages; remove `.preview-only`; deploy; live link check + Lighthouse.
+3. Licence tiers in product pages, checkout (store-api, sandbox-tested), receipts and Start Here.pdf.
+4. Currency display (approximate, labelled) once the PayFast answer is in.
 
 ## Rules for every session
 - Never claim a test passed unless it ran. Record evidence (commit, order ref, Lighthouse score) here.
