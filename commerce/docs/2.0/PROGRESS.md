@@ -23,6 +23,7 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | Old /c/ department pages replaced by 301 redirects to 2.0 categories/divisions | `_redirects` (11 departments × 2 forms); link check 783 pages, 0 broken, 0 redirecting |
 | 2026-11-06 | **2.0 live** on mlinjanastudios.com (owner confirmed the deploy) | Live checks: 9 key pages 200 with the navy theme; /c/money/ → 301 /life/personal-finance/; /c/small-business → 301 /business/; old .html → 307 short URL; /pacebook/ → 301 /steadyrep/; search (Business, "invoice") 10 results; category filter 15; basket R69; 0 console errors. Lighthouse mobile (lab): home 99/100/100 LCP 1.6 s; Business division 92/100/100 LCP 2.4 s (TBT 240 ms, the heaviest page: 12 rows of products); category 100/100/100 LCP 1.6 s; product 100/100/100 LCP 1.6 s; search 98/100/100 LCP 2.3 s; CLS 0 on all |
 | 2026-11-06 | Licence tiers: Standard, Team (2.5×, whole rand), Commercial by quote; migration 005; store-api v10; picker, basket, thanks page, /help/licence, Start Here.pdf | commit 784d834. API checks: no licence → R39; team → R98; mixed basket → R612; invalid IDs ignored; unknown licence → Standard. Sandbox through the preview: ORD-873362D6C88B (Team) paid R98; BSK-F78F8722C9D2 paid R305 (Team R98 + Team R148 + Standard R59), licence and amount stored per item, delivered. Front end on the preview, waiting for a live deploy |
+| 2026-11-06 | **Licence tiers and lighter division pages live** (owner confirmed the deploy; Cloudflare version 2dcd22ab) | Live checks: key pages 200, redirects, search, category filter, basket, 0 console errors. Live sandbox purchase ORD-A07CB4B9E2FA: Team licence R98 at PayFast, thanks page shows "Team licence (up to 10 people)". All 600 downloads carry the Team wording in Start Here.pdf (600/600 valid, DB fingerprint 067e6e64… matches). Lighthouse mobile (lab): product 100/100/100 LCP 1.3 s; Business 100/100/100 LCP 1.5 s; /help/licence 100/100/100 LCP 1.2 s |
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
@@ -44,10 +45,9 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 - Supabase advisors: pg_net in public schema; `weekly_costs_usd` search_path; 4 unindexed FKs.
 
 ## Next actions
-1. Owner confirms a live deploy of the lighter division pages + licence tiers (both on the preview, sandbox-tested).
-2. Lawyer review of the licence wording (/help/licence, Start Here.pdf) before real sales.
-3. Currency display (approximate, labelled) once the PayFast answer is in.
-4. Receipt plain-text version: "(Team licence (up to 10 people), R148)" has nested brackets; tidy it with the next store-api change.
+1. Lawyer review of the licence wording (/help/licence, Start Here.pdf) before real sales.
+2. Currency display (approximate, labelled) once the PayFast answer is in.
+3. Receipt plain-text version: "(Team licence (up to 10 people), R148)" has nested brackets; tidy it with the next store-api change.
 
 ## Rules for every session
 - Never claim a test passed unless it ran. Record evidence (commit, order ref, Lighthouse score) here.
