@@ -34,7 +34,7 @@ don't start until every product's price matches its content.
 | Group | Builder | Products | Upgraded | Notes |
 |---|---|---|---|---|
 | Bespoke flagships | specs_b / specs_c / specs_a | ~40 | 1 (SOP kit) | Next: business plan, warehouse/supply-chain, KPI dashboard, inventory, cash flow |
-| Word documents | gen.build_d + content_docs_*.py | 82 | 31 | b1: 6 business; b2: 8 career; b3: comment bank (now 103 comments, claim fixed) + 7 freelancer; b4: 4 property (landlord letters now 10 real letters) + 5 trades. Next: salon, nonprofit, food, caregivers, family, teaching, events, pets, fleet, homeschool, farm, online sellers |
+| Word documents | gen.build_d + content_docs_*.py | 82 | 42 | b1: 6 business; b2: 8 career; b3: comment bank (now 103 comments, claim fixed) + 7 freelancer; b4: 4 property (landlord letters now 10 real letters) + 5 trades; b5: 5 salon + 6 nonprofit. Next: salon, nonprofit, food, caregivers, family, teaching, events, pets, fleet, homeschool, farm, online sellers |
 | Spreadsheet trackers | gen.build_x | 198 | 0 | Planned generic upgrade: example data on every sheet, dashboard with chart, Start Here; then per-product checks |
 | Calculators | gen.build_c | 45 | 0 | Planned: scenario table + chart, worked example notes |
 | Printables | pdfkit pages | 235 | 0 | Planned: instructions page + filled example page |

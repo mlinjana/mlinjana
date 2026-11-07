@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T09:44:25Z",
+ "generated_at": "2026-11-07T09:47:41Z",
  "products": [
   {
    "id": "PLD-001",
@@ -21893,12 +21893,14 @@
    "name": "Grant Proposal Template",
    "title": "Grant Proposal Template Editable Word Template, Grant Proposal, Grant Writing, Funding Proposal",
    "category": "Fundraising",
-   "summary": "A structured grant proposal: need, programme, outcomes, budget and sustainability.",
+   "summary": "Write grant proposals funders can say yes to: guide, full proposal template with logic model and budget, a complete example proposal and a pre-submission checklist.",
    "features": [
-    "A structured grant proposal: need, programme, outcomes, budget and sustainability.",
-    "6 sections: Executive summary, Statement of need, Programme description, Organisational capacity, Sustainability, Attachments checklist",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: matching funders, answering what they score, writing measurable outcomes",
+    "Template: summary, need, project, logic model, M&E, budget, sustainability, organisation",
+    "Logic model table (inputs, activities, outputs, outcomes)",
+    "Budget table with funder and other-source columns",
+    "Complete example proposal for a youth reading programme",
+    "Pre-submission checklist"
    ],
    "tags": [
     "grant proposal",
@@ -21926,13 +21928,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A structured grant proposal: need, programme, outcomes, budget and sustainability.\n\nWHAT'S INCLUDED\n\u2022 A structured grant proposal: need, programme, outcomes, budget and sustainability.\n\u2022 6 sections: Executive summary, Statement of need, Programme description, Organisational capacity, Sustainability, Attachments checklist\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Write grant proposals funders can say yes to: guide, full proposal template with logic model and budget, a complete example proposal and a pre-submission checklist.\n\nWHAT'S INCLUDED\n\u2022 Guide: matching funders, answering what they score, writing measurable outcomes\n\u2022 Template: summary, need, project, logic model, M&E, budget, sustainability, organisation\n\u2022 Logic model table (inputs, activities, outputs, outcomes)\n\u2022 Budget table with funder and other-source columns\n\u2022 Complete example proposal for a youth reading programme\n\u2022 Pre-submission checklist\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-022/grant-proposal-template.zip",
-    "bytes": 81044,
-    "sha256": "a629fc60094d2b0658042b66aac8a6797c213fa6216700df8655846432dffcf5",
+    "bytes": 82491,
+    "sha256": "f9077b69e09683c63ae2f09da39f4b1acd1cfb9b7338b012bf3bc704c2a5be2b",
     "contents": [
      "Start Here.pdf",
      "Grant Proposal Template.docx"
@@ -21955,7 +21957,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Grant Proposal Template.docx": 2
+      "Grant Proposal Template.docx": 4
      }
     }
    },
@@ -21968,12 +21970,13 @@
    "name": "Volunteer Handbook Template",
    "title": "Volunteer Handbook Template Editable Word Template, Volunteer Handbook, Volunteer Policy, Volunteer Manual",
    "category": "Volunteers",
-   "summary": "An editable handbook covering roles, expectations, safety and recognition.",
+   "summary": "A volunteer handbook that keeps people coming back: welcome, roles, safeguarding, conduct, safety, expenses and recognition, with a guide and an example section.",
    "features": [
-    "An editable handbook covering roles, expectations, safety and recognition.",
-    "9 sections: Welcome, About us, Volunteer roles, What we expect, What you can expect, Safety & safeguarding\u2026",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "12 sections ready to edit",
+    "Safeguarding and code of conduct sections",
+    "Role description template",
+    "Expenses and recognition sections",
+    "Acknowledgement page"
    ],
    "tags": [
     "volunteer handbook",
@@ -22001,13 +22004,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable handbook covering roles, expectations, safety and recognition.\n\nWHAT'S INCLUDED\n\u2022 An editable handbook covering roles, expectations, safety and recognition.\n\u2022 9 sections: Welcome, About us, Volunteer roles, What we expect, What you can expect, Safety & safeguarding\u2026\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A volunteer handbook that keeps people coming back: welcome, roles, safeguarding, conduct, safety, expenses and recognition, with a guide and an example section.\n\nWHAT'S INCLUDED\n\u2022 12 sections ready to edit\n\u2022 Safeguarding and code of conduct sections\n\u2022 Role description template\n\u2022 Expenses and recognition sections\n\u2022 Acknowledgement page\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-023/volunteer-handbook-template.zip",
-    "bytes": 80668,
-    "sha256": "3cce288e0f6318b3f440fb118112f7a2bf63ed843508026ed505137c19a4d81c",
+    "bytes": 81991,
+    "sha256": "cbf1cc9f7eae44fd4a8cc5cc61359918d4dce4e489bb0507462ba541082bc638",
     "contents": [
      "Start Here.pdf",
      "Volunteer Handbook Template.docx"
@@ -22028,7 +22031,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Volunteer Handbook Template.docx": 1
+      "Volunteer Handbook Template.docx": 5
      }
     }
    },
@@ -22041,12 +22044,13 @@
    "name": "Nonprofit Annual Impact Report Template",
    "title": "Nonprofit Annual Impact Report Template Editable Word Template, Impact Report, Annual Report, Nonprofit Report",
    "category": "Impact",
-   "summary": "A clear, honest annual report: highlights, numbers, stories, finances and thanks.",
+   "summary": "An annual impact report donors read: guide, report template (letter, impact numbers, stories, finances, thank-yous), and a complete example report for a small NPO.",
    "features": [
-    "A clear, honest annual report: highlights, numbers, stories, finances and thanks.",
-    "4 sections: A message from our chair, Programme highlights, A story of impact, Thank you",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: what donors want to see and how to present numbers honestly",
+    "Template: chair's letter, year in numbers, programmes, a story, finances, supporters, next year",
+    "Income and expenditure summary table",
+    "Complete example report",
+    "Photo and consent checklist"
    ],
    "tags": [
     "impact report",
@@ -22074,13 +22078,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A clear, honest annual report: highlights, numbers, stories, finances and thanks.\n\nWHAT'S INCLUDED\n\u2022 A clear, honest annual report: highlights, numbers, stories, finances and thanks.\n\u2022 4 sections: A message from our chair, Programme highlights, A story of impact, Thank you\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "An annual impact report donors read: guide, report template (letter, impact numbers, stories, finances, thank-yous), and a complete example report for a small NPO.\n\nWHAT'S INCLUDED\n\u2022 Guide: what donors want to see and how to present numbers honestly\n\u2022 Template: chair's letter, year in numbers, programmes, a story, finances, supporters, next year\n\u2022 Income and expenditure summary table\n\u2022 Complete example report\n\u2022 Photo and consent checklist\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-024/nonprofit-annual-impact-report-template.zip",
-    "bytes": 81032,
-    "sha256": "82410d0136e1fcc08a2fe5d23c46b9976c2fdadf692e3961e2404df20e60a5b5",
+    "bytes": 81996,
+    "sha256": "960bb7e87d9e6cbef4e2e77e9d206a00896c81e58c679d5ac0180f9d23e4ff9a",
     "contents": [
      "Start Here.pdf",
      "Nonprofit Annual Impact Report Template.docx"
@@ -22103,7 +22107,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Nonprofit Annual Impact Report Template.docx": 2
+      "Nonprofit Annual Impact Report Template.docx": 4
      }
     }
    },
@@ -22116,12 +22120,13 @@
    "name": "Board Roles & Code of Conduct Template",
    "title": "Board Roles & Code of Conduct Template Editable Word Template, Board Roles, Code Of Conduct, Conflict Of Interest",
    "category": "Governance",
-   "summary": "Define board roles, conflicts of interest and a code of conduct for your committee.",
+   "summary": "Clarify how your board works: board and office-bearer role descriptions, code of conduct, conflict-of-interest declaration and register, meeting calendar and a completed example.",
    "features": [
-    "Define board roles, conflicts of interest and a code of conduct for your committee.",
-    "3 sections: Purpose of the board, Code of conduct, Conflicts of interest",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Role descriptions: board member, chairperson, treasurer, secretary",
+    "Code of conduct for board members",
+    "Conflict-of-interest declaration and register",
+    "Annual board calendar",
+    "Completed example declaration and register"
    ],
    "tags": [
     "board roles",
@@ -22149,13 +22154,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Define board roles, conflicts of interest and a code of conduct for your committee.\n\nWHAT'S INCLUDED\n\u2022 Define board roles, conflicts of interest and a code of conduct for your committee.\n\u2022 3 sections: Purpose of the board, Code of conduct, Conflicts of interest\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Clarify how your board works: board and office-bearer role descriptions, code of conduct, conflict-of-interest declaration and register, meeting calendar and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Role descriptions: board member, chairperson, treasurer, secretary\n\u2022 Code of conduct for board members\n\u2022 Conflict-of-interest declaration and register\n\u2022 Annual board calendar\n\u2022 Completed example declaration and register\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-025/board-roles-code-of-conduct-template.zip",
-    "bytes": 81030,
-    "sha256": "3af11fb9ba0ab2f38c1589c8fbaf67956ad3112d395ef0dcdebe3a4056295912",
+    "bytes": 82203,
+    "sha256": "addef03245d6681aaf8dae287f3ed4fef2456a6f8add08871bdd6304fb35f84c",
     "contents": [
      "Start Here.pdf",
      "Board Roles & Code of Conduct Template.docx"
@@ -22176,7 +22181,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Board Roles & Code of Conduct Template.docx": 1
+      "Board Roles & Code of Conduct Template.docx": 4
      }
     }
    },
@@ -22189,12 +22194,13 @@
    "name": "Fundraising Appeal Letter Templates",
    "title": "Fundraising Appeal Letter Templates Editable Word Template, Appeal Letter, Donation Letter, Fundraising Letter",
    "category": "Fundraising",
-   "summary": "Five editable appeal letters: annual appeal, emergency, event invite, lapsed donor and thank-you.",
+   "summary": "Fundraising letters that raise money: guide to the structure donors respond to, 5 appeal templates (year-end, emergency, monthly giving, event, lapsed donor), complete example and thank-you letter.",
    "features": [
-    "Five editable appeal letters: annual appeal, emergency, event invite, lapsed donor and thank-you.",
-    "5 sections: Annual appeal, Urgent appeal, Event invitation, Lapsed donor, Thank-you letter",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: one person, one need, one ask, and a deadline",
+    "5 appeal templates for different situations",
+    "Complete example appeal letter",
+    "Thank-you letter template",
+    "Donation response form and appeal tracker"
    ],
    "tags": [
     "appeal letter",
@@ -22222,13 +22228,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Five editable appeal letters: annual appeal, emergency, event invite, lapsed donor and thank-you.\n\nWHAT'S INCLUDED\n\u2022 Five editable appeal letters: annual appeal, emergency, event invite, lapsed donor and thank-you.\n\u2022 5 sections: Annual appeal, Urgent appeal, Event invitation, Lapsed donor, Thank-you letter\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Fundraising letters that raise money: guide to the structure donors respond to, 5 appeal templates (year-end, emergency, monthly giving, event, lapsed donor), complete example and thank-you letter.\n\nWHAT'S INCLUDED\n\u2022 Guide: one person, one need, one ask, and a deadline\n\u2022 5 appeal templates for different situations\n\u2022 Complete example appeal letter\n\u2022 Thank-you letter template\n\u2022 Donation response form and appeal tracker\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-026/fundraising-appeal-letter-templates.zip",
-    "bytes": 80797,
-    "sha256": "1c19d712124a6117cddeea2a74658f35ea8e4549a8286edea4e719797d005185",
+    "bytes": 82162,
+    "sha256": "5a2dc4e7e9b93ec975c020e40286f6eb3238fa04a6b2ef66f8470874531135ba",
     "contents": [
      "Start Here.pdf",
      "Fundraising Appeal Letter Templates.docx"
@@ -22249,7 +22255,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Fundraising Appeal Letter Templates.docx": 1
+      "Fundraising Appeal Letter Templates.docx": 4
      }
     }
    },
@@ -22262,12 +22268,14 @@
    "name": "Volunteer Application & Consent Form",
    "title": "Volunteer Application & Consent Form Editable Word Template, Volunteer Application, Volunteer Form, Consent Form",
    "category": "Volunteers",
-   "summary": "An editable application with availability, skills, emergency contact and consent.",
+   "summary": "Recruit volunteers safely: application form, availability and skills, references, emergency contact, POPIA consent, safeguarding declaration, photo consent and a completed example.",
    "features": [
-    "An editable application with availability, skills, emergency contact and consent.",
-    "3 sections: Skills & interests, Emergency contact, Consent",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Volunteer application with skills, availability and interests",
+    "References and emergency contact",
+    "POPIA consent for keeping and using information",
+    "Safeguarding declaration (for work with children or vulnerable adults)",
+    "Photo consent options",
+    "Completed example form"
    ],
    "tags": [
     "volunteer applicatio",
@@ -22295,13 +22303,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable application with availability, skills, emergency contact and consent.\n\nWHAT'S INCLUDED\n\u2022 An editable application with availability, skills, emergency contact and consent.\n\u2022 3 sections: Skills & interests, Emergency contact, Consent\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Recruit volunteers safely: application form, availability and skills, references, emergency contact, POPIA consent, safeguarding declaration, photo consent and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Volunteer application with skills, availability and interests\n\u2022 References and emergency contact\n\u2022 POPIA consent for keeping and using information\n\u2022 Safeguarding declaration (for work with children or vulnerable adults)\n\u2022 Photo consent options\n\u2022 Completed example form\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-027/volunteer-application-consent-form.zip",
-    "bytes": 80965,
-    "sha256": "150896f60a321f4d12882c2904f39146c601e55ef4624af9f7001e6d704e5e57",
+    "bytes": 82121,
+    "sha256": "a55888c56e912e1e7519e7eba91d26ca9ee17ae0ca43dd1c81e6cd8f203d0ca5",
     "contents": [
      "Start Here.pdf",
      "Volunteer Application & Consent Form.docx"
@@ -22322,7 +22330,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Volunteer Application & Consent Form.docx": 1
+      "Volunteer Application & Consent Form.docx": 4
      }
     }
    },
@@ -41668,12 +41676,13 @@
    "name": "Salon Policies Template",
    "title": "Salon Policies Template Editable Word Template, Salon Policies, Cancellation Policy, Deposit Policy",
    "category": "Clients & bookings",
-   "summary": "Booking, deposits, cancellations, lateness, refunds and children policies for salons.",
+   "summary": "Clear salon policies clients actually read: booking, deposits, cancellations, lateness, refunds and redos, children, patch tests and privacy, with a guide and a complete example policy page.",
    "features": [
-    "Booking, deposits, cancellations, lateness, refunds and children policies for salons.",
-    "5 sections: Bookings & deposits, Late arrivals, Cancellations & no-shows, Refunds & redos, Health & safety",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "10 policy sections in friendly, clear wording",
+    "Guide: how to introduce deposits and cancellation fees without losing clients",
+    "Complete example policy page for a hair and beauty salon",
+    "Short versions for booking confirmations and WhatsApp",
+    "Display version for reception"
    ],
    "tags": [
     "salon policies",
@@ -41701,13 +41710,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Booking, deposits, cancellations, lateness, refunds and children policies for salons.\n\nWHAT'S INCLUDED\n\u2022 Booking, deposits, cancellations, lateness, refunds and children policies for salons.\n\u2022 5 sections: Bookings & deposits, Late arrivals, Cancellations & no-shows, Refunds & redos, Health & safety\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Clear salon policies clients actually read: booking, deposits, cancellations, lateness, refunds and redos, children, patch tests and privacy, with a guide and a complete example policy page.\n\nWHAT'S INCLUDED\n\u2022 10 policy sections in friendly, clear wording\n\u2022 Guide: how to introduce deposits and cancellation fees without losing clients\n\u2022 Complete example policy page for a hair and beauty salon\n\u2022 Short versions for booking confirmations and WhatsApp\n\u2022 Display version for reception\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-020/salon-policies-template.zip",
-    "bytes": 80587,
-    "sha256": "3dd9db4a11be287aa98b3d109c7c1a2fe517bdff563aac9b750ec04a3aa17cfe",
+    "bytes": 82123,
+    "sha256": "81d9934ebf45cdfe891476f845689315a249842b50fa04e214ccbfafc32e3dab",
     "contents": [
      "Start Here.pdf",
      "Salon Policies Template.docx"
@@ -41728,7 +41737,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Salon Policies Template.docx": 1
+      "Salon Policies Template.docx": 4
      }
     }
    },
@@ -41741,12 +41750,13 @@
    "name": "Chair Rental Agreement Checklist",
    "title": "Chair Rental Agreement Checklist Editable Word Template, Chair Rental Agreement, Booth Rental, Salon Rental",
    "category": "Salon finance",
-   "summary": "Topics to agree in a chair or room rental arrangement \u2014 use with professional advice.",
+   "summary": "Rent out a salon chair or room without disputes: 30-point agreement checklist, example clause wording, weekly rent tracker and a completed example summary.",
    "features": [
-    "Topics to agree in a chair or room rental arrangement \u2014 use with professional advice.",
-    "0 sections: ",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "30-point checklist: rent, hours, products, clients, insurance, ending the agreement",
+    "Example clause wording in plain language",
+    "Independent contractor points to check",
+    "Weekly rent and payment tracker",
+    "Completed example agreement summary"
    ],
    "tags": [
     "chair rental agreeme",
@@ -41774,13 +41784,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Topics to agree in a chair or room rental arrangement \u2014 use with professional advice.\n\nWHAT'S INCLUDED\n\u2022 Topics to agree in a chair or room rental arrangement \u2014 use with professional advice.\n\u2022 0 sections: \n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Rent out a salon chair or room without disputes: 30-point agreement checklist, example clause wording, weekly rent tracker and a completed example summary.\n\nWHAT'S INCLUDED\n\u2022 30-point checklist: rent, hours, products, clients, insurance, ending the agreement\n\u2022 Example clause wording in plain language\n\u2022 Independent contractor points to check\n\u2022 Weekly rent and payment tracker\n\u2022 Completed example agreement summary\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-021/chair-rental-agreement-checklist.zip",
-    "bytes": 80687,
-    "sha256": "89e71d010ddbc6af8fa240984fac1744428d30f9a197056223fbab050d621bdc",
+    "bytes": 81937,
+    "sha256": "b51589ba8d49e32cd3829a7394e738acb0f081c11621a787a2f24e92a6ff1635",
     "contents": [
      "Start Here.pdf",
      "Chair Rental Agreement Checklist.docx"
@@ -41801,7 +41811,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Chair Rental Agreement Checklist.docx": 1
+      "Chair Rental Agreement Checklist.docx": 3
      }
     }
    },
@@ -41814,12 +41824,13 @@
    "name": "Salon Staff Handbook Template",
    "title": "Salon Staff Handbook Template Editable Word Template, Staff Handbook, Salon Manual, Salon Training",
    "category": "Health & safety",
-   "summary": "An editable handbook for salon teams: standards, dress code, hygiene, bookings and pay.",
+   "summary": "A complete salon staff handbook: welcome, conduct, hygiene, client service standards, appointments, leave, commission and social media, with a guide and an example section written out.",
    "features": [
-    "An editable handbook for salon teams: standards, dress code, hygiene, bookings and pay.",
-    "7 sections: Welcome & our standards, Dress code & presentation, Hygiene & safety, Bookings & client care, Pay, commission & leave, Training & development\u2026",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "14 sections ready to edit",
+    "Client service standards from greeting to rebooking",
+    "Hygiene and sanitation routine",
+    "Commission and targets section (example structure)",
+    "Acknowledgement page for staff signatures"
    ],
    "tags": [
     "staff handbook",
@@ -41847,13 +41858,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable handbook for salon teams: standards, dress code, hygiene, bookings and pay.\n\nWHAT'S INCLUDED\n\u2022 An editable handbook for salon teams: standards, dress code, hygiene, bookings and pay.\n\u2022 7 sections: Welcome & our standards, Dress code & presentation, Hygiene & safety, Bookings & client care, Pay, commission & leave, Training & development\u2026\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A complete salon staff handbook: welcome, conduct, hygiene, client service standards, appointments, leave, commission and social media, with a guide and an example section written out.\n\nWHAT'S INCLUDED\n\u2022 14 sections ready to edit\n\u2022 Client service standards from greeting to rebooking\n\u2022 Hygiene and sanitation routine\n\u2022 Commission and targets section (example structure)\n\u2022 Acknowledgement page for staff signatures\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-022/salon-staff-handbook-template.zip",
-    "bytes": 80677,
-    "sha256": "2ad135d597368e3ece99b82ccdf785df5d4b9939065505d28323574c1f7232ca",
+    "bytes": 82330,
+    "sha256": "5127f5c4111b00ca8f69d182d0b3ce3bea1a7fa8c53efb9b362f600892133bb8",
     "contents": [
      "Start Here.pdf",
      "Salon Staff Handbook Template.docx"
@@ -41874,7 +41885,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Salon Staff Handbook Template.docx": 1
+      "Salon Staff Handbook Template.docx": 5
      }
     }
    },
@@ -41887,12 +41898,13 @@
    "name": "Beauty Price List & Service Menu Template",
    "title": "Beauty Price List & Service Menu Template Editable Word Template, Price List, Service Menu, Salon Menu",
    "category": "Marketing",
-   "summary": "An editable price list/service menu with descriptions and durations.",
+   "summary": "A service menu that sells: guide to pricing and grouping services, editable menu template, add-ons and packages section, and a complete example menu.",
    "features": [
-    "An editable price list/service menu with descriptions and durations.",
-    "4 sections: Hair, Nails, Lashes & brows, Skin",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: grouping, naming, durations and 'from' prices",
+    "Editable menu template with categories, durations and prices",
+    "Add-ons and packages that raise average spend",
+    "Complete example menu for a hair and nails salon",
+    "Price review checklist"
    ],
    "tags": [
     "price list",
@@ -41920,13 +41932,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable price list/service menu with descriptions and durations.\n\nWHAT'S INCLUDED\n\u2022 An editable price list/service menu with descriptions and durations.\n\u2022 4 sections: Hair, Nails, Lashes & brows, Skin\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A service menu that sells: guide to pricing and grouping services, editable menu template, add-ons and packages section, and a complete example menu.\n\nWHAT'S INCLUDED\n\u2022 Guide: grouping, naming, durations and 'from' prices\n\u2022 Editable menu template with categories, durations and prices\n\u2022 Add-ons and packages that raise average spend\n\u2022 Complete example menu for a hair and nails salon\n\u2022 Price review checklist\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-023/beauty-price-list-service-menu-template.zip",
-    "bytes": 81046,
-    "sha256": "d706d57b2f9c9c1b38673824652eca87322e31be4aa535b0bb897795c8b09127",
+    "bytes": 81795,
+    "sha256": "4c0f159ced5ae4c4a27158aae0790b08efdfc189cdc41bb7e013c67fbe7634d5",
     "contents": [
      "Start Here.pdf",
      "Beauty Price List & Service Menu Template.docx"
@@ -41949,7 +41961,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Beauty Price List & Service Menu Template.docx": 2
+      "Beauty Price List & Service Menu Template.docx": 3
      }
     }
    },
@@ -42469,12 +42481,13 @@
    "name": "Photo & Social Media Consent Form",
    "title": "Photo & Social Media Consent Form Editable Word Template, Photo Consent, Social Media Consent, Before And After",
    "category": "Marketing",
-   "summary": "Get clear written consent before posting clients' before-and-after photos.",
+   "summary": "Get clear, POPIA-friendly consent before posting client photos: consent form with options, plain-language explanation, withdrawal process, a consent register and a completed example.",
    "features": [
-    "Get clear written consent before posting clients' before-and-after photos.",
-    "0 sections: ",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Consent form with tick-box options (where, face visible, tagging)",
+    "Plain-language explanation for clients",
+    "How to withdraw consent",
+    "Consent register",
+    "Completed example form"
    ],
    "tags": [
     "photo consent",
@@ -42502,13 +42515,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Get clear written consent before posting clients' before-and-after photos.\n\nWHAT'S INCLUDED\n\u2022 Get clear written consent before posting clients' before-and-after photos.\n\u2022 0 sections: \n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Get clear, POPIA-friendly consent before posting client photos: consent form with options, plain-language explanation, withdrawal process, a consent register and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Consent form with tick-box options (where, face visible, tagging)\n\u2022 Plain-language explanation for clients\n\u2022 How to withdraw consent\n\u2022 Consent register\n\u2022 Completed example form\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-030/photo-social-media-consent-form.zip",
-    "bytes": 80822,
-    "sha256": "33f8e6421a31bd0b4db38b7fed77e839c3d575a91fd1e896a5dd91eb3b44e1f8",
+    "bytes": 81931,
+    "sha256": "8faf36b697aa953ed67616b037924cc807a239d20868654e640763c3de622043",
     "contents": [
      "Start Here.pdf",
      "Photo & Social Media Consent Form.docx"
@@ -42529,7 +42542,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Photo & Social Media Consent Form.docx": 1
+      "Photo & Social Media Consent Form.docx": 3
      }
     }
    },
