@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T09:28:36Z",
+ "generated_at": "2026-11-07T09:36:28Z",
  "products": [
   {
    "id": "PLD-001",
@@ -48325,12 +48325,13 @@
    "name": "Employee Performance Review Template",
    "title": "Employee Performance Review Template Editable Word Template, Performance Review, Appraisal Template, Employee Review",
    "category": "People & HR",
-   "summary": "A fair, structured review: goals, competencies, ratings, development and sign-off.",
+   "summary": "A fair, structured performance review: guide, review form with a clear rating scale, goals and development plan, plus a completed example review.",
    "features": [
-    "A fair, structured review: goals, competencies, ratings, development and sign-off.",
-    "3 sections: Strengths, Development areas, Employee comments",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide to running a fair review conversation, with what to prepare",
+    "Review form: rating scale defined, 6 core competencies, results against goals",
+    "SMART goals and development plan for the next period",
+    "Completed example review for a sales coordinator",
+    "Sign-off and employee comments section"
    ],
    "tags": [
     "performance review",
@@ -48358,13 +48359,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A fair, structured review: goals, competencies, ratings, development and sign-off.\n\nWHAT'S INCLUDED\n\u2022 A fair, structured review: goals, competencies, ratings, development and sign-off.\n\u2022 3 sections: Strengths, Development areas, Employee comments\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A fair, structured performance review: guide, review form with a clear rating scale, goals and development plan, plus a completed example review.\n\nWHAT'S INCLUDED\n\u2022 Guide to running a fair review conversation, with what to prepare\n\u2022 Review form: rating scale defined, 6 core competencies, results against goals\n\u2022 SMART goals and development plan for the next period\n\u2022 Completed example review for a sales coordinator\n\u2022 Sign-off and employee comments section\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-021/employee-performance-review-template.zip",
-    "bytes": 81046,
-    "sha256": "06a8cc60e14cf6b9ac5ebfcf8b6083d37ebea37106e69912a622a14ea7048d7e",
+    "bytes": 84040,
+    "sha256": "c6469aaa824f9c68cba999131b836d17a33d8c7b83f5a856ff16e50a5a88add4",
     "contents": [
      "Start Here.pdf",
      "Employee Performance Review Template.docx"
@@ -48387,7 +48388,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Employee Performance Review Template.docx": 2
+      "Employee Performance Review Template.docx": 5
      }
     }
    },
@@ -48400,12 +48401,14 @@
    "name": "Business Continuity Plan Template",
    "title": "Business Continuity Plan Template Editable Word Template, Business Continuity, Disaster Recovery, Risk Plan",
    "category": "Operations",
-   "summary": "Plan how your business keeps running through outages, illness, disasters or data loss.",
+   "summary": "A practical business continuity plan for small businesses: risk table, critical activities, response steps for 6 common disruptions and a completed example plan.",
    "features": [
-    "Plan how your business keeps running through outages, illness, disasters or data loss.",
-    "3 sections: Purpose & scope, Data & backups, Testing & review",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: how to write a plan in an afternoon and test it",
+    "Critical activities table with maximum tolerable downtime",
+    "Risk assessment with likelihood x impact scoring",
+    "Response playbooks: power outage, data loss, key person absent, supplier failure, premises inaccessible, cyber fraud",
+    "Contact tree and testing log",
+    "Completed example plan for a print and signage business"
    ],
    "tags": [
     "business continuity",
@@ -48433,13 +48436,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Plan how your business keeps running through outages, illness, disasters or data loss.\n\nWHAT'S INCLUDED\n\u2022 Plan how your business keeps running through outages, illness, disasters or data loss.\n\u2022 3 sections: Purpose & scope, Data & backups, Testing & review\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A practical business continuity plan for small businesses: risk table, critical activities, response steps for 6 common disruptions and a completed example plan.\n\nWHAT'S INCLUDED\n\u2022 Guide: how to write a plan in an afternoon and test it\n\u2022 Critical activities table with maximum tolerable downtime\n\u2022 Risk assessment with likelihood x impact scoring\n\u2022 Response playbooks: power outage, data loss, key person absent, supplier failure, premises inaccessible, cyber fraud\n\u2022 Contact tree and testing log\n\u2022 Completed example plan for a print and signage business\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-022/business-continuity-plan-template.zip",
-    "bytes": 81357,
-    "sha256": "4baad49b8f7a1f85c9757828e0829842b5cd907046df5f47bff5ac1901e4a232",
+    "bytes": 83538,
+    "sha256": "66d8517183fc99f2ef54291cd7e9843440297d4079c110d2b191382e758999d5",
     "contents": [
      "Start Here.pdf",
      "Business Continuity Plan Template.docx"
@@ -48462,7 +48465,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Business Continuity Plan Template.docx": 2
+      "Business Continuity Plan Template.docx": 4
      }
     }
    },
@@ -48475,12 +48478,13 @@
    "name": "Monthly Management Report Template",
    "title": "Monthly Management Report Template Editable Word Template, Management Report, Board Report, Monthly Report",
    "category": "Operations",
-   "summary": "A concise monthly report for owners or boards: KPIs, finance, highlights, risks and decisions needed.",
+   "summary": "A one-page-at-a-glance monthly management report: guide, report template with KPI table, commentary prompts and actions, plus a completed example month.",
    "features": [
-    "A concise monthly report for owners or boards: KPIs, finance, highlights, risks and decisions needed.",
-    "3 sections: Highlights, Issues & risks, Decisions needed",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: what to report, where the numbers come from, and how to write commentary that leads to decisions",
+    "KPI table: actual vs target vs last month",
+    "Sections for sales, cash, customers, operations, people and risks",
+    "Decisions and actions table",
+    "Completed example report for a 12-person business"
    ],
    "tags": [
     "management report",
@@ -48508,13 +48512,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A concise monthly report for owners or boards: KPIs, finance, highlights, risks and decisions needed.\n\nWHAT'S INCLUDED\n\u2022 A concise monthly report for owners or boards: KPIs, finance, highlights, risks and decisions needed.\n\u2022 3 sections: Highlights, Issues & risks, Decisions needed\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A one-page-at-a-glance monthly management report: guide, report template with KPI table, commentary prompts and actions, plus a completed example month.\n\nWHAT'S INCLUDED\n\u2022 Guide: what to report, where the numbers come from, and how to write commentary that leads to decisions\n\u2022 KPI table: actual vs target vs last month\n\u2022 Sections for sales, cash, customers, operations, people and risks\n\u2022 Decisions and actions table\n\u2022 Completed example report for a 12-person business\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-023/monthly-management-report-template.zip",
-    "bytes": 80964,
-    "sha256": "f7e538a1abf52905b3f4ebfff8ba6f54efe71122ee44636fa6ea71eef75b6d87",
+    "bytes": 82838,
+    "sha256": "b7adf4571305b44856c111ea2988b53635e77d8ac18796c89721d25ee12bffe9",
     "contents": [
      "Start Here.pdf",
      "Monthly Management Report Template.docx"
@@ -48535,7 +48539,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Monthly Management Report Template.docx": 1
+      "Monthly Management Report Template.docx": 4
      }
     }
    },
@@ -48820,12 +48824,13 @@
    "name": "Company Profile Template",
    "title": "Company Profile Template Editable Word Template, Company Profile, Business Profile, Capability Statement",
    "category": "Sales & marketing",
-   "summary": "A professional company profile: story, services, clients, team and contact details.",
+   "summary": "A company profile that wins tenders and corporate clients: section-by-section guide, template, and a complete example profile you can model.",
    "features": [
-    "A professional company profile: story, services, clients, team and contact details.",
-    "4 sections: Who we are, Mission & values, Who we work with, Selected projects",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: what procurement officers and corporate buyers look for, and what to leave out",
+    "Template: overview, services, track record, team, compliance, contacts",
+    "Track-record table with client, project, value and year",
+    "Compliance checklist of documents buyers commonly ask for",
+    "Complete example profile for a print and signage company"
    ],
    "tags": [
     "company profile",
@@ -48853,13 +48858,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A professional company profile: story, services, clients, team and contact details.\n\nWHAT'S INCLUDED\n\u2022 A professional company profile: story, services, clients, team and contact details.\n\u2022 4 sections: Who we are, Mission & values, Who we work with, Selected projects\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A company profile that wins tenders and corporate clients: section-by-section guide, template, and a complete example profile you can model.\n\nWHAT'S INCLUDED\n\u2022 Guide: what procurement officers and corporate buyers look for, and what to leave out\n\u2022 Template: overview, services, track record, team, compliance, contacts\n\u2022 Track-record table with client, project, value and year\n\u2022 Compliance checklist of documents buyers commonly ask for\n\u2022 Complete example profile for a print and signage company\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-027/company-profile-template.zip",
-    "bytes": 80888,
-    "sha256": "f78e9cb7184610c510e2d826be2c530172d11b25c84e5b37b74f3c5d1c436078",
+    "bytes": 82921,
+    "sha256": "849fc61a7611b4f720238821f4f0b72510e53ee62f08ea3f7bf7b229956be33b",
     "contents": [
      "Start Here.pdf",
      "Company Profile Template.docx"
@@ -48880,7 +48885,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Company Profile Template.docx": 1
+      "Company Profile Template.docx": 4
      }
     }
    },
@@ -48893,12 +48898,13 @@
    "name": "Press Release Template Pack",
    "title": "Press Release Template Pack Editable Word Template, Press Release, Media Release, Pr Template",
    "category": "Sales & marketing",
-   "summary": "Three press release templates \u2014 launch, milestone and event \u2014 with a media pitch email.",
+   "summary": "Get local media coverage: a guide to newsworthy angles, three press release templates written for different stories, two complete example releases and pitch emails.",
    "features": [
-    "Three press release templates \u2014 launch, milestone and event \u2014 with a media pitch email.",
-    "4 sections: Product / service launch, Company milestone, Event announcement, Media pitch email",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: what makes a story newsworthy, how journalists read releases, timing and follow-up",
+    "3 distinct templates: launch, milestone or award, event or community story",
+    "2 complete example releases you can model",
+    "Pitch email and follow-up email templates",
+    "Media list tracker and pre-send checklist"
    ],
    "tags": [
     "press release",
@@ -48926,13 +48932,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Three press release templates \u2014 launch, milestone and event \u2014 with a media pitch email.\n\nWHAT'S INCLUDED\n\u2022 Three press release templates \u2014 launch, milestone and event \u2014 with a media pitch email.\n\u2022 4 sections: Product / service launch, Company milestone, Event announcement, Media pitch email\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Get local media coverage: a guide to newsworthy angles, three press release templates written for different stories, two complete example releases and pitch emails.\n\nWHAT'S INCLUDED\n\u2022 Guide: what makes a story newsworthy, how journalists read releases, timing and follow-up\n\u2022 3 distinct templates: launch, milestone or award, event or community story\n\u2022 2 complete example releases you can model\n\u2022 Pitch email and follow-up email templates\n\u2022 Media list tracker and pre-send checklist\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-028/press-release-template-pack.zip",
-    "bytes": 80741,
-    "sha256": "8b2ef7b2d90b53893b789ae3cc3962cb296fff47113598788adde1711493344b",
+    "bytes": 83319,
+    "sha256": "f504556b3d8c431acce3399cffe54487d95ccc74690781ded0892d5aae1244c2",
     "contents": [
      "Start Here.pdf",
      "Press Release Template Pack.docx"
@@ -48957,7 +48963,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Press Release Template Pack.docx": 4
+      "Press Release Template Pack.docx": 5
      }
     }
    },
@@ -49056,12 +49062,13 @@
    "name": "Request for Proposal (RFP) Template",
    "title": "Request for Proposal (RFP) Template Editable Word Template, Rfp Template, Request For Proposal, Tender Document",
    "category": "Operations",
-   "summary": "Ask suppliers for comparable proposals: background, requirements, timeline and evaluation criteria.",
+   "summary": "Get comparable, fair quotes from suppliers: RFP guide, structured template with evaluation criteria and scoring sheet, plus a completed example RFP.",
    "features": [
-    "Ask suppliers for comparable proposals: background, requirements, timeline and evaluation criteria.",
-    "3 sections: Background, Scope of work, Submission instructions",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: when to use an RFP, how to write requirements suppliers can price",
+    "Template: background, scope, requirements, timeline, submission rules, evaluation",
+    "Weighted evaluation scoring sheet",
+    "Supplier questions log and clarification process",
+    "Completed example RFP for a website redesign"
    ],
    "tags": [
     "rfp template",
@@ -49089,13 +49096,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Ask suppliers for comparable proposals: background, requirements, timeline and evaluation criteria.\n\nWHAT'S INCLUDED\n\u2022 Ask suppliers for comparable proposals: background, requirements, timeline and evaluation criteria.\n\u2022 3 sections: Background, Scope of work, Submission instructions\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Get comparable, fair quotes from suppliers: RFP guide, structured template with evaluation criteria and scoring sheet, plus a completed example RFP.\n\nWHAT'S INCLUDED\n\u2022 Guide: when to use an RFP, how to write requirements suppliers can price\n\u2022 Template: background, scope, requirements, timeline, submission rules, evaluation\n\u2022 Weighted evaluation scoring sheet\n\u2022 Supplier questions log and clarification process\n\u2022 Completed example RFP for a website redesign\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-030/request-for-proposal-rfp-template.zip",
-    "bytes": 81159,
-    "sha256": "de4542b564fc8cb0133f632a726c07e6fcd7c96ac179c75cac3e4b355dd31d8b",
+    "bytes": 83006,
+    "sha256": "2ba84a2aae5253e3f53bb90db58f78361e90561cc1b090146104a0762c59463e",
     "contents": [
      "Start Here.pdf",
      "Request for Proposal (RFP) Template.docx"
@@ -49118,7 +49125,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Request for Proposal (RFP) Template.docx": 2
+      "Request for Proposal (RFP) Template.docx": 5
      }
     }
    },
