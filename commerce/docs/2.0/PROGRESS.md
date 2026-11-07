@@ -54,7 +54,7 @@ Builder additions (gen.build_x): coherent example rows per sheet with type and d
 sumif / net / diff / ratio; summary_view, net_by, countif summaries; cross-sheet formulas ([[Sheet|Column]]), added sheets and columns.
 Start Here sheets now print at A4 width (they were clipped). Factory backup: factory/factory-2026-11-07-trackers-done.zip (sha 4d3fefb5…).
 
-Repriced 7 Nov (owner chose 'tiered by type'): printables R39–59, trackers & calculators R49–79, Word kits R69–99, flagships R99–249, placed within each tier by content score; bundles ≤65% of their items, R99–249. List value R44,450 → R42,320. Preview: https://mlinjana-preview.mlinjanachuma.workers.dev (version ccd062c2), 600 products, 0 broken links. Awaiting owner OK to sync files/prices and deploy live.
+Repriced 7 Nov (owner chose 'tiered by type'): printables R39–59, trackers & calculators R49–79, Word kits R69–99, flagships R99–249, placed within each tier by content score; bundles ≤65% of their items, R99–249. List value R44,450 → R42,320. Preview: https://mlinjana-preview.mlinjanachuma.workers.dev (version ccd062c2), 600 products, 0 broken links. Synced and deployed live 7 Nov (version e1f9073c). Checkout paused until PayFast live is active (DECISIONS #43).
 
 Fixed 7 Nov: "Learner Report Comment Bank" claimed "over 100 comments" but had 16; it now has 103.
 
