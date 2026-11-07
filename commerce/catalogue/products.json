@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T15:52:40Z",
+ "generated_at": "2026-11-07T16:08:16Z",
  "products": [
   {
    "id": "PLD-001",
@@ -1720,11 +1720,12 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-001/business-plan-template.zip",
-    "bytes": 95532,
-    "sha256": "a8735c08847a281b6d5ead70e939f59dad63a1d0c8358b3545a1bb66a7fdc968",
+    "bytes": 134053,
+    "sha256": "043dfe72d80cef99b20c84153e12bc46151f24b4802ea54dfda8ac8eb90943e7",
     "contents": [
      "Start Here.pdf",
      "3-Year Financial Projections.xlsx",
+     "Business Plan Template + 3-Year Financial Projections - Worked Example.docx",
      "Business Plan Template.docx"
     ]
    },
@@ -1757,13 +1758,15 @@
         "Start Here",
         "Assumptions",
         "Projections",
-        "Summary"
+        "Summary",
+        "Guide"
        ],
-       "values": 441,
+       "values": 459,
        "errors": 0
       }
      },
      "docx_pages": {
+      "Business Plan Template + 3-Year Financial Projections - Worked Example.docx": 2,
       "Business Plan Template.docx": 4
      }
     }
@@ -1814,10 +1817,11 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-002/lean-canvas-one-page-plan.zip",
-    "bytes": 81616,
-    "sha256": "9d19a0b8d963ff2e3e7959807b01619bd70c8065191bab74e458813e11da3c21",
+    "bytes": 117969,
+    "sha256": "3efdae7d3237dbd2de86c3ee567453bb9b5781cf332b557387065146641a8662",
     "contents": [
      "Start Here.pdf",
+     "Lean Canvas & One-Page Business Plan - Worked Example.docx",
      "Lean Canvas & One-Page Plan.docx"
     ]
    },
@@ -1838,6 +1842,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
+      "Lean Canvas & One-Page Business Plan - Worked Example.docx": 1,
       "Lean Canvas & One-Page Plan.docx": 3
      }
     }
@@ -1892,8 +1897,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-003/invoice-template-excel.zip",
-    "bytes": 64230,
-    "sha256": "71b507dae8ef09925fd2c531818f00a02f7d2118ec940633269d23d491c15f98",
+    "bytes": 65499,
+    "sha256": "ebe48e883a7443614ccbe97ce6fc8efc60c2e62e9b5594cd27daf2d5615c3e10",
     "contents": [
      "Start Here.pdf",
      "Invoice Template.xlsx"
@@ -1925,9 +1930,10 @@
         "Settings",
         "Clients",
         "Invoice",
-        "Invoice Register"
+        "Invoice Register",
+        "Guide"
        ],
-       "values": 133,
+       "values": 153,
        "errors": 0
       }
      },
@@ -1988,8 +1994,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-004/quotation-estimate-template.zip",
-    "bytes": 64264,
-    "sha256": "bc68bcfa63a5d4c3ddad707adec3b9e1928efb6e07fe4d31f8086878f24e9805",
+    "bytes": 64553,
+    "sha256": "3e67f200401effe467cb142f9c7c91229d7b44869b0f1c2e5df1eb41bed61063",
     "contents": [
      "Start Here.pdf",
      "Quotation Template.xlsx"
@@ -2021,9 +2027,10 @@
         "Settings",
         "Clients",
         "Quote",
-        "Quote Register"
+        "Quote Register",
+        "Guide"
        ],
-       "values": 136,
+       "values": 152,
        "errors": 0
       }
      }
@@ -2078,8 +2085,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-005/income-expense-tracker.zip",
-    "bytes": 66111,
-    "sha256": "4476d758d433dbea049c1a4ea7671dc7bb294243db2931aa70efb645cc8dfe53",
+    "bytes": 67272,
+    "sha256": "8587bd10bb687b0a3aeb784e30b375b41def2bcc2aa9593b1143d0ae10c6fbfa",
     "contents": [
      "Start Here.pdf",
      "Income & Expense Tracker.xlsx"
@@ -2110,9 +2117,10 @@
         "Start Here",
         "Lists",
         "Transactions",
-        "Summary"
+        "Summary",
+        "Guide"
        ],
-       "values": 400,
+       "values": 416,
        "errors": 0
       }
      },
@@ -2171,8 +2179,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-006/marketing-calendar.zip",
-    "bytes": 62744,
-    "sha256": "4188956cce60e2084556f527053b30dd68a3eb5eb11b099b62fe9eb8295ef9b6",
+    "bytes": 63664,
+    "sha256": "9e60e4fbb3c25c5cb8f36dd0313ab68a7ccf0becc864f4d158c9bd5b55c913c7",
     "contents": [
      "Start Here.pdf",
      "Marketing Calendar.xlsx"
@@ -2204,9 +2212,10 @@
         "Lists",
         "Campaigns",
         "Calendar",
-        "Budget"
+        "Budget",
+        "Guide"
        ],
-       "values": 195,
+       "values": 216,
        "errors": 0
       }
      }
@@ -2261,8 +2270,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-007/social-media-content-planner.zip",
-    "bytes": 69406,
-    "sha256": "12bc907f7b9d34ba21d99eed0d6f2dfe6de1cfec46c35519890f3365db4df4b2",
+    "bytes": 70443,
+    "sha256": "ea814bd7f5b66a9038f57668314ef965610b159eda2504d8200eaf1148bcc4db",
     "contents": [
      "Start Here.pdf",
      "Social Media Content Planner.xlsx"
@@ -2297,9 +2306,10 @@
         "Content Calendar",
         "Ideas Bank",
         "Analytics",
-        "Overview"
+        "Overview",
+        "Guide"
        ],
-       "values": 190,
+       "values": 207,
        "errors": 0
       }
      }
@@ -2431,8 +2441,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-009/project-management-tracker.zip",
-    "bytes": 69527,
-    "sha256": "f747b505cb9393ce0b0bc70f6a1b5faddff28f67e612302c38d2b061f8719fcd",
+    "bytes": 70284,
+    "sha256": "5c2517736db6c7073e766944e187e33a2b99f84cdc028c0212289e12bf42b3d7",
     "contents": [
      "Start Here.pdf",
      "Project Management Tracker.xlsx"
@@ -2468,9 +2478,10 @@
         "Timeline",
         "Dashboard",
         "RACI",
-        "Risks"
+        "Risks",
+        "Guide"
        ],
-       "values": 169,
+       "values": 188,
        "errors": 0
       }
      }
@@ -2524,8 +2535,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-010/client-crm-sales-pipeline.zip",
-    "bytes": 66934,
-    "sha256": "aee0ee7aa8e04aa4edd8b437db6c0867661b6c3e718f9284b00b5d14d725cef4",
+    "bytes": 68031,
+    "sha256": "02789f88438615ff879eafe91a1c78d6803995ba43072ea8a51f89234f9fe5c1",
     "contents": [
      "Start Here.pdf",
      "Client CRM & Sales Pipeline.xlsx"
@@ -2559,9 +2570,10 @@
         "Lists",
         "Pipeline",
         "Forecast",
-        "Activity"
+        "Activity",
+        "Guide"
        ],
-       "values": 173,
+       "values": 191,
        "errors": 0
       }
      }
@@ -2618,10 +2630,11 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-011/employee-onboarding-kit.zip",
-    "bytes": 90548,
-    "sha256": "0c6c5c7f829e6b8bf823a6152f142ef01497d41e0103bdd29b270d19b6f9d969",
+    "bytes": 127621,
+    "sha256": "485a532e66889b000ee0d847f2270896a8ab0ac87e86a48cb567cd8affff2ee3",
     "contents": [
      "Start Here.pdf",
+     "Employee Onboarding Kit - Worked Example.docx",
      "Onboarding Checklist.xlsx",
      "Onboarding Kit.docx"
     ]
@@ -2644,6 +2657,10 @@
     "ok": true,
     "errors": [],
     "info": {
+     "docx_pages": {
+      "Employee Onboarding Kit - Worked Example.docx": 1,
+      "Onboarding Kit.docx": 2
+     },
      "formulas": {
       "Onboarding Checklist.xlsx": 49
      },
@@ -2651,14 +2668,12 @@
       "Onboarding Checklist.xlsx": {
        "sheets": [
         "Start Here",
-        "Checklist"
+        "Checklist",
+        "Guide"
        ],
-       "values": 102,
+       "values": 116,
        "errors": 0
       }
-     },
-     "docx_pages": {
-      "Onboarding Kit.docx": 2
      }
     }
    },
@@ -2713,12 +2728,13 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-012/meeting-agenda-minutes-kit.zip",
-    "bytes": 95916,
-    "sha256": "2bdf22b3e1ed3a18b6e63703fafc9ce81e3eefe45f239308242e81493b2add41",
+    "bytes": 132219,
+    "sha256": "555c50b11681a1bb1d0aee19884a6739f3af83bf8c37cc42dc6014c0cc3f1e97",
     "contents": [
      "Start Here.pdf",
      "Action Log.xlsx",
-     "Meeting Agenda & Minutes.docx"
+     "Meeting Agenda & Minutes.docx",
+     "Meeting Agenda, Minutes & Action Log Kit - Worked Example.docx"
     ]
    },
    "images": {
@@ -2750,12 +2766,13 @@
         "Start Here",
         "Action Log"
        ],
-       "values": 42,
+       "values": 49,
        "errors": 0
       }
      },
      "docx_pages": {
-      "Meeting Agenda & Minutes.docx": 5
+      "Meeting Agenda & Minutes.docx": 5,
+      "Meeting Agenda, Minutes & Action Log Kit - Worked Example.docx": 1
      }
     }
    },
@@ -2807,10 +2824,11 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-013/hiring-kit.zip",
-    "bytes": 82273,
-    "sha256": "581e077327eb92b3547e5216dda7267f7249a25a55ac8366e943aa81cf3f2999",
+    "bytes": 118655,
+    "sha256": "859530a7f8aee086db88788c43b1215becff8fcdeb96c7bd0b0ae2f684e9e07a",
     "contents": [
      "Start Here.pdf",
+     "Hiring Kit Job Description, Interview Guide & Scorecard - Worked Example.docx",
      "Hiring Kit.docx"
     ]
    },
@@ -2833,6 +2851,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
+      "Hiring Kit Job Description, Interview Guide & Scorecard - Worked Example.docx": 1,
       "Hiring Kit.docx": 5
      }
     }
@@ -2884,8 +2903,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-014/customer-feedback-complaints-log.zip",
-    "bytes": 69438,
-    "sha256": "d7f730d58ce5554c1f94d3d0c33b4aec682bc12cd081f5d2f1e4d27fa5f0fd8b",
+    "bytes": 70532,
+    "sha256": "ec8ebf3740322fed74ed22372985e267900328c987b38e4b69f4d1aa74476feb",
     "contents": [
      "Start Here.pdf",
      "Customer Feedback & Complaints Log.xlsx"
@@ -2919,9 +2938,10 @@
         "Lists",
         "Complaints",
         "Dashboard",
-        "NPS"
+        "NPS",
+        "Guide"
        ],
-       "values": 107,
+       "values": 124,
        "errors": 0
       }
      }
@@ -2974,8 +2994,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-015/pricing-calculator.zip",
-    "bytes": 56666,
-    "sha256": "7ba50aa595cafb7ac3af4a86aaa94c58414954c7228381526cac129b543ea80f",
+    "bytes": 57757,
+    "sha256": "f7d258e2d07ce8e79d7ea200a1874e09b6241101fb00e7e6fc75d80d9b03ca58",
     "contents": [
      "Start Here.pdf",
      "Pricing Calculator.xlsx"
@@ -3008,9 +3028,10 @@
         "Start Here",
         "Product Pricing",
         "Service Rate",
-        "Discount Impact"
+        "Discount Impact",
+        "Guide"
        ],
-       "values": 87,
+       "values": 104,
        "errors": 0
       }
      }
@@ -3063,10 +3084,11 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-016/brand-style-guide-template.zip",
-    "bytes": 81568,
-    "sha256": "6b4ae0afd5631df0e04d8ebcf79574be49761e3e4766040021c9860ab286b814",
+    "bytes": 117570,
+    "sha256": "0598491575f99063d5b7b72c2312421fea95bb957f428af75611c7e85ba20c81",
     "contents": [
      "Start Here.pdf",
+     "Brand Style Guide Template - Worked Example.docx",
      "Brand Style Guide Template.docx"
     ]
    },
@@ -3087,6 +3109,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
+      "Brand Style Guide Template - Worked Example.docx": 1,
       "Brand Style Guide Template.docx": 3
      }
     }
@@ -3138,8 +3161,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-017/small-business-kpi-dashboard.zip",
-    "bytes": 57323,
-    "sha256": "b78c0829e7bf2792484097f45c7304fc6dea53afae6019c29c78bef2c9867874",
+    "bytes": 58530,
+    "sha256": "a7a4afa7cfd6cf129500ace9b1ccaa0c9562f2748279dbfeb26dad8f22773e1c",
     "contents": [
      "Start Here.pdf",
      "Small Business KPI Dashboard.xlsx"
@@ -3169,9 +3192,10 @@
        "sheets": [
         "Start Here",
         "Monthly Data",
-        "Dashboard"
+        "Dashboard",
+        "Guide"
        ],
-       "values": 108,
+       "values": 128,
        "errors": 0
       }
      }
@@ -3224,8 +3248,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-018/purchase-order-supplier-kit.zip",
-    "bytes": 60875,
-    "sha256": "a17cf12abbd79e776b7c632a20888ce8d7a11861e0b69b00bc255608111e78d1",
+    "bytes": 61905,
+    "sha256": "eab0476a94b4263e0777878728214676a65950bfe79e3912ca0c83231bceb61b",
     "contents": [
      "Start Here.pdf",
      "Purchase Order & Supplier Kit.xlsx"
@@ -3257,9 +3281,10 @@
         "Settings",
         "Suppliers",
         "Purchase Order",
-        "PO Register"
+        "PO Register",
+        "Guide"
        ],
-       "values": 101,
+       "values": 116,
        "errors": 0
       }
      }
@@ -3481,8 +3506,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-001/personal-budget-dashboard.zip",
-    "bytes": 75215,
-    "sha256": "9a8a5856ab3da63c5bfe331aec60bbac17802e60e4702ce6a07e8063f0744a4c",
+    "bytes": 76312,
+    "sha256": "b29361d7ab639496756500f551afad04cacac99c23d8dea9febd104a079c42a4",
     "contents": [
      "Start Here.pdf",
      "Personal Budget Dashboard.xlsx"
@@ -3517,9 +3542,10 @@
         "Budget",
         "Transactions",
         "Dashboard",
-        "Year"
+        "Year",
+        "Guide"
        ],
-       "values": 772,
+       "values": 789,
        "errors": 0
       }
      }
@@ -3574,8 +3600,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-002/debt-snowball-avalanche-calculator.zip",
-    "bytes": 150022,
-    "sha256": "38596e231a03886a899331cf3522a07700eaf59606782f38eae1e904630b0c5e",
+    "bytes": 151068,
+    "sha256": "0c38aa79fa6f4c8c8d28abec6ad9ce1aba73214a726192b18a59d995d180e8f0",
     "contents": [
      "Start Here.pdf",
      "Debt Snowball & Avalanche Calculator.xlsx"
@@ -3608,9 +3634,10 @@
         "Start Here",
         "Debts",
         "Schedule",
-        "Summary"
+        "Summary",
+        "Guide"
        ],
-       "values": 16372,
+       "values": 16387,
        "errors": 0
       }
      },
@@ -3669,8 +3696,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-003/savings-goal-tracker.zip",
-    "bytes": 61979,
-    "sha256": "63cbad3a94c60e553367ac8a135563bc84c3229614a60976f0440e650fd5fac8",
+    "bytes": 63004,
+    "sha256": "dcfc3040a9f0c79d9cd7574fb02129fd8ef3b81b6816997437c67769df6466f6",
     "contents": [
      "Start Here.pdf",
      "Savings Goal Tracker.xlsx"
@@ -3700,9 +3727,10 @@
        "sheets": [
         "Start Here",
         "Goals",
-        "Deposits"
+        "Deposits",
+        "Guide"
        ],
-       "values": 82,
+       "values": 95,
        "errors": 0
       }
      }
@@ -3756,8 +3784,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-004/emergency-fund-calculator.zip",
-    "bytes": 59536,
-    "sha256": "5210ff805f1852887cf287485379c6c891e4e719fb6a12106954733ccd49b579",
+    "bytes": 60567,
+    "sha256": "068b8bc888d9b3c955dfdf470a0f4cbaf0c07fab1e476f6b5e9314fab0d8b70c",
     "contents": [
      "Start Here.pdf",
      "Emergency Fund Calculator.xlsx"
@@ -3787,9 +3815,10 @@
        "sheets": [
         "Start Here",
         "Calculator",
-        "Tracker"
+        "Tracker",
+        "Guide"
        ],
-       "values": 72,
+       "values": 85,
        "errors": 0
       }
      }
@@ -3842,8 +3871,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-005/net-worth-tracker.zip",
-    "bytes": 58555,
-    "sha256": "6c9e539795ce09b48c4c0ca59fd3ee506a7943e00e4704b1caa204dcb6cf4307",
+    "bytes": 59649,
+    "sha256": "81053756ed6d0c440a2cbd84acb3e65639ae2eae1d4c03ca273c4a090604f156",
     "contents": [
      "Start Here.pdf",
      "Net Worth Tracker.xlsx"
@@ -3874,9 +3903,10 @@
         "Start Here",
         "Lists",
         "Monthly Balances",
-        "Accounts"
+        "Accounts",
+        "Guide"
        ],
-       "values": 199,
+       "values": 214,
        "errors": 0
       }
      }
@@ -3929,8 +3959,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-006/annual-personal-finance-workbook.zip",
-    "bytes": 60467,
-    "sha256": "8f3aa1603c06fbcf87a4471d57bf375ce8f322147bb361536282583792e3c5a6",
+    "bytes": 61558,
+    "sha256": "d74144e2e63e7490afe8cfb8c6cffa1499744026438bb2840fc063a9a03f3be9",
     "contents": [
      "Start Here.pdf",
      "Annual Personal Finance Workbook.xlsx"
@@ -3965,9 +3995,10 @@
         "Spending",
         "Saving",
         "Year Summary",
-        "Money Goals"
+        "Money Goals",
+        "Guide"
        ],
-       "values": 297,
+       "values": 312,
        "errors": 0
       }
      }
@@ -4020,8 +4051,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-007/loan-amortisation-calculator.zip",
-    "bytes": 68021,
-    "sha256": "f21fb66baedb4bff1ee48ef634dac9b980d58ec3770eced6841fad6623715a50",
+    "bytes": 69938,
+    "sha256": "fa53523e88bf1144f14ee70479d2e7fd947337fd067ad673ceda20d5e7763956",
     "contents": [
      "Start Here.pdf",
      "Loan Amortisation Calculator.xlsx"
@@ -4051,9 +4082,10 @@
        "sheets": [
         "Start Here",
         "Calculator",
-        "Schedule"
+        "Schedule",
+        "Guide"
        ],
-       "values": 3892,
+       "values": 3905,
        "errors": 0
       }
      },
@@ -4119,8 +4151,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-008/home-loan-calculator.zip",
-    "bytes": 57772,
-    "sha256": "efceb2f2ec3f93dc8fbb4ca10e4814a4bb3f3412bb869423442098dff76fb5c3",
+    "bytes": 58858,
+    "sha256": "d1173dd81cf84e5037421dd9689f818ad2a2bbbeb56f8078146d2cc3abbf6143",
     "contents": [
      "Start Here.pdf",
      "Home Loan Calculator.xlsx"
@@ -4154,9 +4186,10 @@
         "Repayment",
         "Rate Changes",
         "Affordability",
-        "Extra Payments"
+        "Extra Payments",
+        "Guide"
        ],
-       "values": 148,
+       "values": 163,
        "errors": 0
       }
      }
@@ -4210,8 +4243,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-009/inventory-management-spreadsheet.zip",
-    "bytes": 88184,
-    "sha256": "20aea1ecda71f3e8441c61a35efce59e70f9a4aeeb5144da9bcb72bb80c05fff",
+    "bytes": 89026,
+    "sha256": "465cb5c32753df49b669b3e8b5ceff1c5ae4b8d92ed39eb29ba569daa16cc607",
     "contents": [
      "Start Here.pdf",
      "Inventory Management Spreadsheet.xlsx"
@@ -4245,9 +4278,10 @@
         "Lists",
         "Items",
         "Movements",
-        "Dashboard"
+        "Dashboard",
+        "Guide"
        ],
-       "values": 156,
+       "values": 172,
        "errors": 0
       }
      }
@@ -4300,8 +4334,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-010/stock-control-reorder-point.zip",
-    "bytes": 62555,
-    "sha256": "2a73be7b8be8621844be63ff0a95d19aee99f6a25522c8c457981167a64f9833",
+    "bytes": 63642,
+    "sha256": "e6b26b48ecda7549b449c14b89521a355f84285fe8af6ad31fd4141af02b58a5",
     "contents": [
      "Start Here.pdf",
      "Stock Control & Reorder Point Calculator.xlsx"
@@ -4331,9 +4365,10 @@
        "sheets": [
         "Start Here",
         "Usage History",
-        "Reorder Plan"
+        "Reorder Plan",
+        "Guide"
        ],
-       "values": 177,
+       "values": 192,
        "errors": 0
       }
      }
@@ -4386,8 +4421,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-011/warehouse-productivity-dashboard.zip",
-    "bytes": 88049,
-    "sha256": "a4572846930ad25154fb8e6c7ca883a58a6f2675efe7ec9e8c44fbb4f254ac49",
+    "bytes": 90530,
+    "sha256": "64daf0dec93809baabb3ad4c19f35806047defe3117a117d25a449aad0f44dca",
     "contents": [
      "Start Here.pdf",
      "Warehouse Productivity Dashboard.xlsx"
@@ -4421,9 +4456,10 @@
         "Lists",
         "Targets",
         "Daily Log",
-        "Dashboard"
+        "Dashboard",
+        "Guide"
        ],
-       "values": 654,
+       "values": 671,
        "errors": 0
       }
      }
@@ -4477,8 +4513,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-012/supply-chain-kpi-toolkit.zip",
-    "bytes": 87116,
-    "sha256": "df64d69f69914525ffcec8cf66bc199d9836cd67c2c3c692f0820debac17e4cd",
+    "bytes": 88315,
+    "sha256": "b89e68a59efdb294c56d59b520078f90da213f4fc2173d5651783d1122670848",
     "contents": [
      "Start Here.pdf",
      "Supply Chain KPI Toolkit.xlsx"
@@ -4512,9 +4548,10 @@
         "Orders",
         "Supplier Lead Times",
         "Inventory KPIs",
-        "Dashboard"
+        "Dashboard",
+        "Guide"
        ],
-       "values": 535,
+       "values": 553,
        "errors": 0
       }
      }
@@ -4567,8 +4604,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-013/abc-inventory-analysis.zip",
-    "bytes": 89124,
-    "sha256": "d06d44fa1038c5ec664f68eb31c254c0b326ae5552b484b0a4bedaf981b4ae5f",
+    "bytes": 88930,
+    "sha256": "7bf5e88e359b26fd9b8a12f6b56a1731fed1e8a5563744faad5202adc5cd9261",
     "contents": [
      "Start Here.pdf",
      "ABC Inventory Analysis.xlsx"
@@ -4598,9 +4635,10 @@
        "sheets": [
         "Start Here",
         "Summary",
-        "Items"
+        "Items",
+        "Guide"
        ],
-       "values": 367,
+       "values": 383,
        "errors": 0
       }
      }
@@ -4654,8 +4692,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-014/13-week-cash-flow-forecast.zip",
-    "bytes": 56096,
-    "sha256": "d816278ea1246d85bb32fbc8a881ef9b18d08dc55b9432a6f72a574e6bd19d46",
+    "bytes": 57283,
+    "sha256": "347b9745d2deccde78bf194604928d1f31288bbf9d60a6f5a56f615fbc65b4b4",
     "contents": [
      "Start Here.pdf",
      "13-Week Cash Flow Forecast.xlsx"
@@ -4682,9 +4720,10 @@
       "13-Week Cash Flow Forecast.xlsx": {
        "sheets": [
         "Start Here",
-        "Forecast"
+        "Forecast",
+        "Guide"
        ],
-       "values": 263,
+       "values": 282,
        "errors": 0
       }
      }
@@ -4737,8 +4776,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-015/break-even-profit-calculator.zip",
-    "bytes": 57156,
-    "sha256": "cf429bd91964790b260730574a24259db16e4b94e6555145239753fd1f2b82a7",
+    "bytes": 58052,
+    "sha256": "fa92314b632f88a153e1635e941027d0700510cba40a41a8c07899e78ef2e280",
     "contents": [
      "Start Here.pdf",
      "Break-Even & Profit Calculator.xlsx"
@@ -4771,9 +4810,10 @@
         "Start Here",
         "Calculator",
         "Chart Data",
-        "Sensitivity"
+        "Sensitivity",
+        "Guide"
        ],
-       "values": 209,
+       "values": 222,
        "errors": 0
       }
      }
@@ -4827,8 +4867,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-016/sinking-funds-bill-tracker.zip",
-    "bytes": 64489,
-    "sha256": "e444aab2dbfc8208e6319d291d8ba1888b5000056d6ced0b728821723dde17c6",
+    "bytes": 65738,
+    "sha256": "58a2ecd84584918c6eae982d931e869a3f80475c1384fbe8e2f7c778cc2d4089",
     "contents": [
      "Start Here.pdf",
      "Sinking Funds & Bill Tracker.xlsx"
@@ -4862,9 +4902,10 @@
         "Bills",
         "Bill Calendar",
         "Sinking Funds",
-        "Paid Tracker"
+        "Paid Tracker",
+        "Guide"
        ],
-       "values": 269,
+       "values": 280,
        "errors": 0
       }
      }
@@ -4918,8 +4959,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-017/compound-interest-retirement-projector.zip",
-    "bytes": 59782,
-    "sha256": "2daadad22323b85678162f289804652386e85892b11108c057f3b5b8cce531bb",
+    "bytes": 60789,
+    "sha256": "3b890f38d5fa4a883632f6ef26aa0497c7cf33b6586cf197a481804a78765c24",
     "contents": [
      "Start Here.pdf",
      "Compound Interest & Retirement Savings Projector.xlsx"
@@ -4952,9 +4993,10 @@
         "Start Here",
         "Inputs",
         "Projection",
-        "Scenarios"
+        "Scenarios",
+        "Guide"
        ],
-       "values": 387,
+       "values": 400,
        "errors": 0
       }
      }
@@ -5007,8 +5049,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-018/shared-expense-splitter.zip",
-    "bytes": 59708,
-    "sha256": "49ae5605c8895dbfc9ea7243b321eaf7c499f5224c61debb17fc7e6b0514a37e",
+    "bytes": 60683,
+    "sha256": "a822257da2ca4cce80fc99abffce3f64c267469276c57836dd8db69f0042c8b7",
     "contents": [
      "Start Here.pdf",
      "Shared Expense Splitter.xlsx"
@@ -5041,9 +5083,10 @@
         "Start Here",
         "People",
         "Expenses",
-        "Balances"
+        "Balances",
+        "Guide"
        ],
-       "values": 81,
+       "values": 91,
        "errors": 0
       }
      }
@@ -5097,8 +5140,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-019/demand-forecasting-template.zip",
-    "bytes": 59703,
-    "sha256": "03725f19af5fb3d78daa946122bd24cb258fea14e18f85737585931053b07247",
+    "bytes": 60735,
+    "sha256": "b5fa532266e87cdeb8368ace863fa5acaaf89c63f5adcc13877a6e5ea0d004c5",
     "contents": [
      "Start Here.pdf",
      "Demand Forecasting Template.xlsx"
@@ -5128,9 +5171,10 @@
        "sheets": [
         "Start Here",
         "History",
-        "Forecast"
+        "Forecast",
+        "Guide"
        ],
-       "values": 409,
+       "values": 424,
        "errors": 0
       }
      }
@@ -5192,8 +5236,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-020/operations-toolkit-bundle.zip",
-    "bytes": 310898,
-    "sha256": "167105e31a79bb142b95b6b278c28269c1bf031bcc84d992153d5de107325fbd",
+    "bytes": 317119,
+    "sha256": "76201b239b69f97ade1dd4546b6a9fd868fc6c00291bab1abff92abe503463f0",
     "contents": [
      "Start Here.pdf",
      "Cycle Count Planner.xlsx",
@@ -5234,9 +5278,10 @@
         "Summary",
         "Items",
         "Count Plan",
-        "Count Sheet"
+        "Count Sheet",
+        "Guide"
        ],
-       "values": 829,
+       "values": 841,
        "errors": 0
       }
      }
