@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T10:49:23Z",
+ "generated_at": "2026-11-07T10:57:46Z",
  "products": [
   {
    "id": "PLD-001",
@@ -7477,17 +7477,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate the monthly and yearly cost of a child from your own numbers.\n\nWHAT'S INCLUDED\n\u2022 Estimate the monthly and yearly cost of a child from your own numbers.\n\u2022 Inputs: Childcare / school fees per month, Food per month, Clothes per month, Medical & insurance per month, Activities per month, Other per month\n\u2022 Results: Monthly total, Yearly total\n\u2022 Scenario table and chart for different childcare / school fees per month\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate the monthly and yearly cost of a child from your own numbers.\n\nWHAT'S INCLUDED\n\u2022 Estimate the monthly and yearly cost of a child from your own numbers.\n\u2022 Inputs: Childcare / school fees per month, Food per month, Clothes per month, Medical & insurance per month, Activities per month, Other per month\n\u2022 Results: Monthly total, Yearly total\n\u2022 Scenario table and chart for different childcare / school fees per month\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "LRH-028/cost-of-raising-a-child-calculator.zip",
-    "bytes": 54768,
-    "sha256": "b8612cb8e3c74578a11a3b5cdc55d2d7b0e41b0aea62fae2a6798f9136e15355",
+    "bytes": 55974,
+    "sha256": "56687391742650a59c76a730c66243e93806071a1a417851ea5e4ff15deb8abb",
     "contents": [
      "Start Here.pdf",
      "Cost of Raising a Child Calculator.xlsx"
@@ -7519,7 +7519,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 66,
        "errors": 0
       }
      }
@@ -9873,17 +9873,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Combine assessments with different weights into a final percentage.\n\nWHAT'S INCLUDED\n\u2022 Combine assessments with different weights into a final percentage.\n\u2022 Inputs: Test 1 %, Test 1 weight, Project %, Project weight, Exam %, Exam weight\n\u2022 Results: Weights total (should be 100%), Final mark\n\u2022 Scenario table and chart for different exam %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Combine assessments with different weights into a final percentage.\n\nWHAT'S INCLUDED\n\u2022 Combine assessments with different weights into a final percentage.\n\u2022 Inputs: Test 1 %, Test 1 weight, Project %, Project weight, Exam %, Exam weight\n\u2022 Results: Weights total (should be 100%), Final mark\n\u2022 Scenario table and chart for different exam %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CHK-027/marks-weighting-calculator.zip",
-    "bytes": 54770,
-    "sha256": "5b1bdc1f7ea740617893201cb826b207cf79fe6302e397ad1c338d85ee880970",
+    "bytes": 55792,
+    "sha256": "c20b8f74fc2d05ca6f73f55d81a4fbd044995a80997a5989552ab1ed7dba916d",
     "contents": [
      "Start Here.pdf",
      "Marks Weighting Calculator.xlsx"
@@ -9915,7 +9915,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 49,
+       "values": 68,
        "errors": 0
       }
      }
@@ -12189,17 +12189,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See how guest count changes your total budget and cost per guest.\n\nWHAT'S INCLUDED\n\u2022 See how guest count changes your total budget and cost per guest.\n\u2022 Inputs: Number of guests, Food & drink per guest, Fixed costs (venue, photo, music\u2026), Other per-guest costs (favours, chairs)\n\u2022 Results: Per-guest costs, Total cost, Cost per guest\n\u2022 Scenario table and chart for different number of guests\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "See how guest count changes your total budget and cost per guest.\n\nWHAT'S INCLUDED\n\u2022 See how guest count changes your total budget and cost per guest.\n\u2022 Inputs: Number of guests, Food & drink per guest, Fixed costs (venue, photo, music\u2026), Other per-guest costs (favours, chairs)\n\u2022 Results: Per-guest costs, Total cost, Cost per guest\n\u2022 Scenario table and chart for different number of guests\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ILP-025/wedding-cost-per-guest-calculator.zip",
-    "bytes": 54779,
-    "sha256": "19b8e3de9e02ac114deb005d5277fcb48f5bd38ff97a57965e0bf83b01ed805b",
+    "bytes": 55746,
+    "sha256": "ad2a400fdafbeb3f9de1636d03e65a4fd7ad084f56d7e0340023a1ac65d3b6fc",
     "contents": [
      "Start Here.pdf",
      "Wedding Cost per Guest Calculator.xlsx"
@@ -12231,7 +12231,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 64,
        "errors": 0
       }
      }
@@ -14597,17 +14597,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Convert pace to finish time and see predicted times for common race distances.\n\nWHAT'S INCLUDED\n\u2022 Convert pace to finish time and see predicted times for common race distances.\n\u2022 Inputs: Your pace (minutes per km), Race distance (km)\n\u2022 Results: Finish time (minutes), Finish time (hours)\n\u2022 Scenario table and chart for different your pace (minutes per km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Convert pace to finish time and see predicted times for common race distances.\n\nWHAT'S INCLUDED\n\u2022 Convert pace to finish time and see predicted times for common race distances.\n\u2022 Inputs: Your pace (minutes per km), Race distance (km)\n\u2022 Results: Finish time (minutes), Finish time (hours)\n\u2022 Scenario table and chart for different your pace (minutes per km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PCB-024/running-pace-race-time-calculator.zip",
-    "bytes": 54683,
-    "sha256": "130b3b4c4d651f06fe02b62b4af3ff48df65815d7b1a17847c69a87b54cf6bad",
+    "bytes": 55545,
+    "sha256": "d776a95bdbddfad26be3103f40a0ba5909cb0a1422513fcda30b33f49730b3ed",
     "contents": [
      "Start Here.pdf",
      "Running Pace & Race Time Calculator.xlsx"
@@ -14639,7 +14639,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 56,
        "errors": 0
       }
      }
@@ -14683,17 +14683,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate daily energy needs with the Mifflin-St Jeor equation and an activity factor.\n\nWHAT'S INCLUDED\n\u2022 Estimate daily energy needs with the Mifflin-St Jeor equation and an activity factor.\n\u2022 Inputs: Weight (kg), Height (cm), Age, Sex adjustment (+5 male, \u2212161 female), Activity factor (1.2 sedentary \u2013 1.9 very active)\n\u2022 Results: BMR (kcal/day), Estimated daily needs (kcal)\n\u2022 Scenario table and chart for different activity factor (1.2 sedentary \u2013 1.9 very active)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate daily energy needs with the Mifflin-St Jeor equation and an activity factor.\n\nWHAT'S INCLUDED\n\u2022 Estimate daily energy needs with the Mifflin-St Jeor equation and an activity factor.\n\u2022 Inputs: Weight (kg), Height (cm), Age, Sex adjustment (+5 male, \u2212161 female), Activity factor (1.2 sedentary \u2013 1.9 very active)\n\u2022 Results: BMR (kcal/day), Estimated daily needs (kcal)\n\u2022 Scenario table and chart for different activity factor (1.2 sedentary \u2013 1.9 very active)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PCB-025/daily-calorie-needs-calculator.zip",
-    "bytes": 54864,
-    "sha256": "c5d0fb65a255705dff7207b8dc1f95443491baf34f1b28998623b9f4e9cb7229",
+    "bytes": 55894,
+    "sha256": "8c73aabda10e85a376c3eb4d4594eb427f7cbebe969f6a8210586ee45fea990a",
     "contents": [
      "Start Here.pdf",
      "Daily Calorie Needs Calculator.xlsx"
@@ -14725,7 +14725,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 46,
+       "values": 64,
        "errors": 0
       }
      }
@@ -16837,17 +16837,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Calculate gross and net yield, monthly cash flow and cash-on-cash return.\n\nWHAT'S INCLUDED\n\u2022 Calculate gross and net yield, monthly cash flow and cash-on-cash return.\n\u2022 Inputs: Purchase price, Cash invested (deposit + costs), Monthly rent, Monthly loan repayment, Monthly costs (rates, levies, insurance, maintenance), Vacancy allowance (%)\n\u2022 Results: Gross yield, Net yield (before loan), Monthly cash flow, Cash-on-cash return\n\u2022 Scenario table and chart for different monthly rent\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Calculate gross and net yield, monthly cash flow and cash-on-cash return.\n\nWHAT'S INCLUDED\n\u2022 Calculate gross and net yield, monthly cash flow and cash-on-cash return.\n\u2022 Inputs: Purchase price, Cash invested (deposit + costs), Monthly rent, Monthly loan repayment, Monthly costs (rates, levies, insurance, maintenance), Vacancy allowance (%)\n\u2022 Results: Gross yield, Net yield (before loan), Monthly cash flow, Cash-on-cash return\n\u2022 Scenario table and chart for different monthly rent\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "DPL-021/rental-yield-cash-flow-calculator.zip",
-    "bytes": 54950,
-    "sha256": "7ba9f97f71975fe7afec83225a97db09ec1fcf8ffce87c5c1291d9381c7dd0ac",
+    "bytes": 56034,
+    "sha256": "436e39e5779d7a0ae6fbc5581705dad34fb77f2bace6ab47d140492f8f20c560",
     "contents": [
      "Start Here.pdf",
      "Rental Yield & Cash Flow Calculator.xlsx"
@@ -16879,7 +16879,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 52,
+       "values": 71,
        "errors": 0
       }
      }
@@ -16923,17 +16923,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out a new rent from an escalation percentage and see the yearly effect.\n\nWHAT'S INCLUDED\n\u2022 Work out a new rent from an escalation percentage and see the yearly effect.\n\u2022 Inputs: Current monthly rent, Increase %\n\u2022 Results: New monthly rent, Monthly difference, Extra per year\n\u2022 Scenario table and chart for different increase %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out a new rent from an escalation percentage and see the yearly effect.\n\nWHAT'S INCLUDED\n\u2022 Work out a new rent from an escalation percentage and see the yearly effect.\n\u2022 Inputs: Current monthly rent, Increase %\n\u2022 Results: New monthly rent, Monthly difference, Extra per year\n\u2022 Scenario table and chart for different increase %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "DPL-022/rent-increase-calculator.zip",
-    "bytes": 54650,
-    "sha256": "da2d649630abd75b3fe747eb12da46a55851e92ed098a00fc1ad81d5b19cc608",
+    "bytes": 55399,
+    "sha256": "bb699ea07f2aa35502c7b24fefd9fb2545bf6ea0eaa04f090f5b43fa07b85529",
     "contents": [
      "Start Here.pdf",
      "Rent Increase Calculator.xlsx"
@@ -16965,7 +16965,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 56,
        "errors": 0
       }
      }
@@ -17009,17 +17009,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Compare yearly net income from short-term letting versus a long-term lease.\n\nWHAT'S INCLUDED\n\u2022 Compare yearly net income from short-term letting versus a long-term lease.\n\u2022 Inputs: Short-term nightly rate, Occupancy %, Platform & cleaning cost per night, Short-term extra monthly costs (utilities, Wi-Fi, supplies), Long-term monthly rent\n\u2022 Results: Short-term net per year, Long-term rent per year, Difference (short \u2212 long)\n\u2022 Scenario table and chart for different occupancy %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Compare yearly net income from short-term letting versus a long-term lease.\n\nWHAT'S INCLUDED\n\u2022 Compare yearly net income from short-term letting versus a long-term lease.\n\u2022 Inputs: Short-term nightly rate, Occupancy %, Platform & cleaning cost per night, Short-term extra monthly costs (utilities, Wi-Fi, supplies), Long-term monthly rent\n\u2022 Results: Short-term net per year, Long-term rent per year, Difference (short \u2212 long)\n\u2022 Scenario table and chart for different occupancy %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "DPL-023/short-term-vs-long-term-rental-comparison.zip",
-    "bytes": 54918,
-    "sha256": "0294a473021882e675bc6bccfeb225d2dda81b99654b88a902d0008e7f08a0c0",
+    "bytes": 55940,
+    "sha256": "540fe2e5c0c5ff842ed12b18ecf42dbe32593cc112f6448a0c6d5df1cd74251f",
     "contents": [
      "Start Here.pdf",
      "Short-Term vs Long-Term Rental Comparison.xlsx"
@@ -17051,7 +17051,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 49,
+       "values": 67,
        "errors": 0
       }
      }
@@ -18386,17 +18386,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate the business share of home costs from the area your office uses.\n\nWHAT'S INCLUDED\n\u2022 Estimate the business share of home costs from the area your office uses.\n\u2022 Inputs: Office area (m\u00b2), Total home area (m\u00b2), Rent or bond interest per year, Electricity & water per year, Rates, insurance, cleaning per year\n\u2022 Results: Business share %, Business share of costs\n\u2022 Scenario table and chart for different office area (m\u00b2)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate the business share of home costs from the area your office uses.\n\nWHAT'S INCLUDED\n\u2022 Estimate the business share of home costs from the area your office uses.\n\u2022 Inputs: Office area (m\u00b2), Total home area (m\u00b2), Rent or bond interest per year, Electricity & water per year, Rates, insurance, cleaning per year\n\u2022 Results: Business share %, Business share of costs\n\u2022 Scenario table and chart for different office area (m\u00b2)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GSM-009/home-office-cost-share-calculator.zip",
-    "bytes": 54887,
-    "sha256": "a4748724adb7921647e653e12d2837d178497d8f9192908f2c03511c29957367",
+    "bytes": 55793,
+    "sha256": "fb8c68c17dc0c50bb9d08204dd95def6fbd3acd0a6c7c90ef3c7fec338d6f062",
     "contents": [
      "Start Here.pdf",
      "Home Office Cost Share Calculator.xlsx"
@@ -18428,7 +18428,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 46,
+       "values": 64,
        "errors": 0
       }
      }
@@ -19563,17 +19563,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out the hourly and day rate you need from income goals and billable time.\n\nWHAT'S INCLUDED\n\u2022 Work out the hourly and day rate you need from income goals and billable time.\n\u2022 Inputs: Take-home income goal per year, Business expenses per year, Tax rate estimate, Working weeks per year, Billable hours per week\n\u2022 Results: Revenue needed, Billable hours per year, Minimum hourly rate\n\u2022 Scenario table and chart for different billable hours per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out the hourly and day rate you need from income goals and billable time.\n\nWHAT'S INCLUDED\n\u2022 Work out the hourly and day rate you need from income goals and billable time.\n\u2022 Inputs: Take-home income goal per year, Business expenses per year, Tax rate estimate, Working weeks per year, Billable hours per week\n\u2022 Results: Revenue needed, Billable hours per year, Minimum hourly rate\n\u2022 Scenario table and chart for different billable hours per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GSM-024/freelance-rate-calculator.zip",
-    "bytes": 54776,
-    "sha256": "c798d4f67ab57b058a5b835eed801fc4dd30f1e51fdb3fd6b9c06954e944eb8b",
+    "bytes": 55866,
+    "sha256": "68796d97a9f77b693487ec7cfb1a3c147eaf9ad4af6dc117f7162b0cc5f20ef2",
     "contents": [
      "Start Here.pdf",
      "Freelance Rate Calculator.xlsx"
@@ -19605,7 +19605,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -19649,17 +19649,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Build a project price from estimated hours, rate, expenses and a contingency.\n\nWHAT'S INCLUDED\n\u2022 Build a project price from estimated hours, rate, expenses and a contingency.\n\u2022 Inputs: Estimated hours, Hourly rate, Project expenses, Contingency %\n\u2022 Results: Labour, Subtotal, Quote (with contingency)\n\u2022 Scenario table and chart for different estimated hours\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Build a project price from estimated hours, rate, expenses and a contingency.\n\nWHAT'S INCLUDED\n\u2022 Build a project price from estimated hours, rate, expenses and a contingency.\n\u2022 Inputs: Estimated hours, Hourly rate, Project expenses, Contingency %\n\u2022 Results: Labour, Subtotal, Quote (with contingency)\n\u2022 Scenario table and chart for different estimated hours\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GSM-025/project-quote-calculator.zip",
-    "bytes": 54712,
-    "sha256": "2180ea691d1747910544e20d457f95bb73bd879abd884a5485f3cad960b8161a",
+    "bytes": 55627,
+    "sha256": "43cfc51c967336946f9f8c897c54a655f49694b3c490ae2b4df3f011681f997f",
     "contents": [
      "Start Here.pdf",
      "Project Quote Calculator.xlsx"
@@ -19691,7 +19691,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -19735,17 +19735,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate a starting sponsorship fee from average views and a CPM range.\n\nWHAT'S INCLUDED\n\u2022 Estimate a starting sponsorship fee from average views and a CPM range.\n\u2022 Inputs: Average views per video/post, CPM (rate per 1,000 views), Production fee\n\u2022 Results: View-based fee, Suggested starting fee\n\u2022 Scenario table and chart for different cpm (rate per 1,000 views)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate a starting sponsorship fee from average views and a CPM range.\n\nWHAT'S INCLUDED\n\u2022 Estimate a starting sponsorship fee from average views and a CPM range.\n\u2022 Inputs: Average views per video/post, CPM (rate per 1,000 views), Production fee\n\u2022 Results: View-based fee, Suggested starting fee\n\u2022 Scenario table and chart for different cpm (rate per 1,000 views)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GSM-026/sponsorship-rate-calculator.zip",
-    "bytes": 54729,
-    "sha256": "e4d1ba07f4c19fab3566b91c45f699b80ecbf510b13c50302dabb3906fe0f2a0",
+    "bytes": 55623,
+    "sha256": "ca18de7d1a8945aa04f5b38ba4b7d2d4d67873d02af29dce6440989c7b13cf0b",
     "contents": [
      "Start Here.pdf",
      "Sponsorship Rate Calculator.xlsx"
@@ -19777,7 +19777,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 42,
+       "values": 58,
        "errors": 0
       }
      }
@@ -21137,17 +21137,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out how many donors and what average gift you need to reach a target.\n\nWHAT'S INCLUDED\n\u2022 Work out how many donors and what average gift you need to reach a target.\n\u2022 Inputs: Campaign goal, Expected average gift, Response rate from asks\n\u2022 Results: Donors needed, People to ask\n\u2022 Scenario table and chart for different expected average gift\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out how many donors and what average gift you need to reach a target.\n\nWHAT'S INCLUDED\n\u2022 Work out how many donors and what average gift you need to reach a target.\n\u2022 Inputs: Campaign goal, Expected average gift, Response rate from asks\n\u2022 Results: Donors needed, People to ask\n\u2022 Scenario table and chart for different expected average gift\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-012/fundraising-goal-calculator.zip",
-    "bytes": 54679,
-    "sha256": "749f9f71707c3e2daf2f6d64bb8b4f3dc491cab142af66dc64c2a6af915cf94a",
+    "bytes": 55590,
+    "sha256": "3b6508cb5d390725aa48160679c8bfa5674dc2c8d63b1444947fd77b71b0fb71",
     "contents": [
      "Start Here.pdf",
      "Fundraising Goal Calculator.xlsx"
@@ -21179,7 +21179,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 57,
        "errors": 0
       }
      }
@@ -21223,17 +21223,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Show funders the cost per person reached, including a share of overheads.\n\nWHAT'S INCLUDED\n\u2022 Show funders the cost per person reached, including a share of overheads.\n\u2022 Inputs: Direct programme costs per year, Overheads per year, Share of overheads for this programme, People reached per year\n\u2022 Results: Full programme cost, Cost per beneficiary\n\u2022 Scenario table and chart for different people reached per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Show funders the cost per person reached, including a share of overheads.\n\nWHAT'S INCLUDED\n\u2022 Show funders the cost per person reached, including a share of overheads.\n\u2022 Inputs: Direct programme costs per year, Overheads per year, Share of overheads for this programme, People reached per year\n\u2022 Results: Full programme cost, Cost per beneficiary\n\u2022 Scenario table and chart for different people reached per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-013/programme-cost-per-beneficiary-calculator.zip",
-    "bytes": 54772,
-    "sha256": "bf21614567a94d5926990b39b42a0c728d0095d7acab0c00dbca3eb76bb2f489",
+    "bytes": 55675,
+    "sha256": "2884290b1497deff656ad2be1e3ca9e9816dafe2898df877da1e1b4c0be1d7d9",
     "contents": [
      "Start Here.pdf",
      "Programme Cost per Beneficiary Calculator.xlsx"
@@ -21265,7 +21265,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 43,
+       "values": 60,
        "errors": 0
       }
      }
@@ -23543,17 +23543,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Set menu prices from plate cost and target food-cost %, including VAT/sales tax.\n\nWHAT'S INCLUDED\n\u2022 Set menu prices from plate cost and target food-cost %, including VAT/sales tax.\n\u2022 Inputs: Plate cost, Target food cost %, VAT / sales tax rate\n\u2022 Results: Price before tax, Menu price including tax\n\u2022 Scenario table and chart for different target food cost %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Set menu prices from plate cost and target food-cost %, including VAT/sales tax.\n\nWHAT'S INCLUDED\n\u2022 Set menu prices from plate cost and target food-cost %, including VAT/sales tax.\n\u2022 Inputs: Plate cost, Target food cost %, VAT / sales tax rate\n\u2022 Results: Price before tax, Menu price including tax\n\u2022 Scenario table and chart for different target food cost %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "MSE-011/menu-price-calculator.zip",
-    "bytes": 54632,
-    "sha256": "4502d70b6bf9a3e835beee2aeceb3270d194f0a9fad0e3a720c4c9c3273f3843",
+    "bytes": 55510,
+    "sha256": "b0789bbdf5572bcd118af6246d7f74b91eebfc2355a5d44946b95c89feeeaaa2",
     "contents": [
      "Start Here.pdf",
      "Menu Price Calculator.xlsx"
@@ -23585,7 +23585,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 57,
        "errors": 0
       }
      }
@@ -23629,17 +23629,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "How many meals or covers you need each month to cover fixed costs.\n\nWHAT'S INCLUDED\n\u2022 How many meals or covers you need each month to cover fixed costs.\n\u2022 Inputs: Fixed costs per month (rent, wages, etc.), Average spend per customer, Variable cost per customer, Trading days per month\n\u2022 Results: Contribution per customer, Break-even customers per month, Break-even customers per day\n\u2022 Scenario table and chart for different average spend per customer\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "How many meals or covers you need each month to cover fixed costs.\n\nWHAT'S INCLUDED\n\u2022 How many meals or covers you need each month to cover fixed costs.\n\u2022 Inputs: Fixed costs per month (rent, wages, etc.), Average spend per customer, Variable cost per customer, Trading days per month\n\u2022 Results: Contribution per customer, Break-even customers per month, Break-even customers per day\n\u2022 Scenario table and chart for different average spend per customer\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "MSE-012/break-even-calculator-for-food-businesses.zip",
-    "bytes": 54788,
-    "sha256": "45aff68be61188bb20c1de177498696c9341805f5f37969bfebd781a2da6c086",
+    "bytes": 55772,
+    "sha256": "0697d4ad470f871b969c816278f1fa0e0e45251deb312fc01844aa4555a5ef2f",
     "contents": [
      "Start Here.pdf",
      "Break-Even Calculator for Food Businesses.xlsx"
@@ -23671,7 +23671,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -23715,17 +23715,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Scale a recipe up or down for any number of portions.\n\nWHAT'S INCLUDED\n\u2022 Scale a recipe up or down for any number of portions.\n\u2022 Inputs: Original portions, Portions needed, Ingredient 1 quantity (g/ml), Ingredient 2 quantity, Ingredient 3 quantity, Ingredient 4 quantity\n\u2022 Results: Scaling factor, Ingredient 1 scaled, Ingredient 2 scaled, Ingredient 3 scaled, Ingredient 4 scaled\n\u2022 Scenario table and chart for different portions needed\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Scale a recipe up or down for any number of portions.\n\nWHAT'S INCLUDED\n\u2022 Scale a recipe up or down for any number of portions.\n\u2022 Inputs: Original portions, Portions needed, Ingredient 1 quantity (g/ml), Ingredient 2 quantity, Ingredient 3 quantity, Ingredient 4 quantity\n\u2022 Results: Scaling factor, Ingredient 1 scaled, Ingredient 2 scaled, Ingredient 3 scaled, Ingredient 4 scaled\n\u2022 Scenario table and chart for different portions needed\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "MSE-013/recipe-scaling-calculator.zip",
-    "bytes": 54707,
-    "sha256": "7846763ef11c59759f758c1175e4d5a523fd25293bf589ee48b55bdc6584d837",
+    "bytes": 55728,
+    "sha256": "0fb1981972d15b0b2187bcc583cc1540d43f751663b01d5220ec28de72042c1d",
     "contents": [
      "Start Here.pdf",
      "Recipe Scaling Calculator.xlsx"
@@ -23757,7 +23757,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 53,
+       "values": 72,
        "errors": 0
       }
      }
@@ -26047,17 +26047,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Build shipping into your price so you can offer free delivery and keep your margin.\n\nWHAT'S INCLUDED\n\u2022 Build shipping into your price so you can offer free delivery and keep your margin.\n\u2022 Inputs: Product cost, Packaging, Shipping cost you absorb, Marketplace/payment fees %, Target profit margin %\n\u2022 Results: Price with free shipping, Profit per sale\n\u2022 Scenario table and chart for different shipping cost you absorb\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Build shipping into your price so you can offer free delivery and keep your margin.\n\nWHAT'S INCLUDED\n\u2022 Build shipping into your price so you can offer free delivery and keep your margin.\n\u2022 Inputs: Product cost, Packaging, Shipping cost you absorb, Marketplace/payment fees %, Target profit margin %\n\u2022 Results: Price with free shipping, Profit per sale\n\u2022 Scenario table and chart for different shipping cost you absorb\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "SKD-011/free-shipping-price-calculator.zip",
-    "bytes": 54768,
-    "sha256": "5db0bee9842e8905f26ad97fe44b621001583a2629b6b1608ec5cee97cb14073",
+    "bytes": 55715,
+    "sha256": "94520dca71077c8c6216bae0a840f2c555943323e2fc7929f0e253bf09413030",
     "contents": [
      "Start Here.pdf",
      "Free-Shipping Price Calculator.xlsx"
@@ -26089,7 +26089,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 63,
        "errors": 0
       }
      }
@@ -26133,17 +26133,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See what you keep after listing, transaction, payment and shipping costs.\n\nWHAT'S INCLUDED\n\u2022 See what you keep after listing, transaction, payment and shipping costs.\n\u2022 Inputs: Sale price, Shipping charged, Listing fee per sale, Transaction fee %, Payment processing %, Payment fixed fee\n\u2022 Results: Total fees, You keep (profit)\n\u2022 Scenario table and chart for different sale price\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "See what you keep after listing, transaction, payment and shipping costs.\n\nWHAT'S INCLUDED\n\u2022 See what you keep after listing, transaction, payment and shipping costs.\n\u2022 Inputs: Sale price, Shipping charged, Listing fee per sale, Transaction fee %, Payment processing %, Payment fixed fee\n\u2022 Results: Total fees, You keep (profit)\n\u2022 Scenario table and chart for different sale price\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "SKD-012/marketplace-fee-calculator.zip",
-    "bytes": 54937,
-    "sha256": "59bf1c3560f60ed3a20e89d4e6ccac0408db7700e66d10fc4f0ef16d7ca5fbb2",
+    "bytes": 55831,
+    "sha256": "baf69655d5e395b1a723ff682b4d3accd8dd8792f537c7a393677856ff345aaf",
     "contents": [
      "Start Here.pdf",
      "Marketplace Fee Calculator.xlsx"
@@ -26175,7 +26175,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 52,
+       "values": 72,
        "errors": 0
       }
      }
@@ -26219,17 +26219,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out wholesale and retail prices from cost with standard markups.\n\nWHAT'S INCLUDED\n\u2022 Work out wholesale and retail prices from cost with standard markups.\n\u2022 Inputs: Cost to make, Wholesale markup (\u00d7), Retail markup on wholesale (\u00d7)\n\u2022 Results: Wholesale price, Recommended retail price\n\u2022 Scenario table and chart for different wholesale markup (\u00d7)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out wholesale and retail prices from cost with standard markups.\n\nWHAT'S INCLUDED\n\u2022 Work out wholesale and retail prices from cost with standard markups.\n\u2022 Inputs: Cost to make, Wholesale markup (\u00d7), Retail markup on wholesale (\u00d7)\n\u2022 Results: Wholesale price, Recommended retail price\n\u2022 Scenario table and chart for different wholesale markup (\u00d7)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "SKD-013/wholesale-price-calculator.zip",
-    "bytes": 54612,
-    "sha256": "116bdf89a1c23a2e52e77175c6bcc797dcfa10b413ff448181f9e556a1e20bd6",
+    "bytes": 55468,
+    "sha256": "f309057358195feeef1d25691d1d281589444cbce72de2991ebd144c61d54690",
     "contents": [
      "Start Here.pdf",
      "Wholesale Price Calculator.xlsx"
@@ -26261,7 +26261,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 57,
        "errors": 0
       }
      }
@@ -28528,17 +28528,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See the long-term value of negotiating a higher starting salary.\n\nWHAT'S INCLUDED\n\u2022 See the long-term value of negotiating a higher starting salary.\n\u2022 Inputs: Offered salary, Your counter-offer, Typical annual increase %, Years in role\n\u2022 Results: Difference in year one, Extra earned over the period\n\u2022 Scenario table and chart for different your counter-offer\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "See the long-term value of negotiating a higher starting salary.\n\nWHAT'S INCLUDED\n\u2022 See the long-term value of negotiating a higher starting salary.\n\u2022 Inputs: Offered salary, Your counter-offer, Typical annual increase %, Years in role\n\u2022 Results: Difference in year one, Extra earned over the period\n\u2022 Scenario table and chart for different your counter-offer\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CLK-011/salary-negotiation-calculator.zip",
-    "bytes": 54735,
-    "sha256": "e80374a716454b8835064965d8944cd0c7b460b9b5072da481851940de8b453f",
+    "bytes": 55609,
+    "sha256": "aa077bb221cf72aa1b51c6e80abd93b0c0c3b74343ebd3be88fe369bf4db8f39",
     "contents": [
      "Start Here.pdf",
      "Salary Negotiation Calculator.xlsx"
@@ -28570,7 +28570,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 43,
+       "values": 60,
        "errors": 0
       }
      }
@@ -28614,17 +28614,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Compare a salaried role to a contract day rate after unpaid days and costs.\n\nWHAT'S INCLUDED\n\u2022 Compare a salaried role to a contract day rate after unpaid days and costs.\n\u2022 Inputs: Salary per year, Benefits value per year, Contract day rate, Billable days per year, Contractor costs per year (insurance, admin)\n\u2022 Results: Employed package, Contract income after costs, Difference (contract \u2212 employed)\n\u2022 Scenario table and chart for different contract day rate\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Compare a salaried role to a contract day rate after unpaid days and costs.\n\nWHAT'S INCLUDED\n\u2022 Compare a salaried role to a contract day rate after unpaid days and costs.\n\u2022 Inputs: Salary per year, Benefits value per year, Contract day rate, Billable days per year, Contractor costs per year (insurance, admin)\n\u2022 Results: Employed package, Contract income after costs, Difference (contract \u2212 employed)\n\u2022 Scenario table and chart for different contract day rate\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CLK-012/take-home-vs-contract-rate-calculator.zip",
-    "bytes": 54830,
-    "sha256": "a79457b29c21291a79777c3039eb7dada890ba44ea1269852668c204464bf172",
+    "bytes": 55822,
+    "sha256": "a54eba035aea828856a2555c0fe028f1397cf80612f5706d6e96ffbb32bd7c8a",
     "contents": [
      "Start Here.pdf",
      "Take-Home vs Contract Rate Calculator.xlsx"
@@ -28656,7 +28656,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -30997,17 +30997,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out a charge-out rate that covers wages, overheads and profit.\n\nWHAT'S INCLUDED\n\u2022 Work out a charge-out rate that covers wages, overheads and profit.\n\u2022 Inputs: Your target wage per year, Overheads per year (van, tools, insurance, phone), Profit margin %, Billable days per year, Billable hours per day\n\u2022 Results: Revenue needed, Day rate, Hourly rate\n\u2022 Scenario table and chart for different billable days per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out a charge-out rate that covers wages, overheads and profit.\n\nWHAT'S INCLUDED\n\u2022 Work out a charge-out rate that covers wages, overheads and profit.\n\u2022 Inputs: Your target wage per year, Overheads per year (van, tools, insurance, phone), Profit margin %, Billable days per year, Billable hours per day\n\u2022 Results: Revenue needed, Day rate, Hourly rate\n\u2022 Scenario table and chart for different billable days per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "TNT-011/hourly-day-rate-calculator-for-trades.zip",
-    "bytes": 54869,
-    "sha256": "8fb250761d0ef2aacf47e02090ac55faba45c484026036f6483341f383d6d3f0",
+    "bytes": 55847,
+    "sha256": "f8214984038a8ac2e4d5e691cf6726a09ec64bd31b01710195262f3752059c8a",
     "contents": [
      "Start Here.pdf",
      "Hourly & Day Rate Calculator for Trades.xlsx"
@@ -31039,7 +31039,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -31083,17 +31083,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate litres of paint for walls and ceilings from room size, coats and coverage.\n\nWHAT'S INCLUDED\n\u2022 Estimate litres of paint for walls and ceilings from room size, coats and coverage.\n\u2022 Inputs: Room length (m), Room width (m), Wall height (m), Doors & windows area (m\u00b2), Coats, Coverage (m\u00b2 per litre)\n\u2022 Results: Wall area (m\u00b2), Ceiling area (m\u00b2), Litres for walls, Litres for ceiling\n\u2022 Scenario table and chart for different coats\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate litres of paint for walls and ceilings from room size, coats and coverage.\n\nWHAT'S INCLUDED\n\u2022 Estimate litres of paint for walls and ceilings from room size, coats and coverage.\n\u2022 Inputs: Room length (m), Room width (m), Wall height (m), Doors & windows area (m\u00b2), Coats, Coverage (m\u00b2 per litre)\n\u2022 Results: Wall area (m\u00b2), Ceiling area (m\u00b2), Litres for walls, Litres for ceiling\n\u2022 Scenario table and chart for different coats\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "TNT-012/paint-quantity-calculator.zip",
-    "bytes": 54816,
-    "sha256": "0e44c3a6d513ebf2538e92847eac658bf316f995729af7c0b9569557d6c4d8e8",
+    "bytes": 55860,
+    "sha256": "32a59039c7ee189448226841006766c23f6df471c4a69f64446befb817071171",
     "contents": [
      "Start Here.pdf",
      "Paint Quantity Calculator.xlsx"
@@ -31125,7 +31125,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 48,
+       "values": 67,
        "errors": 0
       }
      }
@@ -31169,17 +31169,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out boxes of tiles or flooring needed with a wastage allowance.\n\nWHAT'S INCLUDED\n\u2022 Work out boxes of tiles or flooring needed with a wastage allowance.\n\u2022 Inputs: Area length (m), Area width (m), Wastage %, m\u00b2 per box, Price per box\n\u2022 Results: Area (m\u00b2), m\u00b2 with wastage, Boxes to buy, Cost\n\u2022 Scenario table and chart for different wastage %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out boxes of tiles or flooring needed with a wastage allowance.\n\nWHAT'S INCLUDED\n\u2022 Work out boxes of tiles or flooring needed with a wastage allowance.\n\u2022 Inputs: Area length (m), Area width (m), Wastage %, m\u00b2 per box, Price per box\n\u2022 Results: Area (m\u00b2), m\u00b2 with wastage, Boxes to buy, Cost\n\u2022 Scenario table and chart for different wastage %\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "TNT-013/tile-flooring-quantity-calculator.zip",
-    "bytes": 54830,
-    "sha256": "42236b1cc03630516eceac1128d0e3575bb6c35b4dac6abc78ac694196861cfe",
+    "bytes": 55762,
+    "sha256": "3f106378c95b1d05d2d7abf4064ceb7678d28738f66f8f628859b34cd46e6be5",
     "contents": [
      "Start Here.pdf",
      "Tile & Flooring Quantity Calculator.xlsx"
@@ -31211,7 +31211,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -31255,17 +31255,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Calculate concrete volume for slabs and footings, plus bags of premix.\n\nWHAT'S INCLUDED\n\u2022 Calculate concrete volume for slabs and footings, plus bags of premix.\n\u2022 Inputs: Length (m), Width (m), Depth (m), Extra allowance %, Bags of premix per m\u00b3 (check bag label)\n\u2022 Results: Volume (m\u00b3), Volume with allowance (m\u00b3), Premix bags\n\u2022 Scenario table and chart for different depth (m)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Calculate concrete volume for slabs and footings, plus bags of premix.\n\nWHAT'S INCLUDED\n\u2022 Calculate concrete volume for slabs and footings, plus bags of premix.\n\u2022 Inputs: Length (m), Width (m), Depth (m), Extra allowance %, Bags of premix per m\u00b3 (check bag label)\n\u2022 Results: Volume (m\u00b3), Volume with allowance (m\u00b3), Premix bags\n\u2022 Scenario table and chart for different depth (m)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "TNT-014/concrete-volume-calculator.zip",
-    "bytes": 54731,
-    "sha256": "a1aae08acead792d2fe0294d049daaa84ec3502edb27a90e2061cd70785b1097",
+    "bytes": 55708,
+    "sha256": "1783a6b1a53c425e7547dcaf17f5dfb4aa1b36cd310ab111ecab2584b8281d50",
     "contents": [
      "Start Here.pdf",
      "Concrete Volume Calculator.xlsx"
@@ -31297,7 +31297,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 63,
        "errors": 0
       }
      }
@@ -33512,17 +33512,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate the weekly and monthly cost of paid home care.\n\nWHAT'S INCLUDED\n\u2022 Estimate the weekly and monthly cost of paid home care.\n\u2022 Inputs: Hourly rate, Hours per day, Days per week, Other weekly costs (transport, supplies)\n\u2022 Results: Weekly cost, Monthly cost (\u00d74.33)\n\u2022 Scenario table and chart for different hours per day\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate the weekly and monthly cost of paid home care.\n\nWHAT'S INCLUDED\n\u2022 Estimate the weekly and monthly cost of paid home care.\n\u2022 Inputs: Hourly rate, Hours per day, Days per week, Other weekly costs (transport, supplies)\n\u2022 Results: Weekly cost, Monthly cost (\u00d74.33)\n\u2022 Scenario table and chart for different hours per day\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "KDK-011/home-care-cost-calculator.zip",
-    "bytes": 54684,
-    "sha256": "9ff8e8bea00744a279598eaa5fb890d1c1405306d9ff667b3194e1f6b9c9f559",
+    "bytes": 55576,
+    "sha256": "41a9a973ccd10fff28c116ee65236b977172b75c363a404cd912c28d73bbf0c4",
     "contents": [
      "Start Here.pdf",
      "Home Care Cost Calculator.xlsx"
@@ -33554,7 +33554,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 43,
+       "values": 60,
        "errors": 0
       }
      }
@@ -33572,8 +33572,10 @@
    "summary": "Split care costs fairly between family members by agreed percentages.",
    "features": [
     "Split care costs fairly between family members by agreed percentages.",
-    "Inputs: Monthly care cost, Person 1 share %, Person 2 share %, Person 3 share %",
-    "Results: Shares total (should be 100%), Person 1 pays, Person 2 pays, Person 3 pays"
+    "Calculator: monthly care cost and each person's share in, each person's amount out, with a 100% check",
+    "Scenarios: how Person 1's share changes as care costs rise, with chart",
+    "Start Here guide with a worked example and tips for agreeing the split",
+    "Works in Excel, Google Sheets and LibreOffice; no macros"
    ],
    "tags": [
     "cost sharing",
@@ -33597,17 +33599,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Split care costs fairly between family members by agreed percentages.\n\nWHAT'S INCLUDED\n\u2022 Split care costs fairly between family members by agreed percentages.\n\u2022 Inputs: Monthly care cost, Person 1 share %, Person 2 share %, Person 3 share %\n\u2022 Results: Shares total (should be 100%), Person 1 pays, Person 2 pays, Person 3 pays\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Split care costs fairly between family members by agreed percentages.\n\nWHAT'S INCLUDED\n\u2022 Split care costs fairly between family members by agreed percentages.\n\u2022 Calculator: monthly care cost and each person's share in, each person's amount out, with a 100% check\n\u2022 Scenarios: how Person 1's share changes as care costs rise, with chart\n\u2022 Start Here guide with a worked example and tips for agreeing the split\n\u2022 Works in Excel, Google Sheets and LibreOffice; no macros\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "KDK-012/family-care-cost-sharing-calculator.zip",
-    "bytes": 52264,
-    "sha256": "0991fb1e6dcb25da52c53d910d8617e520c3e40e0eb09d4d68850ef77ffc769d",
+    "bytes": 55625,
+    "sha256": "df2dadb4affcf1afe27c0afcc4c224a3240ca3c4d110228dd20ad9cea681c3b6",
     "contents": [
      "Start Here.pdf",
      "Family Care Cost Sharing Calculator.xlsx"
@@ -33628,15 +33630,16 @@
     "errors": [],
     "info": {
      "formulas": {
-      "Family Care Cost Sharing Calculator.xlsx": 4
+      "Family Care Cost Sharing Calculator.xlsx": 9
      },
      "xlsx": {
       "Family Care Cost Sharing Calculator.xlsx": {
        "sheets": [
         "Start Here",
-        "Calculator"
+        "Calculator",
+        "Scenarios"
        ],
-       "values": 33,
+       "values": 64,
        "errors": 0
       }
      }
@@ -36017,17 +36020,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out how much soil or mulch to fill raised beds, and how many bags.\n\nWHAT'S INCLUDED\n\u2022 Work out how much soil or mulch to fill raised beds, and how many bags.\n\u2022 Inputs: Bed length (m), Bed width (m), Depth to fill (m), Number of beds, Litres per bag\n\u2022 Results: Volume per bed (m\u00b3), Total volume (m\u00b3), Bags needed\n\u2022 Scenario table and chart for different depth to fill (m)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out how much soil or mulch to fill raised beds, and how many bags.\n\nWHAT'S INCLUDED\n\u2022 Work out how much soil or mulch to fill raised beds, and how many bags.\n\u2022 Inputs: Bed length (m), Bed width (m), Depth to fill (m), Number of beds, Litres per bag\n\u2022 Results: Volume per bed (m\u00b3), Total volume (m\u00b3), Bags needed\n\u2022 Scenario table and chart for different depth to fill (m)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "FRB-011/garden-bed-soil-mulch-volume-calculator.zip",
-    "bytes": 54848,
-    "sha256": "138fc796b4a5c43df3abbd9ef869ed1982415f4fc77e930f4dd416ec437ebc00",
+    "bytes": 55739,
+    "sha256": "9e32f1ac6dc11de1e1b98c5c98de7f4f852a4827a496d28f017a6009d6153daa",
     "contents": [
      "Start Here.pdf",
      "Garden Bed Soil & Mulch Volume Calculator.xlsx"
@@ -36059,7 +36062,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 63,
        "errors": 0
       }
      }
@@ -36103,17 +36106,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See the real cost per egg and per dozen from feed, bedding and flock size.\n\nWHAT'S INCLUDED\n\u2022 See the real cost per egg and per dozen from feed, bedding and flock size.\n\u2022 Inputs: Laying hens, Eggs per hen per week, Feed cost per month, Other costs per month (bedding, grit, vet)\n\u2022 Results: Eggs per month, Cost per egg, Cost per dozen\n\u2022 Scenario table and chart for different eggs per hen per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "See the real cost per egg and per dozen from feed, bedding and flock size.\n\nWHAT'S INCLUDED\n\u2022 See the real cost per egg and per dozen from feed, bedding and flock size.\n\u2022 Inputs: Laying hens, Eggs per hen per week, Feed cost per month, Other costs per month (bedding, grit, vet)\n\u2022 Results: Eggs per month, Cost per egg, Cost per dozen\n\u2022 Scenario table and chart for different eggs per hen per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "FRB-012/chicken-keeping-cost-per-egg-calculator.zip",
-    "bytes": 54808,
-    "sha256": "793b02b17b466cec6a6a1ea4e62c536add9dbf34f1a16338d0806d4cf5871ac8",
+    "bytes": 55697,
+    "sha256": "0e7c2bcbf042427bb98de32ce8257d2e5afab9b3196f16b674a7032e821f2161",
     "contents": [
      "Start Here.pdf",
      "Chicken Keeping Cost per Egg Calculator.xlsx"
@@ -36145,7 +36148,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -38526,17 +38529,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate yearly and lifetime costs before adopting or buying a pet.\n\nWHAT'S INCLUDED\n\u2022 Estimate yearly and lifetime costs before adopting or buying a pet.\n\u2022 Inputs: Food per month, Routine vet & parasite control per year, Insurance per month, Grooming per year, Toys, treats, gear per year, Expected lifespan (years)\n\u2022 Results: Cost per year, Lifetime cost\n\u2022 Scenario table and chart for different expected lifespan (years)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate yearly and lifetime costs before adopting or buying a pet.\n\nWHAT'S INCLUDED\n\u2022 Estimate yearly and lifetime costs before adopting or buying a pet.\n\u2022 Inputs: Food per month, Routine vet & parasite control per year, Insurance per month, Grooming per year, Toys, treats, gear per year, Expected lifespan (years)\n\u2022 Results: Cost per year, Lifetime cost\n\u2022 Scenario table and chart for different expected lifespan (years)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PKB-011/cost-of-owning-a-pet-calculator.zip",
-    "bytes": 54799,
-    "sha256": "f5c468302c219639b7a3cc6a42009788959e0deefaebbf23030697c14d5089b4",
+    "bytes": 55758,
+    "sha256": "aa95a564b154a5d01b5fc785827cf11fe7f3b1163eb6c0f15da276ac6839f1df",
     "contents": [
      "Start Here.pdf",
      "Cost of Owning a Pet Calculator.xlsx"
@@ -38568,7 +38571,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 66,
        "errors": 0
       }
      }
@@ -38612,17 +38615,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Convert a daily feeding amount into cups, bags per month and cost per day.\n\nWHAT'S INCLUDED\n\u2022 Convert a daily feeding amount into cups, bags per month and cost per day.\n\u2022 Inputs: Daily amount (g) from the food label, Grams per cup (weigh one), Bag size (kg), Bag price\n\u2022 Results: Cups per day, Days per bag, Cost per day\n\u2022 Scenario table and chart for different daily amount (g) from the food label\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Convert a daily feeding amount into cups, bags per month and cost per day.\n\nWHAT'S INCLUDED\n\u2022 Convert a daily feeding amount into cups, bags per month and cost per day.\n\u2022 Inputs: Daily amount (g) from the food label, Grams per cup (weigh one), Bag size (kg), Bag price\n\u2022 Results: Cups per day, Days per bag, Cost per day\n\u2022 Scenario table and chart for different daily amount (g) from the food label\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PKB-012/pet-food-portion-calculator.zip",
-    "bytes": 54756,
-    "sha256": "c1960e24e3e29e6fb0e08a55e14c7c58c0ae725beb1f2b02b34d17430259124f",
+    "bytes": 55600,
+    "sha256": "33bb591209afab9edd00819cd267775eaada932e0c1d4c01b8553b15f607b587",
     "contents": [
      "Start Here.pdf",
      "Pet Food Portion Calculator.xlsx"
@@ -38654,7 +38657,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -41031,17 +41034,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Price a service from time, product cost, overheads and target profit.\n\nWHAT'S INCLUDED\n\u2022 Price a service from time, product cost, overheads and target profit.\n\u2022 Inputs: Service time (minutes), Product cost per service, Overheads per hour (rent, power, insurance), Your hourly wage, Profit margin %\n\u2022 Results: Cost of the service, Suggested price\n\u2022 Scenario table and chart for different service time (minutes)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Price a service from time, product cost, overheads and target profit.\n\nWHAT'S INCLUDED\n\u2022 Price a service from time, product cost, overheads and target profit.\n\u2022 Inputs: Service time (minutes), Product cost per service, Overheads per hour (rent, power, insurance), Your hourly wage, Profit margin %\n\u2022 Results: Cost of the service, Suggested price\n\u2022 Scenario table and chart for different service time (minutes)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-011/service-price-calculator-for-beauty-pros.zip",
-    "bytes": 54863,
-    "sha256": "d58ccd8a368b7ef81d5f6637286b7d757c28447b8fc14c7350157e98591080ea",
+    "bytes": 55831,
+    "sha256": "42caa7c834de2fff2f89ff6912837de722713f631f692580c7c362363315ac07",
     "contents": [
      "Start Here.pdf",
      "Service Price Calculator for Beauty Pros.xlsx"
@@ -41073,7 +41076,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -41117,17 +41120,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Compare renting a chair with working on commission at your current takings.\n\nWHAT'S INCLUDED\n\u2022 Compare renting a chair with working on commission at your current takings.\n\u2022 Inputs: Weekly service sales, Commission rate offered, Weekly chair rent, Products you'd buy weekly (renting)\n\u2022 Results: Commission pay, Renting: take-home before tax, Difference (rent \u2212 commission)\n\u2022 Scenario table and chart for different weekly service sales\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Compare renting a chair with working on commission at your current takings.\n\nWHAT'S INCLUDED\n\u2022 Compare renting a chair with working on commission at your current takings.\n\u2022 Inputs: Weekly service sales, Commission rate offered, Weekly chair rent, Products you'd buy weekly (renting)\n\u2022 Results: Commission pay, Renting: take-home before tax, Difference (rent \u2212 commission)\n\u2022 Scenario table and chart for different weekly service sales\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CBS-012/chair-rental-vs-commission-calculator.zip",
-    "bytes": 54802,
-    "sha256": "4cb4b87ed72596fc621f4748b595be40c7f7c51512feea4bcd00941bea184973",
+    "bytes": 55665,
+    "sha256": "801f6d34424bf8efa8290dda6f52a71abe4242246011b1f029c3a9c0b46e795d",
     "contents": [
      "Start Here.pdf",
      "Chair Rental vs Commission Calculator.xlsx"
@@ -41159,7 +41162,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -43510,17 +43513,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out the full running cost per km from fuel, maintenance, insurance and finance.\n\nWHAT'S INCLUDED\n\u2022 Work out the full running cost per km from fuel, maintenance, insurance and finance.\n\u2022 Inputs: Km per year, Fuel per year, Maintenance & tyres per year, Insurance & licence per year, Finance / depreciation per year, Driver cost per year\n\u2022 Results: Total cost per year, Cost per km\n\u2022 Scenario table and chart for different km per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out the full running cost per km from fuel, maintenance, insurance and finance.\n\nWHAT'S INCLUDED\n\u2022 Work out the full running cost per km from fuel, maintenance, insurance and finance.\n\u2022 Inputs: Km per year, Fuel per year, Maintenance & tyres per year, Insurance & licence per year, Finance / depreciation per year, Driver cost per year\n\u2022 Results: Total cost per year, Cost per km\n\u2022 Scenario table and chart for different km per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "FLW-011/cost-per-kilometre-calculator.zip",
-    "bytes": 54766,
-    "sha256": "0ad5d7b936fe598d2e8fa80b007b6f326cd9fc2c5b1631ad25fb533aa4719a4d",
+    "bytes": 55745,
+    "sha256": "eb6bce6c59294a2618000dcb45091c228287456512d66b46bef0a8f05161b3fe",
     "contents": [
      "Start Here.pdf",
      "Cost per Kilometre Calculator.xlsx"
@@ -43552,7 +43555,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 66,
        "errors": 0
       }
      }
@@ -43596,17 +43599,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Quote deliveries from distance, time, cost per km and margin.\n\nWHAT'S INCLUDED\n\u2022 Quote deliveries from distance, time, cost per km and margin.\n\u2022 Inputs: Round-trip distance (km), Cost per km, Time (hours), Driver cost per hour, Profit margin %\n\u2022 Results: Delivery cost, Quote price\n\u2022 Scenario table and chart for different round-trip distance (km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Quote deliveries from distance, time, cost per km and margin.\n\nWHAT'S INCLUDED\n\u2022 Quote deliveries from distance, time, cost per km and margin.\n\u2022 Inputs: Round-trip distance (km), Cost per km, Time (hours), Driver cost per hour, Profit margin %\n\u2022 Results: Delivery cost, Quote price\n\u2022 Scenario table and chart for different round-trip distance (km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "FLW-012/delivery-pricing-calculator.zip",
-    "bytes": 54738,
-    "sha256": "9822a6c7754d4ba08716f2b891cd8377e4428e392b37706879a2453614f7f29a",
+    "bytes": 55630,
+    "sha256": "dc44db930f016221b0c0067e31d69b6cbdb0151905d99b75628b0540994e49b0",
     "contents": [
      "Start Here.pdf",
      "Delivery Pricing Calculator.xlsx"
@@ -43638,7 +43641,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 63,
        "errors": 0
       }
      }
@@ -43682,17 +43685,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate fuel cost for a trip from distance, consumption and price.\n\nWHAT'S INCLUDED\n\u2022 Estimate fuel cost for a trip from distance, consumption and price.\n\u2022 Inputs: Trip distance (km), Consumption (L/100 km), Fuel price per litre, People sharing\n\u2022 Results: Litres needed, Fuel cost, Cost per person\n\u2022 Scenario table and chart for different consumption (l/100 km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate fuel cost for a trip from distance, consumption and price.\n\nWHAT'S INCLUDED\n\u2022 Estimate fuel cost for a trip from distance, consumption and price.\n\u2022 Inputs: Trip distance (km), Consumption (L/100 km), Fuel price per litre, People sharing\n\u2022 Results: Litres needed, Fuel cost, Cost per person\n\u2022 Scenario table and chart for different consumption (l/100 km)\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "FLW-013/fuel-cost-trip-calculator.zip",
-    "bytes": 54712,
-    "sha256": "0887076bff384d91576c4f90f824800da4f53f053c15e5cceda79d4631d1d0d0",
+    "bytes": 55592,
+    "sha256": "cf2380604f17a0660bdae948a33bd8f8d77bb5171b2ce62f911052d7c08308b5",
     "contents": [
      "Start Here.pdf",
      "Fuel Cost Trip Calculator.xlsx"
@@ -43724,7 +43727,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 62,
        "errors": 0
       }
      }
@@ -46019,17 +46022,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Estimate the cost of a homeschool year per child and per month.\n\nWHAT'S INCLUDED\n\u2022 Estimate the cost of a homeschool year per child and per month.\n\u2022 Inputs: Curriculum per child, Activities & classes per child per year, Field trips per year (family), Supplies & printing per year (family), Number of children\n\u2022 Results: Total per year, Per child per year, Per month (12)\n\u2022 Scenario table and chart for different number of children\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Estimate the cost of a homeschool year per child and per month.\n\nWHAT'S INCLUDED\n\u2022 Estimate the cost of a homeschool year per child and per month.\n\u2022 Inputs: Curriculum per child, Activities & classes per child per year, Field trips per year (family), Supplies & printing per year (family), Number of children\n\u2022 Results: Total per year, Per child per year, Per month (12)\n\u2022 Scenario table and chart for different number of children\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "HSP-011/homeschool-year-cost-calculator.zip",
-    "bytes": 54778,
-    "sha256": "d7ba9805cf7b624624778e77db6e9efa57e77eb953ec32febf2ead7d82c1314f",
+    "bytes": 55690,
+    "sha256": "871f6d67ffb5388dffc8335c7f9f8ae2305c47719dcd00f9bc341b6dba1593f6",
     "contents": [
      "Start Here.pdf",
      "Homeschool Year Cost Calculator.xlsx"
@@ -46061,7 +46064,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 47,
+       "values": 65,
        "errors": 0
       }
      }
@@ -46105,17 +46108,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out school days per week and hours per day to meet an annual target.\n\nWHAT'S INCLUDED\n\u2022 Work out school days per week and hours per day to meet an annual target.\n\u2022 Inputs: Target hours per year, School weeks in your year, School days per week\n\u2022 Results: School days per year, Hours needed per day\n\u2022 Scenario table and chart for different school days per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Work out school days per week and hours per day to meet an annual target.\n\nWHAT'S INCLUDED\n\u2022 Work out school days per week and hours per day to meet an annual target.\n\u2022 Inputs: Target hours per year, School weeks in your year, School days per week\n\u2022 Results: School days per year, Hours needed per day\n\u2022 Scenario table and chart for different school days per week\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "HSP-012/school-days-hours-planner-calculator.zip",
-    "bytes": 54729,
-    "sha256": "805c6cf35da2aba4def2ca5425c8c63bd38865a3b55944df61f7277587798ac6",
+    "bytes": 55496,
+    "sha256": "bd054c6a75aeab54f7d2155a64487babef82596ea9efb1549246362a33368942",
     "contents": [
      "Start Here.pdf",
      "School Days & Hours Planner Calculator.xlsx"
@@ -46147,7 +46150,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 38,
+       "values": 54,
        "errors": 0
       }
      }
@@ -49254,17 +49257,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Compare the cost of renting with buying over the years you plan to stay.\n\nWHAT'S INCLUDED\n\u2022 Compare the cost of renting with buying over the years you plan to stay.\n\u2022 Inputs: Home price, Deposit, Interest rate (annual), Loan term (years), Rates, levies, insurance & maintenance per month, Home value growth per year\n\u2022 Results: Monthly loan repayment, Loan balance when you leave, Home value when you leave, Net cost of buying (paid out minus equity), Total rent paid\n\u2022 Scenario table and chart for different years you'll stay\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "Compare the cost of renting with buying over the years you plan to stay.\n\nWHAT'S INCLUDED\n\u2022 Compare the cost of renting with buying over the years you plan to stay.\n\u2022 Inputs: Home price, Deposit, Interest rate (annual), Loan term (years), Rates, levies, insurance & maintenance per month, Home value growth per year\n\u2022 Results: Monthly loan repayment, Loan balance when you leave, Home value when you leave, Net cost of buying (paid out minus equity), Total rent paid\n\u2022 Scenario table and chart for different years you'll stay\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-021/rent-vs-buy-calculator.zip",
-    "bytes": 55176,
-    "sha256": "3a118712c070b7eaedb303bf4fdaf39a993adeee3f5dc93d49a4db57211a7fe3",
+    "bytes": 56352,
+    "sha256": "cd9c1063b26780122701646cb07ddef668e95aa10d5b2a91b7531cf7b701f200",
     "contents": [
      "Start Here.pdf",
      "Rent vs Buy Calculator.xlsx"
@@ -49296,7 +49299,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 60,
+       "values": 82,
        "errors": 0
       }
      }
@@ -49429,17 +49432,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See what today's money will be worth, and what things will cost, in future years.\n\nWHAT'S INCLUDED\n\u2022 See what today's money will be worth, and what things will cost, in future years.\n\u2022 Inputs: Amount today, Inflation rate per year, Years ahead\n\u2022 Results: Future cost of the same things, Buying power of today's amount\n\u2022 Scenario table and chart for different inflation rate per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "See what today's money will be worth, and what things will cost, in future years.\n\nWHAT'S INCLUDED\n\u2022 See what today's money will be worth, and what things will cost, in future years.\n\u2022 Inputs: Amount today, Inflation rate per year, Years ahead\n\u2022 Results: Future cost of the same things, Buying power of today's amount\n\u2022 Scenario table and chart for different inflation rate per year\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-023/inflation-impact-calculator.zip",
-    "bytes": 54711,
-    "sha256": "96ed879d62b951d4c0c59ae1c9add095250456ef140915241990e01acc87d8bc",
+    "bytes": 55510,
+    "sha256": "6a13399c906ed997a1f59e3c1332910af3741d447c3473a129c4a1a787480588",
     "contents": [
      "Start Here.pdf",
      "Inflation Impact Calculator.xlsx"
@@ -49471,7 +49474,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 41,
+       "values": 57,
        "errors": 0
       }
      }
@@ -49604,17 +49607,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Split take-home pay into needs, wants and savings and compare with what you spend now.\n\nWHAT'S INCLUDED\n\u2022 Split take-home pay into needs, wants and savings and compare with what you spend now.\n\u2022 Inputs: Monthly take-home pay, What you spend on needs now, What you spend on wants now\n\u2022 Results: Needs target (50%), Wants target (30%), Savings target (20%), What's left for savings now\n\u2022 Scenario table and chart for different monthly take-home pay\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "Split take-home pay into needs, wants and savings and compare with what you spend now.\n\nWHAT'S INCLUDED\n\u2022 Split take-home pay into needs, wants and savings and compare with what you spend now.\n\u2022 Inputs: Monthly take-home pay, What you spend on needs now, What you spend on wants now\n\u2022 Results: Needs target (50%), Wants target (30%), Savings target (20%), What's left for savings now\n\u2022 Scenario table and chart for different monthly take-home pay\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-025/50-30-20-budget-calculator.zip",
-    "bytes": 54703,
-    "sha256": "89e41172e7964cda3d0743e3829e07c31d6722352d8c96508342b055d14286f7",
+    "bytes": 55623,
+    "sha256": "7854997ae15ba73bdb42e6433f86763404d4508ba872b2bcd7e0b770d70af036",
     "contents": [
      "Start Here.pdf",
      "50-30-20 Budget Calculator.xlsx"
@@ -49646,7 +49649,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 45,
+       "values": 61,
        "errors": 0
       }
      }
@@ -49777,17 +49780,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "See how long a card balance takes to clear and how much interest a bigger payment saves.\n\nWHAT'S INCLUDED\n\u2022 See how long a card balance takes to clear and how much interest a bigger payment saves.\n\u2022 Inputs: Card balance, Interest rate (annual), Monthly payment\n\u2022 Results: Months to pay off, Total interest\n\u2022 Scenario table and chart for different monthly payment\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "See how long a card balance takes to clear and how much interest a bigger payment saves.\n\nWHAT'S INCLUDED\n\u2022 See how long a card balance takes to clear and how much interest a bigger payment saves.\n\u2022 Inputs: Card balance, Interest rate (annual), Monthly payment\n\u2022 Results: Months to pay off, Total interest\n\u2022 Scenario table and chart for different monthly payment\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-027/credit-card-payoff-calculator.zip",
-    "bytes": 54795,
-    "sha256": "8d1ac4010a89eb65b6e8ba49b35701fe7161ffa48e5912820af680afbcdcd3c2",
+    "bytes": 55625,
+    "sha256": "f9fb0644ca91b506aa125757a95aeabfeb91003dbc8095124294ab011b67209b",
     "contents": [
      "Start Here.pdf",
      "Credit Card Payoff Calculator.xlsx"
@@ -49819,7 +49822,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 43,
+       "values": 59,
        "errors": 0
       }
      }
@@ -49950,17 +49953,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Compare what a customer is worth with what it costs to win them.\n\nWHAT'S INCLUDED\n\u2022 Compare what a customer is worth with what it costs to win them.\n\u2022 Inputs: Average order value, Orders per customer per year, Gross margin %, Average customer lifespan (years), Marketing spend per month, New customers per month\n\u2022 Results: Customer lifetime value (gross profit), Cost to acquire a customer, LTV : CAC ratio\n\u2022 Scenario table and chart for different new customers per month\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "Compare what a customer is worth with what it costs to win them.\n\nWHAT'S INCLUDED\n\u2022 Compare what a customer is worth with what it costs to win them.\n\u2022 Inputs: Average order value, Orders per customer per year, Gross margin %, Average customer lifespan (years), Marketing spend per month, New customers per month\n\u2022 Results: Customer lifetime value (gross profit), Cost to acquire a customer, LTV : CAC ratio\n\u2022 Scenario table and chart for different new customers per month\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-029/customer-lifetime-value-acquisition-cost-calculator.zip",
-    "bytes": 54990,
-    "sha256": "45f83de2be723c64f4035b6b32a87e1116e729630adf5ea3d0e4be99108e0a33",
+    "bytes": 55937,
+    "sha256": "639897a6acaf630ebe0b7f2a2aa366590c48ca2f28193979eb24e40d7729f6cd",
     "contents": [
      "Start Here.pdf",
      "Customer Lifetime Value & Acquisition Cost Calculator.xlsx"
@@ -49992,7 +49995,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 49,
+       "values": 68,
        "errors": 0
       }
      }
@@ -50036,17 +50039,17 @@
    ],
    "compat": "Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.",
    "instructions": [
-    "Enter your numbers in the yellow cells on 'Calculator'.",
+    "Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.",
     "Results update instantly on the right.",
-    "Use 'Scenarios' (if included) to compare options side by side."
+    "Use 'Scenarios' to see how the result changes as one input changes."
    ],
-   "description": "Work out the real monthly cost of a car: finance, insurance, fuel and maintenance.\n\nWHAT'S INCLUDED\n\u2022 Work out the real monthly cost of a car: finance, insurance, fuel and maintenance.\n\u2022 Inputs: Car price, Deposit, Interest rate (annual), Term (months), Insurance per month, Km per month\n\u2022 Results: Monthly repayment, Fuel per month, Total monthly cost\n\u2022 Scenario table and chart for different car price\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'.\n2. Results update instantly on the right.\n3. Use 'Scenarios' (if included) to compare options side by side.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
+   "description": "Work out the real monthly cost of a car: finance, insurance, fuel and maintenance.\n\nWHAT'S INCLUDED\n\u2022 Work out the real monthly cost of a car: finance, insurance, fuel and maintenance.\n\u2022 Inputs: Car price, Deposit, Interest rate (annual), Term (months), Insurance per month, Km per month\n\u2022 Results: Monthly repayment, Fuel per month, Total monthly cost\n\u2022 Scenario table and chart for different car price\n\nFORMAT & COMPATIBILITY\n\u2022 Files: XLSX (delivered as one ZIP download)\n\u2022 Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.\n\nHOW TO USE\n1. Enter your numbers in the yellow cells on 'Calculator'; the figures already there are the worked example.\n2. Results update instantly on the right.\n3. Use 'Scenarios' to see how the result changes as one input changes.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.\n\u2022 The spreadsheet performs calculations on the numbers you enter; it is not financial, tax or legal advice.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ABL-030/car-affordability-total-cost-calculator.zip",
-    "bytes": 55110,
-    "sha256": "95bb40284045219f17d85d288d0852640814c2f4da720bf88b19df82e49ef81d",
+    "bytes": 56181,
+    "sha256": "57cbb108e2666326a75c6bfa0a964e7eeb81e5adcdf8244ad0090668aff03b05",
     "contents": [
      "Start Here.pdf",
      "Car Affordability & Total Cost Calculator.xlsx"
@@ -50078,7 +50081,7 @@
         "Calculator",
         "Scenarios"
        ],
-       "values": 56,
+       "values": 78,
        "errors": 0
       }
      }
