@@ -34,13 +34,13 @@ don't start until every product's price matches its content.
 | Group | Builder | Products | Upgraded | Notes |
 |---|---|---|---|---|
 | Bespoke flagships | specs_b / specs_c / specs_a | ~40 | 1 (SOP kit) | Next: business plan, warehouse/supply-chain, KPI dashboard, inventory, cash flow |
-| Word documents | gen.build_d + content_docs_*.py | 82 | 14 | b1: 6 business docs; b2: 8 career docs. Next: freelancer, property, trades, salon, nonprofit, food, caregivers, family, teaching, events, pets, fleet, homeschool, farm, online sellers |
+| Word documents | gen.build_d + content_docs_*.py | 82 | 22 | b1: 6 business; b2: 8 career; b3: comment bank (now 103 comments, claim fixed) + 7 freelancer. Next: freelancer, property, trades, salon, nonprofit, food, caregivers, family, teaching, events, pets, fleet, homeschool, farm, online sellers |
 | Spreadsheet trackers | gen.build_x | 198 | 0 | Planned generic upgrade: example data on every sheet, dashboard with chart, Start Here; then per-product checks |
 | Calculators | gen.build_c | 45 | 0 | Planned: scenario table + chart, worked example notes |
 | Printables | pdfkit pages | 235 | 0 | Planned: instructions page + filled example page |
 | Bundles | - | 20 | - | Priced from their items (<= 65%) |
 
-Known claim mismatch to fix: "Learner Report Comment Bank" says "over 100 comments" but has 16.
+Fixed 7 Nov: "Learner Report Comment Bank" claimed "over 100 comments" but had 16; it now has 103.
 
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
