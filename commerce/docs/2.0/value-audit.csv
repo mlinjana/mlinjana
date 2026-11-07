@@ -1,601 +1,601 @@
 id,name,store,category,price_zar,score,fair_ceiling_zar,gap_zar,verdict,pages,words,tables,examples,placeholder_brackets,sheets,formula_patterns,charts,validations,data_rows,has_help
-ABL-012,Supply Chain KPI Toolkit,abacus,Operations,359,19.7,39,320,overpriced,0,0,0,0,0,5,12,1,0,56,1
-ABL-011,Warehouse Productivity Dashboard,abacus,Operations,359,23.6,49,310,overpriced,0,0,0,0,0,5,9,1,9000,55,1
-ABL-010,Stock Control & Reorder Point Calculator,abacus,Inventory & stock,229,10.6,29,200,overpriced,0,0,0,0,0,3,11,0,0,10,1
-BZW-001,Business Plan Template + 3-Year Financial Projections,bizwright,Business planning,229,20.1,49,180,overpriced,0,419,5,0,35,4,14,1,0,2,1
-BZW-017,Small Business KPI Dashboard,bizwright,Business planning,179,13.3,39,140,overpriced,0,0,0,0,0,3,6,2,1,9,1
-BZW-009,Project Management Tracker with Gantt Chart,bizwright,Operations,169,32.9,59,110,overpriced,0,0,0,0,0,7,37,1,630,12,1
-ABL-013,ABC Inventory Analysis Tool,abacus,Inventory & stock,149,13.8,39,110,overpriced,0,0,0,0,0,3,7,1,0,42,1
-ABL-014,13-Week Cash Flow Forecast,abacus,Business finance,149,13.6,39,110,overpriced,0,0,0,0,0,2,18,1,0,10,1
-ABL-019,Demand Forecasting Template,abacus,Inventory & stock,179,37.7,69,110,overpriced,0,0,0,0,0,3,82,1,1,6,1
-BZW-010,Client CRM & Sales Pipeline Tracker,bizwright,Sales,149,24.0,49,100,overpriced,0,0,0,0,0,5,20,1,1100,13,1
-ABL-009,Inventory Management Spreadsheet,abacus,Inventory & stock,149,20.8,49,100,overpriced,0,0,0,0,0,5,11,1,11000,12,1
-BZW-013,"Hiring Kit: Job Description, Interview Guide & Scorecard",bizwright,HR & people,109,6.2,29,80,overpriced,0,390,6,1,25,0,0,0,0,0,0
-SKD-010,Craft & Handmade Materials Cost Tracker,shopkeeper,Sales & profit,109,9.7,29,80,overpriced,0,0,0,0,0,4,3,0,0,14,1
-BZW-028,Press Release Template Pack,bizwright,Sales & marketing,109,1.4,29,80,overpriced,0,172,0,0,20,0,0,0,0,0,0
-BZW-011,Employee Onboarding Kit,bizwright,HR & people,109,16.9,39,70,overpriced,0,210,4,0,13,2,7,0,29,20,1
-BZW-016,Brand Style Guide Template,bizwright,Marketing,99,3.3,29,70,overpriced,0,297,2,0,22,0,0,0,0,0,0
-ABL-008,"Home Loan Calculator: Repayment, Affordability & Rate Changes",abacus,Loans & debt,109,16.4,39,70,overpriced,0,0,0,0,0,5,15,1,0,2,1
-GSM-005,YouTube Channel Analytics Tracker,gigsmith,Content creation,99,6.9,29,70,overpriced,0,0,0,0,0,3,1,0,0,7,1
-GSM-028,Newsletter Growth Tracker,gigsmith,Content creation,99,7.3,29,70,overpriced,0,0,0,0,0,3,2,0,0,7,1
-SKD-002,Multi-Channel Stock Sync Tracker,shopkeeper,Inventory,99,8.0,29,70,overpriced,0,0,0,0,0,3,4,0,0,7,1
-TNT-001,Job Costing Tracker for Trades,trowel,Job management,109,18.6,39,70,overpriced,0,0,0,0,0,5,4,1,900,15,1
-CBS-001,Salon Client Record & Service History,chairbook,Clients & bookings,109,18.5,39,70,overpriced,0,0,0,0,0,5,4,1,600,14,1
-CBS-028,Gift Voucher Register,chairbook,Salon finance,99,7.3,29,70,overpriced,0,0,0,0,0,3,2,0,0,7,1
-FLW-006,Fleet Vehicle Register & Compliance,fleetwise,Fleet maintenance,99,6.9,29,70,overpriced,0,0,0,0,0,3,1,0,0,7,1
-BZW-025,Staff Leave & Absence Tracker,bizwright,People & HR,109,18.2,39,70,overpriced,0,0,0,0,0,5,3,1,600,14,1
-ABL-006,Annual Personal Finance Workbook,abacus,Personal finance,99,19.5,39,60,overpriced,0,0,0,0,0,6,8,2,0,28,1
-DPL-002,Rent Roll & Arrears Tracker,doorpost,Tenant management,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-DPL-003,Maintenance Request Log,doorpost,Maintenance,99,16.2,39,60,overpriced,0,0,0,0,0,4,3,1,900,8,1
-DPL-004,Tenant Directory & Lease Tracker,doorpost,Tenant management,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-DPL-005,Deposit Ledger,doorpost,Tenant management,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-DPL-006,Short-Term Rental Income Tracker,doorpost,Landlord finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-DPL-007,Property Portfolio Overview,doorpost,Landlord finance,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-DPL-008,Utility & Meter Readings Log,doorpost,Maintenance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-DPL-009,Rental Viewing & Applicant Tracker,doorpost,Tenant management,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,900,8,1
-DPL-010,Property Insurance & Compliance Tracker,doorpost,Maintenance,99,16.2,39,60,overpriced,0,0,0,0,0,4,3,1,900,8,1
-DPL-018,Residential Lease Agreement Checklist,doorpost,Tenant management,89,1.0,29,60,overpriced,0,123,0,0,1,0,0,0,0,0,0
-DPL-019,Landlord Letter Templates Pack,doorpost,Tenant management,89,1.7,29,60,overpriced,0,203,0,0,31,0,0,0,0,0,0
-DPL-020,Rental Listing & Advert Template,doorpost,Tenant management,89,0.9,29,60,overpriced,0,55,1,0,4,0,0,0,0,0,0
-DPL-026,Property Purchase Cost Tracker,doorpost,Landlord finance,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-DPL-027,Vacancy & Turnover Cost Tracker,doorpost,Tenant management,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-DPL-030,Tenant Application Form & Screening Criteria,doorpost,Tenant management,89,1.7,29,60,overpriced,0,113,2,0,1,0,0,0,0,0,0
-GSM-001,Freelance Time Tracker & Billing,gigsmith,Freelance admin,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-GSM-003,Client Project Pipeline,gigsmith,Clients & projects,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-GSM-004,Content Calendar for Creators,gigsmith,Content creation,99,16.0,39,60,overpriced,0,0,0,0,0,4,2,1,900,10,1
-GSM-006,Brand Deal & Sponsorship Tracker,gigsmith,Content creation,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,300,7,1
-GSM-007,Freelance Retainer Tracker,gigsmith,Clients & projects,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-GSM-008,Podcast Episode Planner,gigsmith,Content creation,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-GSM-011,Freelance Proposal Template,gigsmith,Clients & projects,89,1.7,29,60,overpriced,0,60,3,0,4,0,0,0,0,0,0
-GSM-012,Client Onboarding Questionnaire,gigsmith,Clients & projects,89,2.4,29,60,overpriced,0,93,4,0,1,0,0,0,0,0,0
-GSM-013,Scope of Work & Change Request Template,gigsmith,Clients & projects,89,1.3,29,60,overpriced,0,65,2,0,3,0,0,0,0,0,0
-GSM-014,Creator Media Kit Template,gigsmith,Content creation,89,1.2,29,60,overpriced,0,52,2,0,4,0,0,0,0,0,0
-GSM-015,Brand Pitch Email Templates,gigsmith,Content creation,89,0.8,29,60,overpriced,0,92,0,0,6,0,0,0,0,0,0
-GSM-016,Freelance Service Contract Checklist,gigsmith,Freelance admin,89,0.6,29,60,overpriced,0,75,0,0,1,0,0,0,0,0,0
-GSM-030,Testimonial & Referral Request Templates,gigsmith,Clients & projects,89,1.4,29,60,overpriced,0,114,0,1,3,0,0,0,0,0,0
-GLD-001,Donation & Donor Tracker,goodledger,Fundraising,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,1200,7,1
-GLD-003,Volunteer Hours Tracker,goodledger,Volunteers,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-GLD-004,Grant Application Tracker,goodledger,Fundraising,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-GLD-005,Programme Beneficiary Register,goodledger,Impact,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-GLD-006,Fundraising Event Budget,goodledger,Fundraising,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-GLD-007,Membership & Subscriptions Register,goodledger,Governance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-GLD-008,In-Kind Donations Log,goodledger,Fundraising,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-GLD-009,Petty Cash Book for Organisations,goodledger,Finance,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-GLD-010,Board & Committee Action Tracker,goodledger,Governance,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,300,7,1
-GLD-011,Annual Budget for Small Nonprofits,goodledger,Finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-GLD-022,Grant Proposal Template,goodledger,Fundraising,89,1.6,29,60,overpriced,0,91,2,0,9,0,0,0,0,0,0
-GLD-023,Volunteer Handbook Template,goodledger,Volunteers,89,0.6,29,60,overpriced,0,77,0,0,9,0,0,0,0,0,0
-GLD-024,Nonprofit Annual Impact Report Template,goodledger,Impact,89,1.8,29,60,overpriced,0,77,3,0,7,0,0,0,0,0,0
-GLD-025,Board Roles & Code of Conduct Template,goodledger,Governance,89,1.5,29,60,overpriced,0,80,2,0,4,0,0,0,0,0,0
-GLD-026,Fundraising Appeal Letter Templates,goodledger,Fundraising,89,1.0,29,60,overpriced,0,123,0,0,16,0,0,0,0,0,0
-GLD-027,Volunteer Application & Consent Form,goodledger,Volunteers,89,1.4,29,60,overpriced,0,70,2,0,0,0,0,0,0,0,0
-MSE-001,Recipe Costing Calculator,mise,Costing & pricing,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-MSE-002,Food Business Sales & Expenses Tracker,mise,Business finance,109,22.8,49,60,overpriced,0,0,0,0,0,5,16,1,600,15,1
-MSE-003,Stock & Inventory Count Sheet,mise,Kitchen operations,99,17.2,39,60,overpriced,0,0,0,0,0,4,6,1,600,7,1
-MSE-004,Food Waste Log,mise,Kitchen operations,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-MSE-005,Supplier Price Comparison,mise,Costing & pricing,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-MSE-006,Catering Quote & Event Order Tracker,mise,Business finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-MSE-007,Staff Rota & Labour Cost Planner,mise,Kitchen operations,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-MSE-008,Bakery Order Book,mise,Business finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-MSE-009,Market Stall Sales Tracker,mise,Business finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-MSE-010,Equipment Maintenance & Cleaning Log,mise,Food safety,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-MSE-022,Food Business Plan Template,mise,Business finance,89,1.9,29,60,overpriced,0,81,3,0,6,0,0,0,0,0,0
-MSE-023,Catering Menu & Quote Template,mise,Business finance,89,1.7,29,60,overpriced,0,58,3,0,2,0,0,0,0,0,0
-MSE-024,Food Safety Plan Template,mise,Food safety,89,1.5,29,60,overpriced,0,128,1,0,4,0,0,0,0,0,0
-MSE-027,Delivery App Commission Tracker,mise,Business finance,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-MSE-030,Recipe Specification Card Template,mise,Kitchen operations,89,1.2,29,60,overpriced,0,48,2,0,1,0,0,0,0,0,0
-SKD-003,Product Listing Tracker,shopkeeper,Listings & marketing,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,900,7,1
-SKD-004,Shipping & Fulfilment Log,shopkeeper,Fulfilment,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,900,7,1
-SKD-005,Returns & Refunds Tracker,shopkeeper,Fulfilment,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-SKD-006,Customer List & Repeat Buyer Tracker,shopkeeper,Listings & marketing,99,13.8,39,60,overpriced,0,0,0,0,0,4,2,0,300,7,1
-SKD-007,Product Launch Tracker,shopkeeper,Listings & marketing,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-SKD-008,Supplier & Purchase Order Tracker,shopkeeper,Inventory,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-SKD-009,Marketing Spend & ROAS Tracker,shopkeeper,Listings & marketing,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-SKD-019,Shop Policies Template Pack,shopkeeper,Fulfilment,89,0.6,29,60,overpriced,0,77,0,0,6,0,0,0,0,0,0
-SKD-020,Customer Service Email Templates,shopkeeper,Fulfilment,89,1.2,29,60,overpriced,0,140,0,0,24,0,0,0,0,0,0
-SKD-021,Wholesale Line Sheet Template,shopkeeper,Sales & profit,89,0.9,29,60,overpriced,0,55,1,0,3,0,0,0,0,0,0
-SKD-022,Product Description Writing Templates,shopkeeper,Listings & marketing,89,1.5,29,60,overpriced,0,138,1,0,4,0,0,0,0,0,0
-SKD-026,Daily Cash-Up Sheet for Small Retail,shopkeeper,Sales & profit,99,13.8,39,60,overpriced,0,0,0,0,0,4,2,0,300,7,1
-SKD-027,Marketplace Payout Reconciliation,shopkeeper,Sales & profit,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-SKD-028,Subscription Box Subscriber Tracker,shopkeeper,Fulfilment,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-CLK-003,Cover Letter Templates,careerladder,Resumes & letters,89,0.7,29,60,overpriced,0,86,0,0,9,0,0,0,0,0,0
-TNT-002,Quote / Estimate Template for Trades,trowel,Quotes & invoices,89,1.0,29,60,overpriced,0,73,1,0,1,0,0,0,0,0,0
-TNT-003,Materials Estimator & Order List,trowel,Job management,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,600,7,1
-TNT-004,Trade Invoice & Payment Tracker,trowel,Quotes & invoices,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-TNT-005,Vehicle & Tool Expense Log,trowel,Business admin,109,22.8,49,60,overpriced,0,0,0,0,0,5,16,1,600,15,1
-TNT-006,Tool & Equipment Register,trowel,Business admin,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-TNT-007,Subcontractor Tracker,trowel,Job management,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-TNT-008,Job Scheduling & Calendar Tracker,trowel,Job management,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-TNT-009,Leads & Enquiries Tracker for Trades,trowel,Business admin,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-TNT-010,Snag List & Defects Tracker,trowel,Job management,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-TNT-020,Terms & Conditions Template for Trades,trowel,Quotes & invoices,89,0.7,29,60,overpriced,0,86,0,0,9,0,0,0,0,0,0
-TNT-021,Job Completion & Handover Certificate,trowel,Job management,89,1.7,29,60,overpriced,0,59,3,0,0,0,0,0,0,0,0
-TNT-022,Trade Business Marketing Plan,trowel,Business admin,89,0.9,29,60,overpriced,0,58,1,0,5,0,0,0,0,0,0
-TNT-026,Crew Timesheet & Wages Tracker,trowel,Business admin,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-TNT-027,Retention & Warranty Tracker,trowel,Quotes & invoices,99,13.8,39,60,overpriced,0,0,0,0,0,4,2,0,300,7,1
-TNT-030,Method Statement & Risk Assessment Template,trowel,Business admin,89,1.8,29,60,overpriced,0,76,3,0,3,0,0,0,0,0,0
-KDK-004,Blood Pressure & Glucose Log,kindkeep,Health records,89,9.0,29,60,overpriced,0,0,0,0,0,4,1,0,0,14,1
-CBS-002,Salon Income & Expense Tracker,chairbook,Salon finance,109,23.0,49,60,overpriced,0,0,0,0,0,5,16,1,900,17,1
-CBS-003,Appointment Book & No-Show Tracker,chairbook,Clients & bookings,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-CBS-004,Retail Product Stock Tracker for Salons,chairbook,Salon finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-CBS-005,Stylist Commission & Chair Rental Tracker,chairbook,Salon finance,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,300,7,1
-CBS-006,Nail Technician Service & Supplies Tracker,chairbook,Salon finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-CBS-007,Lash & Brow Client Tracker,chairbook,Clients & bookings,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,300,7,1
-CBS-008,Barber Shop Daily Sheet,chairbook,Salon finance,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,900,7,1
-CBS-009,Beauty Business Marketing Tracker,chairbook,Marketing,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-CBS-010,Salon Equipment Hygiene & Sterilisation Log,chairbook,Health & safety,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-CBS-020,Salon Policies Template,chairbook,Clients & bookings,89,0.6,29,60,overpriced,0,70,0,0,6,0,0,0,0,0,0
-CBS-021,Chair Rental Agreement Checklist,chairbook,Salon finance,89,0.6,29,60,overpriced,0,71,0,0,1,0,0,0,0,0,0
-CBS-022,Salon Staff Handbook Template,chairbook,Health & safety,89,0.6,29,60,overpriced,0,72,0,0,7,0,0,0,0,0,0
-CBS-023,Beauty Price List & Service Menu Template,chairbook,Marketing,89,2.2,29,60,overpriced,0,76,4,0,2,0,0,0,0,0,0
-CBS-027,Beauty Training & Certificates Log,chairbook,Health & safety,99,13.4,39,60,overpriced,0,0,0,0,0,4,1,0,600,7,1
-CBS-030,Photo & Social Media Consent Form,chairbook,Marketing,89,0.9,29,60,overpriced,0,109,0,0,3,0,0,0,0,0,0
-FLW-001,Vehicle Mileage Logbook,fleetwise,Driver logs,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-FLW-002,Fleet Fuel Tracker,fleetwise,Fleet costs,99,17.2,39,60,overpriced,0,0,0,0,0,4,6,1,300,7,1
-FLW-003,Vehicle Maintenance & Service Tracker,fleetwise,Fleet maintenance,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-FLW-004,Delivery Driver Earnings Tracker,fleetwise,Driver logs,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,300,7,1
-FLW-005,Courier Delivery Log & Proof of Delivery Register,fleetwise,Operations,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,300,7,1
-FLW-007,Driver Hours & Rest Log,fleetwise,Driver logs,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-FLW-008,Traffic Fines & Incident Register,fleetwise,Operations,99,16.3,39,60,overpriced,0,0,0,0,0,4,3,1,900,9,1
-FLW-009,Transport Job & Invoicing Tracker,fleetwise,Operations,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,900,7,1
-FLW-010,Tyre Management Log,fleetwise,Fleet maintenance,99,15.9,39,60,overpriced,0,0,0,0,0,4,2,1,900,9,1
-FLW-020,Driver Policy & Code of Conduct Template,fleetwise,Operations,89,0.7,29,60,overpriced,0,84,0,0,8,0,0,0,0,0,0
-FLW-021,Transport Rate Card & Quote Template,fleetwise,Operations,89,1.4,29,60,overpriced,0,67,2,0,1,0,0,0,0,0,0
-FLW-022,Vehicle Handover & Checkout Form,fleetwise,Fleet maintenance,89,1.3,29,60,overpriced,0,55,2,0,0,0,0,0,0,0,0
-FLW-024,Moving Company Job Planner,fleetwise,Operations,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,300,7,1
-FLW-027,Fuel Card Reconciliation,fleetwise,Fleet costs,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,900,7,1
-FLW-028,Vehicle Finance & Lease Tracker,fleetwise,Fleet costs,99,16.1,39,60,overpriced,0,0,0,0,0,4,3,1,600,7,1
-FLW-030,Delivery Instructions & Proof-of-Delivery Form,fleetwise,Operations,89,0.9,29,60,overpriced,0,62,1,0,0,0,0,0,0,0,0
-BZW-021,Employee Performance Review Template,bizwright,People & HR,89,1.8,29,60,overpriced,0,66,3,0,3,0,0,0,0,0,0
-BZW-022,Business Continuity Plan Template,bizwright,Operations,89,2.4,29,60,overpriced,0,147,3,0,3,0,0,0,0,0,0
-BZW-023,Monthly Management Report Template,bizwright,Operations,89,1.3,29,60,overpriced,0,64,2,0,3,0,0,0,0,0,0
-BZW-024,OKR & Goal Tracker,bizwright,Planning & strategy,99,16.5,39,60,overpriced,0,0,0,0,0,4,4,1,600,7,1
-BZW-026,Business Risk Register,bizwright,Operations,99,16.8,39,60,overpriced,0,0,0,0,0,4,5,1,600,7,1
-BZW-027,Company Profile Template,bizwright,Sales & marketing,89,1.7,29,60,overpriced,0,62,3,0,4,0,0,0,0,0,0
-BZW-029,Staff Skills & Training Matrix,bizwright,People & HR,99,15.8,39,60,overpriced,0,0,0,0,0,4,2,1,600,7,1
-BZW-030,Request for Proposal (RFP) Template,bizwright,Operations,89,2.2,29,60,overpriced,0,114,3,0,4,0,0,0,0,0,0
-PLD-007,Goal-Setting Workbook,plainday,Goals & productivity,89,17.8,39,50,overpriced,18,836,0,0,0,0,0,0,0,0,0
-BZW-007,Social Media Content Planner,bizwright,Marketing,99,21.1,49,50,overpriced,0,0,0,0,0,6,7,1,2320,15,1
-BZW-015,Pricing Calculator for Products & Services,bizwright,Business planning,89,12.3,39,50,overpriced,0,0,0,0,0,4,13,0,0,3,1
-ABL-001,Personal Budget Dashboard,abacus,Personal finance,109,28.3,59,50,overpriced,0,0,0,0,0,6,22,2,4001,14,1
-CHK-005,Classroom Library Tracker,chalkline,Classroom admin,89,17.8,39,50,overpriced,0,0,0,0,0,5,2,1,600,14,1
-ILP-007,Baby Shower Planner,ivorylane,Event planning,89,18.2,39,50,overpriced,0,0,0,0,0,5,3,1,600,14,1
-PCB-008,Personal Trainer Client Tracker,pacebook,Coaching business,89,18.2,39,50,overpriced,0,0,0,0,0,5,3,1,900,14,1
-DPL-001,Rental Income & Expense Tracker,doorpost,Landlord finance,99,20.4,49,50,overpriced,0,0,0,0,0,4,15,1,900,8,1
-DPL-021,Rental Yield & Cash Flow Calculator,doorpost,Landlord finance,79,9.7,29,50,overpriced,0,0,0,0,0,3,4,1,0,4,1
-DPL-022,Rent Increase Calculator,doorpost,Landlord finance,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,2,1
-DPL-023,Short-Term vs Long-Term Rental Comparison,doorpost,Landlord finance,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-GSM-002,Freelance Income & Tax Set-Aside Tracker,gigsmith,Freelance admin,99,20.7,49,50,overpriced,0,0,0,0,0,4,16,1,300,8,1
-GSM-009,Home Office Cost Share Calculator,gigsmith,Freelance admin,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-GSM-010,Creator Income Streams Tracker,gigsmith,Content creation,99,20.4,49,50,overpriced,0,0,0,0,0,4,15,1,300,8,1
-GSM-024,Freelance Rate Calculator,gigsmith,Freelance admin,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-GSM-025,Project Quote Calculator,gigsmith,Clients & projects,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-GSM-026,Sponsorship Rate Calculator,gigsmith,Content creation,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-GLD-002,Nonprofit Income & Expense Ledger,goodledger,Finance,99,20.4,49,50,overpriced,0,0,0,0,0,4,15,1,900,8,1
-GLD-012,Fundraising Goal Calculator,goodledger,Fundraising,79,8.9,29,50,overpriced,0,0,0,0,0,3,2,1,0,2,1
-GLD-013,Programme Cost per Beneficiary Calculator,goodledger,Impact,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-GLD-029,Tithes & Offerings Tracker,goodledger,Fundraising,99,20.4,49,50,overpriced,0,0,0,0,0,4,15,1,600,8,1
-MSE-011,Menu Price Calculator,mise,Costing & pricing,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-MSE-012,Break-Even Calculator for Food Businesses,mise,Business finance,79,9.3,29,50,overpriced,0,0,0,0,0,3,3,1,0,3,1
-MSE-013,Recipe Scaling Calculator,mise,Kitchen operations,79,9.4,29,50,overpriced,0,0,0,0,0,3,3,1,0,5,1
-SKD-001,Online Shop Sales & Profit Tracker,shopkeeper,Sales & profit,99,21.1,49,50,overpriced,0,0,0,0,0,4,17,1,300,8,1
-SKD-011,Free-Shipping Price Calculator,shopkeeper,Sales & profit,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-SKD-012,Marketplace Fee Calculator,shopkeeper,Sales & profit,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-SKD-013,Wholesale Price Calculator,shopkeeper,Sales & profit,79,8.9,29,50,overpriced,0,0,0,0,0,3,2,1,0,2,1
-CLK-005,Interview Preparation Tracker,careerladder,Interviews,89,17.5,39,50,overpriced,0,0,0,0,0,5,2,1,1500,10,1
-TNT-011,Hourly & Day Rate Calculator for Trades,trowel,Business admin,79,9.3,29,50,overpriced,0,0,0,0,0,3,3,1,0,3,1
-TNT-012,Paint Quantity Calculator,trowel,Estimating,79,9.7,29,50,overpriced,0,0,0,0,0,3,4,1,0,4,1
-TNT-013,Tile & Flooring Quantity Calculator,trowel,Estimating,79,9.7,29,50,overpriced,0,0,0,0,0,3,4,1,0,4,1
-TNT-014,Concrete Volume Calculator,trowel,Estimating,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-KDK-001,Medication Schedule & Log,kindkeep,Health records,89,17.8,39,50,overpriced,0,0,0,0,0,5,2,1,300,14,1
-FRB-001,Vegetable Garden Planting & Harvest Log,furrowbook,Garden planning,89,18.7,39,50,overpriced,0,0,0,0,0,5,4,1,1500,16,1
-FRB-004,Livestock Health & Treatment Records,furrowbook,Livestock,89,17.8,39,50,overpriced,0,0,0,0,0,5,2,1,300,14,1
-FRB-006,Beekeeping Hive Inspection Log,furrowbook,Livestock,89,18.2,39,50,overpriced,0,0,0,0,0,5,3,1,1800,15,1
-PKB-001,Pet Health & Vet Records,petkeep,Pet health,99,20.2,49,50,overpriced,0,0,0,0,0,6,3,1,1200,21,1
-PKB-008,Breeder Litter Records,petkeep,Pet business,89,13.6,39,50,overpriced,0,0,0,0,0,4,0,0,600,14,1
-PKB-009,Horse Care & Stable Records,petkeep,Pet health,89,18.2,39,50,overpriced,0,0,0,0,0,5,3,1,1200,14,1
-CBS-011,Service Price Calculator for Beauty Pros,chairbook,Salon finance,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-CBS-012,Chair Rental vs Commission Calculator,chairbook,Salon finance,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-FLW-011,Cost per Kilometre Calculator,fleetwise,Fleet costs,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-FLW-012,Delivery Pricing Calculator,fleetwise,Fleet costs,79,9.2,29,50,overpriced,0,0,0,0,0,3,3,1,0,2,1
-FLW-013,Fuel Cost Trip Calculator,fleetwise,Fleet costs,79,9.6,29,50,overpriced,0,0,0,0,0,3,4,1,0,3,1
-PLD-013,Home Organisation Binder,plainday,Home organisation,69,10.9,29,40,overpriced,12,443,0,0,0,0,0,0,0,0,0
-BZW-005,Small Business Income & Expense Tracker,bizwright,Invoicing & finance admin,89,25.2,49,40,overpriced,0,0,0,0,0,4,28,1,3000,11,1
-LRH-026,Babysitter Information Pack,littlerhythm,Family organisation,69,1.8,29,40,overpriced,0,73,3,0,1,0,0,0,0,0,0
-LRH-027,Family Emergency Plan,littlerhythm,Family organisation,69,2.0,29,40,overpriced,0,96,3,0,1,0,0,0,0,0,0
-CHK-023,Lesson Observation & Feedback Form,chalkline,Professional development,69,2.0,29,40,overpriced,0,45,4,0,0,0,0,0,0,0,0
-CHK-024,Learner Report Comment Bank,chalkline,Assessment,69,1.6,29,40,overpriced,0,190,0,0,1,0,0,0,0,0,0
-CHK-025,Individual Support Plan Template,chalkline,Classroom management,69,1.4,29,40,overpriced,0,71,2,0,3,0,0,0,0,0,0
-CHK-026,Classroom Rules & Procedures Handbook,chalkline,Classroom management,69,0.5,29,40,overpriced,0,63,0,0,6,0,0,0,0,0,0
-ILP-008,Event Run-of-Show Timeline,ivorylane,Event planning,69,5.1,29,40,overpriced,0,0,0,0,0,2,0,0,0,7,1
-ILP-022,Wedding Vendor Questions & Contract Checklist,ivorylane,Wedding planning,69,1.0,29,40,overpriced,0,122,0,0,1,0,0,0,0,0,0
-ILP-023,Wedding Welcome Letter & Itinerary Template,ivorylane,Wedding planning,69,2.6,29,40,overpriced,0,164,3,0,8,0,0,0,0,0,0
-ILP-024,Event Proposal Template for Planners,ivorylane,Event business,69,1.1,29,40,overpriced,0,86,1,0,8,0,0,0,0,0,0
-ILP-030,Event Feedback Survey Template,ivorylane,Event business,69,2.3,29,40,overpriced,0,75,3,1,1,0,0,0,0,0,0
-PCB-003,Body Measurements Tracker,pacebook,Progress tracking,69,7.3,29,40,overpriced,0,0,0,0,0,3,2,0,0,7,1
-PCB-022,Gym Membership & PAR-Q Health Form,pacebook,Coaching business,69,1.6,29,40,overpriced,0,99,2,0,1,0,0,0,0,0,0
-PCB-023,Personal Training Package & Price Sheet,pacebook,Coaching business,69,0.8,29,40,overpriced,0,52,1,0,4,0,0,0,0,0,0
-PCB-030,Fitness Studio Timetable & Policies Template,pacebook,Coaching business,69,1.0,29,40,overpriced,0,75,1,0,6,0,0,0,0,0,0
-CLK-002,Resume / CV Template — Classic,careerladder,Resumes & letters,69,0.9,29,40,overpriced,0,108,0,0,18,0,0,0,0,0,0
-CLK-019,LinkedIn Profile Workbook,careerladder,Resumes & letters,69,1.1,29,40,overpriced,0,81,1,0,4,0,0,0,0,0,0
-CLK-020,Resume / CV Template — Modern Two-Section,careerladder,Resumes & letters,69,1.4,29,40,overpriced,0,73,2,0,6,0,0,0,0,0,0
-CLK-021,Reference List & Request Templates,careerladder,Resumes & letters,69,1.0,29,40,overpriced,0,74,1,0,3,0,0,0,0,0,0
-CLK-022,Resignation Letter Templates,careerladder,Resumes & letters,69,0.6,29,40,overpriced,0,72,0,0,10,0,0,0,0,0,0
-CLK-023,Salary Negotiation Script Pack,careerladder,Career growth,69,1.0,29,40,overpriced,0,117,0,0,6,0,0,0,0,0,0
-CLK-030,Portfolio & Personal Website Content Planner,careerladder,Resumes & letters,69,1.0,29,40,overpriced,0,75,1,0,5,0,0,0,0,0,0
-KDK-009,Equipment & Supplies Tracker,kindkeep,Care coordination,69,7.3,29,40,overpriced,0,0,0,0,0,3,2,0,0,7,1
-KDK-020,Care Plan Template,kindkeep,Care coordination,69,1.0,29,40,overpriced,0,75,1,0,3,0,0,0,0,0,0
-KDK-021,Caregiver Agreement Template (Family),kindkeep,Legal & planning,69,1.0,29,40,overpriced,0,72,1,0,4,0,0,0,0,0,0
-KDK-022,Emergency Medical Information Sheet,kindkeep,Health records,69,1.7,29,40,overpriced,0,111,2,0,1,0,0,0,0,0,0
-KDK-023,Letters for Caregivers Template Pack,kindkeep,Legal & planning,69,0.7,29,40,overpriced,0,87,0,0,12,0,0,0,0,0,0
-FRB-003,Egg Production & Flock Tracker,furrowbook,Livestock,89,23.1,49,40,overpriced,0,0,0,0,0,5,17,1,300,15,1
-FRB-021,Smallholding Business Plan Template,furrowbook,Farm finance,69,1.8,29,40,overpriced,0,66,3,0,5,0,0,0,0,0,0
-FRB-022,Veg Box / CSA Member Agreement Template,furrowbook,Farm finance,69,1.0,29,40,overpriced,0,71,1,0,5,0,0,0,0,0,0
-FRB-023,Farm Stall Price List & Signage Template,furrowbook,Farm finance,69,1.7,29,40,overpriced,0,112,2,0,1,0,0,0,0,0,0
-FRB-029,Seed Swap & Garden Club Kit,furrowbook,Garden planning,69,1.8,29,40,overpriced,0,119,2,0,0,0,0,0,0,0,0
-PKB-020,Pet Sitting Service Agreement Template,petkeep,Pet business,69,1.0,29,40,overpriced,0,70,1,0,5,0,0,0,0,0,0
-PKB-021,Pet Adoption Application Template,petkeep,Pet business,69,1.9,29,40,overpriced,0,126,2,0,0,0,0,0,0,0,0
-PKB-022,Pet Business Price List & Policies,petkeep,Pet business,69,0.8,29,40,overpriced,0,45,1,0,5,0,0,0,0,0,0
-PKB-030,Pet First-Aid Kit Checklist & Emergency Contacts,petkeep,Pet health,69,1.5,29,40,overpriced,0,88,2,0,1,0,0,0,0,0,0
-HSP-022,Homeschool Year-End Report Template,hearthschool,Records,69,0.9,29,40,overpriced,0,59,1,0,3,0,0,0,0,0,0
-HSP-023,Homeschool Philosophy & Vision Statement Workbook,hearthschool,Planning,69,0.6,29,40,overpriced,0,70,0,0,6,0,0,0,0,0,0
-HSP-024,Homeschool Co-op Planning Kit,hearthschool,Planning,69,2.1,29,40,overpriced,0,104,3,0,2,0,0,0,0,0,0
-HSP-030,High School Homeschool Transcript Template,hearthschool,Records,69,1.6,29,40,overpriced,0,96,2,0,2,0,0,0,0,0,0
-ABL-026,Insurance Policy Register,abacus,Personal finance,69,6.9,29,40,overpriced,0,0,0,0,0,3,1,0,0,7,1
-ABL-002,Debt Snowball & Avalanche Calculator,abacus,Personal finance,109,52.6,79,30,overpriced,0,0,0,0,0,4,391,1,1,7,1
-LRH-001,Family Chore Points Tracker,littlerhythm,Chores & routines,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-LRH-002,Kids Pocket Money & Savings Tracker,littlerhythm,Money for kids,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-LRH-003,Screen Time Log,littlerhythm,Health & habits,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,900,8,1
-LRH-005,Kids Reading Minutes Log,littlerhythm,Learning at home,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-LRH-006,"Baby Feeding, Sleep & Nappy Log",littlerhythm,Baby,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-LRH-007,Family Birthday & Gift Planner,littlerhythm,Family money,69,13.4,39,30,overpriced,0,0,0,0,0,4,1,0,300,7,1
-LRH-028,Cost of Raising a Child Calculator,littlerhythm,Family money,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-CHK-001,Teacher Gradebook,chalkline,Assessment,69,16.8,39,30,overpriced,0,0,0,0,0,4,5,1,600,7,1
-CHK-002,Class Attendance Register,chalkline,Classroom admin,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-CHK-003,Parent Communication Log,chalkline,Classroom admin,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,900,7,1
-CHK-004,Behaviour & Merit Tracker,chalkline,Classroom management,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-CHK-007,Homework Submission Tracker,chalkline,Assessment,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,300,7,1
-CHK-008,Learner Reading Levels Tracker,chalkline,Assessment,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-CHK-009,Duty & Extra-Mural Roster,chalkline,Classroom admin,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,300,7,1
-CHK-010,Exam Results Analysis,chalkline,Assessment,69,17.2,39,30,overpriced,0,0,0,0,0,4,6,1,300,7,1
-CHK-027,Marks Weighting Calculator,chalkline,Assessment,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-CHK-030,Teacher Professional Development Log,chalkline,Professional development,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-ILP-001,Wedding Budget Planner,ivorylane,Wedding planning,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-ILP-002,Wedding Guest List & RSVP Tracker,ivorylane,Wedding planning,69,16.6,39,30,overpriced,0,0,0,0,0,4,4,1,1200,9,1
-ILP-003,Wedding Vendor Tracker,ivorylane,Wedding planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-ILP-004,Wedding Gift & Thank-You Tracker,ivorylane,Wedding planning,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-ILP-005,Event Budget & Expense Tracker,ivorylane,Event planning,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-ILP-006,Party Guest List & Catering Counter,ivorylane,Event planning,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-ILP-009,Honeymoon & Travel Budget,ivorylane,Wedding planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-ILP-010,Wedding Seating Chart Planner,ivorylane,Wedding planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-ILP-025,Wedding Cost per Guest Calculator,ivorylane,Wedding planning,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-ILP-028,Event Staff & Volunteer Roster,ivorylane,Event planning,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-PCB-001,Strength Training Log,pacebook,Training logs,69,16.8,39,30,overpriced,0,0,0,0,0,4,5,1,300,7,1
-PCB-004,Calorie & Macro Tracker,pacebook,Nutrition,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-PCB-005,Cycling Training Log,pacebook,Training logs,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-PCB-006,Swimming Training Log,pacebook,Training logs,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-PCB-007,Habit & Workout Consistency Tracker,pacebook,Progress tracking,69,13.8,39,30,overpriced,0,0,0,0,0,4,2,0,300,7,1
-PCB-009,Race Calendar & Results Tracker,pacebook,Progress tracking,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-PCB-010,Home Gym Equipment & Budget Tracker,pacebook,Progress tracking,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,900,7,1
-PCB-024,Running Pace & Race Time Calculator,pacebook,Training logs,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-PCB-025,Daily Calorie Needs Calculator,pacebook,Nutrition,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-PCB-028,Team Player Stats Tracker,pacebook,Coaching business,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-CLK-001,Job Application Tracker,careerladder,Job search,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-CLK-004,Networking Contact Tracker,careerladder,Job search,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,300,7,1
-CLK-006,Salary & Job Offer Comparison,careerladder,Career growth,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-CLK-007,Skills Development Tracker,careerladder,Career growth,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-CLK-008,Work Achievements Log (Brag Sheet),careerladder,Career growth,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,300,7,1
-CLK-009,Freelance / Side-Job Pipeline for Job Seekers,careerladder,Job search,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,600,7,1
-CLK-010,Job Search Weekly Activity Log,careerladder,Job search,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-CLK-011,Salary Negotiation Calculator,careerladder,Career growth,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-CLK-012,Take-Home vs Contract Rate Calculator,careerladder,Career growth,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-CLK-028,Certifications & Licence Renewal Tracker,careerladder,Career growth,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-KDK-002,Caregiving Expense Tracker,kindkeep,Care finances,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,900,7,1
-KDK-003,Symptom & Health Diary,kindkeep,Health records,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-KDK-005,Medical Appointments Tracker,kindkeep,Health records,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-KDK-006,Care Team Rota,kindkeep,Care coordination,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,900,7,1
-KDK-007,Care Home & Service Comparison,kindkeep,Care finances,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-KDK-008,Daily Care Log,kindkeep,Care coordination,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,1200,8,1
-KDK-010,Caregiver Self-Care & Respite Tracker,kindkeep,Caregiver wellbeing,69,13.8,39,30,overpriced,0,0,0,0,0,4,2,0,600,7,1
-KDK-011,Home Care Cost Calculator,kindkeep,Care finances,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-KDK-012,Family Care Cost Sharing Calculator,kindkeep,Care finances,59,5.5,29,30,overpriced,0,0,0,0,0,2,2,0,0,4,1
-KDK-029,Medical Aid & Insurance Claims Tracker,kindkeep,Care finances,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-FRB-002,Seed Inventory & Viability Tracker,furrowbook,Garden planning,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-FRB-005,Smallholding Income & Expense Tracker,furrowbook,Farm finance,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,900,7,1
-FRB-008,Market Garden Sales Tracker,furrowbook,Farm finance,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,300,7,1
-FRB-009,Orchard & Fruit Tree Register,furrowbook,Garden planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,300,7,1
-FRB-010,Compost & Soil Amendment Log,furrowbook,Garden planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-FRB-011,Garden Bed Soil & Mulch Volume Calculator,furrowbook,Garden planning,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-FRB-012,Chicken Keeping Cost per Egg Calculator,furrowbook,Livestock,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-FRB-027,Irrigation & Water Use Log,furrowbook,Garden planning,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-PKB-003,Dog Walking Business Tracker,petkeep,Pet business,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-PKB-004,Pet Sitting & Boarding Bookings,petkeep,Pet business,69,14.1,39,30,overpriced,0,0,0,0,0,4,3,0,300,7,1
-PKB-005,Dog Training Progress Log,petkeep,Training,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,900,7,1
-PKB-006,Pet Food & Feeding Tracker,petkeep,Pet health,69,14.1,39,30,overpriced,0,0,0,0,0,4,3,0,300,7,1
-PKB-007,Grooming Salon Client & Appointment Tracker,petkeep,Pet business,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-PKB-010,Aquarium Water Quality Log,petkeep,Pet health,69,13.8,39,30,overpriced,0,0,0,0,0,4,2,0,300,7,1
-PKB-011,Cost of Owning a Pet Calculator,petkeep,Pet budget,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-PKB-012,Pet Food Portion Calculator,petkeep,Pet health,59,9.3,29,30,overpriced,0,0,0,0,0,3,3,1,0,3,1
-PKB-026,Rescue Foster Tracker,petkeep,Pet business,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,1200,7,1
-PKB-028,Pet Insurance Claims Tracker,petkeep,Pet budget,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-HSP-001,Homeschool Attendance & Hours Tracker,hearthschool,Records,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-HSP-002,Homeschool Grades & Assessment Tracker,hearthschool,Records,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-HSP-003,Homeschool Curriculum & Budget Tracker,hearthschool,Planning,69,16.3,39,30,overpriced,0,0,0,0,0,4,3,1,1500,9,1
-HSP-004,Reading List & Book Log for Homeschool,hearthschool,Records,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-HSP-005,Field Trip & Activity Log,hearthschool,Records,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-HSP-006,Homeschool Lesson Plan Tracker,hearthschool,Planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,900,8,1
-HSP-007,Co-op & Extracurricular Schedule,hearthschool,Planning,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,600,7,1
-HSP-008,Spelling & Vocabulary Mastery Tracker,hearthschool,Records,69,13.8,39,30,overpriced,0,0,0,0,0,4,2,0,600,7,1
-HSP-009,Math Facts Practice Tracker,hearthschool,Records,69,16.5,39,30,overpriced,0,0,0,0,0,4,4,1,600,7,1
-HSP-010,Portfolio Evidence Log,hearthschool,Records,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,900,8,1
-HSP-011,Homeschool Year Cost Calculator,hearthschool,Planning,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-HSP-012,School Days & Hours Planner Calculator,hearthschool,Planning,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-HSP-028,Life Skills Mastery Tracker,hearthschool,Records,69,15.8,39,30,overpriced,0,0,0,0,0,4,2,1,900,8,1
-PLD-029,Personal Time Tracker,plainday,Planners,69,16.1,39,30,overpriced,0,0,0,0,0,4,3,1,300,7,1
-ABL-021,Rent vs Buy Calculator,abacus,Personal finance,59,10.5,29,30,overpriced,0,0,0,0,0,3,6,1,0,5,1
-ABL-022,Subscription & Recurring Payments Tracker,abacus,Personal finance,69,16.8,39,30,overpriced,0,0,0,0,0,4,5,1,900,7,1
-ABL-023,Inflation Impact Calculator,abacus,Personal finance,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-ABL-024,Investment Portfolio Tracker,abacus,Investing,69,16.8,39,30,overpriced,0,0,0,0,0,4,5,1,300,7,1
-ABL-025,50/30/20 Budget Calculator,abacus,Personal finance,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
-ABL-027,Credit Card Payoff Calculator,abacus,Debt,59,9.2,29,30,overpriced,0,0,0,0,0,3,3,1,0,2,1
-ABL-028,Accounts Payable Ageing Tracker,abacus,Business finance,69,17.2,39,30,overpriced,0,0,0,0,0,4,6,1,600,7,1
-ABL-029,Customer Lifetime Value & Acquisition Cost Calculator,abacus,Business finance,59,9.3,29,30,overpriced,0,0,0,0,0,3,3,1,0,3,1
-ABL-030,Car Affordability & Total Cost Calculator,abacus,Personal finance,59,9.6,29,30,overpriced,0,0,0,0,0,3,4,1,0,3,1
+ABL-011,Warehouse Productivity Dashboard,abacus,Operations,359,27.5,49,310,overpriced,0,293,0,0,0,6,9,1,9000,55,1
+ABL-012,Supply Chain KPI Toolkit,abacus,Operations,359,24.1,49,310,overpriced,0,345,0,0,0,6,12,1,0,56,1
+ABL-010,Stock Control & Reorder Point Calculator,abacus,Inventory & stock,229,15.2,39,190,overpriced,0,362,0,0,0,4,11,0,0,10,1
+BZW-001,Business Plan Template + 3-Year Financial Projections,bizwright,Business planning,229,32.7,59,170,overpriced,0,1297,7,6,36,5,14,1,0,2,1
+BZW-017,Small Business KPI Dashboard,bizwright,Business planning,179,17.4,39,140,overpriced,0,304,0,0,0,4,6,2,1,9,1
+ABL-013,ABC Inventory Analysis Tool,abacus,Inventory & stock,149,17.8,39,110,overpriced,0,302,0,0,0,4,7,1,0,42,1
+ABL-014,13-Week Cash Flow Forecast,abacus,Business finance,149,17.8,39,110,overpriced,0,320,0,0,0,3,18,1,0,10,1
+ABL-019,Demand Forecasting Template,abacus,Inventory & stock,179,41.7,69,110,overpriced,0,308,0,0,0,4,82,1,1,6,1
+BZW-009,Project Management Tracker with Gantt Chart,bizwright,Operations,169,37.0,69,100,overpriced,0,306,0,0,0,8,37,1,630,12,1
+ABL-009,Inventory Management Spreadsheet,abacus,Inventory & stock,149,24.7,49,100,overpriced,0,288,0,0,0,6,11,1,11000,12,1
+BZW-010,Client CRM & Sales Pipeline Tracker,bizwright,Sales,149,28.0,59,90,overpriced,0,290,0,0,0,6,20,1,1100,13,1
+BZW-013,"Hiring Kit: Job Description, Interview Guide & Scorecard",bizwright,HR & people,109,10.3,29,80,overpriced,0,603,7,5,26,0,0,0,0,0,0
+BZW-028,Press Release Template Pack,bizwright,Sales & marketing,109,10.1,29,80,overpriced,0,804,1,6,45,0,0,0,0,0,0
+BZW-016,Brand Style Guide Template,bizwright,Marketing,99,8.0,29,70,overpriced,0,465,4,5,23,0,0,0,0,0,0
+GSM-005,YouTube Channel Analytics Tracker,gigsmith,Content creation,99,9.7,29,70,overpriced,0,325,0,0,0,3,1,0,0,8,1
+GSM-028,Newsletter Growth Tracker,gigsmith,Content creation,99,9.9,29,70,overpriced,0,321,0,0,0,3,2,0,0,7,1
+SKD-002,Multi-Channel Stock Sync Tracker,shopkeeper,Inventory,99,10.8,29,70,overpriced,0,331,0,0,0,3,4,0,0,8,1
+SKD-010,Craft & Handmade Materials Cost Tracker,shopkeeper,Sales & profit,109,12.6,39,70,overpriced,0,384,0,0,0,4,3,0,0,11,1
+CBS-028,Gift Voucher Register,chairbook,Salon finance,99,9.9,29,70,overpriced,0,321,0,0,0,3,2,0,0,7,1
+FLW-006,Fleet Vehicle Register & Compliance,fleetwise,Fleet maintenance,99,9.5,29,70,overpriced,0,329,0,0,0,3,1,0,0,5,1
+BZW-011,Employee Onboarding Kit,bizwright,HR & people,109,24.1,49,60,overpriced,0,622,6,3,14,3,7,0,29,20,1
+ABL-008,"Home Loan Calculator: Repayment, Affordability & Rate Changes",abacus,Loans & debt,109,21.2,49,60,overpriced,0,397,0,0,0,6,15,1,0,2,1
+DPL-002,Rent Roll & Arrears Tracker,doorpost,Tenant management,99,19.8,39,60,overpriced,0,366,0,0,0,4,4,1,300,10,1
+DPL-003,Maintenance Request Log,doorpost,Maintenance,99,19.2,39,60,overpriced,0,351,0,0,0,4,3,1,900,9,1
+DPL-004,Tenant Directory & Lease Tracker,doorpost,Tenant management,99,18.9,39,60,overpriced,0,341,0,0,0,4,3,1,600,6,1
+DPL-005,Deposit Ledger,doorpost,Tenant management,99,18.9,39,60,overpriced,0,357,0,0,0,4,2,1,600,9,1
+DPL-006,Short-Term Rental Income Tracker,doorpost,Landlord finance,99,19.4,39,60,overpriced,0,339,0,0,0,4,4,1,300,8,1
+DPL-007,Property Portfolio Overview,doorpost,Landlord finance,99,19.4,39,60,overpriced,0,335,0,0,0,4,5,1,300,4,1
+DPL-008,Utility & Meter Readings Log,doorpost,Maintenance,99,19.6,39,60,overpriced,0,343,0,0,0,4,4,1,600,10,1
+DPL-009,Rental Viewing & Applicant Tracker,doorpost,Tenant management,99,18.5,39,60,overpriced,0,315,0,0,0,4,2,1,900,9,1
+DPL-010,Property Insurance & Compliance Tracker,doorpost,Maintenance,99,19.0,39,60,overpriced,0,332,0,0,0,4,3,1,900,8,1
+DPL-018,Residential Lease Agreement Checklist,doorpost,Tenant management,89,8.5,29,60,overpriced,0,449,7,4,2,0,0,0,0,0,0
+DPL-019,Landlord Letter Templates Pack,doorpost,Tenant management,89,10.3,29,60,overpriced,0,949,1,4,75,0,0,0,0,0,0
+DPL-020,Rental Listing & Advert Template,doorpost,Tenant management,89,5.5,29,60,overpriced,0,342,3,3,6,0,0,0,0,0,0
+DPL-026,Property Purchase Cost Tracker,doorpost,Landlord finance,99,19.5,39,60,overpriced,0,373,0,0,0,4,3,1,600,10,1
+DPL-027,Vacancy & Turnover Cost Tracker,doorpost,Tenant management,99,19.5,39,60,overpriced,0,337,0,0,0,4,5,1,300,5,1
+DPL-030,Tenant Application Form & Screening Criteria,doorpost,Tenant management,89,5.8,29,60,overpriced,0,315,3,4,3,0,0,0,0,0,0
+GSM-003,Client Project Pipeline,gigsmith,Clients & projects,99,18.8,39,60,overpriced,0,345,0,0,0,4,2,1,600,9,1
+GSM-004,Content Calendar for Creators,gigsmith,Content creation,99,19.0,39,60,overpriced,0,345,0,0,0,4,2,1,900,12,1
+GSM-006,Brand Deal & Sponsorship Tracker,gigsmith,Content creation,99,18.7,39,60,overpriced,0,358,0,0,0,4,2,1,300,7,1
+GSM-007,Freelance Retainer Tracker,gigsmith,Clients & projects,99,19.5,39,60,overpriced,0,328,0,0,0,4,5,1,300,7,1
+GSM-008,Podcast Episode Planner,gigsmith,Content creation,99,18.8,39,60,overpriced,0,315,0,0,0,4,3,1,300,8,1
+GSM-011,Freelance Proposal Template,gigsmith,Clients & projects,89,8.4,29,60,overpriced,0,390,8,4,5,0,0,0,0,0,0
+GSM-012,Client Onboarding Questionnaire,gigsmith,Clients & projects,89,6.7,29,60,overpriced,0,316,4,5,2,0,0,0,0,0,0
+GSM-013,Scope of Work & Change Request Template,gigsmith,Clients & projects,89,6.0,29,60,overpriced,0,296,5,3,2,0,0,0,0,0,0
+GSM-014,Creator Media Kit Template,gigsmith,Content creation,89,6.7,29,60,overpriced,0,277,6,4,2,0,0,0,0,0,0
+GSM-015,Brand Pitch Email Templates,gigsmith,Content creation,89,5.8,29,60,overpriced,0,342,1,5,22,0,0,0,0,0,0
+GSM-016,Freelance Service Contract Checklist,gigsmith,Freelance admin,89,6.0,29,60,overpriced,0,376,1,5,2,0,0,0,0,0,0
+GSM-030,Testimonial & Referral Request Templates,gigsmith,Clients & projects,89,5.8,29,60,overpriced,0,330,0,6,11,0,0,0,0,0,0
+GLD-003,Volunteer Hours Tracker,goodledger,Volunteers,99,19.5,39,60,overpriced,0,325,0,0,0,4,4,1,300,11,1
+GLD-004,Grant Application Tracker,goodledger,Fundraising,99,18.8,39,60,overpriced,0,323,0,0,0,4,3,1,300,7,1
+GLD-005,Programme Beneficiary Register,goodledger,Impact,99,19.3,39,60,overpriced,0,339,0,0,0,4,3,1,300,11,1
+GLD-006,Fundraising Event Budget,goodledger,Fundraising,99,19.8,39,60,overpriced,0,325,0,0,0,4,5,1,600,10,1
+GLD-007,Membership & Subscriptions Register,goodledger,Governance,99,19.2,39,60,overpriced,0,322,0,0,0,4,4,1,600,8,1
+GLD-008,In-Kind Donations Log,goodledger,Fundraising,99,18.8,39,60,overpriced,0,321,0,0,0,4,3,1,300,7,1
+GLD-009,Petty Cash Book for Organisations,goodledger,Finance,99,19.3,39,60,overpriced,0,330,0,0,0,4,4,1,300,8,1
+GLD-010,Board & Committee Action Tracker,goodledger,Governance,99,18.5,39,60,overpriced,0,319,0,0,0,4,2,1,300,8,1
+GLD-011,Annual Budget for Small Nonprofits,goodledger,Finance,99,19.9,39,60,overpriced,0,339,0,0,0,4,5,1,600,10,1
+GLD-022,Grant Proposal Template,goodledger,Fundraising,89,10.4,29,60,overpriced,0,371,12,5,3,0,0,0,0,0,0
+GLD-023,Volunteer Handbook Template,goodledger,Volunteers,89,9.1,29,60,overpriced,0,277,12,4,3,0,0,0,0,0,0
+GLD-024,Nonprofit Annual Impact Report Template,goodledger,Impact,89,9.1,29,60,overpriced,0,265,11,5,2,0,0,0,0,0,0
+GLD-025,Board Roles & Code of Conduct Template,goodledger,Governance,89,6.6,29,60,overpriced,0,357,4,4,2,0,0,0,0,0,0
+GLD-026,Fundraising Appeal Letter Templates,goodledger,Fundraising,89,6.4,29,60,overpriced,0,423,1,5,37,0,0,0,0,0,0
+GLD-027,Volunteer Application & Consent Form,goodledger,Volunteers,89,6.2,29,60,overpriced,0,309,4,4,4,0,0,0,0,0,0
+MSE-002,Food Business Sales & Expenses Tracker,mise,Business finance,109,26.6,49,60,overpriced,0,365,0,0,0,5,17,1,600,20,1
+MSE-004,Food Waste Log,mise,Kitchen operations,99,19.1,39,60,overpriced,0,336,0,0,0,4,3,1,600,10,1
+MSE-005,Supplier Price Comparison,mise,Costing & pricing,99,19.7,39,60,overpriced,0,351,0,0,0,4,4,1,600,11,1
+MSE-006,Catering Quote & Event Order Tracker,mise,Business finance,99,19.2,39,60,overpriced,0,334,0,0,0,4,4,1,300,7,1
+MSE-007,Staff Rota & Labour Cost Planner,mise,Kitchen operations,99,19.8,39,60,overpriced,0,353,0,0,0,4,4,1,300,12,1
+MSE-008,Bakery Order Book,mise,Business finance,99,19.4,39,60,overpriced,0,354,0,0,0,4,4,1,600,7,1
+MSE-009,Market Stall Sales Tracker,mise,Business finance,99,19.4,39,60,overpriced,0,332,0,0,0,4,4,1,600,9,1
+MSE-010,Equipment Maintenance & Cleaning Log,mise,Food safety,99,18.9,39,60,overpriced,0,321,0,0,0,4,3,1,600,9,1
+MSE-022,Food Business Plan Template,mise,Business finance,89,9.6,29,60,overpriced,0,368,10,5,2,0,0,0,0,0,0
+MSE-023,Catering Menu & Quote Template,mise,Business finance,89,6.1,29,60,overpriced,0,248,5,4,2,0,0,0,0,0,0
+MSE-024,Food Safety Plan Template,mise,Food safety,89,7.2,29,60,overpriced,0,322,5,5,2,0,0,0,0,0,0
+MSE-027,Delivery App Commission Tracker,mise,Business finance,99,19.7,39,60,overpriced,0,344,0,0,0,4,5,1,300,7,1
+MSE-030,Recipe Specification Card Template,mise,Kitchen operations,89,5.8,29,60,overpriced,0,266,4,4,2,0,0,0,0,0,0
+SKD-003,Product Listing Tracker,shopkeeper,Listings & marketing,99,19.4,39,60,overpriced,0,380,0,0,0,4,3,1,900,8,1
+SKD-004,Shipping & Fulfilment Log,shopkeeper,Fulfilment,99,19.2,39,60,overpriced,0,340,0,0,0,4,3,1,900,10,1
+SKD-005,Returns & Refunds Tracker,shopkeeper,Fulfilment,99,19.0,39,60,overpriced,0,347,0,0,0,4,3,1,600,7,1
+SKD-006,Customer List & Repeat Buyer Tracker,shopkeeper,Listings & marketing,99,16.7,39,60,overpriced,0,340,0,0,0,4,2,0,300,8,1
+SKD-007,Product Launch Tracker,shopkeeper,Listings & marketing,99,18.7,39,60,overpriced,0,339,0,0,0,4,2,1,600,9,1
+SKD-008,Supplier & Purchase Order Tracker,shopkeeper,Inventory,99,19.3,39,60,overpriced,0,333,0,0,0,4,4,1,600,8,1
+SKD-009,Marketing Spend & ROAS Tracker,shopkeeper,Listings & marketing,99,19.5,39,60,overpriced,0,352,0,0,0,4,4,1,300,8,1
+SKD-019,Shop Policies Template Pack,shopkeeper,Fulfilment,89,6.5,29,60,overpriced,0,388,2,5,11,0,0,0,0,0,0
+SKD-020,Customer Service Email Templates,shopkeeper,Fulfilment,89,6.7,29,60,overpriced,0,568,0,4,38,0,0,0,0,0,0
+SKD-021,Wholesale Line Sheet Template,shopkeeper,Sales & profit,89,6.5,29,60,overpriced,0,235,5,5,2,0,0,0,0,0,0
+SKD-022,Product Description Writing Templates,shopkeeper,Listings & marketing,89,3.4,29,60,overpriced,0,297,1,1,9,0,0,0,0,0,0
+SKD-026,Daily Cash-Up Sheet for Small Retail,shopkeeper,Sales & profit,99,16.7,39,60,overpriced,0,339,0,0,0,4,2,0,300,9,1
+SKD-027,Marketplace Payout Reconciliation,shopkeeper,Sales & profit,99,19.5,39,60,overpriced,0,323,0,0,0,4,5,1,300,7,1
+SKD-028,Subscription Box Subscriber Tracker,shopkeeper,Fulfilment,99,19.6,39,60,overpriced,0,319,0,0,0,4,5,1,600,9,1
+CLK-003,Cover Letter Templates,careerladder,Resumes & letters,89,10.1,29,60,overpriced,0,727,0,8,51,0,0,0,0,0,0
+TNT-001,Job Costing Tracker for Trades,trowel,Job management,109,21.7,49,60,overpriced,0,369,0,0,0,5,4,1,900,15,1
+TNT-002,Quote / Estimate Template for Trades,trowel,Quotes & invoices,89,7.7,29,60,overpriced,0,300,8,4,2,0,0,0,0,0,0
+TNT-003,Materials Estimator & Order List,trowel,Job management,99,19.8,39,60,overpriced,0,341,0,0,0,4,5,1,600,9,1
+TNT-004,Trade Invoice & Payment Tracker,trowel,Quotes & invoices,99,19.2,39,60,overpriced,0,323,0,0,0,4,4,1,600,8,1
+TNT-005,Vehicle & Tool Expense Log,trowel,Business admin,109,26.0,49,60,overpriced,0,351,0,0,0,5,16,1,600,18,1
+TNT-006,Tool & Equipment Register,trowel,Business admin,99,19.0,39,60,overpriced,0,333,0,0,0,4,3,1,300,8,1
+TNT-007,Subcontractor Tracker,trowel,Job management,99,19.1,39,60,overpriced,0,318,0,0,0,4,4,1,600,7,1
+TNT-008,Job Scheduling & Calendar Tracker,trowel,Job management,99,19.0,39,60,overpriced,0,342,0,0,0,4,3,1,600,8,1
+TNT-009,Leads & Enquiries Tracker for Trades,trowel,Business admin,99,19.4,39,60,overpriced,0,325,0,0,0,4,4,1,600,10,1
+TNT-010,Snag List & Defects Tracker,trowel,Job management,99,19.2,39,60,overpriced,0,314,0,0,0,4,4,1,600,8,1
+TNT-020,Terms & Conditions Template for Trades,trowel,Quotes & invoices,89,5.2,29,60,overpriced,0,440,0,3,2,0,0,0,0,0,0
+TNT-021,Job Completion & Handover Certificate,trowel,Job management,89,7.2,29,60,overpriced,0,241,8,4,2,0,0,0,0,0,0
+TNT-022,Trade Business Marketing Plan,trowel,Business admin,89,6.5,29,60,overpriced,0,290,4,5,5,0,0,0,0,0,0
+TNT-026,Crew Timesheet & Wages Tracker,trowel,Business admin,99,19.6,39,60,overpriced,0,356,0,0,0,4,4,1,300,9,1
+TNT-027,Retention & Warranty Tracker,trowel,Quotes & invoices,99,16.5,39,60,overpriced,0,343,0,0,0,4,2,0,300,5,1
+TNT-030,Method Statement & Risk Assessment Template,trowel,Business admin,89,7.7,29,60,overpriced,0,349,7,4,2,0,0,0,0,0,0
+CBS-001,Salon Client Record & Service History,chairbook,Clients & bookings,109,21.8,49,60,overpriced,0,388,0,0,0,5,4,1,600,15,1
+CBS-002,Salon Income & Expense Tracker,chairbook,Salon finance,109,26.6,49,60,overpriced,0,347,0,0,0,5,17,1,900,22,1
+CBS-003,Appointment Book & No-Show Tracker,chairbook,Clients & bookings,99,19.4,39,60,overpriced,0,318,0,0,0,4,4,1,600,11,1
+CBS-004,Retail Product Stock Tracker for Salons,chairbook,Salon finance,99,19.4,39,60,overpriced,0,343,0,0,0,4,4,1,300,8,1
+CBS-005,Stylist Commission & Chair Rental Tracker,chairbook,Salon finance,99,19.7,39,60,overpriced,0,343,0,0,0,4,5,1,300,7,1
+CBS-006,Nail Technician Service & Supplies Tracker,chairbook,Salon finance,99,19.4,39,60,overpriced,0,336,0,0,0,4,4,1,300,9,1
+CBS-007,Lash & Brow Client Tracker,chairbook,Clients & bookings,99,18.7,39,60,overpriced,0,335,0,0,0,4,2,1,300,9,1
+CBS-008,Barber Shop Daily Sheet,chairbook,Salon finance,99,19.6,39,60,overpriced,0,336,0,0,0,4,4,1,900,11,1
+CBS-009,Beauty Business Marketing Tracker,chairbook,Marketing,99,19.6,39,60,overpriced,0,342,0,0,0,4,4,1,600,10,1
+CBS-010,Salon Equipment Hygiene & Sterilisation Log,chairbook,Health & safety,99,18.9,39,60,overpriced,0,341,0,0,0,4,2,1,600,11,1
+CBS-020,Salon Policies Template,chairbook,Clients & bookings,89,7.0,29,60,overpriced,0,537,0,5,7,0,0,0,0,0,0
+CBS-021,Chair Rental Agreement Checklist,chairbook,Salon finance,89,6.6,29,60,overpriced,0,284,3,6,2,0,0,0,0,0,0
+CBS-022,Salon Staff Handbook Template,chairbook,Health & safety,89,9.5,29,60,overpriced,0,425,10,4,6,0,0,0,0,0,0
+CBS-023,Beauty Price List & Service Menu Template,chairbook,Marketing,89,7.2,29,60,overpriced,0,230,7,5,3,0,0,0,0,0,0
+CBS-027,Beauty Training & Certificates Log,chairbook,Health & safety,99,16.1,39,60,overpriced,0,330,0,0,0,4,1,0,600,6,1
+CBS-030,Photo & Social Media Consent Form,chairbook,Marketing,89,5.5,29,60,overpriced,0,274,3,4,6,0,0,0,0,0,0
+FLW-001,Vehicle Mileage Logbook,fleetwise,Driver logs,99,19.5,39,60,overpriced,0,346,0,0,0,4,4,1,600,9,1
+FLW-003,Vehicle Maintenance & Service Tracker,fleetwise,Fleet maintenance,99,19.1,39,60,overpriced,0,336,0,0,0,4,3,1,600,9,1
+FLW-004,Delivery Driver Earnings Tracker,fleetwise,Driver logs,99,19.5,39,60,overpriced,0,352,0,0,0,4,4,1,300,8,1
+FLW-005,Courier Delivery Log & Proof of Delivery Register,fleetwise,Operations,99,18.8,39,60,overpriced,0,342,0,0,0,4,2,1,300,9,1
+FLW-007,Driver Hours & Rest Log,fleetwise,Driver logs,99,19.2,39,60,overpriced,0,350,0,0,0,4,3,1,300,9,1
+FLW-008,Traffic Fines & Incident Register,fleetwise,Operations,99,19.3,39,60,overpriced,0,364,0,0,0,4,3,1,900,9,1
+FLW-009,Transport Job & Invoicing Tracker,fleetwise,Operations,99,19.4,39,60,overpriced,0,341,0,0,0,4,4,1,900,8,1
+FLW-010,Tyre Management Log,fleetwise,Fleet maintenance,99,18.9,39,60,overpriced,0,342,0,0,0,4,2,1,900,11,1
+FLW-020,Driver Policy & Code of Conduct Template,fleetwise,Operations,89,6.4,29,60,overpriced,0,333,4,4,2,0,0,0,0,0,0
+FLW-021,Transport Rate Card & Quote Template,fleetwise,Operations,89,5.4,29,60,overpriced,0,221,4,4,2,0,0,0,0,0,0
+FLW-022,Vehicle Handover & Checkout Form,fleetwise,Fleet maintenance,89,5.3,29,60,overpriced,0,201,4,4,3,0,0,0,0,0,0
+FLW-024,Moving Company Job Planner,fleetwise,Operations,99,18.9,39,60,overpriced,0,339,0,0,0,4,3,1,300,7,1
+FLW-027,Fuel Card Reconciliation,fleetwise,Fleet costs,99,19.6,39,60,overpriced,0,360,0,0,0,4,4,1,900,9,1
+FLW-028,Vehicle Finance & Lease Tracker,fleetwise,Fleet costs,99,18.7,39,60,overpriced,0,332,0,0,0,4,3,1,600,5,1
+FLW-030,Delivery Instructions & Proof-of-Delivery Form,fleetwise,Operations,89,5.4,29,60,overpriced,0,219,4,4,2,0,0,0,0,0,0
+BZW-022,Business Continuity Plan Template,bizwright,Operations,89,11.8,29,60,overpriced,0,651,11,4,3,0,0,0,0,0,0
+BZW-024,OKR & Goal Tracker,bizwright,Planning & strategy,99,19.6,39,60,overpriced,0,373,0,0,0,4,4,1,600,7,1
+BZW-025,Staff Leave & Absence Tracker,bizwright,People & HR,109,22.7,49,60,overpriced,0,395,0,0,0,5,7,1,600,12,1
+BZW-027,Company Profile Template,bizwright,Sales & marketing,89,10.8,29,60,overpriced,0,507,9,6,3,0,0,0,0,0,0
+BZW-029,Staff Skills & Training Matrix,bizwright,People & HR,99,18.9,39,60,overpriced,0,322,0,0,0,4,2,1,600,13,1
+BZW-030,Request for Proposal (RFP) Template,bizwright,Operations,89,9.7,29,60,overpriced,0,492,9,4,4,0,0,0,0,0,0
+PLD-007,Goal-Setting Workbook,plainday,Goals & productivity,89,19.3,39,50,overpriced,19,946,0,0,0,0,0,0,0,0,0
+BZW-007,Social Media Content Planner,bizwright,Marketing,99,24.9,49,50,overpriced,0,269,0,0,0,7,7,1,2320,15,1
+BZW-015,Pricing Calculator for Products & Services,bizwright,Business planning,89,16.8,39,50,overpriced,0,356,0,0,0,5,13,0,0,3,1
+ABL-001,Personal Budget Dashboard,abacus,Personal finance,109,32.6,59,50,overpriced,0,335,0,0,0,7,22,2,4001,14,1
+ABL-006,Annual Personal Finance Workbook,abacus,Personal finance,99,23.4,49,50,overpriced,0,282,0,0,0,7,8,2,0,28,1
+DPL-001,Rental Income & Expense Tracker,doorpost,Landlord finance,99,24.6,49,50,overpriced,0,359,0,0,0,4,17,1,900,15,1
+GSM-001,Freelance Time Tracker & Billing,gigsmith,Freelance admin,99,20.1,49,50,overpriced,0,361,0,0,0,4,5,1,600,10,1
+GSM-002,Freelance Income & Tax Set-Aside Tracker,gigsmith,Freelance admin,99,24.1,49,50,overpriced,0,386,0,0,0,4,16,1,300,10,1
+GSM-010,Creator Income Streams Tracker,gigsmith,Content creation,99,23.7,49,50,overpriced,0,334,0,0,0,4,15,1,300,14,1
+GLD-001,Donation & Donor Tracker,goodledger,Fundraising,99,20.0,49,50,overpriced,0,351,0,0,0,4,5,1,1200,10,1
+GLD-002,Nonprofit Income & Expense Ledger,goodledger,Finance,99,24.3,49,50,overpriced,0,343,0,0,0,4,17,1,900,12,1
+GLD-012,Fundraising Goal Calculator,goodledger,Fundraising,79,11.8,29,50,overpriced,0,351,0,0,0,3,2,1,0,2,1
+GLD-029,Tithes & Offerings Tracker,goodledger,Fundraising,99,23.7,49,50,overpriced,0,345,0,0,0,4,15,1,600,13,1
+MSE-001,Recipe Costing Calculator,mise,Costing & pricing,99,23.7,49,50,overpriced,0,387,0,0,0,5,8,1,360,21,1
+MSE-003,Stock & Inventory Count Sheet,mise,Kitchen operations,99,20.2,49,50,overpriced,0,342,0,0,0,4,6,1,600,10,1
+SKD-001,Online Shop Sales & Profit Tracker,shopkeeper,Sales & profit,99,24.6,49,50,overpriced,0,366,0,0,0,4,17,1,300,14,1
+SKD-013,Wholesale Price Calculator,shopkeeper,Sales & profit,79,11.7,29,50,overpriced,0,335,0,0,0,3,2,1,0,2,1
+KDK-004,Blood Pressure & Glucose Log,kindkeep,Health records,89,12.0,39,50,overpriced,0,344,0,0,0,4,1,0,0,16,1
+PKB-001,Pet Health & Vet Records,petkeep,Pet health,99,23.2,49,50,overpriced,0,369,0,0,0,6,3,1,1200,20,1
+PKB-008,Breeder Litter Records,petkeep,Pet business,89,16.5,39,50,overpriced,0,345,0,0,0,4,0,0,600,14,1
+FLW-002,Fleet Fuel Tracker,fleetwise,Fleet costs,99,20.3,49,50,overpriced,0,353,0,0,0,4,6,1,300,9,1
+BZW-021,Employee Performance Review Template,bizwright,People & HR,89,14.3,39,50,overpriced,0,795,13,5,2,0,0,0,0,0,0
+BZW-023,Monthly Management Report Template,bizwright,Operations,89,12.0,39,50,overpriced,0,515,13,5,3,0,0,0,0,0,0
+BZW-026,Business Risk Register,bizwright,Operations,99,20.0,49,50,overpriced,0,369,0,0,0,4,5,1,600,8,1
+LRH-026,Babysitter Information Pack,littlerhythm,Family organisation,69,8.0,29,40,overpriced,0,382,7,4,3,0,0,0,0,0,0
+LRH-027,Family Emergency Plan,littlerhythm,Family organisation,69,6.1,29,40,overpriced,0,297,4,4,2,0,0,0,0,0,0
+CHK-005,Classroom Library Tracker,chalkline,Classroom admin,89,21.1,49,40,overpriced,0,359,0,0,0,5,2,1,600,18,1
+CHK-023,Lesson Observation & Feedback Form,chalkline,Professional development,69,6.5,29,40,overpriced,0,294,5,4,2,0,0,0,0,0,0
+CHK-025,Individual Support Plan Template,chalkline,Classroom management,69,7.8,29,40,overpriced,0,258,9,4,2,0,0,0,0,0,0
+CHK-026,Classroom Rules & Procedures Handbook,chalkline,Classroom management,69,5.9,29,40,overpriced,0,273,4,4,2,0,0,0,0,0,0
+ILP-007,Baby Shower Planner,ivorylane,Event planning,89,21.2,49,40,overpriced,0,356,0,0,0,5,3,1,600,15,1
+ILP-008,Event Run-of-Show Timeline,ivorylane,Event planning,69,8.4,29,40,overpriced,0,350,0,0,0,2,0,0,0,12,1
+ILP-022,Wedding Vendor Questions & Contract Checklist,ivorylane,Wedding planning,69,6.3,29,40,overpriced,0,324,4,4,2,0,0,0,0,0,0
+ILP-023,Wedding Welcome Letter & Itinerary Template,ivorylane,Wedding planning,69,5.9,29,40,overpriced,0,225,5,4,2,0,0,0,0,0,0
+ILP-024,Event Proposal Template for Planners,ivorylane,Event business,69,6.4,29,40,overpriced,0,234,6,4,2,0,0,0,0,0,0
+ILP-030,Event Feedback Survey Template,ivorylane,Event business,69,5.1,29,40,overpriced,0,223,3,4,2,0,0,0,0,0,0
+PCB-003,Body Measurements Tracker,pacebook,Progress tracking,69,10.3,29,40,overpriced,0,319,0,0,0,3,3,0,0,8,1
+PCB-008,Personal Trainer Client Tracker,pacebook,Coaching business,89,21.2,49,40,overpriced,0,335,0,0,0,5,4,1,900,13,1
+PCB-022,Gym Membership & PAR-Q Health Form,pacebook,Coaching business,69,6.2,29,40,overpriced,0,364,3,4,2,0,0,0,0,0,0
+PCB-023,Personal Training Package & Price Sheet,pacebook,Coaching business,69,4.5,29,40,overpriced,0,206,2,4,2,0,0,0,0,0,0
+PCB-030,Fitness Studio Timetable & Policies Template,pacebook,Coaching business,69,4.8,29,40,overpriced,0,195,3,4,3,0,0,0,0,0,0
+DPL-021,Rental Yield & Cash Flow Calculator,doorpost,Landlord finance,79,13.2,39,40,overpriced,0,416,0,0,0,3,4,1,0,4,1
+DPL-022,Rent Increase Calculator,doorpost,Landlord finance,79,12.2,39,40,overpriced,0,318,0,0,0,3,4,1,0,2,1
+DPL-023,Short-Term vs Long-Term Rental Comparison,doorpost,Landlord finance,79,12.8,39,40,overpriced,0,382,0,0,0,3,4,1,0,3,1
+GSM-009,Home Office Cost Share Calculator,gigsmith,Freelance admin,79,12.5,39,40,overpriced,0,389,0,0,0,3,3,1,0,2,1
+GSM-024,Freelance Rate Calculator,gigsmith,Freelance admin,79,13.0,39,40,overpriced,0,400,0,0,0,3,4,1,0,3,1
+GSM-025,Project Quote Calculator,gigsmith,Clients & projects,79,12.4,39,40,overpriced,0,328,0,0,0,3,4,1,0,3,1
+GSM-026,Sponsorship Rate Calculator,gigsmith,Content creation,79,12.2,39,40,overpriced,0,359,0,0,0,3,3,1,0,2,1
+GLD-013,Programme Cost per Beneficiary Calculator,goodledger,Impact,79,12.1,39,40,overpriced,0,348,0,0,0,3,3,1,0,2,1
+MSE-011,Menu Price Calculator,mise,Costing & pricing,79,12.1,39,40,overpriced,0,351,0,0,0,3,3,1,0,2,1
+MSE-012,Break-Even Calculator for Food Businesses,mise,Business finance,79,12.4,39,40,overpriced,0,369,0,0,0,3,3,1,0,3,1
+MSE-013,Recipe Scaling Calculator,mise,Kitchen operations,79,12.3,39,40,overpriced,0,338,0,0,0,3,3,1,0,5,1
+SKD-011,Free-Shipping Price Calculator,shopkeeper,Sales & profit,79,12.2,39,40,overpriced,0,363,0,0,0,3,3,1,0,2,1
+SKD-012,Marketplace Fee Calculator,shopkeeper,Sales & profit,79,12.1,39,40,overpriced,0,341,0,0,0,3,3,1,0,2,1
+CLK-005,Interview Preparation Tracker,careerladder,Interviews,89,22.1,49,40,overpriced,0,499,0,0,0,5,2,1,1500,15,1
+CLK-019,LinkedIn Profile Workbook,careerladder,Resumes & letters,69,10.5,29,40,overpriced,0,543,5,8,3,0,0,0,0,0,0
+CLK-020,Resume / CV Template — Modern Two-Section,careerladder,Resumes & letters,69,8.7,29,40,overpriced,0,413,2,9,12,0,0,0,0,0,0
+CLK-021,Reference List & Request Templates,careerladder,Resumes & letters,69,8.9,29,40,overpriced,0,384,3,9,7,0,0,0,0,0,0
+CLK-022,Resignation Letter Templates,careerladder,Resumes & letters,69,5.7,29,40,overpriced,0,500,0,3,24,0,0,0,0,0,0
+CLK-023,Salary Negotiation Script Pack,careerladder,Career growth,69,8.5,29,40,overpriced,0,578,3,5,15,0,0,0,0,0,0
+CLK-030,Portfolio & Personal Website Content Planner,careerladder,Resumes & letters,69,6.7,29,40,overpriced,0,356,3,5,2,0,0,0,0,0,0
+TNT-011,Hourly & Day Rate Calculator for Trades,trowel,Business admin,79,12.5,39,40,overpriced,0,384,0,0,0,3,3,1,0,3,1
+TNT-012,Paint Quantity Calculator,trowel,Estimating,79,13.3,39,40,overpriced,0,425,0,0,0,3,4,1,0,4,1
+TNT-013,Tile & Flooring Quantity Calculator,trowel,Estimating,79,12.6,39,40,overpriced,0,348,0,0,0,3,4,1,0,4,1
+TNT-014,Concrete Volume Calculator,trowel,Estimating,79,12.7,39,40,overpriced,0,362,0,0,0,3,4,1,0,3,1
+KDK-001,Medication Schedule & Log,kindkeep,Health records,89,20.8,49,40,overpriced,0,369,0,0,0,5,2,1,300,13,1
+KDK-009,Equipment & Supplies Tracker,kindkeep,Care coordination,69,10.1,29,40,overpriced,0,323,0,0,0,3,2,0,0,9,1
+KDK-020,Care Plan Template,kindkeep,Care coordination,69,8.6,29,40,overpriced,0,306,10,4,2,0,0,0,0,0,0
+KDK-021,Caregiver Agreement Template (Family),kindkeep,Legal & planning,69,6.1,29,40,overpriced,0,288,3,5,3,0,0,0,0,0,0
+KDK-022,Emergency Medical Information Sheet,kindkeep,Health records,69,7.6,29,40,overpriced,0,228,8,5,3,0,0,0,0,0,0
+KDK-023,Letters for Caregivers Template Pack,kindkeep,Legal & planning,69,6.6,29,40,overpriced,0,430,0,6,46,0,0,0,0,0,0
+FRB-001,Vegetable Garden Planting & Harvest Log,furrowbook,Garden planning,89,21.6,49,40,overpriced,0,372,0,0,0,5,4,1,1500,14,1
+FRB-003,Egg Production & Flock Tracker,furrowbook,Livestock,89,26.6,49,40,overpriced,0,362,0,0,0,5,18,1,300,16,1
+FRB-004,Livestock Health & Treatment Records,furrowbook,Livestock,89,21.0,49,40,overpriced,0,372,0,0,0,5,2,1,300,15,1
+FRB-006,Beekeeping Hive Inspection Log,furrowbook,Livestock,89,21.1,49,40,overpriced,0,369,0,0,0,5,3,1,1800,12,1
+FRB-021,Smallholding Business Plan Template,furrowbook,Farm finance,69,6.7,29,40,overpriced,0,272,6,4,2,0,0,0,0,0,0
+FRB-022,Veg Box / CSA Member Agreement Template,furrowbook,Farm finance,69,5.3,29,40,overpriced,0,256,3,4,10,0,0,0,0,0,0
+FRB-023,Farm Stall Price List & Signage Template,furrowbook,Farm finance,69,5.1,29,40,overpriced,0,218,2,5,7,0,0,0,0,0,0
+FRB-029,Seed Swap & Garden Club Kit,furrowbook,Garden planning,69,5.2,29,40,overpriced,0,245,3,4,2,0,0,0,0,0,0
+PKB-009,Horse Care & Stable Records,petkeep,Pet health,89,21.3,49,40,overpriced,0,355,0,0,0,5,3,1,1200,16,1
+PKB-020,Pet Sitting Service Agreement Template,petkeep,Pet business,69,6.1,29,40,overpriced,0,242,4,5,2,0,0,0,0,0,0
+PKB-021,Pet Adoption Application Template,petkeep,Pet business,69,5.1,29,40,overpriced,0,280,2,4,4,0,0,0,0,0,0
+PKB-022,Pet Business Price List & Policies,petkeep,Pet business,69,5.2,29,40,overpriced,0,183,3,5,3,0,0,0,0,0,0
+PKB-030,Pet First-Aid Kit Checklist & Emergency Contacts,petkeep,Pet health,69,6.0,29,40,overpriced,0,270,2,6,2,0,0,0,0,0,0
+CBS-011,Service Price Calculator for Beauty Pros,chairbook,Salon finance,79,12.4,39,40,overpriced,0,378,0,0,0,3,3,1,0,2,1
+CBS-012,Chair Rental vs Commission Calculator,chairbook,Salon finance,79,12.4,39,40,overpriced,0,333,0,0,0,3,4,1,0,3,1
+FLW-011,Cost per Kilometre Calculator,fleetwise,Fleet costs,79,12.2,39,40,overpriced,0,362,0,0,0,3,3,1,0,2,1
+FLW-012,Delivery Pricing Calculator,fleetwise,Fleet costs,79,12.0,39,40,overpriced,0,332,0,0,0,3,3,1,0,2,1
+FLW-013,Fuel Cost Trip Calculator,fleetwise,Fleet costs,79,12.3,39,40,overpriced,0,323,0,0,0,3,4,1,0,3,1
+HSP-022,Homeschool Year-End Report Template,hearthschool,Records,69,6.8,29,40,overpriced,0,235,7,4,2,0,0,0,0,0,0
+HSP-023,Homeschool Philosophy & Vision Statement Workbook,hearthschool,Planning,69,5.1,29,40,overpriced,0,274,2,4,5,0,0,0,0,0,0
+HSP-024,Homeschool Co-op Planning Kit,hearthschool,Planning,69,5.8,29,40,overpriced,0,215,5,4,2,0,0,0,0,0,0
+HSP-030,High School Homeschool Transcript Template,hearthschool,Records,69,6.7,29,40,overpriced,0,213,6,5,2,0,0,0,0,0,0
+ABL-026,Insurance Policy Register,abacus,Personal finance,69,9.5,29,40,overpriced,0,316,0,0,0,3,1,0,0,7,1
+PLD-013,Home Organisation Binder,plainday,Home organisation,69,12.4,39,30,overpriced,13,549,0,0,0,0,0,0,0,0,0
+BZW-005,Small Business Income & Expense Tracker,bizwright,Invoicing & finance admin,89,29.4,59,30,overpriced,0,325,0,0,0,5,28,1,3000,11,1
+LRH-002,Kids Pocket Money & Savings Tracker,littlerhythm,Money for kids,69,19.6,39,30,overpriced,0,358,0,0,0,4,3,1,600,13,1
+LRH-005,Kids Reading Minutes Log,littlerhythm,Learning at home,69,19.8,39,30,overpriced,0,345,0,0,0,4,4,1,600,13,1
+LRH-006,"Baby Feeding, Sleep & Nappy Log",littlerhythm,Baby,69,19.7,39,30,overpriced,0,379,0,0,0,4,3,1,300,13,1
+LRH-007,Family Birthday & Gift Planner,littlerhythm,Family money,69,16.7,39,30,overpriced,0,355,0,0,0,4,1,0,300,11,1
+CHK-002,Class Attendance Register,chalkline,Classroom admin,69,19.9,39,30,overpriced,0,350,0,0,0,4,4,1,600,13,1
+CHK-003,Parent Communication Log,chalkline,Classroom admin,69,18.8,39,30,overpriced,0,331,0,0,0,4,2,1,900,10,1
+CHK-004,Behaviour & Merit Tracker,chalkline,Classroom management,69,19.0,39,30,overpriced,0,335,0,0,0,4,2,1,600,12,1
+CHK-007,Homework Submission Tracker,chalkline,Assessment,69,19.0,39,30,overpriced,0,327,0,0,0,4,2,1,300,13,1
+CHK-008,Learner Reading Levels Tracker,chalkline,Assessment,69,19.2,39,30,overpriced,0,350,0,0,0,4,3,1,300,9,1
+CHK-009,Duty & Extra-Mural Roster,chalkline,Classroom admin,69,18.8,39,30,overpriced,0,332,0,0,0,4,2,1,300,11,1
+CHK-024,Learner Report Comment Bank,chalkline,Assessment,69,14.1,39,30,overpriced,0,1349,1,5,2,0,0,0,0,0,0
+CHK-030,Teacher Professional Development Log,chalkline,Professional development,69,19.2,39,30,overpriced,0,340,0,0,0,4,3,1,600,10,1
+ILP-001,Wedding Budget Planner,ivorylane,Wedding planning,69,19.8,39,30,overpriced,0,355,0,0,0,4,4,1,300,12,1
+ILP-003,Wedding Vendor Tracker,ivorylane,Wedding planning,69,18.8,39,30,overpriced,0,342,0,0,0,4,2,1,600,9,1
+ILP-004,Wedding Gift & Thank-You Tracker,ivorylane,Wedding planning,69,19.8,39,30,overpriced,0,344,0,0,0,4,4,1,600,13,1
+ILP-005,Event Budget & Expense Tracker,ivorylane,Event planning,69,19.1,39,30,overpriced,0,339,0,0,0,4,3,1,600,9,1
+ILP-006,Party Guest List & Catering Counter,ivorylane,Event planning,69,19.7,39,30,overpriced,0,347,0,0,0,4,4,1,600,11,1
+ILP-009,Honeymoon & Travel Budget,ivorylane,Wedding planning,69,19.4,39,30,overpriced,0,338,0,0,0,4,2,1,600,17,1
+ILP-010,Wedding Seating Chart Planner,ivorylane,Wedding planning,69,19.6,39,30,overpriced,0,341,0,0,0,4,2,1,600,19,1
+ILP-028,Event Staff & Volunteer Roster,ivorylane,Event planning,69,19.4,39,30,overpriced,0,320,0,0,0,4,4,1,600,11,1
+PCB-004,Calorie & Macro Tracker,pacebook,Nutrition,69,19.5,39,30,overpriced,0,337,0,0,0,4,4,1,300,10,1
+PCB-005,Cycling Training Log,pacebook,Training logs,69,19.2,39,30,overpriced,0,314,0,0,0,4,4,1,300,8,1
+PCB-006,Swimming Training Log,pacebook,Training logs,69,19.7,39,30,overpriced,0,315,0,0,0,4,5,1,300,10,1
+PCB-007,Habit & Workout Consistency Tracker,pacebook,Progress tracking,69,16.9,39,30,overpriced,0,335,0,0,0,4,2,0,300,11,1
+PCB-010,Home Gym Equipment & Budget Tracker,pacebook,Progress tracking,69,19.4,39,30,overpriced,0,336,0,0,0,4,4,1,900,9,1
+PCB-028,Team Player Stats Tracker,pacebook,Coaching business,69,19.3,39,30,overpriced,0,326,0,0,0,4,3,1,300,13,1
+CLK-001,Job Application Tracker,careerladder,Job search,69,19.4,39,30,overpriced,0,333,0,0,0,4,4,1,600,9,1
+CLK-002,Resume / CV Template — Classic,careerladder,Resumes & letters,69,12.6,39,30,overpriced,0,665,4,11,20,0,0,0,0,0,0
+CLK-004,Networking Contact Tracker,careerladder,Job search,69,18.7,39,30,overpriced,0,350,0,0,0,4,2,1,300,7,1
+CLK-006,Salary & Job Offer Comparison,careerladder,Career growth,69,19.2,39,30,overpriced,0,359,0,0,0,4,4,1,300,4,1
+CLK-007,Skills Development Tracker,careerladder,Career growth,69,19.3,39,30,overpriced,0,339,0,0,0,4,3,1,600,11,1
+CLK-008,Work Achievements Log (Brag Sheet),careerladder,Career growth,69,18.7,39,30,overpriced,0,357,0,0,0,4,2,1,300,7,1
+CLK-009,Freelance / Side-Job Pipeline for Job Seekers,careerladder,Job search,69,18.8,39,30,overpriced,0,335,0,0,0,4,3,1,600,6,1
+CLK-010,Job Search Weekly Activity Log,careerladder,Job search,69,19.4,39,30,overpriced,0,339,0,0,0,4,4,1,300,9,1
+CLK-011,Salary Negotiation Calculator,careerladder,Career growth,59,11.7,29,30,overpriced,0,304,0,0,0,3,3,1,0,2,1
+CLK-028,Certifications & Licence Renewal Tracker,careerladder,Career growth,69,18.7,39,30,overpriced,0,323,0,0,0,4,3,1,300,6,1
+KDK-002,Caregiving Expense Tracker,kindkeep,Care finances,69,19.5,39,30,overpriced,0,355,0,0,0,4,3,1,900,13,1
+KDK-003,Symptom & Health Diary,kindkeep,Health records,69,19.8,39,30,overpriced,0,355,0,0,0,4,4,1,300,12,1
+KDK-005,Medical Appointments Tracker,kindkeep,Health records,69,18.6,39,30,overpriced,0,331,0,0,0,4,2,1,600,8,1
+KDK-006,Care Team Rota,kindkeep,Care coordination,69,19.1,39,30,overpriced,0,326,0,0,0,4,3,1,900,11,1
+KDK-007,Care Home & Service Comparison,kindkeep,Care finances,69,18.6,39,30,overpriced,0,367,0,0,0,4,2,1,600,4,1
+KDK-008,Daily Care Log,kindkeep,Care coordination,69,18.9,39,30,overpriced,0,362,0,0,0,4,2,1,1200,8,1
+KDK-010,Caregiver Self-Care & Respite Tracker,kindkeep,Caregiver wellbeing,69,17.1,39,30,overpriced,0,360,0,0,0,4,2,0,600,11,1
+KDK-029,Medical Aid & Insurance Claims Tracker,kindkeep,Care finances,69,19.6,39,30,overpriced,0,355,0,0,0,4,4,1,300,9,1
+FRB-002,Seed Inventory & Viability Tracker,furrowbook,Garden planning,69,19.0,39,30,overpriced,0,342,0,0,0,4,3,1,300,8,1
+FRB-008,Market Garden Sales Tracker,furrowbook,Farm finance,69,19.6,39,30,overpriced,0,337,0,0,0,4,4,1,300,11,1
+FRB-009,Orchard & Fruit Tree Register,furrowbook,Garden planning,69,18.7,39,30,overpriced,0,344,0,0,0,4,2,1,300,8,1
+FRB-010,Compost & Soil Amendment Log,furrowbook,Garden planning,69,18.6,39,30,overpriced,0,337,0,0,0,4,2,1,600,8,1
+FRB-027,Irrigation & Water Use Log,furrowbook,Garden planning,69,19.4,39,30,overpriced,0,333,0,0,0,4,4,1,600,9,1
+PKB-003,Dog Walking Business Tracker,petkeep,Pet business,69,19.5,39,30,overpriced,0,327,0,0,0,4,4,1,600,11,1
+PKB-004,Pet Sitting & Boarding Bookings,petkeep,Pet business,69,16.8,39,30,overpriced,0,329,0,0,0,4,3,0,300,6,1
+PKB-005,Dog Training Progress Log,petkeep,Training,69,19.4,39,30,overpriced,0,328,0,0,0,4,4,1,900,10,1
+PKB-006,Pet Food & Feeding Tracker,petkeep,Pet health,69,17.0,39,30,overpriced,0,345,0,0,0,4,3,0,300,7,1
+PKB-007,Grooming Salon Client & Appointment Tracker,petkeep,Pet business,69,19.1,39,30,overpriced,0,346,0,0,0,4,3,1,300,8,1
+PKB-010,Aquarium Water Quality Log,petkeep,Pet health,69,16.6,39,30,overpriced,0,335,0,0,0,4,2,0,300,8,1
+PKB-026,Rescue Foster Tracker,petkeep,Pet business,69,19.2,39,30,overpriced,0,322,0,0,0,4,4,1,1200,8,1
+PKB-028,Pet Insurance Claims Tracker,petkeep,Pet budget,69,19.2,39,30,overpriced,0,336,0,0,0,4,4,1,600,6,1
+HSP-001,Homeschool Attendance & Hours Tracker,hearthschool,Records,69,19.8,39,30,overpriced,0,338,0,0,0,4,4,1,600,13,1
+HSP-002,Homeschool Grades & Assessment Tracker,hearthschool,Records,69,19.3,39,30,overpriced,0,325,0,0,0,4,4,1,600,9,1
+HSP-003,Homeschool Curriculum & Budget Tracker,hearthschool,Planning,69,19.0,39,30,overpriced,0,314,0,0,0,4,3,1,1500,11,1
+HSP-004,Reading List & Book Log for Homeschool,hearthschool,Records,69,19.4,39,30,overpriced,0,330,0,0,0,4,4,1,600,9,1
+HSP-005,Field Trip & Activity Log,hearthschool,Records,69,18.8,39,30,overpriced,0,318,0,0,0,4,3,1,300,7,1
+HSP-006,Homeschool Lesson Plan Tracker,hearthschool,Planning,69,19.0,39,30,overpriced,0,341,0,0,0,4,2,1,900,12,1
+HSP-007,Co-op & Extracurricular Schedule,hearthschool,Planning,69,18.4,39,30,overpriced,0,313,0,0,0,4,2,1,600,8,1
+HSP-008,Spelling & Vocabulary Mastery Tracker,hearthschool,Records,69,16.8,39,30,overpriced,0,335,0,0,0,4,2,0,600,10,1
+HSP-009,Math Facts Practice Tracker,hearthschool,Records,69,19.2,39,30,overpriced,0,309,0,0,0,4,4,1,600,9,1
+HSP-010,Portfolio Evidence Log,hearthschool,Records,69,18.7,39,30,overpriced,0,334,0,0,0,4,2,1,900,9,1
+HSP-028,Life Skills Mastery Tracker,hearthschool,Records,69,18.8,39,30,overpriced,0,330,0,0,0,4,2,1,900,11,1
+PLD-029,Personal Time Tracker,plainday,Planners,69,19.3,39,30,overpriced,0,333,0,0,0,4,3,1,300,12,1
+ABL-022,Subscription & Recurring Payments Tracker,abacus,Personal finance,69,19.7,39,30,overpriced,0,327,0,0,0,4,5,1,900,9,1
+ABL-024,Investment Portfolio Tracker,abacus,Investing,69,19.8,39,30,overpriced,0,365,0,0,0,4,5,1,300,6,1
 BZW-020,Business Admin Bundle,bizwright,Bundles,199,,173,26,fair,0,134,1,0,0,0,0,0,0,0,0
-PLD-003,Monthly Budget Planner,plainday,Budget & savings,89,38.7,69,20,overpriced,44,1760,0,0,0,0,0,0,0,0,0
-PLD-015,Personal Project Planner,plainday,Goals & productivity,49,8.8,29,20,overpriced,9,414,0,0,0,0,0,0,0,0,0
-BZW-002,Lean Canvas & One-Page Business Plan,bizwright,Business planning,49,2.7,29,20,overpriced,0,272,1,0,12,0,0,0,0,0,0
-BZW-006,Marketing Calendar & Campaign Planner,bizwright,Marketing,89,36.5,69,20,overpriced,0,0,0,0,0,5,57,1,200,7,1
+PLD-003,Monthly Budget Planner,plainday,Budget & savings,89,39.6,69,20,overpriced,45,1875,0,0,0,0,0,0,0,0,0
+PLD-015,Personal Project Planner,plainday,Goals & productivity,49,10.0,29,20,overpriced,10,481,0,0,0,0,0,0,0,0,0
+BZW-002,Lean Canvas & One-Page Business Plan,bizwright,Business planning,49,8.5,29,20,overpriced,0,569,2,6,13,0,0,0,0,0,0
+BZW-006,Marketing Calendar & Campaign Planner,bizwright,Marketing,89,40.3,69,20,overpriced,0,274,0,0,0,6,57,1,200,7,1
 BZW-008,"SOP Template Kit: Writing Guide, Templates & 11 Worked Examples",bizwright,Operations,149,82.4,129,20,fair,0,6036,56,52,21,0,0,0,0,0,0
-BZW-012,"Meeting Agenda, Minutes & Action Log Kit",bizwright,Operations,59,17.8,39,20,overpriced,0,285,8,0,10,2,7,0,300,3,1
-BZW-014,Customer Feedback & Complaints Log with NPS,bizwright,Sales,69,20.3,49,20,overpriced,0,0,0,0,0,5,10,1,1500,10,1
-BZW-018,Purchase Order & Supplier Kit,bizwright,Operations,59,19.5,39,20,overpriced,0,0,0,0,0,5,14,0,301,8,1
+BZW-014,Customer Feedback & Complaints Log with NPS,bizwright,Sales,69,24.2,49,20,overpriced,0,288,0,0,0,6,10,1,1500,10,1
 BZW-019,CEO Weekly Business Planner,bizwright,Business planning,89,42.9,69,20,overpriced,54,2271,0,0,0,0,0,0,0,0,0
-ABL-003,Savings Goal Tracker,abacus,Personal finance,59,15.5,39,20,overpriced,0,0,0,0,0,3,5,1,1000,9,1
-ABL-004,Emergency Fund Calculator & Tracker,abacus,Personal finance,49,10.1,29,20,overpriced,0,0,0,0,0,3,9,0,0,12,1
-ABL-015,Break-Even & Profit Calculator,abacus,Business finance,69,26.4,49,20,overpriced,0,0,0,0,0,4,48,1,0,1,1
-LRH-004,Family Activities Budget,littlerhythm,Family money,69,20.4,49,20,overpriced,0,0,0,0,0,4,15,1,600,8,1
-LRH-008,School Costs Tracker,littlerhythm,Family money,69,20.4,49,20,overpriced,0,0,0,0,0,4,15,1,900,8,1
-CHK-006,Classroom Budget & Resources Tracker,chalkline,Classroom admin,69,20.4,49,20,overpriced,0,0,0,0,0,4,15,1,600,8,1
-PCB-002,Running Log & Mileage Tracker,pacebook,Training logs,69,21.1,49,20,overpriced,0,0,0,0,0,4,17,1,300,8,1
-PCB-013,Fitness Planner & Workout Journal,pacebook,Workout plans,59,19.8,39,20,overpriced,23,721,0,0,0,0,0,0,0,0,0
-GSM-018,YouTube Video Planner,gigsmith,Content creation,49,7.8,29,20,overpriced,9,292,0,0,0,0,0,0,0,0,0
-GSM-020,Freelance Goals & Annual Review,gigsmith,Freelance admin,49,8.6,29,20,overpriced,9,389,0,0,0,0,0,0,0,0,0
-GSM-021,Client Meeting Notes,gigsmith,Clients & projects,49,9.9,29,20,overpriced,12,327,0,0,0,0,0,0,0,0,0
-GSM-029,Creator Batch Production Planner,gigsmith,Content creation,49,10.2,29,20,overpriced,11,429,0,0,0,0,0,0,0,0,0
-GLD-021,Nonprofit Strategic Planning Workbook,goodledger,Governance,49,10.3,29,20,overpriced,11,446,0,0,0,0,0,0,0,0,0
-MSE-015,Kitchen Cleaning Schedule,mise,Food safety,49,8.3,29,20,overpriced,9,347,0,0,0,0,0,0,0,0,0
-MSE-018,Prep List & Par Sheets,mise,Kitchen operations,49,8.5,29,20,overpriced,10,300,0,0,0,0,0,0,0,0,0
-MSE-025,Weekly Menu & Specials Planner,mise,Kitchen operations,49,9.2,29,20,overpriced,10,379,0,0,0,0,0,0,0,0,0
-SKD-018,Social Media Planner for Shops,shopkeeper,Listings & marketing,49,11.9,29,20,overpriced,13,491,0,0,0,0,0,0,0,0,0
-TNT-015,Daily Job Sheet Pad,trowel,Job management,49,10.7,29,20,overpriced,12,415,0,0,0,0,0,0,0,0,0
-TNT-025,Plumbing & Electrical Service Report Forms,trowel,Job management,49,8.9,29,20,overpriced,10,351,0,0,0,0,0,0,0,0,0
-FRB-007,Rainfall & Weather Log,furrowbook,Garden planning,69,20.7,49,20,overpriced,0,0,0,0,0,4,16,1,600,8,1
-PKB-002,Pet Expense Tracker,petkeep,Pet budget,69,20.4,49,20,overpriced,0,0,0,0,0,4,15,1,600,8,1
-CBS-014,Salon Appointment Book Pages,chairbook,Clients & bookings,69,23.4,49,20,overpriced,22,1223,0,0,0,0,0,0,0,0,0
-CBS-018,Beauty Business Planner,chairbook,Marketing,69,21.1,49,20,overpriced,24,809,0,0,0,0,0,0,0,0,0
-CBS-025,Hair Colour Formula Cards,chairbook,Clients & bookings,49,8.5,29,20,overpriced,10,297,0,0,0,0,0,0,0,0,0
-CBS-029,Waxing & Skin Treatment Record Cards,chairbook,Health & safety,49,8.9,29,20,overpriced,10,347,0,0,0,0,0,0,0,0,0
-FLW-014,Pre-Trip Vehicle Inspection Checklist,fleetwise,Fleet maintenance,49,11.0,29,20,overpriced,11,527,0,0,0,0,0,0,0,0,0
-FLW-015,Driver Logbook Printable,fleetwise,Driver logs,49,11.8,29,20,overpriced,14,402,0,0,0,0,0,0,0,0,0
-FLW-018,Delivery Route Planner Sheets,fleetwise,Operations,49,10.0,29,20,overpriced,12,332,0,0,0,0,0,0,0,0,0
-FLW-019,Driver Daily Report Pad,fleetwise,Driver logs,49,10.8,29,20,overpriced,12,431,0,0,0,0,0,0,0,0,0
-FLW-026,School Transport & Lift Club Planner,fleetwise,Operations,49,8.7,29,20,overpriced,10,321,0,0,0,0,0,0,0,0,0
-HSP-019,Copywork & Handwriting Practice Pages,hearthschool,Learning activities,59,16.9,39,20,overpriced,22,447,0,0,0,0,0,0,0,0,0
-PLD-004,Savings Challenge Pack,plainday,Budget & savings,49,16.8,39,10,fair,12,1147,0,0,0,0,0,0,0,0,0
-PLD-008,Student Study Planner,plainday,Study,59,22.7,49,10,fair,25,920,0,0,0,0,0,0,0,0,0
-PLD-009,Exam Revision Planner,plainday,Study,49,14.2,39,10,fair,15,626,0,0,0,0,0,0,0,0,0
-PLD-011,Home Cleaning Schedule & Declutter Challenge,plainday,Home organisation,39,9.0,29,10,overpriced,7,576,0,0,0,0,0,0,0,0,0
-PLD-018,Yearly Planner & Annual Review,plainday,Daily & weekly planners,59,24.0,49,10,fair,25,1079,0,0,0,0,0,0,0,0,0
-PLD-019,Travel Planner,plainday,Home organisation,39,10.6,29,10,overpriced,11,485,0,0,0,0,0,0,0,0,0
-BZW-003,Invoice Template & Invoice Register,bizwright,Invoicing & finance admin,59,21.8,49,10,fair,0,0,0,0,0,5,20,0,201,10,1
-BZW-004,Quotation & Estimate Template,bizwright,Invoicing & finance admin,59,21.8,49,10,fair,0,0,0,0,0,5,20,0,201,10,1
-ABL-005,Net Worth Tracker,abacus,Personal finance,69,32.9,59,10,fair,0,0,0,0,0,4,51,1,60,7,1
-ABL-007,Loan Amortisation Calculator with Extra Payments,abacus,Loans & debt,89,50.5,79,10,fair,0,0,0,0,0,3,494,1,0,6,1
-ABL-016,Sinking Funds & Bill Tracker,abacus,Personal finance,59,23.5,49,10,fair,0,0,0,0,0,5,18,1,60,15,1
-ABL-018,Shared Expense Splitter,abacus,Personal finance,49,15.6,39,10,fair,0,0,0,0,0,4,7,0,2000,8,1
-LRH-009,Morning & Bedtime Routine Charts,littlerhythm,Chores & routines,39,6.8,29,10,overpriced,7,308,0,0,0,0,0,0,0,0,0
-LRH-010,Kids Chore Charts by Age,littlerhythm,Chores & routines,39,6.5,29,10,overpriced,7,281,0,0,0,0,0,0,0,0,0
-LRH-011,Reward Sticker Charts,littlerhythm,Chores & routines,39,6.9,29,10,overpriced,7,325,0,0,0,0,0,0,0,0,0
-LRH-012,Kids Gratitude Journal,littlerhythm,Feelings & wellbeing,39,11.1,29,10,overpriced,12,471,0,0,0,0,0,0,0,0,0
-LRH-013,Summer Holiday Activity Planner,littlerhythm,Learning at home,39,9.1,29,10,overpriced,10,375,0,0,0,0,0,0,0,0,0
-LRH-014,Feelings Check-in Journal for Kids,littlerhythm,Feelings & wellbeing,39,7.6,29,10,overpriced,8,337,0,0,0,0,0,0,0,0,0
-LRH-015,Family Meeting Kit,littlerhythm,Family organisation,39,3.6,29,10,overpriced,4,140,0,0,0,0,0,0,0,0,0
-LRH-016,Kids Homework & School Week Planner,littlerhythm,Learning at home,39,11.8,29,10,overpriced,13,486,0,0,0,0,0,0,0,0,0
-LRH-017,Lunchbox Planner & Ideas,littlerhythm,Family organisation,39,9.8,29,10,overpriced,11,385,0,0,0,0,0,0,0,0,0
-LRH-018,Potty Training Chart,littlerhythm,Baby,39,6.2,29,10,overpriced,7,245,0,0,0,0,0,0,0,0,0
-LRH-020,Kids Achievement Certificates,littlerhythm,Feelings & wellbeing,39,8.6,29,10,overpriced,10,317,0,0,0,0,0,0,0,0,0
-LRH-021,Road Trip Activity Pack for Kids,littlerhythm,Learning at home,39,5.4,29,10,overpriced,6,214,0,0,0,0,0,0,0,0,0
-LRH-022,Toddler Daily Log for Carers,littlerhythm,Baby,39,10.3,29,10,overpriced,12,377,0,0,0,0,0,0,0,0,0
-LRH-024,Kids Money Lessons Workbook,littlerhythm,Money for kids,39,5.6,29,10,overpriced,6,235,0,0,0,0,0,0,0,0,0
-LRH-025,Pocket Money Jobs Board,littlerhythm,Money for kids,39,4.6,29,10,overpriced,5,187,0,0,0,0,0,0,0,0,0
-CHK-012,Detailed Lesson Plan Template,chalkline,Lesson planning,39,7.1,29,10,overpriced,8,273,0,0,0,0,0,0,0,0,0
-CHK-013,Unit / Term Planner,chalkline,Lesson planning,39,4.6,29,10,overpriced,5,196,0,0,0,0,0,0,0,0,0
-CHK-014,Seating Plan Templates,chalkline,Classroom management,39,5.6,29,10,overpriced,6,242,0,0,0,0,0,0,0,0,0
-CHK-015,Substitute Teacher Folder,chalkline,Classroom admin,39,5.2,29,10,overpriced,6,188,0,0,0,0,0,0,0,0,0
-CHK-016,Classroom Observation Notes,chalkline,Assessment,39,6.6,29,10,overpriced,8,211,0,0,0,0,0,0,0,0,0
-CHK-018,Exit Tickets & Self-Assessment Cards,chalkline,Assessment,39,4.2,29,10,overpriced,4,216,0,0,0,0,0,0,0,0,0
-CHK-019,Parent-Teacher Meeting Forms,chalkline,Classroom admin,39,4.3,29,10,overpriced,5,153,0,0,0,0,0,0,0,0,0
-CHK-020,Classroom Jobs Chart,chalkline,Classroom management,39,7.1,29,10,overpriced,8,279,0,0,0,0,0,0,0,0,0
-CHK-021,Reading Comprehension Response Sheets,chalkline,Lesson planning,39,5.1,29,10,overpriced,6,182,0,0,0,0,0,0,0,0,0
-CHK-022,Learner Goal-Setting Sheets,chalkline,Classroom management,39,4.5,29,10,overpriced,5,183,0,0,0,0,0,0,0,0,0
-CHK-029,Teacher To-Do & Marking Planner,chalkline,Professional development,39,5.4,29,10,overpriced,6,220,0,0,0,0,0,0,0,0,0
-ILP-011,12-Month Wedding Planning Checklist,ivorylane,Wedding planning,39,6.4,29,10,overpriced,7,267,0,0,0,0,0,0,0,0,0
-ILP-012,Wedding Day Timeline & Contacts,ivorylane,Wedding planning,39,3.5,29,10,overpriced,4,134,0,0,0,0,0,0,0,0,0
-ILP-013,Wedding Planner Workbook,ivorylane,Wedding planning,39,8.5,29,10,overpriced,10,295,0,0,0,0,0,0,0,0,0
-ILP-014,Bridal Party Planner,ivorylane,Wedding planning,39,3.7,29,10,overpriced,4,154,0,0,0,0,0,0,0,0,0
-ILP-015,Wedding Speech & Vow Writing Workbook,ivorylane,Wedding planning,39,4.5,29,10,overpriced,5,181,0,0,0,0,0,0,0,0,0
-ILP-016,Party Planner Pages,ivorylane,Event planning,39,5.0,29,10,overpriced,6,167,0,0,0,0,0,0,0,0,0
-ILP-017,Kids Birthday Party Planner,ivorylane,Event planning,39,5.1,29,10,overpriced,6,183,0,0,0,0,0,0,0,0,0
-ILP-018,Bridal Shower & Bachelorette Planner,ivorylane,Event planning,39,4.2,29,10,overpriced,5,149,0,0,0,0,0,0,0,0,0
-ILP-019,Anniversary Memory Journal,ivorylane,Celebrations,39,11.0,29,10,overpriced,12,451,0,0,0,0,0,0,0,0,0
-ILP-020,Event Day Emergency Kit Checklist,ivorylane,Event planning,39,3.0,29,10,overpriced,3,150,0,0,0,0,0,0,0,0,0
-ILP-021,Thank-You Note Templates & Tracker,ivorylane,Celebrations,39,3.9,29,10,overpriced,4,176,0,0,0,0,0,0,0,0,0
-ILP-027,Event Planner Client Intake Pages,ivorylane,Event business,39,4.3,29,10,overpriced,5,156,0,0,0,0,0,0,0,0,0
-ILP-029,Wedding Menu & Tasting Notes,ivorylane,Wedding planning,39,4.4,29,10,overpriced,5,167,0,0,0,0,0,0,0,0,0
-PCB-012,Couch to 5K Training Plan,pacebook,Workout plans,39,5.7,29,10,overpriced,4,397,0,0,0,0,0,0,0,0,0
-PCB-014,Meal Prep Planner for Fitness,pacebook,Nutrition,39,10.0,29,10,overpriced,11,404,0,0,0,0,0,0,0,0,0
-PCB-016,Yoga & Mobility Practice Journal,pacebook,Workout plans,39,4.5,29,10,overpriced,5,179,0,0,0,0,0,0,0,0,0
-PCB-017,Water & Steps Daily Tracker,pacebook,Progress tracking,39,8.3,29,10,overpriced,8,423,0,0,0,0,0,0,0,0,0
-PCB-018,Fitness Goal Setting Workbook,pacebook,Progress tracking,39,5.5,29,10,overpriced,6,232,0,0,0,0,0,0,0,0,0
-PCB-019,HIIT Workout Cards,pacebook,Workout plans,39,5.6,29,10,overpriced,5,315,0,0,0,0,0,0,0,0,0
-PCB-020,Injury & Recovery Log,pacebook,Progress tracking,39,4.4,29,10,overpriced,5,171,0,0,0,0,0,0,0,0,0
-PCB-027,Weekly Fitness & Wellness Check-in,pacebook,Progress tracking,39,8.9,29,10,overpriced,10,348,0,0,0,0,0,0,0,0,0
-PCB-029,Stretching & Mobility Routine Cards,pacebook,Workout plans,39,7.8,29,10,overpriced,8,354,0,0,0,0,0,0,0,0,0
-DPL-011,Move-In / Move-Out Inspection Checklist,doorpost,Maintenance,39,7.1,29,10,overpriced,8,272,0,0,0,0,0,0,0,0,0
-DPL-012,Property Maintenance Calendar,doorpost,Maintenance,39,4.5,29,10,overpriced,5,185,0,0,0,0,0,0,0,0,0
-DPL-013,Tenant Welcome Pack Pages,doorpost,Tenant management,39,3.7,29,10,overpriced,4,156,0,0,0,0,0,0,0,0,0
-DPL-014,Rent Receipt Book,doorpost,Tenant management,39,4.0,29,10,overpriced,4,196,0,0,0,0,0,0,0,0,0
-DPL-015,Property Viewing Notes,doorpost,Tenant management,39,6.1,29,10,overpriced,7,228,0,0,0,0,0,0,0,0,0
-DPL-016,Contractor & Supplier Directory,doorpost,Maintenance,39,3.4,29,10,overpriced,4,125,0,0,0,0,0,0,0,0,0
-DPL-017,Rental Property Annual Review Workbook,doorpost,Landlord finance,39,3.7,29,10,overpriced,4,151,0,0,0,0,0,0,0,0,0
-DPL-025,Landlord Planner & Rent Calendar,doorpost,Landlord finance,49,13.3,39,10,fair,15,512,0,0,0,0,0,0,0,0,0
-DPL-028,Key & Access Register,doorpost,Maintenance,39,4.5,29,10,overpriced,5,174,0,0,0,0,0,0,0,0,0
-DPL-029,Routine Rental Inspection Report,doorpost,Maintenance,39,6.6,29,10,overpriced,7,285,0,0,0,0,0,0,0,0,0
-GSM-017,Freelancer Weekly Planner,gigsmith,Freelance admin,49,13.3,39,10,fair,15,519,0,0,0,0,0,0,0,0,0
-GSM-019,Content Idea Bank,gigsmith,Content creation,39,4.2,29,10,overpriced,5,141,0,0,0,0,0,0,0,0,0
-GSM-022,Social Media Content Planner Pages,gigsmith,Content creation,39,6.5,29,10,overpriced,7,278,0,0,0,0,0,0,0,0,0
-GSM-023,Portfolio Case Study Worksheets,gigsmith,Clients & projects,39,7.1,29,10,overpriced,8,279,0,0,0,0,0,0,0,0,0
-GLD-014,Board Meeting Agenda & Minutes Pages,goodledger,Governance,39,5.2,29,10,overpriced,6,188,0,0,0,0,0,0,0,0,0
-GLD-015,Volunteer Sign-In Sheets,goodledger,Volunteers,39,5.1,29,10,overpriced,6,181,0,0,0,0,0,0,0,0,0
-GLD-016,Fundraising Thermometer Charts,goodledger,Fundraising,39,5.4,29,10,overpriced,5,289,0,0,0,0,0,0,0,0,0
-GLD-017,Community Event Planner,goodledger,Fundraising,39,5.0,29,10,overpriced,6,167,0,0,0,0,0,0,0,0,0
-GLD-018,Donor Thank-You Card Pack,goodledger,Fundraising,39,5.1,29,10,overpriced,5,250,0,0,0,0,0,0,0,0,0
-GLD-019,Food Bank Distribution Log,goodledger,Impact,39,6.7,29,10,overpriced,8,232,0,0,0,0,0,0,0,0,0
-GLD-020,Volunteer Training & Induction Checklist,goodledger,Volunteers,39,3.8,29,10,overpriced,4,164,0,0,0,0,0,0,0,0,0
-GLD-030,Nonprofit Campaign & Social Media Planner,goodledger,Fundraising,39,5.5,29,10,overpriced,6,225,0,0,0,0,0,0,0,0,0
-MSE-014,Fridge & Freezer Temperature Log,mise,Food safety,39,7.1,29,10,overpriced,8,276,0,0,0,0,0,0,0,0,0
-MSE-016,Food Safety Opening & Closing Checklists,mise,Food safety,39,4.7,29,10,overpriced,5,207,0,0,0,0,0,0,0,0,0
-MSE-017,Allergen Matrix Chart,mise,Food safety,39,5.6,29,10,overpriced,5,312,0,0,0,0,0,0,0,0,0
-MSE-019,Delivery & Goods-In Check Log,mise,Food safety,39,5.3,29,10,overpriced,6,200,0,0,0,0,0,0,0,0,0
-MSE-020,Food Truck Event Planner,mise,Kitchen operations,39,5.3,29,10,overpriced,6,201,0,0,0,0,0,0,0,0,0
-MSE-021,New Staff Kitchen Induction Pack,mise,Kitchen operations,39,3.8,29,10,overpriced,4,166,0,0,0,0,0,0,0,0,0
-MSE-028,Food Prep & Use-By Labels,mise,Food safety,39,6.8,29,10,overpriced,5,462,0,0,0,0,0,0,0,0,0
-MSE-029,"Cooking, Cooling & Reheating Temperature Log",mise,Food safety,39,7.8,29,10,overpriced,8,356,0,0,0,0,0,0,0,0,0
-SKD-014,Small Shop Business Planner,shopkeeper,Sales & profit,49,16.3,39,10,fair,17,730,0,0,0,0,0,0,0,0,0
-SKD-015,Product Photography Shot List,shopkeeper,Listings & marketing,39,4.5,29,10,overpriced,5,180,0,0,0,0,0,0,0,0,0
-SKD-016,Order Packing Slips & Labels,shopkeeper,Fulfilment,39,4.4,29,10,overpriced,4,240,0,0,0,0,0,0,0,0,0
-SKD-017,Craft Market Checklist & Tracker,shopkeeper,Fulfilment,39,3.8,29,10,overpriced,4,166,0,0,0,0,0,0,0,0,0
-SKD-023,Inventory Count Sheets,shopkeeper,Inventory,39,5.1,29,10,overpriced,6,181,0,0,0,0,0,0,0,0,0
-SKD-024,Seller Goals & Quarterly Review,shopkeeper,Sales & profit,39,6.7,29,10,overpriced,7,299,0,0,0,0,0,0,0,0,0
-SKD-029,Product Development Worksheets,shopkeeper,Sales & profit,39,5.1,29,10,overpriced,6,177,0,0,0,0,0,0,0,0,0
-SKD-030,Packaging & Unboxing Planner,shopkeeper,Fulfilment,39,4.5,29,10,overpriced,5,180,0,0,0,0,0,0,0,0,0
-CLK-013,Job Search Planner,careerladder,Job search,39,5.2,29,10,overpriced,6,189,0,0,0,0,0,0,0,0,0
-CLK-014,Interview Notes & Question Sheets,careerladder,Interviews,39,4.7,29,10,overpriced,5,209,0,0,0,0,0,0,0,0,0
-CLK-015,Career Development Plan Workbook,careerladder,Career growth,39,8.2,29,10,overpriced,9,342,0,0,0,0,0,0,0,0,0
-CLK-016,First 90 Days in a New Job Planner,careerladder,Career growth,39,5.4,29,10,overpriced,6,220,0,0,0,0,0,0,0,0,0
-CLK-017,Performance Review Prep Pages,careerladder,Career growth,39,4.3,29,10,overpriced,5,157,0,0,0,0,0,0,0,0,0
-CLK-018,Career Change Exploration Workbook,careerladder,Career growth,39,5.1,29,10,overpriced,6,183,0,0,0,0,0,0,0,0,0
-CLK-024,Job Search Vision & Affirmation Cards,careerladder,Job search,39,4.0,29,10,overpriced,4,197,0,0,0,0,0,0,0,0,0
-CLK-025,Graduate Job Hunt Planner,careerladder,Job search,39,4.4,29,10,overpriced,5,171,0,0,0,0,0,0,0,0,0
-CLK-027,Weekly Career Growth Journal,careerladder,Career growth,39,11.8,29,10,overpriced,14,406,0,0,0,0,0,0,0,0,0
-CLK-029,Mock Interview Practice Pack,careerladder,Interviews,39,5.7,29,10,overpriced,6,256,0,0,0,0,0,0,0,0,0
-TNT-016,Site Safety Checklist,trowel,Business admin,39,5.3,29,10,overpriced,6,206,0,0,0,0,0,0,0,0,0
-TNT-017,Site Visit & Measure-Up Sheets,trowel,Estimating,39,4.3,29,10,overpriced,5,160,0,0,0,0,0,0,0,0,0
-TNT-018,Variation / Change Order Forms,trowel,Quotes & invoices,39,7.3,29,10,overpriced,8,295,0,0,0,0,0,0,0,0,0
-TNT-019,Contractor Weekly Planner,trowel,Business admin,49,12.9,39,10,fair,14,535,0,0,0,0,0,0,0,0,0
-TNT-023,Bathroom & Kitchen Renovation Checklists,trowel,Estimating,39,3.8,29,10,overpriced,4,173,0,0,0,0,0,0,0,0,0
-TNT-028,Toolbox Talk Topic Cards,trowel,Business admin,39,4.7,29,10,overpriced,5,209,0,0,0,0,0,0,0,0,0
-TNT-029,Equipment Pre-Use Inspection Sheets,trowel,Business admin,39,7.8,29,10,overpriced,8,364,0,0,0,0,0,0,0,0,0
-KDK-013,Caregiver Binder Printables,kindkeep,Care coordination,39,5.9,29,10,overpriced,7,200,0,0,0,0,0,0,0,0,0
-KDK-014,Weekly Medication Chart,kindkeep,Health records,39,8.8,29,10,overpriced,10,335,0,0,0,0,0,0,0,0,0
-KDK-015,Hospital Stay & Discharge Planner,kindkeep,Health records,39,4.6,29,10,overpriced,5,190,0,0,0,0,0,0,0,0,0
-KDK-016,Dementia Daily Routine Cards,kindkeep,Care coordination,39,8.7,29,10,overpriced,10,322,0,0,0,0,0,0,0,0,0
-KDK-017,Care Handover Notes,kindkeep,Care coordination,39,10.9,29,10,overpriced,12,440,0,0,0,0,0,0,0,0,0
-KDK-018,End-of-Life Wishes Planning Workbook,kindkeep,Legal & planning,39,5.4,29,10,overpriced,6,211,0,0,0,0,0,0,0,0,0
-KDK-019,Fall Prevention Home Safety Checklist,kindkeep,Care coordination,39,3.9,29,10,overpriced,4,184,0,0,0,0,0,0,0,0,0
-KDK-025,Caregiver Journal,kindkeep,Caregiver wellbeing,39,10.6,29,10,overpriced,12,405,0,0,0,0,0,0,0,0,0
-KDK-026,Visitor & Activity Log,kindkeep,Care coordination,39,5.3,29,10,overpriced,6,203,0,0,0,0,0,0,0,0,0
-KDK-027,Care Recipient Life Story Pages,kindkeep,Caregiver wellbeing,39,5.2,29,10,overpriced,6,190,0,0,0,0,0,0,0,0,0
-KDK-028,Nutrition & Fluid Intake Chart,kindkeep,Health records,39,10.4,29,10,overpriced,12,388,0,0,0,0,0,0,0,0,0
-KDK-030,"Pain, Sleep & Mood Daily Tracker",kindkeep,Health records,39,5.3,29,10,overpriced,5,282,0,0,0,0,0,0,0,0,0
-FRB-014,Crop Rotation Planner,furrowbook,Garden planning,39,3.8,29,10,overpriced,4,166,0,0,0,0,0,0,0,0,0
-FRB-015,Garden Pest & Disease Diary,furrowbook,Garden planning,39,4.3,29,10,overpriced,5,162,0,0,0,0,0,0,0,0,0
-FRB-016,Homestead Chore Charts,furrowbook,Livestock,39,6.6,29,10,overpriced,7,290,0,0,0,0,0,0,0,0,0
-FRB-017,Preserving & Canning Log,furrowbook,Garden planning,39,5.1,29,10,overpriced,6,184,0,0,0,0,0,0,0,0,0
-FRB-019,Seed Starting Tracker,furrowbook,Garden planning,39,4.4,29,10,overpriced,5,163,0,0,0,0,0,0,0,0,0
-FRB-020,Farm Animal Feeding Charts,furrowbook,Livestock,39,9.0,29,10,overpriced,10,357,0,0,0,0,0,0,0,0,0
-FRB-024,Weekly Garden Journal,furrowbook,Garden planning,39,11.7,29,10,overpriced,14,391,0,0,0,0,0,0,0,0,0
-FRB-025,Plant Watering & Feeding Schedule,furrowbook,Garden planning,39,9.2,29,10,overpriced,8,534,0,0,0,0,0,0,0,0,0
-FRB-028,Greenhouse & Tunnel Log,furrowbook,Garden planning,39,6.9,29,10,overpriced,8,257,0,0,0,0,0,0,0,0,0
-FRB-030,Farm Visitor & Biosecurity Log,furrowbook,Livestock,39,6.4,29,10,overpriced,7,262,0,0,0,0,0,0,0,0,0
-PKB-013,Pet Care Binder Printables,petkeep,Pet health,39,5.2,29,10,overpriced,6,193,0,0,0,0,0,0,0,0,0
-PKB-014,Pet Sitter Instructions Sheet,petkeep,Pet health,39,4.6,29,10,overpriced,5,194,0,0,0,0,0,0,0,0,0
-PKB-015,New Puppy Planner,petkeep,Training,39,7.4,29,10,overpriced,8,311,0,0,0,0,0,0,0,0,0
-PKB-016,New Cat / Kitten Planner,petkeep,Pet health,39,7.3,29,10,overpriced,8,299,0,0,0,0,0,0,0,0,0
-PKB-017,Pet Memory Book,petkeep,Pet health,39,5.8,29,10,overpriced,7,189,0,0,0,0,0,0,0,0,0
-PKB-018,Dog Walking Log & Route Planner,petkeep,Training,39,5.2,29,10,overpriced,6,188,0,0,0,0,0,0,0,0,0
-PKB-019,Pet Medication & Symptom Chart,petkeep,Pet health,39,8.4,29,10,overpriced,9,358,0,0,0,0,0,0,0,0,0
-PKB-023,Lost Pet Poster & Action Plan,petkeep,Pet health,39,4.0,29,10,overpriced,4,193,0,0,0,0,0,0,0,0,0
-PKB-025,Pet Grooming Record Cards,petkeep,Pet business,39,8.5,29,10,overpriced,10,298,0,0,0,0,0,0,0,0,0
-PKB-027,Dog Training Session Planner,petkeep,Training,39,10.5,29,10,overpriced,12,391,0,0,0,0,0,0,0,0,0
-PKB-029,Senior Pet Care Tracker,petkeep,Pet health,39,10.2,29,10,overpriced,11,432,0,0,0,0,0,0,0,0,0
-CBS-013,Client Consultation Forms,chairbook,Clients & bookings,39,4.5,29,10,overpriced,5,175,0,0,0,0,0,0,0,0,0
-CBS-015,Patch Test & Consent Records,chairbook,Health & safety,39,5.3,29,10,overpriced,6,204,0,0,0,0,0,0,0,0,0
-CBS-016,Aftercare Instruction Cards,chairbook,Clients & bookings,39,3.3,29,10,overpriced,3,175,0,0,0,0,0,0,0,0,0
-CBS-017,Salon Opening & Closing Checklists,chairbook,Health & safety,39,3.8,29,10,overpriced,4,164,0,0,0,0,0,0,0,0,0
-CBS-019,Loyalty & Referral Cards,chairbook,Marketing,39,5.3,29,10,overpriced,4,344,0,0,0,0,0,0,0,0,0
-CBS-026,Bridal Hair & Makeup Booking Planner,chairbook,Clients & bookings,39,4.6,29,10,overpriced,5,187,0,0,0,0,0,0,0,0,0
-FLW-016,Fleet Maintenance Planner,fleetwise,Fleet maintenance,39,3.7,29,10,overpriced,4,157,0,0,0,0,0,0,0,0,0
-FLW-017,Accident Report Form & Glovebox Kit,fleetwise,Operations,39,4.7,29,10,overpriced,5,205,0,0,0,0,0,0,0,0,0
-FLW-025,Load & Cargo Securing Checklist,fleetwise,Operations,39,4.6,29,10,overpriced,5,190,0,0,0,0,0,0,0,0,0
-FLW-029,New Driver Induction Checklist,fleetwise,Operations,39,3.8,29,10,overpriced,4,162,0,0,0,0,0,0,0,0,0
-HSP-014,Homeschool Record Keeping Pages,hearthschool,Records,39,6.2,29,10,overpriced,7,240,0,0,0,0,0,0,0,0,0
-HSP-017,Unit Study Planner,hearthschool,Planning,39,5.3,29,10,overpriced,6,202,0,0,0,0,0,0,0,0,0
-HSP-020,Science Experiment Journal,hearthschool,Learning activities,39,11.2,29,10,overpriced,14,331,0,0,0,0,0,0,0,0,0
-HSP-021,History Timeline & Notebook Pages,hearthschool,Learning activities,39,6.7,29,10,overpriced,8,225,0,0,0,0,0,0,0,0,0
-HSP-027,Learning Games & Flash Cards Pack,hearthschool,Learning activities,39,11.7,29,10,overpriced,11,609,0,0,0,0,0,0,0,0,0
-PLD-021,Sleep Diary & Evening Routine Planner,plainday,Wellness,59,23.1,49,10,fair,21,1264,0,0,0,0,0,0,0,0,0
-PLD-023,Moving House Planner,plainday,Home,39,6.2,29,10,overpriced,7,241,0,0,0,0,0,0,0,0,0
-PLD-024,Holiday Season Planner,plainday,Home,39,6.0,29,10,overpriced,7,221,0,0,0,0,0,0,0,0,0
-PLD-026,Perpetual Birthday & Anniversary Calendar,plainday,Planners,39,11.2,29,10,overpriced,14,336,0,0,0,0,0,0,0,0,0
-PLD-027,30-Day Digital Detox Challenge,plainday,Wellness,39,6.5,29,10,overpriced,6,344,0,0,0,0,0,0,0,0,0
-MSE-026,Café Starter Bundle,mise,Bundles,199,,192,7,fair,3,134,0,0,0,0,0,0,0,0,0
-CBS-024,Salon Owner Starter Bundle,chairbook,Bundles,219,,212,7,fair,3,135,0,0,0,0,0,0,0,0,0
-TNT-024,Tradie Business Starter Bundle,trowel,Bundles,199,,193,6,fair,3,139,0,0,0,0,0,0,0,0,0
-PLD-020,Productivity Planner Bundle,plainday,Bundles,169,,166,3,fair,6,523,0,0,0,0,0,0,0,0,0
-PCB-026,Runner's Training Bundle,pacebook,Bundles,99,,96,3,fair,3,130,0,0,0,0,0,0,0,0,0
-GSM-027,Freelancer Business Bundle,gigsmith,Bundles,279,,276,3,fair,3,125,0,0,0,0,0,0,0,0,0
-CLK-026,Job Search Essentials Bundle,careerladder,Bundles,149,,148,1,fair,3,143,0,0,0,0,0,0,0,0,0
-PLD-017,Reading Journal & Book Log,plainday,Journals,39,18.9,39,0,fair,18,977,0,0,0,0,0,0,0,0,0
-LRH-019,Baby's First Year Memory Pages,littlerhythm,Baby,39,12.4,39,0,fair,14,483,0,0,0,0,0,0,0,0,0
-LRH-023,Family Calendar & Planner,littlerhythm,Family organisation,39,18.2,39,0,fair,20,740,0,0,0,0,0,0,0,0,0
-LRH-030,Kids Weekly Planner Pages,littlerhythm,Learning at home,39,12.3,39,0,fair,14,468,0,0,0,0,0,0,0,0,0
-CHK-017,Teacher Year Planner,chalkline,Lesson planning,39,14.4,39,0,fair,16,578,0,0,0,0,0,0,0,0,0
-PCB-011,12-Week Strength Program Planner,pacebook,Workout plans,39,12.8,39,0,fair,15,453,0,0,0,0,0,0,0,0,0
-PCB-015,Marathon Training Plan (16 Weeks),pacebook,Workout plans,39,16.9,39,0,fair,19,656,0,0,0,0,0,0,0,0,0
-PCB-021,Sports Season Planner for Young Athletes,pacebook,Workout plans,39,12.5,39,0,fair,14,490,0,0,0,0,0,0,0,0,0
-DPL-024,Landlord Starter Bundle,doorpost,Bundles,179,,179,0,fair,3,132,0,0,0,0,0,0,0,0,0
-FRB-013,Garden Planner Printables,furrowbook,Garden planning,39,15.5,39,0,fair,17,635,0,0,0,0,0,0,0,0,0
-FRB-018,Herb Garden Journal,furrowbook,Garden planning,39,12.2,39,0,fair,14,450,0,0,0,0,0,0,0,0,0
-HSP-015,Morning Basket & Circle Time Planner,hearthschool,Planning,39,13.7,39,0,fair,15,568,0,0,0,0,0,0,0,0,0
-HSP-016,Nature Study Journal,hearthschool,Learning activities,39,12.2,39,0,fair,15,386,0,0,0,0,0,0,0,0,0
-HSP-018,Kids Independent Work Checklists,hearthschool,Planning,39,13.3,39,0,fair,14,587,0,0,0,0,0,0,0,0,0
-HSP-026,Homeschool Mom Weekly Planner,hearthschool,Planning,59,34.6,59,0,fair,38,1415,0,0,0,0,0,0,0,0,0
-HSP-029,Weekly Homeschool Review Pages,hearthschool,Planning,39,12.6,39,0,fair,14,505,0,0,0,0,0,0,0,0,0
-PLD-022,Calm Mind Journal — 60 Prompts,plainday,Journals,59,29.6,59,0,fair,32,1247,0,0,0,0,0,0,0,0,0
-PLD-025,Dot Grid Bullet Journal Pages,plainday,Journals,69,36.9,69,0,fair,86,1552,0,0,0,0,0,0,0,0,0
-PLD-028,Morning Pages Journal,plainday,Journals,69,38.1,69,0,fair,94,1692,0,0,0,0,0,0,0,0,0
-PLD-030,Bucket List Journal,plainday,Journals,39,13.6,39,0,fair,16,478,0,0,0,0,0,0,0,0,0
-ILP-026,Wedding Planning Essentials Bundle,ivorylane,Bundles,139,,140,-1,fair,3,124,0,0,0,0,0,0,0,0,0
-SKD-025,Online Seller Starter Bundle,shopkeeper,Bundles,179,,180,-1,fair,3,138,0,0,0,0,0,0,0,0,0
-PKB-024,Pet Parent Organiser Bundle,petkeep,Bundles,159,,160,-1,fair,3,139,0,0,0,0,0,0,0,0,0
-FLW-023,Small Fleet Control Bundle,fleetwise,Bundles,189,,192,-3,fair,3,126,0,0,0,0,0,0,0,0,0
-CHK-028,Teacher Planning Bundle,chalkline,Bundles,149,,153,-4,fair,3,137,0,0,0,0,0,0,0,0,0
-KDK-024,Family Caregiver Organiser Bundle,kindkeep,Bundles,149,,153,-4,fair,3,127,0,0,0,0,0,0,0,0,0
-FRB-026,Grower's Record-Keeping Bundle,furrowbook,Bundles,149,,153,-4,fair,3,128,0,0,0,0,0,0,0,0,0
-HSP-025,Homeschool Organiser Bundle,hearthschool,Bundles,149,,153,-4,fair,3,138,0,0,0,0,0,0,0,0,0
-GLD-028,Small Nonprofit Admin Bundle,goodledger,Bundles,149,,154,-5,fair,3,134,0,0,0,0,0,0,0,0,0
-LRH-029,Calm Family Routines Bundle,littlerhythm,Bundles,69,,76,-7,fair,3,147,0,0,0,0,0,0,0,0,0
-PLD-002,Undated Weekly Planner — 52 Weeks,plainday,Daily & weekly planners,79,63.1,89,-10,fair,119,4698,0,0,0,0,0,0,0,0,0
-PLD-005,Guided Gratitude Journal — 90 Days,plainday,Journals,59,41.6,69,-10,fair,51,2114,0,0,0,0,0,0,0,0,0
-PLD-006,Weekly Self-Reflection Journal — 52 Prompts,plainday,Journals,59,39.7,69,-10,fair,58,1884,0,0,0,0,0,0,0,0,0
-PLD-010,Habit Tracker Set,plainday,Goals & productivity,39,21.6,49,-10,fair,18,1299,0,0,0,0,0,0,0,0,0
-PLD-012,Meal Planner & Grocery List Kit,plainday,Home organisation,39,22.7,49,-10,fair,24,993,0,0,0,0,0,0,0,0,0
-PLD-014,Productivity Planner — Priority Matrix & Time Blocking,plainday,Goals & productivity,69,47.5,79,-10,fair,51,2824,0,0,0,0,0,0,0,0,0
-PLD-016,Wellness & Mood Tracker,plainday,Journals,49,28.2,59,-10,fair,25,1584,0,0,0,0,0,0,0,0,0
-ABL-017,Compound Interest & Retirement Savings Projector,abacus,Personal finance,69,51.7,79,-10,fair,0,0,0,0,0,4,256,1,0,3,1
-ABL-020,Operations Toolkit Bundle,abacus,Bundles,799,,809,-10,fair,0,0,0,0,0,5,27,1,2000,46,1
-CHK-011,Weekly Lesson Planner,chalkline,Lesson planning,59,37.3,69,-10,fair,42,1601,0,0,0,0,0,0,0,0,0
-HSP-013,Homeschool Planner Printables,hearthschool,Planning,59,36.3,69,-10,fair,40,1471,0,0,0,0,0,0,0,0,0
-PLD-001,Undated Daily Planner — 90 Days,plainday,Daily & weekly planners,69,59.7,89,-20,fair,95,4288,0,0,0,0,0,0,0,0,0
+ABL-002,Debt Snowball & Avalanche Calculator,abacus,Personal finance,109,57.4,89,20,overpriced,0,401,0,0,0,5,391,1,1,7,1
+ABL-003,Savings Goal Tracker,abacus,Personal finance,59,19.5,39,20,overpriced,0,302,0,0,0,4,5,1,1000,9,1
+LRH-001,Family Chore Points Tracker,littlerhythm,Chores & routines,69,20.1,49,20,overpriced,0,376,0,0,0,4,4,1,300,13,1
+LRH-003,Screen Time Log,littlerhythm,Health & habits,69,20.0,49,20,overpriced,0,359,0,0,0,4,4,1,900,14,1
+LRH-004,Family Activities Budget,littlerhythm,Family money,69,23.8,49,20,overpriced,0,354,0,0,0,4,15,1,600,14,1
+LRH-008,School Costs Tracker,littlerhythm,Family money,69,23.8,49,20,overpriced,0,346,0,0,0,4,15,1,900,14,1
+LRH-028,Cost of Raising a Child Calculator,littlerhythm,Family money,59,13.0,39,20,overpriced,0,460,0,0,0,3,3,1,0,2,1
+CHK-001,Teacher Gradebook,chalkline,Assessment,69,20.2,49,20,overpriced,0,354,0,0,0,4,5,1,600,13,1
+CHK-006,Classroom Budget & Resources Tracker,chalkline,Classroom admin,69,23.6,49,20,overpriced,0,343,0,0,0,4,15,1,600,13,1
+CHK-010,Exam Results Analysis,chalkline,Assessment,69,21.1,49,20,overpriced,0,357,0,0,0,4,6,1,300,19,1
+CHK-027,Marks Weighting Calculator,chalkline,Assessment,59,12.4,39,20,overpriced,0,386,0,0,0,3,3,1,0,2,1
+ILP-002,Wedding Guest List & RSVP Tracker,ivorylane,Wedding planning,69,20.0,49,20,overpriced,0,354,0,0,0,4,4,1,1200,15,1
+ILP-025,Wedding Cost per Guest Calculator,ivorylane,Wedding planning,59,12.7,39,20,overpriced,0,369,0,0,0,3,4,1,0,3,1
+PCB-001,Strength Training Log,pacebook,Training logs,69,20.6,49,20,overpriced,0,358,0,0,0,4,6,1,300,13,1
+PCB-002,Running Log & Mileage Tracker,pacebook,Training logs,69,24.4,49,20,overpriced,0,344,0,0,0,4,17,1,300,14,1
+PCB-009,Race Calendar & Results Tracker,pacebook,Progress tracking,69,20.1,49,20,overpriced,0,339,0,0,0,4,6,1,300,8,1
+PCB-024,Running Pace & Race Time Calculator,pacebook,Training logs,59,12.3,39,20,overpriced,0,373,0,0,0,3,3,1,0,2,1
+PCB-025,Daily Calorie Needs Calculator,pacebook,Nutrition,59,12.7,39,20,overpriced,0,422,0,0,0,3,3,1,0,2,1
+GSM-018,YouTube Video Planner,gigsmith,Content creation,49,9.9,29,20,overpriced,10,465,0,0,0,0,0,0,0,0,0
+GSM-020,Freelance Goals & Annual Review,gigsmith,Freelance admin,49,10.4,29,20,overpriced,10,526,0,0,0,0,0,0,0,0,0
+GSM-021,Client Meeting Notes,gigsmith,Clients & projects,49,11.8,29,20,overpriced,13,474,0,0,0,0,0,0,0,0,0
+GSM-029,Creator Batch Production Planner,gigsmith,Content creation,49,11.6,29,20,overpriced,12,524,0,0,0,0,0,0,0,0,0
+MSE-015,Kitchen Cleaning Schedule,mise,Food safety,49,10.8,29,20,overpriced,10,571,0,0,0,0,0,0,0,0,0
+MSE-018,Prep List & Par Sheets,mise,Kitchen operations,49,10.9,29,20,overpriced,11,513,0,0,0,0,0,0,0,0,0
+MSE-025,Weekly Menu & Specials Planner,mise,Kitchen operations,49,11.6,29,20,overpriced,11,601,0,0,0,0,0,0,0,0,0
+CLK-012,Take-Home vs Contract Rate Calculator,careerladder,Career growth,59,12.7,39,20,overpriced,0,370,0,0,0,3,4,1,0,3,1
+TNT-025,Plumbing & Electrical Service Report Forms,trowel,Job management,49,11.5,29,20,overpriced,11,583,0,0,0,0,0,0,0,0,0
+KDK-011,Home Care Cost Calculator,kindkeep,Care finances,59,12.0,39,20,overpriced,0,336,0,0,0,3,3,1,0,2,1
+KDK-012,Family Care Cost Sharing Calculator,kindkeep,Care finances,59,12.1,39,20,overpriced,0,323,0,0,0,3,3,1,0,4,1
+FRB-005,Smallholding Income & Expense Tracker,furrowbook,Farm finance,69,20.2,49,20,overpriced,0,348,0,0,0,4,5,1,900,13,1
+FRB-007,Rainfall & Weather Log,furrowbook,Garden planning,69,24.2,49,20,overpriced,0,348,0,0,0,4,16,1,600,15,1
+FRB-011,Garden Bed Soil & Mulch Volume Calculator,furrowbook,Garden planning,59,12.8,39,20,overpriced,0,374,0,0,0,3,4,1,0,3,1
+FRB-012,Chicken Keeping Cost per Egg Calculator,furrowbook,Livestock,59,12.7,39,20,overpriced,0,373,0,0,0,3,4,1,0,3,1
+PKB-002,Pet Expense Tracker,petkeep,Pet budget,69,23.8,49,20,overpriced,0,350,0,0,0,4,15,1,600,14,1
+PKB-011,Cost of Owning a Pet Calculator,petkeep,Pet budget,59,12.2,39,20,overpriced,0,361,0,0,0,3,3,1,0,2,1
+PKB-012,Pet Food Portion Calculator,petkeep,Pet health,59,12.4,39,20,overpriced,0,370,0,0,0,3,3,1,0,3,1
+CBS-014,Salon Appointment Book Pages,chairbook,Clients & bookings,69,24.9,49,20,overpriced,23,1334,0,0,0,0,0,0,0,0,0
+CBS-018,Beauty Business Planner,chairbook,Marketing,69,22.7,49,20,overpriced,25,926,0,0,0,0,0,0,0,0,0
+CBS-025,Hair Colour Formula Cards,chairbook,Clients & bookings,49,10.2,29,20,overpriced,11,435,0,0,0,0,0,0,0,0,0
+CBS-029,Waxing & Skin Treatment Record Cards,chairbook,Health & safety,49,10.6,29,20,overpriced,11,486,0,0,0,0,0,0,0,0,0
+FLW-018,Delivery Route Planner Sheets,fleetwise,Operations,49,11.6,29,20,overpriced,13,454,0,0,0,0,0,0,0,0,0
+FLW-026,School Transport & Lift Club Planner,fleetwise,Operations,49,10.1,29,20,overpriced,11,424,0,0,0,0,0,0,0,0,0
+HSP-011,Homeschool Year Cost Calculator,hearthschool,Planning,59,12.6,39,20,overpriced,0,361,0,0,0,3,4,1,0,3,1
+HSP-012,School Days & Hours Planner Calculator,hearthschool,Planning,59,12.1,39,20,overpriced,0,349,0,0,0,3,3,1,0,2,1
+ABL-021,Rent vs Buy Calculator,abacus,Personal finance,59,14.3,39,20,overpriced,0,451,0,0,0,3,6,1,0,5,1
+ABL-023,Inflation Impact Calculator,abacus,Personal finance,59,12.0,39,20,overpriced,0,331,0,0,0,3,3,1,0,2,1
+ABL-025,50/30/20 Budget Calculator,abacus,Personal finance,59,12.7,39,20,overpriced,0,370,0,0,0,3,4,1,0,3,1
+ABL-027,Credit Card Payoff Calculator,abacus,Debt,59,12.0,39,20,overpriced,0,332,0,0,0,3,3,1,0,2,1
+ABL-028,Accounts Payable Ageing Tracker,abacus,Business finance,69,20.2,49,20,overpriced,0,367,0,0,0,4,6,1,600,7,1
+ABL-029,Customer Lifetime Value & Acquisition Cost Calculator,abacus,Business finance,59,12.5,39,20,overpriced,0,383,0,0,0,3,3,1,0,3,1
+ABL-030,Car Affordability & Total Cost Calculator,abacus,Personal finance,59,13.0,39,20,overpriced,0,402,0,0,0,3,4,1,0,3,1
+PLD-004,Savings Challenge Pack,plainday,Budget & savings,49,17.0,39,10,fair,12,1173,0,0,0,0,0,0,0,0,0
+PLD-008,Student Study Planner,plainday,Study,59,22.8,49,10,fair,25,934,0,0,0,0,0,0,0,0,0
+PLD-009,Exam Revision Planner,plainday,Study,49,15.6,39,10,fair,16,717,0,0,0,0,0,0,0,0,0
+PLD-011,Home Cleaning Schedule & Declutter Challenge,plainday,Home organisation,39,10.6,29,10,overpriced,8,700,0,0,0,0,0,0,0,0,0
+PLD-018,Yearly Planner & Annual Review,plainday,Daily & weekly planners,59,25.5,49,10,fair,26,1186,0,0,0,0,0,0,0,0,0
+PLD-019,Travel Planner,plainday,Home organisation,39,11.9,29,10,overpriced,12,570,0,0,0,0,0,0,0,0,0
+BZW-003,Invoice Template & Invoice Register,bizwright,Invoicing & finance admin,59,26.7,49,10,fair,0,406,0,0,0,6,20,0,201,10,1
+BZW-004,Quotation & Estimate Template,bizwright,Invoicing & finance admin,59,26.2,49,10,fair,0,344,0,0,0,6,20,0,201,10,1
+BZW-012,"Meeting Agenda, Minutes & Action Log Kit",bizwright,Operations,59,22.5,49,10,fair,0,624,9,3,11,2,7,0,300,3,1
+BZW-018,Purchase Order & Supplier Kit,bizwright,Operations,59,23.3,49,10,fair,0,272,0,0,0,6,14,0,301,8,1
+ABL-004,Emergency Fund Calculator & Tracker,abacus,Personal finance,49,14.3,39,10,fair,0,327,0,0,0,4,9,0,0,12,1
+ABL-007,Loan Amortisation Calculator with Extra Payments,abacus,Loans & debt,89,54.8,79,10,fair,0,335,0,0,0,4,494,1,0,6,1
+ABL-015,Break-Even & Profit Calculator,abacus,Business finance,69,30.2,59,10,fair,0,274,0,0,0,5,48,1,0,1,1
+ABL-016,Sinking Funds & Bill Tracker,abacus,Personal finance,59,27.4,49,10,fair,0,285,0,0,0,6,18,1,60,15,1
+ABL-018,Shared Expense Splitter,abacus,Personal finance,49,19.3,39,10,fair,0,262,0,0,0,5,7,0,2000,8,1
+LRH-009,Morning & Bedtime Routine Charts,littlerhythm,Chores & routines,39,9.1,29,10,overpriced,8,516,0,0,0,0,0,0,0,0,0
+LRH-010,Kids Chore Charts by Age,littlerhythm,Chores & routines,39,10.2,29,10,overpriced,9,579,0,0,0,0,0,0,0,0,0
+LRH-011,Reward Sticker Charts,littlerhythm,Chores & routines,39,9.1,29,10,overpriced,8,516,0,0,0,0,0,0,0,0,0
+LRH-013,Summer Holiday Activity Planner,littlerhythm,Learning at home,39,11.4,29,10,overpriced,11,580,0,0,0,0,0,0,0,0,0
+LRH-014,Feelings Check-in Journal for Kids,littlerhythm,Feelings & wellbeing,39,9.8,29,10,overpriced,9,531,0,0,0,0,0,0,0,0,0
+LRH-015,Family Meeting Kit,littlerhythm,Family organisation,39,6.2,29,10,overpriced,5,379,0,0,0,0,0,0,0,0,0
+LRH-018,Potty Training Chart,littlerhythm,Baby,39,9.9,29,10,overpriced,9,545,0,0,0,0,0,0,0,0,0
+LRH-020,Kids Achievement Certificates,littlerhythm,Feelings & wellbeing,39,9.3,29,10,overpriced,10,402,0,0,0,0,0,0,0,0,0
+LRH-021,Road Trip Activity Pack for Kids,littlerhythm,Learning at home,39,7.2,29,10,overpriced,7,355,0,0,0,0,0,0,0,0,0
+LRH-024,Kids Money Lessons Workbook,littlerhythm,Money for kids,39,8.8,29,10,overpriced,8,475,0,0,0,0,0,0,0,0,0
+LRH-025,Pocket Money Jobs Board,littlerhythm,Money for kids,39,6.6,29,10,overpriced,6,361,0,0,0,0,0,0,0,0,0
+CHK-012,Detailed Lesson Plan Template,chalkline,Lesson planning,39,9.6,29,10,overpriced,9,510,0,0,0,0,0,0,0,0,0
+CHK-013,Unit / Term Planner,chalkline,Lesson planning,39,6.9,29,10,overpriced,6,395,0,0,0,0,0,0,0,0,0
+CHK-014,Seating Plan Templates,chalkline,Classroom management,39,7.7,29,10,overpriced,7,425,0,0,0,0,0,0,0,0,0
+CHK-015,Substitute Teacher Folder,chalkline,Classroom admin,39,7.7,29,10,overpriced,7,416,0,0,0,0,0,0,0,0,0
+CHK-016,Classroom Observation Notes,chalkline,Assessment,39,9.0,29,10,overpriced,9,431,0,0,0,0,0,0,0,0,0
+CHK-018,Exit Tickets & Self-Assessment Cards,chalkline,Assessment,39,6.4,29,10,overpriced,5,408,0,0,0,0,0,0,0,0,0
+CHK-019,Parent-Teacher Meeting Forms,chalkline,Classroom admin,39,6.5,29,10,overpriced,6,351,0,0,0,0,0,0,0,0,0
+CHK-020,Classroom Jobs Chart,chalkline,Classroom management,39,8.9,29,10,overpriced,9,417,0,0,0,0,0,0,0,0,0
+CHK-021,Reading Comprehension Response Sheets,chalkline,Lesson planning,39,7.2,29,10,overpriced,7,357,0,0,0,0,0,0,0,0,0
+CHK-022,Learner Goal-Setting Sheets,chalkline,Classroom management,39,6.7,29,10,overpriced,6,368,0,0,0,0,0,0,0,0,0
+CHK-029,Teacher To-Do & Marking Planner,chalkline,Professional development,39,7.4,29,10,overpriced,7,381,0,0,0,0,0,0,0,0,0
+ILP-011,12-Month Wedding Planning Checklist,ivorylane,Wedding planning,39,8.3,29,10,overpriced,8,426,0,0,0,0,0,0,0,0,0
+ILP-012,Wedding Day Timeline & Contacts,ivorylane,Wedding planning,39,5.8,29,10,overpriced,5,336,0,0,0,0,0,0,0,0,0
+ILP-013,Wedding Planner Workbook,ivorylane,Wedding planning,39,10.5,29,10,overpriced,11,471,0,0,0,0,0,0,0,0,0
+ILP-014,Bridal Party Planner,ivorylane,Wedding planning,39,5.8,29,10,overpriced,5,340,0,0,0,0,0,0,0,0,0
+ILP-015,Wedding Speech & Vow Writing Workbook,ivorylane,Wedding planning,39,6.8,29,10,overpriced,6,389,0,0,0,0,0,0,0,0,0
+ILP-016,Party Planner Pages,ivorylane,Event planning,39,6.8,29,10,overpriced,7,315,0,0,0,0,0,0,0,0,0
+ILP-017,Kids Birthday Party Planner,ivorylane,Event planning,39,6.9,29,10,overpriced,7,322,0,0,0,0,0,0,0,0,0
+ILP-018,Bridal Shower & Bachelorette Planner,ivorylane,Event planning,39,6.0,29,10,overpriced,6,285,0,0,0,0,0,0,0,0,0
+ILP-020,Event Day Emergency Kit Checklist,ivorylane,Event planning,39,5.4,29,10,overpriced,4,359,0,0,0,0,0,0,0,0,0
+ILP-021,Thank-You Note Templates & Tracker,ivorylane,Celebrations,39,5.7,29,10,overpriced,5,318,0,0,0,0,0,0,0,0,0
+ILP-027,Event Planner Client Intake Pages,ivorylane,Event business,39,6.2,29,10,overpriced,6,311,0,0,0,0,0,0,0,0,0
+ILP-029,Wedding Menu & Tasting Notes,ivorylane,Wedding planning,39,6.5,29,10,overpriced,6,343,0,0,0,0,0,0,0,0,0
+PCB-012,Couch to 5K Training Plan,pacebook,Workout plans,39,7.8,29,10,overpriced,5,570,0,0,0,0,0,0,0,0,0
+PCB-013,Fitness Planner & Workout Journal,pacebook,Workout plans,59,21.9,49,10,fair,24,895,0,0,0,0,0,0,0,0,0
+PCB-016,Yoga & Mobility Practice Journal,pacebook,Workout plans,39,6.6,29,10,overpriced,6,357,0,0,0,0,0,0,0,0,0
+PCB-017,Water & Steps Daily Tracker,pacebook,Progress tracking,39,10.2,29,10,overpriced,9,579,0,0,0,0,0,0,0,0,0
+PCB-018,Fitness Goal Setting Workbook,pacebook,Progress tracking,39,7.8,29,10,overpriced,7,432,0,0,0,0,0,0,0,0,0
+PCB-019,HIIT Workout Cards,pacebook,Workout plans,39,7.9,29,10,overpriced,6,511,0,0,0,0,0,0,0,0,0
+PCB-020,Injury & Recovery Log,pacebook,Progress tracking,39,6.8,29,10,overpriced,6,378,0,0,0,0,0,0,0,0,0
+PCB-027,Weekly Fitness & Wellness Check-in,pacebook,Progress tracking,39,10.9,29,10,overpriced,11,516,0,0,0,0,0,0,0,0,0
+PCB-029,Stretching & Mobility Routine Cards,pacebook,Workout plans,39,9.6,29,10,overpriced,9,507,0,0,0,0,0,0,0,0,0
+DPL-011,Move-In / Move-Out Inspection Checklist,doorpost,Maintenance,39,9.1,29,10,overpriced,9,440,0,0,0,0,0,0,0,0,0
+DPL-012,Property Maintenance Calendar,doorpost,Maintenance,39,6.2,29,10,overpriced,6,318,0,0,0,0,0,0,0,0,0
+DPL-013,Tenant Welcome Pack Pages,doorpost,Tenant management,39,5.7,29,10,overpriced,5,323,0,0,0,0,0,0,0,0,0
+DPL-014,Rent Receipt Book,doorpost,Tenant management,39,5.6,29,10,overpriced,5,316,0,0,0,0,0,0,0,0,0
+DPL-015,Property Viewing Notes,doorpost,Tenant management,39,7.9,29,10,overpriced,8,376,0,0,0,0,0,0,0,0,0
+DPL-016,Contractor & Supplier Directory,doorpost,Maintenance,39,5.1,29,10,overpriced,5,256,0,0,0,0,0,0,0,0,0
+DPL-017,Rental Property Annual Review Workbook,doorpost,Landlord finance,39,5.5,29,10,overpriced,5,301,0,0,0,0,0,0,0,0,0
+DPL-025,Landlord Planner & Rent Calendar,doorpost,Landlord finance,49,14.9,39,10,fair,16,637,0,0,0,0,0,0,0,0,0
+DPL-028,Key & Access Register,doorpost,Maintenance,39,6.2,29,10,overpriced,6,317,0,0,0,0,0,0,0,0,0
+DPL-029,Routine Rental Inspection Report,doorpost,Maintenance,39,8.3,29,10,overpriced,8,422,0,0,0,0,0,0,0,0,0
+GSM-017,Freelancer Weekly Planner,gigsmith,Freelance admin,49,14.9,39,10,fair,16,632,0,0,0,0,0,0,0,0,0
+GSM-019,Content Idea Bank,gigsmith,Content creation,39,5.9,29,10,overpriced,6,279,0,0,0,0,0,0,0,0,0
+GSM-022,Social Media Content Planner Pages,gigsmith,Content creation,39,8.0,29,10,overpriced,8,380,0,0,0,0,0,0,0,0,0
+GSM-023,Portfolio Case Study Worksheets,gigsmith,Clients & projects,39,8.9,29,10,overpriced,9,425,0,0,0,0,0,0,0,0,0
+GLD-014,Board Meeting Agenda & Minutes Pages,goodledger,Governance,39,6.7,29,10,overpriced,7,303,0,0,0,0,0,0,0,0,0
+GLD-015,Volunteer Sign-In Sheets,goodledger,Volunteers,39,6.8,29,10,overpriced,7,313,0,0,0,0,0,0,0,0,0
+GLD-016,Fundraising Thermometer Charts,goodledger,Fundraising,39,6.9,29,10,overpriced,6,399,0,0,0,0,0,0,0,0,0
+GLD-017,Community Event Planner,goodledger,Fundraising,39,6.8,29,10,overpriced,7,308,0,0,0,0,0,0,0,0,0
+GLD-018,Donor Thank-You Card Pack,goodledger,Fundraising,39,6.5,29,10,overpriced,6,351,0,0,0,0,0,0,0,0,0
+GLD-019,Food Bank Distribution Log,goodledger,Impact,39,8.5,29,10,overpriced,9,372,0,0,0,0,0,0,0,0,0
+GLD-020,Volunteer Training & Induction Checklist,goodledger,Volunteers,39,5.5,29,10,overpriced,5,295,0,0,0,0,0,0,0,0,0
+GLD-021,Nonprofit Strategic Planning Workbook,goodledger,Governance,49,12.1,39,10,fair,12,588,0,0,0,0,0,0,0,0,0
+GLD-030,Nonprofit Campaign & Social Media Planner,goodledger,Fundraising,39,7.3,29,10,overpriced,7,377,0,0,0,0,0,0,0,0,0
+MSE-016,Food Safety Opening & Closing Checklists,mise,Food safety,39,6.9,29,10,overpriced,6,400,0,0,0,0,0,0,0,0,0
+MSE-017,Allergen Matrix Chart,mise,Food safety,39,8.5,29,10,overpriced,6,588,0,0,0,0,0,0,0,0,0
+MSE-019,Delivery & Goods-In Check Log,mise,Food safety,39,7.9,29,10,overpriced,7,445,0,0,0,0,0,0,0,0,0
+MSE-020,Food Truck Event Planner,mise,Kitchen operations,39,7.8,29,10,overpriced,7,433,0,0,0,0,0,0,0,0,0
+MSE-021,New Staff Kitchen Induction Pack,mise,Kitchen operations,39,6.0,29,10,overpriced,5,360,0,0,0,0,0,0,0,0,0
+MSE-028,Food Prep & Use-By Labels,mise,Food safety,39,9.2,29,10,overpriced,6,673,0,0,0,0,0,0,0,0,0
+MSE-029,"Cooking, Cooling & Reheating Temperature Log",mise,Food safety,39,10.4,29,10,overpriced,9,605,0,0,0,0,0,0,0,0,0
+SKD-014,Small Shop Business Planner,shopkeeper,Sales & profit,49,17.8,39,10,fair,18,834,0,0,0,0,0,0,0,0,0
+SKD-015,Product Photography Shot List,shopkeeper,Listings & marketing,39,6.1,29,10,overpriced,6,306,0,0,0,0,0,0,0,0,0
+SKD-016,Order Packing Slips & Labels,shopkeeper,Fulfilment,39,4.8,29,10,overpriced,4,293,0,0,0,0,0,0,0,0,0
+SKD-017,Craft Market Checklist & Tracker,shopkeeper,Fulfilment,39,5.3,29,10,overpriced,5,281,0,0,0,0,0,0,0,0,0
+SKD-018,Social Media Planner for Shops,shopkeeper,Listings & marketing,49,13.3,39,10,fair,14,588,0,0,0,0,0,0,0,0,0
+SKD-023,Inventory Count Sheets,shopkeeper,Inventory,39,6.7,29,10,overpriced,7,305,0,0,0,0,0,0,0,0,0
+SKD-024,Seller Goals & Quarterly Review,shopkeeper,Sales & profit,39,8.3,29,10,overpriced,8,426,0,0,0,0,0,0,0,0,0
+SKD-029,Product Development Worksheets,shopkeeper,Sales & profit,39,6.7,29,10,overpriced,7,295,0,0,0,0,0,0,0,0,0
+SKD-030,Packaging & Unboxing Planner,shopkeeper,Fulfilment,39,6.1,29,10,overpriced,6,297,0,0,0,0,0,0,0,0,0
+CLK-013,Job Search Planner,careerladder,Job search,39,6.7,29,10,overpriced,7,304,0,0,0,0,0,0,0,0,0
+CLK-014,Interview Notes & Question Sheets,careerladder,Interviews,39,6.7,29,10,overpriced,6,371,0,0,0,0,0,0,0,0,0
+CLK-015,Career Development Plan Workbook,careerladder,Career growth,39,9.8,29,10,overpriced,10,458,0,0,0,0,0,0,0,0,0
+CLK-016,First 90 Days in a New Job Planner,careerladder,Career growth,39,7.2,29,10,overpriced,7,363,0,0,0,0,0,0,0,0,0
+CLK-017,Performance Review Prep Pages,careerladder,Career growth,39,6.0,29,10,overpriced,6,287,0,0,0,0,0,0,0,0,0
+CLK-018,Career Change Exploration Workbook,careerladder,Career growth,39,6.7,29,10,overpriced,7,302,0,0,0,0,0,0,0,0,0
+CLK-024,Job Search Vision & Affirmation Cards,careerladder,Job search,39,5.7,29,10,overpriced,5,323,0,0,0,0,0,0,0,0,0
+CLK-025,Graduate Job Hunt Planner,careerladder,Job search,39,6.0,29,10,overpriced,6,284,0,0,0,0,0,0,0,0,0
+CLK-029,Mock Interview Practice Pack,careerladder,Interviews,39,7.3,29,10,overpriced,7,375,0,0,0,0,0,0,0,0,0
+TNT-015,Daily Job Sheet Pad,trowel,Job management,49,13.2,39,10,fair,13,650,0,0,0,0,0,0,0,0,0
+TNT-016,Site Safety Checklist,trowel,Business admin,39,7.6,29,10,overpriced,7,413,0,0,0,0,0,0,0,0,0
+TNT-017,Site Visit & Measure-Up Sheets,trowel,Estimating,39,7.0,29,10,overpriced,6,406,0,0,0,0,0,0,0,0,0
+TNT-018,Variation / Change Order Forms,trowel,Quotes & invoices,39,9.8,29,10,overpriced,9,530,0,0,0,0,0,0,0,0,0
+TNT-019,Contractor Weekly Planner,trowel,Business admin,49,15.5,39,10,fair,15,780,0,0,0,0,0,0,0,0,0
+TNT-023,Bathroom & Kitchen Renovation Checklists,trowel,Estimating,39,5.9,29,10,overpriced,5,343,0,0,0,0,0,0,0,0,0
+TNT-029,Equipment Pre-Use Inspection Sheets,trowel,Business admin,39,10.1,29,10,overpriced,9,561,0,0,0,0,0,0,0,0,0
+KDK-013,Caregiver Binder Printables,kindkeep,Care coordination,39,7.9,29,10,overpriced,8,375,0,0,0,0,0,0,0,0,0
+KDK-014,Weekly Medication Chart,kindkeep,Health records,39,10.9,29,10,overpriced,11,520,0,0,0,0,0,0,0,0,0
+KDK-015,Hospital Stay & Discharge Planner,kindkeep,Health records,39,6.8,29,10,overpriced,6,384,0,0,0,0,0,0,0,0,0
+KDK-016,Dementia Daily Routine Cards,kindkeep,Care coordination,39,10.6,29,10,overpriced,11,486,0,0,0,0,0,0,0,0,0
+KDK-018,End-of-Life Wishes Planning Workbook,kindkeep,Legal & planning,39,7.7,29,10,overpriced,7,419,0,0,0,0,0,0,0,0,0
+KDK-019,Fall Prevention Home Safety Checklist,kindkeep,Care coordination,39,6.0,29,10,overpriced,5,364,0,0,0,0,0,0,0,0,0
+KDK-026,Visitor & Activity Log,kindkeep,Care coordination,39,7.3,29,10,overpriced,7,367,0,0,0,0,0,0,0,0,0
+KDK-027,Care Recipient Life Story Pages,kindkeep,Caregiver wellbeing,39,7.0,29,10,overpriced,7,340,0,0,0,0,0,0,0,0,0
+KDK-030,"Pain, Sleep & Mood Daily Tracker",kindkeep,Health records,39,7.9,29,10,overpriced,6,513,0,0,0,0,0,0,0,0,0
+FRB-014,Crop Rotation Planner,furrowbook,Garden planning,39,5.8,29,10,overpriced,5,331,0,0,0,0,0,0,0,0,0
+FRB-015,Garden Pest & Disease Diary,furrowbook,Garden planning,39,6.5,29,10,overpriced,6,349,0,0,0,0,0,0,0,0,0
+FRB-016,Homestead Chore Charts,furrowbook,Livestock,39,8.5,29,10,overpriced,8,441,0,0,0,0,0,0,0,0,0
+FRB-017,Preserving & Canning Log,furrowbook,Garden planning,39,7.2,29,10,overpriced,7,356,0,0,0,0,0,0,0,0,0
+FRB-019,Seed Starting Tracker,furrowbook,Garden planning,39,6.4,29,10,overpriced,6,338,0,0,0,0,0,0,0,0,0
+FRB-020,Farm Animal Feeding Charts,furrowbook,Livestock,39,11.1,29,10,overpriced,11,541,0,0,0,0,0,0,0,0,0
+FRB-025,Plant Watering & Feeding Schedule,furrowbook,Garden planning,39,11.4,29,10,overpriced,9,723,0,0,0,0,0,0,0,0,0
+FRB-028,Greenhouse & Tunnel Log,furrowbook,Garden planning,39,8.9,29,10,overpriced,9,425,0,0,0,0,0,0,0,0,0
+FRB-030,Farm Visitor & Biosecurity Log,furrowbook,Livestock,39,8.6,29,10,overpriced,8,458,0,0,0,0,0,0,0,0,0
+PKB-013,Pet Care Binder Printables,petkeep,Pet health,39,7.6,29,10,overpriced,7,402,0,0,0,0,0,0,0,0,0
+PKB-014,Pet Sitter Instructions Sheet,petkeep,Pet health,39,7.2,29,10,overpriced,6,427,0,0,0,0,0,0,0,0,0
+PKB-015,New Puppy Planner,petkeep,Training,39,9.5,29,10,overpriced,9,490,0,0,0,0,0,0,0,0,0
+PKB-016,New Cat / Kitten Planner,petkeep,Pet health,39,9.7,29,10,overpriced,9,520,0,0,0,0,0,0,0,0,0
+PKB-017,Pet Memory Book,petkeep,Pet health,39,7.7,29,10,overpriced,8,351,0,0,0,0,0,0,0,0,0
+PKB-018,Dog Walking Log & Route Planner,petkeep,Training,39,7.3,29,10,overpriced,7,367,0,0,0,0,0,0,0,0,0
+PKB-019,Pet Medication & Symptom Chart,petkeep,Pet health,39,10.5,29,10,overpriced,10,542,0,0,0,0,0,0,0,0,0
+PKB-023,Lost Pet Poster & Action Plan,petkeep,Pet health,39,6.2,29,10,overpriced,5,385,0,0,0,0,0,0,0,0,0
+PKB-025,Pet Grooming Record Cards,petkeep,Pet business,39,10.5,29,10,overpriced,11,468,0,0,0,0,0,0,0,0,0
+CBS-013,Client Consultation Forms,chairbook,Clients & bookings,39,6.4,29,10,overpriced,6,336,0,0,0,0,0,0,0,0,0
+CBS-015,Patch Test & Consent Records,chairbook,Health & safety,39,7.1,29,10,overpriced,7,353,0,0,0,0,0,0,0,0,0
+CBS-016,Aftercare Instruction Cards,chairbook,Clients & bookings,39,3.7,29,10,overpriced,3,231,0,0,0,0,0,0,0,0,0
+CBS-017,Salon Opening & Closing Checklists,chairbook,Health & safety,39,5.2,29,10,overpriced,5,263,0,0,0,0,0,0,0,0,0
+CBS-019,Loyalty & Referral Cards,chairbook,Marketing,39,5.6,29,10,overpriced,4,389,0,0,0,0,0,0,0,0,0
+CBS-026,Bridal Hair & Makeup Booking Planner,chairbook,Clients & bookings,39,6.2,29,10,overpriced,6,315,0,0,0,0,0,0,0,0,0
+FLW-014,Pre-Trip Vehicle Inspection Checklist,fleetwise,Fleet maintenance,49,12.6,39,10,fair,12,653,0,0,0,0,0,0,0,0,0
+FLW-015,Driver Logbook Printable,fleetwise,Driver logs,49,13.3,39,10,fair,15,519,0,0,0,0,0,0,0,0,0
+FLW-016,Fleet Maintenance Planner,fleetwise,Fleet maintenance,39,5.4,29,10,overpriced,5,285,0,0,0,0,0,0,0,0,0
+FLW-017,Accident Report Form & Glovebox Kit,fleetwise,Operations,39,6.5,29,10,overpriced,6,354,0,0,0,0,0,0,0,0,0
+FLW-019,Driver Daily Report Pad,fleetwise,Driver logs,49,12.5,39,10,fair,13,566,0,0,0,0,0,0,0,0,0
+FLW-025,Load & Cargo Securing Checklist,fleetwise,Operations,39,6.1,29,10,overpriced,6,306,0,0,0,0,0,0,0,0,0
+FLW-029,New Driver Induction Checklist,fleetwise,Operations,39,5.4,29,10,overpriced,5,293,0,0,0,0,0,0,0,0,0
+HSP-014,Homeschool Record Keeping Pages,hearthschool,Records,39,8.0,29,10,overpriced,8,380,0,0,0,0,0,0,0,0,0
+HSP-017,Unit Study Planner,hearthschool,Planning,39,7.2,29,10,overpriced,7,357,0,0,0,0,0,0,0,0,0
+HSP-019,Copywork & Handwriting Practice Pages,hearthschool,Learning activities,59,21.3,49,10,fair,24,828,0,0,0,0,0,0,0,0,0
+HSP-021,History Timeline & Notebook Pages,hearthschool,Learning activities,39,8.5,29,10,overpriced,9,378,0,0,0,0,0,0,0,0,0
+PLD-021,Sleep Diary & Evening Routine Planner,plainday,Wellness,59,25.0,49,10,fair,22,1411,0,0,0,0,0,0,0,0,0
+PLD-023,Moving House Planner,plainday,Home,39,7.9,29,10,overpriced,8,369,0,0,0,0,0,0,0,0,0
+PLD-024,Holiday Season Planner,plainday,Home,39,7.6,29,10,overpriced,8,341,0,0,0,0,0,0,0,0,0
+PLD-027,30-Day Digital Detox Challenge,plainday,Wellness,39,8.3,29,10,overpriced,7,492,0,0,0,0,0,0,0,0,0
+MSE-026,Café Starter Bundle,mise,Bundles,199,,192,7,fair,4,327,0,0,0,0,0,0,0,0,0
+CBS-024,Salon Owner Starter Bundle,chairbook,Bundles,219,,212,7,fair,4,230,0,0,0,0,0,0,0,0,0
+TNT-024,Tradie Business Starter Bundle,trowel,Bundles,199,,193,6,fair,4,305,0,0,0,0,0,0,0,0,0
+PLD-020,Productivity Planner Bundle,plainday,Bundles,169,,166,3,fair,6,521,0,0,0,0,0,0,0,0,0
+PCB-026,Runner's Training Bundle,pacebook,Bundles,99,,96,3,fair,4,252,0,0,0,0,0,0,0,0,0
+GSM-027,Freelancer Business Bundle,gigsmith,Bundles,279,,276,3,fair,4,216,0,0,0,0,0,0,0,0,0
+CLK-026,Job Search Essentials Bundle,careerladder,Bundles,149,,148,1,fair,4,245,0,0,0,0,0,0,0,0,0
+ABL-005,Net Worth Tracker,abacus,Personal finance,69,36.8,69,0,fair,0,283,0,0,0,5,51,1,60,7,1
+LRH-012,Kids Gratitude Journal,littlerhythm,Feelings & wellbeing,39,13.2,39,0,fair,13,648,0,0,0,0,0,0,0,0,0
+LRH-016,Kids Homework & School Week Planner,littlerhythm,Learning at home,39,14.1,39,0,fair,14,678,0,0,0,0,0,0,0,0,0
+LRH-017,Lunchbox Planner & Ideas,littlerhythm,Family organisation,39,12.1,39,0,fair,12,583,0,0,0,0,0,0,0,0,0
+LRH-019,Baby's First Year Memory Pages,littlerhythm,Baby,39,14.6,39,0,fair,15,677,0,0,0,0,0,0,0,0,0
+LRH-022,Toddler Daily Log for Carers,littlerhythm,Baby,39,13.1,39,0,fair,13,642,0,0,0,0,0,0,0,0,0
+LRH-030,Kids Weekly Planner Pages,littlerhythm,Learning at home,39,14.2,39,0,fair,15,626,0,0,0,0,0,0,0,0,0
+CHK-017,Teacher Year Planner,chalkline,Lesson planning,39,16.7,39,0,fair,17,780,0,0,0,0,0,0,0,0,0
+ILP-019,Anniversary Memory Journal,ivorylane,Celebrations,39,13.2,39,0,fair,13,645,0,0,0,0,0,0,0,0,0
+PCB-011,12-Week Strength Program Planner,pacebook,Workout plans,39,15.1,39,0,fair,16,662,0,0,0,0,0,0,0,0,0
+PCB-014,Meal Prep Planner for Fitness,pacebook,Nutrition,39,12.3,39,0,fair,12,617,0,0,0,0,0,0,0,0,0
+PCB-015,Marathon Training Plan (16 Weeks),pacebook,Workout plans,39,19.4,39,0,fair,20,884,0,0,0,0,0,0,0,0,0
+PCB-021,Sports Season Planner for Young Athletes,pacebook,Workout plans,39,14.3,39,0,fair,15,632,0,0,0,0,0,0,0,0,0
+DPL-024,Landlord Starter Bundle,doorpost,Bundles,179,,179,0,fair,4,247,0,0,0,0,0,0,0,0,0
+MSE-014,Fridge & Freezer Temperature Log,mise,Food safety,39,12.0,39,0,fair,10,716,0,0,0,0,0,0,0,0,0
+CLK-027,Weekly Career Growth Journal,careerladder,Career growth,39,13.5,39,0,fair,15,539,0,0,0,0,0,0,0,0,0
+TNT-028,Toolbox Talk Topic Cards,trowel,Business admin,39,14.0,39,0,fair,9,1028,0,0,0,0,0,0,0,0,0
+KDK-017,Care Handover Notes,kindkeep,Care coordination,39,13.1,39,0,fair,13,630,0,0,0,0,0,0,0,0,0
+KDK-025,Caregiver Journal,kindkeep,Caregiver wellbeing,39,12.6,39,0,fair,13,575,0,0,0,0,0,0,0,0,0
+KDK-028,Nutrition & Fluid Intake Chart,kindkeep,Health records,39,12.6,39,0,fair,13,573,0,0,0,0,0,0,0,0,0
+FRB-013,Garden Planner Printables,furrowbook,Garden planning,39,17.7,39,0,fair,18,823,0,0,0,0,0,0,0,0,0
+FRB-018,Herb Garden Journal,furrowbook,Garden planning,39,14.1,39,0,fair,15,615,0,0,0,0,0,0,0,0,0
+FRB-024,Weekly Garden Journal,furrowbook,Garden planning,39,13.6,39,0,fair,15,553,0,0,0,0,0,0,0,0,0
+PKB-027,Dog Training Session Planner,petkeep,Training,39,12.7,39,0,fair,13,585,0,0,0,0,0,0,0,0,0
+PKB-029,Senior Pet Care Tracker,petkeep,Pet health,39,12.4,39,0,fair,12,625,0,0,0,0,0,0,0,0,0
+HSP-015,Morning Basket & Circle Time Planner,hearthschool,Planning,39,15.8,39,0,fair,16,742,0,0,0,0,0,0,0,0,0
+HSP-016,Nature Study Journal,hearthschool,Learning activities,39,14.3,39,0,fair,16,560,0,0,0,0,0,0,0,0,0
+HSP-018,Kids Independent Work Checklists,hearthschool,Planning,39,15.1,39,0,fair,15,728,0,0,0,0,0,0,0,0,0
+HSP-020,Science Experiment Journal,hearthschool,Learning activities,39,13.5,39,0,fair,15,541,0,0,0,0,0,0,0,0,0
+HSP-027,Learning Games & Flash Cards Pack,hearthschool,Learning activities,39,13.5,39,0,fair,12,755,0,0,0,0,0,0,0,0,0
+HSP-029,Weekly Homeschool Review Pages,hearthschool,Planning,39,14.7,39,0,fair,15,678,0,0,0,0,0,0,0,0,0
+PLD-022,Calm Mind Journal — 60 Prompts,plainday,Journals,59,30.1,59,0,fair,32,1303,0,0,0,0,0,0,0,0,0
+PLD-025,Dot Grid Bullet Journal Pages,plainday,Journals,69,38.1,69,0,fair,87,1689,0,0,0,0,0,0,0,0,0
+PLD-026,Perpetual Birthday & Anniversary Calendar,plainday,Planners,39,12.8,39,0,fair,15,456,0,0,0,0,0,0,0,0,0
+PLD-028,Morning Pages Journal,plainday,Journals,69,39.2,69,0,fair,95,1826,0,0,0,0,0,0,0,0,0
+PLD-030,Bucket List Journal,plainday,Journals,39,15.4,39,0,fair,17,630,0,0,0,0,0,0,0,0,0
+ILP-026,Wedding Planning Essentials Bundle,ivorylane,Bundles,139,,140,-1,fair,4,293,0,0,0,0,0,0,0,0,0
+SKD-025,Online Seller Starter Bundle,shopkeeper,Bundles,179,,180,-1,fair,4,240,0,0,0,0,0,0,0,0,0
+PKB-024,Pet Parent Organiser Bundle,petkeep,Bundles,159,,160,-1,fair,4,273,0,0,0,0,0,0,0,0,0
+FLW-023,Small Fleet Control Bundle,fleetwise,Bundles,189,,192,-3,fair,4,260,0,0,0,0,0,0,0,0,0
+CHK-028,Teacher Planning Bundle,chalkline,Bundles,149,,153,-4,fair,4,283,0,0,0,0,0,0,0,0,0
+KDK-024,Family Caregiver Organiser Bundle,kindkeep,Bundles,149,,153,-4,fair,4,293,0,0,0,0,0,0,0,0,0
+FRB-026,Grower's Record-Keeping Bundle,furrowbook,Bundles,149,,153,-4,fair,4,239,0,0,0,0,0,0,0,0,0
+HSP-025,Homeschool Organiser Bundle,hearthschool,Bundles,149,,153,-4,fair,4,255,0,0,0,0,0,0,0,0,0
+GLD-028,Small Nonprofit Admin Bundle,goodledger,Bundles,149,,154,-5,fair,4,235,0,0,0,0,0,0,0,0,0
+LRH-029,Calm Family Routines Bundle,littlerhythm,Bundles,69,,76,-7,fair,4,299,0,0,0,0,0,0,0,0,0
+PLD-002,Undated Weekly Planner — 52 Weeks,plainday,Daily & weekly planners,79,63.3,89,-10,fair,119,4713,0,0,0,0,0,0,0,0,0
+PLD-005,Guided Gratitude Journal — 90 Days,plainday,Journals,59,42.5,69,-10,fair,52,2214,0,0,0,0,0,0,0,0,0
+PLD-006,Weekly Self-Reflection Journal — 52 Prompts,plainday,Journals,59,40.7,69,-10,fair,59,2004,0,0,0,0,0,0,0,0,0
+PLD-010,Habit Tracker Set,plainday,Goals & productivity,39,21.7,49,-10,fair,18,1309,0,0,0,0,0,0,0,0,0
+PLD-012,Meal Planner & Grocery List Kit,plainday,Home organisation,39,24.0,49,-10,fair,25,1076,0,0,0,0,0,0,0,0,0
+PLD-014,Productivity Planner — Priority Matrix & Time Blocking,plainday,Goals & productivity,69,47.6,79,-10,fair,51,2838,0,0,0,0,0,0,0,0,0
+PLD-016,Wellness & Mood Tracker,plainday,Journals,49,29.7,59,-10,fair,26,1689,0,0,0,0,0,0,0,0,0
+PLD-017,Reading Journal & Book Log,plainday,Journals,39,20.2,49,-10,fair,19,1060,0,0,0,0,0,0,0,0,0
+ABL-020,Operations Toolkit Bundle,abacus,Bundles,799,,809,-10,fair,0,283,0,0,0,6,27,1,2000,46,1
+LRH-023,Family Calendar & Planner,littlerhythm,Family organisation,39,20.3,49,-10,fair,21,919,0,0,0,0,0,0,0,0,0
+CHK-011,Weekly Lesson Planner,chalkline,Lesson planning,59,39.0,69,-10,fair,43,1796,0,0,0,0,0,0,0,0,0
+HSP-013,Homeschool Planner Printables,hearthschool,Planning,59,37.5,69,-10,fair,41,1621,0,0,0,0,0,0,0,0,0
+HSP-026,Homeschool Mom Weekly Planner,hearthschool,Planning,59,36.5,69,-10,fair,39,1566,0,0,0,0,0,0,0,0,0
+PLD-001,Undated Daily Planner — 90 Days,plainday,Daily & weekly planners,69,60.0,89,-20,fair,95,4318,0,0,0,0,0,0,0,0,0
+ABL-017,Compound Interest & Retirement Savings Projector,abacus,Personal finance,69,56.0,89,-20,fair,0,336,0,0,0,5,256,1,0,3,1

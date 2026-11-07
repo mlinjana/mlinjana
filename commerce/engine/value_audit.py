@@ -45,7 +45,7 @@ def docx_metrics(path):
 
 def xlsx_metrics(path):
     wb = openpyxl.load_workbook(path)
-    patterns, charts, dv, example_rows, has_help = set(), 0, 0, 0, False
+    patterns, charts, dv, example_rows, has_help, words = set(), 0, 0, 0, False, 0
     for ws in wb.worksheets:
         if re.search(r"start|how|instructions|read", ws.title, re.I):
             has_help = True
@@ -56,11 +56,13 @@ def xlsx_metrics(path):
             for c in row:
                 if isinstance(c.value, str) and c.value.startswith("="):
                     patterns.add(re.sub(r"\$?[A-Z]{1,3}\$?\d+", "R", c.value))  # same logic in another row = same pattern
+                elif isinstance(c.value, str) and len(c.value.split()) >= 6:  # 2.0: guidance sentences (Start Here, Guide sheets, notes)
+                    words += len(c.value.split())
             typed = [v for v in vals if v is not None and not (isinstance(v, str) and v.startswith("="))]
             if len(typed) >= 3 and row[0].row > 3:
                 example_rows += 1
     return {"sheets": len(wb.worksheets), "formula_patterns": len(patterns), "charts": charts, "validations": dv,
-            "data_rows": example_rows, "has_help": has_help}
+            "data_rows": example_rows, "has_help": has_help, "words": words}
 
 
 def score(m):
