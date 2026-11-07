@@ -35,10 +35,24 @@ don't start until every product's price matches its content.
 |---|---|---|---|---|
 | Bespoke flagships | specs_b / specs_c / specs_a | ~40 | 1 (SOP kit) | Next: business plan, warehouse/supply-chain, KPI dashboard, inventory, cash flow |
 | Word documents | gen.build_d + content_docs_*.py | 82 | 82 (done 7 Nov) | b1–b8: every generic Word product has a guide, improved template, worked example and listing text that matches the file. Two false claims fixed (comment bank, landlord letters) |
-| Spreadsheet trackers | gen.build_x | 198 | 0 | Planned generic upgrade: example data on every sheet, dashboard with chart, Start Here; then per-product checks |
+| Spreadsheet trackers | gen.build_x + content_x_*.py | 198 | 198 (done 7 Nov) | b1–b9: every tracker has a hand-written, coherent worked example (a named scenario with consistent figures), a 'What it's for' and 'Good practice' Start Here, and correct key numbers. `check_x_claims.py` requires every number in each example description to be derivable from the example rows; 0 to review. Spot-checked by recalculating in LibreOffice. 18 listings promised features the file didn't have; each now has them (see below) |
 | Calculators | gen.build_c | 45 | 0 | Planned: scenario table + chart, worked example notes |
 | Printables | pdfkit pages | 235 | 0 | Planned: instructions page + filled example page |
 | Bundles | - | 20 | - | Priced from their items (<= 65%) |
+
+Tracker fixes, 7 Nov (listing promised something the file didn't do, or a key number was meaningless). Each now does what it says:
+- Recipe Costing Calculator: new Recipes sheet with portions, selling price, cost per portion and food-cost % (it only costed ingredient lines).
+- Supplier Price Comparison: "Cheapest?" column per item and a count of wins per supplier (it summed unit prices across different items).
+- Salary & Job Offer Comparison: weighted score out of 10 (promised, missing). Staff Leave Tracker: leave balances per employee (promised, missing).
+- Egg Production: feed per dozen (listing said "feed cost per dozen" with no calculation). Petty Cash Book: cash balance (said "running balance").
+- Salon and Food Business trackers: profit (said "monthly profit", none). Beauty Marketing: listing no longer claims promotion costs.
+- Strength log and Race calendar: personal-best markers. Body measurements: change from start. Calorie tracker: daily totals. Swimming: weekly totals.
+- Income/expense ledgers (rental, smallholding, nonprofit, event, annual budget): key numbers and summaries now show income, costs and net
+  instead of adding income and expenses together. Subscription box: monthly recurring revenue from active subscribers only.
+- Freelance time tracker: billable value counts billable time only. Party catering counter: only "Yes" replies count for catering.
+Builder additions (gen.build_x): coherent example rows per sheet with type and drop-down validation; Start Here sections; key numbers
+sumif / net / diff / ratio; summary_view, net_by, countif summaries; cross-sheet formulas ([[Sheet|Column]]), added sheets and columns.
+Start Here sheets now print at A4 width (they were clipped). Factory backup: factory/factory-2026-11-07-trackers-done.zip (sha 4d3fefb5…).
 
 Fixed 7 Nov: "Learner Report Comment Bank" claimed "over 100 comments" but had 16; it now has 103.
 
