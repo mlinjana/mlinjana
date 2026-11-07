@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-06T05:52:11Z",
+ "generated_at": "2026-11-07T09:28:36Z",
  "products": [
   {
    "id": "PLD-001",
@@ -2289,15 +2289,16 @@
    "id": "BZW-008",
    "store": "bizwright",
    "slug": "sop-template-kit",
-   "name": "SOP Template Kit with 5 Example SOPs",
-   "title": "SOP Template Word, Standard Operating Procedure Kit with 5 Examples, Small Business Process Documentation",
+   "name": "SOP Template Kit: Writing Guide, Templates & 11 Worked Examples",
+   "title": "SOP Template Word, Standard Operating Procedure Kit with 11 Complete Examples, Small Business Process Documentation",
    "category": "Operations",
-   "summary": "A clear SOP template, a guide to writing procedures people follow, and five worked examples to adapt.",
+   "summary": "A practical guide to writing procedures people follow, two templates and eleven complete, realistic SOPs for South African small businesses, plus a register, training sign-off and review schedule.",
    "features": [
-    "How-to-write-an-SOP guide",
-    "Editable SOP master template",
-    "5 example SOPs: opening up, online orders, complaints, client onboarding, month-end",
-    "Revision history table"
+    "Writing guide: which jobs to document first, eight rules, before-and-after steps, rollout",
+    "SOP master template and a one-page quick SOP",
+    "11 complete example SOPs: opening, cash-up, online orders, receiving stock, complaints, refunds, client onboarding, new employee, month-end, load-shedding, data backup",
+    "Each example has purpose, scope, roles, 9\u201312 checked steps, what can go wrong, records and a measure",
+    "SOP register, training sign-off sheet and review schedule"
    ],
    "tags": [
     "sop template",
@@ -2325,13 +2326,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A clear SOP template, a guide to writing procedures people follow, and five worked examples to adapt.\n\nWHAT'S INCLUDED\n\u2022 How-to-write-an-SOP guide\n\u2022 Editable SOP master template\n\u2022 5 example SOPs: opening up, online orders, complaints, client onboarding, month-end\n\u2022 Revision history table\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A practical guide to writing procedures people follow, two templates and eleven complete, realistic SOPs for South African small businesses, plus a register, training sign-off and review schedule.\n\nWHAT'S INCLUDED\n\u2022 Writing guide: which jobs to document first, eight rules, before-and-after steps, rollout\n\u2022 SOP master template and a one-page quick SOP\n\u2022 11 complete example SOPs: opening, cash-up, online orders, receiving stock, complaints, refunds, client onboarding, new employee, month-end, load-shedding, data backup\n\u2022 Each example has purpose, scope, roles, 9\u201312 checked steps, what can go wrong, records and a measure\n\u2022 SOP register, training sign-off sheet and review schedule\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-008/sop-template-kit.zip",
-    "bytes": 83190,
-    "sha256": "f51cbf0e54d0d0313853d775bc5f964de9044eba2824879e5b44e354ca89d0a5",
+    "bytes": 99453,
+    "sha256": "d6416a27db74077368aab2f675d6bc9ce84f7ba45790895ae1a861d113ecef31",
     "contents": [
      "Start Here.pdf",
      "SOP Template Kit.docx"
@@ -2356,7 +2357,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "SOP Template Kit.docx": 7
+      "SOP Template Kit.docx": 30
      }
     }
    },
