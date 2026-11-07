@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-07T09:50:12Z",
+ "generated_at": "2026-11-07T09:52:25Z",
  "products": [
   {
    "id": "PLD-001",
@@ -7294,12 +7294,14 @@
    "name": "Babysitter Information Pack",
    "title": "Babysitter Information Pack Editable Word Template, Babysitter, Nanny Info, Babysitter Checklist",
    "category": "Family organisation",
-   "summary": "Everything a babysitter needs: contacts, routines, house rules and allergies.",
+   "summary": "Everything a babysitter needs on one pack: emergency contacts, children's details, routines, house rules, allergies and a handover note, with a completed example family pack.",
    "features": [
-    "Everything a babysitter needs: contacts, routines, house rules and allergies.",
-    "5 sections: Emergency contacts, Children, Routines, House rules, Home information",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Emergency contacts and what to do in an emergency",
+    "Child profiles: age, allergies, medication, comforters, bedtime",
+    "Evening routine step by step",
+    "House rules and home information (Wi-Fi, torch, first-aid kit, locking up)",
+    "Handover note for the end of the evening",
+    "Completed example pack"
    ],
    "tags": [
     "babysitter",
@@ -7327,13 +7329,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Everything a babysitter needs: contacts, routines, house rules and allergies.\n\nWHAT'S INCLUDED\n\u2022 Everything a babysitter needs: contacts, routines, house rules and allergies.\n\u2022 5 sections: Emergency contacts, Children, Routines, House rules, Home information\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Everything a babysitter needs on one pack: emergency contacts, children's details, routines, house rules, allergies and a handover note, with a completed example family pack.\n\nWHAT'S INCLUDED\n\u2022 Emergency contacts and what to do in an emergency\n\u2022 Child profiles: age, allergies, medication, comforters, bedtime\n\u2022 Evening routine step by step\n\u2022 House rules and home information (Wi-Fi, torch, first-aid kit, locking up)\n\u2022 Handover note for the end of the evening\n\u2022 Completed example pack\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "LRH-026/babysitter-information-pack.zip",
-    "bytes": 80974,
-    "sha256": "4718e4d3c99db4436ce1e89a304b84c14b6c51f7927116a95ee2d2b057cbe056",
+    "bytes": 82466,
+    "sha256": "90fbb076e8b48be4dc779613f12b5767184bbe2db74f908ed80767f612f67734",
     "contents": [
      "Start Here.pdf",
      "Babysitter Information Pack.docx"
@@ -7356,7 +7358,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Babysitter Information Pack.docx": 2
+      "Babysitter Information Pack.docx": 4
      }
     }
    },
@@ -7369,12 +7371,14 @@
    "name": "Family Emergency Plan",
    "title": "Family Emergency Plan Editable Word Template, Emergency Plan, Family Safety, Emergency Binder",
    "category": "Family organisation",
-   "summary": "A fill-in plan so everyone knows what to do and who to call in an emergency.",
+   "summary": "A family emergency plan that works under stress: contacts, meeting places, evacuation, power and water outages, grab-bag checklist, practice log and a completed example.",
    "features": [
-    "A fill-in plan so everyone knows what to do and who to call in an emergency.",
-    "5 sections: Contacts, Meeting places, Evacuation, Grab bag checklist, Practice log",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Contacts and an out-of-town family contact",
+    "Meeting places near home and outside the area",
+    "Evacuation steps for each room",
+    "Plans for fire, break-in, medical emergency, power and water outages",
+    "Grab-bag checklist",
+    "Practice log and completed example plan"
    ],
    "tags": [
     "emergency plan",
@@ -7402,13 +7406,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A fill-in plan so everyone knows what to do and who to call in an emergency.\n\nWHAT'S INCLUDED\n\u2022 A fill-in plan so everyone knows what to do and who to call in an emergency.\n\u2022 5 sections: Contacts, Meeting places, Evacuation, Grab bag checklist, Practice log\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A family emergency plan that works under stress: contacts, meeting places, evacuation, power and water outages, grab-bag checklist, practice log and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Contacts and an out-of-town family contact\n\u2022 Meeting places near home and outside the area\n\u2022 Evacuation steps for each room\n\u2022 Plans for fire, break-in, medical emergency, power and water outages\n\u2022 Grab-bag checklist\n\u2022 Practice log and completed example plan\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "LRH-027/family-emergency-plan.zip",
-    "bytes": 81046,
-    "sha256": "1413a2ad197c4dd3eb6e3832543ad7ec4a273ca481ac7d2f4adbf32f7b0a06b7",
+    "bytes": 81962,
+    "sha256": "2db18f6a19e38f4f2f9bd78ce323231ff380dc10425fe2051e13a5cb3885d0f2",
     "contents": [
      "Start Here.pdf",
      "Family Emergency Plan.docx"
@@ -7431,7 +7435,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Family Emergency Plan.docx": 2
+      "Family Emergency Plan.docx": 4
      }
     }
    },
@@ -9542,12 +9546,13 @@
    "name": "Lesson Observation & Feedback Form",
    "title": "Lesson Observation & Feedback Form Editable Word Template, Lesson Observation, Peer Observation, Teacher Feedback",
    "category": "Professional development",
-   "summary": "A structured peer-observation form with criteria, evidence and next steps.",
+   "summary": "Peer lesson observations that help teachers grow: guide, observation form with defined criteria, feedback conversation structure and a completed example.",
    "features": [
-    "A structured peer-observation form with criteria, evidence and next steps.",
-    "3 sections: Strengths, Next steps, Teacher reflection",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: running supportive observations and feedback conversations",
+    "Observation form with 8 criteria and what 'good' looks like",
+    "Evidence-based rating scale",
+    "Feedback conversation structure (strength, question, next step)",
+    "Completed example observation"
    ],
    "tags": [
     "lesson observation",
@@ -9575,13 +9580,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A structured peer-observation form with criteria, evidence and next steps.\n\nWHAT'S INCLUDED\n\u2022 A structured peer-observation form with criteria, evidence and next steps.\n\u2022 3 sections: Strengths, Next steps, Teacher reflection\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Peer lesson observations that help teachers grow: guide, observation form with defined criteria, feedback conversation structure and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Guide: running supportive observations and feedback conversations\n\u2022 Observation form with 8 criteria and what 'good' looks like\n\u2022 Evidence-based rating scale\n\u2022 Feedback conversation structure (strength, question, next step)\n\u2022 Completed example observation\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CHK-023/lesson-observation-feedback-form.zip",
-    "bytes": 80886,
-    "sha256": "c075dd0ef347a9e1cb615b11a950e80210bd229532152fd6f8981bcff77851c9",
+    "bytes": 82027,
+    "sha256": "5528e5be7be9b57bf633cf626a65d50505c53983e1fb11a083e98aa2c5e63abd",
     "contents": [
      "Start Here.pdf",
      "Lesson Observation & Feedback Form.docx"
@@ -9602,7 +9607,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Lesson Observation & Feedback Form.docx": 1
+      "Lesson Observation & Feedback Form.docx": 3
      }
     }
    },
@@ -9689,12 +9694,14 @@
    "name": "Individual Support Plan Template",
    "title": "Individual Support Plan Template Editable Word Template, Support Plan, Learner Support, Intervention Plan",
    "category": "Classroom management",
-   "summary": "Plan and review support for a learner who needs extra help, with goals and strategies.",
+   "summary": "Plan and review support for a learner who needs extra help: strengths, barriers, SMART goals, strategies, who does what, review dates and a completed example plan.",
    "features": [
-    "Plan and review support for a learner who needs extra help, with goals and strategies.",
-    "3 sections: Strengths & interests, Barriers to learning, Parent / caregiver input",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Learner profile: strengths, interests, barriers to learning",
+    "SMART goals with measures",
+    "Strategies for class, home and specialist support",
+    "Roles and review schedule",
+    "Parent and learner voice sections",
+    "Completed example plan"
    ],
    "tags": [
     "support plan",
@@ -9722,13 +9729,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Plan and review support for a learner who needs extra help, with goals and strategies.\n\nWHAT'S INCLUDED\n\u2022 Plan and review support for a learner who needs extra help, with goals and strategies.\n\u2022 3 sections: Strengths & interests, Barriers to learning, Parent / caregiver input\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Plan and review support for a learner who needs extra help: strengths, barriers, SMART goals, strategies, who does what, review dates and a completed example plan.\n\nWHAT'S INCLUDED\n\u2022 Learner profile: strengths, interests, barriers to learning\n\u2022 SMART goals with measures\n\u2022 Strategies for class, home and specialist support\n\u2022 Roles and review schedule\n\u2022 Parent and learner voice sections\n\u2022 Completed example plan\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CHK-025/individual-support-plan-template.zip",
-    "bytes": 80946,
-    "sha256": "7480db9d201cde2df814a96c077f6f9764d8405051632878cd573b791aaf531c",
+    "bytes": 81935,
+    "sha256": "2e5af4853092114206225115b061c14d166862f0f8bb0e3fc9227bbdbf694ca9",
     "contents": [
      "Start Here.pdf",
      "Individual Support Plan Template.docx"
@@ -9749,7 +9756,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Individual Support Plan Template.docx": 1
+      "Individual Support Plan Template.docx": 4
      }
     }
    },
@@ -9762,12 +9769,14 @@
    "name": "Classroom Rules & Procedures Handbook",
    "title": "Classroom Rules & Procedures Handbook Editable Word Template, Classroom Rules, Procedures, Classroom Management",
    "category": "Classroom management",
-   "summary": "Write your class rules and routines once and share them with learners, parents and subs.",
+   "summary": "Set up a calm, organised classroom: rules, routines and procedures written step by step, a teaching plan for the first two weeks, consequences ladder and a parent letter, with a completed example.",
    "features": [
-    "Write your class rules and routines once and share them with learners, parents and subs.",
-    "6 sections: Our class agreements, Entering and leaving the classroom, Getting help, Transitions, Consequences & rewards, Communication with parents",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "5 positive class rules and how to teach them",
+    "Step-by-step procedures for 12 routines (entering, starting work, transitions, packing up and more)",
+    "First-two-weeks teaching plan",
+    "Consistent consequences and recognition ladder",
+    "Parent letter explaining the routines",
+    "Completed example for a Grade 5 class"
    ],
    "tags": [
     "classroom rules",
@@ -9795,13 +9804,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Write your class rules and routines once and share them with learners, parents and subs.\n\nWHAT'S INCLUDED\n\u2022 Write your class rules and routines once and share them with learners, parents and subs.\n\u2022 6 sections: Our class agreements, Entering and leaving the classroom, Getting help, Transitions, Consequences & rewards, Communication with parents\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Set up a calm, organised classroom: rules, routines and procedures written step by step, a teaching plan for the first two weeks, consequences ladder and a parent letter, with a completed example.\n\nWHAT'S INCLUDED\n\u2022 5 positive class rules and how to teach them\n\u2022 Step-by-step procedures for 12 routines (entering, starting work, transitions, packing up and more)\n\u2022 First-two-weeks teaching plan\n\u2022 Consistent consequences and recognition ladder\n\u2022 Parent letter explaining the routines\n\u2022 Completed example for a Grade 5 class\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CHK-026/classroom-rules-procedures-handbook.zip",
-    "bytes": 80678,
-    "sha256": "5418fd23fa8fb062ba3cc1d96a9f1471b6b88bc42bd40e4629a7069bdef19000",
+    "bytes": 81901,
+    "sha256": "be96abc5a01ee54b2b9a7ea3e673081afe4d5a7f0446ea03676c7c74ab5118f6",
     "contents": [
      "Start Here.pdf",
      "Classroom Rules & Procedures Handbook.docx"
@@ -9822,7 +9831,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Classroom Rules & Procedures Handbook.docx": 1
+      "Classroom Rules & Procedures Handbook.docx": 3
      }
     }
    },
@@ -11927,12 +11936,13 @@
    "name": "Wedding Vendor Questions & Contract Checklist",
    "title": "Wedding Vendor Questions & Contract Checklist Editable Word Template, Vendor Questions, Wedding Contracts, Wedding Tips",
    "category": "Wedding planning",
-   "summary": "Questions to ask each vendor and what to check before you sign.",
+   "summary": "Book wedding vendors with confidence: questions to ask 10 types of vendor, contract checklist, comparison table and a completed example comparison.",
    "features": [
-    "Questions to ask each vendor and what to check before you sign.",
-    "4 sections: Venue, Photographer, Caterer, Before you sign any contract",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Questions for venue, caterer, photographer, videographer, DJ/band, florist, d\u00e9cor, cake, hair and make-up, transport",
+    "Contract checklist: dates, deposits, cancellation, overtime, backup plans",
+    "Vendor comparison table",
+    "Payment schedule tracker",
+    "Completed example photographer comparison"
    ],
    "tags": [
     "vendor questions",
@@ -11960,13 +11970,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "Questions to ask each vendor and what to check before you sign.\n\nWHAT'S INCLUDED\n\u2022 Questions to ask each vendor and what to check before you sign.\n\u2022 4 sections: Venue, Photographer, Caterer, Before you sign any contract\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Book wedding vendors with confidence: questions to ask 10 types of vendor, contract checklist, comparison table and a completed example comparison.\n\nWHAT'S INCLUDED\n\u2022 Questions for venue, caterer, photographer, videographer, DJ/band, florist, d\u00e9cor, cake, hair and make-up, transport\n\u2022 Contract checklist: dates, deposits, cancellation, overtime, backup plans\n\u2022 Vendor comparison table\n\u2022 Payment schedule tracker\n\u2022 Completed example photographer comparison\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ILP-022/wedding-vendor-questions-contract-checklist.zip",
-    "bytes": 80972,
-    "sha256": "75433068f9413279c9ff072c7c0a8fa3664bdc3a4bcfda478203f717b27ec8a7",
+    "bytes": 82356,
+    "sha256": "d3fddc8050136e4282a493393a525fa9611d947fb4a4367aff693f27741e88f9",
     "contents": [
      "Start Here.pdf",
      "Wedding Vendor Questions & Contract Checklist.docx"
@@ -11987,7 +11997,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Wedding Vendor Questions & Contract Checklist.docx": 1
+      "Wedding Vendor Questions & Contract Checklist.docx": 4
      }
     }
    },
@@ -12000,12 +12010,13 @@
    "name": "Wedding Welcome Letter & Itinerary Template",
    "title": "Wedding Welcome Letter & Itinerary Template Editable Word Template, Welcome Letter, Wedding Itinerary, Destination Wedding",
    "category": "Wedding planning",
-   "summary": "An editable welcome letter and weekend itinerary for guests.",
+   "summary": "Welcome wedding guests properly: welcome letter, weekend itinerary, venue and travel information, FAQs and a completed example for a destination wedding.",
    "features": [
-    "An editable welcome letter and weekend itinerary for guests.",
-    "10 sections: Weekend itinerary, Getting around, Things to do nearby, Where to stay, What to wear, Weather & what to pack\u2026",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Welcome letter template",
+    "Itinerary table for the wedding weekend",
+    "Travel, accommodation and directions section",
+    "Guest FAQs (dress code, children, gifts, load-shedding)",
+    "Completed example"
    ],
    "tags": [
     "welcome letter",
@@ -12033,13 +12044,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable welcome letter and weekend itinerary for guests.\n\nWHAT'S INCLUDED\n\u2022 An editable welcome letter and weekend itinerary for guests.\n\u2022 10 sections: Weekend itinerary, Getting around, Things to do nearby, Where to stay, What to wear, Weather & what to pack\u2026\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Welcome wedding guests properly: welcome letter, weekend itinerary, venue and travel information, FAQs and a completed example for a destination wedding.\n\nWHAT'S INCLUDED\n\u2022 Welcome letter template\n\u2022 Itinerary table for the wedding weekend\n\u2022 Travel, accommodation and directions section\n\u2022 Guest FAQs (dress code, children, gifts, load-shedding)\n\u2022 Completed example\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ILP-023/wedding-welcome-letter-itinerary-template.zip",
-    "bytes": 81418,
-    "sha256": "e5efc4b5ef872643ae974b09c9a82bfe20c1a9c9d3e6f3864923b8fc77f70c54",
+    "bytes": 81777,
+    "sha256": "dd5a9aedaeacdb0e2f279a3b847491b65bacb0faeca331da690e8ff86d7ef830",
     "contents": [
      "Start Here.pdf",
      "Wedding Welcome Letter & Itinerary Template.docx"
@@ -12062,7 +12073,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Wedding Welcome Letter & Itinerary Template.docx": 2
+      "Wedding Welcome Letter & Itinerary Template.docx": 3
      }
     }
    },
@@ -12075,12 +12086,13 @@
    "name": "Event Proposal Template for Planners",
    "title": "Event Proposal Template for Planners Editable Word Template, Event Proposal, Event Planner Business, Proposal Template",
    "category": "Event business",
-   "summary": "A proposal template for event planners: scope, timeline, pricing and terms.",
+   "summary": "Win event clients with a proposal that sells: guide, proposal template with concept, timeline, three packages, budget breakdown, terms, and a complete example for a corporate year-end function.",
    "features": [
-    "A proposal template for event planners: scope, timeline, pricing and terms.",
-    "5 sections: About us, Your event, Scope of services, Timeline, Terms",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: discovery questions and presenting your concept",
+    "Template: brief, concept, plan, timeline, packages, budget, terms",
+    "Three-package pricing table",
+    "Budget breakdown by supplier category",
+    "Complete example proposal"
    ],
    "tags": [
     "event proposal",
@@ -12108,13 +12120,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "A proposal template for event planners: scope, timeline, pricing and terms.\n\nWHAT'S INCLUDED\n\u2022 A proposal template for event planners: scope, timeline, pricing and terms.\n\u2022 5 sections: About us, Your event, Scope of services, Timeline, Terms\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Win event clients with a proposal that sells: guide, proposal template with concept, timeline, three packages, budget breakdown, terms, and a complete example for a corporate year-end function.\n\nWHAT'S INCLUDED\n\u2022 Guide: discovery questions and presenting your concept\n\u2022 Template: brief, concept, plan, timeline, packages, budget, terms\n\u2022 Three-package pricing table\n\u2022 Budget breakdown by supplier category\n\u2022 Complete example proposal\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ILP-024/event-proposal-template-for-planners.zip",
-    "bytes": 80969,
-    "sha256": "f7575dd4973c45684479251f689fc638674aed542fcb42622d659c9bb2b031e3",
+    "bytes": 81929,
+    "sha256": "e59c66ca62b9e1138f957d7a7ca3dbb34c760891ff8b3c7eddc44d6a9edac0ce",
     "contents": [
      "Start Here.pdf",
      "Event Proposal Template for Planners.docx"
@@ -12135,7 +12147,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Event Proposal Template for Planners.docx": 1
+      "Event Proposal Template for Planners.docx": 4
      }
     }
    },
@@ -12573,12 +12585,13 @@
    "name": "Event Feedback Survey Template",
    "title": "Event Feedback Survey Template Editable Word Template, Event Survey, Feedback Form, Guest Feedback",
    "category": "Event business",
-   "summary": "An editable guest feedback survey to learn what worked and improve the next event.",
+   "summary": "Measure what attendees thought: event feedback survey with rating scales and open questions, a guide to getting responses, a results summary table and a completed example.",
    "features": [
-    "An editable guest feedback survey to learn what worked and improve the next event.",
-    "3 sections: What did you enjoy most?, What could we improve?, Would you come to a future event?",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Survey with 12 questions (ratings and open questions)",
+    "Net promoter-style 'would you recommend' question",
+    "Guide: timing, length and response rates",
+    "Results summary table",
+    "Completed example results"
    ],
    "tags": [
     "event survey",
@@ -12606,13 +12619,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable guest feedback survey to learn what worked and improve the next event.\n\nWHAT'S INCLUDED\n\u2022 An editable guest feedback survey to learn what worked and improve the next event.\n\u2022 3 sections: What did you enjoy most?, What could we improve?, Would you come to a future event?\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Measure what attendees thought: event feedback survey with rating scales and open questions, a guide to getting responses, a results summary table and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Survey with 12 questions (ratings and open questions)\n\u2022 Net promoter-style 'would you recommend' question\n\u2022 Guide: timing, length and response rates\n\u2022 Results summary table\n\u2022 Completed example results\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "ILP-030/event-feedback-survey-template.zip",
-    "bytes": 80982,
-    "sha256": "d184a05106c863146b79f996feecd80d4a869102b9df3b737fc262fa1389c015",
+    "bytes": 81599,
+    "sha256": "45b11c1648697d2a6bc9e62a1db99edf7b8419717e1327d2951442c8390e589c",
     "contents": [
      "Start Here.pdf",
      "Event Feedback Survey Template.docx"
@@ -12633,7 +12646,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Event Feedback Survey Template.docx": 1
+      "Event Feedback Survey Template.docx": 3
      }
     }
    },
@@ -14405,12 +14418,13 @@
    "name": "Gym Membership & PAR-Q Health Form",
    "title": "Gym Membership & PAR-Q Health Form Editable Word Template, Par Q, Health Questionnaire, Personal Trainer Forms",
    "category": "Coaching business",
-   "summary": "An editable new-client form for trainers: contact, goals and health screening questions.",
+   "summary": "Screen new members safely: membership form, physical activity readiness questionnaire (PAR-Q style), consent and waiver section, POPIA notice and a completed example.",
    "features": [
-    "An editable new-client form for trainers: contact, goals and health screening questions.",
-    "2 sections: Goals, Health screening",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Membership details and emergency contact",
+    "Health screening questionnaire with 'see a doctor first' guidance",
+    "Consent and acknowledgement of risk",
+    "Personal information notice",
+    "Completed example form"
    ],
    "tags": [
     "par q",
@@ -14438,13 +14452,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable new-client form for trainers: contact, goals and health screening questions.\n\nWHAT'S INCLUDED\n\u2022 An editable new-client form for trainers: contact, goals and health screening questions.\n\u2022 2 sections: Goals, Health screening\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Screen new members safely: membership form, physical activity readiness questionnaire (PAR-Q style), consent and waiver section, POPIA notice and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Membership details and emergency contact\n\u2022 Health screening questionnaire with 'see a doctor first' guidance\n\u2022 Consent and acknowledgement of risk\n\u2022 Personal information notice\n\u2022 Completed example form\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PCB-022/gym-membership-par-q-health-form.zip",
-    "bytes": 81091,
-    "sha256": "b48683d5e7f1ae6459ea0d40f5f380e5e1f72e073d19ffd520c2f3294bbbf4c4",
+    "bytes": 82087,
+    "sha256": "cba33f94cc64ef3d94d7eb00bf89006ef351d0c12c3f0dca633d5e7704dec937",
     "contents": [
      "Start Here.pdf",
      "Gym Membership & PAR-Q Health Form.docx"
@@ -14465,7 +14479,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Gym Membership & PAR-Q Health Form.docx": 1
+      "Gym Membership & PAR-Q Health Form.docx": 3
      }
     }
    },
@@ -14478,12 +14492,13 @@
    "name": "Personal Training Package & Price Sheet",
    "title": "Personal Training Package & Price Sheet Editable Word Template, Price List, Pt Packages, Coaching Packages",
    "category": "Coaching business",
-   "summary": "An editable price sheet and terms for personal trainers and coaches.",
+   "summary": "Price and sell personal training clearly: guide to pricing sessions and packages, price sheet template, package terms and a completed example price sheet.",
    "features": [
-    "An editable price sheet and terms for personal trainers and coaches.",
-    "4 sections: About me, What's included, Booking & cancellation, How to get started",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Guide: hourly rate, package discounts and expiry",
+    "Price sheet: single sessions, packs, small groups, online coaching",
+    "Terms: booking, cancellations, expiry, payment",
+    "Completed example price sheet",
+    "Upgrade conversation script"
    ],
    "tags": [
     "price list",
@@ -14511,13 +14526,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable price sheet and terms for personal trainers and coaches.\n\nWHAT'S INCLUDED\n\u2022 An editable price sheet and terms for personal trainers and coaches.\n\u2022 4 sections: About me, What's included, Booking & cancellation, How to get started\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "Price and sell personal training clearly: guide to pricing sessions and packages, price sheet template, package terms and a completed example price sheet.\n\nWHAT'S INCLUDED\n\u2022 Guide: hourly rate, package discounts and expiry\n\u2022 Price sheet: single sessions, packs, small groups, online coaching\n\u2022 Terms: booking, cancellations, expiry, payment\n\u2022 Completed example price sheet\n\u2022 Upgrade conversation script\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PCB-023/personal-training-package-price-sheet.zip",
-    "bytes": 80848,
-    "sha256": "447c52ec92c95341dd0a190381dd77e8573145214bfb5025a5fa554ddbb940c4",
+    "bytes": 81542,
+    "sha256": "64725110886120423383e821ef8bc380fc87758f352d4192c7e2e82b02e25c29",
     "contents": [
      "Start Here.pdf",
      "Personal Training Package & Price Sheet.docx"
@@ -14538,7 +14553,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Personal Training Package & Price Sheet.docx": 1
+      "Personal Training Package & Price Sheet.docx": 3
      }
     }
    },
@@ -15064,12 +15079,13 @@
    "name": "Fitness Studio Timetable & Policies Template",
    "title": "Fitness Studio Timetable & Policies Template Editable Word Template, Class Timetable, Studio Policies, Gym Timetable",
    "category": "Coaching business",
-   "summary": "An editable class timetable with booking, cancellation and studio policies.",
+   "summary": "A clear studio timetable and policies: weekly class timetable, class descriptions and levels, booking and cancellation rules, studio etiquette and a completed example.",
    "features": [
-    "An editable class timetable with booking, cancellation and studio policies.",
-    "6 sections: Weekly class timetable, Booking, Cancellations & no-shows, Memberships & class packs, Studio etiquette, Health & safety",
-    "Grey guidance text shows what to write; replace it with your own",
-    "Tables and checklists ready to fill in"
+    "Weekly timetable grid",
+    "Class descriptions with level and intensity",
+    "Booking, waitlist and cancellation policies",
+    "Studio etiquette and safety",
+    "Completed example timetable"
    ],
    "tags": [
     "class timetable",
@@ -15097,13 +15113,13 @@
     "Save a master copy, then replace the grey [bracketed guidance] with your own content.",
     "Delete any sections you don't need and export to PDF when you share it."
    ],
-   "description": "An editable class timetable with booking, cancellation and studio policies.\n\nWHAT'S INCLUDED\n\u2022 An editable class timetable with booking, cancellation and studio policies.\n\u2022 6 sections: Weekly class timetable, Booking, Cancellations & no-shows, Memberships & class packs, Studio etiquette, Health & safety\n\u2022 Grey guidance text shows what to write; replace it with your own\n\u2022 Tables and checklists ready to fill in\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
+   "description": "A clear studio timetable and policies: weekly class timetable, class descriptions and levels, booking and cancellation rules, studio etiquette and a completed example.\n\nWHAT'S INCLUDED\n\u2022 Weekly timetable grid\n\u2022 Class descriptions with level and intensity\n\u2022 Booking, waitlist and cancellation policies\n\u2022 Studio etiquette and safety\n\u2022 Completed example timetable\n\nFORMAT & COMPATIBILITY\n\u2022 Files: DOCX (delivered as one ZIP download)\n\u2022 Microsoft Word 2010+, Google Docs, LibreOffice Writer and Apple Pages (DOCX import).\n\nHOW TO USE\n1. Open the .docx file in Microsoft Word, Google Docs (File \u2192 Open \u2192 Upload) or LibreOffice Writer.\n2. Save a master copy, then replace the grey [bracketed guidance] with your own content.\n3. Delete any sections you don't need and export to PDF when you share it.\n\nLICENCE\nPersonal use, plus use within one business you own or work for. You may not resell, share or redistribute the files.\n\nPLEASE NOTE\n\u2022 This is a digital download \u2014 nothing physical will be shipped.\n\u2022 Because it's a digital file, please read the description and format details before buying.",
    "bundle_of": [],
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "PCB-030/fitness-studio-timetable-policies-template.zip",
-    "bytes": 80979,
-    "sha256": "3dd6376cc6e162b869690de451e0d004ed53b3eef2a828441b5341b35da724bd",
+    "bytes": 81608,
+    "sha256": "b8bdf633f64052265516a80aad2bb0e0566c2a04e58b3ffe2dc07529c1cfc130",
     "contents": [
      "Start Here.pdf",
      "Fitness Studio Timetable & Policies Template.docx"
@@ -15124,7 +15140,7 @@
     "errors": [],
     "info": {
      "docx_pages": {
-      "Fitness Studio Timetable & Policies Template.docx": 1
+      "Fitness Studio Timetable & Policies Template.docx": 3
      }
     }
    },
