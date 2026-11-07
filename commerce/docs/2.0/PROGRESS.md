@@ -25,6 +25,23 @@ https://claude.ai/artifact/TQi3EcD51Ynpbq9QGrKa1F
 | 2026-11-06 | Licence tiers: Standard, Team (2.5×, whole rand), Commercial by quote; migration 005; store-api v10; picker, basket, thanks page, /help/licence, Start Here.pdf | commit 784d834. API checks: no licence → R39; team → R98; mixed basket → R612; invalid IDs ignored; unknown licence → Standard. Sandbox through the preview: ORD-873362D6C88B (Team) paid R98; BSK-F78F8722C9D2 paid R305 (Team R98 + Team R148 + Standard R59), licence and amount stored per item, delivered. Front end on the preview, waiting for a live deploy |
 | 2026-11-06 | **Licence tiers and lighter division pages live** (owner confirmed the deploy; Cloudflare version 2dcd22ab) | Live checks: key pages 200, redirects, search, category filter, basket, 0 console errors. Live sandbox purchase ORD-A07CB4B9E2FA: Team licence R98 at PayFast, thanks page shows "Team licence (up to 10 people)". All 600 downloads carry the Team wording in Start Here.pdf (600/600 valid, DB fingerprint 067e6e64… matches). Lighthouse mobile (lab): product 100/100/100 LCP 1.3 s; Business 100/100/100 LCP 1.5 s; /help/licence 100/100/100 LCP 1.2 s |
 
+## Product upgrade programme (owner, 7 Nov 2026: "upgrade them all; even the prices must match the products")
+Standard: docs/2.0/QUALITY-STANDARD.md. Evidence: engine/value_audit.py -> docs/2.0/value-audit.csv (534 of 600 priced above their content on 7 Nov).
+Method: upgrade content in the private factory (backed up to the Supabase 'backups' bucket after every batch), then
+value_audit.py -> reprice.py -> factory rebuild -> sync -> site build -> deploy (owner confirms the deploy). Real payments
+don't start until every product's price matches its content.
+
+| Group | Builder | Products | Upgraded | Notes |
+|---|---|---|---|---|
+| Bespoke flagships | specs_b / specs_c / specs_a | ~40 | 1 (SOP kit) | Next: business plan, warehouse/supply-chain, KPI dashboard, inventory, cash flow |
+| Word documents | gen.build_d + content_docs_*.py | 82 | 14 | b1: 6 business docs; b2: 8 career docs. Next: freelancer, property, trades, salon, nonprofit, food, caregivers, family, teaching, events, pets, fleet, homeschool, farm, online sellers |
+| Spreadsheet trackers | gen.build_x | 198 | 0 | Planned generic upgrade: example data on every sheet, dashboard with chart, Start Here; then per-product checks |
+| Calculators | gen.build_c | 45 | 0 | Planned: scenario table + chart, worked example notes |
+| Printables | pdfkit pages | 235 | 0 | Planned: instructions page + filled example page |
+| Bundles | - | 20 | - | Priced from their items (<= 65%) |
+
+Known claim mismatch to fix: "Learner Report Comment Bank" says "over 100 comments" but has 16.
+
 ## Owner decisions (6 Nov 2026, DECISIONS.md #39)
 - Palette: Midnight Navy, Warm Ivory, Champagne Gold, Charcoal, White.
 - Technology: keep and extend the static site + Supabase.
