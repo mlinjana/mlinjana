@@ -400,3 +400,56 @@
     if (r && r.ok) cf.reset();
   });
 })();
+
+// ---- 2.1 motion: header shadow, reveal on scroll, count-up, hero parallax, fly-to-basket. Skipped for reduced motion. ----
+(() => {
+  const calm = matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const hdr = document.querySelector(".hdr");
+  if (hdr) { const f = () => hdr.classList.toggle("scrolled", scrollY > 8); f(); addEventListener("scroll", f, { passive: true }); }
+  if (calm || !("IntersectionObserver" in window)) return;
+
+  const io = new IntersectionObserver((es) => es.forEach((e) => {
+    if (!e.isIntersecting) return;
+    const el = e.target; io.unobserve(el); el.classList.add("in");
+    setTimeout(() => { el.classList.remove("rv", "in"); el.style.transitionDelay = ""; }, 1300); // hand hover transitions back
+  }), { rootMargin: "0px 0px -8% 0px" });
+  document.querySelectorAll(".home .sec-head,.home .div-card,.home .usp,.home .rail-sec,.how .steps li,.home .why,.home .cta").forEach((el) => {
+    if (el.getBoundingClientRect().top < innerHeight * 0.92) return;
+    if (el.matches(".div-card,.steps li")) el.style.transitionDelay = [...el.parentNode.children].indexOf(el) * 90 + "ms";
+    el.classList.add("rv"); io.observe(el);
+  });
+
+  document.querySelectorAll("[data-count]").forEach((el) => {
+    const n = +el.dataset.count, pre = el.dataset.prefix || "";
+    if (!(n > 9)) return;
+    const t0 = performance.now();
+    const step = (t) => { const k = Math.min(1, (t - t0) / 1400); el.textContent = pre + Math.round(n * (1 - Math.pow(1 - k, 3))); if (k < 1) requestAnimationFrame(step); };
+    requestAnimationFrame(step);
+  });
+
+  const hero = document.querySelector(".hero2"), art = document.querySelector(".hero2-art"), glow = document.querySelector(".hero2-glow");
+  if (hero && art && matchMedia("(hover:hover) and (pointer:fine)").matches) {
+    let raf = 0;
+    hero.addEventListener("pointermove", (e) => {
+      if (raf) return;
+      raf = requestAnimationFrame(() => {
+        raf = 0;
+        const r = hero.getBoundingClientRect(), x = (e.clientX - r.left) / r.width - 0.5, y = (e.clientY - r.top) / r.height - 0.5;
+        art.style.setProperty("--mx", (-x * 24).toFixed(1) + "px"); art.style.setProperty("--my", (-y * 18).toFixed(1) + "px");
+        if (glow) { glow.style.setProperty("--gx", (e.clientX - r.left).toFixed(0) + "px"); glow.style.setProperty("--gy", (e.clientY - r.top).toFixed(0) + "px"); }
+      });
+    });
+  }
+
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest(".card [data-add]"), bag = document.querySelector("[data-open-basket]");
+    const img = a && a.closest(".card").querySelector(".card-media img");
+    if (!img || !bag || !img.animate) return;
+    const s = img.getBoundingClientRect(), d = bag.getBoundingClientRect(), c = img.cloneNode();
+    Object.assign(c.style, { position: "fixed", left: s.left + "px", top: s.top + "px", width: s.width + "px", height: s.height + "px", zIndex: 80, borderRadius: "12px", pointerEvents: "none", objectFit: "cover", boxShadow: "0 12px 30px rgba(0,0,0,.3)" });
+    c.removeAttribute("loading"); c.alt = "";
+    document.body.appendChild(c);
+    c.animate([{ transform: "none", opacity: 1 }, { transform: `translate(${d.left + d.width / 2 - s.left - s.width / 2}px,${d.top + d.height / 2 - s.top - s.height / 2}px) scale(.08)`, opacity: 0.25 }],
+      { duration: 650, easing: "cubic-bezier(.5,0,.3,1)" }).onfinish = () => c.remove();
+  });
+})();

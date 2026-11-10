@@ -395,13 +395,14 @@ def main():
     for p in under50:  # one per product line, so the row shows the range
         if p["store"] not in seen:
             under50_pick.append(p); seen.add(p["store"])
-    hero_covers = [d["categories"][0]["cover"] for d in divisions]  # one real product per division, no text baked in
+    hero_covers = [d["categories"][i]["cover"] for i in (0, 1) for d in divisions if len(d["categories"]) > i][:5]  # real products across the divisions, no text baked in
     div_rows = [{"title": f"Popular in {d['name']}", "name": d["name"], "href": d["href"], "products": mix_cats(d["categories"], 12)}
                 for d in divisions]
     open(os.path.join(SITE, "index.html"), "w").write(env.get_template("home.html").render(
         store=None, picks=picks, bundles=bundles[:12], best_saving=bundles[0]["saving_pct"] if bundles else 0,
         under50=under50_pick[:12], under50_total=len(under50), min_price=min(p["price_zar"] for p in allp),
-        hero_covers=hero_covers, div_rows=div_rows,
+        hero_covers=hero_covers, div_rows=div_rows, n_cats=sum(len(d["categories"]) for d in divisions),
+        ribbon=[c for k in range(4) for d in divisions for c in d["categories"][k:k + 1] if c["name"] != "Bundles"],
         canonical=cfg["site_base"] + "/", jsonld=site_jsonld(cfg["site_base"], cfg["legal"]), **common))
     # ---- 2.0 division and category pages ----
     sb = cfg["site_base"]

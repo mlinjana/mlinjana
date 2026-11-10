@@ -37,9 +37,9 @@
 <div class="grid">{% for p in items %}{{ card(p, shops[p.store]) }}{% endfor %}</div>
 {%- endmacro %}
 
-{% macro rail(title, items, shops, href=None, link="View all", sub=None) -%}
-<section class="panel rail-sec">
-  <div class="panel-head"><div><h2>{{ title }}</h2>{% if sub %}<p>{{ sub }}</p>{% endif %}</div>{% if href %}<a href="{{ href }}">{{ link }} <span aria-hidden="true">›</span></a>{% endif %}</div>
+{% macro rail(title, items, shops, href=None, link="View all", sub=None, cls="", kicker=None) -%}
+<section class="panel rail-sec {{ cls }}">
+  <div class="panel-head"><div>{% if kicker %}<p class="kicker">{{ kicker }}</p>{% endif %}<h2>{{ title }}</h2>{% if sub %}<p>{{ sub }}</p>{% endif %}</div>{% if href %}<a href="{{ href }}">{{ link }} <span aria-hidden="true">›</span></a>{% endif %}</div>
   <div class="rail" data-rail>
     <button type="button" class="rail-btn prev" aria-label="Scroll left" hidden>‹</button>
     <div class="rail-track">{% for p in items %}{{ card(p, shops[p.store]) }}{% endfor %}</div>

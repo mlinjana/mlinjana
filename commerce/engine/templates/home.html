@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 {% from "_macros.html" import rail, usps, steps, icon %}
 {% block title %}{{ market.name }}: templates, planners and spreadsheets for business, life and education{% endblock %}
-{% block head %}<link rel="preload" as="image" href="/{{ hero_covers[0] }}" media="(min-width: 901px)" fetchpriority="high">{% endblock %}
+{% block head %}<link rel="preload" as="image" href="/{{ hero_covers[0] }}" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces.woff2" crossorigin>{% endblock %}
 {% block main %}
 <div class="home">
-  {# Static hero: no slides or load animation, so the largest paint lands at once (Stage 1 audit). #}
+  {# 2.1 "Atelier" hero: the headline paints at once; the covers and the underline animate in with CSS only. #}
   <section class="hero2" aria-labelledby="hero-h">
+    <div class="hero2-glow" aria-hidden="true"></div>
     <div class="wrap hero2-in">
       <div class="hero2-copy">
-        <p class="eyebrow">Planners · Templates · Spreadsheets</p>
-        <h1 id="hero-h">Make Better Things Happen.</h1>
+        <p class="eyebrow"><span class="eb-dot"></span>Planners · Templates · Spreadsheets</p>
+        <h1 id="hero-h">Make <span class="hl">Better Things<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12c40-8 92-10 148-7 50 2 98 1 146 6"/></svg></span> Happen.</h1>
         <p class="hero2-lede">{{ market.total }} ready-to-use digital tools for business, life and education. Download straight after payment and start today.</p>
         <form class="hero2-search" action="/search" method="get" role="search" aria-label="Search the catalogue">
           <label class="visually-hidden" for="hero-q">Search all {{ market.total }} downloads</label>
@@ -24,15 +25,34 @@
       </div>
       <div class="hero2-art" aria-hidden="true">
         {% for c in hero_covers %}<img class="ha{{ loop.index }}" src="/{{ c }}" alt="" width="600" height="450"{% if loop.first %} fetchpriority="high"{% endif %}>{% endfor %}
+        <span class="chip-f cf1">{{ icon("check") }}Formulas checked</span>
+        <span class="chip-f cf2">{{ icon("file") }}A4 + US Letter</span>
+        <span class="chip-f cf3">{{ icon("bolt") }}Excel + Google Sheets</span>
       </div>
+    </div>
+    <div class="wrap">
+      <dl class="stats">
+        <div><dt>Ready-to-use downloads</dt><dd data-count="{{ market.total }}">{{ market.total }}</dd></div>
+        <div><dt>Categories</dt><dd data-count="{{ n_cats }}">{{ n_cats }}</dd></div>
+        <div><dt>File types: PDF, Excel, Word</dt><dd data-count="3">3</dd></div>
+        <div><dt>Prices start from</dt><dd data-count="{{ min_price }}" data-prefix="R">R{{ min_price }}</dd></div>
+      </dl>
     </div>
   </section>
 
+  <nav class="mq" aria-label="Popular categories">
+    <div class="mq-track">
+      {% for half in (0, 1) %}<ul{% if half %} aria-hidden="true"{% endif %}>{% for c in ribbon %}<li><a href="{{ c.href }}"{% if half %} tabindex="-1"{% endif %}>{{ c.name }}</a></li>{% endfor %}</ul>{% endfor %}
+    </div>
+  </nav>
+
   <div class="wrap">
+    <header class="sec-head"><p class="kicker">Three collections</p><h2>Where would you like to start?</h2></header>
     <section class="divs" aria-label="Shop by area">
       {% for d in divisions %}
       <article class="div-card div-{{ d.slug }}">
         <a class="div-card-head" href="{{ d.href }}">
+          <div class="div-fan" aria-hidden="true">{% for c in d.categories[:3] %}<img src="/{{ c.cover }}" alt="" loading="lazy" width="600" height="450">{% endfor %}</div>
           <span class="div-card-k">{{ d.count }} downloads</span>
           <h2>{{ d.name }}</h2>
           <p>{{ d.blurb }}</p>
@@ -45,28 +65,34 @@
 
     {{ usps(legal) }}
 
-    {{ rail("Top picks", picks, shops, "/search", "View all " ~ market.total) }}
-    {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately") }}
-    {{ rail("Under R50", under50, shops, "/search?max=50", "See all " ~ under50_total) }}
+    {{ rail("Top picks", picks, shops, "/search", "View all " ~ market.total, None, "", "Start here") }}
+    {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately", "band", "Save more") }}
+    {{ rail("Under R50", under50, shops, "/search?max=50", "See all " ~ under50_total, None, "", "Small price, real use") }}
     {% for r in div_rows %}{{ rail(r.title, r.products, shops, r.href, "Shop " ~ r.name) }}{% endfor %}
 
-    <section class="panel why" id="how">
-      <div class="why-grid">
-        <div>
-          <h2>How buying works</h2>
-          {{ steps() }}
-        </div>
-        <div class="why-box">
-          <h2>Why shop with us</h2>
-          <ul class="checks">
-            <li><strong>Real products, shown honestly.</strong> Every listing shows the actual pages inside. No fake reviews, countdowns or made-up discounts.</li>
-            <li><strong>Checked before release.</strong> Spreadsheets are recalculated with zero formula errors; printables come in A4 and US Letter.</li>
-            <li><strong>A real company.</strong> {{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}, {{ legal.address }}.</li>
-            <li><strong>Help when you need it.</strong> A file doesn't work? We fix it or refund you within 14 days.</li>
-          </ul>
-          <a class="btn btn-outline" href="/help/about">About us</a>
-        </div>
+    <section class="how" id="how">
+      <header class="sec-head"><p class="kicker">Simple by design</p><h2>From basket to download in three steps</h2></header>
+      {{ steps() }}
+    </section>
+
+    <section class="why">
+      <div class="why-copy">
+        <p class="kicker">Why shop with us</p>
+        <h2>Made with care, sold honestly.</h2>
+        <a class="btn btn-gold" href="/help/about">About us</a>
       </div>
+      <ul class="why-list">
+        <li>{{ icon("check") }}<div><strong>Real products, shown honestly.</strong> Every listing shows the actual pages inside. No fake reviews, countdowns or made-up discounts.</div></li>
+        <li>{{ icon("check") }}<div><strong>Checked before release.</strong> Spreadsheets are recalculated with zero formula errors; printables come in A4 and US Letter.</div></li>
+        <li>{{ icon("check") }}<div><strong>A real company.</strong> {{ legal.operator }}, reg. {{ legal.registration.split(' ')[0] }}, {{ legal.address }}.</div></li>
+        <li>{{ icon("check") }}<div><strong>Help when you need it.</strong> A file doesn't work? We fix it or refund you within 14 days.</div></li>
+      </ul>
+    </section>
+
+    <section class="cta">
+      <h2>Find the tool for the job.</h2>
+      <p>Search all {{ market.total }} downloads, or browse a collection.</p>
+      <div class="cta-row">{% for d in divisions %}<a class="btn btn-light" href="{{ d.href }}">{{ d.name }}</a>{% endfor %}<a class="btn btn-gold" href="/search">Browse everything <span aria-hidden="true">→</span></a></div>
     </section>
   </div>
 </div>
