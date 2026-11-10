@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T13:43:15Z",
+ "generated_at": "2026-11-10T13:50:04Z",
  "products": [
   {
    "id": "PLD-001",
@@ -2179,8 +2179,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-006/marketing-calendar.zip",
-    "bytes": 63731,
-    "sha256": "5f8d8f0c407c30451a2d7ea8754803db43afc5db313fa3aa3717162d97ed0391",
+    "bytes": 64218,
+    "sha256": "6379092d2f6bd3029ec7fa756f526099b6fdf894ea741747309d41f92b5de07a",
     "contents": [
      "Start Here.pdf",
      "Marketing Calendar.xlsx"
@@ -2215,7 +2215,7 @@
         "Budget",
         "Guide"
        ],
-       "values": 216,
+       "values": 281,
        "errors": 0
       }
      }
