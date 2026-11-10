@@ -67,7 +67,7 @@ async function jobEnd(id: number, status: "ok" | "error", detail: unknown, error
     const b = await cfg("budgets");
     const { data } = await db.from("job_runs").select("status").order("started_at", { ascending: false }).limit(b?.max_error_streak ?? 5);
     if (data && data.length >= (b?.max_error_streak ?? 5) && data.every((r) => r.status === "error")) {
-      await db.from("config").update({ value: { checkout: false, automation: true, reason: "repeated job errors — check job_runs" } }).eq("key", "kill_switch");
+      await db.from("config").update({ value: { checkout: true, automation: true, reason: "repeated job errors — check job_runs" } }).eq("key", "kill_switch");
     }
   }
 }
@@ -128,7 +128,7 @@ async function health() {
     if (typeof wk === "number" && b && wk > (b.weekly_ai_usd + b.weekly_infra_usd)) {
       out.budget = "exceeded";
       await db.from("work_log").insert({ kind: "decision_needed", text: `Weekly recorded costs (US$${wk}) exceed the configured budget. Automated generation is paused.` });
-      await db.from("config").update({ value: { checkout: false, automation: true, reason: "weekly budget exceeded" } }).eq("key", "kill_switch");
+      await db.from("config").update({ value: { checkout: true, automation: true, reason: "weekly budget exceeded" } }).eq("key", "kill_switch");
     }
     await jobEnd(id, "ok", out);
   } catch (e) {

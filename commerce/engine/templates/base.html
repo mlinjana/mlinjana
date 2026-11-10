@@ -86,6 +86,10 @@
     <div class="bk-empty" id="bk-empty">{{ icon("bag") }}<p>Your basket is empty.</p><a class="btn btn-primary" href="/search">Start shopping</a></div>
     <footer class="bk-foot" id="bk-foot" hidden>
       <div class="bk-total"><span>Total</span><strong id="bk-total">R0</strong></div>
+{% if checkout_paused %}
+      <p role="status"><strong>Orders are not open yet.</strong> You can keep browsing and save items in your basket on this device. No payment is being taken.</p>
+      <a class="btn btn-outline btn-block" href="/search">Continue browsing</a>
+{% else %}
       <form id="bk-form" novalidate>
         <label for="bk-email">Email for your download links</label>
         <input id="bk-email" type="email" autocomplete="email" required placeholder="you@example.com">
@@ -93,6 +97,7 @@
         <p class="msg" id="bk-msg" role="status"></p>
       </form>
       <p class="bk-note">You'll pay on PayFast's secure page. Your downloads appear straight after payment.</p>
+{% endif %}
     </footer>
   </div>
 </dialog>
