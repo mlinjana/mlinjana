@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T13:50:04Z",
+ "generated_at": "2026-11-10T13:54:02Z",
  "products": [
   {
    "id": "PLD-001",
@@ -2190,12 +2190,14 @@
     "cover": "assets/p/BZW-006/cover.webp",
     "previews": [
      "assets/p/BZW-006/preview-1.webp",
-     "assets/p/BZW-006/preview-2.webp"
+     "assets/p/BZW-006/preview-2.webp",
+     "assets/p/BZW-006/preview-3.webp"
     ],
     "marketplace": [
      "products/BZW-006/images/cover.jpg",
      "products/BZW-006/images/preview-1.jpg",
-     "products/BZW-006/images/preview-2.jpg"
+     "products/BZW-006/images/preview-2.jpg",
+     "products/BZW-006/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -9876,11 +9878,15 @@
    "images": {
     "cover": "assets/p/CHK-025/cover.webp",
     "previews": [
-     "assets/p/CHK-025/preview-1.webp"
+     "assets/p/CHK-025/preview-1.webp",
+     "assets/p/CHK-025/preview-2.webp",
+     "assets/p/CHK-025/preview-3.webp"
     ],
     "marketplace": [
      "products/CHK-025/images/cover.jpg",
-     "products/CHK-025/images/preview-1.jpg"
+     "products/CHK-025/images/preview-1.jpg",
+     "products/CHK-025/images/preview-2.jpg",
+     "products/CHK-025/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -11003,11 +11009,13 @@
    "images": {
     "cover": "assets/p/ILP-008/cover.webp",
     "previews": [
-     "assets/p/ILP-008/preview-1.webp"
+     "assets/p/ILP-008/preview-1.webp",
+     "assets/p/ILP-008/preview-2.webp"
     ],
     "marketplace": [
      "products/ILP-008/images/cover.jpg",
-     "products/ILP-008/images/preview-1.jpg"
+     "products/ILP-008/images/preview-1.jpg",
+     "products/ILP-008/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -12294,11 +12302,15 @@
    "images": {
     "cover": "assets/p/ILP-024/cover.webp",
     "previews": [
-     "assets/p/ILP-024/preview-1.webp"
+     "assets/p/ILP-024/preview-1.webp",
+     "assets/p/ILP-024/preview-2.webp",
+     "assets/p/ILP-024/preview-3.webp"
     ],
     "marketplace": [
      "products/ILP-024/images/cover.jpg",
-     "products/ILP-024/images/preview-1.jpg"
+     "products/ILP-024/images/preview-1.jpg",
+     "products/ILP-024/images/preview-2.jpg",
+     "products/ILP-024/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -14730,11 +14742,13 @@
    "images": {
     "cover": "assets/p/PCB-023/cover.webp",
     "previews": [
-     "assets/p/PCB-023/preview-1.webp"
+     "assets/p/PCB-023/preview-1.webp",
+     "assets/p/PCB-023/preview-2.webp"
     ],
     "marketplace": [
      "products/PCB-023/images/cover.jpg",
-     "products/PCB-023/images/preview-1.jpg"
+     "products/PCB-023/images/preview-1.jpg",
+     "products/PCB-023/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -15323,11 +15337,15 @@
    "images": {
     "cover": "assets/p/PCB-030/cover.webp",
     "previews": [
-     "assets/p/PCB-030/preview-1.webp"
+     "assets/p/PCB-030/preview-1.webp",
+     "assets/p/PCB-030/preview-2.webp",
+     "assets/p/PCB-030/preview-3.webp"
     ],
     "marketplace": [
      "products/PCB-030/images/cover.jpg",
-     "products/PCB-030/images/preview-1.jpg"
+     "products/PCB-030/images/preview-1.jpg",
+     "products/PCB-030/images/preview-2.jpg",
+     "products/PCB-030/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -22212,12 +22230,14 @@
     "cover": "assets/p/GLD-022/cover.webp",
     "previews": [
      "assets/p/GLD-022/preview-1.webp",
-     "assets/p/GLD-022/preview-2.webp"
+     "assets/p/GLD-022/preview-2.webp",
+     "assets/p/GLD-022/preview-3.webp"
     ],
     "marketplace": [
      "products/GLD-022/images/cover.jpg",
      "products/GLD-022/images/preview-1.jpg",
-     "products/GLD-022/images/preview-2.jpg"
+     "products/GLD-022/images/preview-2.jpg",
+     "products/GLD-022/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -22287,11 +22307,15 @@
    "images": {
     "cover": "assets/p/GLD-023/cover.webp",
     "previews": [
-     "assets/p/GLD-023/preview-1.webp"
+     "assets/p/GLD-023/preview-1.webp",
+     "assets/p/GLD-023/preview-2.webp",
+     "assets/p/GLD-023/preview-3.webp"
     ],
     "marketplace": [
      "products/GLD-023/images/cover.jpg",
-     "products/GLD-023/images/preview-1.jpg"
+     "products/GLD-023/images/preview-1.jpg",
+     "products/GLD-023/images/preview-2.jpg",
+     "products/GLD-023/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -22362,12 +22386,14 @@
     "cover": "assets/p/GLD-024/cover.webp",
     "previews": [
      "assets/p/GLD-024/preview-1.webp",
-     "assets/p/GLD-024/preview-2.webp"
+     "assets/p/GLD-024/preview-2.webp",
+     "assets/p/GLD-024/preview-3.webp"
     ],
     "marketplace": [
      "products/GLD-024/images/cover.jpg",
      "products/GLD-024/images/preview-1.jpg",
-     "products/GLD-024/images/preview-2.jpg"
+     "products/GLD-024/images/preview-2.jpg",
+     "products/GLD-024/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -22927,12 +22953,14 @@
     "cover": "assets/p/MSE-001/cover.webp",
     "previews": [
      "assets/p/MSE-001/preview-1.webp",
-     "assets/p/MSE-001/preview-2.webp"
+     "assets/p/MSE-001/preview-2.webp",
+     "assets/p/MSE-001/preview-3.webp"
     ],
     "marketplace": [
      "products/MSE-001/images/cover.jpg",
      "products/MSE-001/images/preview-1.jpg",
-     "products/MSE-001/images/preview-2.jpg"
+     "products/MSE-001/images/preview-2.jpg",
+     "products/MSE-001/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -23643,11 +23671,13 @@
    "images": {
     "cover": "assets/p/MSE-009/cover.webp",
     "previews": [
-     "assets/p/MSE-009/preview-1.webp"
+     "assets/p/MSE-009/preview-1.webp",
+     "assets/p/MSE-009/preview-2.webp"
     ],
     "marketplace": [
      "products/MSE-009/images/cover.jpg",
-     "products/MSE-009/images/preview-1.jpg"
+     "products/MSE-009/images/preview-1.jpg",
+     "products/MSE-009/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -23730,11 +23760,13 @@
    "images": {
     "cover": "assets/p/MSE-010/cover.webp",
     "previews": [
-     "assets/p/MSE-010/preview-1.webp"
+     "assets/p/MSE-010/preview-1.webp",
+     "assets/p/MSE-010/preview-2.webp"
     ],
     "marketplace": [
      "products/MSE-010/images/cover.jpg",
-     "products/MSE-010/images/preview-1.jpg"
+     "products/MSE-010/images/preview-1.jpg",
+     "products/MSE-010/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -24727,12 +24759,14 @@
     "cover": "assets/p/MSE-022/cover.webp",
     "previews": [
      "assets/p/MSE-022/preview-1.webp",
-     "assets/p/MSE-022/preview-2.webp"
+     "assets/p/MSE-022/preview-2.webp",
+     "assets/p/MSE-022/preview-3.webp"
     ],
     "marketplace": [
      "products/MSE-022/images/cover.jpg",
      "products/MSE-022/images/preview-1.jpg",
-     "products/MSE-022/images/preview-2.jpg"
+     "products/MSE-022/images/preview-2.jpg",
+     "products/MSE-022/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -24803,12 +24837,14 @@
     "cover": "assets/p/MSE-023/cover.webp",
     "previews": [
      "assets/p/MSE-023/preview-1.webp",
-     "assets/p/MSE-023/preview-2.webp"
+     "assets/p/MSE-023/preview-2.webp",
+     "assets/p/MSE-023/preview-3.webp"
     ],
     "marketplace": [
      "products/MSE-023/images/cover.jpg",
      "products/MSE-023/images/preview-1.jpg",
-     "products/MSE-023/images/preview-2.jpg"
+     "products/MSE-023/images/preview-2.jpg",
+     "products/MSE-023/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -28761,11 +28797,13 @@
    "images": {
     "cover": "assets/p/CLK-010/cover.webp",
     "previews": [
-     "assets/p/CLK-010/preview-1.webp"
+     "assets/p/CLK-010/preview-1.webp",
+     "assets/p/CLK-010/preview-2.webp"
     ],
     "marketplace": [
      "products/CLK-010/images/cover.jpg",
-     "products/CLK-010/images/preview-1.jpg"
+     "products/CLK-010/images/preview-1.jpg",
+     "products/CLK-010/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -30458,12 +30496,14 @@
     "cover": "assets/p/TNT-001/cover.webp",
     "previews": [
      "assets/p/TNT-001/preview-1.webp",
-     "assets/p/TNT-001/preview-2.webp"
+     "assets/p/TNT-001/preview-2.webp",
+     "assets/p/TNT-001/preview-3.webp"
     ],
     "marketplace": [
      "products/TNT-001/images/cover.jpg",
      "products/TNT-001/images/preview-1.jpg",
-     "products/TNT-001/images/preview-2.jpg"
+     "products/TNT-001/images/preview-2.jpg",
+     "products/TNT-001/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -34614,11 +34654,15 @@
    "images": {
     "cover": "assets/p/KDK-020/cover.webp",
     "previews": [
-     "assets/p/KDK-020/preview-1.webp"
+     "assets/p/KDK-020/preview-1.webp",
+     "assets/p/KDK-020/preview-2.webp",
+     "assets/p/KDK-020/preview-3.webp"
     ],
     "marketplace": [
      "products/KDK-020/images/cover.jpg",
-     "products/KDK-020/images/preview-1.jpg"
+     "products/KDK-020/images/preview-1.jpg",
+     "products/KDK-020/images/preview-2.jpg",
+     "products/KDK-020/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -34688,11 +34732,15 @@
    "images": {
     "cover": "assets/p/KDK-021/cover.webp",
     "previews": [
-     "assets/p/KDK-021/preview-1.webp"
+     "assets/p/KDK-021/preview-1.webp",
+     "assets/p/KDK-021/preview-2.webp",
+     "assets/p/KDK-021/preview-3.webp"
     ],
     "marketplace": [
      "products/KDK-021/images/cover.jpg",
-     "products/KDK-021/images/preview-1.jpg"
+     "products/KDK-021/images/preview-1.jpg",
+     "products/KDK-021/images/preview-2.jpg",
+     "products/KDK-021/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -38674,12 +38722,14 @@
     "cover": "assets/p/PKB-008/cover.webp",
     "previews": [
      "assets/p/PKB-008/preview-1.webp",
-     "assets/p/PKB-008/preview-2.webp"
+     "assets/p/PKB-008/preview-2.webp",
+     "assets/p/PKB-008/preview-3.webp"
     ],
     "marketplace": [
      "products/PKB-008/images/cover.jpg",
      "products/PKB-008/images/preview-1.jpg",
-     "products/PKB-008/images/preview-2.jpg"
+     "products/PKB-008/images/preview-2.jpg",
+     "products/PKB-008/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -39688,11 +39738,15 @@
    "images": {
     "cover": "assets/p/PKB-020/cover.webp",
     "previews": [
-     "assets/p/PKB-020/preview-1.webp"
+     "assets/p/PKB-020/preview-1.webp",
+     "assets/p/PKB-020/preview-2.webp",
+     "assets/p/PKB-020/preview-3.webp"
     ],
     "marketplace": [
      "products/PKB-020/images/cover.jpg",
-     "products/PKB-020/images/preview-1.jpg"
+     "products/PKB-020/images/preview-1.jpg",
+     "products/PKB-020/images/preview-2.jpg",
+     "products/PKB-020/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -39836,11 +39890,15 @@
    "images": {
     "cover": "assets/p/PKB-022/cover.webp",
     "previews": [
-     "assets/p/PKB-022/preview-1.webp"
+     "assets/p/PKB-022/preview-1.webp",
+     "assets/p/PKB-022/preview-2.webp",
+     "assets/p/PKB-022/preview-3.webp"
     ],
     "marketplace": [
      "products/PKB-022/images/cover.jpg",
-     "products/PKB-022/images/preview-1.jpg"
+     "products/PKB-022/images/preview-1.jpg",
+     "products/PKB-022/images/preview-2.jpg",
+     "products/PKB-022/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -41035,11 +41093,13 @@
    "images": {
     "cover": "assets/p/CBS-006/cover.webp",
     "previews": [
-     "assets/p/CBS-006/preview-1.webp"
+     "assets/p/CBS-006/preview-1.webp",
+     "assets/p/CBS-006/preview-2.webp"
     ],
     "marketplace": [
      "products/CBS-006/images/cover.jpg",
-     "products/CBS-006/images/preview-1.jpg"
+     "products/CBS-006/images/preview-1.jpg",
+     "products/CBS-006/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -42349,11 +42409,15 @@
    "images": {
     "cover": "assets/p/CBS-022/cover.webp",
     "previews": [
-     "assets/p/CBS-022/preview-1.webp"
+     "assets/p/CBS-022/preview-1.webp",
+     "assets/p/CBS-022/preview-2.webp",
+     "assets/p/CBS-022/preview-3.webp"
     ],
     "marketplace": [
      "products/CBS-022/images/cover.jpg",
-     "products/CBS-022/images/preview-1.jpg"
+     "products/CBS-022/images/preview-1.jpg",
+     "products/CBS-022/images/preview-2.jpg",
+     "products/CBS-022/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -43620,11 +43684,13 @@
    "images": {
     "cover": "assets/p/FLW-007/cover.webp",
     "previews": [
-     "assets/p/FLW-007/preview-1.webp"
+     "assets/p/FLW-007/preview-1.webp",
+     "assets/p/FLW-007/preview-2.webp"
     ],
     "marketplace": [
      "products/FLW-007/images/cover.jpg",
-     "products/FLW-007/images/preview-1.jpg"
+     "products/FLW-007/images/preview-1.jpg",
+     "products/FLW-007/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -44716,11 +44782,15 @@
    "images": {
     "cover": "assets/p/FLW-020/cover.webp",
     "previews": [
-     "assets/p/FLW-020/preview-1.webp"
+     "assets/p/FLW-020/preview-1.webp",
+     "assets/p/FLW-020/preview-2.webp",
+     "assets/p/FLW-020/preview-3.webp"
     ],
     "marketplace": [
      "products/FLW-020/images/cover.jpg",
-     "products/FLW-020/images/preview-1.jpg"
+     "products/FLW-020/images/preview-1.jpg",
+     "products/FLW-020/images/preview-2.jpg",
+     "products/FLW-020/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -44790,11 +44860,15 @@
    "images": {
     "cover": "assets/p/FLW-021/cover.webp",
     "previews": [
-     "assets/p/FLW-021/preview-1.webp"
+     "assets/p/FLW-021/preview-1.webp",
+     "assets/p/FLW-021/preview-2.webp",
+     "assets/p/FLW-021/preview-3.webp"
     ],
     "marketplace": [
      "products/FLW-021/images/cover.jpg",
-     "products/FLW-021/images/preview-1.jpg"
+     "products/FLW-021/images/preview-1.jpg",
+     "products/FLW-021/images/preview-2.jpg",
+     "products/FLW-021/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -47412,11 +47486,15 @@
    "images": {
     "cover": "assets/p/HSP-022/cover.webp",
     "previews": [
-     "assets/p/HSP-022/preview-1.webp"
+     "assets/p/HSP-022/preview-1.webp",
+     "assets/p/HSP-022/preview-2.webp",
+     "assets/p/HSP-022/preview-3.webp"
     ],
     "marketplace": [
      "products/HSP-022/images/cover.jpg",
-     "products/HSP-022/images/preview-1.jpg"
+     "products/HSP-022/images/preview-1.jpg",
+     "products/HSP-022/images/preview-2.jpg",
+     "products/HSP-022/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -49121,11 +49199,15 @@
    "images": {
     "cover": "assets/p/BZW-023/cover.webp",
     "previews": [
-     "assets/p/BZW-023/preview-1.webp"
+     "assets/p/BZW-023/preview-1.webp",
+     "assets/p/BZW-023/preview-2.webp",
+     "assets/p/BZW-023/preview-3.webp"
     ],
     "marketplace": [
      "products/BZW-023/images/cover.jpg",
-     "products/BZW-023/images/preview-1.jpg"
+     "products/BZW-023/images/preview-1.jpg",
+     "products/BZW-023/images/preview-2.jpg",
+     "products/BZW-023/images/preview-3.jpg"
     ]
    },
    "validation": {
@@ -49618,11 +49700,13 @@
    "images": {
     "cover": "assets/p/BZW-029/cover.webp",
     "previews": [
-     "assets/p/BZW-029/preview-1.webp"
+     "assets/p/BZW-029/preview-1.webp",
+     "assets/p/BZW-029/preview-2.webp"
     ],
     "marketplace": [
      "products/BZW-029/images/cover.jpg",
-     "products/BZW-029/images/preview-1.jpg"
+     "products/BZW-029/images/preview-1.jpg",
+     "products/BZW-029/images/preview-2.jpg"
     ]
    },
    "validation": {
@@ -50390,11 +50474,13 @@
    "images": {
     "cover": "assets/p/ABL-028/cover.webp",
     "previews": [
-     "assets/p/ABL-028/preview-1.webp"
+     "assets/p/ABL-028/preview-1.webp",
+     "assets/p/ABL-028/preview-2.webp"
     ],
     "marketplace": [
      "products/ABL-028/images/cover.jpg",
-     "products/ABL-028/images/preview-1.jpg"
+     "products/ABL-028/images/preview-1.jpg",
+     "products/ABL-028/images/preview-2.jpg"
     ]
    },
    "validation": {
