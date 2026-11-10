@@ -25,15 +25,15 @@
 </head>
 <body data-store="{{ store.id if store else 'network' }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
 <a class="skip" href="#main">Skip to content</a>
-{% if staging %}<div class="banner">Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% elif checkout_paused %}<div class="banner">Orders open soon: browse the full catalogue now; online checkout opens shortly.</div>{% endif %}
-<div class="util"><div class="wrap util-in">
+{% if staging %}<div class="banner" role="region" aria-label="Shop notice">Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% elif checkout_paused %}<div class="banner" role="region" aria-label="Shop notice">Orders open soon: browse the full catalogue now; online checkout opens shortly.</div>{% endif %}
+<div class="util" role="region" aria-label="About this shop"><div class="wrap util-in">
   <p>{{ icon("shield") }}<span>Registered South African company<span class="x-m"> · Instant digital downloads</span></span></p>
   <nav aria-label="Help"><a href="/help/about">About us</a><a href="/#how">How it works</a><a href="/help/contact">Help &amp; contact</a></nav>
 </div></div>
 <header class="hdr">
   <div class="wrap hdr-in">
     <a class="logo" href="/"><img src="/assets/brand/logo.svg" alt="{{ market.name }}" width="158" height="42"></a>
-    <form class="hsearch" action="/search" method="get" role="search">
+    <form class="hsearch" action="/search" method="get" role="search" aria-label="Site search">
       <label class="visually-hidden" for="hdiv">Search in</label>
       <select id="hdiv" name="div"><option value="">All</option>{% for d in divisions %}<option value="{{ d.slug }}">{{ d.name }}</option>{% endfor %}</select>
       <label class="visually-hidden" for="hq">Search all downloads</label>

@@ -449,7 +449,7 @@ def main():
     open(os.path.join(SITE, "404.html"), "w").write(env.get_template("page.html").render(
         store=None, noindex=True, title="Page not found", canonical=f"{cfg['site_base']}/", body="""
 <p>Sorry, we couldn't find that page. It may have moved, or the link may be mistyped.</p>
-<form class="nf-search" action="/search" method="get" role="search"><label for="nf-q">Search all 600 downloads</label>
+<form class="nf-search" action="/search" method="get" role="search" aria-label="Search from this page"><label for="nf-q">Search all 600 downloads</label>
 <div class="nf-row"><input id="nf-q" name="q" type="search" placeholder="Try invoice, budget or lesson plan"><button class="btn btn-dark" type="submit">Search</button></div></form>
 <p>Or browse <a href="/business/">Business</a>, <a href="/life/">Life</a> or <a href="/education/">Education</a>, go to the <a href="/">home page</a>, or <a href="/help/contact">contact us</a> if you were looking for an order.</p>""", **common))
     # search index for /search and /favourites (short keys keep it small)

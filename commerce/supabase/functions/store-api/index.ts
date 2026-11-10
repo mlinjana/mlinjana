@@ -110,7 +110,7 @@ async function renderReceipt(orderRef: string, items: ReceiptItem[], sandbox: bo
 </table></td></tr></table></body></html>`;
   const text = [`Thank you for your order ${orderRef}`, sandbox ? "(Test order, PayFast sandbox: no real payment was taken.)" : "", "",
     `Date: ${date}`, `Total paid: ${rand(total)}`, "", items.length > 1 ? "Your downloads:" : "Your download:",
-    ...items.map((x, i) => `${i + 1}. ${x.name} (${LICENCE_LABEL[x.licence]}, ${rand(x.cents)})\n   ${x.link}`), "",
+    ...items.map((x, i) => `${i + 1}. ${x.name}\n   ${LICENCE_LABEL[x.licence]}, ${rand(x.cents)}\n   ${x.link}`), "",
     "Each link works 5 times over 7 days. Open Start Here.pdf in each download for instructions and your licence.",
     "This receipt is your proof of licence: keep it.", "",
     `Need help? Reply to this email or visit ${help} and quote order ${orderRef}.`, "", "Mlinjana Studios", company, base]
