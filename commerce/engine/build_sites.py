@@ -372,6 +372,10 @@ def main():
                 canonical=f"{base_url}/p/{p['slug']}", **ctx))
             pages += 1
         for key, (title, body) in policies({"name": MARKET["name"]}, cfg["legal"]).items():
+            if key != "thanks":  # one copy of each policy lives in /help/; the shop path 301s there (see _redirects)
+                stale = os.path.join(out, key + ".html")
+                if os.path.exists(stale): os.remove(stale)
+                continue
             open(os.path.join(out, key + ".html"), "w").write(env.get_template("page.html").render(
                 title=title, body=body, canonical=f"{cfg['site_base']}/" + ("thanks" if key == "thanks" else f"help/{key}"), **ctx))
             pages += 1
@@ -442,6 +446,12 @@ def main():
         out = os.path.join(SITE, "thanks.html") if key == "thanks" else os.path.join(SITE, "help", key + ".html")
         open(out, "w").write(env.get_template("page.html").render(
             store=None, title=title, body=body, canonical=f"{cfg['site_base']}/" + ("thanks" if key == "thanks" else f"help/{key}"), **common))
+    open(os.path.join(SITE, "404.html"), "w").write(env.get_template("page.html").render(
+        store=None, noindex=True, title="Page not found", canonical=f"{cfg['site_base']}/", body="""
+<p>Sorry, we couldn't find that page. It may have moved, or the link may be mistyped.</p>
+<form class="nf-search" action="/search" method="get" role="search"><label for="nf-q">Search all 600 downloads</label>
+<div class="nf-row"><input id="nf-q" name="q" type="search" placeholder="Try invoice, budget or lesson plan"><button class="btn btn-dark" type="submit">Search</button></div></form>
+<p>Or browse <a href="/business/">Business</a>, <a href="/life/">Life</a> or <a href="/education/">Education</a>, go to the <a href="/">home page</a>, or <a href="/help/contact">contact us</a> if you were looking for an order.</p>""", **common))
     # search index for /search and /favourites (short keys keep it small)
     json.dump({"shops": {s["id"]: {"n": s["coll"], "p": s["path"]} for s in shops.values()},
                "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}",
@@ -493,10 +503,17 @@ def main():
         "/*\n" + "".join(f"  {k}: {v}\n" for k, v in [
             ("Content-Security-Policy", csp), ("X-Content-Type-Options", "nosniff"), ("Referrer-Policy", "strict-origin-when-cross-origin"),
             ("X-Frame-Options", "DENY"), ("Permissions-Policy", "camera=(), microphone=(), geolocation=()")]) +
-        "/assets/p/*\n  Cache-Control: public, max-age=604800\n")
+        "  Strict-Transport-Security: max-age=31536000\n"
+        "/assets/p/*\n  Cache-Control: public, max-age=604800\n"
+        # site.css and site.js are requested as ?v=<content hash>, so a new build always gets a new URL
+        "/assets/site.css\n  Cache-Control: public, max-age=31536000, immutable\n"
+        "/assets/site.js\n  Cache-Control: public, max-age=31536000, immutable\n"
+        "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n"
+        "/assets/brand/*\n  Cache-Control: public, max-age=604800\n")
     open(os.path.join(SITE, "_redirects"), "w").write(
         "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])) +
-        "".join(f"{src}/ {dst} 301\n{src} {dst} 301\n" for src, dst in dept_redirects))
+        "".join(f"{src}/ {dst} 301\n{src} {dst} 301\n" for src, dst in dept_redirects) +
+        "".join(f"/{st['path']}/{k} /help/{k} 301\n" for st in cfg["stores"] for k in pages_global if k not in ("thanks", "about")))
     print(f"built {pages} shop pages for {len(built)} shops in {len(divisions)} divisions ({total} products):", ", ".join(f"{b['name']} ({b['products']})" for b in built))
 
 

@@ -533,3 +533,9 @@ dialog:not([open]){display:none!important}
 .lic-table thead th{font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .lic-table tbody th{color:var(--ink);white-space:nowrap}
 @media (max-width:560px){.lic-table{font-size:13.5px}.lic-table th,.lic-table td{padding:8px 4px}.lic-table tbody th{white-space:normal}}
+
+/* 404 page search */
+.nf-search label{display:block;font-weight:700;margin:0 0 6px}.nf-row{display:flex;gap:8px;max-width:520px}
+.nf-row input{flex:1;min-width:0;padding:12px 14px;border:1.5px solid var(--line,#d9d5cb);border-radius:10px;font:inherit}
+/* Tap targets: small text links get at least 24px of height (WCAG 2.2 target size) */
+.ft-list a,.crumbs a,.panel-head>a,.pp-by a,.lic-more a,.notes a{display:inline-block;min-height:24px;line-height:24px}

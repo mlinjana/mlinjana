@@ -15,3 +15,5 @@ fi
 export CLOUDFLARE_API_TOKEN CLOUDFLARE_ACCOUNT_ID="${CLOUDFLARE_ACCOUNT_ID:-da113ab5ce60706d4edf410a243e9b5f}"
 WRANGLER=${WRANGLER:-npx --yes wrangler@4}
 $WRANGLER deploy --config wrangler.jsonc
+# www -> bare domain redirect (the main Worker must release the www hostname first, hence the order)
+$WRANGLER deploy --config wrangler.www.jsonc

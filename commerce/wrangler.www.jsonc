@@ -1,0 +1,9 @@
+// Tiny Worker for www.mlinjanastudios.com: 301 to the bare domain, same path and query (DECISIONS.md #45).
+// Deployed by engine/deploy_cloudflare.sh after the main site, which no longer claims the www hostname.
+{
+  "name": "commerce-www-redirect",
+  "main": "engine/www_redirect.js",
+  "compatibility_date": "2026-10-28",
+  "workers_dev": false,
+  "routes": [{ "pattern": "www.mlinjanastudios.com", "custom_domain": true }]
+}

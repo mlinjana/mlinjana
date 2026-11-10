@@ -6,7 +6,7 @@
 <title>{% block title %}{{ market.name }}{% endblock %}</title>
 <meta name="description" content="{% block desc %}{{ market.tagline }}{% endblock %}">
 <meta name="theme-color" content="#17243b">
-{% if staging %}<meta name="robots" content="noindex, nofollow">{% endif %}
+{% if staging or noindex %}<meta name="robots" content="noindex, nofollow">{% endif %}
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 {% if canonical %}<link rel="canonical" href="{{ canonical }}">{% endif %}
 <link rel="stylesheet" href="/assets/site.css?v={{ asset_v }}">
