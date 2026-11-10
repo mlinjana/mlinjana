@@ -511,9 +511,10 @@ def main():
         "/assets/fonts/*\n  Cache-Control: public, max-age=31536000, immutable\n"
         "/assets/brand/*\n  Cache-Control: public, max-age=604800\n")
     open(os.path.join(SITE, "_redirects"), "w").write(
-        "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])) +
         "".join(f"{src}/ {dst} 301\n{src} {dst} 301\n" for src, dst in dept_redirects) +
-        "".join(f"/{st['path']}/{k} /help/{k} 301\n" for st in cfg["stores"] for k in pages_global if k not in ("thanks", "about")))
+        "".join(f"/{st['path']}/{k} /help/{k} 301\n" for st in cfg["stores"] for k in pages_global if k not in ("thanks", "about")) +
+        # wildcard rules go last: Cloudflare caps wildcard ("dynamic") rules at 100 and rejected the file when one came first
+        "".join(f"/{old}/* /{st['path']}/:splat 301\n" for st in cfg["stores"] for old in st.get("former_paths", [])))
     print(f"built {pages} shop pages for {len(built)} shops in {len(divisions)} divisions ({total} products):", ", ".join(f"{b['name']} ({b['products']})" for b in built))
 
 
