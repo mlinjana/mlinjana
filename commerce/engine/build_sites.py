@@ -329,7 +329,7 @@ def main():
         shop["division"] = div_by[collections.Counter(p["division"] for p in prods_of[sid]).most_common(1)[0][0]]
     import hashlib
     asset_v = hashlib.sha256(b"".join(open(os.path.join(ROOT, "engine", "static", f), "rb").read() for f in ("site.css", "site.js"))).hexdigest()[:10]
-    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, depts=depts, divisions=divisions, shops=shops, asset_v=asset_v,
+    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, checkout_paused=cfg.get("checkout") == "paused", depts=depts, divisions=divisions, shops=shops, asset_v=asset_v,
                   site_base=cfg["site_base"], market={**MARKET, "total": total})
 
     def cat_counts(items, order=None):

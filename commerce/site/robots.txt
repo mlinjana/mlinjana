@@ -1,2 +1,4 @@
 User-agent: *
-Disallow: /
+Allow: /
+Disallow: /dashboard/
+Sitemap: https://mlinjanastudios.com/sitemap.xml

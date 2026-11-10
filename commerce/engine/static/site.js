@@ -123,7 +123,7 @@
         const d = await r.json();
         if (!r.ok) {
           if (d.unavailable) { setBasket(ids.filter((i) => !d.unavailable.includes(idOf(i)))); renderBasket(); }
-          throw new Error(d.error || "Checkout failed");
+          throw new Error(r.status === 503 ? "Online checkout opens soon. Your basket is saved on this device, so please check back shortly." : (d.error || "Checkout failed"));
         }
         const f = document.createElement("form");
         f.method = "POST"; f.action = d.action;

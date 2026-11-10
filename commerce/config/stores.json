@@ -1,7 +1,8 @@
 {
   "api_base": "https://mrunxptxavtompcnegkr.supabase.co/functions/v1",
   "site_base": "https://mlinjanastudios.com",
-  "mode": "staging",
+  "mode": "live",
+  "checkout": "paused",
   "legal": {
     "operator": "Mlinjana Capital Holdings (Pty) Ltd",
     "country": "South Africa",
