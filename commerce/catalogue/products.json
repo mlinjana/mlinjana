@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-10T12:05:50Z",
+ "generated_at": "2026-11-10T13:24:00Z",
  "products": [
   {
    "id": "PLD-001",
@@ -9866,8 +9866,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "CHK-025/individual-support-plan-template.zip",
-    "bytes": 81936,
-    "sha256": "010ef18ec808b2f92316a99edb60c9f8c11e62fcca48e9bbdf8f2cdf331640c6",
+    "bytes": 82237,
+    "sha256": "5396a353d79856aebd1c8a4af02b87c8d1d22901b83c740582f95b5e2327e4ee",
     "contents": [
      "Start Here.pdf",
      "Individual Support Plan Template.docx"
@@ -22201,8 +22201,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-022/grant-proposal-template.zip",
-    "bytes": 82492,
-    "sha256": "aaf14fb5a5d0893716ebe1af9a1076ec0ad3e289d9f5e9c92f8119b59fef54d6",
+    "bytes": 83301,
+    "sha256": "5a8fcc1b84fb4e11523da686142f6ae565f8e6850fdf6f607a0490a0f57be1b8",
     "contents": [
      "Start Here.pdf",
      "Grant Proposal Template.docx"
@@ -22351,8 +22351,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "GLD-024/nonprofit-annual-impact-report-template.zip",
-    "bytes": 81996,
-    "sha256": "16e98a918e255fc4c3cea3ae908b764d22486190489da4150b3e424b0efe8e41",
+    "bytes": 82569,
+    "sha256": "660f94bec56bc9db1e2e8618db83feee1957aa5686392b02fb43eda1e1df1955",
     "contents": [
      "Start Here.pdf",
      "Nonprofit Annual Impact Report Template.docx"
@@ -24716,8 +24716,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "MSE-022/food-business-plan-template.zip",
-    "bytes": 82273,
-    "sha256": "a8cdcfcfb2a052bd1590a8c02de31b8387911c72e2a11fbe4688643b8a0588ed",
+    "bytes": 82986,
+    "sha256": "3d6efb9c99b5d79934de9b481c527e8f07501c61ac28ed789017a73d397e1329",
     "contents": [
      "Start Here.pdf",
      "Food Business Plan Template.docx"
@@ -34604,8 +34604,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "KDK-020/care-plan-template.zip",
-    "bytes": 82145,
-    "sha256": "d4861207ea5e119b4ca986c68bcc8eea6bf084b1baeeb2aaff004dbfebc9f181",
+    "bytes": 82511,
+    "sha256": "b7cec311155f3e61c5f7580ef7c45598f6fc2b35728bedd3b93b09b10b4b65cc",
     "contents": [
      "Start Here.pdf",
      "Care Plan Template.docx"
@@ -47402,8 +47402,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "HSP-022/homeschool-year-end-report-template.zip",
-    "bytes": 81895,
-    "sha256": "b0dad25a47ed8a8f30a2962b820e8b9b7356da3ad6fcb84762547789f91e393f",
+    "bytes": 82241,
+    "sha256": "4b3554a23c9f7c973598d96eb503312a034c519f56a6e9977eb8f4155605a02c",
     "contents": [
      "Start Here.pdf",
      "Homeschool Year-End Report Template.docx"
@@ -49111,8 +49111,8 @@
    "licence": "Personal + single-business use; no resale or redistribution",
    "file": {
     "key": "BZW-023/monthly-management-report-template.zip",
-    "bytes": 82839,
-    "sha256": "be5a62c0f398f20512d1418316809e2574c184bb82a2ba95beeb23dcf3a641a9",
+    "bytes": 83301,
+    "sha256": "b11c3ee44fe9d5b4cfc7d623e86510c62fbab4582bb7b19fbb5488f986cc9517",
     "contents": [
      "Start Here.pdf",
      "Monthly Management Report Template.docx"
