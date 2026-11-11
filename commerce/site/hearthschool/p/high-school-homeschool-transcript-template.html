@@ -9,7 +9,7 @@
 
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://mlinjanastudios.com/hearthschool/p/high-school-homeschool-transcript-template">
-<link rel="stylesheet" href="/assets/site.css?v=a61708dd9c">
+<link rel="stylesheet" href="/assets/site.css?v=fc8df7ba03">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -70,6 +70,7 @@
         <button type="button" class="g-nav g-next" data-g-next aria-label="Next image">›</button>
         
       </div>
+      <p class="preview-hint"><button type="button" class="btn btn-outline" data-open-lightbox>Look inside · enlarge previews</button></p>
       <div class="thumbs" role="group" aria-label="Preview images">
         <button type="button" class="on" data-src="/assets/p/HSP-030/cover.webp" aria-label="Show image 1"><img src="/assets/p/HSP-030/cover.webp" alt="" loading="lazy" width="120" height="90"></button><button type="button" class="" data-src="/assets/p/HSP-030/preview-1.webp" aria-label="Show image 2"><img src="/assets/p/HSP-030/preview-1.webp" alt="" loading="lazy" width="120" height="90"></button><button type="button" class="" data-src="/assets/p/HSP-030/preview-2.webp" aria-label="Show image 3"><img src="/assets/p/HSP-030/preview-2.webp" alt="" loading="lazy" width="120" height="90"></button>
       </div>
@@ -351,7 +352,8 @@
 <dialog class="lightbox" id="lightbox" aria-label="Product previews">
   <button type="button" class="lb-close" data-lb-close aria-label="Close">×</button>
   <button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Previous image">‹</button>
-  <img id="lb-img" src="/assets/p/HSP-030/cover.webp" alt="High School Homeschool Transcript Template preview" width="1200" height="900">
+  <div class="lb-toolbar"><strong>Look inside</strong><button type="button" class="btn btn-light" id="lb-zoom" aria-pressed="false">Zoom in</button></div>
+  <div class="lb-viewport" tabindex="0" aria-label="Product image. Scroll to explore when zoomed."><img id="lb-img" src="/assets/p/HSP-030/cover.webp" alt="High School Homeschool Transcript Template preview" width="1200" height="900"></div>
   <button type="button" class="lb-nav lb-next" data-lb-next aria-label="Next image">›</button>
   <p class="lb-count" id="lb-count"></p>
 </dialog>
@@ -383,17 +385,14 @@
     <div class="bk-empty" id="bk-empty"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><p>Your basket is empty.</p><a class="btn btn-primary" href="/search">Start shopping</a></div>
     <footer class="bk-foot" id="bk-foot" hidden>
       <div class="bk-total"><span>Total</span><strong id="bk-total">R0</strong></div>
-      <form id="bk-form" novalidate>
-        <label for="bk-email">Email for your download links</label>
-        <input id="bk-email" type="email" autocomplete="email" required placeholder="you@example.com">
-        <button class="btn btn-primary btn-block btn-lg" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Checkout securely</span></button>
-        <p class="msg" id="bk-msg" role="status"></p>
-      </form>
-      <p class="bk-note">You'll pay on PayFast's secure page. Your downloads appear straight after payment.</p>
+
+      <p role="status"><strong>Orders are not open yet.</strong> You can keep browsing and save items in your basket on this device. No payment is being taken.</p>
+      <a class="btn btn-outline btn-block" href="/search">Continue browsing</a>
+
     </footer>
   </div>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="/assets/site.js?v=a61708dd9c" defer></script>
+<script src="/assets/site.js?v=fc8df7ba03" defer></script>
 </body>
 </html>

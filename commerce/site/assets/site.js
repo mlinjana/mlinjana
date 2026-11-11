@@ -95,13 +95,13 @@
       `<div class="bk-p">R${price}<button type="button" class="bk-rm" data-rm="${esc(e)}" aria-label="Remove ${esc(p.n)}">Remove</button></div></div>`).join("");
     const total = rows.reduce((a, r) => a + r.price, 0);
     $("#bk-total").textContent = "R" + total;
-    $("#bk-form button").querySelector("span").textContent = `Checkout securely · R${total}`;
+    if ($("#bk-form")) $("#bk-form button").querySelector("span").textContent = `Checkout securely · R${total}`;
   };
   const openBasket = async (focusEmail) => {
     if (!dlg) return;
     await renderBasket().catch(() => {});
     if (!dlg.open) dlg.showModal ? dlg.showModal() : dlg.setAttribute("open", "");
-    if (focusEmail && getBasket().length) setTimeout(() => $("#bk-email").focus(), calm ? 0 : 250);
+    if (focusEmail && $("#bk-email") && getBasket().length) setTimeout(() => $("#bk-email").focus(), calm ? 0 : 250);
   };
   if (dlg) {
     dlg.addEventListener("click", (e) => { if (e.target === dlg || e.target.closest("[data-close-basket]")) dlg.close(); });
@@ -109,7 +109,7 @@
       const r = e.target.closest("[data-rm]");
       if (r) { setBasket(getBasket().filter((i) => i !== r.dataset.rm)); renderBasket(); }
     });
-    $("#bk-form").addEventListener("submit", async (e) => {
+    $("#bk-form")?.addEventListener("submit", async (e) => {
       e.preventDefault();
       const msg = $("#bk-msg"), btn = $("#bk-form button"), email = $("#bk-email").value.trim(), ids = getBasket();
       msg.className = "msg";
@@ -333,6 +333,10 @@
   }
   const lbx = $("#lightbox");
   if (lbx && lbx.showModal) {
+    const zoom = $("#lb-zoom"), viewport = $(".lb-viewport", lbx);
+    const resetZoom = () => { lbx.classList.remove("zoomed"); zoom.setAttribute("aria-pressed", "false"); zoom.textContent = "Zoom in"; viewport.scrollTop = viewport.scrollLeft = 0; };
+    zoom.addEventListener("click", () => { const on = lbx.classList.toggle("zoomed"); zoom.setAttribute("aria-pressed", String(on)); zoom.textContent = on ? "Fit image" : "Zoom in"; });
+    lbx.addEventListener("close", resetZoom);
     $$("[data-open-lightbox]").forEach((b) => b.addEventListener("click", () => { show(cur); lbx.showModal(); }));
     lbx.querySelector("[data-lb-close]").addEventListener("click", () => lbx.close());
     lbx.querySelector("[data-lb-prev]").addEventListener("click", () => show(cur - 1));
