@@ -11,7 +11,7 @@
       <div class="hero2-copy">
         <p class="eyebrow"><span class="eb-dot"></span>Planners · Templates · Spreadsheets</p>
         <h1 id="hero-h">Make <span class="hl">Better Things<svg viewBox="0 0 300 18" preserveAspectRatio="none" aria-hidden="true"><path d="M3 12c40-8 92-10 148-7 50 2 98 1 146 6"/></svg></span> Happen.</h1>
-        <p class="hero2-lede">{{ market.total }} ready-to-use digital tools for business, life and education. Download straight after payment and start today.</p>
+        <p class="hero2-lede">{{ market.total }} ready-to-use digital tools for business, life and education. {% if checkout_paused %}Explore the collection and save your favourites while we prepare to open orders.{% else %}Download straight after payment and start today.{% endif %}</p>
         <form class="hero2-search" action="/search" method="get" role="search" aria-label="Search the catalogue">
           <label class="visually-hidden" for="hero-q">Search all {{ market.total }} downloads</label>
           <input id="hero-q" name="q" type="search" placeholder="Try “invoice”, “budget” or “lesson plan”" autocomplete="off">
@@ -47,7 +47,7 @@
   </nav>
 
   <div class="wrap">
-    <header class="sec-head"><p class="kicker">Three collections</p><h2>Where would you like to start?</h2></header>
+    <header class="sec-head"><p class="kicker">Three collections</p><h2>Find the tool for your day.</h2></header>
     <section class="divs" aria-label="Shop by area">
       {% for d in divisions %}
       <article class="div-card div-{{ d.slug }}">

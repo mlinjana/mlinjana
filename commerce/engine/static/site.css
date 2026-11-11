@@ -701,3 +701,12 @@ dialog:not([open]){display:none!important}
 .drawer{width:min(500px,100vw)}.drawer-head{border-bottom:1px solid var(--line)}.drawer-head h2{font-family:var(--display);font-size:28px}
 .bk-item{grid-template-columns:90px minmax(0,1fr) auto;padding:20px 0}.bk-item a{-webkit-line-clamp:3}.bk-item small{margin-top:8px;line-height:1.5}.bk-foot{background:var(--bg)}
 @media(max-width:820px){.pp{grid-template-columns:minmax(0,1fr);gap:16px}.pp-media,.pp-main,.pp-buy{grid-column:1;grid-row:auto;position:static}.pp-main{margin-top:0}.lightbox{padding:78px 38px 48px}.lb-toolbar{left:14px}.card-body{padding:10px}.card-title{font-size:13px}.card-foot{padding:6px 10px 12px}.bk-item{grid-template-columns:64px minmax(0,1fr) auto;gap:10px}.search-head{flex-wrap:wrap}.facets{flex-wrap:wrap;overflow:visible}.facet{flex:1 1 130px}}
+
+/* People-free editorial art; product covers remain the real catalogue images. */
+.hero2{background:var(--brand-d) url('/assets/brand/editorial-background.webp') center/cover no-repeat}
+.hero2::before{background:linear-gradient(90deg,rgba(14,22,38,.98) 0%,rgba(14,22,38,.9) 38%,rgba(14,22,38,.15) 70%);mask-image:none;-webkit-mask-image:none}
+.hero2-glow{display:none}.hero2 .stats{background:rgba(14,22,38,.92);padding:24px;border-radius:18px 18px 0 0}
+.div-fan{background:var(--brand-l) url('/assets/brand/editorial-background.webp') center/cover no-repeat}
+.div-life .div-fan{background:var(--gold-l) url('/assets/brand/editorial-background.webp') right center/cover no-repeat}
+.div-education .div-fan{background:var(--brand-l) url('/assets/brand/editorial-background.webp') 65% center/cover no-repeat}
+@media(max-width:900px){.hero2::before{background:linear-gradient(180deg,rgba(14,22,38,.97) 0%,rgba(14,22,38,.92) 48%,rgba(14,22,38,.22) 80%)}.hero2 .stats{padding:20px 14px}.hero2-art{margin-bottom:24px}}
