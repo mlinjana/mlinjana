@@ -333,6 +333,10 @@
   }
   const lbx = $("#lightbox");
   if (lbx && lbx.showModal) {
+    const zoom = $("#lb-zoom"), viewport = $(".lb-viewport", lbx);
+    const resetZoom = () => { lbx.classList.remove("zoomed"); zoom.setAttribute("aria-pressed", "false"); zoom.textContent = "Zoom in"; viewport.scrollTop = viewport.scrollLeft = 0; };
+    zoom.addEventListener("click", () => { const on = lbx.classList.toggle("zoomed"); zoom.setAttribute("aria-pressed", String(on)); zoom.textContent = on ? "Fit image" : "Zoom in"; });
+    lbx.addEventListener("close", resetZoom);
     $$("[data-open-lightbox]").forEach((b) => b.addEventListener("click", () => { show(cur); lbx.showModal(); }));
     lbx.querySelector("[data-lb-close]").addEventListener("click", () => lbx.close());
     lbx.querySelector("[data-lb-prev]").addEventListener("click", () => show(cur - 1));

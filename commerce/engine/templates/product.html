@@ -16,6 +16,7 @@
         <button type="button" class="g-nav g-next" data-g-next aria-label="Next image">›</button>
         {% if p.saving_pct %}<span class="badge-off lg">-{{ p.saving_pct }}%</span>{% endif %}
       </div>
+      <p class="preview-hint"><button type="button" class="btn btn-outline" data-open-lightbox>Look inside · enlarge previews</button></p>
       <div class="thumbs" role="group" aria-label="Preview images">
         {% for im in [p.images.cover] + p.images.previews %}<button type="button" class="{% if loop.first %}on{% endif %}" data-src="/{{ im }}" aria-label="Show image {{ loop.index }}"><img src="/{{ im }}" alt="" loading="lazy" width="120" height="90"></button>{% endfor %}
       </div>
@@ -110,7 +111,8 @@
 <dialog class="lightbox" id="lightbox" aria-label="Product previews">
   <button type="button" class="lb-close" data-lb-close aria-label="Close">×</button>
   <button type="button" class="lb-nav lb-prev" data-lb-prev aria-label="Previous image">‹</button>
-  <img id="lb-img" src="/{{ p.images.cover }}" alt="{{ p.name }} preview" width="1200" height="900">
+  <div class="lb-toolbar"><strong>Look inside</strong><button type="button" class="btn btn-light" id="lb-zoom" aria-pressed="false">Zoom in</button></div>
+  <div class="lb-viewport" tabindex="0" aria-label="Product image. Scroll to explore when zoomed."><img id="lb-img" src="/{{ p.images.cover }}" alt="{{ p.name }} preview" width="1200" height="900"></div>
   <button type="button" class="lb-nav lb-next" data-lb-next aria-label="Next image">›</button>
   <p class="lb-count" id="lb-count"></p>
 </dialog>
