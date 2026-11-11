@@ -4,6 +4,30 @@
 {% block head %}<link rel="preload" as="image" href="/{{ hero_covers[0] }}" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces.woff2" crossorigin>{% endblock %}
 {% block main %}
 <div class="home">
+{% if look == "photo" %}
+  {# Preview-only "photo" look from the owner's mock-up (DECISIONS.md #56). Photos are decorative; real covers follow below. #}
+  <section class="ph-hero" aria-labelledby="hero-h">
+    <div class="ph-copy">
+      <p class="ph-eyebrow">Planners · Templates · Spreadsheets</p>
+      <h1 id="hero-h">Make Better Things Happen.</h1>
+      <p class="ph-lede">Practical digital tools for business, life and education.</p>
+      <a class="btn btn-gold ph-cta" href="#collections">Explore the collections</a>
+    </div>
+    <div class="ph-art" aria-hidden="true"></div>
+  </section>
+  <div class="wrap">
+    <h2 class="ph-title" id="collections">Find the tool for your day.</h2>
+    <section class="ph-cards" aria-label="Shop by collection">
+      {% for d in divisions %}
+      <a class="ph-card" href="{{ d.href }}">
+        <img src="/assets/brand/ed-{{ d.slug }}.webp" alt="" width="491" height="230" loading="lazy">
+        <span class="ph-card-foot"><span><strong>{{ d.name }}</strong><small>{{ d.count }} downloads</small></span><span class="ph-arrow" aria-hidden="true">→</span></span>
+      </a>
+      {% endfor %}
+    </section>
+    <header class="sec-head ph-real"><p class="kicker">Real pages, not stock photos</p><h2>See what you actually get</h2></header>
+    <div class="ph-covers">{% for p in picks[:4] %}<a href="/{{ shops[p.store].path }}/p/{{ p.slug }}"><img src="/{{ p.images.cover }}" alt="{{ p.name }}" width="600" height="450" loading="lazy"><span>{{ p.name }}</span></a>{% endfor %}</div>
+{% else %}
   {# 2.1 "Atelier" hero: the headline paints at once; the covers and the underline animate in with CSS only. #}
   <section class="hero2" aria-labelledby="hero-h">
     <div class="hero2-glow" aria-hidden="true"></div>
@@ -62,6 +86,7 @@
       </article>
       {% endfor %}
     </section>
+{% endif %}
 
     {{ usps(legal) }}
 
