@@ -29,7 +29,7 @@ class Handler(SimpleHTTPRequestHandler):
         pass
 
 def assert_basket(page, expected):
-    page.wait_for_function("(list) => JSON.stringify(JSON.parse(localStorage.getItem('mls:basket') || '[]')) === JSON.stringify(list)", expected)
+    page.wait_for_function("(list) => JSON.stringify(JSON.parse(localStorage.getItem('mls:basket') || '[]')) === JSON.stringify(list)", arg=expected)
     actual = page.evaluate("JSON.parse(localStorage.getItem('mls:basket') || '[]')")
     assert actual == expected, (actual, expected)
 
@@ -96,7 +96,6 @@ def main():
             sign_in(page, A, "buyer-a@example.invalid")
             page.wait_for_function("() => document.querySelector('.bk-count')?.textContent === '2'")
             assert_basket(page, ["BZW-003", "ABL-009:team"])
-            page.wait_for_function("() => JSON.stringify(window.__nope) === undefined") if False else None
             # Wait for the remote upsert and verify it contains the merged cart.
             page.wait_for_timeout(150)
             assert SERVER[A] == ["BZW-003", "ABL-009:team"], SERVER[A]
