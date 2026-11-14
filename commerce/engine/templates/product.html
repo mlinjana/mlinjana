@@ -74,9 +74,8 @@
         <h2>How to use it</h2>
         <ol class="numbered">{% for s in p.instructions %}<li>{{ s }}</li>{% endfor %}</ol>
       </section>
-      <section class="panel two">
-        <div><h2>Works with</h2><p>{{ p.compat }}</p></div>
-        <div><h2>Files in the download</h2><ul class="files">{% for f in p.file.contents %}<li>{{ icon("file") }}{{ f }}</li>{% endfor %}</ul></div>
+      <section class="panel">
+        <h2>Files in the download</h2><ul class="files">{% for f in p.file.contents %}<li>{{ icon("file") }}{{ f }}</li>{% endfor %}</ul>
       </section>
       <section class="panel">
         <h2>Delivery, licence and refunds</h2>

@@ -9,7 +9,7 @@
 
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://mlinjanastudios.com/abacus/p/stock-control-reorder-point">
-<link rel="stylesheet" href="/assets/site.css?v=a06b282dd1">
+<link rel="stylesheet" href="/assets/site.css?v=5a1fb844d6">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -55,6 +55,7 @@
     </div>
     <a class="cb-div on" href="/business/">Business</a><a class="cb-div" href="/life/">Life</a><a class="cb-div" href="/education/">Education</a>
     <span class="cb-sep" aria-hidden="true"></span>
+    <a href="/start-here">Start here</a>
     <a class="hot" href="/search?bundles=1">Bundle deals</a>
     <a href="/search?max=50">Under R50</a>
   </div></nav>
@@ -81,15 +82,15 @@
       <p class="pp-by"><a href="/abacus/">Money &amp; Budgeting</a> <span aria-hidden="true">·</span> Inventory &amp; stock</p>
       <h1>Stock Control &amp; Reorder Point Calculator</h1>
       <p class="pp-sum">Turn weekly usage into safety stock, reorder points and economic order quantities — and see what to order now.</p>
+
       <ul class="pp-chips"><li class="fmt fmt-xlsx">XLSX</li></ul>
-      <h2 class="pp-h">What's inside</h2>
-      <ul class="checks"><li>12-week usage history per SKU</li><li>Safety stock from service level and demand variability</li><li>Reorder point and EOQ rounded to pack size</li><li>&#39;Order now&#39; alerts and days of stock</li></ul>
+
     </section>
 
     <aside class="panel pp-buy" aria-label="Buy">
       <p class="pp-price"><strong id="pp-amount">R99</strong></p>
       
-      <p class="stock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg><span><strong>Instant download</strong> · 64 KB ZIP</span></p>
+      <p class="stock"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg><span><strong>Digital download, no shipping</strong> · 64 KB ZIP</span></p>
       
       <fieldset class="lic">
         <legend>Choose your licence</legend>
@@ -99,10 +100,11 @@
       </fieldset>
       <button type="button" id="buy" class="btn btn-primary btn-block btn-lg" data-add="ABL-010" data-open><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add to basket</span></button>
       
+      <p class="pp-compat"><strong>Works with</strong><br>Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.</p>
       <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="ABL-010" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg><span>Save to favourites</span></button>
       <ul class="buy-trust">
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Secure checkout on PayFast. We never see your card.</span></li>
-        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg><span>Download 5 times over 7 days</span></li>
+        <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-4-4m4 4 4-4M5 21h14"/></svg><span>Download after payment. <a href="/account">Renew expired links in your account</a> using your checkout email.</span></li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg><span>File won't work? Fixed or refunded within 14 days</span></li>
         <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 21V5l8-3 8 3v16"/><path d="M9 21v-5h6v5M8 8h2M14 8h2M8 12h2M14 12h2"/></svg><span>Sold and supported by Mlinjana Studios</span></li>
       </ul>
@@ -111,20 +113,22 @@
 
   <div class="pp-more">
     <div class="pp-detail">
+      <section class="panel">      <h2 class="pp-h">What's inside</h2>
+      <ul class="checks"><li>12-week usage history per SKU</li><li>Safety stock from service level and demand variability</li><li>Reorder point and EOQ rounded to pack size</li><li>&#39;Order now&#39; alerts and days of stock</li></ul>
+      </section>
       
       <section class="panel">
         <h2>How to use it</h2>
         <ol class="numbered"><li>On &#39;Usage History&#39; enter the units used/sold per week for each SKU (up to 12 weeks).</li><li>On &#39;Reorder Plan&#39; enter lead time, stock on hand, stock on order, order cost, holding cost and pack size, and your service level.</li><li>The sheet calculates average demand, safety stock, reorder point and economic order quantity (EOQ), and tells you what to order now.</li></ol>
       </section>
-      <section class="panel two">
-        <div><h2>Works with</h2><p>Microsoft Excel 2010+, Excel for the web, Google Sheets and LibreOffice Calc. No macros.</p></div>
-        <div><h2>Files in the download</h2><ul class="files"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>Start Here.pdf</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>Stock Control &amp; Reorder Point Calculator.xlsx</li></ul></div>
+      <section class="panel">
+        <h2>Files in the download</h2><ul class="files"><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>Start Here.pdf</li><li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8l-5-5z"/><path d="M14 3v5h5"/></svg>Stock Control &amp; Reorder Point Calculator.xlsx</li></ul>
       </section>
       <section class="panel">
         <h2>Delivery, licence and refunds</h2>
         <ul class="notes">
           <li>This is a digital product. Nothing physical is shipped.</li>
-          <li>Download links work 5 times over 7 days. Keep a copy of your files.</li>
+          <li>Each link allows 5 downloads over 7 days. Keep your files, or sign in with your checkout email and choose “Renew &amp; download” in Your orders for a fresh link.</li>
           
           <li>The spreadsheet calculates from the numbers you enter. Check results before relying on them; it isn't financial, tax or legal advice.</li>
           
@@ -270,118 +274,48 @@
   <div class="panel-head"><div><h2>You may also like</h2></div><a href="/business/inventory-management/">More in Inventory Management <span aria-hidden="true">›</span></a></div>
   <div class="rail" data-rail>
     <button type="button" class="rail-btn prev" aria-label="Scroll left" hidden>‹</button>
-    <div class="rail-track"><article class="card" data-id="GLD-008" data-cat="Fundraising" data-cat2="Nonprofit Management" data-price="59" data-fmt="XLSX" data-text="in-kind donations log record donated goods and services with estimated values and where they went. fundraising in kind donations donated goods food bank donation log excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/in-kind-donations-log">
-    <div class="card-media"><img src="/assets/p/GLD-008/cover.webp" alt="In-Kind Donations Log" loading="lazy" width="600" height="450"></div>
+    <div class="rail-track"><article class="card" data-id="SKD-002" data-cat="Inventory" data-cat2="Inventory Management" data-price="49" data-fmt="XLSX" data-text="multi-channel stock sync tracker compare real stock with quantities listed on each channel and flag overselling risk. inventory multichannel stock sync oversell sku tracker excel template google sheets etsy seller online shop small business ecommerce shop owner handmade business inventory">
+  <a class="card-link" href="/shopkeeper/p/multi-channel-stock-sync-tracker">
+    <div class="card-media"><img src="/assets/p/SKD-002/cover.webp" alt="Multi-Channel Stock Sync Tracker" loading="lazy" width="600" height="450"></div>
     <div class="card-body">
-      <p class="card-shop">Fundraising</p>
-      <h3 class="card-title">In-Kind Donations Log</h3>
+      <p class="card-shop">Inventory</p>
+      <h3 class="card-title">Multi-Channel Stock Sync Tracker</h3>
       <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
     </div>
   </a>
   <div class="card-foot">
-    <p class="card-price"><strong>R59</strong></p>
-    <button type="button" class="add" data-add="GLD-008" aria-label="Add In-Kind Donations Log to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+    <p class="card-price"><strong>R49</strong></p>
+    <button type="button" class="add" data-add="SKD-002" aria-label="Add Multi-Channel Stock Sync Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
   </div>
-  <button type="button" class="fav" data-fav="GLD-008" aria-pressed="false" aria-label="Save In-Kind Donations Log to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-009" data-cat="Finance" data-cat2="Nonprofit Management" data-price="69" data-fmt="XLSX" data-text="petty cash book for organisations a petty-cash register with voucher numbers and the cash balance worked out for you. finance petty cash cash register treasurer tools petty cash log excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/petty-cash-book-for-organisations">
-    <div class="card-media"><img src="/assets/p/GLD-009/cover.webp" alt="Petty Cash Book for Organisations" loading="lazy" width="600" height="450"></div>
+  <button type="button" class="fav" data-fav="SKD-002" aria-pressed="false" aria-label="Save Multi-Channel Stock Sync Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+</article><article class="card" data-id="SKD-008" data-cat="Inventory" data-cat2="Inventory Management" data-price="69" data-fmt="XLSX" data-text="supplier &amp; purchase order tracker track purchase orders, suppliers, costs, lead times and deliveries. inventory purchase orders supplier tracker wholesale sourcing excel template google sheets etsy seller online shop small business ecommerce shop owner handmade business inventory">
+  <a class="card-link" href="/shopkeeper/p/supplier-purchase-order-tracker">
+    <div class="card-media"><img src="/assets/p/SKD-008/cover.webp" alt="Supplier &amp; Purchase Order Tracker" loading="lazy" width="600" height="450"></div>
     <div class="card-body">
-      <p class="card-shop">Finance</p>
-      <h3 class="card-title">Petty Cash Book for Organisations</h3>
+      <p class="card-shop">Inventory</p>
+      <h3 class="card-title">Supplier &amp; Purchase Order Tracker</h3>
       <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
     </div>
   </a>
   <div class="card-foot">
     <p class="card-price"><strong>R69</strong></p>
-    <button type="button" class="add" data-add="GLD-009" aria-label="Add Petty Cash Book for Organisations to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+    <button type="button" class="add" data-add="SKD-008" aria-label="Add Supplier &amp; Purchase Order Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
   </div>
-  <button type="button" class="fav" data-fav="GLD-009" aria-pressed="false" aria-label="Save Petty Cash Book for Organisations to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-010" data-cat="Governance" data-cat2="Nonprofit Management" data-price="59" data-fmt="XLSX" data-text="board &amp; committee action tracker track decisions and actions from board meetings until they&#39;re done. governance board actions committee tracker meeting actions governance excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/board-committee-action-tracker">
-    <div class="card-media"><img src="/assets/p/GLD-010/cover.webp" alt="Board &amp; Committee Action Tracker" loading="lazy" width="600" height="450"></div>
+  <button type="button" class="fav" data-fav="SKD-008" aria-pressed="false" aria-label="Save Supplier &amp; Purchase Order Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+</article><article class="card" data-id="SKD-023" data-cat="Inventory" data-cat2="Inventory Management" data-price="39" data-fmt="PDF" data-text="inventory count sheets printable stock-take sheets with variance columns for monthly counts. inventory stock take inventory count stocktake sheet retail inventory printable pdf download etsy seller online shop small business ecommerce shop owner handmade business inventory">
+  <a class="card-link" href="/shopkeeper/p/inventory-count-sheets">
+    <div class="card-media"><img src="/assets/p/SKD-023/cover.webp" alt="Inventory Count Sheets" loading="lazy" width="600" height="450"></div>
     <div class="card-body">
-      <p class="card-shop">Governance</p>
-      <h3 class="card-title">Board &amp; Committee Action Tracker</h3>
-      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
-    </div>
-  </a>
-  <div class="card-foot">
-    <p class="card-price"><strong>R59</strong></p>
-    <button type="button" class="add" data-add="GLD-010" aria-label="Add Board &amp; Committee Action Tracker to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
-  </div>
-  <button type="button" class="fav" data-fav="GLD-010" aria-pressed="false" aria-label="Save Board &amp; Committee Action Tracker to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-011" data-cat="Finance" data-cat2="Nonprofit Management" data-price="79" data-fmt="XLSX" data-text="annual budget for small nonprofits plan a year&#39;s income and costs by month and compare with actuals. finance nonprofit budget annual budget charity budget ngo budget excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/annual-budget-for-small-nonprofits">
-    <div class="card-media"><img src="/assets/p/GLD-011/cover.webp" alt="Annual Budget for Small Nonprofits" loading="lazy" width="600" height="450"></div>
-    <div class="card-body">
-      <p class="card-shop">Finance</p>
-      <h3 class="card-title">Annual Budget for Small Nonprofits</h3>
-      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
-    </div>
-  </a>
-  <div class="card-foot">
-    <p class="card-price"><strong>R79</strong></p>
-    <button type="button" class="add" data-add="GLD-011" aria-label="Add Annual Budget for Small Nonprofits to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
-  </div>
-  <button type="button" class="fav" data-fav="GLD-011" aria-pressed="false" aria-label="Save Annual Budget for Small Nonprofits to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-012" data-cat="Fundraising" data-cat2="Nonprofit Management" data-price="49" data-fmt="XLSX" data-text="fundraising goal calculator work out how many donors and what average gift you need to reach a target. fundraising fundraising goal donor calculator campaign target crowdfunding excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/fundraising-goal-calculator">
-    <div class="card-media"><img src="/assets/p/GLD-012/cover.webp" alt="Fundraising Goal Calculator" loading="lazy" width="600" height="450"></div>
-    <div class="card-body">
-      <p class="card-shop">Fundraising</p>
-      <h3 class="card-title">Fundraising Goal Calculator</h3>
-      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
-    </div>
-  </a>
-  <div class="card-foot">
-    <p class="card-price"><strong>R49</strong></p>
-    <button type="button" class="add" data-add="GLD-012" aria-label="Add Fundraising Goal Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
-  </div>
-  <button type="button" class="fav" data-fav="GLD-012" aria-pressed="false" aria-label="Save Fundraising Goal Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-013" data-cat="Impact" data-cat2="Nonprofit Management" data-price="49" data-fmt="XLSX" data-text="programme cost per beneficiary calculator show funders the cost per person reached, including a share of overheads. impact cost per beneficiary programme cost grant budget impact excel template google sheets nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/programme-cost-per-beneficiary-calculator">
-    <div class="card-media"><img src="/assets/p/GLD-013/cover.webp" alt="Programme Cost per Beneficiary Calculator" loading="lazy" width="600" height="450"></div>
-    <div class="card-body">
-      <p class="card-shop">Impact</p>
-      <h3 class="card-title">Programme Cost per Beneficiary Calculator</h3>
-      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · XLSX</p>
-    </div>
-  </a>
-  <div class="card-foot">
-    <p class="card-price"><strong>R49</strong></p>
-    <button type="button" class="add" data-add="GLD-013" aria-label="Add Programme Cost per Beneficiary Calculator to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
-  </div>
-  <button type="button" class="fav" data-fav="GLD-013" aria-pressed="false" aria-label="Save Programme Cost per Beneficiary Calculator to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-014" data-cat="Governance" data-cat2="Nonprofit Management" data-price="39" data-fmt="PDF" data-text="board meeting agenda &amp; minutes pages printable agenda, attendance, minutes and action pages for committee meetings. governance meeting minutes board agenda committee minutes secretary printable pdf download nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/board-meeting-agenda-minutes-pages">
-    <div class="card-media"><img src="/assets/p/GLD-014/cover.webp" alt="Board Meeting Agenda &amp; Minutes Pages" loading="lazy" width="600" height="450"></div>
-    <div class="card-body">
-      <p class="card-shop">Governance</p>
-      <h3 class="card-title">Board Meeting Agenda &amp; Minutes Pages</h3>
+      <p class="card-shop">Inventory</p>
+      <h3 class="card-title">Inventory Count Sheets</h3>
       <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
     </div>
   </a>
   <div class="card-foot">
     <p class="card-price"><strong>R39</strong></p>
-    <button type="button" class="add" data-add="GLD-014" aria-label="Add Board Meeting Agenda &amp; Minutes Pages to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
+    <button type="button" class="add" data-add="SKD-023" aria-label="Add Inventory Count Sheets to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
   </div>
-  <button type="button" class="fav" data-fav="GLD-014" aria-pressed="false" aria-label="Save Board Meeting Agenda &amp; Minutes Pages to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
-</article><article class="card" data-id="GLD-015" data-cat="Volunteers" data-cat2="Nonprofit Management" data-price="39" data-fmt="PDF" data-text="volunteer sign-in sheets printable sign-in/out sheets for volunteer shifts, events and drives. volunteers sign in sheet volunteer sign in event sign in attendance sheet printable pdf download nonprofit charity ngo community group volunteer fundraising treasurer">
-  <a class="card-link" href="/goodledger/p/volunteer-sign-in-sheets">
-    <div class="card-media"><img src="/assets/p/GLD-015/cover.webp" alt="Volunteer Sign-In Sheets" loading="lazy" width="600" height="450"></div>
-    <div class="card-body">
-      <p class="card-shop">Volunteers</p>
-      <h3 class="card-title">Volunteer Sign-In Sheets</h3>
-      <p class="card-meta"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8z"/></svg>Instant download · PDF</p>
-    </div>
-  </a>
-  <div class="card-foot">
-    <p class="card-price"><strong>R39</strong></p>
-    <button type="button" class="add" data-add="GLD-015" aria-label="Add Volunteer Sign-In Sheets to basket"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 8h14l-1.2 12.1a1 1 0 0 1-1 .9H7.2a1 1 0 0 1-1-.9L5 8z"/><path d="M9 8V6a3 3 0 0 1 6 0v2"/></svg><span>Add</span></button>
-  </div>
-  <button type="button" class="fav" data-fav="GLD-015" aria-pressed="false" aria-label="Save Volunteer Sign-In Sheets to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
+  <button type="button" class="fav" data-fav="SKD-023" aria-pressed="false" aria-label="Save Inventory Count Sheets to favourites"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-9.3-9.2C1.4 7.9 3.6 4.5 7 4.5c2 0 3.4 1.1 5 3 1.6-1.9 3-3 5-3 3.4 0 5.6 3.4 4.3 6.8-1.8 4.6-9.3 9.2-9.3 9.2z"/></svg></button>
 </article></div>
     <button type="button" class="rail-btn next" aria-label="Scroll right" hidden>›</button>
   </div>
@@ -441,6 +375,6 @@
   </div>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="/assets/site.js?v=a06b282dd1" defer></script>
+<script src="/assets/site.js?v=5a1fb844d6" defer></script>
 </body>
 </html>

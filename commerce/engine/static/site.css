@@ -352,7 +352,7 @@ details>p{margin:0 0 16px;color:#3a404a}
 .buybar-in{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .buybar-in div{display:flex;flex-direction:column;min-width:0}
 .buybar-in strong{font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;color:var(--ink)}
-.buybar-in span{font-size:13px;color:var(--muted)}
+.buybar-in div span{font-size:13px;color:var(--muted)}  /* the button label keeps its own white text */
 @media (min-width:821px){.buybar{display:none}}
 
 /* lightbox */

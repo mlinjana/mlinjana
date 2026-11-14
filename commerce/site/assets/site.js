@@ -77,6 +77,19 @@
     },
     user: () => (acct.session() || {}).user || null,
   };
+  // OAuth errors can arrive in the URL fragment or query string. Show a safe,
+  // actionable message and clear the error from browser history.
+  const authHash = new URLSearchParams(location.hash.replace(/^#/, ""));
+  const authQuery = new URLSearchParams(location.search);
+  const authReturnError = authHash.has("error") || authQuery.has("error");
+  if (authReturnError && location.pathname === "/account") {
+    const clean = new URL(location.href);
+    clean.hash = "";
+    clean.searchParams.delete("error");
+    clean.searchParams.delete("error_code");
+    clean.searchParams.delete("error_description");
+    history.replaceState(null, "", clean.pathname + clean.search);
+  }
   // returning from Google or the emailed link: tokens arrive in the address after "#"
   if (location.hash.includes("access_token=")) {
     const h = new URLSearchParams(location.hash.slice(1));
@@ -84,7 +97,7 @@
     history.replaceState(null, "", location.pathname + location.search);
   }
   if (acct.session() && !acct.user()) {
-    acct.api("/auth/v1/user").then((u) => { const s = acct.session(); if (s) { s.user = { id: u.id, email: u.email, name: (u.user_metadata || {}).full_name || (u.user_metadata || {}).name || "" }; acct.save(s); } document.dispatchEvent(new Event("mls:account")); }).catch(() => {});
+    acct.api("/auth/v1/user").then((u) => { const s = acct.session(); if (s) { s.user = { id: u.id, email: u.email, name: (u.user_metadata || {}).full_name || (u.user_metadata || {}).name || "" }; acct.save(s); } document.dispatchEvent(new Event("mls:account")); }).catch(() => { acct.clear(); document.dispatchEvent(new Event("mls:account")); });
   }
   const setAccountLinks = () => {
     const u = acct.user();
@@ -111,9 +124,13 @@
     if (!u) return;
     try {
       const server = (await acct.api("/rest/v1/account_favourites?select=product_id&order=created_at.desc")).map((x) => x.product_id);
+      // The user may have signed out or switched accounts while the request was in flight.
+      // Never repopulate the shared device with a previous customer's favourites.
+      if (acct.user()?.id !== u.id) return;
       const local = store.get(FKEY, []);
       const toAdd = local.filter((x) => !server.includes(x));
       if (toAdd.length) await acct.api("/rest/v1/account_favourites", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" }, body: JSON.stringify(toAdd.map((product_id) => ({ user_id: u.id, product_id }))) });
+      if (acct.user()?.id !== u.id) return;
       store.set(FKEY, [...new Set([...local, ...server])].slice(0, 500));
       syncFavs();
       document.dispatchEvent(new Event("mls:favs"));
@@ -131,12 +148,58 @@
   const tierPrice = (price, lic) => (lic === "team" ? Math.round(price * 2.5) : price);
   const LIC_LABEL = { standard: "Standard licence", team: "Team licence (up to 10 people)" };
   const chosenLicence = () => { const r = document.querySelector("input[name=licence]:checked"); return r && r.value === "team" ? "team" : "standard"; };
-  const getBasket = () => store.get(BKEY, []).filter((x) => typeof x === "string" && /^[A-Z]{2,5}-\d{3,4}(:team)?$/.test(x)).slice(0, 25);
-  const setBasket = (a) => {
-    const m = new Map();
-    a.forEach((e) => { m.delete(idOf(e)); m.set(idOf(e), e); }); // the latest licence choice for a product wins
-    store.set(BKEY, [...m.values()].slice(0, 25)); syncBasket();
+  const validBasketEntry = (x) => typeof x === "string" && /^[A-Z]{2,5}-\d{3,4}(:team)?$/.test(x);
+  const getBasket = () => store.get(BKEY, []).filter(validBasketEntry).slice(0, 25);
+  // Profile baskets are private to auth.uid() in Supabase. Guest baskets stay on
+  // this device until sign-in; signing out clears the local view, not the account.
+  let basketOwnerId = null, basketLoadSerial = 0, basketSaveChain = Promise.resolve();
+  const persistProfileBasket = () => {
+    const userId = acct.user()?.id;
+    if (!userId || basketOwnerId !== userId) return;
+    const items = getBasket();
+    basketSaveChain = basketSaveChain.catch(() => {}).then(async () => {
+      if (acct.user()?.id !== userId || basketOwnerId !== userId) return;
+      try {
+        await acct.api("/rest/v1/account_baskets?on_conflict=user_id", {
+          method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
+          body: JSON.stringify({ user_id: userId, items })
+        });
+      } catch (e) {
+        if (acct.user()?.id === userId) toast("Couldn't sync your basket. Check your connection and try changing an item.");
+      }
+    });
   };
+  const setBasket = (a, persist = true) => {
+    const m = new Map();
+    a.filter(validBasketEntry).forEach((e) => { m.delete(idOf(e)); m.set(idOf(e), e); }); // the latest licence choice for a product wins
+    store.set(BKEY, [...m.values()].slice(0, 25));
+    syncBasket();
+    if (persist) persistProfileBasket();
+  };
+  const loadProfileBasket = async () => {
+    const userId = acct.user()?.id;
+    if (!userId || basketOwnerId === userId) return;
+    const serial = ++basketLoadSerial;
+    // Do not push any guest items to an account until its saved basket is loaded.
+    basketOwnerId = null;
+    try {
+      const rows = await acct.api("/rest/v1/account_baskets?select=items");
+      if (serial !== basketLoadSerial || acct.user()?.id !== userId) return;
+      // On first sign-in, keep items intentionally added as a guest and combine
+      // them with the saved basket; the existing account licence takes priority.
+      const saved = Array.isArray(rows?.[0]?.items) ? rows[0].items.filter(validBasketEntry) : [];
+      const local = getBasket();
+      basketOwnerId = userId;
+      setBasket([...local, ...saved]);
+      if (dlg?.open) renderBasket().catch(() => {});
+    } catch (e) {
+      if (serial !== basketLoadSerial || acct.user()?.id !== userId) return;
+      basketOwnerId = null; // leave existing basket untouched; don't overwrite a remote basket on failed read
+      toast("Couldn't load your saved basket. Refresh to retry.");
+    }
+  };
+  document.addEventListener("mls:account", loadProfileBasket);
+  setTimeout(loadProfileBasket, 0);
   const syncBasket = () => {
     const b = getBasket().map(idOf);
     $$(".bk-count").forEach((c) => { c.hidden = !b.length; c.textContent = b.length; });
@@ -481,8 +544,8 @@
         if (!r.ok) throw new Error(d.error || "Not found");
         out.className = "status dl-ready";
         out.innerHTML = `<p class="dl-head">✓ Order ${esc(d.ref)} found.</p><ul class="dl-list">` + d.items.map((x) => `<li><span>${esc(x.name)}<small>${esc(LIC_LABEL[x.licence === "team" ? "team" : "standard"])}</small></span>` +
-          (x.download ? `<a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a>` : `<a class="btn btn-outline inline" href="/help/contact?order=${encodeURIComponent(x.ref)}">Link expired: ask us</a>`) + `</li>`).join("") + `</ul>` +
-          `<p class="small muted">Links last 7 days and 5 downloads. If yours has run out, contact us with the order number and we'll send a new one.</p>`;
+          (x.download ? `<a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a>` : `<a class="btn btn-outline inline" href="/account">Sign in to renew</a>`) + `</li>`).join("") + `</ul>` +
+          `<p class="small muted">Download links last 7 days or 5 downloads. For expired links, <a href="/account">sign in using your verified checkout email</a> and choose Renew &amp; download in Your orders. If the purchase doesn't appear there, <a href="/help/contact?order=${encodeURIComponent(d.ref)}">contact us</a>.</p>`;
       } catch (err) { out.className = "msg err"; out.textContent = err.message; }
       btn.disabled = false;
     });
@@ -541,16 +604,71 @@
         const os = await acct.api("/rest/v1/rpc/my_orders", { method: "POST", body: "{}" });
         box.innerHTML = !os.length ? `<p class="muted">No orders yet with ${esc(u.email)}. Orders you place with this email, including ones before you signed up, appear here.</p>` :
           `<ul class="dl-list">` + os.map((o) => `<li><span>${esc(o.title)}<small>${new Date(o.paid_at).toLocaleDateString()} · ${o.licence === "team" ? "Team licence" : "Standard licence"} · ${money(o.amount_cents)} · ${esc(o.ref)}${o.status === "refunded" ? " · refunded" : ""}</small></span>` +
-          (o.download_token ? `<a class="btn btn-primary inline" href="${esc(API)}/store-api/download?t=${esc(o.download_token)}">Download ZIP</a>` : (o.status === "paid" ? `<a class="btn btn-outline inline" href="/help/contact?order=${esc(o.ref)}">Link expired: ask us</a>` : "")) + `</li>`).join("") + `</ul>`;
+          (o.download_token ? `<a class="btn btn-primary inline" href="${esc(API)}/store-api/download?t=${esc(o.download_token)}">Download ZIP</a>` : (o.status === "paid" ? `<button type="button" class="btn btn-outline inline" data-renew-order="${esc(o.ref)}">Renew &amp; download</button>` : "")) + `</li>`).join("") + `</ul>`;
       } catch (e) { box.innerHTML = `<p class="muted">We couldn't load your orders just now. Please refresh the page.</p>`; }
       const fl = store.get(FKEY, []);
       $("#acct-favs").innerHTML = fl.length ? `<p>${fl.length} saved ${fl.length === 1 ? "product" : "products"}, on every device where you're signed in. <a href="/favourites">View your favourites</a></p>` : `<p class="muted">Tap the heart on any product to save it here.</p>`;
     };
+    // Expired links are renewed for a verified buyer via a protected Supabase
+    // RPC, never through an unauthenticated link or customer support ticket.
+    $("#acct-orders").addEventListener("click", async (e) => {
+      const btn = e.target.closest("[data-renew-order]");
+      if (!btn || btn.disabled) return;
+      const ref = btn.dataset.renewOrder;
+      if (!/^ORD-[0-9A-F]{12}$/.test(ref)) return;
+      const originalUserId = acct.user()?.id;
+      const msg = $("#acct-download-msg");
+      btn.disabled = true;
+      btn.textContent = "Preparing download…";
+      if (msg) { msg.className = "msg"; msg.textContent = ""; }
+      try {
+        const token = await acct.api("/rest/v1/rpc/renew_my_download", {
+          method: "POST", body: JSON.stringify({ p_ref: ref })
+        });
+        if (!originalUserId || acct.user()?.id !== originalUserId) throw new Error("Session changed");
+        if (typeof token !== "string" || !/^[a-f0-9]{48}$/.test(token)) throw new Error("Invalid download response");
+        // The existing API checks the token and order status before issuing a
+        // short-lived signed storage link. The URL is never permanently public.
+        location.assign(`${API}/store-api/download?t=${encodeURIComponent(token)}`);
+      } catch (err) {
+        if (msg) {
+          msg.className = "msg err";
+          msg.textContent = "We couldn't prepare your download. Please try again. If you've renewed several times today, retry tomorrow.";
+        }
+        btn.disabled = false;
+        btn.textContent = "Renew & download";
+      }
+    });
     document.addEventListener("mls:account", () => (acct.user() ? showIn() : showOut()));
     document.addEventListener("mls:favs", () => acct.user() && showIn());
-    if (acct.user()) showIn(); else if (!acct.session()) showOut();
-    $("#acct-google").addEventListener("click", () => {
-      location.href = `${SB}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(here)}`;
+    if (acct.user()) showIn(); else showOut(); // invalid or unresolved sessions must never leave a blank page
+    const googleMsg = $("#acct-google-msg");
+    if (authReturnError) {
+      googleMsg.className = "msg err";
+      googleMsg.textContent = "Sign-in could not be completed. Please try again or use the email sign-in link below.";
+    }
+    $("#acct-google").addEventListener("click", async () => {
+      const btn = $("#acct-google");
+      btn.disabled = true;
+      googleMsg.className = "msg";
+      googleMsg.textContent = "Checking Google sign-in…";
+      try {
+        // GoTrue exposes only provider availability here, never provider secrets.
+        const r = await fetch(`${SB}/auth/v1/settings`, { headers: { apikey: SBKEY } });
+        if (!r.ok) throw new Error("settings unavailable");
+        const settings = await r.json();
+        if (settings.external?.google !== true) {
+          googleMsg.className = "msg err";
+          googleMsg.textContent = "Google sign-in is temporarily unavailable. Please use the email sign-in link below.";
+          btn.disabled = false;
+          return;
+        }
+        location.href = `${SB}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(here)}`;
+      } catch (e) {
+        googleMsg.className = "msg err";
+        googleMsg.textContent = "We couldn't connect to Google sign-in. Please try again or sign in by email instead.";
+        btn.disabled = false;
+      }
     });
     $("#acct-email-form").addEventListener("submit", async (e) => {
       e.preventDefault();
@@ -572,8 +690,27 @@
       } catch (err) { out.className = "msg err"; out.textContent = "Couldn't save. Please try again."; }
     });
     $("#acct-signout").addEventListener("click", async () => {
+      // Finish queued profile-basket writes before ending this session. Do not
+      // delete the saved profile cart; only clear the shared browser copy.
+      await basketSaveChain.catch(() => {});
       try { await acct.api("/auth/v1/logout", { method: "POST" }); } catch (e) {}
-      acct.clear(); setAccountLinks(); showOut();
+      basketOwnerId = null;
+      ++basketLoadSerial; // ignore any late account-cart response after sign-out
+      acct.clear();
+      setBasket([]);
+      // Favourites are backed by the signed-in account. Remove only the device
+      // copy, not the server records, so they reappear after the same user signs in.
+      store.set(FKEY, []);
+      syncFavs();
+      document.dispatchEvent(new Event("mls:favs"));
+      if (dlg && dlg.open) dlg.close();
+      const checkoutEmail = $("#bk-email");
+      if (checkoutEmail) checkoutEmail.value = "";
+      const checkoutMsg = $("#bk-msg");
+      if (checkoutMsg) { checkoutMsg.textContent = ""; checkoutMsg.className = "msg"; }
+      document.dispatchEvent(new Event("mls:account"));
+      setAccountLinks();
+      showOut();
     });
     $("#acct-delete").addEventListener("click", async () => {
       if (!confirm("Delete your account? This removes your sign-in, name and saved favourites. Your paid orders stay on record for tax purposes, and you can still use your download links.")) return;
