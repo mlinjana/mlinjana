@@ -26,6 +26,7 @@
       <p class="pp-by"><a href="{{ base }}/">{{ store.coll }}</a> <span aria-hidden="true">·</span> {{ p.category }}</p>
       <h1>{{ p.name }}</h1>
       <p class="pp-sum">{{ p.summary }}</p>
+      <p class="pp-reassure">Review the actual file previews and what is included below before you decide.</p>
       <ul class="pp-chips">{% for f in p.formats %}<li class="fmt fmt-{{ f.split(' ')[0]|lower }}">{{ f }}</li>{% endfor %}</ul>
       <h2 class="pp-h">What's inside</h2>
       <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
@@ -34,7 +35,7 @@
     <aside class="panel pp-buy" aria-label="Buy">
       <p class="pp-price">{% if p.free %}<strong>Free</strong>{% else %}<strong id="pp-amount">R{{ p.price_zar }}</strong>{% endif %}</p>
       {% if p.saving_pct %}<p class="pp-save"><s>R{{ p.bundle_sum }}</s> <span class="save-pill">You save R{{ p.bundle_sum - p.price_zar }} ({{ p.saving_pct }}%)</span></p>{% endif %}
-      <p class="stock">{{ icon("bolt") }}<span><strong>Instant download</strong> · {{ p.file_mb }} ZIP</span></p>
+      <p class="stock">{{ icon("bolt") }}<span><strong>Digital download, no shipping</strong> · {{ p.file_mb }} ZIP</span></p>
       {% if p.free %}
       <a id="free-dl" class="btn btn-primary btn-block btn-lg" href="{{ p.free_url }}" download>{{ icon("download") }}<span>Download free</span></a>
       <p class="muted small center">No account or email needed.</p>
@@ -50,7 +51,7 @@
       <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="{{ p.id }}" aria-pressed="false">{{ icon("heart") }}<span>Save to favourites</span></button>
       <ul class="buy-trust">
         <li>{{ icon("lock") }}<span>Secure checkout on PayFast. We never see your card.</span></li>
-        <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Download 5 times over 7 days{% endif %}</span></li>
+        <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Five download attempts within seven days; <a href="/help/downloads">recover your order</a> if you lose the link{% endif %}</span></li>
         <li>{{ icon("refresh") }}<span>File won't work? Fixed or refunded within 14 days</span></li>
         <li>{{ icon("building") }}<span>Sold and supported by {{ market.name }}</span></li>
       </ul>
