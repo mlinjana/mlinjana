@@ -21,6 +21,8 @@ Status: review branch only. **No production deployment, payment configuration ch
 15. Fixed analytics API to return HTTP 503 on rejected database inserts rather than acknowledging unrecorded events; regression check added.
 16. Extended responsive Chromium checks to cover real catalog search results and empty-search state.
 17. Added `FIRST_100_CUSTOMERS_LAUNCH_KIT.md` containing five factual product offers, seven-day organic outreach schedule, demonstration outline and measurement criteria. No posts sent or ads run.
+18. Verified the connected Supabase commerce project currently has no development branches, and its production `events_type_check` still permits only the three legacy event types. Branch creation was blocked by an explicit paid-cost confirmation requirement; no production migration attempted.
+19. Extended checkout browser mock to capture `navigator.sendBeacon` in memory and assert exactly one product_view, basket_add, checkout_start and checkout_error or checkout_handoff per representative single-product order. This test does not contact the live backend.
 
 ## Acceptance checklist
 
