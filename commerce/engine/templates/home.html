@@ -102,6 +102,11 @@
 
     {{ usps(legal) }}
 
+    <section class="starter-promo" aria-labelledby="starter-promo-title">
+      <div><p class="kicker">A simpler place to begin</p><h2 id="starter-promo-title">Five tools worth a closer look.</h2><p>Explore real product previews for stock control, invoicing, budgeting, lesson planning and fleet operations. All products are sold individually.</p></div>
+      <a class="btn btn-gold" href="/start-here">Explore the five tools <span aria-hidden="true">→</span></a>
+    </section>
+
     {{ rail("Top picks", picks, shops, "/search", "View all " ~ market.total, None, "", "Start here") }}
     {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately", "band", "Save more") }}
     {{ rail("Under R50", under50, shops, "/search?max=50", "See all " ~ under50_total, None, "", "Small price, real use") }}
