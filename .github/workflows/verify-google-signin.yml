@@ -1,0 +1,54 @@
+name: Verify live Google sign-in configuration
+
+on:
+  push:
+    branches: [chatgpt/live-frontend-release-20261114]
+    paths: [.github/workflows/verify-google-signin.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  google-auth-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Check live account, public Google provider settings and OAuth start
+        run: |
+          python - <<'PY'
+          import json
+          from urllib.request import Request, build_opener, HTTPRedirectHandler
+          from urllib.parse import urlencode, urlsplit, parse_qs
+          from urllib.error import HTTPError, URLError
+
+          base = "https://mrunxptxavtompcnegkr.supabase.co"
+          site = "https://mlinjanastudios.com"
+          class NoRedirect(HTTPRedirectHandler):
+              def redirect_request(self,*args,**kwargs): return None
+          opener=build_opener(NoRedirect)
+          def get(url):
+              try: return opener.open(Request(url,headers={"User-Agent":"Mlinjana-Auth-Smoke/1.0"}),timeout=15)
+              except HTTPError as e: return e
+          with get(site+"/account") as r:
+              html=r.read(300000).decode("utf-8","replace")
+              print("Account page HTTP",r.status)
+              assert r.status==200
+              assert 'id="acct-google"' in html, "Google button absent"
+              assert 'id="acct-google-msg"' in html, "Google error feedback absent"
+          with get(base+"/auth/v1/settings") as r:
+              print("Supabase public auth settings HTTP",r.status)
+              assert r.status==200, "Auth settings unavailable"
+              data=json.load(r)
+              enabled=data.get("external",{}).get("google")
+              print("Google enabled in Supabase:",bool(enabled))
+              assert enabled is True, "Google provider is still disabled"
+          oauth=base+"/auth/v1/authorize?"+urlencode({"provider":"google","redirect_to":site+"/account"})
+          with get(oauth) as r:
+              print("OAuth authorize HTTP",r.status)
+              loc=r.headers.get("Location","")
+              print("OAuth redirect host:",urlsplit(loc).hostname or "(none)")
+              assert r.status in (302,303,307), "OAuth did not redirect"
+              assert urlsplit(loc).hostname in ("accounts.google.com","accounts.google.co.za"), "Unexpected OAuth destination"
+          print("PASS: Google OAuth starts at Google and requests the live account redirect.")
+          PY
