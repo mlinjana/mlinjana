@@ -105,6 +105,8 @@ jobs:
       - name: Build isolated preview
         run: python engine/build_sites.py
       - name: Validate noindex and absence of checkout form
+        env:
+          SAFE_PREVIEW_TEST: "1"
         run: python tests/test_safe_preview.py
       - name: Check preview links
         run: python engine/check_links.py
