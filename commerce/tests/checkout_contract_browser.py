@@ -35,6 +35,17 @@ def do_case(page, mode, calls):
         assert outbound["fields"]["amount"] == "149.00"
         assert saved[0]["ref"] == "ORD-TESTONLY"
         assert saved[0]["url"].startswith("https://example.invalid/thanks?"), saved
+    events = page.evaluate("window.__trackingEvents || []")
+    types = [e.get("type") for e in events]
+    expected = ["product_view", "basket_add", "checkout_start",
+                "checkout_error" if mode == "failure" else "checkout_handoff"]
+    for event_type in expected:
+        assert types.count(event_type) == 1, f"{mode}: expected exactly one {event_type}, got {types}"
+    assert all(e.get("product_id") == "ABL-009" for e in events), events
+    # Event data must not include customer email, tokens or payment details.
+    assert all("email" not in e and "token" not in e for e in events), events
+    assert all("tester@example.invalid" not in json.dumps(e) for e in events), events
+
     assert calls, "Expected checkout initiation request"
     assert calls[0]["product_id"] == "ABL-009"
     assert calls[0]["licence"] == "standard"
@@ -64,6 +75,16 @@ def main():
                 # Keep the browser on the local origin: capture the generated form
                 # instead of submitting it to a payment provider or leaving the page.
                 context.add_init_script("""(() => {
+                    // Capture analytics in memory, never post to Supabase.
+                    Object.defineProperty(navigator, 'webdriver', { configurable: true, get: () => undefined });
+                    window.__trackingEvents = [];
+                    navigator.sendBeacon = function (url, body) {
+                        if (url.endsWith('/store-api/track')) {
+                            window.__trackingEvents.push(JSON.parse(body));
+                            return true;
+                        }
+                        return false;
+                    };
                     HTMLFormElement.prototype.submit = function () {
                         window.__mockPayfast = {
                           action: this.action, method: this.method,
@@ -101,7 +122,7 @@ def main():
     finally:
         server.shutdown()
 
-    print("Mocked checkout error + handoff contracts passed without touching production.")
+    print("Mocked checkout recovery, payment handoff and event sequence passed without touching production.")
 
 
 if __name__ == "__main__":
