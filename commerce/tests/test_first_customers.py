@@ -48,6 +48,7 @@ class FirstCustomerStorefrontTests(unittest.TestCase):
 
     def test_curated_starter_landing_page_is_real_and_indexable(self):
         self.assertIn('href="/start-here"', self.home)
+        self.assertIn('href="/start-here"', (SITE / "abacus/p/inventory-management-spreadsheet.html").read_text(encoding="utf-8"), "Guide should be reachable in the global navigation")
         page = (SITE / "start-here.html").read_text(encoding="utf-8")
         self.assertIn("<h1>Five useful tools for real work.</h1>", page)
         self.assertIn('rel="canonical"', page)
