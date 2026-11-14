@@ -24,11 +24,12 @@ jobs:
 
           base = "https://mrunxptxavtompcnegkr.supabase.co"
           site = "https://mlinjanastudios.com"
+          public_key = "sb_publishable_ubE3COlKrVn-WKscBRbvJw_M6rxT6kM" # Public browser key; not a secret.
           class NoRedirect(HTTPRedirectHandler):
               def redirect_request(self,*args,**kwargs): return None
           opener=build_opener(NoRedirect)
           def get(url):
-              try: return opener.open(Request(url,headers={"User-Agent":"Mlinjana-Auth-Smoke/1.0"}),timeout=15)
+              try: return opener.open(Request(url,headers={"User-Agent":"Mlinjana-Auth-Smoke/1.0","apikey":public_key}),timeout=15)
               except HTTPError as e: return e
           with get(site+"/account") as r:
               html=r.read(300000).decode("utf-8","replace")
