@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved: self-service renewal of expired paid downloads (PR #7).
+# Approved account-first download recovery consistency release (PR #8).
 
 on:
   push:
