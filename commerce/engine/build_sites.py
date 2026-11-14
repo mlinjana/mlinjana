@@ -329,7 +329,7 @@ def main():
         shop["division"] = div_by[collections.Counter(p["division"] for p in prods_of[sid]).most_common(1)[0][0]]
     import hashlib
     asset_v = hashlib.sha256(b"".join(open(os.path.join(ROOT, "engine", "static", f), "rb").read() for f in ("site.css", "site.js"))).hexdigest()[:10]
-    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, look=cfg.get("look", ""), checkout_paused=cfg.get("checkout") == "paused", depts=depts, divisions=divisions, shops=shops, asset_v=asset_v,
+    common = dict(legal=cfg["legal"], api=cfg["api_base"], staging=staging, look=cfg.get("look", ""), look_wide=cfg.get("look_wide", False), checkout_paused=cfg.get("checkout") == "paused", depts=depts, divisions=divisions, shops=shops, asset_v=asset_v,
                   site_base=cfg["site_base"], market={**MARKET, "total": total})
 
     def cat_counts(items, order=None):
@@ -484,7 +484,7 @@ def main():
                                                           "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
     # Cloudflare Web Analytics (owner decision #39): beacon script from static.cloudflareinsights.com, reports to cloudflareinsights.com
     csp = ("default-src 'self'; img-src 'self' data:; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline' https://static.cloudflareinsights.com; "
-           f"connect-src 'self' {cfg['api_base'].split('/functions')[0]} https://cloudflareinsights.com; form-action 'self' https://sandbox.payfast.co.za https://www.payfast.co.za; "
+           f"connect-src 'self' {cfg['api_base'].split('/functions')[0]} https://cloudflareinsights.com; form-action 'self' https://sandbox.payfast.co.za https://www.payfast.co.za https://payment.payfast.io https://sandbox.payfast.io; "
            "frame-ancestors 'none'; base-uri 'self'")
     redirects = [{"source": f"/{old}/:rest*", "destination": f"/{st['path']}/:rest*", "permanent": True}
                  for st in cfg["stores"] for old in st.get("former_paths", [])]

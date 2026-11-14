@@ -741,11 +741,11 @@ dialog:not([open]){display:none!important}
 .ph-covers a:hover img{transform:translateY(-4px);box-shadow:0 0 0 1.5px var(--gold),0 18px 30px -18px rgba(23,36,59,.45)}
 @media (max-width:820px){.ph-covers{grid-template-columns:1fr 1fr}}
 /* photo look, rest of the site: collection heroes carry the collection photo behind the real covers; calmer shapes */
-.look-photo .div-hero{border-radius:10px;background:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),var(--brand-d) center right/cover no-repeat}
-.look-photo .div-hero.div-business{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-business.webp')}
-.look-photo .div-hero.div-life{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-life.webp')}
-.look-photo .div-hero.div-education{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-education.webp')}
-.look-photo .div-hero .eyebrow{letter-spacing:.24em;color:#e7e2d7}
-.look-photo .panel-head h2,.look-photo .sec-head h2,.look-photo .pp-main h1,.look-photo .prose h1,.look-photo .div-hero h1,.look-photo .why h2,.look-photo .cta h2{font-weight:500}
-.look-photo .panel,.look-photo .card,.look-photo .usp,.look-photo .why,.look-photo .cta,.look-photo .how .steps li{border-radius:10px}
-.look-photo .btn{border-radius:8px}
+.look-wide .div-hero{border-radius:10px;background:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),var(--brand-d) center right/cover no-repeat}
+.look-wide .div-hero.div-business{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-business.webp')}
+.look-wide .div-hero.div-life{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-life.webp')}
+.look-wide .div-hero.div-education{background-image:linear-gradient(90deg,var(--brand-d) 0%,var(--brand-d) 38%,rgba(14,22,38,.72) 58%,rgba(14,22,38,.18) 100%),url('/assets/brand/ed-education.webp')}
+.look-wide .div-hero .eyebrow{letter-spacing:.24em;color:#e7e2d7}
+.look-wide .panel-head h2,.look-wide .sec-head h2,.look-wide .pp-main h1,.look-wide .prose h1,.look-wide .div-hero h1,.look-wide .why h2,.look-wide .cta h2{font-weight:500}
+.look-wide .panel,.look-wide .card,.look-wide .usp,.look-wide .why,.look-wide .cta,.look-wide .how .steps li{border-radius:10px}
+.look-wide .btn{border-radius:8px}

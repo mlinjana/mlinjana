@@ -23,7 +23,7 @@
 {% if jsonld %}<script type="application/ld+json">{{ jsonld|safe }}</script>{% endif %}
 {% block head %}{% endblock %}
 </head>
-<body{% if look %} class="look-{{ look }}"{% endif %} data-store="{{ store.id if store else 'network' }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
+<body{% if look %} class="look-{{ look }}{% if look_wide %} look-wide{% endif %}"{% endif %} data-store="{{ store.id if store else 'network' }}" data-api="{{ api }}" data-product="{% block pid %}{% endblock %}">
 <a class="skip" href="#main">Skip to content</a>
 {% if staging %}<div class="banner" role="region" aria-label="Shop notice">Test mode: checkout uses the PayFast <strong>sandbox</strong>, so no real money is taken.</div>{% elif checkout_paused %}<div class="banner" role="region" aria-label="Shop notice">{% if look == "photo" %}Orders open soon{% else %}Orders open soon: browse the full catalogue now; online checkout opens shortly.{% endif %}</div>{% endif %}
 <div class="util" role="region" aria-label="About this shop"><div class="wrap util-in">

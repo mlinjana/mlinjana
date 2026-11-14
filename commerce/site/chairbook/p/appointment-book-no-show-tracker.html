@@ -9,7 +9,7 @@
 
 <link rel="preload" href="/assets/fonts/plusjakartasans.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="canonical" href="https://mlinjanastudios.com/chairbook/p/appointment-book-no-show-tracker">
-<link rel="stylesheet" href="/assets/site.css?v=f6a8ad7401">
+<link rel="stylesheet" href="/assets/site.css?v=73b1f34176">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" href="/assets/brand/icon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
@@ -25,7 +25,7 @@
 </head>
 <body class="look-photo" data-store="chairbook" data-api="https://mrunxptxavtompcnegkr.supabase.co/functions/v1" data-product="CBS-003">
 <a class="skip" href="#main">Skip to content</a>
-<div class="banner" role="region" aria-label="Shop notice">Orders open soon</div>
+
 <div class="util" role="region" aria-label="About this shop"><div class="wrap util-in">
   <p><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.6 8 9 4.6-.4 8-4 8-9V6l-8-3z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg><span>Registered South African company<span class="x-m"> · Instant digital downloads</span></span></p>
   <nav aria-label="Help"><a href="/help/about">About us</a><a href="/#how">How it works</a><a href="/help/contact">Help &amp; contact</a></nav>
@@ -428,13 +428,18 @@
     <footer class="bk-foot" id="bk-foot" hidden>
       <div class="bk-total"><span>Total</span><strong id="bk-total">R0</strong></div>
 
-      <p role="status"><strong>Orders are not open yet.</strong> You can keep browsing and save items in your basket on this device. No payment is being taken.</p>
-      <a class="btn btn-outline btn-block" href="/search">Continue browsing</a>
+      <form id="bk-form" novalidate>
+        <label for="bk-email">Email for your download links</label>
+        <input id="bk-email" type="email" autocomplete="email" required placeholder="you@example.com">
+        <button class="btn btn-primary btn-block btn-lg" type="submit"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Checkout securely</span></button>
+        <p class="msg" id="bk-msg" role="status"></p>
+      </form>
+      <p class="bk-note">You'll pay on PayFast's secure page. Your downloads appear straight after payment.</p>
 
     </footer>
   </div>
 </dialog>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
-<script src="/assets/site.js?v=f6a8ad7401" defer></script>
+<script src="/assets/site.js?v=73b1f34176" defer></script>
 </body>
 </html>
