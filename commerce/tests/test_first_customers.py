@@ -79,6 +79,12 @@ class FirstCustomerStorefrontTests(unittest.TestCase):
         self.assertIn('eq("provider_mode", "live")', ops,
                       "Sandbox transactions must not be counted as live sales")
 
+    def test_tracking_does_not_report_success_on_database_failure(self):
+        api = (ROOT / "supabase/functions/store-api/index.ts").read_text(encoding="utf-8")
+        self.assertIn('if (error) {', api)
+        self.assertIn('console.error("analytics insert failed"', api)
+        self.assertIn('return json({ ok: false }, 503)', api)
+
     def test_new_conversion_events_match_database_constraint_and_api(self):
         js = (ROOT / "engine/static/site.js").read_text(encoding="utf-8")
         api = (ROOT / "supabase/functions/store-api/index.ts").read_text(encoding="utf-8")
