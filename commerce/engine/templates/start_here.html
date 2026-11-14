@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% from "_macros.html" import card, icon %}
+{% block title %}Start here: practical spreadsheets & templates | {{ market.name }}{% endblock %}
+{% block desc %}Explore five real digital tools for inventory, invoicing, personal budgeting, lesson planning and fleet operations. See prices and actual previews before buying.{% endblock %}
+{% block main %}
+<div class="wrap starter-page">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="/">Home</a><span aria-hidden="true">›</span><span>Start here</span></nav>
+  <header class="starter-intro">
+    <p class="kicker">Not sure where to start?</p>
+    <h1>Five useful tools for real work.</h1>
+    <p>Rather than searching hundreds of downloads, explore a small selection of practical tools already in our catalogue. Each listing shows the current price, file formats, what is included and real previews.</p>
+    <p class="muted small">These are editorial starting points, not best-seller rankings or customer endorsements. Each product is sold separately.</p>
+  </header>
+  <div class="starter-grid">
+    {% for item in starters %}
+    <section class="starter-item" aria-labelledby="starter-title-{{ loop.index }}">
+      <div class="starter-copy">
+        <p class="kicker">{{ item.audience }}</p>
+        <h2 id="starter-title-{{ loop.index }}">{{ item.headline }}</h2>
+        <p>{{ item.reason }}</p>
+        <a class="btn btn-primary" href="/{{ shops[item.product.store].path }}/p/{{ item.product.slug }}">See product and previews <span aria-hidden="true">→</span></a>
+      </div>
+      <div class="starter-card">{{ card(item.product, shops[item.product.store]) }}</div>
+    </section>
+    {% endfor %}
+  </div>
+  <section class="starter-bottom">
+    <h2>Need something different?</h2>
+    <p>Explore the full catalogue or browse by the work you want to do. Downloads are digital; no physical products are shipped.</p>
+    <div class="cta-row"><a class="btn btn-outline" href="/search">Search all downloads</a><a class="btn btn-outline" href="/help/downloads">How downloads work</a></div>
+  </section>
+</div>
+{% endblock %}
