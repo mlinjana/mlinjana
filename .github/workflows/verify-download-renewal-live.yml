@@ -1,0 +1,44 @@
+name: Verify production self-service downloads
+on:
+  push:
+    branches: [chatgpt/live-frontend-release-20261114]
+    paths: [.github/workflows/verify-download-renewal-live.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify account page and authenticated-only renewal
+        run: |
+          python - <<'PY'
+          from urllib.request import Request,urlopen
+          from urllib.error import HTTPError
+          from urllib.parse import urljoin
+          import re, json
+          base="https://mlinjanastudios.com"
+          with urlopen(Request(base+"/account",headers={"User-Agent":"Mlinjana-ReadOnly-Renewal-Check/1.0"}),timeout=20) as r:
+            assert r.status == 200
+            html=r.read(800000).decode("utf-8","replace")
+          assert 'id="acct-download-msg"' in html, "Live account missing renewal feedback"
+          m=re.search(r'<script[^>]+src="([^"]*site\\.js[^"]*)"',html)
+          assert m, "Site JS not found"
+          with urlopen(Request(urljoin(base,m.group(1)),headers={"User-Agent":"Mlinjana-ReadOnly-Renewal-Check/1.0"}),timeout=20) as r:
+            js=r.read().decode("utf-8","replace")
+          for expected in ('renew_my_download', 'Renew & download', 'data-renew-order'):
+            assert expected in js, "Live renewal feature missing: "+expected
+          print("PASS: latest account UI has authenticated self-service renewal")
+          url="https://mrunxptxavtompcnegkr.supabase.co/rest/v1/rpc/renew_my_download"
+          req=Request(url,data=json.dumps({"p_ref":"ORD-000000000000"}).encode(),
+            headers={"apikey":"sb_publishable_ubE3COlKrVn-WKscBRbvJw_M6rxT6kM","content-type":"application/json"},
+            method="POST")
+          try:
+            with urlopen(req,timeout=20) as resp:
+              raise AssertionError("Anonymous renewal unexpectedly succeeded")
+          except HTTPError as e:
+            print("Unauthenticated renewal status:",e.code)
+            assert e.code in (401,403), "Unexpected RPC response for anonymous user"
+          print("PASS: account renewal not callable by anonymous visitors")
+          PY
