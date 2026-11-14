@@ -63,14 +63,14 @@ def main():
                 context = browser.new_context()
                 # Keep the browser on the local origin: capture the generated form
                 # instead of submitting it to a payment provider or leaving the page.
-                context.add_init_script("""() => {
+                context.add_init_script("""(() => {
                     HTMLFormElement.prototype.submit = function () {
                         window.__mockPayfast = {
                           action: this.action, method: this.method,
                           fields: Object.fromEntries([...this.elements].filter(x => x.name).map(x => [x.name, x.value]))
                         };
                     };
-                }()""")
+                })()""")
                 context._test_base = base
                 calls = []
 
