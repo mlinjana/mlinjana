@@ -419,6 +419,20 @@ def main():
         for k in range(max(map(len, pools)) if pools else 0):
             out += [pl[k] for pl in pools if k < len(pl)]
         return out[:n]
+    # Five catalogue-backed editorial starting points; fail the build if an item disappears.
+    # These are individual products, not invented bundles or alleged best-sellers.
+    starter_specs = [
+        ("ABL-009", "Small businesses", "Get clearer stock records", "An editable inventory spreadsheet for keeping track of stock information."),
+        ("BZW-003", "Freelancers and small teams", "Make invoicing easier", "An invoice template and register for recording customer invoices."),
+        ("ABL-025", "Personal finance", "Start with a simple budget", "A 50/30/20 calculator to help organise spending into categories."),
+        ("CHK-011", "Teachers", "Plan lessons more easily", "A weekly lesson planner for organising teaching activities."),
+        ("FLW-023", "Fleet operators", "Organise a small vehicle fleet", "A pre-existing fleet-control bundle; inspect the product page to see its included files."),
+    ]
+    by_id = {p["id"]: p for p in allp}
+    missing_starters = [id for id, _, _, _ in starter_specs if id not in by_id]
+    assert not missing_starters, f"Missing or invalid featured catalogue products: {missing_starters}"
+    starters = [dict(product=by_id[id], audience=audience, headline=headline, reason=reason)
+                for id, audience, headline, reason in starter_specs]
     picks = mix_cats([c for d in divisions for c in d["categories"][:4]], 12)
     bundles = sorted([p for p in allp if p.get("saving_pct")], key=lambda p: -p["saving_pct"])
     under50 = [p for p in allp if p["price_zar"] < 50]
@@ -435,6 +449,11 @@ def main():
         hero_covers=hero_covers, div_rows=div_rows, n_cats=sum(len(d["categories"]) for d in divisions),
         ribbon=[c for k in range(4) for d in divisions for c in d["categories"][k:k + 1] if c["name"] != "Bundles"],
         canonical=cfg["site_base"] + "/", jsonld=site_jsonld(cfg["site_base"], cfg["legal"]), **common))
+    # Editorial landing page: curated existing products with actual source-of-truth prices.
+    open(os.path.join(SITE, "start-here.html"), "w").write(
+        env.get_template("start_here.html").render(
+            store=None, starters=starters,
+            canonical=cfg["site_base"] + "/start-here", **common))
     # ---- 2.0 division and category pages ----
     sb = cfg["site_base"]
     for d in divisions:
@@ -537,7 +556,7 @@ def main():
     open(os.path.join(SITE, "robots.txt"), "w").write("User-agent: *\nDisallow: /\n" if staging else
                                                       "User-agent: *\nAllow: /\nDisallow: /dashboard/\nSitemap: " + cfg["site_base"] + "/sitemap.xml\n")
     if not staging:
-        urls = ([cfg["site_base"] + "/"] + [cfg["site_base"] + d["href"] for d in divisions] + [cfg["site_base"] + c["href"] for d in divisions for c in d["categories"]] +
+        urls = ([cfg["site_base"] + "/", cfg["site_base"] + "/start-here"] + [cfg["site_base"] + d["href"] for d in divisions] + [cfg["site_base"] + c["href"] for d in divisions for c in d["categories"]] +
                 [s["url"] + "/" for s in shops.values()] +
                 [f"{cfg['site_base']}/{shops[p['store']]['path']}/p/{p['slug']}" for p in allp] +
                 [f"{cfg['site_base']}/help/{k}" for k in pages_global if k not in ("thanks", "review")])
