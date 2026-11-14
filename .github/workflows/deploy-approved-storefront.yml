@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved account UX patch: safe Google provider fallback and stale-session recovery (PR #3).
+# Approved storefront patch: clear shared-device basket on sign-out (PR #4).
 
 on:
   push:
