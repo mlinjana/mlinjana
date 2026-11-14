@@ -1,0 +1,64 @@
+name: Self-service verified download renewal
+
+on:
+  push:
+    branches:
+      - chatgpt/self-service-download-renewal-20261114
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  account-browser:
+    runs-on: ubuntu-latest
+    timeout-minutes: 16
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check engine/static/site.js
+      - run: |
+          python -m pip install 'jinja2>=3.1,<4' 'playwright>=1.48,<2'
+          python engine/build_sites.py
+          python engine/check_links.py
+          python -m playwright install --with-deps chromium
+      - run: python tests/download_renewal_smoke.py
+
+  renewal-database:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: fixture
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: fixture-only-secret
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d fixture"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install "psycopg[binary]>=3.2,<4"
+      - name: Verify signed-in-only paid order renewal security
+        env:
+          ISOLATED_POSTGRES_DSN: postgresql://postgres:fixture-only-secret@localhost:5432/fixture
+        run: python tests/check_download_renewal.py
