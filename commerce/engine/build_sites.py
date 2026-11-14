@@ -510,6 +510,13 @@ def main():
 <form class="nf-search" action="/search" method="get" role="search" aria-label="Search from this page"><label for="nf-q">Search all 600 downloads</label>
 <div class="nf-row"><input id="nf-q" name="q" type="search" placeholder="Try invoice, budget or lesson plan"><button class="btn btn-dark" type="submit">Search</button></div></form>
 <p>Or browse <a href="/business/">Business</a>, <a href="/life/">Life</a> or <a href="/education/">Education</a>, go to the <a href="/">home page</a>, or <a href="/help/contact">contact us</a> if you were looking for an order.</p>""", **common))
+    if staging:  # books hub design preview (owner, 14 Nov 2026): preview Worker only, never built for the live site
+        os.makedirs(os.path.join(SITE, "books"), exist_ok=True)
+        for page, fname, title in (("store", "index", "Books"), ("book", "book", "A book page"), ("publish", "publish", "Publish with us"), ("portal", "portal", "Author portal")):
+            open(os.path.join(SITE, "books", fname + ".html"), "w").write(env.get_template("books_preview.html").render(
+                store=None, page=page, page_title=title, canonical=f"{cfg['site_base']}/books/", **common))
+    elif os.path.isdir(os.path.join(SITE, "books")):
+        shutil.rmtree(os.path.join(SITE, "books"))
     open(os.path.join(SITE, "account.html"), "w").write(env.get_template("page.html").render(
         store=None, noindex=True, title="Your account", canonical=f"{cfg['site_base']}/account", body="""
 <div id="acct">

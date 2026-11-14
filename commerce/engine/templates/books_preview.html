@@ -1,0 +1,101 @@
+{% extends "base.html" %}
+{# PREVIEW ONLY (owner, 14 Nov 2026): what a South African books hub could look like. Built only in staging mode, never
+   on the live site. Every book, author, figure and plan here is an example, labelled as such. #}
+{% block title %}{{ page_title }} (preview) | {{ market.name }}{% endblock %}
+{% block head %}<meta name="robots" content="noindex, nofollow">{% endblock %}
+{% macro cover(t, a, c1, c2, lang=None) -%}
+<div class="bk-cover" style="--c1:{{ c1 }};--c2:{{ c2 }}"><span class="bk-cover-t">{{ t }}</span><span class="bk-cover-a">{{ a }}</span>{% if lang %}<span class="bk-lang">{{ lang }}</span>{% endif %}</div>
+{%- endmacro %}
+{% set books = [
+  ("Where the Jacarandas Fall", "Example Author", "#1f3a5f", "#c9952a", "English", "Fiction", "R149", "A family saga across three generations in KwaZulu-Natal."),
+  ("Umama Wami", "Example Author", "#5c2e2e", "#e3b26b", "isiZulu", "Memoir", "R99", "A daughter's letters to her late mother."),
+  ("Somer in die Karoo", "Example Author", "#3d4f3a", "#e9d8a6", "Afrikaans", "Romance", "R119", "Two strangers, one farmhouse, a dry summer."),
+  ("Money Talk for Township Hustlers", "Example Author", "#17243b", "#7fb069", "English", "Business", "R179", "Practical money habits for spaza and side-hustle owners."),
+  ("Izinganekwane: Bedtime Tales", "Example Author", "#6b3fa0", "#f4c95d", "isiXhosa / English", "Children", "R89", "Ten folktales retold for young readers, in two languages."),
+  ("Load-Shedding Love", "Example Author", "#2b2d42", "#ef8354", "English", "Short stories", "R59", "Twelve short stories set in the dark hours."),
+] %}
+{% block main %}
+<div class="bk-flag" role="note"><strong>Preview only.</strong> This is a design preview of a possible future books hub. The books, authors, prices and plans shown are examples, not real listings, and nothing here is for sale.</div>
+<div class="wrap">
+  <nav class="bk-tabs" aria-label="Books hub preview pages">
+    <a href="/books/"{% if page == "store" %} aria-current="page"{% endif %}>Bookshop</a>
+    <a href="/books/book"{% if page == "book" %} aria-current="page"{% endif %}>A book page</a>
+    <a href="/books/publish"{% if page == "publish" %} aria-current="page"{% endif %}>Publish with us</a>
+    <a href="/books/portal"{% if page == "portal" %} aria-current="page"{% endif %}>Author portal</a>
+  </nav>
+
+{% if page == "store" %}
+  <section class="bk-hero">
+    <div><p class="kicker">Mlinjana Books</p><h1>Stories from every corner of South Africa.</h1>
+    <p class="lede">Novels, memoirs, children's books and practical guides by South African writers, in English, isiZulu, isiXhosa, Afrikaans, Sesotho and more. Every title is read and approved by our editors before it goes on sale.</p>
+    <div class="bk-actions"><a class="btn btn-gold" href="#books">Browse books</a><a class="btn btn-light" href="/books/publish">Publish your book</a></div></div>
+    <div class="bk-hero-covers" aria-hidden="true">{% for b in books[:3] %}{{ cover(b[0], b[1], b[2], b[3]) }}{% endfor %}</div>
+  </section>
+  <section class="bk-filters" aria-label="Browse by">
+    <p><strong>Language</strong> {% for l in ["All", "English", "isiZulu", "isiXhosa", "Afrikaans", "Sesotho", "Setswana", "Xitsonga"] %}<span class="chip{% if loop.first %} on{% endif %}">{{ l }}</span>{% endfor %}</p>
+    <p><strong>Genre</strong> {% for g in ["Fiction", "Memoir", "Romance", "Children", "Business", "Poetry", "Faith", "Short stories"] %}<span class="chip">{{ g }}</span>{% endfor %}</p>
+  </section>
+  <section id="books"><header class="sec-head"><p class="kicker">New and noteworthy</p><h2>Editors' picks this month</h2></header>
+    <div class="bk-grid">{% for b in books %}<a class="bk-card" href="/books/book">{{ cover(b[0], b[1], b[2], b[3], b[4]) }}<span class="bk-meta"><small>{{ b[5] }} · eBook</small><strong>{{ b[0] }}</strong><span>{{ b[1] }}</span><b>{{ b[6] }}</b></span></a>{% endfor %}</div>
+  </section>
+  <section class="bk-band"><div><p class="kicker">For writers</p><h2>Written something worth reading?</h2><p>Submit your manuscript, we review it, and once it's approved your book goes on sale here. You choose how you pay: a monthly plan, or nothing upfront and we share each sale.</p></div><a class="btn btn-gold" href="/books/publish">See how publishing works</a></section>
+
+{% elif page == "book" %}
+  {% set b = books[0] %}
+  <div class="bk-book">
+    <div class="bk-book-cover">{{ cover(b[0], b[1], b[2], b[3], b[4]) }}<button type="button" class="btn btn-outline btn-block">Read a free sample</button></div>
+    <div class="bk-book-main"><p class="pp-by">{{ b[5] }} · {{ b[4] }}</p><h1>{{ b[0] }}</h1><p class="bk-by">by <a href="#author">{{ b[1] }}</a></p>
+      <p>{{ b[7] }} This is where the publisher's description of the book appears, written with the author and checked by our editors.</p>
+      <dl class="bk-facts"><div><dt>Format</dt><dd>eBook (EPUB and PDF)</dd></div><div><dt>Length</dt><dd>312 pages (example)</dd></div><div><dt>Language</dt><dd>{{ b[4] }}</dd></div><div><dt>Published</dt><dd>Mlinjana Books</dd></div></dl>
+      <section id="author" class="panel bk-author"><h2>About the author</h2><p>Each author has a profile page with their bio, photo and all their books, so readers can follow them.</p></section>
+      <section class="panel"><h2>Reader reviews</h2><p class="muted">Reviews appear here only from readers who bought the book, after our checks, the same honest-review rule as the rest of the shop.</p></section>
+    </div>
+    <aside class="panel bk-buy"><p class="pp-price"><strong>{{ b[6] }}</strong></p><p class="stock">Instant download after payment</p><button type="button" class="btn btn-primary btn-block btn-lg">Add to basket</button><button type="button" class="btn btn-outline btn-block">Save to favourites</button><p class="small muted">Paid securely through PayFast. The author earns from every sale.</p></aside>
+  </div>
+
+{% elif page == "publish" %}
+  <section class="bk-hero bk-hero-pub"><div><p class="kicker">Publish with Mlinjana Books</p><h1>Your story, in readers' hands.</h1>
+    <p class="lede">Submit your book online, get it reviewed by our editors, and sell it to readers across South Africa. You keep the rights to your work.</p>
+    <a class="btn btn-gold" href="/books/portal">Start a submission</a></div></section>
+  <section><header class="sec-head"><p class="kicker">How it works</p><h2>From manuscript to bookshop in four steps</h2></header>
+    <ol class="bk-steps">
+      <li><b>1</b><h3>Create an author account</h3><p>Sign in with Google or your email, then add your bio and payout details.</p></li>
+      <li><b>2</b><h3>Submit your manuscript</h3><p>Upload your file, cover (or ask for one), description, genre and language.</p></li>
+      <li><b>3</b><h3>Editorial review</h3><p>Our editors check quality, originality and our content rules, and reply with "approved" or notes to fix.</p></li>
+      <li><b>4</b><h3>Go on sale and get paid</h3><p>Approved books go live. You see every sale in your portal and are paid monthly.</p></li>
+    </ol></section>
+  <section><header class="sec-head"><p class="kicker">Choose your plan</p><h2>Two ways to publish</h2></header>
+    <div class="bk-plans">
+      <div class="panel bk-plan"><h3>Share per sale</h3><p class="bk-price">R0 <small>upfront</small></p><ul class="checks"><li>No monthly fee</li><li>We keep <strong>[x]%</strong> of each sale, you keep the rest</li><li>Best if you're publishing your first book</li></ul><a class="btn btn-outline btn-block" href="/books/portal">Choose this plan</a></div>
+      <div class="panel bk-plan bk-plan-hi"><span class="bk-tag">For regular writers</span><h3>Author subscription</h3><p class="bk-price">R[xx] <small>a month</small></p><ul class="checks"><li>You keep <strong>[higher]%</strong> of each sale</li><li>Unlimited titles</li><li>Author page, promotion in the newsletter, sales reports</li></ul><a class="btn btn-gold btn-block" href="/books/portal">Choose this plan</a></div>
+    </div>
+    <p class="muted small">Percentages and prices are placeholders for you to decide. PayFast's payment fees apply to every sale.</p></section>
+
+{% elif page == "portal" %}
+  <section class="bk-portal">
+    <aside class="panel bk-side"><p class="kicker">Author portal</p><strong>Example Author</strong><span class="muted small">Share-per-sale plan</span>
+      <nav><a aria-current="page">Dashboard</a><a>My books</a><a>New submission</a><a>Sales &amp; payouts</a><a>Profile</a></nav></aside>
+    <div>
+      <h1>Welcome back</h1>
+      <div class="bk-stats"><div class="panel"><small>Books on sale</small><strong>2</strong></div><div class="panel"><small>Sales this month</small><strong>14</strong></div><div class="panel"><small>Earned this month</small><strong>R1 386</strong></div><div class="panel"><small>Next payout</small><strong>1 Dec</strong></div></div>
+      <p class="muted small">All figures on this page are examples.</p>
+      <section class="panel"><h2>My books</h2>
+        <table class="bk-table"><thead><tr><th>Title</th><th>Status</th><th>Price</th><th>Sales</th></tr></thead><tbody>
+          <tr><td>Where the Jacarandas Fall</td><td><span class="bk-st ok">On sale</span></td><td>R149</td><td>9</td></tr>
+          <tr><td>Load-Shedding Love</td><td><span class="bk-st ok">On sale</span></td><td>R59</td><td>5</td></tr>
+          <tr><td>Untitled poetry collection</td><td><span class="bk-st wait">In review</span></td><td>—</td><td>—</td></tr>
+          <tr><td>Draft novel</td><td><span class="bk-st fix">Changes requested</span></td><td>—</td><td>—</td></tr>
+        </tbody></table></section>
+      <section class="panel"><h2>New submission</h2>
+        <form class="lookup bk-form" onsubmit="return false"><label>Book title</label><input type="text" placeholder="Your book's title">
+          <label>Language</label><select><option>English</option><option>isiZulu</option><option>isiXhosa</option><option>Afrikaans</option><option>Sesotho</option></select>
+          <label>Genre</label><select><option>Fiction</option><option>Memoir</option><option>Children</option><option>Business</option><option>Poetry</option></select>
+          <label>Short description</label><textarea rows="3" placeholder="What is the book about?"></textarea>
+          <label>Manuscript file</label><input type="file" disabled><span class="small muted">Word, EPUB or PDF (the upload is switched off in this preview)</span>
+          <label class="bk-check"><input type="checkbox"> I wrote this work and own the rights to publish it</label>
+          <button class="btn btn-primary" type="button" disabled>Submit for review (preview)</button></form></section>
+    </div>
+  </section>
+{% endif %}
+</div>
+{% endblock %}
