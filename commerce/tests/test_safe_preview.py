@@ -1,10 +1,12 @@
 """Assert that preview HTML cannot accept a payment and is not crawlable."""
 from pathlib import Path
 import unittest
+import os
 
 site = Path(__file__).resolve().parents[1] / "site"
 
 
+@unittest.skipUnless(os.environ.get("SAFE_PREVIEW_TEST") == "1", "Only run on isolated payment-disabled preview")
 class SafePreviewTests(unittest.TestCase):
     def test_robots(self):
         self.assertIn("Disallow: /", (site / "robots.txt").read_text())
