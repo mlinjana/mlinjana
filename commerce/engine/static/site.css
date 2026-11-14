@@ -795,3 +795,25 @@ dialog:not([open]){display:none!important}
 @media(max-width:950px){.task-links{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:520px){.task-links{grid-template-columns:1fr 1fr;gap:9px}.task-links a{padding:14px 12px;min-height:136px}.task-links strong{font-size:14px}.task-links span{font-size:12px}}
 @media(prefers-reduced-motion:reduce){.task-links a{transition:none}.task-links a:hover{transform:none}}
+
+/* First 100 Customers: catalogue-backed editorial starter landing page. */
+.starter-promo{margin:28px 0;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:28px;border-radius:var(--r-lg);background:var(--brand-l);border:1px solid var(--line)}
+.starter-promo h2{margin:4px 0 8px;line-height:1.15}
+.starter-promo p:last-child{color:var(--muted);max-width:720px;line-height:1.55;margin:0}
+.starter-promo .btn{flex:0 0 auto}
+.starter-page{padding-bottom:42px}
+.starter-intro{max-width:780px;padding:36px 0 22px}
+.starter-intro h1{margin:8px 0 16px;line-height:1.12;font-size:clamp(30px,4vw,48px)}
+.starter-intro>p{line-height:1.65}
+.starter-intro .muted{margin-top:12px}
+.starter-grid{display:grid;gap:20px}
+.starter-item{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(220px,0.6fr);align-items:center;gap:28px;padding:22px;border-radius:var(--r-lg);background:#fff;border:1px solid var(--line)}
+.starter-copy h2{font-size:clamp(22px,2.4vw,32px);margin:7px 0 12px;line-height:1.15}
+.starter-copy>p:not(.kicker){font-size:15px;line-height:1.65;color:var(--muted);max-width:560px}
+.starter-copy .btn{margin-top:16px}
+.starter-card{max-width:340px;width:100%;justify-self:center}
+.starter-card .card{height:100%}
+.starter-bottom{margin-top:30px;padding:25px;border:1px solid var(--line);background:var(--brand-l);border-radius:var(--r-lg)}
+.starter-bottom h2{margin:0 0 8px}.starter-bottom p{color:var(--muted);margin:0 0 16px;line-height:1.6}
+@media(max-width:850px){.starter-item{grid-template-columns:minmax(0,1fr) minmax(200px,.8fr)}.starter-promo{flex-direction:column;align-items:flex-start}}
+@media(max-width:620px){.starter-item{grid-template-columns:1fr;gap:18px;padding:18px}.starter-card{justify-self:start;max-width:340px}.starter-intro{padding:22px 0}.starter-promo{padding:18px}.starter-promo .btn{max-width:100%;white-space:normal}}
