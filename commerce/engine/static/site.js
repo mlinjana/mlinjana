@@ -77,6 +77,19 @@
     },
     user: () => (acct.session() || {}).user || null,
   };
+  // OAuth errors can arrive in the URL fragment or query string. Show a safe,
+  // actionable message and clear the error from browser history.
+  const authHash = new URLSearchParams(location.hash.replace(/^#/, ""));
+  const authQuery = new URLSearchParams(location.search);
+  const authReturnError = authHash.has("error") || authQuery.has("error");
+  if (authReturnError && location.pathname === "/account") {
+    const clean = new URL(location.href);
+    clean.hash = "";
+    clean.searchParams.delete("error");
+    clean.searchParams.delete("error_code");
+    clean.searchParams.delete("error_description");
+    history.replaceState(null, "", clean.pathname + clean.search);
+  }
   // returning from Google or the emailed link: tokens arrive in the address after "#"
   if (location.hash.includes("access_token=")) {
     const h = new URLSearchParams(location.hash.slice(1));
@@ -84,7 +97,7 @@
     history.replaceState(null, "", location.pathname + location.search);
   }
   if (acct.session() && !acct.user()) {
-    acct.api("/auth/v1/user").then((u) => { const s = acct.session(); if (s) { s.user = { id: u.id, email: u.email, name: (u.user_metadata || {}).full_name || (u.user_metadata || {}).name || "" }; acct.save(s); } document.dispatchEvent(new Event("mls:account")); }).catch(() => {});
+    acct.api("/auth/v1/user").then((u) => { const s = acct.session(); if (s) { s.user = { id: u.id, email: u.email, name: (u.user_metadata || {}).full_name || (u.user_metadata || {}).name || "" }; acct.save(s); } document.dispatchEvent(new Event("mls:account")); }).catch(() => { acct.clear(); document.dispatchEvent(new Event("mls:account")); });
   }
   const setAccountLinks = () => {
     const u = acct.user();
@@ -548,9 +561,34 @@
     };
     document.addEventListener("mls:account", () => (acct.user() ? showIn() : showOut()));
     document.addEventListener("mls:favs", () => acct.user() && showIn());
-    if (acct.user()) showIn(); else if (!acct.session()) showOut();
-    $("#acct-google").addEventListener("click", () => {
-      location.href = `${SB}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(here)}`;
+    if (acct.user()) showIn(); else showOut(); // invalid or unresolved sessions must never leave a blank page
+    const googleMsg = $("#acct-google-msg");
+    if (authReturnError) {
+      googleMsg.className = "msg err";
+      googleMsg.textContent = "Sign-in could not be completed. Please try again or use the email sign-in link below.";
+    }
+    $("#acct-google").addEventListener("click", async () => {
+      const btn = $("#acct-google");
+      btn.disabled = true;
+      googleMsg.className = "msg";
+      googleMsg.textContent = "Checking Google sign-in…";
+      try {
+        // GoTrue exposes only provider availability here, never provider secrets.
+        const r = await fetch(`${SB}/auth/v1/settings`, { headers: { apikey: SBKEY } });
+        if (!r.ok) throw new Error("settings unavailable");
+        const settings = await r.json();
+        if (settings.external?.google !== true) {
+          googleMsg.className = "msg err";
+          googleMsg.textContent = "Google sign-in is temporarily unavailable. Please use the email sign-in link below.";
+          btn.disabled = false;
+          return;
+        }
+        location.href = `${SB}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(here)}`;
+      } catch (e) {
+        googleMsg.className = "msg err";
+        googleMsg.textContent = "We couldn't connect to Google sign-in. Please try again or sign in by email instead.";
+        btn.disabled = false;
+      }
     });
     $("#acct-email-form").addEventListener("submit", async (e) => {
       e.preventDefault();
