@@ -124,9 +124,13 @@
     if (!u) return;
     try {
       const server = (await acct.api("/rest/v1/account_favourites?select=product_id&order=created_at.desc")).map((x) => x.product_id);
+      // The user may have signed out or switched accounts while the request was in flight.
+      // Never repopulate the shared device with a previous customer's favourites.
+      if (acct.user()?.id !== u.id) return;
       const local = store.get(FKEY, []);
       const toAdd = local.filter((x) => !server.includes(x));
       if (toAdd.length) await acct.api("/rest/v1/account_favourites", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" }, body: JSON.stringify(toAdd.map((product_id) => ({ user_id: u.id, product_id }))) });
+      if (acct.user()?.id !== u.id) return;
       store.set(FKEY, [...new Set([...local, ...server])].slice(0, 500));
       syncFavs();
       document.dispatchEvent(new Event("mls:favs"));
@@ -615,6 +619,11 @@
       // sign-out so another person using this browser cannot inherit their cart.
       acct.clear();
       setBasket([]);
+      // Favourites are backed by the signed-in account. Remove only the device
+      // copy, not the server records, so they reappear after the same user signs in.
+      store.set(FKEY, []);
+      syncFavs();
+      document.dispatchEvent(new Event("mls:favs"));
       if (dlg && dlg.open) dlg.close();
       const checkoutEmail = $("#bk-email");
       if (checkoutEmail) checkoutEmail.value = "";
