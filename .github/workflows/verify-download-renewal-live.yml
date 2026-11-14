@@ -23,7 +23,7 @@ jobs:
             assert r.status == 200
             html=r.read(800000).decode("utf-8","replace")
           assert 'id="acct-download-msg"' in html, "Live account missing renewal feedback"
-          m=re.search(r'<script[^>]+src="([^"]*site\\.js[^"]*)"',html)
+          m=re.search(r'<script[^>]+src="([^"]*site\.js[^"]*)"',html)
           assert m, "Site JS not found"
           with urlopen(Request(urljoin(base,m.group(1)),headers={"User-Agent":"Mlinjana-ReadOnly-Renewal-Check/1.0"}),timeout=20) as r:
             js=r.read().decode("utf-8","replace")
