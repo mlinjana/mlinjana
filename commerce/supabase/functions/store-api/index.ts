@@ -466,7 +466,7 @@ async function lookup(req: Request) {
 
 async function track(req: Request) {
   const b = await req.json().catch(() => ({}));
-  const type = ["page_view", "product_view", "checkout_start"].includes(b.type) ? b.type : null;
+  const type = ["page_view", "product_view", "basket_add", "checkout_start", "checkout_handoff", "checkout_error"].includes(b.type) ? b.type : null;
   if (!type) return json({ ok: false }, 400);
   let host: string | null = null;
   try { host = b.ref ? new URL(b.ref).hostname.slice(0, 120) : null; } catch { host = null; }
