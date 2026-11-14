@@ -611,7 +611,18 @@
     });
     $("#acct-signout").addEventListener("click", async () => {
       try { await acct.api("/auth/v1/logout", { method: "POST" }); } catch (e) {}
-      acct.clear(); setAccountLinks(); showOut();
+      // The basket is device-local, not tied to the signed-in user. Clear it at
+      // sign-out so another person using this browser cannot inherit their cart.
+      acct.clear();
+      setBasket([]);
+      if (dlg && dlg.open) dlg.close();
+      const checkoutEmail = $("#bk-email");
+      if (checkoutEmail) checkoutEmail.value = "";
+      const checkoutMsg = $("#bk-msg");
+      if (checkoutMsg) { checkoutMsg.textContent = ""; checkoutMsg.className = "msg"; }
+      document.dispatchEvent(new Event("mls:account"));
+      setAccountLinks();
+      showOut();
     });
     $("#acct-delete").addEventListener("click", async () => {
       if (!confirm("Delete your account? This removes your sign-in, name and saved favourites. Your paid orders stay on record for tax purposes, and you can still use your download links.")) return;
