@@ -65,6 +65,10 @@ def main():
                     if url.startswith(base + "/"):
                         return route.continue_()
                     if url == API + "/store-api/checkout":
+                        if route.request.method == "OPTIONS":
+                            return route.fulfill(status=204, headers={"access-control-allow-origin": "*",
+                                "access-control-allow-methods": "POST, OPTIONS",
+                                "access-control-allow-headers": "content-type"})
                         calls.append(route.request.post_data_json)
                         if mode == "failure":
                             return route.fulfill(status=503, headers={"access-control-allow-origin": "*", "content-type": "application/json"},
