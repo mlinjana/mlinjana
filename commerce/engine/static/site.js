@@ -148,12 +148,58 @@
   const tierPrice = (price, lic) => (lic === "team" ? Math.round(price * 2.5) : price);
   const LIC_LABEL = { standard: "Standard licence", team: "Team licence (up to 10 people)" };
   const chosenLicence = () => { const r = document.querySelector("input[name=licence]:checked"); return r && r.value === "team" ? "team" : "standard"; };
-  const getBasket = () => store.get(BKEY, []).filter((x) => typeof x === "string" && /^[A-Z]{2,5}-\d{3,4}(:team)?$/.test(x)).slice(0, 25);
-  const setBasket = (a) => {
-    const m = new Map();
-    a.forEach((e) => { m.delete(idOf(e)); m.set(idOf(e), e); }); // the latest licence choice for a product wins
-    store.set(BKEY, [...m.values()].slice(0, 25)); syncBasket();
+  const validBasketEntry = (x) => typeof x === "string" && /^[A-Z]{2,5}-\d{3,4}(:team)?$/.test(x);
+  const getBasket = () => store.get(BKEY, []).filter(validBasketEntry).slice(0, 25);
+  // Profile baskets are private to auth.uid() in Supabase. Guest baskets stay on
+  // this device until sign-in; signing out clears the local view, not the account.
+  let basketOwnerId = null, basketLoadSerial = 0, basketSaveChain = Promise.resolve();
+  const persistProfileBasket = () => {
+    const userId = acct.user()?.id;
+    if (!userId || basketOwnerId !== userId) return;
+    const items = getBasket();
+    basketSaveChain = basketSaveChain.catch(() => {}).then(async () => {
+      if (acct.user()?.id !== userId || basketOwnerId !== userId) return;
+      try {
+        await acct.api("/rest/v1/account_baskets?on_conflict=user_id", {
+          method: "POST", headers: { Prefer: "resolution=merge-duplicates,return=minimal" },
+          body: JSON.stringify({ user_id: userId, items })
+        });
+      } catch (e) {
+        if (acct.user()?.id === userId) toast("Couldn't sync your basket. Check your connection and try changing an item.");
+      }
+    });
   };
+  const setBasket = (a, persist = true) => {
+    const m = new Map();
+    a.filter(validBasketEntry).forEach((e) => { m.delete(idOf(e)); m.set(idOf(e), e); }); // the latest licence choice for a product wins
+    store.set(BKEY, [...m.values()].slice(0, 25));
+    syncBasket();
+    if (persist) persistProfileBasket();
+  };
+  const loadProfileBasket = async () => {
+    const userId = acct.user()?.id;
+    if (!userId || basketOwnerId === userId) return;
+    const serial = ++basketLoadSerial;
+    // Do not push any guest items to an account until its saved basket is loaded.
+    basketOwnerId = null;
+    try {
+      const rows = await acct.api("/rest/v1/account_baskets?select=items");
+      if (serial !== basketLoadSerial || acct.user()?.id !== userId) return;
+      // On first sign-in, keep items intentionally added as a guest and combine
+      // them with the saved basket; the existing account licence takes priority.
+      const saved = Array.isArray(rows?.[0]?.items) ? rows[0].items.filter(validBasketEntry) : [];
+      const local = getBasket();
+      basketOwnerId = userId;
+      setBasket([...local, ...saved]);
+      if (dlg?.open) renderBasket().catch(() => {});
+    } catch (e) {
+      if (serial !== basketLoadSerial || acct.user()?.id !== userId) return;
+      basketOwnerId = null; // leave existing basket untouched; don't overwrite a remote basket on failed read
+      toast("Couldn't load your saved basket. Refresh to retry.");
+    }
+  };
+  document.addEventListener("mls:account", loadProfileBasket);
+  setTimeout(loadProfileBasket, 0);
   const syncBasket = () => {
     const b = getBasket().map(idOf);
     $$(".bk-count").forEach((c) => { c.hidden = !b.length; c.textContent = b.length; });
@@ -614,9 +660,12 @@
       } catch (err) { out.className = "msg err"; out.textContent = "Couldn't save. Please try again."; }
     });
     $("#acct-signout").addEventListener("click", async () => {
+      // Finish queued profile-basket writes before ending this session. Do not
+      // delete the saved profile cart; only clear the shared browser copy.
+      await basketSaveChain.catch(() => {});
       try { await acct.api("/auth/v1/logout", { method: "POST" }); } catch (e) {}
-      // The basket is device-local, not tied to the signed-in user. Clear it at
-      // sign-out so another person using this browser cannot inherit their cart.
+      basketOwnerId = null;
+      ++basketLoadSerial; // ignore any late account-cart response after sign-out
       acct.clear();
       setBasket([]);
       // Favourites are backed by the signed-in account. Remove only the device
