@@ -1,0 +1,44 @@
+name: Verify live saved-account baskets
+on:
+  push:
+    branches: [chatgpt/live-frontend-release-20261114]
+    paths: [.github/workflows/verify-account-basket-live.yml]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - name: Verify live JS and anonymous access boundaries
+        run: |
+          python - <<'PY'
+          from urllib.request import Request,urlopen
+          from urllib.error import HTTPError
+          from urllib.parse import urljoin
+          import re
+          url="https://mlinjanastudios.com"
+          with urlopen(Request(url+"/account",headers={"User-Agent":"Mlinjana-Basket-ReadOnly-Check/1.0"}),timeout=20) as r:
+            assert r.status==200
+            html=r.read(800000).decode("utf-8","replace")
+          match=re.search(r'<script[^>]+src="([^"]*site\.js[^"]*)"',html)
+          assert match, "Could not find site JS"
+          js_url=urljoin(url,match.group(1))
+          with urlopen(Request(js_url,headers={"User-Agent":"Mlinjana-Basket-ReadOnly-Check/1.0"}),timeout=20) as r:
+            assert r.status==200
+            js=r.read().decode("utf-8","replace")
+          assert "/rest/v1/account_baskets?select=items" in js, "Profile-basket loading missing"
+          assert "/rest/v1/account_baskets?on_conflict=user_id" in js, "Profile-basket saving missing"
+          assert "basketOwnerId = null" in js, "Sign-out account isolation missing"
+          print("PASS: current live site serves account basket load/save and signout isolation")
+          endpoint="https://mrunxptxavtompcnegkr.supabase.co/rest/v1/account_baskets?select=items"
+          req=Request(endpoint,headers={"apikey":"sb_publishable_ubE3COlKrVn-WKscBRbvJw_M6rxT6kM","User-Agent":"Mlinjana-Basket-ReadOnly-Check/1.0"})
+          try:
+            with urlopen(req,timeout=20) as r:
+              raise AssertionError("Anonymous request unexpectedly succeeded: HTTP "+str(r.status))
+          except HTTPError as e:
+            print("Unauthenticated account basket endpoint HTTP",e.code)
+            assert e.code in (401,403), "Unexpected response from profile basket endpoint"
+          print("PASS: anonymous users cannot list private profile baskets")
+          PY
