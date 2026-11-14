@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved storefront patch: clear local favourites without deleting account records on logout (PR #5).
+# Approved profile basket rollout: account-owned saved cart and RLS migration applied (PR #6).
 
 on:
   push:
