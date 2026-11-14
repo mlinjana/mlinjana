@@ -424,6 +424,10 @@ def main():
         return out[:n]
     # Five catalogue-backed editorial starting points; fail the build if an item disappears.
     # These are individual products, not invented bundles or alleged best-sellers.
+    # standardised featured pictures (engine/featured_images.py): real pages on one ivory background
+    for p in allp:
+        if os.path.exists(os.path.join(ROOT, "engine", "static", "brand", "featured", p["id"] + ".webp")):
+            p["images"]["featured"] = f"assets/brand/featured/{p['id']}.webp"
     starter_specs = [
         ("ABL-009", "Small businesses", "Get clearer stock records", "An editable inventory spreadsheet for keeping track of stock information."),
         ("BZW-003", "Freelancers and small teams", "Make invoicing easier", "An invoice template and register for recording customer invoices."),
