@@ -544,8 +544,8 @@
         if (!r.ok) throw new Error(d.error || "Not found");
         out.className = "status dl-ready";
         out.innerHTML = `<p class="dl-head">✓ Order ${esc(d.ref)} found.</p><ul class="dl-list">` + d.items.map((x) => `<li><span>${esc(x.name)}<small>${esc(LIC_LABEL[x.licence === "team" ? "team" : "standard"])}</small></span>` +
-          (x.download ? `<a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a>` : `<a class="btn btn-outline inline" href="/help/contact?order=${encodeURIComponent(x.ref)}">Link expired: ask us</a>`) + `</li>`).join("") + `</ul>` +
-          `<p class="small muted">Links last 7 days and 5 downloads. If yours has run out, contact us with the order number and we'll send a new one.</p>`;
+          (x.download ? `<a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a>` : `<a class="btn btn-outline inline" href="/account">Sign in to renew</a>`) + `</li>`).join("") + `</ul>` +
+          `<p class="small muted">Download links last 7 days or 5 downloads. For expired links, <a href="/account">sign in using your verified checkout email</a> and choose Renew &amp; download in Your orders. If the purchase doesn't appear there, <a href="/help/contact?order=${encodeURIComponent(d.ref)}">contact us</a>.</p>`;
       } catch (err) { out.className = "msg err"; out.textContent = err.message; }
       btn.disabled = false;
     });
