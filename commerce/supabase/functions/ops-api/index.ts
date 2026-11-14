@@ -269,6 +269,25 @@ async function dailyReport(force = false) {
 
 // ------------------------------------------------------------------ admin
 async function adminSummary() {
+  // First-customer funnel: privacy-light event counts, not unique visitors.
+  // Count one real payment per single order OR paid basket (never basket line-items twice).
+  const since30 = new Date(Date.now() - 30 * 86400_000).toISOString();
+  const eventTypes = ["page_view", "product_view", "basket_add", "checkout_start", "checkout_handoff", "checkout_error"];
+  const eventCounts = await Promise.all(eventTypes.map(async (type) => {
+    const { count, error } = await db.from("events").select("id", { count: "exact", head: true })
+      .eq("type", type).gte("ts", since30);
+    if (error) throw error;
+    return [type, count ?? 0];
+  }));
+  const [paidSingles, paidBaskets] = await Promise.all([
+    db.from("orders").select("id", { count: "exact", head: true })
+      .eq("status", "paid").eq("provider_mode", "live").is("basket_id", null).gte("paid_at", since30),
+    db.from("baskets").select("id", { count: "exact", head: true })
+      .eq("status", "paid").eq("provider_mode", "live").gte("paid_at", since30),
+  ]);
+  if (paidSingles.error || paidBaskets.error) throw paidSingles.error || paidBaskets.error;
+  const funnel30 = { window_days: 30, events: Object.fromEntries(eventCounts),
+    live_paid_transactions: (paidSingles.count ?? 0) + (paidBaskets.count ?? 0) };
   const [stores, products, listings, orders, jobs, reports, costs, msgs, work, kill] = await Promise.all([
     db.from("stores").select("*").order("id"),
     fetchAll(() => db.from("products").select("id,store_id,title,status,active,price_zar_cents").order("id")).then((data) => ({ data })),
@@ -282,7 +301,7 @@ async function adminSummary() {
     cfg("kill_switch"),
   ]);
   return { stores: stores.data, products: products.data, listings: listings.data, orders: orders.data, jobs: jobs.data,
-    reports: reports.data, costs: costs.data, messages: msgs.data, work: work.data, kill_switch: kill, budgets: await cfg("budgets"),
+    funnel30, reports: reports.data, costs: costs.data, messages: msgs.data, work: work.data, kill_switch: kill, budgets: await cfg("budgets"),
     payment: { ...(await cfg("payment")), sandbox: undefined } };
 }
 

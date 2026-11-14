@@ -1,0 +1,121 @@
+name: Commerce storefront validation
+
+on:
+  pull_request:
+    paths:
+      - 'commerce/**'
+      - '.github/workflows/commerce-validate.yml'
+  push:
+    branches:
+      - 'chatgpt/first-customers-phase1-20261114'
+    paths:
+      - 'commerce/**'
+      - '.github/workflows/commerce-validate.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install build dependency
+        run: python -m pip install 'jinja2>=3.1,<4'
+      - name: Compile Python files
+        run: python -m compileall -q engine
+      - name: Build static storefront
+        run: python engine/build_sites.py
+      - name: Check generated internal links
+        run: python engine/check_links.py
+      - name: Validate first-customer storefront changes
+        run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Install browser test runner
+        run: |
+          python -m pip install 'playwright>=1.48,<2'
+          python -m playwright install --with-deps chromium
+      - name: Smoke-test mobile tablet and desktop customer journeys
+        env:
+          BROWSER_ARTIFACTS: ${{ runner.temp }}/commerce-browser-qa
+        run: python tests/browser_smoke.py
+      - name: Mock checkout recovery and payment handoff (no live API)
+        run: python tests/checkout_contract_browser.py
+      - name: Upload browser QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: commerce-browser-qa
+          path: ${{ runner.temp }}/commerce-browser-qa
+          if-no-files-found: ignore
+          retention-days: 7
+
+  migration-fixture:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_USER: ci
+          POSTGRES_PASSWORD: ci_only_disposable
+          POSTGRES_DB: migration_fixture
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ci -d migration_fixture"
+          --health-interval 5s
+          --health-timeout 3s
+          --health-retries 10
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install isolated database driver
+        run: python -m pip install 'psycopg[binary]>=3.2,<4'
+      - name: Validate 011 event constraint on disposable Postgres
+        env:
+          ISOLATED_POSTGRES_DSN: postgresql://ci:ci_only_disposable@localhost:5432/migration_fixture
+        run: python tests/check_funnel_migration.py
+
+  safe-preview:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install static builder
+        run: python -m pip install 'jinja2>=3.1,<4'
+      - name: Generate payment-disabled preview configuration
+        run: python tests/prepare_safe_preview.py
+      - name: Build isolated preview
+        run: python engine/build_sites.py
+      - name: Validate noindex and absence of checkout form
+        env:
+          SAFE_PREVIEW_TEST: "1"
+        run: python tests/test_safe_preview.py
+      - name: Check preview links
+        run: python engine/check_links.py
+      - name: Upload non-deployed preview files for review
+        uses: actions/upload-artifact@v4
+        with:
+          name: commerce-safe-preview-site
+          path: commerce/site
+          retention-days: 7
+          if-no-files-found: error

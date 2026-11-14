@@ -67,8 +67,21 @@
     const real = O.filter((o) => o.provider_mode === "live" && ["paid", "refunded"].includes(o.status));
     const sb = O.filter((o) => o.provider_mode === "sandbox" && o.status === "paid");
     const g = real.reduce((a, o) => a + (o.gross_cents || 0), 0), f = real.reduce((a, o) => a + (o.fee_cents || 0), 0), rf = O.reduce((a, o) => a + (o.refunded_cents || 0), 0);
-    $("#salescards").innerHTML = [["Real paid orders", real.length], ["Gross sales", R(g)], ["Refunds", R(rf)], ["Payment fees", R(f)], ["Net proceeds", R(g - rf - f)], ["Sandbox test orders", sb.length]]
+    $("#salescards").innerHTML = [["Paid product rows (including owner tests)", real.length], ["Gross sales", R(g)], ["Refunds", R(rf)], ["Payment fees", R(f)], ["Net proceeds", R(g - rf - f)], ["Sandbox test orders", sb.length]]
       .map(([k, v]) => `<div class="card"><div class="small muted">${k}</div><div class="kpi">${v}</div></div>`).join("");
+    const fn = d.funnel30;
+    if (fn) {
+      const labels = [
+        ["page_view", "Other page views"], ["product_view", "Product views"],
+        ["basket_add", "Items added to basket"], ["checkout_start", "Checkout starts"],
+        ["checkout_handoff", "PayFast handoffs"], ["checkout_error", "Checkout errors"]
+      ];
+      $("#funnelcards").innerHTML = labels.map(([k, label]) =>
+        `<div class="card"><div class="small muted">${esc(label)}</div><div class="kpi">${Number(fn.events?.[k] || 0).toLocaleString("en-ZA")}</div></div>`
+      ).join("") + `<div class="card"><div class="small muted">Verified live payments (including owner tests)</div><div class="kpi">${Number(fn.live_paid_transactions || 0).toLocaleString("en-ZA")}</div></div>`;
+    } else {
+      $("#funnelcards").innerHTML = '<div class="card muted">The deployed operations API does not yet include conversion data.</div>';
+    }
     $("#orders tbody").innerHTML = O.slice(0, 50).map((o) => `<tr><td>${esc(o.ref)}</td><td>${esc(o.store_id)}</td><td>${esc(o.product_id)}</td><td>${esc(o.status)}</td><td>${esc(o.provider_mode)}</td><td>${o.gross_cents != null ? R(o.gross_cents) : "—"}</td><td>${o.fee_cents != null ? R(o.fee_cents) : "—"}</td><td>${o.net_cents != null ? R(o.net_cents) : "—"}</td><td class="small">${esc((o.paid_at || o.created_at || "").slice(0, 16).replace("T", " "))}</td></tr>`).join("") || `<tr><td colspan=9 class="muted">No orders yet.</td></tr>`;
     $("#jobs tbody").innerHTML = (d.jobs || []).map((j) => `<tr><td>${esc(j.job)}</td><td class="${j.status === "ok" ? "ok" : j.status === "error" ? "bad" : "warn"}">${esc(j.status)}</td><td class="small">${esc(j.started_at.slice(0, 16).replace("T", " "))}</td><td class="small">${esc(j.error || JSON.stringify(j.detail || {})).slice(0, 220)}</td></tr>`).join("") || `<tr><td colspan=4 class="muted">No job runs yet.</td></tr>`;
     $("#costs-t tbody").innerHTML = (d.costs || []).map((c) => `<tr><td>${esc(c.incurred_on)}</td><td>${esc(c.category)}</td><td>${esc(c.description)}</td><td>${esc(c.currency)} ${(c.amount_cents / 100).toFixed(2)}</td><td>${esc(c.basis)}</td></tr>`).join("") || `<tr><td colspan=5 class="muted">No costs recorded.</td></tr>`;

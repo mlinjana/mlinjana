@@ -197,8 +197,9 @@
           list.unshift({ ref: d.ref, url: d.fields.return_url, at: Date.now() });
           localStorage.setItem("mls:orders", JSON.stringify(list.slice(0, 20)));
         } catch (e) {}
+        ids.forEach((i) => beacon({ store: STORE, type: "checkout_handoff", product_id: idOf(i), path: location.pathname }));
         f.submit();
-      } catch (err) { msg.textContent = err.message; msg.className = "msg err"; btn.disabled = false; }
+      } catch (err) { ids.forEach((i) => beacon({ store: STORE, type: "checkout_error", product_id: idOf(i), path: location.pathname })); msg.textContent = err.message; msg.className = "msg err"; btn.disabled = false; }
     });
   }
   $$("[data-open-basket]").forEach((b) => b.addEventListener("click", () => openBasket(false)));
@@ -226,7 +227,10 @@
       e.preventDefault();
       const id = a.dataset.add, b = getBasket();
       const e2 = entry(id, id === PID ? chosenLicence() : "standard"), had = b.includes(e2);
-      if (!had) setBasket([...b, e2]); // replaces the same product with another licence
+      if (!had) {
+         setBasket([...b, e2]); // replaces the same product with another licence
+         beacon({ store: STORE, type: "basket_add", product_id: id, path: location.pathname });
+       }
       if (!calm) { a.classList.remove("pop"); void a.offsetWidth; a.classList.add("pop"); }
       bump(".bk-count");
       if (a.hasAttribute("data-open")) openBasket(true);
