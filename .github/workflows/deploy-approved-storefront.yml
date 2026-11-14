@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved production retry after the GitHub CLOUDFLARE_API_TOKEN secret was configured.
+# Approved account UX patch: safe Google provider fallback and stale-session recovery (PR #3).
 
 on:
   push:
