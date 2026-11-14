@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved storefront patch: clear shared-device basket on sign-out (PR #4).
+# Approved storefront patch: clear local favourites without deleting account records on logout (PR #5).
 
 on:
   push:
