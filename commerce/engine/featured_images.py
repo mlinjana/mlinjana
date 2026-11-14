@@ -20,6 +20,10 @@ SOURCES = {
     "GLD-001": ("preview", 1), "GLD-002": ("preview", 1), "GLD-014": ("preview", 1),
 }
 BUNDLES = {"BZW-020": ["BZW-003", "BZW-004", "BZW-005"], "ABL-020": ["ABL-009", "ABL-010", "ABL-011"], "GLD-028": ["GLD-001", "GLD-002", "GLD-014"]}
+SOURCES.update({"ILP-001": ("preview", 1), "PLD-012": ("pdf", 3), "CHK-001": ("preview", 1), "HSP-001": ("preview", 1)})
+# home-page collection cards: back-left, back-right, front (real products from each collection)
+COLLECTIONS = {"business": ["ABL-009", "BZW-001", "BZW-003"], "life": ["ILP-001", "PLD-012", "ABL-025"],
+               "education": ["CHK-001", "HSP-001", "CHK-011"]}
 FEATURED = ["ABL-009", "BZW-003", "ABL-025", "CHK-011", "BZW-001", "FLW-023", "BZW-020", "ABL-020", "GLD-028"]
 
 
@@ -102,8 +106,23 @@ def bundle(pid):
     return c
 
 
+def collection(ids, w=1200, h=560):
+    """Wide card picture for a collection: two sheets behind, one in front, on the ivory background."""
+    c = Image.linear_gradient("L").resize((w, h)).point(lambda v: 255 - v // 14)
+    c = Image.composite(Image.new("RGB", (w, h), (246, 241, 232)), Image.new("RGB", (w, h), (236, 229, 216)), c)
+    for m, x, y, ang in ((ids[0], int(w * 0.04), int(h * 0.12), 4), (ids[1], int(w * 0.52), int(h * 0.10), -4)):
+        card, mask = sheet(source(m), int(w * 0.44), int(h * 0.80))
+        drop(c, card, mask, x, y, ang)
+    card, mask = sheet(source(ids[2]), int(w * 0.50), int(h * 0.86))
+    drop(c, card, mask, (w - card.width) // 2, int(h * 0.12))
+    return c
+
+
 def main():
     os.makedirs(OUT, exist_ok=True)
+    for slug, ids in COLLECTIONS.items():
+        collection(ids).save(os.path.join(OUT, f"collection-{slug}.webp"), quality=86)
+        print("collection", slug)
     for pid in FEATURED:
         im = bundle(pid) if pid in BUNDLES else single(pid)
         im.save(os.path.join(OUT, f"{pid}.webp"), quality=86)

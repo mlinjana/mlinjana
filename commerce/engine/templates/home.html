@@ -115,8 +115,9 @@
     <section class="ph-cards" aria-label="Shop by collection">
       {% for d in divisions %}
       <a class="ph-card" href="{{ d.href }}">
-        <img src="/assets/brand/ed-{{ d.slug }}.webp" alt="" width="491" height="230" loading="lazy">
-        <span class="ph-card-foot"><span><strong>{{ d.name }}</strong><small>{{ d.count }} downloads</small></span><span class="ph-arrow" aria-hidden="true">→</span></span>
+        <img src="/assets/brand/featured/collection-{{ d.slug }}.webp" alt="" width="1200" height="560" loading="lazy">
+        {% set lines = {"business": "Invoices, stock, cash flow and business plans", "life": "Budgets, meal plans, weddings and family routines", "education": "Lesson plans, gradebooks and homeschool records"} %}
+        <span class="ph-card-foot"><span><strong>{{ d.name }}</strong><small>{{ lines.get(d.slug, "") }} · {{ d.count }} downloads</small></span><span class="ph-arrow" aria-hidden="true">→</span></span>
       </a>
       {% endfor %}
     </section>
