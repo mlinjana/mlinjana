@@ -22,7 +22,10 @@ WITH recent_events AS (
 )
 SELECT
   (SELECT coalesce(sum(n), 0) FROM recent_events WHERE type = 'product_view') AS product_view_events,
+  (SELECT coalesce(sum(n), 0) FROM recent_events WHERE type = 'basket_add') AS basket_add_events,
   (SELECT coalesce(sum(n), 0) FROM recent_events WHERE type = 'checkout_start') AS checkout_start_events,
+  (SELECT coalesce(sum(n), 0) FROM recent_events WHERE type = 'checkout_handoff') AS checkout_handoff_events,
+  (SELECT coalesce(sum(n), 0) FROM recent_events WHERE type = 'checkout_error') AS checkout_error_events,
   (SELECT count(*) FROM payments WHERE status = 'paid' AND provider_mode = 'live') AS live_paid_transactions_including_owner_tests,
   (SELECT coalesce(sum(amount_cents), 0) FROM payments WHERE status = 'paid' AND provider_mode = 'live') / 100.0 AS live_gross_zar_including_owner_tests,
   (SELECT count(*) FROM payments WHERE status = 'paid' AND provider_mode = 'sandbox') AS sandbox_paid_transactions;
@@ -38,7 +41,10 @@ WITH days AS (
 ), ev AS (
   SELECT (ts AT TIME ZONE 'Africa/Johannesburg')::date AS day,
     count(*) FILTER (WHERE type = 'product_view') AS product_views,
-    count(*) FILTER (WHERE type = 'checkout_start') AS checkout_starts
+    count(*) FILTER (WHERE type = 'basket_add') AS basket_adds,
+    count(*) FILTER (WHERE type = 'checkout_start') AS checkout_starts,
+    count(*) FILTER (WHERE type = 'checkout_handoff') AS checkout_handoffs,
+    count(*) FILTER (WHERE type = 'checkout_error') AS checkout_errors
   FROM public.events WHERE ts >= now() - interval '31 days' GROUP BY 1
 ), paid AS (
   SELECT (paid_at AT TIME ZONE 'Africa/Johannesburg')::date AS day,
@@ -60,7 +66,10 @@ WITH days AS (
 )
 SELECT to_char(d.day, 'YYYY-MM-DD') AS local_day,
   coalesce(ev.product_views, 0) AS product_view_events,
+  coalesce(ev.basket_adds, 0) AS basket_add_events,
   coalesce(ev.checkout_starts, 0) AS checkout_start_events,
+  coalesce(ev.checkout_handoffs, 0) AS checkout_handoff_events,
+  coalesce(ev.checkout_errors, 0) AS checkout_error_events,
   coalesce(p.transactions, 0) AS live_paid_transactions,
   round(coalesce(p.cents, 0)::numeric / 100, 2) AS live_gross_zar
 FROM days d
@@ -70,6 +79,6 @@ ORDER BY d.day DESC;
 
 -- Next data requirements:
 -- 1. Segregate internal QA traffic at collection time (without collecting personal data).
--- 2. Record add-to-basket and payment-handoff events after a database constraint migration.
+-- 2. Apply migration 011 and deploy store-api + site.js to start collecting the new events.
 -- 3. Use verified payment rows, not redirect-page visits, for revenue.
 -- 4. Define a non-test order classification before claiming independent first-customer sales.
