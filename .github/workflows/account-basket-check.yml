@@ -27,3 +27,34 @@ jobs:
           python engine/check_links.py
           python -m playwright install --with-deps chromium
       - run: python tests/profile_basket_smoke.py
+
+  database-rls:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: commerce_fixture
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: test-only-password
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U postgres -d commerce_fixture"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 10
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m pip install "psycopg[binary]>=3.2,<4"
+      - name: Test account ownership and RLS in disposable database
+        env:
+          ISOLATED_POSTGRES_DSN: postgresql://postgres:test-only-password@localhost:5432/commerce_fixture
+        run: python tests/check_account_basket_migration.py
