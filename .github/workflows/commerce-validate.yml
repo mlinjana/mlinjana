@@ -38,3 +38,19 @@ jobs:
         run: python engine/check_links.py
       - name: Validate first-customer storefront changes
         run: python -m unittest discover -s tests -p 'test_*.py' -v
+      - name: Install browser test runner
+        run: |
+          python -m pip install 'playwright>=1.48,<2'
+          python -m playwright install --with-deps chromium
+      - name: Smoke-test mobile tablet and desktop customer journeys
+        env:
+          BROWSER_ARTIFACTS: ${{ runner.temp }}/commerce-browser-qa
+        run: python tests/browser_smoke.py
+      - name: Upload browser QA screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: commerce-browser-qa
+          path: ${{ runner.temp }}/commerce-browser-qa
+          if-no-files-found: ignore
+          retention-days: 7
