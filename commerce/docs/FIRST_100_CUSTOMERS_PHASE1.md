@@ -15,6 +15,8 @@ Status: review branch only. **No production deployment, payment configuration ch
 9. Owner dashboard funnel panel and corresponding ops-api 30-day aggregate response, with a fallback when the API has not yet been deployed.
 10. Five existing products presented on `/start-here` using actual catalogue records and current prices; homepage links to the page; page appears in sitemap. No new products or unverified discounted bundles created.
 11. Headless Chromium responsive smoke tests at 375, 768 and 1366px, with screenshots uploaded as short-lived CI artifacts. All external requests blocked to avoid live checkout or production telemetry.
+12. Isolated CI preview builder replaces live config only in a disposable CI workspace: staging/noindex, checkout paused, API disabled (`api.invalid`), and a preview notice that explicitly says payments cannot be placed. The resulting static preview is published as a short-lived GitHub Actions artifact, NOT deployed.
+13. Migration 011 tested with a minimal `public.events` schema in disposable PostgreSQL: all intended event types accepted and unrecognised types rejected; this is a constraint smoke test, not full Supabase integration testing.
 
 ## Acceptance checklist
 
@@ -24,8 +26,10 @@ Status: review branch only. **No production deployment, payment configuration ch
 - [ ] Run accessibility checks, including keyboard navigation through the new links.
 - [x] Source-level checks verified all four category routes resolve through the current taxonomy slug rule and tracking event names agree across site.js, API allowlist and staged SQL.
 - [x] GitHub Actions ran Python compilation, the full Jinja storefront build, the repository link checker and first-customer regression suite successfully.
-- [ ] Inspect the responsive browser screenshots in the GitHub Actions artifact; human visual sign-off required. The browser smoke job checks link navigation and horizontal overflow.
-- [ ] Run migration 011 on a non-production database, verify event inserts, then apply with a reviewed release to production.
+- [ ] Inspect responsive browser screenshots in the GitHub Actions artifact; human visual sign-off required. The browser smoke job checks link navigation and horizontal overflow.
+- [x] Generate separate non-indexable, checkout-disabled preview build and verify absence of the basket checkout form.
+- [x] Run migration 011 against disposable PostgreSQL in GitHub Actions and verify allowlist/check constraint on fixture data.
+- [ ] Run staging integration test against a dedicated non-production Supabase project when provisioned, verify RLS, API logging and event inserts, then apply to production in a reviewed release.
 - [ ] Deploy store-api before or with the new site.js; do not deploy the frontend event calls alone and infer missing events are successful.
 - [ ] Deploy ops-api funnel count implementation with dashboard static assets; owner-key access remains required.
 - [ ] Confirm live dashboard numbers and explain that owner test purchases count toward verified live payments until individually classified.
