@@ -24,6 +24,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Enforce frontend-only change scope
         run: |
+          cd ..
           git fetch --no-tags --depth=1 origin claude/autonomous-ecommerce-network-a0q82x
           echo "Changed files against development branch:"
           git diff --name-only FETCH_HEAD HEAD
