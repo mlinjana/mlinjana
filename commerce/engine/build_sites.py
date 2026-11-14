@@ -96,7 +96,7 @@ def policies(store, legal):
 <h2>How refunds are paid</h2>
 <p>Approved refunds are made to the original payment method through PayFast. Your bank may take several working days to show it.</p>
 <h2>Lost download link</h2>
-<p>Links last 7 days and 5 downloads. If yours has expired, use the <a href="/help/contact">contact form</a> with your order number and we'll send a new one.</p>
+<p>Download links are valid for 7 days and 5 downloads. If yours expires or runs out, <a href="/account">sign in to your account</a> using the same verified email address you used at checkout. Under <strong>Your orders</strong>, choose <strong>Renew &amp; download</strong> to receive a fresh download automatically. No support ticket is needed. If your order is missing, contact us with the order number.</p>
 <p class="muted small">This policy does not limit any rights you have under the law of your country, including the South African Consumer Protection Act and Electronic Communications and Transactions Act where they apply.</p>"""),
         "privacy": ("Privacy", f"""
 <p>We collect as little personal information as possible.</p>
@@ -104,7 +104,7 @@ def policies(store, legal):
 <ul><li><strong>Orders:</strong> your email address, the product, amount, date and payment status. We need these to deliver your files and keep tax records.</li>
 <li><strong>Payments:</strong> handled entirely by PayFast. We never see or store your card or bank details. PayFast's own privacy policy applies to the payment step.</li>
 <li><strong>Messages:</strong> what you send through the contact form.</li>
-<li><strong>Accounts (optional):</strong> if you create an account, your email address, the name you choose, how you signed in (Google or an emailed link) and the products you save as favourites. Signing in with Google shares your name and email address with us; we don't receive your Google password. You can delete your account at any time from the account page; paid order records are kept for tax law.</li>
+<li><strong>Accounts (optional):</strong> if you create an account, your email address, the name you choose, how you signed in (Google or an emailed link), the products you save as favourites, and your saved shopping basket. Signing in with Google shares your name and email address with us; we don't receive your Google password. You can delete your account at any time from the account page; paid order records are kept for tax law.</li>
 <li><strong>Visit statistics:</strong> page path, product viewed, and the website that referred you. We store no cookies and no IP addresses for this, and use no advertising trackers.</li>
 <li><strong>Site speed and visits (Cloudflare Web Analytics):</strong> Cloudflare hosts this site and counts page views and page loading times for us. Cloudflare states that this service doesn't use cookies or track you across other websites. Like any web host, Cloudflare handles technical details of each request, such as your IP address, to deliver and protect the site.</li></ul>
 <h2>How we use it</h2>
@@ -181,7 +181,7 @@ def policies(store, legal):
   <button class="btn btn-primary" type="submit">Find my downloads</button>
 </form>
 <div id="lookup-out" class="msg" role="status" aria-live="polite"></div>
-<p class="muted small">Still stuck? <a href="/help/contact">Contact us</a> with your order number and we'll send a new link.</p>"""),
+<p class="muted small">Link expired or download limit reached? <a href="/account">Sign in with the same email you used to buy</a>, find the purchase under <strong>Your orders</strong>, and select <strong>Renew &amp; download</strong> for a new link automatically. For missing purchases or other problems, <a href="/help/contact">contact us</a>.</p>"""),
     }
 
 
@@ -523,6 +523,8 @@ def main():
     <p class="muted">Signed in as <strong id="acct-email"></strong></p>
     <h2>Your orders</h2>
     <div id="acct-orders" class="status"><p class="muted">Loading your orders…</p></div>
+    <p id="acct-download-msg" class="msg" role="status" aria-live="polite"></p>
+    <p class="muted small">Expired download? Select <strong>Renew &amp; download</strong> beside your paid order. Your new link is prepared automatically, without contacting support.</p>
     <h2>Your favourites</h2>
     <div id="acct-favs"></div>
     <h2>Your details</h2>
