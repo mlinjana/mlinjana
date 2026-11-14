@@ -1,0 +1,91 @@
+name: Deploy approved Mlinjana storefront to Cloudflare
+
+on:
+  push:
+    branches:
+      - chatgpt/live-frontend-release-20261114
+    paths:
+      - '.github/workflows/deploy-approved-storefront.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mlinjana-storefront-production-release
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Confirm live target and unchanged checkout JavaScript
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          cfg=json.loads(Path('config/stores.json').read_text())
+          assert cfg['mode']=='live' and cfg['site_base']=='https://mlinjanastudios.com'
+          assert cfg.get('checkout') != 'paused', 'Checkout is paused: refusing to deploy unexpectedly'
+          js=Path('engine/static/site.js').read_text()
+          assert 'type: "basket_add"' not in js
+          assert not Path('supabase/migrations/011_conversion_funnel.sql').exists()
+          print('Approved frontend release target verified.')
+          PY
+      - name: Check Cloudflare deploy credentials without printing them
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        run: |
+          if [ -z "$CLOUDFLARE_API_TOKEN" ]; then
+            echo "::error::CLOUDFLARE_API_TOKEN is not set as a GitHub Actions secret. Production not changed."
+            exit 1
+          fi
+      - name: Install Python builder
+        run: python -m pip install 'jinja2>=3.1,<4'
+      - name: Build production static site
+        run: python engine/build_sites.py
+      - name: Validate generated storefront
+        run: |
+          python engine/check_links.py
+          python -m unittest discover -s tests -p 'test_frontend_release.py' -v
+      - name: Deploy approved storefront using existing Wrangler configuration
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: da113ab5ce60706d4edf410a243e9b5f
+        run: |
+          bash engine/deploy_cloudflare.sh
+      - name: Verify live pages after deployment
+        run: |
+          python - <<'PY'
+          import time
+          from urllib.request import Request,urlopen
+          from urllib.error import URLError,HTTPError
+          urls={
+            'home':'https://mlinjanastudios.com/',
+            'guide':'https://mlinjanastudios.com/start-here',
+            'product':'https://mlinjanastudios.com/abacus/p/inventory-management-spreadsheet',
+          }
+          for label,url in urls.items():
+            last=None
+            for attempt in range(5):
+              try:
+                with urlopen(Request(url,headers={'User-Agent':'Mlinjana-Release-Check/1.0'}),timeout=20) as r:
+                  text=r.read(800000).decode('utf-8','replace')
+                  if r.status!=200: raise RuntimeError('HTTP '+str(r.status))
+                  expected='Five useful tools for real work.' if label=='guide' else ('id="shop-by-task"' if label=='home' else 'Inventory Management Spreadsheet')
+                  if expected not in text: raise RuntimeError('Missing expected verified content')
+                  print(label,'verified:',r.geturl())
+                  break
+              except Exception as e:
+                last=e
+                if attempt<4: time.sleep(5)
+            else: raise RuntimeError(label+' validation failed: '+str(last))
+          PY
