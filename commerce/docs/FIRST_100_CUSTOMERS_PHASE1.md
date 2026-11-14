@@ -13,6 +13,8 @@ Status: review branch only. **No production deployment, payment configuration ch
 7. Read-only 30-day conversion report that separates live payments from PayFast sandbox transactions and avoids counting basket items twice.
 8. Read-only GitHub Actions workflow that builds every storefront, runs internal link checks and regression tests.
 9. Owner dashboard funnel panel and corresponding ops-api 30-day aggregate response, with a fallback when the API has not yet been deployed.
+10. Five existing products presented on `/start-here` using actual catalogue records and current prices; homepage links to the page; page appears in sitemap. No new products or unverified discounted bundles created.
+11. Headless Chromium responsive smoke tests at 375, 768 and 1366px, with screenshots uploaded as short-lived CI artifacts. All external requests blocked to avoid live checkout or production telemetry.
 
 ## Acceptance checklist
 
@@ -22,7 +24,7 @@ Status: review branch only. **No production deployment, payment configuration ch
 - [ ] Run accessibility checks, including keyboard navigation through the new links.
 - [x] Source-level checks verified all four category routes resolve through the current taxonomy slug rule and tracking event names agree across site.js, API allowlist and staged SQL.
 - [x] GitHub Actions ran Python compilation, the full Jinja storefront build, the repository link checker and first-customer regression suite successfully.
-- [ ] Manually inspect phone, tablet and desktop visuals; CI does not currently take browser screenshots.
+- [ ] Inspect the responsive browser screenshots in the GitHub Actions artifact; human visual sign-off required. The browser smoke job checks link navigation and horizontal overflow.
 - [ ] Run migration 011 on a non-production database, verify event inserts, then apply with a reviewed release to production.
 - [ ] Deploy store-api before or with the new site.js; do not deploy the frontend event calls alone and infer missing events are successful.
 - [ ] Deploy ops-api funnel count implementation with dashboard static assets; owner-key access remains required.
