@@ -23,7 +23,7 @@ def do_case(page, mode, calls):
     page.locator("#bk-form button[type=submit]").click()
     if mode == "failure":
         page.locator("#bk-msg.err").wait_for()
-        assert "Checkout is temporarily unavailable" in page.locator("#bk-msg").inner_text()
+        assert "Online checkout opens soon" in page.locator("#bk-msg").inner_text()
         assert page.locator("#bk-form button[type=submit]").is_enabled(), "Retry button should recover"
         assert page.evaluate("JSON.parse(localStorage.getItem('mls:basket'))") == ["ABL-009"]
     else:
