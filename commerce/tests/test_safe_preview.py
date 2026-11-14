@@ -21,7 +21,7 @@ class SafePreviewTests(unittest.TestCase):
                 self.assertIn("Orders are not open yet.", html)
                 self.assertNotIn('id="bk-form"', html)
                 self.assertIn('data-api="https://api.invalid/functions/v1"', html)
-                self.assertIn("PayFast <strong>sandbox</strong>", html)
+                self.assertIn("Preview only: checkout is disabled", html)
 
 
 if __name__ == "__main__":
