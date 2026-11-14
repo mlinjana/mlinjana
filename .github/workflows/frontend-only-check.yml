@@ -22,6 +22,15 @@ jobs:
         working-directory: commerce
     steps:
       - uses: actions/checkout@v4
+      - name: Enforce frontend-only change scope
+        run: |
+          git fetch --no-tags --depth=1 origin claude/autonomous-ecommerce-network-a0q82x
+          echo "Changed files against development branch:"
+          git diff --name-only FETCH_HEAD HEAD
+          if git diff --name-only FETCH_HEAD HEAD --              commerce/supabase commerce/engine/static/site.js commerce/engine/static/dashboard.js              commerce/config/stores.json commerce/catalogue | grep -q .; then
+            echo "::error::Frontend release unexpectedly changes checkout, database, configuration or products"
+            exit 1
+          fi
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
