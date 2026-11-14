@@ -1,4 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
+# Approved production retry after the GitHub CLOUDFLARE_API_TOKEN secret was configured.
 
 on:
   push:
