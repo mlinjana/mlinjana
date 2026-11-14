@@ -26,10 +26,9 @@
       <p class="pp-by"><a href="{{ base }}/">{{ store.coll }}</a> <span aria-hidden="true">·</span> {{ p.category }}</p>
       <h1>{{ p.name }}</h1>
       <p class="pp-sum">{{ p.summary }}</p>
-      <p class="pp-reassure">Review the actual file previews and what is included below before you decide.</p>
+
       <ul class="pp-chips">{% for f in p.formats %}<li class="fmt fmt-{{ f.split(' ')[0]|lower }}">{{ f }}</li>{% endfor %}</ul>
-      <h2 class="pp-h">What's inside</h2>
-      <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
+
     </section>
 
     <aside class="panel pp-buy" aria-label="Buy">
@@ -48,10 +47,11 @@
       </fieldset>
       <button type="button" id="buy" class="btn btn-primary btn-block btn-lg" data-add="{{ p.id }}" data-open>{{ icon("bag") }}<span>Add to basket</span></button>
       {% endif %}
+      <p class="pp-compat"><strong>Works with</strong><br>{{ p.compat }}</p>
       <button type="button" class="btn btn-outline btn-block fav-wide" data-fav="{{ p.id }}" aria-pressed="false">{{ icon("heart") }}<span>Save to favourites</span></button>
       <ul class="buy-trust">
         <li>{{ icon("lock") }}<span>Secure checkout on PayFast. We never see your card.</span></li>
-        <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Five download attempts within seven days; <a href="/help/downloads">recover your order</a> if you lose the link{% endif %}</span></li>
+        <li>{{ icon("download") }}<span>{% if p.free %}Downloads straight away{% else %}Download after payment. <a href="/account">Renew expired links in your account</a> using your checkout email.{% endif %}</span></li>
         <li>{{ icon("refresh") }}<span>File won't work? Fixed or refunded within 14 days</span></li>
         <li>{{ icon("building") }}<span>Sold and supported by {{ market.name }}</span></li>
       </ul>
@@ -60,6 +60,9 @@
 
   <div class="pp-more">
     <div class="pp-detail">
+      <section class="panel">      <h2 class="pp-h">What's inside</h2>
+      <ul class="checks">{% for f in p.features %}<li>{{ f }}</li>{% endfor %}</ul>
+      </section>
       {% if p.bundle_items %}
       <section class="panel">
         <h2>In this bundle</h2>
@@ -79,7 +82,7 @@
         <h2>Delivery, licence and refunds</h2>
         <ul class="notes">
           <li>This is a digital product. Nothing physical is shipped.</li>
-          {% if not p.free %}<li>Download links work 5 times over 7 days. Keep a copy of your files.</li>{% endif %}
+          {% if not p.free %}<li>Each link allows 5 downloads over 7 days. Keep your files, or sign in with your checkout email and choose “Renew &amp; download” in Your orders for a fresh link.</li>{% endif %}
           {% if 'PDF' in p.formats|join(' ') %}<li>Printed colours can vary slightly between screens and printers.</li>{% endif %}
           {% if 'XLSX' in p.formats %}<li>The spreadsheet calculates from the numbers you enter. Check results before relying on them; it isn't financial, tax or legal advice.</li>{% endif %}
           {% if 'DOCX' in p.formats %}<li>Templates are starting points, not legal or professional advice.</li>{% endif %}

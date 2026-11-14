@@ -2,7 +2,7 @@
 {% from "_macros.html" import rail, usps, steps, icon %}
 {% block title %}Ready-to-use business templates, planners & spreadsheets | {{ market.name }}{% endblock %}
 {% block desc %}Shop ready-to-use spreadsheets, business templates and planners for South Africa. Preview actual pages, pay securely and download digital tools straight after purchase.{% endblock %}
-{% block head %}<link rel="preload" as="image" href="/{{ hero_covers[0] }}" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces.woff2" crossorigin>{% endblock %}
+{% block head %}<link rel="preload" as="image" href="/{{ picks[1].images.cover }}" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces.woff2" crossorigin>{% endblock %}
 {% block main %}
 <div class="home">
 {% if look == "photo" %}
@@ -14,20 +14,17 @@
       <p class="ph-lede">Ready-to-use spreadsheets, templates and planners to help you track money, organise work and save time. Preview the real files before you buy.</p>
       <a class="btn btn-gold ph-cta" href="#shop-by-task">Find a tool for your task</a>
     </div>
-    <div class="ph-art" aria-hidden="true"></div>
+    <div class="ph-art product-hero">
+      {% set hero = picks[1] %}
+      <a class="hero-product" href="/{{ shops[hero.store].path }}/p/{{ hero.slug }}">
+        <span class="hero-product-k">A closer look at your next time-saver</span>
+        <img src="/{{ hero.images.cover }}" alt="{{ hero.name }} — actual product preview" width="600" height="450" fetchpriority="high">
+        <span class="hero-product-foot"><span><strong>{{ hero.name }}</strong><small>R{{ hero.price_zar }} · {{ hero.fmt_keys|join(', ') }}</small></span><span class="hero-preview">Look inside →</span></span>
+      </a>
+    </div>
   </section>
   <div class="wrap">
-    <h2 class="ph-title" id="collections">Browse tools for business, life and learning.</h2>
-    <section class="ph-cards" aria-label="Shop by collection">
-      {% for d in divisions %}
-      <a class="ph-card" href="{{ d.href }}">
-        <img src="/assets/brand/ed-{{ d.slug }}.webp" alt="" width="491" height="230" loading="lazy">
-        <span class="ph-card-foot"><span><strong>{{ d.name }}</strong><small>{{ d.count }} downloads</small></span><span class="ph-arrow" aria-hidden="true">→</span></span>
-      </a>
-      {% endfor %}
-    </section>
-    <header class="sec-head ph-real"><p class="kicker">Real pages, not stock photos</p><h2>See what you actually get</h2></header>
-    <div class="ph-covers">{% for p in picks[:4] %}<a href="/{{ shops[p.store].path }}/p/{{ p.slug }}"><img src="/{{ p.images.cover }}" alt="" width="600" height="450" loading="lazy"><span>{{ p.name }}</span></a>{% endfor %}</div>
+    {{ usps(legal) }}
 {% else %}
   {# 2.1 "Atelier" hero: the headline paints at once; the covers and the underline animate in with CSS only. #}
   <section class="hero2" aria-labelledby="hero-h">
@@ -100,17 +97,33 @@
       </div>
     </section>
 
-    {{ usps(legal) }}
+    {% if look != "photo" %}{{ usps(legal) }}{% endif %}
 
     <section class="starter-promo" aria-labelledby="starter-promo-title">
       <div><p class="kicker">A simpler place to begin</p><h2 id="starter-promo-title">Five tools worth a closer look.</h2><p>Explore real product previews for stock control, invoicing, budgeting, lesson planning and fleet operations. All products are sold individually.</p></div>
       <a class="btn btn-gold" href="/start-here">Explore the five tools <span aria-hidden="true">→</span></a>
     </section>
 
-    {{ rail("Top picks", picks, shops, "/search", "View all " ~ market.total, None, "", "Start here") }}
-    {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately", "band", "Save more") }}
-    {{ rail("Under R50", under50, shops, "/search?max=50", "See all " ~ under50_total, None, "", "Small price, real use") }}
-    {% for r in div_rows %}{{ rail(r.title, r.products, shops, r.href, "Shop " ~ r.name) }}{% endfor %}
+    {{ rail("Featured tools", picks[:6], shops, "/search", "View all " ~ market.total, None, "", "Start here") }}
+    {% set demo = picks[1] %}
+    <section class="tool-spotlight" aria-labelledby="spotlight-title">
+      <a href="/{{ shops[demo.store].path }}/p/{{ demo.slug }}"><img src="/{{ demo.images.previews[0] if demo.images.previews else demo.images.cover }}" alt="Inside {{ demo.name }}" width="600" height="450" loading="lazy"></a>
+      <div><p class="kicker">From blank page to getting it done</p><h2 id="spotlight-title">Your next invoice starts here.</h2><p>{{ demo.summary }}</p><ul class="checks">{% for feature in demo.features[:3] %}<li>{{ feature }}</li>{% endfor %}</ul><a class="btn btn-primary" href="/{{ shops[demo.store].path }}/p/{{ demo.slug }}">Explore the invoice tool · R{{ demo.price_zar }}</a></div>
+    </section>
+    {% if look == "photo" %}
+    <h2 class="ph-title" id="collections">Browse tools for business, life and learning.</h2>
+    <section class="ph-cards" aria-label="Shop by collection">
+      {% for d in divisions %}
+      <a class="ph-card" href="{{ d.href }}">
+        <img src="/assets/brand/ed-{{ d.slug }}.webp" alt="" width="491" height="230" loading="lazy">
+        <span class="ph-card-foot"><span><strong>{{ d.name }}</strong><small>{{ d.count }} downloads</small></span><span class="ph-arrow" aria-hidden="true">→</span></span>
+      </a>
+      {% endfor %}
+    </section>
+    {% endif %}
+    {{ rail("Bundle deals", bundles[:3], shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately", "band", "Save more") }}
+    {{ rail("Under R50", under50[:4], shops, "/search?max=50", "See all " ~ under50_total, None, "", "Small price, real use") }}
+
 
     <section class="how" id="how">
       <header class="sec-head"><p class="kicker">Simple by design</p><h2>From basket to download in three steps</h2></header>
@@ -131,6 +144,14 @@
       </ul>
     </section>
 
+    <section class="shopping-faq" aria-labelledby="shopping-faq-title">
+      <header class="sec-head"><p class="kicker">Good to know</p><h2 id="shopping-faq-title">A few answers before you choose.</h2></header>
+      <details><summary>What will I receive?</summary><p>A digital download containing the files listed on the product page. Look inside the previews before buying; nothing physical is shipped.</p></details>
+      <details><summary>Which software do I need?</summary><p>Each product lists its compatible software. Check “Works with” on the product page before buying. File labels distinguish PDF printables, Excel spreadsheets and Word documents.</p></details>
+      <details><summary>Do I need an account to buy?</summary><p>You can check out as a guest. An optional account lets you see paid orders and renew expired download links using the same email address you used at checkout.</p></details>
+      <details><summary>What if my download link expires?</summary><p>Sign in with your checkout email, open Your orders and choose Renew &amp; download. You can also <a href="/help/downloads">find your downloads here</a>.</p></details>
+      <details><summary>What if a file does not work?</summary><p>Contact us within 14 days. We will help fix a faulty file or refund it, as described in our <a href="/help/refunds">refunds and support policy</a>.</p></details>
+    </section>
     <section class="cta">
       <h2>Find the tool for the job.</h2>
       <p>Search all {{ market.total }} downloads, or browse a collection.</p>

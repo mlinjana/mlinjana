@@ -1,10 +1,10 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved account-first download recovery consistency release (PR #8).
+# Owner-approved product-led frontend refresh, 14 November 2026.
 
 on:
   push:
     branches:
-      - chatgpt/live-frontend-release-20261114
+      - codex/storefront-conversion-refresh
     paths:
       - '.github/workflows/deploy-approved-storefront.yml'
   workflow_dispatch:
@@ -56,7 +56,7 @@ jobs:
       - name: Validate generated storefront
         run: |
           python engine/check_links.py
-          python -m unittest discover -s tests -p 'test_frontend_release.py' -v
+          python -m unittest discover -s tests -p 'test_frontend*.py' -v
       - name: Deploy approved storefront using existing Wrangler configuration
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -81,7 +81,7 @@ jobs:
                 with urlopen(Request(url,headers={'User-Agent':'Mlinjana-Release-Check/1.0'}),timeout=20) as r:
                   text=r.read(800000).decode('utf-8','replace')
                   if r.status!=200: raise RuntimeError('HTTP '+str(r.status))
-                  expected='Five useful tools for real work.' if label=='guide' else ('id="shop-by-task"' if label=='home' else 'Inventory Management Spreadsheet')
+                  expected='Five useful tools for real work.' if label=='guide' else ('product-hero' if label=='home' else 'Inventory Management Spreadsheet')
                   if expected not in text: raise RuntimeError('Missing expected verified content')
                   print(label,'verified:',r.geturl())
                   break
