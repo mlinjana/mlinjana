@@ -104,6 +104,7 @@ def policies(store, legal):
 <ul><li><strong>Orders:</strong> your email address, the product, amount, date and payment status. We need these to deliver your files and keep tax records.</li>
 <li><strong>Payments:</strong> handled entirely by PayFast. We never see or store your card or bank details. PayFast's own privacy policy applies to the payment step.</li>
 <li><strong>Messages:</strong> what you send through the contact form.</li>
+<li><strong>Accounts (optional):</strong> if you create an account, your email address, the name you choose, how you signed in (Google or an emailed link) and the products you save as favourites. Signing in with Google shares your name and email address with us; we don't receive your Google password. You can delete your account at any time from the account page; paid order records are kept for tax law.</li>
 <li><strong>Visit statistics:</strong> page path, product viewed, and the website that referred you. We store no cookies and no IP addresses for this, and use no advertising trackers.</li>
 <li><strong>Site speed and visits (Cloudflare Web Analytics):</strong> Cloudflare hosts this site and counts page views and page loading times for us. Cloudflare states that this service doesn't use cookies or track you across other websites. Like any web host, Cloudflare handles technical details of each request, such as your IP address, to deliver and protect the site.</li></ul>
 <h2>How we use it</h2>
@@ -483,6 +484,36 @@ def main():
 <form class="nf-search" action="/search" method="get" role="search" aria-label="Search from this page"><label for="nf-q">Search all 600 downloads</label>
 <div class="nf-row"><input id="nf-q" name="q" type="search" placeholder="Try invoice, budget or lesson plan"><button class="btn btn-dark" type="submit">Search</button></div></form>
 <p>Or browse <a href="/business/">Business</a>, <a href="/life/">Life</a> or <a href="/education/">Education</a>, go to the <a href="/">home page</a>, or <a href="/help/contact">contact us</a> if you were looking for an order.</p>""", **common))
+    open(os.path.join(SITE, "account.html"), "w").write(env.get_template("page.html").render(
+        store=None, noindex=True, title="Your account", canonical=f"{cfg['site_base']}/account", body="""
+<div id="acct">
+  <section id="acct-signin" hidden>
+    <p>Sign in to see all your orders and download them again, keep your favourites on every device, and check out faster. You don't need an account to buy.</p>
+    <button type="button" id="acct-google" class="btn btn-google"><svg viewBox="0 0 24 24" aria-hidden="true" width="20" height="20"><path fill="#4285F4" d="M22.6 12.3c0-.8-.1-1.5-.2-2.3H12v4.3h5.9a5 5 0 0 1-2.2 3.3v2.7h3.6c2.1-1.9 3.3-4.8 3.3-8z"/><path fill="#34A853" d="M12 23c3 0 5.5-1 7.3-2.7l-3.6-2.7c-1 .7-2.2 1.1-3.7 1.1-2.9 0-5.3-1.9-6.2-4.5H2.1v2.8A11 11 0 0 0 12 23z"/><path fill="#FBBC05" d="M5.8 14.2a6.6 6.6 0 0 1 0-4.3V7.1H2.1a11 11 0 0 0 0 9.9l3.7-2.8z"/><path fill="#EA4335" d="M12 5.4c1.6 0 3.1.6 4.2 1.7l3.2-3.2A11 11 0 0 0 2.1 7.1l3.7 2.8C6.7 7.3 9.1 5.4 12 5.4z"/></svg>Continue with Google</button>
+    <p class="acct-or"><span>or</span></p>
+    <form id="acct-email-form" class="lookup" novalidate>
+      <label for="acct-email-in">Email address</label><input id="acct-email-in" type="email" autocomplete="email" required>
+      <button class="btn btn-primary" type="submit">Email me a sign-in link</button>
+    </form>
+    <p id="acct-email-msg" class="msg" role="status" aria-live="polite"></p>
+    <p class="muted small">No password needed. By signing in you agree to our <a href="/help/terms">terms</a> and <a href="/help/privacy">privacy policy</a>.</p>
+  </section>
+  <section id="acct-in" hidden>
+    <h2 id="acct-hello">Your account</h2>
+    <p class="muted">Signed in as <strong id="acct-email"></strong></p>
+    <h2>Your orders</h2>
+    <div id="acct-orders" class="status"><p class="muted">Loading your orders…</p></div>
+    <h2>Your favourites</h2>
+    <div id="acct-favs"></div>
+    <h2>Your details</h2>
+    <form id="acct-profile" class="lookup" novalidate>
+      <label for="acct-name">Your name</label><input id="acct-name" type="text" maxlength="60" autocomplete="name">
+      <button class="btn btn-primary" type="submit">Save</button>
+    </form>
+    <p id="acct-profile-msg" class="msg" role="status" aria-live="polite"></p>
+    <p class="acct-actions"><button type="button" id="acct-signout" class="btn btn-outline">Sign out</button> <button type="button" id="acct-delete" class="btn-link danger">Delete my account</button></p>
+  </section>
+</div>""", **common))
     # search index for /search and /favourites (short keys keep it small)
     json.dump({"shops": {s["id"]: {"n": s["coll"], "p": s["path"]} for s in shops.values()},
                "items": [{"i": p["id"], "n": p["name"], "s": p["store"], "u": f"/{shops[p['store']]['path']}/p/{p['slug']}",

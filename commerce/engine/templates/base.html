@@ -40,7 +40,8 @@
       <input id="hq" name="q" type="search" placeholder="Search planners, templates, spreadsheets…" autocomplete="off">
       <button type="submit" aria-label="Search">{{ icon("search") }}</button>
     </form>
-    <nav class="hact" aria-label="Your basket and favourites">
+    <nav class="hact" aria-label="Your account, favourites and basket">
+      <a class="hbtn" href="/account" data-account>{{ icon("user") }}<span class="lbl">Sign in</span></a>
       <a class="hbtn" href="/favourites">{{ icon("heart") }}<span class="lbl">Favourites</span><b class="fav-count" hidden></b></a>
       <button type="button" class="hbtn" data-open-basket aria-haspopup="dialog">{{ icon("bag") }}<span class="lbl">Basket</span><b class="bk-count" hidden></b></button>
     </nav>

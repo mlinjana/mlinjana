@@ -46,7 +46,54 @@
   };
   const bump = (sel) => $$(sel).forEach((el) => { const b = el.closest(".hbtn"); if (b && !calm) { b.classList.remove("bump"); void b.offsetWidth; b.classList.add("bump"); } });
 
-  // ---- favourites: kept in this browser only, never sent anywhere ----
+  // ---- customer accounts (optional): Supabase Auth over plain HTTPS, no third-party scripts ----
+  // Sign-in by Google or an emailed link. The session lives in this browser; data access is limited by database rules.
+  const SB = (API || "").replace(/\/functions\/v1\/?$/, ""), SBKEY = "sb_publishable_ubE3COlKrVn-WKscBRbvJw_M6rxT6kM";
+  const SKEY = "mls:session";
+  const acct = {
+    session: () => store.get(SKEY, null),
+    save: (s) => store.set(SKEY, s),
+    clear: () => { try { localStorage.removeItem(SKEY); } catch (e) {} },
+    async token() {
+      let s = acct.session();
+      if (!s) return null;
+      if (Date.now() / 1000 > (s.expires_at || 0) - 60) {
+        try {
+          const r = await fetch(`${SB}/auth/v1/token?grant_type=refresh_token`, { method: "POST", headers: { apikey: SBKEY, "Content-Type": "application/json" }, body: JSON.stringify({ refresh_token: s.refresh_token }) });
+          if (!r.ok) throw new Error("expired");
+          const d = await r.json();
+          s = { access_token: d.access_token, refresh_token: d.refresh_token, expires_at: Math.floor(Date.now() / 1000) + (d.expires_in || 3600), user: d.user || s.user };
+          acct.save(s);
+        } catch (e) { acct.clear(); return null; }
+      }
+      return s.access_token;
+    },
+    async api(path, opts = {}) {
+      const t = await acct.token();
+      if (!t) throw new Error("signed out");
+      const r = await fetch(`${SB}${path}`, { ...opts, headers: { apikey: SBKEY, Authorization: `Bearer ${t}`, "Content-Type": "application/json", ...(opts.headers || {}) } });
+      if (!r.ok) throw new Error((await r.text()).slice(0, 200) || r.statusText);
+      return r.status === 204 ? null : r.json().catch(() => null);
+    },
+    user: () => (acct.session() || {}).user || null,
+  };
+  // returning from Google or the emailed link: tokens arrive in the address after "#"
+  if (location.hash.includes("access_token=")) {
+    const h = new URLSearchParams(location.hash.slice(1));
+    acct.save({ access_token: h.get("access_token"), refresh_token: h.get("refresh_token"), expires_at: Math.floor(Date.now() / 1000) + Number(h.get("expires_in") || 3600), user: null });
+    history.replaceState(null, "", location.pathname + location.search);
+  }
+  if (acct.session() && !acct.user()) {
+    acct.api("/auth/v1/user").then((u) => { const s = acct.session(); if (s) { s.user = { id: u.id, email: u.email, name: (u.user_metadata || {}).full_name || (u.user_metadata || {}).name || "" }; acct.save(s); } document.dispatchEvent(new Event("mls:account")); }).catch(() => {});
+  }
+  const setAccountLinks = () => {
+    const u = acct.user();
+    $$("[data-account] .lbl").forEach((l) => { l.textContent = u ? "Account" : "Sign in"; });
+  };
+  setAccountLinks();
+  document.addEventListener("mls:account", setAccountLinks);
+
+  // ---- favourites: kept in this browser, and copied to your account when you're signed in ----
   const FKEY = "mls:favs";
   const syncFavs = () => {
     const f = new Set(store.get(FKEY, []));
@@ -58,6 +105,22 @@
     });
     $$(".fav-count").forEach((c) => { c.hidden = !f.size; c.textContent = f.size; });
   };
+
+  const mergeFavs = async () => {
+    const u = acct.user();
+    if (!u) return;
+    try {
+      const server = (await acct.api("/rest/v1/account_favourites?select=product_id&order=created_at.desc")).map((x) => x.product_id);
+      const local = store.get(FKEY, []);
+      const toAdd = local.filter((x) => !server.includes(x));
+      if (toAdd.length) await acct.api("/rest/v1/account_favourites", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" }, body: JSON.stringify(toAdd.map((product_id) => ({ user_id: u.id, product_id }))) });
+      store.set(FKEY, [...new Set([...local, ...server])].slice(0, 500));
+      syncFavs();
+      document.dispatchEvent(new Event("mls:favs"));
+    } catch (e) {}
+  };
+  document.addEventListener("mls:account", mergeFavs);
+  setTimeout(mergeFavs, 0);
 
   // ---- basket: entries "ID" (Standard licence) or "ID:team" (Team licence) in this browser; one entry per product.
   // Prices shown here use the same rule as store-api (Team = 2.5x, nearest whole rand); only the server's price is charged.
@@ -139,6 +202,8 @@
     });
   }
   $$("[data-open-basket]").forEach((b) => b.addEventListener("click", () => openBasket(false)));
+  const prefill = () => { const u = acct.user(), em = $("#bk-email"); if (u && u.email && em && !em.value) em.value = u.email; };
+  prefill(); document.addEventListener("mls:account", prefill);
 
   document.addEventListener("click", (e) => {
     const f = e.target.closest("[data-fav]");
@@ -148,6 +213,9 @@
       i >= 0 ? list.splice(i, 1) : list.unshift(id);
       store.set(FKEY, list.slice(0, 500));
       syncFavs();
+      const u = acct.user();
+      if (u) (i >= 0 ? acct.api(`/rest/v1/account_favourites?product_id=eq.${encodeURIComponent(id)}`, { method: "DELETE" })
+        : acct.api("/rest/v1/account_favourites", { method: "POST", headers: { Prefer: "resolution=ignore-duplicates" }, body: JSON.stringify({ user_id: u.id, product_id: id }) })).catch(() => {});
       if (!calm) { f.classList.remove("pop"); void f.offsetWidth; f.classList.add("pop"); }
       if (i < 0) { bump(".fav-count"); toast("Saved to favourites.", ["View", () => { location.href = "/favourites"; }]); }
       if ($("#fav-page") && i >= 0) renderFavs();
@@ -310,7 +378,7 @@
     $("#s-empty").hidden = res.length > 0;
     syncFavs(); syncBasket();
   }
-  if ($("#fav-page")) renderFavs();
+  if ($("#fav-page")) { renderFavs(); document.addEventListener("mls:favs", renderFavs); }
 
   // ---- product gallery + lightbox ----
   const thumbs = $$(".thumbs button");
@@ -448,6 +516,69 @@
         rvWrap.innerHTML = `<p class="dl-head">✓ Thank you for your review.</p><p>We'll read it shortly. It helps other buyers and helps us improve.</p>`;
         rvWrap.classList.add("dl-ready"); out.textContent = "";
       } catch (err) { out.className = "msg err"; out.textContent = err.message; btn.disabled = false; }
+    });
+  }
+
+  // ---- account page ----
+  const ac = $("#acct");
+  if (ac) {
+    const signin = $("#acct-signin"), area = $("#acct-in"), here = location.origin + "/account";
+    const money = (c) => "R" + (c / 100).toFixed(2).replace(/\.00$/, "");
+    const showOut = () => { signin.hidden = false; area.hidden = true; };
+    const showIn = async () => {
+      const u = acct.user();
+      if (!u) return;
+      if (!(await acct.token())) { setAccountLinks(); showOut(); return; } // session expired: back to sign-in
+      signin.hidden = true; area.hidden = false;
+      $("#acct-email").textContent = u.email || "";
+      try {
+        const pr = await acct.api(`/rest/v1/profiles?select=display_name&id=eq.${u.id}`);
+        const name = (pr && pr[0] && pr[0].display_name) || u.name || "";
+        $("#acct-name").value = name; $("#acct-hello").textContent = name ? `Hello, ${name.split(" ")[0]}` : "Your account";
+      } catch (e) {}
+      const box = $("#acct-orders");
+      try {
+        const os = await acct.api("/rest/v1/rpc/my_orders", { method: "POST", body: "{}" });
+        box.innerHTML = !os.length ? `<p class="muted">No orders yet with ${esc(u.email)}. Orders you place with this email, including ones before you signed up, appear here.</p>` :
+          `<ul class="dl-list">` + os.map((o) => `<li><span>${esc(o.title)}<small>${new Date(o.paid_at).toLocaleDateString()} · ${o.licence === "team" ? "Team licence" : "Standard licence"} · ${money(o.amount_cents)} · ${esc(o.ref)}${o.status === "refunded" ? " · refunded" : ""}</small></span>` +
+          (o.download_token ? `<a class="btn btn-primary inline" href="${esc(API)}/store-api/download?t=${esc(o.download_token)}">Download ZIP</a>` : (o.status === "paid" ? `<a class="btn btn-outline inline" href="/help/contact?order=${esc(o.ref)}">Link expired: ask us</a>` : "")) + `</li>`).join("") + `</ul>`;
+      } catch (e) { box.innerHTML = `<p class="muted">We couldn't load your orders just now. Please refresh the page.</p>`; }
+      const fl = store.get(FKEY, []);
+      $("#acct-favs").innerHTML = fl.length ? `<p>${fl.length} saved ${fl.length === 1 ? "product" : "products"}, on every device where you're signed in. <a href="/favourites">View your favourites</a></p>` : `<p class="muted">Tap the heart on any product to save it here.</p>`;
+    };
+    document.addEventListener("mls:account", () => (acct.user() ? showIn() : showOut()));
+    document.addEventListener("mls:favs", () => acct.user() && showIn());
+    if (acct.user()) showIn(); else if (!acct.session()) showOut();
+    $("#acct-google").addEventListener("click", () => {
+      location.href = `${SB}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(here)}`;
+    });
+    $("#acct-email-form").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const out = $("#acct-email-msg"), em = $("#acct-email-in").value.trim();
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(em)) { out.className = "msg err"; out.textContent = "Please enter a valid email address."; return; }
+      out.className = "msg"; out.textContent = "Sending…";
+      try {
+        const r = await fetch(`${SB}/auth/v1/otp?redirect_to=${encodeURIComponent(here)}`, { method: "POST", headers: { apikey: SBKEY, "Content-Type": "application/json" }, body: JSON.stringify({ email: em, create_user: true }) });
+        if (!r.ok) throw new Error(r.status === 429 ? "Too many requests. Please wait a minute and try again." : "We couldn't send the link. Please try again.");
+        out.className = "msg ok"; out.textContent = `Check your inbox at ${em} and tap the link to sign in. It can take a minute; check spam too.`;
+      } catch (err) { out.className = "msg err"; out.textContent = err.message; }
+    });
+    $("#acct-profile").addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const out = $("#acct-profile-msg"), u = acct.user();
+      try {
+        await acct.api("/rest/v1/profiles", { method: "POST", headers: { Prefer: "resolution=merge-duplicates" }, body: JSON.stringify({ id: u.id, display_name: $("#acct-name").value.trim().slice(0, 60) || null, updated_at: new Date().toISOString() }) });
+        out.className = "msg ok"; out.textContent = "Saved.";
+      } catch (err) { out.className = "msg err"; out.textContent = "Couldn't save. Please try again."; }
+    });
+    $("#acct-signout").addEventListener("click", async () => {
+      try { await acct.api("/auth/v1/logout", { method: "POST" }); } catch (e) {}
+      acct.clear(); setAccountLinks(); showOut();
+    });
+    $("#acct-delete").addEventListener("click", async () => {
+      if (!confirm("Delete your account? This removes your sign-in, name and saved favourites. Your paid orders stay on record for tax purposes, and you can still use your download links.")) return;
+      try { await acct.api("/rest/v1/rpc/delete_my_account", { method: "POST", body: "{}" }); acct.clear(); setAccountLinks(); showOut(); alert("Your account has been deleted."); }
+      catch (e) { alert("We couldn't delete your account just now. Please contact us and we'll do it for you."); }
     });
   }
 

@@ -772,3 +772,11 @@ dialog:not([open]){display:none!important}
 .stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--gold)}
 .stars input:focus-visible+label{outline:3px solid #2563eb;outline-offset:2px;border-radius:4px}
 .lookup textarea{padding:12px 14px;border:1.5px solid var(--line-2);border-radius:10px;font:inherit;resize:vertical}
+
+/* accounts */
+.btn-google{background:#fff;color:#1f1f1f;border:1.5px solid var(--line-2);gap:10px;min-height:48px;font-weight:700}
+.btn-google:hover{background:#f6f4ef}
+.acct-or{display:flex;align-items:center;gap:12px;color:var(--muted);max-width:420px;margin:18px 0 6px}.acct-or::before,.acct-or::after{content:"";flex:1;height:1px;background:var(--line)}
+.msg.ok{color:var(--ok)}
+.acct-actions{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin-top:24px}
+.btn-link{background:none;border:0;padding:8px 0;font:inherit;text-decoration:underline;cursor:pointer;color:var(--muted)}.btn-link.danger{color:var(--sale)}
