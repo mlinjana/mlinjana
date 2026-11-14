@@ -17,6 +17,7 @@ Status: review branch only. **No production deployment, payment configuration ch
 11. Headless Chromium responsive smoke tests at 375, 768 and 1366px, with screenshots uploaded as short-lived CI artifacts. All external requests blocked to avoid live checkout or production telemetry.
 12. Isolated CI preview builder replaces live config only in a disposable CI workspace: staging/noindex, checkout paused, API disabled (`api.invalid`), and a preview notice that explicitly says payments cannot be placed. The resulting static preview is published as a short-lived GitHub Actions artifact, NOT deployed.
 13. Migration 011 tested with a minimal `public.events` schema in disposable PostgreSQL: all intended event types accepted and unrecognised types rejected; this is a constraint smoke test, not full Supabase integration testing.
+14. Mocked Chromium checkout acceptance coverage: simulated API 503 error with retry/basket preservation, and simulated signed payment handoff with stored order-return reference. All external requests blocked, no real PayFast orders.
 
 ## Acceptance checklist
 
@@ -34,6 +35,7 @@ Status: review branch only. **No production deployment, payment configuration ch
 - [ ] Deploy ops-api funnel count implementation with dashboard static assets; owner-key access remains required.
 - [ ] Confirm live dashboard numbers and explain that owner test purchases count toward verified live payments until individually classified.
 - [ ] Confirm prices, product IDs, order creation and PayFast integration have not changed through functional checkout testing.
+- [ ] Run and review isolated mocked checkout initiation tests on CI; these cannot verify PayFast ITN, real receipts or file download.
 - [ ] Perform a real end-to-end customer order test, including receipt and download, separately from this presentation-only change.
 - [ ] Obtain owner's approval before deployment.
 
