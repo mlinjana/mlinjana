@@ -470,8 +470,14 @@ async function track(req: Request) {
   if (!type) return json({ ok: false }, 400);
   let host: string | null = null;
   try { host = b.ref ? new URL(b.ref).hostname.slice(0, 120) : null; } catch { host = null; }
-  await db.from("events").insert({ type, store_id: String(b.store ?? "").slice(0, 20) || null,
+  const { error } = await db.from("events").insert({ type, store_id: String(b.store ?? "").slice(0, 20) || null,
     product_id: b.product_id ? String(b.product_id).slice(0, 20) : null, path: String(b.path ?? "").slice(0, 200), referrer_host: host });
+  // Never claim that an analytics event was recorded if the insert was rejected.
+  // In particular, a missing 011 migration must remain visible to release QA.
+  if (error) {
+    console.error("analytics insert failed", { code: error.code });
+    return json({ ok: false }, 503);
+  }
   return json({ ok: true });
 }
 
