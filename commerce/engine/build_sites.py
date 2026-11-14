@@ -151,6 +151,23 @@ def policies(store, legal):
 <p>Order <strong id="order-ref">…</strong></p>
 <div id="order-status" class="status">Checking your payment…</div>
 <p class="muted small">Your download appears here as soon as PayFast confirms the payment. Bookmark this page to download again. Lost it later? Use <a href="/help/downloads">Find your downloads</a> with your email and this order number.</p>"""),
+        "review": ("Write a review", """
+<div id="rv-wrap" class="status"><p class="muted">Loading your order…</p></div>
+<form id="review" class="lookup" novalidate hidden>
+  <fieldset class="stars"><legend>Your rating</legend><div class="stars-row">
+    <input type="radio" name="rating" id="rv5" value="5"><label for="rv5" title="5 stars: excellent">★</label>
+    <input type="radio" name="rating" id="rv4" value="4"><label for="rv4" title="4 stars: good">★</label>
+    <input type="radio" name="rating" id="rv3" value="3"><label for="rv3" title="3 stars: okay">★</label>
+    <input type="radio" name="rating" id="rv2" value="2"><label for="rv2" title="2 stars: poor">★</label>
+    <input type="radio" name="rating" id="rv1" value="1"><label for="rv1" title="1 star: bad">★</label>
+  </div></fieldset>
+  <label for="rv-body">Your review</label>
+  <textarea id="rv-body" rows="6" maxlength="2000" placeholder="What did you use it for? What worked, and what could be better?"></textarea>
+  <label for="rv-name">Name to show (optional)</label><input id="rv-name" type="text" maxlength="40" placeholder="For example: Thandi, Durban">
+  <button class="btn btn-primary" type="submit">Send review</button>
+  <p class="muted small">Every honest review is welcome, good or bad. We read each one before it appears on the site, and we never change what you wrote.</p>
+</form>
+<div id="rv-out" class="msg" role="status" aria-live="polite"></div>"""),
         "downloads": ("Find your downloads", """
 <p>Bought something and can't find the download? Your files are here.</p>
 <h2>On this device</h2>
@@ -492,7 +509,7 @@ def main():
         urls = ([cfg["site_base"] + "/"] + [cfg["site_base"] + d["href"] for d in divisions] + [cfg["site_base"] + c["href"] for d in divisions for c in d["categories"]] +
                 [s["url"] + "/" for s in shops.values()] +
                 [f"{cfg['site_base']}/{shops[p['store']]['path']}/p/{p['slug']}" for p in allp] +
-                [f"{cfg['site_base']}/help/{k}" for k in pages_global if k != "thanks"])
+                [f"{cfg['site_base']}/help/{k}" for k in pages_global if k not in ("thanks", "review")])
         open(os.path.join(SITE, "sitemap.xml"), "w").write('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' +
                                                           "".join(f"<url><loc>{u}</loc></url>" for u in urls) + "</urlset>")
     # Cloudflare Web Analytics (owner decision #39): beacon script from static.cloudflareinsights.com, reports to cloudflareinsights.com

@@ -307,6 +307,7 @@ async function adminOrder(req: Request) {
 const BACKUP_TABLES: Record<string, string> = { // table → primary key (stable order for paging)
   config: "key", stores: "id", products: "id", listings: "id", orders: "id", baskets: "id", download_tokens: "token",
   payment_events: "id", contact_messages: "id", events: "id", work_log: "id", costs: "id", job_runs: "id", daily_reports: "report_date",
+  reviews: "id",
 };
 const BACKUP_DAYS = 30;
 const gzip = async (s: string) => new Uint8Array(await new Response(new Blob([s]).stream().pipeThrough(new CompressionStream("gzip"))).arrayBuffer());
@@ -365,6 +366,84 @@ async function restoreDrill() {
   return out;
 }
 
+// ------------------------------------------------------------------ review requests (migration 009)
+// Once per real paid order, 3 to 10 days after payment: one email per buyer listing what they bought, each with a link
+// to an honest-review form. Reviews are stored as 'pending' and shown nowhere until the owner approves them.
+const esc = (s: string) => String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]!));
+async function reviewRequests() {
+  const id = await jobStart("review_requests");
+  if (!id) return { skipped: true };
+  const out: Record<string, unknown> = { sent: 0, failed: 0 };
+  try {
+    const key = Deno.env.get("RESEND_API_KEY"), e = await cfg("email"), site = await cfg("site");
+    if (!key || !e?.from) throw new Error("email not configured");
+    const base = site?.base_url ?? "https://mlinjanastudios.com";
+    const from = new Date(Date.now() - 10 * 86400_000).toISOString(), to = new Date(Date.now() - 3 * 86400_000).toISOString();
+    const { data: os } = await db.from("orders").select("id,ref,secret,email,product_id,paid_at").eq("status", "paid").eq("provider_mode", "live")
+      .is("review_requested_at", null).gte("paid_at", from).lte("paid_at", to).order("paid_at").limit(200);
+    const { data: done } = await db.from("reviews").select("order_ref");
+    const reviewed = new Set((done ?? []).map((r) => r.order_ref));
+    const list = (os ?? []).filter((o) => !reviewed.has(o.ref) && !/@mlinjanastudios\.com$/.test(o.email));
+    const { data: ps } = await db.from("products").select("id,title").in("id", list.length ? [...new Set(list.map((o) => o.product_id))] : ["-"]);
+    const title = (pid: string) => ps?.find((p) => p.id === pid)?.title ?? pid;
+    const byEmail = new Map<string, any[]>();
+    for (const o of list) byEmail.set(o.email, [...(byEmail.get(o.email) ?? []), o]);
+    for (const [to_, items] of byEmail) {
+      const link = (o: any) => `${base}/help/review?ref=${o.ref}&k=${o.secret}`;
+      const one = items.length === 1;
+      const html = `<!doctype html><html><body style="margin:0;background:#f8f6f0;font-family:-apple-system,'Segoe UI',Roboto,Arial,sans-serif;color:#252a32">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:24px 12px"><tr><td align="center"><table role="presentation" width="100%" style="max-width:560px">
+<tr><td style="padding:4px 4px 18px"><img src="${base}/assets/brand/logo-email.png" width="158" height="42" alt="Mlinjana Studios" style="display:block;border:0"></td></tr>
+<tr><td style="background:#fff;border-radius:16px;padding:28px">
+<h1 style="margin:0 0 10px;font-size:22px;color:#17243b">How are you finding ${one ? esc(title(items[0].product_id)) : "your downloads"}?</h1>
+<p style="margin:0 0 18px;font-size:15px;line-height:1.55;color:#4b515c">Thank you for buying from Mlinjana Studios. If you have two minutes, we'd value an honest review: what worked, what didn't, and who it suits. Good or bad, it helps the next buyer and tells us what to improve.</p>
+${items.map((o) => `<p style="margin:0 0 12px"><a href="${esc(link(o))}" style="display:inline-block;padding:12px 20px;background:#17243b;color:#fff;font-weight:700;text-decoration:none;border-radius:10px">Review ${esc(title(o.product_id))}</a></p>`).join("")}
+<p style="margin:18px 0 0;font-size:13px;line-height:1.5;color:#5c6370">We only ask once per order. Something not working? Just reply to this email and we'll help.</p>
+</td></tr><tr><td style="padding:16px 8px;font-size:11.5px;color:#5c6370;text-align:center">You're receiving this because you bought from mlinjanastudios.com.</td></tr></table></td></tr></table></body></html>`;
+      const text = [`Thank you for buying from Mlinjana Studios.`, ``, `If you have two minutes, we'd value an honest review: what worked, what didn't, and who it suits.`, ``,
+        ...items.map((o) => `${title(o.product_id)}: ${link(o)}`), ``, `We only ask once per order. Something not working? Just reply to this email and we'll help.`].join("\n");
+      const r = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${key}`, "Content-Type": "application/json" },
+        body: JSON.stringify({ from: e.from, to: [to_], reply_to: e.reply_to ?? undefined,
+          subject: one ? `How are you finding ${title(items[0].product_id)}?` : "How are you finding your downloads?", html, text }) });
+      if (r.ok) {
+        await db.from("orders").update({ review_requested_at: new Date().toISOString() }).in("id", items.map((o) => o.id));
+        (out.sent as number)++;
+      } else (out.failed as number)++;
+    }
+    await jobEnd(id, "ok", out);
+  } catch (err) {
+    await jobEnd(id, "error", out, String(err));
+  }
+  return out;
+}
+
+// Public review form API: the link's order secret proves the reviewer bought the product. One review per order.
+async function reviewOrder(ref: string, k: string) {
+  const { data: o } = await db.from("orders").select("ref,secret,status,product_id").eq("ref", ref).maybeSingle();
+  if (!o || !k || o.secret !== k || o.status !== "paid") return null;
+  return o;
+}
+async function reviewGet(url: URL) {
+  const o = await reviewOrder(url.searchParams.get("ref") ?? "", url.searchParams.get("k") ?? "");
+  if (!o) return json({ error: "This review link isn't valid." }, 404);
+  const { data: p } = await db.from("products").select("title").eq("id", o.product_id).maybeSingle();
+  const { data: r } = await db.from("reviews").select("id").eq("order_ref", o.ref).maybeSingle();
+  return json({ ref: o.ref, product: p?.title ?? o.product_id, reviewed: !!r });
+}
+async function reviewPost(req: Request) {
+  const b = await req.json().catch(() => ({}));
+  const o = await reviewOrder(String(b.ref ?? ""), String(b.k ?? ""));
+  if (!o) return json({ error: "This review link isn't valid." }, 404);
+  const rating = Math.round(Number(b.rating));
+  const body = String(b.body ?? "").trim().slice(0, 2000);
+  const name = String(b.name ?? "").trim().replace(/\s+/g, " ").slice(0, 40) || null;
+  if (!(rating >= 1 && rating <= 5)) return json({ error: "Please choose a star rating." }, 400);
+  if (body.length < 10) return json({ error: "Please write a sentence or two (at least 10 characters)." }, 400);
+  const { error } = await db.from("reviews").insert({ order_ref: o.ref, product_id: o.product_id, rating, body, display_name: name });
+  if (error) return json({ error: /duplicate|unique/i.test(error.message) ? "You've already reviewed this order. Thank you!" : "Could not save your review." }, 409);
+  return json({ ok: true });
+}
+
 // ------------------------------------------------------------------ sync & upload (local factory → backend)
 async function sync(req: Request) {
   const b = await req.json();
@@ -404,12 +483,15 @@ Deno.serve(async (req) => {
   const url = new URL(req.url);
   const route = url.pathname.replace(/^.*\/ops-api/, "") || "/";
   try {
+    if (route === "/review" && req.method === "GET") return await reviewGet(url);
+    if (route === "/review" && req.method === "POST") return await reviewPost(req);
     if (route.startsWith("/cron/")) {
       if (!(await secretOk(req, "cron_secret"))) return json({ error: "unauthorised" }, 401);
       if (route === "/cron/health") return json(await health());
       if (route === "/cron/daily-report") return json(await dailyReport());
       if (route === "/cron/backup") return json(await backup());
       if (route === "/cron/restore-drill") return json(await restoreDrill());
+      if (route === "/cron/review-requests") return json(await reviewRequests());
     }
     if (route.startsWith("/admin/")) {
       if (route === "/admin/sync" || route === "/admin/upload") {

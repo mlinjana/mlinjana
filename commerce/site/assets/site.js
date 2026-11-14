@@ -420,6 +420,37 @@
     });
   }
 
+  // ---- review form (link from the review-request email carries the order number and its secret) ----
+  const rvWrap = $("#rv-wrap"), rvForm = $("#review");
+  if (rvWrap && rvForm) {
+    const ref = qs.get("ref"), k = qs.get("k");
+    (async () => {
+      try {
+        const r = await fetch(`${API}/ops-api/review?ref=${encodeURIComponent(ref || "")}&k=${encodeURIComponent(k || "")}`);
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "This review link isn't valid.");
+        if (d.reviewed) { rvWrap.innerHTML = `<p><strong>Thank you!</strong> You've already reviewed ${esc(d.product)}.</p>`; return; }
+        rvWrap.innerHTML = `<p>Reviewing <strong>${esc(d.product)}</strong> (order ${esc(d.ref)})</p>`;
+        rvForm.hidden = false;
+      } catch (e) { rvWrap.innerHTML = `<p>${esc(e.message)} If you need help, <a href="/help/contact">contact us</a>.</p>`; }
+    })();
+    rvForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const out = $("#rv-out"), btn = rvForm.querySelector("button");
+      const rating = (rvForm.querySelector("input[name=rating]:checked") || {}).value;
+      out.className = "msg"; out.textContent = "Sending…"; btn.disabled = true;
+      try {
+        const r = await fetch(API + "/ops-api/review", { method: "POST", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ ref, k, rating: Number(rating), body: $("#rv-body").value, name: $("#rv-name").value }) });
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "Could not send your review.");
+        rvForm.hidden = true;
+        rvWrap.innerHTML = `<p class="dl-head">✓ Thank you for your review.</p><p>We'll read it shortly. It helps other buyers and helps us improve.</p>`;
+        rvWrap.classList.add("dl-ready"); out.textContent = "";
+      } catch (err) { out.className = "msg err"; out.textContent = err.message; btn.disabled = false; }
+    });
+  }
+
   // ---- contact form ----
   const cf = $("#contact");
   if (cf && qs.get("topic") === "licence" && !$("#c-msg").value) {

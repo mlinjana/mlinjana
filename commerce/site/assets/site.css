@@ -762,3 +762,13 @@ dialog:not([open]){display:none!important}
 .lookup{display:grid;gap:6px;max-width:420px;margin:8px 0 12px}.lookup label{font-weight:700;margin-top:6px}
 .lookup input{padding:12px 14px;border:1.5px solid var(--line-2);border-radius:10px;font:inherit}.lookup .btn{margin-top:10px;justify-self:start}
 @media (max-width:520px){.dl-list li{flex-direction:column;align-items:stretch}.dl-list .btn{width:100%}}
+
+/* review form stars: radios in reverse order so hover/checked light up the stars to the left */
+.stars{border:0;padding:0;margin:4px 0 6px}
+.stars legend{font-weight:700;margin-bottom:4px;padding:0}
+.stars-row{display:inline-flex;flex-direction:row-reverse;gap:2px}
+.stars input{position:absolute;opacity:0;width:1px;height:1px}
+.stars label{font-size:36px;line-height:1;color:#d6cfc0;cursor:pointer;padding:2px}
+.stars input:checked~label,.stars label:hover,.stars label:hover~label{color:var(--gold)}
+.stars input:focus-visible+label{outline:3px solid #2563eb;outline-offset:2px;border-radius:4px}
+.lookup textarea{padding:12px 14px;border:1.5px solid var(--line-2);border-radius:10px;font:inherit;resize:vertical}
