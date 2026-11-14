@@ -1,5 +1,5 @@
 {
- "generated_at": "2026-11-14T05:25:58Z",
+ "generated_at": "2026-11-14T05:53:56Z",
  "products": [
   {
    "id": "PLD-001",
@@ -41922,7 +41922,7 @@
     "barber",
     "esthetician"
    ],
-   "price_zar": 1,
+   "price_zar": 7,
    "price_usd": 1.0,
    "formats": [
     "PDF (A4)",

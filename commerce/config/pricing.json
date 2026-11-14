@@ -5,8 +5,8 @@
  "prices": {
   "aftercare-instruction-cards": {
    "price_usd": 1.0,
-   "price_zar": 1,
-   "basis": "TEMPORARY R1 test price for the first live purchase (owner, 14 Nov 2026); restore to R39"
+   "price_zar": 7,
+   "basis": "TEMPORARY R7 test price for the first live purchase (owner, 14 Nov 2026); restore to R39"
   },
   "order-packing-slips-labels": {
    "price_usd": 3.0,
