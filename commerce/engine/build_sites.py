@@ -393,10 +393,13 @@ def main():
             more = [r for r in others if r["category"] == p["category"]][:4]
             more += rotate([r for r in others if r not in more], p["id"], 8 - len(more))
             pdiv = div_by[p["division"]]
-            alike_pool = [q for q in allp if q["cat2"] == p["cat2"] and q["division"] == p["division"] and q["store"] != st["id"]]
-            if len(alike_pool) < 4:
-                alike_pool = [q for q in pdiv["items"] if q["store"] != st["id"]]
-            alike = rotate(alike_pool, p["id"], 8)
+            # Rank complementary products by shared purpose; do not fill with unrelated division items.
+            terms = lambda item: set(re.findall(r"[a-z]{4,}", item["name"].lower())) - {"template", "tracker", "planner", "bundle", "spreadsheet"}
+            alike_pool = [q for q in allp if q["cat2"] == p["cat2"] and q["division"] == p["division"] and q["id"] != p["id"] and q not in more]
+            alike = sorted(alike_pool, key=lambda q: (-len(terms(p) & terms(q)), q["id"]))[:4]
+            if p["id"] == "BZW-003":
+                wanted = {"quotation-estimate-template", "income-expense-tracker", "13-week-cash-flow-forecast"}
+                alike = [q for q in allp if q["slug"] in wanted]
             trail = [("Home", sb + "/"), (pdiv["name"], sb + pdiv["href"]), (p["cat2"], sb + p["cat2_href"])]
             open(os.path.join(out, "p", p["slug"] + ".html"), "w").write(env.get_template("product.html").render(
                 p=p, more=more, alike=alike, division=pdiv, jsonld=jsonld(p, {"name": MARKET["name"]}, f"{base_url}/p/{p['slug']}", trail, sb),
@@ -433,7 +436,7 @@ def main():
     assert not missing_starters, f"Missing or invalid featured catalogue products: {missing_starters}"
     starters = [dict(product=by_id[id], audience=audience, headline=headline, reason=reason)
                 for id, audience, headline, reason in starter_specs]
-    picks = mix_cats([c for d in divisions for c in d["categories"][:4]], 12)
+    picks = [by_id[k] for k in ("ABL-009", "BZW-003", "ABL-025", "CHK-011", "BZW-001", "FLW-023")]
     bundles = sorted([p for p in allp if p.get("saving_pct")], key=lambda p: -p["saving_pct"])
     under50 = [p for p in allp if p["price_zar"] < 50]
     under50_pick, seen = [], set()
