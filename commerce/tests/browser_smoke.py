@@ -49,6 +49,15 @@ def check(page, base, viewport, label):
     page.screenshot(path=str(ARTIFACTS / (label + "-start-here.png")), full_page=True)
     width = page.evaluate("document.documentElement.scrollWidth - window.innerWidth")
     assert width <= 2, f"{label}: curated page horizontal overflow {width}px"
+    # Search is JavaScript-powered; verify real results load from the generated catalogue.
+    page.goto(base + "/search?q=inventory", wait_until="domcontentloaded")
+    page.locator("#results .card").first.wait_for()
+    result_text = page.locator("#results").inner_text().lower()
+    assert "inventory" in result_text or "stock" in result_text, f"{label}: inventory search returned irrelevant results"
+    assert page.locator("#s-count").inner_text().strip() != "600 items"
+    page.goto(base + "/search?q=zznevermatch999", wait_until="domcontentloaded")
+    page.locator("#s-empty:visible").wait_for()
+    assert page.locator("#results .card").count() == 0
     page.goto(base + "/abacus/p/inventory-management-spreadsheet", wait_until="domcontentloaded")
     page.locator("#buy").wait_for()
     assert page.locator('a[href="/help/downloads"]').count() >= 1
