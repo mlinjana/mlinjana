@@ -150,7 +150,20 @@ def policies(store, legal):
         "thanks": ("Thank you", """
 <p>Order <strong id="order-ref">…</strong></p>
 <div id="order-status" class="status">Checking your payment…</div>
-<p class="muted small">Your download appears here as soon as PayFast confirms the payment. Keep this page — the link lets you download again.</p>"""),
+<p class="muted small">Your download appears here as soon as PayFast confirms the payment. Bookmark this page to download again. Lost it later? Use <a href="/help/downloads">Find your downloads</a> with your email and this order number.</p>"""),
+        "downloads": ("Find your downloads", """
+<p>Bought something and can't find the download? Your files are here.</p>
+<h2>On this device</h2>
+<div id="dl-mine" class="status"><p class="muted">Checking…</p></div>
+<h2>Bought on another device?</h2>
+<p>Enter the email address you used at checkout and your order number (it starts with ORD- or BSK-, and is shown on the thank-you page and in your receipt).</p>
+<form id="lookup" class="lookup" novalidate>
+  <label for="lk-email">Email used at checkout</label><input id="lk-email" type="email" autocomplete="email" required>
+  <label for="lk-ref">Order number</label><input id="lk-ref" type="text" placeholder="ORD-XXXXXXXXXXXX" autocapitalize="characters" spellcheck="false" required>
+  <button class="btn btn-primary" type="submit">Find my downloads</button>
+</form>
+<div id="lookup-out" class="msg" role="status" aria-live="polite"></div>
+<p class="muted small">Still stuck? <a href="/help/contact">Contact us</a> with your order number and we'll send a new link.</p>"""),
     }
 
 

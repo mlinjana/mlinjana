@@ -432,6 +432,38 @@ async function basketStatus(url: URL) {
   return json({ ref: bk.ref, status: bk.status, mode: bk.provider_mode, items });
 }
 
+// "Find your downloads": a buyer who lost the thank-you page enters the email used at checkout and the order number.
+// Both must match; the answer is the same "not found" either way, so the form cannot be used to test emails.
+async function lookup(req: Request) {
+  const b = await req.json().catch(() => ({}));
+  const email = String(b.email ?? "").trim().toLowerCase();
+  const ref = String(b.ref ?? "").trim().toUpperCase();
+  await new Promise((r) => setTimeout(r, 400)); // slows guessing
+  const none = json({ error: "We couldn't find a paid order with that email and order number. Check both, or contact us." }, 404);
+  if (!EMAIL_RE.test(email) || !/^(ORD|BSK)-[0-9A-F]{12}$/.test(ref)) return none;
+  const tokenFor = async (orderId: string) => (await db.from("download_tokens").select("token,expires_at,downloads,max_downloads,revoked")
+    .eq("order_id", orderId).order("created_at", { ascending: false }).limit(1).maybeSingle()).data;
+  let orders: Record<string, any>[] = [];
+  if (ref.startsWith("BSK-")) {
+    const { data: bk } = await db.from("baskets").select("id,email,status").eq("ref", ref).maybeSingle();
+    if (!bk || bk.email !== email || bk.status !== "paid") return none;
+    orders = (await db.from("orders").select("id,ref,product_id,status,licence").eq("basket_id", bk.id).order("created_at")).data ?? [];
+  } else {
+    const { data: o } = await db.from("orders").select("id,ref,product_id,status,licence,email").eq("ref", ref).maybeSingle();
+    if (!o || o.email !== email || o.status !== "paid") return none;
+    orders = [o];
+  }
+  const { data: ps } = await db.from("products").select("id,title").in("id", orders.map((o) => o.product_id));
+  const items = [];
+  for (const o of orders) {
+    const t = await tokenFor(o.id);
+    const live = !!t && !t.revoked && new Date(t.expires_at) > new Date() && t.downloads < t.max_downloads;
+    items.push({ ref: o.ref, name: ps?.find((p) => p.id === o.product_id)?.title ?? o.product_id, licence: o.licence,
+      download: o.status === "paid" && live ? `${FN_URL}/download?t=${t!.token}` : null, expires_at: t?.expires_at, downloads_left: t ? t.max_downloads - t.downloads : 0 });
+  }
+  return json({ ref, status: "paid", items });
+}
+
 async function track(req: Request) {
   const b = await req.json().catch(() => ({}));
   const type = ["page_view", "product_view", "checkout_start"].includes(b.type) ? b.type : null;
@@ -465,6 +497,7 @@ Deno.serve(async (req) => {
     if (req.method === "POST" && route === "/payfast-itn") return await itn(req);
     if (req.method === "GET" && route === "/order") return await orderStatus(url);
     if (req.method === "GET" && route === "/download") return await download(url);
+    if (req.method === "POST" && route === "/lookup") return await lookup(req);
     if (req.method === "POST" && route === "/track") return await track(req);
     if (req.method === "POST" && route === "/contact") return await contact(req);
     if (route === "/health") return json({ ok: true });

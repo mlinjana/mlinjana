@@ -4,9 +4,9 @@
  "researched_on": "2026-10-28",
  "prices": {
   "aftercare-instruction-cards": {
-   "price_usd": 1.0,
-   "price_zar": 7,
-   "basis": "TEMPORARY R7 test price for the first live purchase (owner, 14 Nov 2026); restore to R39"
+   "price_usd": 3.0,
+   "price_zar": 39,
+   "basis": "tiered by type and content, 2026-11-07 (restored after the R7 live test, 14 Nov 2026)"
   },
   "order-packing-slips-labels": {
    "price_usd": 3.0,

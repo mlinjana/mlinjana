@@ -749,3 +749,16 @@ dialog:not([open]){display:none!important}
 .look-wide .panel-head h2,.look-wide .sec-head h2,.look-wide .pp-main h1,.look-wide .prose h1,.look-wide .div-hero h1,.look-wide .why h2,.look-wide .cta h2{font-weight:500}
 .look-wide .panel,.look-wide .card,.look-wide .usp,.look-wide .why,.look-wide .cta,.look-wide .how .steps li{border-radius:10px}
 .look-wide .btn{border-radius:8px}
+
+/* thank-you and Find your downloads */
+.status.dl-ready{background:#eef7f1;border:1.5px solid #9fd0b0;border-radius:12px;padding:18px 20px}
+.dl-head{font-family:var(--display);font-size:clamp(20px,2.4vw,26px);font-weight:600;color:#0b5a32;margin:0 0 12px}
+.dl-list{list-style:none;margin:0 0 10px;padding:0;display:grid;gap:10px}
+.dl-list li{display:flex;align-items:center;justify-content:space-between;gap:12px;background:#fff;border:1px solid var(--line);border-radius:10px;padding:12px 14px}
+.dl-list li span{display:flex;flex-direction:column;font-weight:700;color:var(--ink)}.dl-list small{font-weight:500;color:var(--muted)}
+.dl-list .btn{min-height:46px;padding:10px 20px;font-size:16px}
+.spin{display:inline-block;width:14px;height:14px;margin-right:6px;border:2px solid var(--line-2);border-top-color:var(--brand);border-radius:50%;vertical-align:-2px;animation:spin .8s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.lookup{display:grid;gap:6px;max-width:420px;margin:8px 0 12px}.lookup label{font-weight:700;margin-top:6px}
+.lookup input{padding:12px 14px;border:1.5px solid var(--line-2);border-radius:10px;font:inherit}.lookup .btn{margin-top:10px;justify-self:start}
+@media (max-width:520px){.dl-list li{flex-direction:column;align-items:stretch}.dl-list .btn{width:100%}}

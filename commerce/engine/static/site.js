@@ -129,6 +129,11 @@
         f.method = "POST"; f.action = d.action;
         for (const [k, v] of Object.entries(d.fields)) { const i = document.createElement("input"); i.type = "hidden"; i.name = k; i.value = v; f.appendChild(i); }
         document.body.appendChild(f);
+        try { // remember this order on this device, so "Find your downloads" can show it even if PayFast doesn't return here
+          const list = JSON.parse(localStorage.getItem("mls:orders") || "[]").filter((x) => x.ref !== d.ref);
+          list.unshift({ ref: d.ref, url: d.fields.return_url, at: Date.now() });
+          localStorage.setItem("mls:orders", JSON.stringify(list.slice(0, 20)));
+        } catch (e) {}
         f.submit();
       } catch (err) { msg.textContent = err.message; msg.className = "msg err"; btn.disabled = false; }
     });
@@ -369,19 +374,50 @@
         const items = isBasket ? (d.items || []) : (d.download ? [{ name: "Your files", licence: d.licence, download: d.download, expires_at: d.expires_at, downloads_left: d.downloads_left }] : []);
         if (d.status === "paid" && items.length && items.every((x) => x.download)) {
           setBasket([]);
-          st.innerHTML = `<p><strong>Payment confirmed.</strong> ${items.length > 1 ? "Your downloads are" : "Your download is"} ready.</p><ul class="dl-list">` +
+          st.classList.add("dl-ready");
+          st.innerHTML = `<p class="dl-head">✓ Payment confirmed. ${items.length > 1 ? "Your downloads are" : "Your download is"} ready.</p><ul class="dl-list">` +
             items.map((x) => `<li><span>${esc(x.name)}<small>${esc(LIC_LABEL[x.licence === "team" ? "team" : "standard"])}</small></span><a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a></li>`).join("") + `</ul>` +
             `<p class="small muted">Links valid until ${new Date(items[0].expires_at).toLocaleDateString()} · ${items[0].downloads_left} downloads left each. Bookmark this page to download again.</p>` +
             (d.mode === "sandbox" ? `<p class="small muted">Test-mode order (PayFast sandbox): no real payment was taken.</p>` : "");
           return;
         }
         if (["cancelled", "failed", "expired"].includes(d.status)) { st.innerHTML = `<p>This payment was <strong>${esc(d.status)}</strong>. You have not been charged.</p>`; return; }
-        st.innerHTML = `<p>Waiting for payment confirmation from PayFast… (this usually takes a few seconds)</p>`;
+        st.innerHTML = `<p><span class="spin" aria-hidden="true"></span> Waiting for PayFast to confirm your payment. This usually takes a few seconds; please keep this page open.</p>`;
       } catch (e) { st.textContent = "Checking your order…"; }
       if (tries < 60) setTimeout(poll, tries < 10 ? 3000 : 10000);
       else st.innerHTML = "<p>We haven't received confirmation yet. If you were charged, please contact us with your order number. We'll sort it out.</p>";
     };
     poll();
+  }
+
+  // ---- find your downloads: orders remembered on this device, plus a lookup by email and order number ----
+  const dlMine = $("#dl-mine");
+  if (dlMine) {
+    let list = [];
+    try { list = JSON.parse(localStorage.getItem("mls:orders") || "[]"); } catch (e) {}
+    if (!list.length) dlMine.innerHTML = `<p class="muted">No orders from this device yet. Use the form below.</p>`;
+    else {
+      dlMine.innerHTML = `<ul class="dl-list">` + list.map((x) => `<li><span>Order ${esc(x.ref)}<small>${new Date(x.at).toLocaleDateString()}</small></span><a class="btn btn-primary inline" href="${esc(x.url)}">Open downloads</a></li>`).join("") + `</ul>`;
+    }
+  }
+  const lf = $("#lookup");
+  if (lf) {
+    lf.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const out = $("#lookup-out"), btn = lf.querySelector("button");
+      const email = $("#lk-email").value.trim(), ref = $("#lk-ref").value.trim().toUpperCase().replace(/\s+/g, "");
+      out.className = "msg"; out.textContent = "Looking up your order…"; btn.disabled = true;
+      try {
+        const r = await fetch(API + "/store-api/lookup", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ email, ref }) });
+        const d = await r.json();
+        if (!r.ok) throw new Error(d.error || "Not found");
+        out.className = "status dl-ready";
+        out.innerHTML = `<p class="dl-head">✓ Order ${esc(d.ref)} found.</p><ul class="dl-list">` + d.items.map((x) => `<li><span>${esc(x.name)}<small>${esc(LIC_LABEL[x.licence === "team" ? "team" : "standard"])}</small></span>` +
+          (x.download ? `<a class="btn btn-primary inline" href="${esc(x.download)}">Download ZIP</a>` : `<a class="btn btn-outline inline" href="/help/contact?order=${encodeURIComponent(x.ref)}">Link expired: ask us</a>`) + `</li>`).join("") + `</ul>` +
+          `<p class="small muted">Links last 7 days and 5 downloads. If yours has run out, contact us with the order number and we'll send a new one.</p>`;
+      } catch (err) { out.className = "msg err"; out.textContent = err.message; }
+      btn.disabled = false;
+    });
   }
 
   // ---- contact form ----
