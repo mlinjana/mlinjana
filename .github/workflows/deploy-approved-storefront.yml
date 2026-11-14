@@ -1,5 +1,5 @@
 name: Deploy approved Mlinjana storefront to Cloudflare
-# Approved profile basket rollout: account-owned saved cart and RLS migration applied (PR #6).
+# Approved: self-service renewal of expired paid downloads (PR #7).
 
 on:
   push:
