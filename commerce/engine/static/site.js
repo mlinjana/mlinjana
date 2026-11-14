@@ -604,11 +604,41 @@
         const os = await acct.api("/rest/v1/rpc/my_orders", { method: "POST", body: "{}" });
         box.innerHTML = !os.length ? `<p class="muted">No orders yet with ${esc(u.email)}. Orders you place with this email, including ones before you signed up, appear here.</p>` :
           `<ul class="dl-list">` + os.map((o) => `<li><span>${esc(o.title)}<small>${new Date(o.paid_at).toLocaleDateString()} · ${o.licence === "team" ? "Team licence" : "Standard licence"} · ${money(o.amount_cents)} · ${esc(o.ref)}${o.status === "refunded" ? " · refunded" : ""}</small></span>` +
-          (o.download_token ? `<a class="btn btn-primary inline" href="${esc(API)}/store-api/download?t=${esc(o.download_token)}">Download ZIP</a>` : (o.status === "paid" ? `<a class="btn btn-outline inline" href="/help/contact?order=${esc(o.ref)}">Link expired: ask us</a>` : "")) + `</li>`).join("") + `</ul>`;
+          (o.download_token ? `<a class="btn btn-primary inline" href="${esc(API)}/store-api/download?t=${esc(o.download_token)}">Download ZIP</a>` : (o.status === "paid" ? `<button type="button" class="btn btn-outline inline" data-renew-order="${esc(o.ref)}">Renew &amp; download</button>` : "")) + `</li>`).join("") + `</ul>`;
       } catch (e) { box.innerHTML = `<p class="muted">We couldn't load your orders just now. Please refresh the page.</p>`; }
       const fl = store.get(FKEY, []);
       $("#acct-favs").innerHTML = fl.length ? `<p>${fl.length} saved ${fl.length === 1 ? "product" : "products"}, on every device where you're signed in. <a href="/favourites">View your favourites</a></p>` : `<p class="muted">Tap the heart on any product to save it here.</p>`;
     };
+    // Expired links are renewed for a verified buyer via a protected Supabase
+    // RPC, never through an unauthenticated link or customer support ticket.
+    $("#acct-orders").addEventListener("click", async (e) => {
+      const btn = e.target.closest("[data-renew-order]");
+      if (!btn || btn.disabled) return;
+      const ref = btn.dataset.renewOrder;
+      if (!/^ORD-[0-9A-F]{12}$/.test(ref)) return;
+      const originalUserId = acct.user()?.id;
+      const msg = $("#acct-download-msg");
+      btn.disabled = true;
+      btn.textContent = "Preparing download…";
+      if (msg) { msg.className = "msg"; msg.textContent = ""; }
+      try {
+        const token = await acct.api("/rest/v1/rpc/renew_my_download", {
+          method: "POST", body: JSON.stringify({ p_ref: ref })
+        });
+        if (!originalUserId || acct.user()?.id !== originalUserId) throw new Error("Session changed");
+        if (typeof token !== "string" || !/^[a-f0-9]{48}$/.test(token)) throw new Error("Invalid download response");
+        // The existing API checks the token and order status before issuing a
+        // short-lived signed storage link. The URL is never permanently public.
+        location.assign(`${API}/store-api/download?t=${encodeURIComponent(token)}`);
+      } catch (err) {
+        if (msg) {
+          msg.className = "msg err";
+          msg.textContent = "We couldn't prepare your download. Please try again. If you've renewed several times today, retry tomorrow.";
+        }
+        btn.disabled = false;
+        btn.textContent = "Renew & download";
+      }
+    });
     document.addEventListener("mls:account", () => (acct.user() ? showIn() : showOut()));
     document.addEventListener("mls:favs", () => acct.user() && showIn());
     if (acct.user()) showIn(); else showOut(); // invalid or unresolved sessions must never leave a blank page
