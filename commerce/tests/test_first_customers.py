@@ -46,6 +46,18 @@ class FirstCustomerStorefrontTests(unittest.TestCase):
         self.assertIn("Digital download, no shipping", sample)
         self.assertIn('href="/help/downloads"', sample)
 
+    def test_private_dashboard_has_funnel_contract(self):
+        html = (SITE / "dashboard" / "index.html").read_text(encoding="utf-8")
+        js = (ROOT / "engine/static/dashboard.js").read_text(encoding="utf-8")
+        ops = (ROOT / "supabase/functions/ops-api/index.ts").read_text(encoding="utf-8")
+        self.assertIn('id="funnelcards"', html)
+        self.assertIn("funnel30", js)
+        self.assertIn("funnel30", ops)
+        self.assertIn('is("basket_id", null)', ops,
+                      "Single orders must exclude items bought through a basket")
+        self.assertIn('eq("provider_mode", "live")', ops,
+                      "Sandbox transactions must not be counted as live sales")
+
     def test_new_conversion_events_match_database_constraint_and_api(self):
         js = (ROOT / "engine/static/site.js").read_text(encoding="utf-8")
         api = (ROOT / "supabase/functions/store-api/index.ts").read_text(encoding="utf-8")
