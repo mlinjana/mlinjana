@@ -29,6 +29,10 @@ def do_case(page, mode, calls):
     else:
         page.wait_for_function("() => !!localStorage.getItem('mls:orders')")
         saved = page.evaluate("JSON.parse(localStorage.getItem('mls:orders'))")
+        outbound = page.evaluate("window.__mockPayfast")
+        assert outbound["action"] == "https://example.invalid/mock-payment", outbound
+        assert outbound["method"] == "post"
+        assert outbound["fields"]["amount"] == "149.00"
         assert saved[0]["ref"] == "ORD-TESTONLY"
         assert saved[0]["url"].startswith("https://example.invalid/thanks?"), saved
     assert calls, "Expected checkout initiation request"
@@ -57,6 +61,16 @@ def main():
             browser = pw.chromium.launch(headless=True)
             for mode in ("failure", "handoff"):
                 context = browser.new_context()
+                # Keep the browser on the local origin: capture the generated form
+                # instead of submitting it to a payment provider or leaving the page.
+                context.add_init_script("""() => {
+                    HTMLFormElement.prototype.submit = function () {
+                        window.__mockPayfast = {
+                          action: this.action, method: this.method,
+                          fields: Object.fromEntries([...this.elements].filter(x => x.name).map(x => [x.name, x.value]))
+                        };
+                    };
+                }()""")
                 context._test_base = base
                 calls = []
 
