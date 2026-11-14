@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% from "_macros.html" import rail, usps, steps, icon %}
-{% block title %}{{ market.name }}: templates, planners and spreadsheets for business, life and education{% endblock %}
+{% block title %}Ready-to-use business templates, planners & spreadsheets | {{ market.name }}{% endblock %}
+{% block desc %}Shop ready-to-use spreadsheets, business templates and planners for South Africa. Preview actual pages, pay securely and download digital tools straight after purchase.{% endblock %}
 {% block head %}<link rel="preload" as="image" href="/{{ hero_covers[0] }}" fetchpriority="high"><link rel="preload" as="font" type="font/woff2" href="/assets/fonts/fraunces.woff2" crossorigin>{% endblock %}
 {% block main %}
 <div class="home">
@@ -10,13 +11,13 @@
     <div class="ph-copy">
       <p class="ph-eyebrow">Planners · Templates · Spreadsheets</p>
       <h1 id="hero-h">Make Better Things Happen.</h1>
-      <p class="ph-lede">Practical digital tools for business, life and education.</p>
-      <a class="btn btn-gold ph-cta" href="#collections">Explore the collections</a>
+      <p class="ph-lede">Ready-to-use spreadsheets, templates and planners to help you track money, organise work and save time. Preview the real files before you buy.</p>
+      <a class="btn btn-gold ph-cta" href="#shop-by-task">Find a tool for your task</a>
     </div>
     <div class="ph-art" aria-hidden="true"></div>
   </section>
   <div class="wrap">
-    <h2 class="ph-title" id="collections">Find the tool for your day.</h2>
+    <h2 class="ph-title" id="collections">Browse tools for business, life and learning.</h2>
     <section class="ph-cards" aria-label="Shop by collection">
       {% for d in divisions %}
       <a class="ph-card" href="{{ d.href }}">
@@ -88,7 +89,23 @@
     </section>
 {% endif %}
 
+    {# Phase 1: direct, crawlable entry points for shoppers with a specific need. #}
+    <section class="task-shop" id="shop-by-task" aria-labelledby="task-shop-title">
+      <header class="sec-head"><p class="kicker">Start with your goal</p><h2 id="task-shop-title">What do you need to get done?</h2><p>Go straight to relevant templates, trackers and planners. Every product shows previews of the files inside.</p></header>
+      <div class="task-links">
+        <a href="/business/inventory-management/"><strong>Track stock and inventory</strong><span>Stock records and inventory spreadsheets <span aria-hidden="true">→</span></span></a>
+        <a href="/business/finance-budgeting/"><strong>Manage business money</strong><span>Invoices, budgets and finance tools <span aria-hidden="true">→</span></span></a>
+        <a href="/life/personal-finance/"><strong>Plan my personal finances</strong><span>Budgeting and money-management downloads <span aria-hidden="true">→</span></span></a>
+        <a href="/education/teacher-resources/"><strong>Organise teaching and learning</strong><span>Classroom and learner-tracking resources <span aria-hidden="true">→</span></span></a>
+      </div>
+    </section>
+
     {{ usps(legal) }}
+
+    <section class="starter-promo" aria-labelledby="starter-promo-title">
+      <div><p class="kicker">A simpler place to begin</p><h2 id="starter-promo-title">Five tools worth a closer look.</h2><p>Explore real product previews for stock control, invoicing, budgeting, lesson planning and fleet operations. All products are sold individually.</p></div>
+      <a class="btn btn-gold" href="/start-here">Explore the five tools <span aria-hidden="true">→</span></a>
+    </section>
 
     {{ rail("Top picks", picks, shops, "/search", "View all " ~ market.total, None, "", "Start here") }}
     {{ rail("Bundle deals", bundles, shops, "/search?bundles=1", "All bundles", "Up to " ~ best_saving ~ "% off against buying each item separately", "band", "Save more") }}
