@@ -84,6 +84,7 @@ with psycopg.connect(DSN, autocommit=True) as db:
         assert re.fullmatch(r"[a-f0-9]{48}",token),token
         same=renew(c,"ORD-AAAAAAAAAAAA")
         assert token==same, "Active link must be reused rather than multiplied"
+        c.execute("reset role")
         c.execute("select count(*) from public.download_tokens where order_id=%s",(A_PAID,))
         assert c.fetchone()[0]==2
         c.execute("select max_downloads,downloads,expires_at > now() from public.download_tokens where token=%s",(token,))
@@ -91,6 +92,7 @@ with psycopg.connect(DSN, autocommit=True) as db:
 
         # Existing active link can be used up to five times, then renewed.
         c.execute("update public.download_tokens set downloads=5 where token=%s",(token,))
+        c.execute("set role authenticated")
         refreshed=renew(c,"ORD-AAAAAAAAAAAA")
         assert refreshed!=token
         expect_denied(c,"ORD-BBBBBBBBBBBB")  # User A cannot renew B's order.
