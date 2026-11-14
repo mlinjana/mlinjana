@@ -8,6 +8,9 @@ Status: review branch only. **No production deployment, payment configuration ch
 2. Four accessible, HTML-based links from the homepage to high-intent catalogue categories (inventory, business finance, personal finance, teacher resources).
 3. Clearer product-page buying reassurance, explicit digital delivery language and order recovery link.
 4. Responsive styling that respects reduced-motion preferences.
+5. Client and API code for anonymous basket-add, checkout-handoff and checkout-error events.
+6. Staged SQL migration `011_conversion_funnel.sql` (NOT APPLIED) to permit the new event types.
+7. Read-only 30-day conversion report that separates live payments from PayFast sandbox transactions and avoids counting basket items twice.
 
 ## Acceptance checklist
 
@@ -15,14 +18,18 @@ Status: review branch only. **No production deployment, payment configuration ch
 - [ ] Run the repository link checker (including the four category paths), ensure there are zero broken links.
 - [ ] Check the homepage and sample product pages at 375px, 768px and desktop.
 - [ ] Run accessibility checks, including keyboard navigation through the new links.
-- [ ] Confirm prices, product IDs, order creation and PayFast integration have not changed.
+- [x] Source-level checks verified all four category routes resolve through the current taxonomy slug rule and tracking event names agree across site.js, API allowlist and staged SQL.
+- [ ] Run the actual Python/Jinja build and browser tests (not possible through GitHub file API alone).
+- [ ] Run migration 011 on a non-production database, verify event inserts, then apply with a reviewed release to production.
+- [ ] Deploy store-api before or with the new site.js; do not deploy the frontend event calls alone and infer missing events are successful.
+- [ ] Confirm prices, product IDs, order creation and PayFast integration have not changed through functional checkout testing.
 - [ ] Perform a real end-to-end customer order test, including receipt and download, separately from this presentation-only change.
 - [ ] Obtain owner's approval before deployment.
 
 ## Next priorities
 
 - Baseline unique visitors and referral traffic, filtering out internal testing.
-- Track product view, add-to-basket, checkout-start, verified payment and successful download as separate events. Avoid recording emails or order secrets in web analytics.
+- Measure product view, add-to-basket, checkout start, PayFast handoff, checkout error and verified payment. Successful download remains a separate backend metric. Avoid recording emails or order secrets in web analytics.
 - Use existing catalogue items to design five *validated* flagship bundles; do not invent product contents or discount claims.
 - Produce short screen-recorded walkthroughs using actual downloads.
 - Test five independent full-price purchases, then run measured, low-budget acquisition experiments.
