@@ -1,0 +1,54 @@
+name: Commerce frontend-only release checks
+
+on:
+  pull_request:
+    paths:
+      - 'commerce/**'
+      - '.github/workflows/frontend-only-check.yml'
+  push:
+    branches:
+      - 'chatgpt/storefront-only-first-customers-20261114'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    defaults:
+      run:
+        working-directory: commerce
+    steps:
+      - uses: actions/checkout@v4
+      - name: Enforce frontend-only change scope
+        run: |
+          cd ..
+          git fetch --no-tags --depth=1 origin claude/autonomous-ecommerce-network-a0q82x
+          echo "Changed files against development branch:"
+          git diff --name-only FETCH_HEAD HEAD
+          if git diff --name-only FETCH_HEAD HEAD --              commerce/supabase commerce/engine/static/site.js commerce/engine/static/dashboard.js              commerce/config/stores.json commerce/catalogue | grep -q .; then
+            echo "::error::Frontend release unexpectedly changes checkout, database, configuration or products"
+            exit 1
+          fi
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'jinja2>=3.1,<4' 'playwright>=1.48,<2'
+      - run: python -m compileall -q engine
+      - run: python engine/build_sites.py
+      - run: python engine/check_links.py
+      - run: python -m unittest discover -s tests -p 'test_frontend_release.py' -v
+      - run: python -m playwright install --with-deps chromium
+      - name: Test responsive navigation and search with no external calls
+        env:
+          BROWSER_ARTIFACTS: ${{ runner.temp }}/frontend-release-qa
+        run: python tests/frontend_browser_smoke.py
+      - if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-release-screenshots
+          path: ${{ runner.temp }}/frontend-release-qa
+          if-no-files-found: ignore
+          retention-days: 7
