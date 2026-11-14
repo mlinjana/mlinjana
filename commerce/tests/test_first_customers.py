@@ -46,6 +46,26 @@ class FirstCustomerStorefrontTests(unittest.TestCase):
         self.assertIn("Digital download, no shipping", sample)
         self.assertIn('href="/help/downloads"', sample)
 
+    def test_curated_starter_landing_page_is_real_and_indexable(self):
+        self.assertIn('href="/start-here"', self.home)
+        page = (SITE / "start-here.html").read_text(encoding="utf-8")
+        self.assertIn("<h1>Five useful tools for real work.</h1>", page)
+        self.assertIn('rel="canonical"', page)
+        expected = [
+            "/abacus/p/inventory-management-spreadsheet",
+            "/bizwright/p/invoice-template-excel",
+            "/abacus/p/50-30-20-budget-calculator",
+            "/chalkline/p/weekly-lesson-planner",
+            "/fleetwise/p/small-fleet-control-bundle",
+        ]
+        for url in expected:
+            with self.subTest(url=url):
+                self.assertIn('href="' + url + '"', page)
+        self.assertEqual(page.count('class="starter-item"'), 5)
+        self.assertIn("Each product is sold separately", page)
+        sitemap = (SITE / "sitemap.xml").read_text(encoding="utf-8")
+        self.assertIn("/start-here</loc>", sitemap)
+
     def test_private_dashboard_has_funnel_contract(self):
         html = (SITE / "dashboard" / "index.html").read_text(encoding="utf-8")
         js = (ROOT / "engine/static/dashboard.js").read_text(encoding="utf-8")
