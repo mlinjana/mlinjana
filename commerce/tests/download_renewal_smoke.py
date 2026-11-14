@@ -80,6 +80,14 @@ def main():
                 if "/rest/v1/account_baskets" in url:
                     return route.fulfill(status=200 if req.method=="GET" else 204,headers=cors,
                                          body='[{"items":[]}]' if req.method=="GET" else "")
+                if "/functions/v1/store-api/lookup" in url:
+                    assert req.method == "POST"
+                    assert req.post_data_json == {"email": "buyer@example.invalid", "ref": REF}
+                    return route.fulfill(status=200, headers=cors,
+                      body=json.dumps({"ref": REF, "status": "paid", "items": [
+                        {"ref": REF, "name": "Example Workbook",
+                         "licence": "standard", "download": None}
+                      ]}))
                 if "/functions/v1/store-api/download" in url:
                     assert "t="+TOKEN in url, url
                     return route.fulfill(status=200,headers={"content-type":"text/plain"},
@@ -109,11 +117,21 @@ def main():
             page.wait_for_url("**/store-api/download?t=*")
             assert len(requests) == 2
             assert "Mock download complete" in page.locator("body").inner_text()
+            # The separate order-lookup flow must also guide expired-link
+            # customers to their account rather than require a support ticket.
+            page.goto(origin + "/help/downloads", wait_until="domcontentloaded")
+            page.locator("#lk-email").fill("buyer@example.invalid")
+            page.locator("#lk-ref").fill(REF)
+            page.locator("#lookup button[type=submit]").click()
+            page.locator("#lookup-out.dl-ready").wait_for()
+            assert page.locator('#lookup-out a[href="/account"]').count() >= 1
+            assert "Sign in to renew" in page.locator("#lookup-out").inner_text()
+            assert "Link expired: ask us" not in page.locator("#lookup-out").inner_text()
             ctx.close()
             browser.close()
     finally:
         server.shutdown()
-    print("PASS: expired paid order renews, failed requests retry, active links and refunded orders unchanged")
+    print("PASS: renewal, retry, account-first expired lookup, active and refunded orders verified")
 
 if __name__ == "__main__":
     main()
