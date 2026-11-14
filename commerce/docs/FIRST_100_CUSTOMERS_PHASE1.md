@@ -18,6 +18,9 @@ Status: review branch only. **No production deployment, payment configuration ch
 12. Isolated CI preview builder replaces live config only in a disposable CI workspace: staging/noindex, checkout paused, API disabled (`api.invalid`), and a preview notice that explicitly says payments cannot be placed. The resulting static preview is published as a short-lived GitHub Actions artifact, NOT deployed.
 13. Migration 011 tested with a minimal `public.events` schema in disposable PostgreSQL: all intended event types accepted and unrecognised types rejected; this is a constraint smoke test, not full Supabase integration testing.
 14. Mocked Chromium checkout acceptance coverage: simulated API 503 error with retry/basket preservation, and simulated signed payment handoff with stored order-return reference. All external requests blocked, no real PayFast orders.
+15. Fixed analytics API to return HTTP 503 on rejected database inserts rather than acknowledging unrecorded events; regression check added.
+16. Extended responsive Chromium checks to cover real catalog search results and empty-search state.
+17. Added `FIRST_100_CUSTOMERS_LAUNCH_KIT.md` containing five factual product offers, seven-day organic outreach schedule, demonstration outline and measurement criteria. No posts sent or ads run.
 
 ## Acceptance checklist
 
